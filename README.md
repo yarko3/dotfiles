@@ -1,2 +1,3 @@
 Vim
 ===
+My configuration.
