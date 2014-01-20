@@ -43,7 +43,7 @@ function IssRefactoring()
     :%s/pVnav\(\A\)/pVnavLegs\1/ge       " Change pVnav[non-alphabetic character] to pVnavLegs[non-alphabetic character]
 endfunction
 
-" Project-Level refactoring, for starting a fresh merge (untested)
+" Project-Level refactoring, for starting a fresh merge
 " Change your current working directory FIRST, before calling this function!
 function IssProjectRefactor()
     :args **/*.c | :silent argdo execute ":call IssRefactoring()" | silent update
