@@ -6,7 +6,7 @@ behave mswin
 " Set Color Scheme
 :colorscheme ir_black
 
-" Tabs as Spaces
+" Tabs Automatically Inserted as Spaces
 :set shiftwidth=4
 :set tabstop=4
 :set expandtab
@@ -28,7 +28,7 @@ function IssRefactoring()
     :%s/pFpln/pRoute/ge
 
     " Names for settings_struct pointers
-    :%s/\([^vnav_]\)sets\./\1pSets->/ge        " Don't change the vnav_sets global (yet)
+    :%s/\([^vnav_]\)sets\./\1pSets->/ge        " Don't change the vnav_sets global (yet), since it's currently not defined
     :%s/&sets/pSets/ge
 
     " Names for leg_struct pointers
@@ -43,11 +43,25 @@ function IssRefactoring()
     :%s/pVnav\(\A\)/pVnavLegs\1/ge       " Change pVnav[non-alphabetic character] to pVnavLegs[non-alphabetic character]
 endfunction
 
+"function PipeOutput()
+"    redir => message
+"
+"    redir END
+"    tabnew
+"    silent put=message
+"    set nomodified
+"endfunction
+
 " Project-Level refactoring, for starting a fresh merge
 " Change your current working directory FIRST, before calling this function!
 function IssProjectRefactor()
-    :args **/*.c | :silent argdo execute ":call IssRefactoring()" | silent update
+    redir => message
     :args **/*.h | :silent argdo execute ":call IssRefactoring()" | silent update
+    :args **/*.c | :silent argdo execute ":call IssRefactoring()" | silent update
+    redir END
+    tabnew
+    silent put=message
+    set nomodified
 endfunction
 
 
@@ -61,28 +75,41 @@ function IssPointers()
     put=''
 endfunction
 
+function IssRipRfTags()
+    :%s/^\[rf\]\[ptr\]$//g
+endfunction
+
+function IssRipAllRfTags()
+    :args **/*.h | :silent argdo execute ":call IssRipRfTags()" | silent update
+    :args **/*.c | :silent argdo execute ":call IssRipRfTags()" | silent update
+endfunction
+
 
 " Timesaver
 function CDoldroute()
     :cd C:\CODE\BenRouteWorkspace\7H-09660_FMSGRP_OFP\fms\Source\
 endfunction
 
-
 function CDroute()
     :cd C:\CODE\AN-MCDU_Route_Update\7H-09660_FMSGRP_OFP\fms\Source\
 endfunction
-
 
 function CDiop()
     :cd C:\CODE\B737\7H-88016_FMS\7H-87012_ANMCDU\7H-09663_IOP_OFP\app
 endfunction
 
-
 function CDfmsgrp()
     :cd C:\CODE\B737\7H-88016_FMS\7H-87012_ANMCDU\7H-09660_FMSGRP_OFP\fms\Source
 endfunction
 
-
 function CDifpd()
     :cd C:\CODE\B737\7H-88013_FPDS\7H-84137_IFPD
 endfunction
+
+
+" temp!
+:call CDfmsgrp()
+:tabe FpPlanning.c
+:tabe $VIM\vimfiles\plugin\REMOVEDEADBLOCKS.vim
+
+
