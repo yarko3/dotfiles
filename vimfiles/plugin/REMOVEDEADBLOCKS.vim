@@ -1,10 +1,12 @@
-" COMMENT.vim
+" REMOVEDEADBLOCKS.vim
 "	Author:	    Ben Hipple
 "	Date:       22 January 2014
 "	Updated:    23 January 2014
 "	Typical Usage:
 "	    Removes #if 0 blocks from the codebase to make it smaller, cleaner,
-"	    and easier to read.
+"	    and easier to read.  Leaves a comment with the date and number of
+"	    lines removed, so that it is easy to find the removed lines in
+"	    Surround.
 
 if exists("loaded_REMOVEREMOVEDBLOCKS")
 	finish
@@ -18,7 +20,7 @@ function! RemoveDeadBlocks()
     let removeDeactivatedCode = 1
 
     let totalLinesDeleted = 0
-    let thisBlockLinesDeleted = -2
+    let thisBlockLinesDeleted = 0
     let i = 0
     let emb = 0
     " For all lines in the module
@@ -52,7 +54,7 @@ function! RemoveDeadBlocks()
                 let replaceComment = '//[rf][rip] Removed a ' . thisBlockLinesDeleted . ' line #if 0 block on ' . strftime('%d %b %Y') . ''
                 call setline(i,replaceComment)
                 let totalLinesDeleted=totalLinesDeleted+1
-                let thisBlockLinesDeleted=-2    " Don't count the #if and #endif lines of the block
+                let thisBlockLinesDeleted=0
             endif
             let emb=emb-1
         endif
@@ -68,13 +70,8 @@ function! RemoveDeadBlocks()
         let i=i+1
     endwhile
 
-    "if totalLinesDeleted > 0
-    :echom "Removed" totalLinesDeleted "lines"
-    "endif
+    if totalLinesDeleted > 0
+        :echom "Removed" totalLinesDeleted "lines"
+    endif
 endfunction
 
-" Call this function on all code modules in the directory
-function RemoveAllProjectDeadBlocks()
-    :args **/*.h | :argdo execute ":call RemoveDeadBlocks()" | silent update
-    :args **/*.c | :argdo execute ":call RemoveDeadBlocks()" | silent update
-endfunction
