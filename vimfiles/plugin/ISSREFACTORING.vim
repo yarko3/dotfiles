@@ -1,7 +1,7 @@
 " ISSREFACTORING.vim
 "	Author:	    Ben Hipple
 "	Date:       23 January 2014
-"	Updated:    23 January 2014
+"	Updated:    24 January 2014
 "	Typical Usage:
 "       Replaces all instances of particular globals with consistently named
 "       pointers to the sub-structures of a flightplan
@@ -50,11 +50,14 @@ function RipRfTags()
 endfunction
 
 
-
+" Put the cursor on the first line of a function definition, and call this
+" script.  It will add a standard format comment header to the function,
+" putting the function name, return type, and all parameters into the
+" comments
 function AddFunctionHeader()
     " Get Function Information
     let funcLine = getline('.')
-    let returnType = matchstr(funcLine, '^\S*')
+    let returnType = matchstr(funcLine, '^\S*') . matchstr(funcLine, '^\S*\s*\zs\**')
     let funcName = matchstr(funcLine, '^\S*\s*\zs[^(]*')
 
     " Get parameters on the function definition line
