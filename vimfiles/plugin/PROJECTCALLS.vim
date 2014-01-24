@@ -27,10 +27,13 @@ endfunction
 
 " Project-Level refactoring, for starting a fresh merge
 " Change your current working directory FIRST, before calling this function!
+" Dependency: ISSREFACTORING.vim Plugin
 function ProjectRefactor()
     :call ProjectCall("IssRefactoring")
 endfunction
 
+" Remove all lines that match [rf][ptr]
+" Dependency: ISSREFACTORING.vim Plugin
 function ProjectRipRfTags()
     :call ProjectCall("RipRfTags")
 endfunction
