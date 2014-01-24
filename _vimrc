@@ -19,12 +19,7 @@ behave mswin
 :nmap <Space> i_<Esc>r
 
 
-
-" Timesaver
-function CDoldroute()
-    :cd C:\CODE\BenRouteWorkspace\7H-09660_FMSGRP_OFP\fms\Source\
-endfunction
-
+" Timesavers
 function CDroute()
     :cd C:\CODE\AN-MCDU_Route_Update\7H-09660_FMSGRP_OFP\fms\Source\
 endfunction
