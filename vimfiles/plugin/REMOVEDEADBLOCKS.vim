@@ -20,7 +20,7 @@ function! RemoveDeadBlocks()
     let removeDeactivatedCode = 1
 
     let totalLinesDeleted = 0
-    let thisBlockLinesDeleted = 0
+    let thisBlockLinesDeleted = 1
     let i = 0
     let emb = 0
     " For all lines in the module
@@ -54,7 +54,7 @@ function! RemoveDeadBlocks()
                 let replaceComment = '//[rf][rip] Removed a ' . thisBlockLinesDeleted . ' line #if 0 block on ' . strftime('%d %b %Y') . ''
                 call setline(i,replaceComment)
                 let totalLinesDeleted=totalLinesDeleted+1
-                let thisBlockLinesDeleted=0
+                let thisBlockLinesDeleted = 1
             endif
             let emb=emb-1
         endif
