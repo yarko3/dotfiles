@@ -15,7 +15,7 @@ set sw=3  "this is the level of autoindent, adjust to taste
 colorscheme desert
 
 " Fixing tabs
-set tabstop=4
+set tabstop=3
 set expandtab
 set shiftwidth=3
 
