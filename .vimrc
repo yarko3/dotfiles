@@ -11,6 +11,8 @@ set ru
 set bs=indent,eol,start
 set sw=3  "this is the level of autoindent, adjust to taste
 
+set nocompatible
+
 " Set Color Scheme
 colorscheme desert
 
@@ -37,3 +39,11 @@ nmap <Space> i_<Esc>r
 "autocmd BufRead,BufNewFile   *.c,*.h,*.cpp au BufWinEnter * let w:m1=matchadd('Search', '\%<81v.\%>77v', -1)
 "autocmd BufRead,BufNewFile   *.c,*.h,*.cpp au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 
+" CTAGS for Vim @ BB
+source /bbsrc/princeton/skunk/vim/cursor.vim
+
+" Auto-Insertion for closing braces
+inoremap {      {}<Left>
+inoremap {<CR>  {<CR>}<Esc>O
+inoremap {{     {
+inoremap {}     {}
