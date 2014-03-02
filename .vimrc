@@ -40,10 +40,19 @@ nmap <Space> i_<Esc>r
 "autocmd BufRead,BufNewFile   *.c,*.h,*.cpp au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 
 " CTAGS for Vim @ BB
-source /bbsrc/princeton/skunk/vim/cursor.vim
+" source /bbsrc/princeton/skunk/vim/cursor.vim  <-- Tired of hitting ctrl+] to end up lost deep in BSL
 
 " Auto-Insertion for closing braces
 inoremap {      {}<Left>
 inoremap {<CR>  {<CR>}<Esc>O
 inoremap {{     {
 inoremap {}     {}
+
+" Configure :make with plink
+set makeprg=ctags\ -R\ .\ &&\ ~/shellscripts/bld
+
+" Make vsplit split the new window to the right, not left
+set splitright
+
+" Autosave before :make and other commands
+set autowrite
