@@ -50,6 +50,8 @@ inoremap {}     {}
 
 " Configure :make with plink
 set makeprg=ctags\ -R\ .\ &&\ ~/shellscripts/bld
+map <F4> :make<CR>
+map <F5> :!bash ../test/tstscript.sh<CR>
 
 " Make vsplit split the new window to the right, not left
 set splitright
