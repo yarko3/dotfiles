@@ -1,15 +1,15 @@
 " REMOVEDEADBLOCKS.vim
-"	Author:	    Ben Hipple
-"	Date:       22 January 2014
-"	Updated:    23 January 2014
-"	Typical Usage:
-"	    Removes #if 0 blocks from the codebase to make it smaller, cleaner,
-"	    and easier to read.  Leaves a comment with the date and number of
-"	    lines removed, so that it is easy to find the removed lines in
-"	    Surround.
+"   Author:     Ben Hipple
+"   Date:       22 January 2014
+"   Updated:    23 January 2014
+"   Typical Usage:
+"       Removes #if 0 blocks from the codebase to make it smaller, cleaner,
+"       and easier to read.  Leaves a comment with the date and number of
+"       lines removed, so that it is easy to find the removed lines in
+"       Surround.
 
 if exists("loaded_REMOVEREMOVEDBLOCKS")
-	finish
+    finish
 endif
 let loaded_REMOVEREMOVEDBLOCKS=1
 
