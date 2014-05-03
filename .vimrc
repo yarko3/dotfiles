@@ -1,7 +1,6 @@
 " .vimrc
 " Benjamin Hipple
 
-
 colorscheme desert256
 
 " === Vundle ===
@@ -22,7 +21,6 @@ Plugin 'tpope/vim-fugitive' " Git Wrapper
 call vundle#end()
 filetype plugin indent on
 " === End Vundle ===
-
 
 
 " Load each specialized settings file

@@ -4,8 +4,8 @@
 "
 " @usage - From any Vim window, type :call MkClass("MyPackage", "my_file_name") to make one cpp/h pair.
 "          To many several, type :call BatchMkClass("MyPackage", "my_file_name1", "my_file_name2", "my_file_name3", ...) etc.
-"          
-" @note Helper functions are prefaced with "XH_" to avoid namespace pollution, since I'm not sure how to declare a 
+"
+" @note Helper functions are prefaced with "XH_" to avoid namespace pollution, since I'm not sure how to declare a
 "   function private in Vimscript :)
 
 
@@ -14,7 +14,7 @@ function! MkClass(package, filename)
    "---------------------- CONFIGURABLE VARIABLES -----------------------"
    let openingComment = "Client Heat"
    let author = "Training Class"
-    
+
    """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
    execute "tabe" a:filename . ".cpp"
    execute XH_MakeCPP(a:filename, a:package, openingComment, author)
@@ -29,7 +29,7 @@ endfunction
 " Calls MkClass for every filename given in the variable length arglist.
 function! BatchMkClass(package, ...)
 
-   for fileName in a:000 
+   for fileName in a:000
       silent call MkClass(a:package, fileName)
    endfor
 
@@ -85,7 +85,7 @@ endfunction
 
 " Default classname replaces filename's first character with a capital letter,
 " removes underscores, and capitalizes the subsequent letter
-function! XH_CalcClassName(filename) 
+function! XH_CalcClassName(filename)
    let classname = substitute(a:filename, '^[a-z]', '\U\0', "g")
    let classname = substitute(classname, '_\([a-z]\)', '\U\1', "g")
    return classname
@@ -112,8 +112,7 @@ function! XH_AddClassBody(classname)
    let str = str . '      //' . a:classname . ' &operator=(const ' . a:classname . ' &rhs);' . "\n\n"
 
    let str = str . "   private:\n"
-
-   let str = str . "\n\n}; // close " . a:classname . "\n" 
+   let str = str . "\n\n}; // close " . a:classname . "\n"
 
    return str
 endfunction

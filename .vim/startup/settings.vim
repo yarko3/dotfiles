@@ -27,7 +27,7 @@ set number
 set listchars=tab:>-,trail:-
 set list!
 
-"" 9 using the mouse
+" Using the mouse
 set mouse=a
 
 " Configure :make with plink
