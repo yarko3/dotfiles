@@ -5,9 +5,6 @@ My configuration.
 ===
 Installation Instructions:  
 
-Run the following two commands:  
-`$ git clone https://github.com/brhCS/Vim.git ~/`  
-then  
-`$ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim`  
-
-Then launch `vim` and run `:PluginInstall`  
+1) `$ git clone https://github.com/brhCS/Vim.git ~/`  
+2) `$ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim`  
+3) Launch `vim` and run `:PluginInstall`  
