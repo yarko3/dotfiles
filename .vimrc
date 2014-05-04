@@ -15,6 +15,7 @@ Plugin 'gmarik/Vundle.vim' " Lets Vundle manage Vundle
 
 Plugin 'tpope/vim-dispatch' " Asynchronous Makes
 Plugin 'tpope/vim-fugitive' " Git Wrapper
+Plugin 'chazmcgarvey/vimcoder' " Topcoder Vim Plugin
 "Plugin 'Valloric/YouCompleteMe' " Autocomplete and CTAGS replacement
 "   // Need to ask Mario about the Python libraries for the installation process
 
