@@ -25,14 +25,13 @@ set number
 
 " Show tab whitespace characters
 set listchars=tab:>-,trail:-
-set list!
+"set list!
 
 " Using the mouse
 set mouse=a
 
 " Configure :make with plink
 "set makeprg=rm\ -f\ *.tsk\ &&\ ~/shellscripts/bld
-set makeprg=make
 
 " Make vsplit split the new window to the right, not left
 set splitright

@@ -17,8 +17,7 @@ inoremap <F4> BAEL_LOG_END;<CR>
 
 " Compilation
 map <F3> :Make!<CR>
-map <F4> :make<CR>
-map <F5> :!./*.tsk<CR>
+map <F4> :!make run<CR>
 
 " Swap between cpp/h file
 map <silent> <F8> :exec ":e ".(expand("%") =~ ".h$"
