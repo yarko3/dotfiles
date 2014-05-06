@@ -25,7 +25,7 @@ set number
 
 " Show tab whitespace characters
 set listchars=tab:>-,trail:-
-"set list!
+set list!
 
 " Using the mouse
 set mouse=a
@@ -40,8 +40,8 @@ set splitright
 set autowrite
 set autoread
 
-" Set the folding method to go by syntax
-"set foldmethod=syntax
+" Set the folding method
+set foldmethod=manual
 
 " Removing GUI Options on gvim
 set guioptions-=l    " Left scrollbar (without split)

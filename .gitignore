@@ -1,3 +1,4 @@
+# Compiling and Editing
 *.o
 *.a
 *.swo
@@ -6,12 +7,12 @@
 00*
 *.sundev1
 *.sundev1.*
-
 *.swp
 *.swo
 *.swn
 tags
 
+# Dotfiles
 .nfs*
 .robolibs-config.*
 .bash_history
@@ -23,36 +24,7 @@ tags
 .arcrc
 .dbxhist
 .VIMgit/*
-
-.vas*
-.xemacs*
-app-defaults*
-.mozilla*
-.SecureCRTstart
-.bbprofile.log
-.eclipse*
-.emacs
-.exrc*
-.flexlmrc
-.java*
-.lesshst
-.ssh*
-.subversion*
-.swt*
-.totalview*
-.xemacs*
-.scrapergui
-
-mbig/*
-.oldgit*
-training_continuing/*
-training_labs/*
-training_labs/cpp_debugging_lab2/purify/*
-training_labs/demo/tools/purify/*
-training_labs/examples/breg/*
-training_labs/git/examples/*
-
-
+.gitVIM/*
 .ICE*
 .Private*
 .Skype*
@@ -73,6 +45,34 @@ training_labs/git/examples/*
 .steam*
 .vimcoder*
 .xs*
+.vas*
+.xemacs*
+.mozilla*
+.SecureCRTstart
+.bbprofile.log
+.eclipse*
+.emacs
+.exrc*
+.flexlmrc
+.java*
+.lesshst
+.ssh*
+.subversion*
+.swt*
+.totalview*
+.xemacs*
+.scrapergui
+
+# BB Directories
+mbig/*
+.oldgit*
+training_continuing/*
+training_labs/*
+training_labs/cpp_debugging_lab2/purify/*
+training_labs/demo/tools/purify/*
+training_labs/examples/breg/*
+training_labs/git/examples/*
+
+# Home Directories
 examples*
-
-
+app-defaults*
