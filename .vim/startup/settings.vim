@@ -43,6 +43,10 @@ set autoread
 " Set the folding method
 set foldmethod=manual
 
+" Stop comments automatically going on newlines
+setlocal comments-=://
+setlocal comments+=f://
+
 " Removing GUI Options on gvim
 set guioptions-=l    " Left scrollbar (without split)
 set guioptions-=L    " Left scrollbar
@@ -51,9 +55,9 @@ set guioptions-=R    " Right scrollbar
 set guioptions-=T    " Toolbar
 
 " Set path for file searches
-set path+=.
-set path+=../
-set path+=/home/bhipple/mbig/scrape.git
+"set path+=./**
+"set path+=../**
+set path+=/home/bhipple/mbig/scrape.git/**
 
 " Check for lines that exceed 80 chars . . . too laggy
 "autocmd BufRead,BufNewFile   *.c,*.h,*.cpp au BufWinEnter * let w:m1=matchadd('Search', '\%<81v.\%>77v', -1)

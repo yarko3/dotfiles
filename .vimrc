@@ -25,5 +25,8 @@ filetype plugin indent on
 
 
 " Load each specialized settings file
+source ~/.vim/startup/functions.vim
 source ~/.vim/startup/mappings.vim
 source ~/.vim/startup/settings.vim
+
+let g:ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/.ycm_extra_conf.py'
