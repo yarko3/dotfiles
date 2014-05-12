@@ -10,6 +10,7 @@ set bs=indent,eol,start
 set sw=4
 
 set nocompatible
+let g:platform = GetPlatform()
 
 " Fixing tabs
 set tabstop=4
@@ -58,6 +59,10 @@ set guioptions-=T    " Toolbar
 "set path+=./**
 "set path+=../**
 set path+=/home/bhipple/mbig/scrape.git/**
+
+" Automatically open the QuickFix Window after a make
+autocmd QuickFixCmdPost *make* cwindow
+
 
 " Check for lines that exceed 80 chars . . . too laggy
 "autocmd BufRead,BufNewFile   *.c,*.h,*.cpp au BufWinEnter * let w:m1=matchadd('Search', '\%<81v.\%>77v', -1)

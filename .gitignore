@@ -21,9 +21,7 @@ tags
 .fontconfig/*
 .viminfo
 .vim/.netrwhist*
-.vimcoder*
 .vim/bundle/YouCompleteMe*
-.vim/bundle/ycm_compiled*
 .arcrc
 .dbxhist
 .VIMgit/*
