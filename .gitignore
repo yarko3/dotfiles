@@ -26,6 +26,7 @@ tags
 .dbxhist
 .VIMgit/*
 .gitVIM/*
+.gitk*
 .ICE*
 .Private*
 .Skype*

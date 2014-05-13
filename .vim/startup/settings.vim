@@ -63,11 +63,9 @@ set path+=/home/bhipple/mbig/scrape.git/**
 " Automatically open the QuickFix Window after a make
 autocmd QuickFixCmdPost *make* cwindow
 
+" Set automatic indentation format for XML files
+au FileType xml exe ":silent %!xmllint --format --recover - 2>/dev/null"
 
 " Check for lines that exceed 80 chars . . . too laggy
 "autocmd BufRead,BufNewFile   *.c,*.h,*.cpp au BufWinEnter * let w:m1=matchadd('Search', '\%<81v.\%>77v', -1)
 "autocmd BufRead,BufNewFile   *.c,*.h,*.cpp au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
-
-" CTAGS for Vim @ BB
-" source /bbsrc/princeton/skunk/vim/cursor.vim  <-- Better to modify the makefile
-
