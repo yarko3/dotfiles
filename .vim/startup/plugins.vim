@@ -11,15 +11,15 @@ Plugin 'gmarik/Vundle.vim' " Lets Vundle manage Vundle
 
 " Other plugins managed by Vundle
 
-Plugin 'tpope/vim-dispatch' " Asynchronous Makes
-Plugin 'tpope/vim-fugitive' " Git Wrapper
-Plugin 'chazmcgarvey/vimcoder' " Topcoder Vim Plugin
-"   // Need to ask Mario about the Python libraries for the installation process
+Plugin 'tpope/vim-dispatch'         " Asynchronous Makes
+Plugin 'tpope/vim-fugitive'         " Git Wrapper
+Plugin 'chazmcgarvey/vimcoder'      " Topcoder Vim Plugin
+Plugin 'kien/ctrlp'                 " Ctrl-P
 
 " Linux-Only plug-ins
 if g:platform == "Linux"
     " Autocompletion and semantic completion
-    Plugin 'Valloric/YouCompleteMe'
+    "Plugin 'Valloric/YouCompleteMe' " TEMPORARILY DISABLED DUE TO MEMORY ISSUES
     "let g:ycm_server_log_level = 'debug'
     let g:ycm_confirm_extra_conf = 0
     let g:ycm_path_to_python_interpreter = '/opt/swt/bin/python'

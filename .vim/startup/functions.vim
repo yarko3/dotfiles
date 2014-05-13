@@ -2,6 +2,7 @@
 
 function! StripTrailingWhitespaces()
   let _s=@/
+  retab
   %s/\s\+$//e
   let @/=_s
   exec "normal ``"
@@ -9,7 +10,7 @@ endfunction
 
 
 " Get OS Platform
-function GetPlatform()
+function! GetPlatform()
     if has('win32') || has('win64')
         return "Windows"
     elseif has("unix")

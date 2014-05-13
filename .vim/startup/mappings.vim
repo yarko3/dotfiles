@@ -18,8 +18,8 @@ inoremap <F2> BAEL_LOG_DEBUG <<
 inoremap <F3> BAEL_LOG_ERROR <<
 inoremap <F4> << BAEL_LOG_END;<CR>
 
-" Leaving insert mode with jk
-inoremap jk <Esc>
+" Leaving insert mode with jj
+inoremap jj <Esc>
 
 "==============================================================================
 " Normal Mode Mappings
@@ -27,10 +27,12 @@ inoremap jk <Esc>
 " <C-l> toggles whether searches are shown
 nnoremap <C-l> :set hlsearch! hlsearch?<CR>
 
-" If hl search is off, starting a new search enables it
+" If hl search is off, starting a new search or moving enables it
 nnoremap / :set hlsearch<CR>/
 nnoremap * :set hlsearch<CR>*
 nnoremap ? :set hlsearch<CR>?
+nnoremap n :set hlsearch<CR>n
+nnoremap N :set hlsearch<CR>N
 
 " Swap between cpp/h file
 nnoremap <silent> <F8> :exec ":e ".(expand("%") =~ ".h$"
@@ -39,15 +41,28 @@ nnoremap <silent> <F8> :exec ":e ".(expand("%") =~ ".h$"
 
 " Swap to last buffer
 nnoremap <silent> <F9> :b#<CR>
+
 " Set <Space> + Character to insert 1 character, then go back to command mode
 nnoremap <Space> i_<Esc>r
 
 " Compilation
 nnoremap <F3> :Make!<CR>
 nnoremap <F4> :!make run<CR>
+nnoremap <F5> :!./*.tsk<CR>
+
+"==============================================================================
+" Leader Mappings
+"
+" cd to open file's directory
+nnoremap <Leader>cdf :cd %:h<CR>:pwd<CR>
 
 " Change directory to the directory with the tags file
-nnoremap <Leader><Leader>cd :cd ~/mbig/scrape.git<CR>
+nnoremap <Leader>cdt :cd ~/mbig/scrape.git<CR>
+
+" Open a netrw window on the current file's directory
+nnoremap <Leader>e. :e %:h<CR>9j
+nnoremap <Leader>ve. :vsp<CR>:e %:h<CR>9j
+nnoremap <Leader>se. :sp<CR>:e %:h<CR>9j
 
 " Remove trailing whitespace
-nnoremap <Leader><Leader>w :call StripTrailingWhitespaces()<CR>
+nnoremap <Leader>w :call StripTrailingWhitespaces()<CR>

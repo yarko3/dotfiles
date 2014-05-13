@@ -62,6 +62,7 @@ tags
 .totalview*
 .xemacs*
 .scrapergui
+.xauth*
 
 # BB Directories
 mbig/*
