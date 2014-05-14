@@ -11,7 +11,8 @@ Plugin 'gmarik/Vundle.vim'          " Lets Vundle manage Vundle
 Plugin 'tpope/vim-dispatch'         " Asynchronous Makes
 Plugin 'tpope/vim-fugitive'         " Git Wrapper
 Plugin 'chazmcgarvey/vimcoder'      " Topcoder Vim Plugin
-Plugin 'kien/ctrlp'                 " Ctrl-P
+Plugin 'kien/ctrlp.vim'             " Ctrl-P
+Plugin 'majutsushi/tagbar'          " Tagbar
 
 " Linux-Only plug-ins
 if g:platform == "Linux"
