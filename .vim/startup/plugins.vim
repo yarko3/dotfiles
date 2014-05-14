@@ -7,10 +7,7 @@ set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Plugin 'gmarik/Vundle.vim' " Lets Vundle manage Vundle
-
-" Other plugins managed by Vundle
-
+Plugin 'gmarik/Vundle.vim'          " Lets Vundle manage Vundle
 Plugin 'tpope/vim-dispatch'         " Asynchronous Makes
 Plugin 'tpope/vim-fugitive'         " Git Wrapper
 Plugin 'chazmcgarvey/vimcoder'      " Topcoder Vim Plugin
@@ -18,7 +15,6 @@ Plugin 'kien/ctrlp'                 " Ctrl-P
 
 " Linux-Only plug-ins
 if g:platform == "Linux"
-    " Autocompletion and semantic completion
     "Plugin 'Valloric/YouCompleteMe' " TEMPORARILY DISABLED DUE TO MEMORY ISSUES
     "let g:ycm_server_log_level = 'debug'
     let g:ycm_confirm_extra_conf = 0
