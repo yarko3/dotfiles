@@ -19,13 +19,8 @@ tags
 .sh_history
 .Xauthority
 .fontconfig/*
-.viminfo
-.vim/.netrwhist*
-.vim/bundle/YouCompleteMe*
 .arcrc
 .dbxhist
-.VIMgit/*
-.gitVIM/*
 .gitk*
 .ICE*
 .Private*
@@ -64,6 +59,13 @@ tags
 .xemacs*
 .scrapergui
 .xauth*
+
+# Vim stuff - Let Vundle manage the plugins
+.viminfo
+.vim/.netrwhist*
+.vim/bundle/*
+.VIMgit/*
+.gitVIM/*
 
 # BB Directories
 mbig/*
