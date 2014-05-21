@@ -8,7 +8,6 @@ function! StripTrailingWhitespaces()
   exec "normal ``"
 endfunction
 
-
 " Get OS Platform
 function! GetPlatform()
     if has('win32') || has('win64')

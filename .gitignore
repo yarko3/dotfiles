@@ -59,6 +59,7 @@ tags
 .xemacs*
 .scrapergui
 .xauth*
+.kshrc
 
 # Vim stuff - Let Vundle manage the plugins
 .viminfo
@@ -68,7 +69,7 @@ tags
 .gitVIM/*
 
 # BB Directories
-mbig/*
+mbig*
 .oldgit*
 training_continuing/*
 training_labs/*
@@ -76,6 +77,10 @@ training_labs/cpp_debugging_lab2/purify/*
 training_labs/demo/tools/purify/*
 training_labs/examples/breg/*
 training_labs/git/examples/*
+scrapingnotes/*
+shellscripts/*
+.gitNOTES/*
+notes/*
 
 # Home Directories
 examples*

@@ -47,22 +47,27 @@ nnoremap <Space> i_<Esc>r
 
 " Compilation
 nnoremap <F3> :Make!<CR>
-nnoremap <F4> :!make run<CR>
+nnoremap <F4> :make<CR>
 nnoremap <F5> :!./*.tsk<CR>
 
 "==============================================================================
 " Leader Mappings
 "
-" cd to open file's directory
+" cd to current file's directory
 nnoremap <Leader>cdf :cd %:h<CR>:pwd<CR>
 
 " Change directory to the directory with the tags file
 nnoremap <Leader>cdt :cd ~/mbig/scrape.git<CR>
 
+" Find a patterns.cfg definition
+nnoremap <Leader>fd :set hlsearch<CR>yiw/^<C-r><C-0>\s*:<CR>
+
 " Open a netrw window on the current file's directory
 nnoremap <Leader>e. :e %:h<CR>9j
 nnoremap <Leader>ve. :vsp<CR>:e %:h<CR>9j
 nnoremap <Leader>se. :sp<CR>:e %:h<CR>9j
+
+nnoremap <Leader>t :TagbarToggle<CR>
 
 " Remove trailing whitespace
 nnoremap <Leader>w :call StripTrailingWhitespaces()<CR>
