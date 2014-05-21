@@ -1,0 +1,46 @@
+
+
+! $HOME/.Xdefaults
+!
+! This file contains user defaults resources which are applied to
+! all X-clients.
+!
+
+
+! The Athena Widgets provided by Data General have 2 look-and-feels
+! to choose from (athena and motif). The following resource sets
+! the look-and-feel:
+*lookAndFeel: motif
+
+
+! The following sets the customization resource to get 
+! special app-defaults, if they exist:
+#ifdef COLOR
+*Customization: -color
+#else
+*Customization: -mono
+#endif
+
+Mwm.keyboardFocusPolicy: explicit
+Mwm*XClock*clientDecoration: Border
+Mwm*XBiff*clientDecoration: Border
+Mwm*iconDecoration: label activelabel
+Mwm*iconPlacement: bottom right
+
+! XTerm settings
+XTerm*faceName: DejaVu Sans Mono:size=12
+XTerm*font:     -misc-fixed-medium-r-normal--18-120-100-100-c-90-iso10646-1
+XTerm*boldFont: -misc-fixed-medium-r-normal--18-120-100-100-c-90-iso10646-1
+XTerm*background: black
+XTerm*foreground: green
+xterm*termName: xterm-256color
+
+*ttyModes: erase ^?
+
+! rxvtop settings
+rxvtop1*background:lightgray
+rxvtop1*foreground:Black
+rxvtop*background:Black
+rxvtop*foreground:Yellow
+rxvtop2*background:Black
+rxvtop2*foreground:Green

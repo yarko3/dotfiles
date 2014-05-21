@@ -1,16 +1,19 @@
 " vim settings
 
-" Bloomberg Settings
-syntax on
-set et
-set ai
-set cin
-set ru
-set bs=indent,eol,start
-set sw=4
-
 set nocompatible
 let g:platform = GetPlatform()
+
+" Editing
+syntax on
+set autoindent
+set cindent
+set backspace=indent,eol,start
+
+" ctags locations
+set tags=./tags;~/mbig/scrape.git/tags
+
+" runtime path search for Ex
+set ru
 
 " Fixing tabs
 set tabstop=4
@@ -33,6 +36,7 @@ set mouse=a
 
 " Configure :make with plink
 "set makeprg=rm\ -f\ *.tsk\ &&\ ~/shellscripts/bld
+set makeprg=plink\ *.mk
 
 " Make vsplit split the new window to the right, not left
 set splitright
@@ -63,8 +67,12 @@ set path+=/home/bhipple/mbig/scrape.git/**
 " Automatically open the QuickFix Window after a make
 autocmd QuickFixCmdPost *make* cwindow
 
+" in Makefiles, don't expand tabs to spaces and reset the standard tab
+" length because Makefiles require the indentation of tabs for targets
+autocmd FileType make setlocal noexpandtab shiftwidth=8
+
 " Set automatic indentation format for XML files
-au FileType xml exe ":silent %!xmllint --format --recover - 2>/dev/null"
+autocmd FileType xml exe ":silent %!xmllint --format --recover - 2>/dev/null"
 
 " Check for lines that exceed 80 chars . . . too laggy
 "autocmd BufRead,BufNewFile   *.c,*.h,*.cpp au BufWinEnter * let w:m1=matchadd('Search', '\%<81v.\%>77v', -1)

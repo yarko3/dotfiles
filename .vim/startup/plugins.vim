@@ -12,17 +12,17 @@ Plugin 'tpope/vim-dispatch'         " Asynchronous Makes
 Plugin 'tpope/vim-fugitive'         " Git Wrapper
 Plugin 'chazmcgarvey/vimcoder'      " Topcoder Vim Plugin
 Plugin 'kien/ctrlp.vim'             " Ctrl-P
-Plugin 'majutsushi/tagbar'          " Tagbar
+"Plugin 'majutsushi/tagbar'          " Tagbar
 
 " Linux-Only plug-ins
 if g:platform == "Linux"
-    "Plugin 'Valloric/YouCompleteMe' " TEMPORARILY DISABLED DUE TO MEMORY ISSUES
+    Plugin 'Valloric/YouCompleteMe' " TEMPORARILY DISABLED DUE TO MEMORY ISSUES
     "let g:ycm_server_log_level = 'debug'
     let g:ycm_confirm_extra_conf = 0
     let g:ycm_path_to_python_interpreter = '/opt/swt/bin/python'
     let g:ycm_autoclose_preview_window_after_insertion = 1
     let g:ycm_always_populate_location_list = 1
-    "let g:ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/.ycm_extra_conf.py'
+    let g:ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/.ycm_extra_conf.py'
 endif
 
 call vundle#end()
