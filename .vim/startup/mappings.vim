@@ -63,9 +63,9 @@ nnoremap <Leader>cdt :cd ~/mbig/scrape.git<CR>
 nnoremap <Leader>fd :set hlsearch<CR>yiw/^<C-r><C-0>\s*:<CR>
 
 " Open a netrw window on the current file's directory
-nnoremap <Leader>e. :e %:h<CR>9j
-nnoremap <Leader>ve. :vsp<CR>:e %:h<CR>9j
-nnoremap <Leader>se. :sp<CR>:e %:h<CR>9j
+nnoremap <Leader>e :e %:h<CR>9j
+nnoremap <Leader>ve :vsp<CR>:e %:h<CR>9j
+nnoremap <Leader>se :sp<CR>:e %:h<CR>9j
 
 nnoremap <Leader>t :TagbarToggle<CR>
 

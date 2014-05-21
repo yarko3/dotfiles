@@ -43,7 +43,9 @@ alias scrapegui='cd ~/mbig/scrape.git/msgscrape/scraper/ && ../sxide/demos/rever
 
 # cd
 alias cdscraper='cd ~/mbig/scrape.git/msgscrape/scraper/'
+alias cdmtm='cd ~/mbig/scrape.git/msgscrape/mtm/mtmcore/'
 alias cdgit='cd ~/mbig/scrape.git'
+
 alias cdscradsvc='cd ~/mbig/scrape.git/msgscrape/scradsvc/'
 alias cdsxtmpsvc='cd ~/mbig/scrape.git/msgscrape/s_sxtmpsvc/'
 
