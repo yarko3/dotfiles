@@ -1,5 +1,11 @@
 #!/bin/bash
 
+if [ "$RAN_STARTUP" || "$BBENV" ] 
+then
+    return 0
+fi
+export RAN_STARTUP="TRUE"
+
 # Open programs on monitors
 DISPLAY=:0.1
 konsole nohup

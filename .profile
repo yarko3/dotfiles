@@ -4,13 +4,12 @@
 echo "PROFILE has run"
 
 
-
 # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-# chimera not present/didn't run, set some basic stuff up 
+# chimera not present/didn't run, set some basic stuff up
 # hope /etc/passwd is good enough
-if [ ! "$BBENV" ] 
+if [ ! "$BBENV" ]
 then
-     PS1="${HOSTNAME}:\${PWD} \$ " 
+     PS1="${HOSTNAME}:\${PWD} \$ "
      PATH=$PATH:/usr/sbin
      ##LPDEST=put_your_printer_here
      ##GROUP=put_your_group_here
@@ -30,12 +29,15 @@ then
      fi
 fi
 umask 0022
-#. /bbsrc/princeton/skunk/vim/bb_include_path_cursor_vim source
 
-# Include this source for scraping information
-. /bb/unsupported/scrputil/team_profile/scrpenv.sh
+# Bloomberg Environment settings -- not for home
+if [ "$BBENV" ]
+then
+    # Source scraping information
+    . /bb/unsupported/scrputil/team_profile/scrpenv.sh
 
-export PATH="$PATH:/bb/bin"
+    export PATH="$PATH:/bb/bin"
+fi
 
 
 # Run BASH
