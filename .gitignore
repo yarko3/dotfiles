@@ -38,7 +38,6 @@ tags
 .flexlmrc
 .fontconfig/*
 .gconf*
-.gitconfig
 .gitNOTES/*
 .gitk*
 .gnome*
