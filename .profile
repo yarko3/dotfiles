@@ -3,13 +3,13 @@
 # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 echo "PROFILE has run"
 
-
-
 # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 # chimera not present/didn't run, set some basic stuff up 
 # hope /etc/passwd is good enough
-if [ ! "$BBENV" ] 
+#if [ !"$BBENV"]
+if [ 0 ]
 then
+     echo "Setting in up basic config with profile instead of chimera"
      PS1="${HOSTNAME}:\${PWD} \$ " 
      PATH=$PATH:/usr/sbin
      ##LPDEST=put_your_printer_here
@@ -30,12 +30,14 @@ then
      fi
 fi
 umask 0022
-#. /bbsrc/princeton/skunk/vim/bb_include_path_cursor_vim source
 
-# Include this source for scraping information
-. /bb/unsupported/scrputil/team_profile/scrpenv.sh
+if [ "$BBENV" ]
+then
+    # Include this source for scraping information
+    . /bb/unsupported/scrputil/team_profile/scrpenv.sh
 
-export PATH="$PATH:/bb/bin"
+    export PATH="$PATH:/bb/bin"
+fi
 
 
 # Run BASH
