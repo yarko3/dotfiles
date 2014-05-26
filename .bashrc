@@ -21,8 +21,8 @@ shopt -s  checkwinsize
 if [ "$BBENV"]
 then
     xmodmap ~/.Xmodmap_bloomberg
-#else
-    #xmodmap ~/.Xmodmap_kubuntu
+else
+    xmodmap ~/.Xmodmap_kubuntu
 fi
 
 export TERM=xterm-256color

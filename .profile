@@ -1,16 +1,15 @@
 # ~/.profile skeleton
 # ~/.profile runs on interactive login shells if it exists
 # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-echo "PROFILE has run"
+echo "PROFILE has run for user $USER and BBENV = $BBENV ."
 
 # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-# chimera not present/didn't run, set some basic stuff up 
+# chimera not present/didn't run, set some basic stuff up
 # hope /etc/passwd is good enough
-#if [ !"$BBENV"]
-if [ 0 ]
-then
+if ["$USER" != "brh"]; then
+if [!"$BBENV" ]; then
      echo "Setting in up basic config with profile instead of chimera"
-     PS1="${HOSTNAME}:\${PWD} \$ " 
+     PS1="${HOSTNAME}:\${PWD} \$ "
      PATH=$PATH:/usr/sbin
      ##LPDEST=put_your_printer_here
      ##GROUP=put_your_group_here
@@ -28,8 +27,9 @@ then
           stty erase ^?
           #echo "SunOS keys set"
      fi
+    umask 0022
 fi
-umask 0022
+fi
 
 if [ "$BBENV" ]
 then
@@ -39,6 +39,18 @@ then
     export PATH="$PATH:/bb/bin"
 fi
 
+
+if [ !"$BBENV" ]; then
+    if [ -n "$BASH_VERSION" ]; then
+        if [ -f "$HOME/.bashrc" ]; then
+            . "$HOME/.bashrc"
+        fi
+    fi
+
+    if [ -d "$HOME/bin" ] ; then
+        PATH="$HOME/bin:$PATH"
+    fi
+fi
 
 # Run BASH
 if [ -x /bin/bash ]; then
