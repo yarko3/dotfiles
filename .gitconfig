@@ -11,6 +11,6 @@
 [alias]
     logdog = log --decorate --oneline --graph
     headmaster = log --decorate --oneline --graph HEAD master
-[http]
-    proxy = devproxy.bloomberg.com:82
-    sslVerify = false
+#[http]
+    #proxy = devproxy.bloomberg.com:82
+    #sslVerify = false
