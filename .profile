@@ -39,7 +39,6 @@ then
     export PATH="$PATH:/bb/bin"
 fi
 
-
 if [ !"$BBENV" ]; then
     if [ -n "$BASH_VERSION" ]; then
         if [ -f "$HOME/.bashrc" ]; then

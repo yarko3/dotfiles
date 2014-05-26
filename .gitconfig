@@ -1,3 +1,16 @@
 [user]
-	email = brh2113@columbia.edu
-	name = brh
+    name = Ben Hipple
+    email = bhipple@bloomberg.net
+[color]
+    ui = true
+    status = true
+    branch = true
+    diff = true
+[core]
+    pager = less -R
+[alias]
+    logdog = log --decorate --oneline --graph
+    headmaster = log --decorate --oneline --graph HEAD master
+[http]
+    proxy = devproxy.bloomberg.com:82
+    sslVerify = false

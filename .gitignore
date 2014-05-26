@@ -38,7 +38,6 @@ tags
 .flexlmrc
 .fontconfig/*
 .gconf*
-.gitconfig
 .gitNOTES/*
 .gitk*
 .gnome*
@@ -54,6 +53,7 @@ tags
 .mozilla*
 .nfs*
 .nv*
+.oldgit*
 .pki*
 .pu*
 .recently-used*
