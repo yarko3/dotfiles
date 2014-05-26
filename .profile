@@ -6,6 +6,7 @@ echo "PROFILE has run for user $USER and BBENV = $BBENV ."
 # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 # chimera not present/didn't run, set some basic stuff up
 # hope /etc/passwd is good enough
+<<<<<<< HEAD
 if ["$USER" != "brh"]; then
 if [!"$BBENV" ]; then
      echo "Setting in up basic config with profile instead of chimera"
