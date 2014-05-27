@@ -48,11 +48,11 @@ alias scrapetogui='cd ~/mbig/scrape.git/msgscrape/scraper/ && ./run.sh testmsg.m
 alias scrapegui='cd ~/mbig/scrape.git/msgscrape/scraper/ && ../sxide/demos/reverse-pattern-lookup.py ./scraper_dump.tcl ./patterns.cfg &'
 
 # cd
-alias cdscraper='cd ~/mbig/scrape.git/msgscrape/scraper/'
-alias cdmtm='cd ~/mbig/scrape.git/msgscrape/mtm/mtmcore/'
 alias cdgit='cd ~/mbig/scrape.git'
-
+alias cdide='cd ~/mbig/scrape.git/msgscrape/sxide/'
+alias cdmtm='cd ~/mbig/scrape.git/msgscrape/mtm/mtmcore/'
 alias cdscradsvc='cd ~/mbig/scrape.git/msgscrape/scradsvc/'
+alias cdscraper='cd ~/mbig/scrape.git/msgscrape/scraper/'
 alias cdsxtmpsvc='cd ~/mbig/scrape.git/msgscrape/s_sxtmpsvc/'
 
 
