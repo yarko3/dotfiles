@@ -20,6 +20,9 @@ set tabstop=4
 set expandtab
 set shiftwidth=4
 
+" Allow switching off modified buffers without warning
+set hidden
+
 " Incremental Search and Highlighting Results
 set incsearch
 set hlsearch
@@ -47,10 +50,6 @@ set autoread
 
 " Set the folding method
 set foldmethod=manual
-
-" Stop comments automatically going on newlines
-setlocal comments-=://
-setlocal comments+=f://
 
 " Removing GUI Options on gvim
 set guioptions-=l    " Left scrollbar (without split)
