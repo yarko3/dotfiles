@@ -38,8 +38,8 @@ tags
 .flexlmrc
 .fontconfig/*
 .gconf*
-.gitconfig
 .gitNOTES/*
+.gitconfig
 .gitk*
 .gnome*
 .gstreamer*
@@ -56,6 +56,7 @@ tags
 .nv*
 .oldgit*
 .pki*
+.profile
 .pu*
 .recently-used*
 .robolibs-config.*
