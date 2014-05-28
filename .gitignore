@@ -13,6 +13,7 @@
 tags
 
 # Other Dotfiles
+*.bak
 .ICAClient*
 .ICE*
 .Private*
