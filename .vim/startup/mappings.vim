@@ -35,9 +35,7 @@ nnoremap n :set hlsearch<CR>n
 nnoremap N :set hlsearch<CR>N
 
 " Swap between cpp/h file
-nnoremap <silent> <F8> :exec ":e ".(expand("%") =~ ".h$"
-            \       ? glob(substitute(expand("%"), ".h$", ".cpp", ""))
-            \          : substitute(expand("%"), "\\.cpp$", ".h", ""))<CR>
+nnoremap <F8> :FSHere<CR>
 
 " Swap to last buffer
 nnoremap <silent> <F9> :b#<CR>
@@ -58,6 +56,10 @@ nmap <Leader>/ /^.*\s*:\c<Left><Left><Left><Left><Left><Left><Left><Left>
 nnoremap <Leader>cdf :cd %:h<CR>:pwd<CR>
 nnoremap <Leader>cdt :cd ~/mbig/scrape.git/msgscrape/scraper/<CR>
 nnoremap <Leader>e :e %:h<CR>9j
+nnoremap <Leader>fh :FSSplitLeft<CR>
+nnoremap <Leader>fj :FSSplitBelow<CR>
+nnoremap <Leader>fk :FSSplitAbove<CR>
+nnoremap <Leader>fl :FSSplitRight<CR>
 nnoremap <Leader>se :sp<CR>:e %:h<CR>9j
 nnoremap <Leader>t :TagbarToggle<CR>
 nnoremap <Leader>ve :vsp<CR>:e %:h<CR>9j
