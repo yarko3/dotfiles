@@ -11,9 +11,7 @@ set backspace=indent,eol,start
 
 " Backup directory for swp files
 set noswapfile
-set backupdir=""
 set directory=""
-set undodir=""
 
 " ctags locations
 set tags=./tags;~/mbig/scrape.git/msgscrape/scraper/tags

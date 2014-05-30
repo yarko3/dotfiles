@@ -30,12 +30,10 @@ nnoremap <C-l> :set hlsearch! hlsearch?<CR>
 " If hl search is off, starting a new search or moving enables it
 nnoremap / :set hlsearch<CR>/
 nnoremap * :set hlsearch<CR>*
+nnoremap # :set hlsearch<CR>#
 nnoremap ? :set hlsearch<CR>?
 nnoremap n :set hlsearch<CR>n
 nnoremap N :set hlsearch<CR>N
-
-" Swap between cpp/h file
-nnoremap <F8> :FSHere<CR>
 
 " Swap to last buffer
 nnoremap <silent> <F9> :b#<CR>
@@ -54,8 +52,9 @@ nnoremap <F5> :!./*.tsk<CR>
 nmap <Leader>* yiw/^<C-r><C-0>\s*:<CR>
 nmap <Leader>/ /^.*\s*:\c<Left><Left><Left><Left><Left><Left><Left><Left>
 nnoremap <Leader>cdf :cd %:h<CR>:pwd<CR>
-nnoremap <Leader>cdt :cd ~/mbig/scrape.git/msgscrape/scraper/<CR>
+nnoremap <Leader>cdt :cd ~/mbig/scrape.git/<CR>
 nnoremap <Leader>e :e %:h<CR>9j
+nnoremap <Leader>ff :FSHere<CR>
 nnoremap <Leader>fh :FSSplitLeft<CR>
 nnoremap <Leader>fj :FSSplitBelow<CR>
 nnoremap <Leader>fk :FSSplitAbove<CR>
