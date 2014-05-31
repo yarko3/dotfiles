@@ -11,6 +11,7 @@ sudo apt-get update
 # Specific Installs
 sudo apt-get install keepass2
 sudo apt-get install skype
+sudo apt-get install flashplugin-installer
 
 # Generic Upgrade
 sudo apt-get upgrade
