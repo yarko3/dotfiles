@@ -9,8 +9,15 @@ set autoindent
 set cindent
 set backspace=indent,eol,start
 
+" Backup directory for swp files
+set noswapfile
+set directory=""
+
 " ctags locations
-set tags=./tags;~/mbig/scrape.git/tags
+set tags=./tags;~/mbig/scrape.git/msgscrape/scraper/tags
+
+" cscope database location
+cs add ~/mbig/scrape.git/cscope.out
 
 " runtime path search for Ex
 set ru
@@ -50,6 +57,8 @@ set autoread
 
 " Set the folding method
 set foldmethod=manual
+set foldnestmax=3
+set foldminlines=10
 
 " Removing GUI Options on gvim
 set guioptions-=l    " Left scrollbar (without split)
@@ -59,8 +68,6 @@ set guioptions-=R    " Right scrollbar
 set guioptions-=T    " Toolbar
 
 " Set path for file searches
-"set path+=./**
-"set path+=../**
 set path+=/home/bhipple/mbig/scrape.git/**
 
 " Automatically open the QuickFix Window after a make

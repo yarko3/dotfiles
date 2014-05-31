@@ -18,8 +18,12 @@ shopt -s  checkwinsize
 
 # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 # Settings
-if [ "$BBENV"]
+if [ "$BBENV" ]
 then
+    # Autocomplete for Git
+    GIT_AUTOCOMPLETE_PATH="/opt/swt/share/git-contrib/completion/git-completion.bash"
+    [ -f $GIT_AUTOCOMPLETE_PATH ] && source $GIT_AUTOCOMPLETE_PATH
+
     xmodmap ~/.Xmodmap_bloomberg
 else
     xmodmap ~/.Xmodmap_kubuntu
@@ -28,9 +32,6 @@ fi
 export TERM=xterm-256color
 export EDITOR=vim
 
-# Autocomplete for Git
-GIT_AUTOCOMPLETE_PATH="/opt/swt/share/git-contrib/completion/git-completion.bash"
-[ -f $GIT_AUTOCOMPLETE_PATH ] && source $GIT_AUTOCOMPLETE_PATH
 
 # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 # Prompt

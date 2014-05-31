@@ -13,6 +13,7 @@ Plugin 'tpope/vim-fugitive'         " Git Wrapper
 Plugin 'chazmcgarvey/vimcoder'      " Topcoder Vim Plugin
 Plugin 'kien/ctrlp.vim'             " Ctrl-P
 Plugin 'majutsushi/tagbar'          " Tagbar
+Plugin 'derekwyatt/vim-fswitch'     " Fastswitch (cpp/h toggle)
 
 " Linux-Only plug-ins
 if g:platform == "Linux"

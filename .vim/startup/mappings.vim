@@ -19,7 +19,7 @@ inoremap <F3> BAEL_LOG_ERROR <<
 inoremap <F4> << BAEL_LOG_END;<CR>
 
 " Leaving insert mode with jj
-inoremap jj <Esc>
+inoremap jj <Esc><Right>
 
 "==============================================================================
 " Normal Mode Mappings
@@ -30,14 +30,10 @@ nnoremap <C-l> :set hlsearch! hlsearch?<CR>
 " If hl search is off, starting a new search or moving enables it
 nnoremap / :set hlsearch<CR>/
 nnoremap * :set hlsearch<CR>*
+nnoremap # :set hlsearch<CR>#
 nnoremap ? :set hlsearch<CR>?
 nnoremap n :set hlsearch<CR>n
 nnoremap N :set hlsearch<CR>N
-
-" Swap between cpp/h file
-nnoremap <silent> <F8> :exec ":e ".(expand("%") =~ ".h$"
-            \       ? glob(substitute(expand("%"), ".h$", ".cpp", ""))
-            \          : substitute(expand("%"), "\\.cpp$", ".h", ""))<CR>
 
 " Swap to last buffer
 nnoremap <silent> <F9> :b#<CR>
@@ -54,10 +50,15 @@ nnoremap <F5> :!./*.tsk<CR>
 " Leader Mappings (Sorted)
 "
 nmap <Leader>* yiw/^<C-r><C-0>\s*:<CR>
-nmap <Leader>/ /^.*\s*:\c<left><left><left><left><left><left><left><left>
+nmap <Leader>/ /^.*\s*:\c<Left><Left><Left><Left><Left><Left><Left><Left>
 nnoremap <Leader>cdf :cd %:h<CR>:pwd<CR>
-nnoremap <Leader>cdt :cd ~/mbig/scrape.git<CR>
+nnoremap <Leader>cdt :cd ~/mbig/scrape.git/<CR>
 nnoremap <Leader>e :e %:h<CR>9j
+nnoremap <Leader>ff :FSHere<CR>
+nnoremap <Leader>fh :FSSplitLeft<CR>
+nnoremap <Leader>fj :FSSplitBelow<CR>
+nnoremap <Leader>fk :FSSplitAbove<CR>
+nnoremap <Leader>fl :FSSplitRight<CR>
 nnoremap <Leader>se :sp<CR>:e %:h<CR>9j
 nnoremap <Leader>t :TagbarToggle<CR>
 nnoremap <Leader>ve :vsp<CR>:e %:h<CR>9j
