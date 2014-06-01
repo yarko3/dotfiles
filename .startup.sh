@@ -8,20 +8,23 @@ export RAN_STARTUP="TRUE"
 
 # Open programs on monitors
 DISPLAY=:0.1
-nohup konsole
+nohup konsole &
 
 DISPLAY=:0.2
-nohup konsole
+nohup konsole &
 
 DISPLAY=:0.4
-nohup konsole
+nohup konsole &
 
 DISPLAY=:0.5
-nohup konsole
+nohup konsole &
+nohup keepass2 &
 
 DISPLAY=:0.3
-nohup konsole
-nohup skype
+nohup konsole &
+nohup skype &
+nohup firefox &
 
 
 DISPLAY=:0.0
+nohup google-chrome &
