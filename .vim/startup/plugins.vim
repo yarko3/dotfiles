@@ -8,16 +8,16 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'          " Lets Vundle manage Vundle
-Plugin 'tpope/vim-dispatch'         " Asynchronous Makes
+"Plugin 'tpope/vim-dispatch'         " Asynchronous Makes
 Plugin 'tpope/vim-fugitive'         " Git Wrapper
 Plugin 'chazmcgarvey/vimcoder'      " Topcoder Vim Plugin
 Plugin 'kien/ctrlp.vim'             " Ctrl-P
-Plugin 'majutsushi/tagbar'          " Tagbar
+"Plugin 'majutsushi/tagbar'          " Tagbar
 Plugin 'derekwyatt/vim-fswitch'     " Fastswitch (cpp/h toggle)
 
 " Linux-Only plug-ins
 if g:platform == "Linux"
-    Plugin 'Valloric/YouCompleteMe' " TEMPORARILY DISABLED DUE TO MEMORY ISSUES
+    Plugin 'Valloric/YouCompleteMe'
     "let g:ycm_server_log_level = 'debug'
     let g:ycm_confirm_extra_conf = 0
     let g:ycm_path_to_python_interpreter = '/opt/swt/bin/python'

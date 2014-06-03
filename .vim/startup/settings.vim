@@ -13,6 +13,9 @@ set backspace=indent,eol,start
 set noswapfile
 set directory=""
 
+" Faster terminal scrolling?  TBD
+set ttyfast
+
 " ctags locations
 set tags=./tags;~/mbig/scrape.git/msgscrape/scraper/tags
 

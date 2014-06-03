@@ -15,6 +15,8 @@
 # update winsize after each command for better line-wrapping
 shopt -s  checkwinsize
 
+# Default file creation permissions
+umask u+wrx,g+rw,o+rw
 
 # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 # Settings
@@ -27,7 +29,7 @@ then
     [ -f $GIT_AUTOCOMPLETE_PATH ] && source $GIT_AUTOCOMPLETE_PATH
 
     # Programs
-    alias scrapetogui='cd ~/mbig/scrape.git/msgscrape/scraper/ && ./run.sh testmsg.msg && ../sxide/demos/reverse-pattern-lookup.py ./scraper_dump.tcl ./patterns.cfg &'
+    alias scrapetogui='cd ~/mbig/scrape.git/msgscrape/scraper/ && rm -rf scraper.0.log.* && ./run.sh testmsg.msg && ../sxide/demos/reverse-pattern-lookup.py ./scraper_dump.tcl ./patterns.cfg &'
     alias scrapegui='cd ~/mbig/scrape.git/msgscrape/scraper/ && ../sxide/demos/reverse-pattern-lookup.py ./scraper_dump.tcl ./patterns.cfg &'
 
     # cd

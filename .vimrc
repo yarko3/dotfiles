@@ -1,7 +1,11 @@
 " .vimrc
 " Benjamin Hipple
 
-colorscheme desert256
+if has("gui_running")
+    colorscheme desert
+else
+    colorscheme desert256
+endif
 
 
 " Load each specialized settings file
