@@ -48,6 +48,9 @@ else
     alias gc='google-chrome &'
 fi
 
+# Platform independent settings
+alias gvir='gvim --remote-send ":tabe<CR>" && gvim --remote'
+
 export TERM=xterm-256color
 export EDITOR=vim
 

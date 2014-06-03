@@ -17,7 +17,7 @@ inoremap {}     {}
 inoremap <F2> BAEL_LOG_TRACE << 
 inoremap <F3> BAEL_LOG_DEBUG << 
 inoremap <F4> BAEL_LOG_ERROR << 
-inoremap <F5> << BAEL_LOG_END;<ESC>j
+inoremap <F5>  << BAEL_LOG_END;<ESC>
 
 " Leaving insert mode with jj
 inoremap jj <Esc><Right>
@@ -51,7 +51,7 @@ nnoremap <F5> :!./*.tsk<CR>
 " Leader Mappings (Sorted)
 "
 nmap <Leader>* yiw/^<C-r><C-0>\s*:<CR>
-nmap <Leader>/ /^.*\s*:\c<Left><Left><Left><Left><Left><Left><Left><Left>
+nmap <Leader>/ /^\s*:\c<Left><Left><Left><Left><Left><Left>
 nnoremap <Leader>cdf :cd %:h<CR>:pwd<CR>
 nnoremap <Leader>cdt :cd ~/mbig/scrape.git/<CR>
 nnoremap <Leader>e :e %:h<CR>9j
