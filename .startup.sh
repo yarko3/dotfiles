@@ -15,6 +15,7 @@ nohup konsole &
 
 DISPLAY=:0.4
 nohup konsole &
+nohup firefox &
 
 DISPLAY=:0.5
 nohup konsole &
@@ -23,7 +24,6 @@ nohup keepass2 &
 DISPLAY=:0.3
 nohup konsole &
 nohup skype &
-nohup firefox &
 
 
 DISPLAY=:0.0
