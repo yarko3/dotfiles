@@ -17,7 +17,7 @@ inoremap {}     {}
 inoremap <F2> BAEL_LOG_TRACE << 
 inoremap <F3> BAEL_LOG_DEBUG << 
 inoremap <F4> BAEL_LOG_ERROR << 
-inoremap <F5>  << BAEL_LOG_END;<ESC>
+inoremap <F5> << BAEL_LOG_END;<ESC>
 
 " Leaving insert mode with jj
 inoremap jj <Esc><Right>

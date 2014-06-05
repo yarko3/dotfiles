@@ -29,9 +29,10 @@ then
     [ -f $GIT_AUTOCOMPLETE_PATH ] && source $GIT_AUTOCOMPLETE_PATH
 
     # Programs
-    alias scrapetogui='cd ~/mbig/scrape.git/msgscrape/scraper/ && rm -rf scraper.0.log.* && ./run.sh testmsg.msg && ../sxide/demos/reverse-pattern-lookup.py ./scraper_dump.tcl ./patterns.cfg &'
-    alias scrapegui='cd ~/mbig/scrape.git/msgscrape/scraper/ && ../sxide/demos/reverse-pattern-lookup.py ./scraper_dump.tcl ./patterns.cfg &'
+    alias scrptogui='cd ~/mbig/scrape.git/msgscrape/scraper/ && rm -rf scraper.0.log.* && ./run.sh testmsg.msg && ../sxide/demos/reverse-pattern-lookup.py ./scraper_dump.tcl ./patterns.cfg &'
+    alias scrpgui='cd ~/mbig/scrape.git/msgscrape/scraper/ && ../sxide/demos/reverse-pattern-lookup.py ./scraper_dump.tcl ./patterns.cfg &'
 
+    alias scrptest='cd ~/mbig/scrape.git/msgscrape/scraper/ && rm -rf scraper.0.log.* && ./run.sh testmsg.brh.msg && ../sxide/demos/reverse-pattern-lookup.py ./scraper_dump.tcl ./patterns.brh.cfg &'
     # cd
     alias cdgit='cd ~/mbig/scrape.git'
     alias cdide='cd ~/mbig/scrape.git/msgscrape/sxide/'
