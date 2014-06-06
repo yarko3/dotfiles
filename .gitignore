@@ -36,6 +36,7 @@ tags
 .ecrypt*
 .emacs
 .exrc*
+.filezilla*
 .flexlmrc
 .fontconfig/*
 .gconf*
@@ -76,6 +77,7 @@ tags
 .vim/bundle*
 .vimcoder*
 .viminfo
+.wireshark*
 .xauth*
 .xemacs*
 .xemacs*
@@ -103,3 +105,4 @@ Projects*
 app-defaults*
 examples*
 nohup.out
+Pictures*

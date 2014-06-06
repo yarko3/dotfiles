@@ -12,6 +12,8 @@ sudo apt-get update
 sudo apt-get install keepass2
 sudo apt-get install skype
 sudo apt-get install flashplugin-installer
+sudo apt-get install wireshark
+sudo apt-get install filezilla
 
 # Generic Upgrade
 sudo apt-get upgrade
