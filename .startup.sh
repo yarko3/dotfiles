@@ -1,18 +1,11 @@
 #!/bin/bash
-
-if [ "$RAN_STARTUP" || "$BBENV" ]
-then
-    return 0
-fi
-export RAN_STARTUP="TRUE"
-
 #==============================================================================
 # Open programs on monitors
 #
 # Top Center
 DISPLAY=:0.1
 nohup konsole &
-nohup firefox &
+nohup ~/.chrome-x-launch.sh &
 
 # Top Right
 DISPLAY=:0.2
@@ -22,7 +15,7 @@ nohup filezilla &
 # Bottom Right
 DISPLAY=:0.4
 nohup konsole &
-nohup chromium-browser &
+nohup ~/.chrome-x-launch.sh &
 
 # Top Right
 DISPLAY=:0.5
@@ -33,8 +26,8 @@ nohup keepass2 &
 DISPLAY=:0.3
 nohup konsole &
 nohup skype &
-nohup opera &
+nohup google-chrome &
 
 # Bottom Center
 DISPLAY=:0.0
-nohup google-chrome &
+nohup ~/.chrome-x-launch.sh &

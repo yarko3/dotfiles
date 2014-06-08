@@ -45,8 +45,9 @@ else
     xmodmap ~/.Xmodmap_kubuntu
 
     # Programs
-    alias ff='firefox &'
-    alias gc='google-chrome &'
+    alias ff='nohup firefox &'
+    alias gc='nohup ~/.chrome-x-launch.sh'
+    alias google-chrome='nohup ~/.chrome-x-launch.sh'
 fi
 
 # Platform independent settings

@@ -21,14 +21,20 @@ sudo apt-get update
 #==============================================================================
 # Specific Installs
 #
-sudo apt-get install keepass2
-sudo apt-get install skype
-sudo apt-get install flashplugin-installer
-sudo apt-get install wireshark
-sudo apt-get install filezilla
+# Dev
+sudo apt-get install build-essential cmake
+sudo apt-get install python-dev
+
+# Browsers
 sudo apt-get install chromium-browser
+sudo apt-get install flashplugin-installer
 sudo apt-get install opera
 
+# Other
+sudo apt-get install filezilla
+sudo apt-get install keepass2
+sudo apt-get install skype
+sudo apt-get install wireshark
 
 #==============================================================================
 # Generic Upgrade
