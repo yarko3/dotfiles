@@ -16,6 +16,7 @@
 shopt -s  checkwinsize
 
 # Default file creation permissions
+umask a-rwx
 umask u+wrx,g+rw,o+rw
 
 # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -29,10 +30,11 @@ then
     [ -f $GIT_AUTOCOMPLETE_PATH ] && source $GIT_AUTOCOMPLETE_PATH
 
     # Programs
-    alias scrptogui='cd ~/mbig/scrape.git/msgscrape/scraper/ && rm -rf scraper.0.log.* && ./run.sh testmsg.msg && ../sxide/demos/reverse-pattern-lookup.py ./scraper_dump.tcl ./patterns.cfg &'
-    alias scrpgui='cd ~/mbig/scrape.git/msgscrape/scraper/ && ../sxide/demos/reverse-pattern-lookup.py ./scraper_dump.tcl ./patterns.cfg &'
+    alias scrptogui='rm -rf scraper.0.log.* && ./run.sh testmsg.msg && ../sxide/demos/reverse-pattern-lookup.py ./scraper_dump.tcl ./patterns.cfg &'
+    alias scrpgui='../sxide/demos/reverse-pattern-lookup.py ./scraper_dump.tcl ./patterns.cfg &'
 
-    alias scrptest='cd ~/mbig/scrape.git/msgscrape/scraper/ && rm -rf scraper.0.log.* && ./run.sh testmsg.brh.msg && ../sxide/demos/reverse-pattern-lookup.py ./scraper_dump.tcl ./patterns.brh.cfg &'
+    alias scrptest='rm -rf scraper.0.log.* && ./run.sh testmsg.brh.msg && ../sxide/demos/reverse-pattern-lookup.py ./scraper_dump.tcl ./patterns.brh.cfg &'
+
     # cd
     alias cdgit='cd ~/mbig/scrape.git'
     alias cdide='cd ~/mbig/scrape.git/msgscrape/sxide/'
@@ -40,6 +42,7 @@ then
     alias cdscradsvc='cd ~/mbig/scrape.git/msgscrape/scradsvc/'
     alias cdscraper='cd ~/mbig/scrape.git/msgscrape/scraper/'
     alias cdsxtmpsvc='cd ~/mbig/scrape.git/msgscrape/s_sxtmpsvc/'
+    alias cdtest='cd /scrp/data/scraper/testdata/test'
 
 else
     xmodmap ~/.Xmodmap_kubuntu
