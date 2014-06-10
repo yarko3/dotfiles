@@ -37,7 +37,7 @@ nnoremap n :set hlsearch<CR>n
 nnoremap N :set hlsearch<CR>N
 
 " Swap to last buffer
-nnoremap <silent> <F9> :b#<CR>
+nnoremap <silent> <F8> :b#<CR>
 
 " Set <Space> + Character to insert 1 character, then go back to command mode
 nnoremap <Space> i_<Esc>r
@@ -52,8 +52,9 @@ nnoremap <F5> :!./*.tsk<CR>
 "
 nmap <Leader>* yiw/^<C-r><C-0>\s*:<CR>
 nmap <Leader>/ /^\s*:\c<Left><Left><Left><Left><Left><Left>
-nnoremap <Leader>cdf :cd %:h<CR>:pwd<CR>
-nnoremap <Leader>cdt :cd ~/mbig/scrape.git/<CR>
+nnoremap <Leader>cdf :call Cdfile()<CR>
+nnoremap <Leader>cdg :call Cdgit()<CR>
+nnoremap <Leader>cds :call Cdscraper()<CR>
 nnoremap <Leader>e :e %:h<CR>9j
 nnoremap <Leader>ff :FSHere<CR>
 nnoremap <Leader>fh :FSSplitLeft<CR>

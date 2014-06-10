@@ -18,3 +18,18 @@ function! GetPlatform()
         return "Unknown"
     endif
 endfunction
+
+function! Cdscraper()
+    cd ~/mbig/scrape.git/msgscrape/scraper
+    pwd
+endfunction
+
+function! Cdgit()
+    cd ~/mbig/scrape.git
+    pwd
+endfunction
+
+function! Cdfile()
+    cd %:h
+    pwd
+endfunction
