@@ -98,12 +98,13 @@ training_labs/git/examples/*
 
 # Home Directories
 Books*
+Calibre*
 Desktop*
 Documents*
 Downloads*
 Music*
+Pictures*
 Projects*
 app-defaults*
 examples*
 nohup.out
-Pictures*
