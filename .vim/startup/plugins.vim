@@ -8,9 +8,9 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'          " Lets Vundle manage Vundle
-"Plugin 'tpope/vim-dispatch'         " Asynchronous Makes
+"Plugin 'tpope/vim-dispatch'        " Asynchronous Makes
 Plugin 'tpope/vim-fugitive'         " Git Wrapper
-Plugin 'chazmcgarvey/vimcoder'      " Topcoder Vim Plugin
+Plugin 'brhCS/vimcoder'             " Topcoder Vim Plugin
 Plugin 'kien/ctrlp.vim'             " Ctrl-P
 Plugin 'majutsushi/tagbar'          " Tagbar
 Plugin 'derekwyatt/vim-fswitch'     " Fastswitch (cpp/h toggle)
