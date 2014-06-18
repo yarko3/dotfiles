@@ -7,10 +7,11 @@ DISPLAY=:0.1
 nohup konsole &
 nohup ~/.chrome-x-launch.sh &
 
-# Top Right
+# Top Left
 DISPLAY=:0.2
 nohup konsole &
-nohup filezilla &
+nohup steam &
+nohup ~/.chrome-x-launch.sh &
 
 # Bottom Right
 DISPLAY=:0.4

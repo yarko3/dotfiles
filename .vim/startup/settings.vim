@@ -49,7 +49,7 @@ set mouse=a
 
 " Configure :make with plink
 "set makeprg=rm\ -f\ *.tsk\ &&\ ~/shellscripts/bld
-set makeprg=plink\ *.mk
+set makeprg=make\ all\ &&\ make\ test
 
 " Make vsplit split the new window to the right, not left
 set splitright
