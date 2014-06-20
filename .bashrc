@@ -53,7 +53,8 @@ else
     xmodmap ~/.Xmodmap_kubuntu
 
     # Programs
-    alias ff='nohup firefox &'
+    alias ff='nohup ~/.firefox-x-launch.sh &'
+    alias firefox='nohup ~/.firefox-x-launch.sh &'
     alias gc='nohup ~/.chrome-x-launch.sh'
     alias google-chrome='nohup ~/.chrome-x-launch.sh'
 fi
