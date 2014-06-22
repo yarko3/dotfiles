@@ -24,6 +24,7 @@ sudo apt-get update
 # Dev
 sudo apt-get install build-essential cmake
 sudo apt-get install python-dev
+sudo apt-get buid-dep python3.4
 
 # Browsers
 sudo apt-get install chromium-browser

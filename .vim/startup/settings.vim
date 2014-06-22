@@ -2,6 +2,7 @@
 
 set nocompatible
 let g:platform = GetPlatform()
+let g:bbenv = GetBBENV()
 
 " Editing
 syntax on

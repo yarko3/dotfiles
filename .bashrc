@@ -26,6 +26,8 @@ fi
 
 # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 # Settings
+#
+# Bloomberg Configurations
 if [ "$BBENV" ]
 then
     xmodmap ~/.Xmodmap_bloomberg
@@ -49,8 +51,14 @@ then
     alias cdsxtmpsvc='cd ~/mbig/scrape.git/msgscrape/s_sxtmpsvc/'
     alias cdtest='cd /scrp/data/scraper/testdata/test'
 
+
+# Personal Configurations
 else
-    xmodmap ~/.Xmodmap_kubuntu
+    if [$hostname == 'brh-laptop']; then
+        #xmodmap ~/.Xmodmap_kubuntu_laptop
+    elif[$hostname == 'brh-desktop']; then
+        xmodmap ~/.Xmodmap_kubuntu_desktop
+    fi
 
     # Programs
     alias ff='nohup ~/.firefox-x-launch.sh &'
