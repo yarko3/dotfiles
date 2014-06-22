@@ -4,32 +4,29 @@
 #==============================================================================
 # Adding Repos
 #
-sudo apt-add-repository ppa:jtaylor/keepass
-sudo add-apt-repository "deb http://archive.canonical.com/ $(lsb_release -sc) partner"
-
-# Opera
-sudo sh -c 'echo "deb http://deb.opera.com/opera/ stable non-free" >> /etc/apt/sources.list.d/opera.list'
-sudo sh -c 'wget -O - http://deb.opera.com/archive.key | apt-key add -'
-
+# See my_sources.list
 
 #==============================================================================
 # Update
 #
 sudo apt-get update
 
-
 #==============================================================================
 # Specific Installs
 #
-# Dev
+# Development
 sudo apt-get install build-essential cmake
 sudo apt-get install python-dev
-sudo apt-get buid-dep python3.4
+sudo apt-get build-dep python3.4
+
+# Citrix
+sudo apt-get install libmotif4:i386 nspluginwrapper lib32z1 libc6-i386 libxp6:i386 libxpm4:i386 libasound2:i386
 
 # Browsers
 sudo apt-get install chromium-browser
+sudo apt-get install google-chrome
 sudo apt-get install flashplugin-installer
-sudo apt-get install opera
+
 
 # Other
 sudo apt-get install filezilla

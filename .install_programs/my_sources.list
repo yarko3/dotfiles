@@ -1,0 +1,14 @@
+# Additional Sources
+# UNTESTED WIP
+#
+# TBD: Figure out how to copy my_sources.list to /etc/apt/sources.list.d/my_sources.list
+# in a format that will work for all of the various types
+
+sudo add-apt-repository ppa:jtaylor/keepass
+
+# Citrix Receiver
+sudo dpkg --add-architecture i386
+
+# Run this command:
+# This is the rebuilt icaclient that works on Ubuntu 14.04
+#sudo dpkg -i icaclient-modified.deb
