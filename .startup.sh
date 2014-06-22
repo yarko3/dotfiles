@@ -10,7 +10,6 @@ nohup ~/.firefox-x-launch.sh &
 # Top Left
 DISPLAY=:0.2
 nohup konsole &
-nohup steam &
 nohup ~/.firefox-x-launch.sh &
 
 # Bottom Right

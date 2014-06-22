@@ -16,7 +16,7 @@
 shopt -s  checkwinsize
 
 # Default file creation permissions
-if [ "$BBENV"]; then
+if [ "$BBENV" ]; then
     umask a-rwx
     umask u+wrx,g+rw,o+rw
 else
@@ -54,9 +54,9 @@ then
 
 # Personal Configurations
 else
-    if [$hostname == 'brh-laptop']; then
-        #xmodmap ~/.Xmodmap_kubuntu_laptop
-    elif[$hostname == 'brh-desktop']; then
+    if [ $HOSTNAME == 'brh-laptop' ]; then
+        xmodmap ~/.Xmodmap_kubuntu_laptop
+    elif [ $HOSTNAME == 'brh-desktop' ]; then
         xmodmap ~/.Xmodmap_kubuntu_desktop
     fi
 
