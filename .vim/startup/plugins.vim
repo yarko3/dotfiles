@@ -7,18 +7,19 @@ set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+
 Plugin 'gmarik/Vundle.vim'          " Lets Vundle manage Vundle
 "Plugin 'tpope/vim-dispatch'        " Asynchronous Makes
-Plugin 'tpope/vim-fugitive'         " Git Wrapper
 Plugin 'brhCS/vimcoder'             " Topcoder Vim Plugin
+Plugin 'derekwyatt/vim-fswitch'     " Fastswitch (cpp/h toggle)
 Plugin 'kien/ctrlp.vim'             " Ctrl-P
 Plugin 'majutsushi/tagbar'          " Tagbar
-Plugin 'derekwyatt/vim-fswitch'     " Fastswitch (cpp/h toggle)
+Plugin 'tpope/vim-fugitive'         " Git Wrapper
 
 " Linux-Only plug-ins
 if g:platform == "Linux"
     Plugin 'Valloric/YouCompleteMe'
-    "let g:ycm_server_log_level = 'debug'
+    let g:ycm_server_log_level = 'debug'
     if g:bbenv
         let g:ycm_path_to_python_interpreter = '/opt/swt/bin/python'
     endif
