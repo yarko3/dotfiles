@@ -18,7 +18,7 @@ shopt -s  checkwinsize
 # Default file creation permissions
 if [ "$BBENV" ]; then
     umask a-rwx
-    umask u+wrx,g+rw,o+rw
+    umask u+wrx,g+rw,o+r
 else
     umask 0022
 fi

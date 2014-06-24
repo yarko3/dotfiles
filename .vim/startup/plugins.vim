@@ -20,7 +20,7 @@ Plugin 'tpope/vim-fugitive'         " Git Wrapper
 if g:platform == "Linux"
     Plugin 'Valloric/YouCompleteMe'
     let g:ycm_server_log_level = 'debug'
-    if g:bbenv
+    if g:bbenv != ""
         let g:ycm_path_to_python_interpreter = '/opt/swt/bin/python'
     endif
     let g:ycm_confirm_extra_conf = 0
