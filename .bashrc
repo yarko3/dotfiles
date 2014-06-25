@@ -46,11 +46,13 @@ then
     alias cdgit='cd ~/mbig/scrape.git'
     alias cdide='cd ~/mbig/scrape.git/msgscrape/sxide/'
     alias cdmtm='cd ~/mbig/scrape.git/msgscrape/mtm/mtmcore/'
-    alias cdscradsvc='cd ~/mbig/scrape.git/msgscrape/scradsvc/'
     alias cdscraper='cd ~/mbig/scrape.git/msgscrape/scraper/'
-    alias cdsxtmpsvc='cd ~/mbig/scrape.git/msgscrape/s_sxtmpsvc/'
     alias cdtest='cd /scrp/data/scraper/testdata/test'
 
+    # cd to bas services
+    alias cdscradsvc='cd ~/mbig/scrape.git/msgscrape/scradsvc/'
+    alias cdscrpxbsvc='cd ~/mbig/scrape.git/msgscrape/pcs_xb_mapping/scrpxbsvc/'
+    alias cdsxtmpsvc='cd ~/mbig/scrape.git/msgscrape/s_sxtmpsvc/'
 
 # Personal Configurations
 else
