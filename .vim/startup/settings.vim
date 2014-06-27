@@ -82,7 +82,9 @@ autocmd QuickFixCmdPost *make* cwindow
 autocmd FileType make setlocal noexpandtab shiftwidth=8
 
 " Set automatic indentation format for XML files
-autocmd FileType xml exe ":silent %!xmllint --format --recover - 2>/dev/null"
+"autocmd FileType xml exe ":silent %!xmllint --format --recover - 2>/dev/null"
+autocmd FileType xml setlocal equalprg=xmllint\ --format\ -
+"autocmd FileType xml exe ":silent 1,$!XMLLINT_INDENT='  ' xmllint --format --recover - 2>/dev/null"
 
 " Check for lines that exceed 80 chars . . . too laggy
 "autocmd BufRead,BufNewFile   *.c,*.h,*.cpp au BufWinEnter * let w:m1=matchadd('Search', '\%<81v.\%>77v', -1)

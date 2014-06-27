@@ -9,12 +9,14 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'          " Lets Vundle manage Vundle
-"Plugin 'tpope/vim-dispatch'        " Asynchronous Makes
+
 Plugin 'brhCS/vimcoder'             " Topcoder Vim Plugin
 Plugin 'derekwyatt/vim-fswitch'     " Fastswitch (cpp/h toggle)
 Plugin 'kien/ctrlp.vim'             " Ctrl-P
 Plugin 'majutsushi/tagbar'          " Tagbar
 Plugin 'tpope/vim-fugitive'         " Git Wrapper
+"Plugin 'tpope/vim-dispatch'        " Asynchronous Makes
+"Plugin 'kshenoy/vim-signature'      " Local marks enhancement
 
 " Linux-Only plug-ins
 if g:platform == "Linux"
