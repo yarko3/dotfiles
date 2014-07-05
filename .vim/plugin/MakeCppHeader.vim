@@ -15,76 +15,79 @@
 
 " Call to write a single cpp/h pair
 function! MkClass(namespace, filename)
-   "---------------------- CONFIGURABLE VARIABLES -----------------------"
-   let openingComment = "//@BRIEF"
+    "---------------------- CONFIGURABLE VARIABLES -----------------------"
+    let openingComment = "//@BRIEF"
 
-   """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-   execute "tabe" a:filename . ".cpp"
-   execute XH_MakeCPP(a:filename, a:namespace, openingComment)
-   execute "silent w"
+    """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    execute "tabe" a:filename . ".cpp"
+    execute XH_MakeCPP(a:filename, a:namespace, openingComment)
+    execute "silent w"
 
-   execute "vsp " . a:filename . ".h"
-   execute XH_MakeHeader(a:filename, a:namespace, openingComment)
-   execute "silent w"
+    execute "vsp " . a:filename . ".h"
+    execute XH_MakeHeader(a:filename, a:namespace, openingComment)
+    execute "silent w"
 
 endfunction
 
 " Calls MkClass for every filename given in the variable length arglist.
 function! BatchMkClass(namespace, ...)
-   for fileName in a:000
-      silent call MkClass(a:namespace, fileName)
-   endfor
+    for fileName in a:000
+        silent call MkClass(a:namespace, fileName)
+    endfor
 endfunction
 
 
 " Helper functions
 function! XH_MakeHeader(filename, namespace, openingComment)
-   let classname = XH_CalcClassName(a:filename)
+    let classname = XH_CalcClassName(a:filename)
 
-   let str = XH_CalcPrologue(a:filename, ".h")
-   let str = str . "#ifndef " . XH_CalcIncludeGuard(a:filename) . "\n#define " . XH_CalcIncludeGuard(a:filename) . "\n\n"
+    let str = XH_CalcPrologue(a:filename, ".h")
+    let str = str . "#ifndef " . XH_CalcIncludeGuard(a:filename) . "\n#define " . XH_CalcIncludeGuard(a:filename) . "\n\n"
 
-   let str = str . XH_OpenNamespace(a:namespace)
-   let str = str . XH_AddClassBody(classname)
-   let str = str . XH_CloseNamespace(a:namespace)
+    let str = str . XH_OpenNamespace(a:namespace)
+    let str = str . XH_AddClassBody(classname)
+    let str = str . XH_CloseNamespace(a:namespace)
 
-   let str = str . "#endif // " . XH_CalcIncludeGuard(a:filename) . "\n\n"
-   let str = str . XH_CopyrightString()
-   put!=str
+    let str = str . "#endif // " . XH_CalcIncludeGuard(a:filename) . "\n\n"
+    let str = str . XH_CopyrightString()
+
+    put!=str
+    execute XH_DeleteLastLine()
 endfunction
 
 function! XH_MakeCPP(filename, namespace, openingComment)
 
-   let str = XH_CalcPrologue(a:filename, ".cpp")
-   let str = str . "#include <" . a:filename . ".h>\n\n"
+    let str = XH_CalcPrologue(a:filename, ".cpp")
+    let str = str . "#include <" . a:filename . ".h>\n\n"
 
-   let str = str . XH_OpenNamespace(a:namespace)
-   let str = str . XH_CloseNamespace(a:namespace)
-   let str = str . XH_CopyrightString()
+    let str = str . XH_OpenNamespace(a:namespace)
+    let str = str . XH_CloseNamespace(a:namespace)
+    let str = str . XH_CopyrightString()
 
-   put!=str
+    put!=str
+    execute XH_DeleteLastLine()
 endfunction
 
 function! XH_OpenNamespace(namespace)
-   let str = "namespace BloombergLP {\n"
-   let str = str . "namespace " . a:namespace . " {\n\n"
-   return str
+    let str = "namespace BloombergLP {\n"
+    let str = str . "namespace " . a:namespace . " {\n\n"
+    return str
 endfunction
 
 function! XH_CloseNamespace(namespace)
-   let str = "\n"
-   let str = str . "} // close " . a:namespace . "\n"
-   let str = str . "} // close BloombergLP" . "\n\n"
-   return str
+    let str = "\n"
+    let str = str . "} // close " . a:namespace . "\n"
+    let str = str . "} // close BloombergLP" . "\n\n"
+    return str
 endfunction
 
 
 " Default classname replaces filename's first character with a capital letter,
 " removes underscores, and capitalizes the subsequent letter
 function! XH_CalcClassName(filename)
-   let classname = substitute(a:filename, '^[a-z]', '\U\0', "g")
-   let classname = substitute(classname, '_\([a-z]\)', '\U\1', "g")
-   return classname
+    let classname = substitute(a:filename, '^[a-z]', '\U\0', "g")
+    let classname = substitute(classname, '_\([a-z]\)', '\U\1', "g")
+    return classname
 endfunction
 
 function! XH_CalcPrologue(filename, filetype)
@@ -105,29 +108,31 @@ function! XH_CalcPrologue(filename, filetype)
 endfunction
 
 function! XH_CalcIncludeGuard(filename)
-   return "INCLUDED_" . toupper(a:filename)
+    return "INCLUDED_" . toupper(a:filename)
 endfunction
 
 function! XH_AddClassBody(classname)
-   let str = "class " . a:classname . " {\n"
-   let str = str . "   public:\n"
+    let indentSize = '    '
+    let str = "class " . a:classname . " {\n"
+    let str = str . "  public:\n"
 
-   " Constructor
-   let str = str . '      //' . a:classname . '() { }' . "\n"
-   " Destructor
-   let str = str . '      //~' . a:classname . '() { }' . "\n\n"
+    " Constructor
+    let str = str . indentSize . '//' . a:classname . '() { }' . "\n"
+    " Destructor
+    let str = str . indentSize . '//~' . a:classname . '() { }' . "\n\n"
 
-   " Copy Constructor
-   let str = str . '      //' . a:classname . '(const ' . a:classname . ' &other);' . "\n"
-   " Copy Assignment Operator
-   let str = str . '      //' . a:classname . ' &operator=(const ' . a:classname . ' &rhs);' . "\n\n"
+    " Copy Constructor
+    let str = str . indentSize . '//' . a:classname . '(const ' . a:classname . ' &other);' . "\n"
+    " Copy Assignment Operator
+    let str = str . indentSize . '//' . a:classname . ' &operator=(const ' . a:classname . ' &rhs);' . "\n\n"
 
-   let str = str . "   private:\n"
-   let str = str . "\n\n};" . "\n"
+    let str = str . "  private:\n"
+    let str = str . "\n};" . "\n"
 
-   return str
+    return str
 endfunction
 
+" Bloomberg LP Copyright Message
 function! XH_CopyrightString()
     let str = "// ----------------------------------------------------------------------------" . "\n"
     let str = str . "// NOTICE:" . "\n"
@@ -138,4 +143,10 @@ function! XH_CopyrightString()
     let str = str . "//      terms of a BLP license agreement which governs its use." . "\n"
     let str = str . "// ------------------------------- END-OF-FILE --------------------------------"
     return str
+endfunction
+
+" Get rid of the blank line at EOF
+function! XH_DeleteLastLine()
+    execute "normal G"
+    execute "normal dd"
 endfunction
