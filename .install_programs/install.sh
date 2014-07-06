@@ -28,6 +28,7 @@ sudo apt-get install google-chrome
 sudo apt-get install flashplugin-installer
 
 # Other
+sudo apt-get install ubuntu-restricted-extras
 sudo apt-get install filezilla
 sudo apt-get install keepass2
 sudo apt-get install skype
