@@ -33,6 +33,7 @@ sudo apt-get install filezilla
 sudo apt-get install keepass2
 sudo apt-get install skype
 sudo apt-get install wireshark
+sudo apt-get install deluge
 
 #==============================================================================
 # Generic Upgrade
