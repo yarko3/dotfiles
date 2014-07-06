@@ -27,13 +27,15 @@ sudo apt-get install chromium-browser
 sudo apt-get install google-chrome
 sudo apt-get install flashplugin-installer
 
-
 # Other
 sudo apt-get install filezilla
 sudo apt-get install keepass2
 sudo apt-get install skype
 sudo apt-get install wireshark
 sudo apt-get install deluge
+
+# Media Players
+sudo apt-get install totem
 
 #==============================================================================
 # Generic Upgrade
