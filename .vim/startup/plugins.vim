@@ -10,7 +10,9 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'              " Lets Vundle manage Vundle
 
+Plugin 'brhCS/CppFileTemplate'          " Make CPP and H templates according to BDE standards
 Plugin 'brhCS/vimcoder'                 " Topcoder Vim Plugin
+Plugin 'chazy/cscope_maps'              " cscope mappings
 Plugin 'derekwyatt/vim-fswitch'         " Fastswitch (cpp/h toggle)
 Plugin 'kien/ctrlp.vim'                 " Ctrl-P
 Plugin 'majutsushi/tagbar'              " Tagbar
