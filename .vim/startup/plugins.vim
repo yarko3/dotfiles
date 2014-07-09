@@ -8,15 +8,18 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'gmarik/Vundle.vim'          " Lets Vundle manage Vundle
+Plugin 'gmarik/Vundle.vim'              " Lets Vundle manage Vundle
 
-Plugin 'brhCS/vimcoder'             " Topcoder Vim Plugin
-Plugin 'derekwyatt/vim-fswitch'     " Fastswitch (cpp/h toggle)
-Plugin 'kien/ctrlp.vim'             " Ctrl-P
-Plugin 'majutsushi/tagbar'          " Tagbar
-Plugin 'tpope/vim-fugitive'         " Git Wrapper
-"Plugin 'tpope/vim-dispatch'        " Asynchronous Makes
-"Plugin 'kshenoy/vim-signature'      " Local marks enhancement
+Plugin 'brhCS/vimcoder'                 " Topcoder Vim Plugin
+Plugin 'derekwyatt/vim-fswitch'         " Fastswitch (cpp/h toggle)
+Plugin 'kien/ctrlp.vim'                 " Ctrl-P
+Plugin 'majutsushi/tagbar'              " Tagbar
+Plugin 'orlandov/vimfluence'            " Vim <--> Confluence editing plugin
+Plugin 'tpope/vim-fugitive'             " Git Wrapper
+Plugin 'vim-scripts/confluencewiki.vim' " Confluence Syntax Highlighting
+
+"Plugin 'tpope/vim-dispatch'            " Asynchronous Makes
+"Plugin 'kshenoy/vim-signature'         " Local marks enhancement
 
 " Linux-Only plug-ins
 if g:platform == "Linux"
