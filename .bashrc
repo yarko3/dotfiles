@@ -53,6 +53,7 @@ then
     alias cdscradsvc='cd ~/mbig/scrape.git/msgscrape/scradsvc/'
     alias cdscrpxbsvc='cd ~/mbig/scrape.git/msgscrape/pcs_xb_mapping/scrpxbsvc/'
     alias cdsxtmpsvc='cd ~/mbig/scrape.git/msgscrape/s_sxtmpsvc/'
+    alias cdsxxbsvc='cd ~/mbig/scrape.git/msgscrape/sxxbsvc/'
 
 # Personal Configurations
 else
@@ -63,10 +64,10 @@ else
     fi
 
     # Programs
-    alias ff='nohup ~/.firefox-x-launch.sh &'
-    alias firefox='nohup ~/.firefox-x-launch.sh &'
-    alias gc='nohup ~/.chrome-x-launch.sh'
-    alias google-chrome='nohup ~/.chrome-x-launch.sh'
+    alias ff='nohup ~/.x_server/firefox-x-launch.sh &'
+    alias firefox='nohup ~/x_server/.firefox-x-launch.sh &'
+    alias gc='nohup ~/x_server/.chrome-x-launch.sh'
+    alias google-chrome='nohup ~/.x_server/chrome-x-launch.sh'
 fi
 
 # Platform independent settings
