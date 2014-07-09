@@ -40,8 +40,6 @@ then
     alias scrptogui='rm -rf scraper.0.log.* && ./run.sh testmsg.msg && ../sxide/demos/reverse-pattern-lookup.py ./scraper_dump.tcl ./patterns.cfg'
     alias scrpgui='../sxide/demos/reverse-pattern-lookup.py ./scraper_dump.tcl ./patterns.cfg'
 
-    alias scrptest='rm -rf scraper.0.log.* && ./run.sh testmsg.brh.msg && ../sxide/demos/reverse-pattern-lookup.py ./scraper_dump.tcl ./patterns.brh.cfg &'
-
     # cd
     alias cdgit='cd ~/mbig/scrape.git'
     alias cdide='cd ~/mbig/scrape.git/msgscrape/sxide/'
@@ -50,6 +48,8 @@ then
     alias cdtest='cd /scrp/data/scraper/testdata/test'
 
     # cd to bas services
+    alias cdscqtosvc='cd ~/mbig/scrape.git/msgscrape/scqtosvc/'
+    alias cdscqtrsvc='cd ~/mbig/scrape.git/msgscrape/scqtrsvc/'
     alias cdscradsvc='cd ~/mbig/scrape.git/msgscrape/scradsvc/'
     alias cdscrpxbsvc='cd ~/mbig/scrape.git/msgscrape/pcs_xb_mapping/scrpxbsvc/'
     alias cdsxtmpsvc='cd ~/mbig/scrape.git/msgscrape/s_sxtmpsvc/'
