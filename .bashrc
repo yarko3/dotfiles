@@ -30,7 +30,7 @@ fi
 # Bloomberg Configurations
 if [ "$BBENV" ]
 then
-    xmodmap ~/.Xmodmap_bloomberg
+    xmodmap ~/.Xmodmaps/Xmodmap_bloomberg
 
     # Autocomplete for Git
     GIT_AUTOCOMPLETE_PATH="/opt/swt/share/git-contrib/completion/git-completion.bash"
@@ -57,9 +57,9 @@ then
 # Personal Configurations
 else
     if [ $HOSTNAME == 'brh-laptop' ]; then
-        xmodmap ~/.Xmodmap_kubuntu_laptop
+        xmodmap ~/.Xmodmaps/Xmodmap_kubuntu_laptop
     elif [ $HOSTNAME == 'brh-desktop' ]; then
-        xmodmap ~/.Xmodmap_kubuntu_desktop
+        xmodmap ~/.Xmodmaps/Xmodmap_kubuntu_desktop
     fi
 
     # Programs
