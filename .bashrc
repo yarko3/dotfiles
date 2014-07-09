@@ -66,8 +66,8 @@ else
     # Programs
     alias ff='nohup ~/.x_server/firefox-x-launch.sh &'
     alias firefox='nohup ~/x_server/.firefox-x-launch.sh &'
-    alias gc='nohup ~/x_server/.chrome-x-launch.sh'
-    alias google-chrome='nohup ~/.x_server/chrome-x-launch.sh'
+    alias gc='nohup ~/x_server/.chrome-x-launch.sh &'
+    alias google-chrome='nohup ~/.x_server/chrome-x-launch.sh &'
 fi
 
 # Platform independent settings
