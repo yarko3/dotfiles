@@ -10,6 +10,7 @@ nohup ~/.x_server/firefox_launch.sh &
 # Top Left
 DISPLAY=:0.2
 nohup konsole &
+nohup filezilla &
 nohup ~/.x_server/firefox_launch.sh &
 
 # Bottom Right
