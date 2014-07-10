@@ -16,10 +16,8 @@ Plugin 'chazy/cscope_maps'              " cscope mappings
 Plugin 'derekwyatt/vim-fswitch'         " Fastswitch (cpp/h toggle)
 Plugin 'kien/ctrlp.vim'                 " Ctrl-P
 Plugin 'majutsushi/tagbar'              " Tagbar
-Plugin 'orlandov/vimfluence'            " Vim <--> Confluence editing plugin
 Plugin 'tpope/vim-fugitive'             " Git Wrapper
 Plugin 'tpope/vim-surround'             " Surrounding text
-Plugin 'vim-scripts/confluencewiki.vim' " Confluence Syntax Highlighting
 
 "Plugin 'tpope/vim-dispatch'            " Asynchronous Makes
 "Plugin 'kshenoy/vim-signature'         " Local marks enhancement
