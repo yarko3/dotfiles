@@ -64,4 +64,4 @@ nnoremap <Leader>fl :FSSplitRight<CR>
 nnoremap <Leader>se :sp<CR>:e %:h<CR>9j
 nnoremap <Leader>t :TagbarToggle<CR>
 nnoremap <Leader>ve :vsp<CR>:e %:h<CR>9j
-nnoremap <Leader>w :call StripTrailingWhitespaces()<CR>
+nnoremap <Leader>w :call StripTabsAndTrailingWhitespaces()<CR>
