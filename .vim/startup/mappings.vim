@@ -55,6 +55,7 @@ nmap <Leader>/ /^\s*:\c<Left><Left><Left><Left><Left><Left>
 nnoremap <Leader>cdf :call Cdfile()<CR>
 nnoremap <Leader>cdg :call Cdgit()<CR>
 nnoremap <Leader>cds :call Cdscraper()<CR>
+nnoremap <Leader>cmt :call CmtSection("")<Left><Left>
 nnoremap <Leader>e :e %:h<CR>9j
 nnoremap <Leader>ff :FSHere<CR>
 nnoremap <Leader>fh :FSSplitLeft<CR>
