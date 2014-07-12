@@ -65,4 +65,6 @@ nnoremap <Leader>fl :FSSplitRight<CR>
 nnoremap <Leader>se :sp<CR>:e %:h<CR>9j
 nnoremap <Leader>t :TagbarToggle<CR>
 nnoremap <Leader>ve :vsp<CR>:e %:h<CR>9j
+
+source ~/.vim/bundle/bde_plugins/bde_format.vim
 nnoremap <Leader>w :call StripTabsAndTrailingWhitespaces()<CR>
