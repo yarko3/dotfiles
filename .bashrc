@@ -17,9 +17,11 @@ shopt -s  checkwinsize
 
 # Default file creation permissions
 if [ "$BBENV" ]; then
+    echo "Running Bloomberg BASHRC"
     umask a-rwx
     umask u+wrx,g+rw,o+r
 else
+    echo "Running Home BASHRC"
     umask 0022
 fi
 
@@ -87,5 +89,3 @@ alias vi='vim'
 
 # Directory coloring
 alias ls='ls --color'
-
-echo "BASHRC has run"
