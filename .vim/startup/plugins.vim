@@ -11,7 +11,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'              " Lets Vundle manage Vundle
 
 Plugin 'brhCS/bde_plugins'              " Tools for formatting code according to BDE Standards
-Plugin 'brhCS/vimcoder'                 " Topcoder Vim Plugin
+Plugin 'chazmcgarvey/vimcoder'          " Topcoder Vim Plugin
 Plugin 'chazy/cscope_maps'              " cscope mappings
 Plugin 'derekwyatt/vim-fswitch'         " Fastswitch (cpp/h toggle)
 Plugin 'kien/ctrlp.vim'                 " Ctrl-P
