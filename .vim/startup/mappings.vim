@@ -57,6 +57,7 @@ nnoremap <Leader>cdg :call Cdgit()<CR>
 nnoremap <Leader>cds :call Cdscraper()<CR>
 nnoremap <Leader>cmt :call CmtSection("")<Left><Left>
 nnoremap <Leader>e :e %:h<CR>9j
+nnoremap <Leader>fmt :call Bde_Format()<CR>
 nnoremap <Leader>ff :FSHere<CR>
 nnoremap <Leader>fh :FSSplitLeft<CR>
 nnoremap <Leader>fj :FSSplitBelow<CR>
