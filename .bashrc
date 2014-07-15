@@ -43,6 +43,7 @@ then
     alias scrpgui='../sxide/demos/reverse-pattern-lookup.py ./scraper_dump.tcl ./patterns.cfg'
 
     # cd
+    alias cdbbit='cd /bbsrc/thirdparty/bbit/include'
     alias cdgit='cd ~/mbig/scrape.git'
     alias cdide='cd ~/mbig/scrape.git/msgscrape/sxide/'
     alias cdmtm='cd ~/mbig/scrape.git/msgscrape/mtm/mtmcore/'
