@@ -64,7 +64,8 @@ nnoremap <Leader>fk :FSSplitAbove<CR>
 nnoremap <Leader>fl :FSSplitRight<CR>
 nnoremap <Leader>fmt :call Bde_Format()<CR>
 nnoremap <Leader>se :sp<CR>:e %:h<CR>9j
-nnoremap <Leader>t :TagbarToggle<CR>
+nnoremap <Leader>tb :TagbarToggle<CR>
+nnoremap <Leader>te :tabe %:h<CR>9j
 nnoremap <Leader>ve :vsp<CR>:e %:h<CR>9j
 
 source ~/.vim/bundle/bde_plugins/bde_format.vim
