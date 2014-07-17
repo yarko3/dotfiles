@@ -1,0 +1,27 @@
+// ============================================================================
+//                                 gitconfig
+// ============================================================================
+If not at Bloomberg, don't use the http section!
+
+
+[user]
+    name = Ben Hipple
+    email = bhipple@bloomberg.net
+[color]
+    ui = true
+    status = true
+    branch = true
+    diff = true
+[core]
+    pager = less -R
+    preloadindex = true
+[alias]
+    lg = log --decorate --oneline --graph --all --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold blue)(%ar) %C(bold yellow)%d%C(reset) %C(green)%s%C(reset) %C(dim green)- %an%C(reset)'
+[http]
+    proxy = devproxy.bloomberg.com:82
+    sslVerify = false
+[mergetool "gfugitive"]
+        cmd = gvim -f -c \"Gdiff\" \"$MERGED\"
+[merge]
+    tool = gfugitive
+
