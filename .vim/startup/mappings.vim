@@ -25,6 +25,9 @@ inoremap jj <Esc><Right>
 "==============================================================================
 " Normal Mode Mappings
 "
+" Toggle showing tabs and EOL whitespace
+nnoremap <C-k> :set list!<CR>
+
 " <C-l> toggles whether searches are shown
 nnoremap <C-l> :set hlsearch! hlsearch?<CR>
 
