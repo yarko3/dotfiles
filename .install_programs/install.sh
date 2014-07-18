@@ -40,6 +40,7 @@ if [ $INSTALL_ALL ]; then
     sudo apt-get -y install python-dev
     sudo apt-get -y build-dep python3.4
     sudo apt-get -y install icedtea-netx
+    sudo apt-get -y install subversion
 
     # Citrix
     #sudo apt-get -y install libmotif4:i386 nspluginwrapper lib32z1 libc6-i386 libxp6:i386 libxpm4:i386 libasound2:i386
