@@ -34,13 +34,14 @@ sudo apt-get -y update
 #==============================================================================
 # Specific Installs
 if [ $INSTALL_ALL ]; then
-    #
     # Development
     sudo apt-get -y install build-essential cmake
     sudo apt-get -y install python-dev
     sudo apt-get -y build-dep python3.4
     sudo apt-get -y install icedtea-netx
     sudo apt-get -y install subversion
+    sudo apt-get -y install python-software-properties pkg-config
+    sudo apt-get -y install software-properties-common
 
     # Citrix
     #sudo apt-get -y install libmotif4:i386 nspluginwrapper lib32z1 libc6-i386 libxp6:i386 libxpm4:i386 libasound2:i386
@@ -60,6 +61,7 @@ if [ $INSTALL_ALL ]; then
 
     # Media Players
     sudo apt-get -y install totem
+    sudo apt-get -y install xbmc
 fi
 
 #==============================================================================

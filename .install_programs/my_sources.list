@@ -12,6 +12,9 @@ sudo dpkg --add-architecture i386
 # Run this command:
 # This is the rebuilt icaclient that works on Ubuntu 14.04
 sudo dpkg -i icaclient-modified.deb
-#
+
 # Then run this to add SSL certificates
 sudo ln -s /usr/share/ca-certificates/mozilla/* /opt/Citrix/ICAClient/keystore/cacerts/
+
+# xmbc media
+sudo add-apt-repository ppa:team-xbmc/ppa
