@@ -1,12 +1,6 @@
-" Mappings to Load
-
-"==============================================================================
-" All Mode Mappings
-"
-
-"==============================================================================
-" Insert Mode Mappings
-"
+"" ============================================================================
+""                           Insert Mode Mappings
+"" ============================================================================
 " Auto-Insertion for closing braces
 inoremap {      {}<Left>
 inoremap {<CR>  {<CR>}<Esc>O
@@ -22,9 +16,9 @@ inoremap <F5> << BAEL_LOG_END;<ESC>
 " Leaving insert mode with jj
 inoremap jj <Esc><Right>
 
-"==============================================================================
-" Normal Mode Mappings
-"
+"" ============================================================================
+""                           Normal Mode Mappings
+"" ============================================================================
 " Toggle showing tabs and EOL whitespace
 nnoremap <C-k> :set list!<CR>
 
@@ -50,9 +44,9 @@ nnoremap <F3> :Make!<CR>
 nnoremap <F4> :make<CR>
 nnoremap <F5> :!./*.tsk<CR>
 
-"==============================================================================
-" Leader Mappings (Sorted)
-"
+"" ============================================================================
+""                         Leader Mappings (Sorted)
+"" ============================================================================
 nmap <Leader>* yiw/^<C-r><C-0>\s*:<CR>
 nmap <Leader>/ /^\s*:\c<Left><Left><Left><Left><Left><Left>
 nnoremap <Leader>cdf :call Cdfile()<CR>
@@ -73,3 +67,5 @@ nnoremap <Leader>ve :vsp<CR>:e %:h<CR>9j
 
 source ~/.vim/bundle/bde_plugins/bde_format.vim
 nnoremap <Leader>w :call StripTabsAndTrailingWhitespaces()<CR>
+
+" Note - l and q are used for the location list and quickfix toggle by ListToggle
