@@ -79,6 +79,7 @@ tags
 .vim/bundle*
 .vimcoder*
 .viminfo
+.vimsize
 .wireshark*
 .xauth*
 .xemacs*

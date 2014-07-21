@@ -1,8 +1,13 @@
 " vim settings
 
 set nocompatible
+
+" Determine Environment
 let g:platform = GetPlatform()
 let g:bbenv = GetBBENV()
+
+" To enable the saving and restoring of screen positions.
+let g:screen_size_restore_pos = 1
 
 " Editing
 syntax on
