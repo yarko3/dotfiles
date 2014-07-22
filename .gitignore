@@ -87,16 +87,12 @@ tags
 .xs*
 
 # BB Directories
+bin*
 mbig*
 notes/*
 scrapingnotes/*
 shellscripts/*
-training_continuing/*
-training_labs/*
-training_labs/cpp_debugging_lab2/purify/*
-training_labs/demo/tools/purify/*
-training_labs/examples/breg/*
-training_labs/git/examples/*
+training*
 
 # Home Directories
 Books*

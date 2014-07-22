@@ -17,10 +17,11 @@ inoremap <F5> << BAEL_LOG_END;<ESC>
 inoremap jj <Esc><Right>
 
 "" ============================================================================
-""                           Normal Mode Mappings
+""                        Normal/Visual Mode Mappings
 "" ============================================================================
-" Toggle showing tabs and EOL whitespace
-nnoremap <C-k> :set list!<CR>
+" clang-format
+nnoremap <C-k> :pyf ~/bin/clang-format.py
+" $ clang-format my_file.cpp -style=file    // works in the shell, doesn't work in vim yet
 
 " <C-l> toggles whether searches are shown
 nnoremap <C-l> :set hlsearch! hlsearch?<CR>
