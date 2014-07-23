@@ -24,7 +24,6 @@ tags
 .bash_history
 .bash_logout
 .bbalias
-.bbprofile
 .bbprofile.log
 .cache*
 .compiz*
@@ -60,7 +59,6 @@ tags
 .oldgit*
 .opera*
 .pki*
-.profile
 .pu*
 .quantify*
 .qvrc
