@@ -17,6 +17,7 @@ Plugin 'chazy/cscope_maps'              " cscope mappings
 Plugin 'derekwyatt/vim-fswitch'         " Fastswitch (cpp/h toggle)
 Plugin 'kien/ctrlp.vim'                 " Ctrl-P
 Plugin 'majutsushi/tagbar'              " Tagbar
+Plugin 'scrooloose/syntastic'           " Syntax checking
 Plugin 'tpope/vim-fugitive'             " Git Wrapper
 Plugin 'tpope/vim-surround'             " Surrounding text
 Plugin 'tpope/vim-unimpaired.git'       " Pairs of keyboard mappings for common tasks
