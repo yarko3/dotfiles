@@ -20,7 +20,7 @@ inoremap jj <Esc><Right>
 ""                        Normal/Visual Mode Mappings
 "" ============================================================================
 " clang-format
-nnoremap <C-k> :pyf ~/bin/clang-format.py
+nnoremap <C-k> :pyf ~/bin/clang-format.py<CR>
 " $ clang-format my_file.cpp -style=file    // works in the shell, doesn't work in vim yet
 
 " <C-l> toggles whether searches are shown
