@@ -11,10 +11,10 @@ then
     echo "Running Bloomberg PROFILE"
 
     export PATH="$PATH:/bb/bin"
-    #export PATH="$PATH:/opt/bb/bin"
+    export PATH="$PATH:/opt/bb/bin"
 
-    # Source scraping information
-    #. /bb/unsupported/scrputil/team_profile/scrpenv.sh
+    # Setup scraping team profile
+    . /bb/unsupported/scrputil/team_profile/scrpenv.sh
 
     # Get specific things only, so they don't mess with scrpenv
     #export PATH=/opt/bb/bin/clang:$PATH
