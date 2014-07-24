@@ -3,6 +3,9 @@
 "" ============================================================================
 set nocompatible
 
+"" ============================================================================
+""                                  Globals
+"" ============================================================================
 " Determine Environment
 let g:platform = GetPlatform()
 let g:bbenv = GetBBENV()
@@ -10,7 +13,9 @@ let g:bbenv = GetBBENV()
 " To enable the saving and restoring of screen positions.
 let g:screen_size_restore_pos = 1
 
-" Editing
+"" ============================================================================
+""                            Editing and Moving
+"" ============================================================================
 syntax on
 set autoindent
 set cindent
@@ -40,10 +45,22 @@ set shiftwidth=4
 " Allow switching off modified buffers without warning
 set hidden
 
-" Incremental Search and Highlighting Results
-set incsearch
-set hlsearch
+" Using the mouse
+set mouse=a
 
+" Autosave before :make and other commands; autoreload when file mod
+set autowrite
+set autoread
+
+" Configure the :make command
+set makeprg=make\ all\ &&\ make\ run
+
+" Set path for file searches
+set path+=/home/bhipple/mbig/scrape.git/**
+
+"" ============================================================================
+""                                Appearances
+"" ============================================================================
 " Show line numbers
 set number
 
@@ -51,19 +68,12 @@ set number
 set listchars=tab:>-,trail:-
 set list!
 
-" Using the mouse
-set mouse=a
-
-" Configure :make with plink
-"set makeprg=rm\ -f\ *.tsk\ &&\ ~/shellscripts/bld
-set makeprg=make\ all\ &&\ make\ run
-
 " Make vsplit split the new window to the right, not left
 set splitright
 
-" Autosave before :make and other commands; autoreload when file mod
-set autowrite
-set autoread
+" Incremental Search and Highlighting Results
+set incsearch
+set hlsearch
 
 " Set the folding method
 set foldmethod=manual
@@ -77,9 +87,9 @@ set guioptions-=r    " Right scrollbar (without split)
 set guioptions-=R    " Right scrollbar
 set guioptions-=T    " Toolbar
 
-" Set path for file searches
-set path+=/home/bhipple/mbig/scrape.git/**
-
+"" ============================================================================
+""                               Auto Commands
+"" ============================================================================
 " Automatically open the QuickFix Window after a make
 autocmd QuickFixCmdPost *make* cwindow
 
@@ -88,10 +98,4 @@ autocmd QuickFixCmdPost *make* cwindow
 autocmd FileType make setlocal noexpandtab shiftwidth=8
 
 " Set automatic indentation format for XML files
-"autocmd FileType xml exe ":silent %!xmllint --format --recover - 2>/dev/null"
 autocmd FileType xml setlocal equalprg=xmllint\ --format\ -
-"autocmd FileType xml exe ":silent 1,$!XMLLINT_INDENT='  ' xmllint --format --recover - 2>/dev/null"
-
-" Check for lines that exceed 80 chars . . . too laggy
-"autocmd BufRead,BufNewFile   *.c,*.h,*.cpp au BufWinEnter * let w:m1=matchadd('Search', '\%<81v.\%>77v', -1)
-"autocmd BufRead,BufNewFile   *.c,*.h,*.cpp au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
