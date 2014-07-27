@@ -1,39 +1,32 @@
 #!/bin/bash
 # Install script for setting up all of my programs on Linux
-#
-# Command Line Arguments
-#   -a     Installs all programs, instead of simply updating and upgrading
 
-while getopts "a" opt; do
-  case $opt in
-    a)
-      echo "Installing all programs" >&2
-      INSTALL_ALL=true
-      ;;
-    \?)
-      echo "Invalid option: -$OPTARG" >&2
-      exit 1
-      ;;
-    :)
-      echo "Option -$OPTARG requires an argument." >&2
-      exit 1
-      ;;
-  esac
-done
-
-#==============================================================================
-# Adding Repos
-#
+## ============================================================================
+##                                  Sources
+## ============================================================================
 # See my_sources.list
 
-#==============================================================================
-# Update
-#
-sudo apt-get -y update
 
-#==============================================================================
-# Specific Installs
-if [ $INSTALL_ALL ]; then
+## ============================================================================
+##                                 Functions
+## ============================================================================
+function printHelp() {
+    echo "Ben's Software Manager"
+    echo "   Options:"
+    echo "   -h  Print Help"
+    echo "   -u  Update and Upgrade"
+    echo "   -i  Install new programs"
+}
+
+function update() {
+    sudo apt-get -y update
+}
+
+function upgrade() {
+    sudo apt-get -y upgrade
+}
+
+function installAll() {
     # Development
     sudo apt-get -y install build-essential cmake
     sudo apt-get -y install python-dev
@@ -62,9 +55,35 @@ if [ $INSTALL_ALL ]; then
     # Media Players
     sudo apt-get -y install totem
     sudo apt-get -y install xbmc
-fi
+}
 
-#==============================================================================
-# Generic Upgrade
-#
-sudo apt-get -y upgrade
+
+## ============================================================================
+##                                  OptArgs
+## ============================================================================
+if [ !$1 ]; then printHelp; fi
+
+while getopts "hui" opt; do
+    case $opt in
+        h)
+            printHelp
+            ;;
+        u)
+            echo "Updating and Upgrading"
+            update
+            upgrade
+            ;;
+        i)
+            echo "Installing programs" >&2
+            installAll
+            ;;
+        \?)
+            echo "Invalid option: -$OPTARG" >&2
+            exit 1
+            ;;
+        :)
+            echo "Option -$OPTARG requires an argument." >&2
+            exit 1
+            ;;
+    esac
+done
