@@ -61,7 +61,7 @@ function installAll() {
 ## ============================================================================
 ##                                  OptArgs
 ## ============================================================================
-if [ !$1 ]; then printHelp; fi
+if [ -z "$1" ]; then printHelp; fi
 
 while getopts "hui" opt; do
     case $opt in
