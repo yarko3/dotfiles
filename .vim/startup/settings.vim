@@ -64,7 +64,7 @@ set path+=/home/bhipple/mbig/scrape.git/**
 " Show line numbers
 set number
 
-" Show tab whitespace characters
+" Show tab and trailing whitespace characters
 set listchars=tab:>-,trail:-
 set list!
 

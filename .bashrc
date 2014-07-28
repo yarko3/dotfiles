@@ -26,12 +26,14 @@ if [ "$BBENV" ]; then
     alias cdide='cd ~/mbig/scrape.git/msgscrape/sxide/'
     alias cdmtm='cd ~/mbig/scrape.git/msgscrape/mtm/mtmcore/'
     alias cdscraper='cd ~/mbig/scrape.git/msgscrape/scraper/'
+    alias cdscrapefe='cd ~/mbig/scrape.git/msgscrape/scrapefe/'
     alias cdtest='cd /scrp/data/scraper/testdata/test'
 
     # cd to bas services
     alias cdscqtosvc='cd ~/mbig/scrape.git/msgscrape/scqtosvc/'
     alias cdscqtrsvc='cd ~/mbig/scrape.git/msgscrape/scqtrsvc/'
     alias cdscradsvc='cd ~/mbig/scrape.git/msgscrape/scradsvc/'
+    alias cdscrpfxib='cd ~/mbig/scrape.git/msgscrape/scrapefe/scrpfxib/'
     alias cdscrpxbsvc='cd ~/mbig/scrape.git/msgscrape/pcs_xb_mapping/scrpxbsvc/'
     alias cdsxtmpsvc='cd ~/mbig/scrape.git/msgscrape/s_sxtmpsvc/'
     alias cdsxxbsvc='cd ~/mbig/scrape.git/msgscrape/sxxbsvc/'

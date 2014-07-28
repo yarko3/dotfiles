@@ -16,12 +16,14 @@ inoremap <F5> << BAEL_LOG_END;<ESC>
 " Leaving insert mode with jj
 inoremap jj <Esc><Right>
 
+" clang-format
+imap <C-k> <ESC>:pyf ~/bin/clang-format.py<CR>i
+
 "" ============================================================================
 ""                        Normal/Visual Mode Mappings
 "" ============================================================================
 " clang-format
-nnoremap <C-k> :pyf ~/bin/clang-format.py<CR>
-" $ clang-format my_file.cpp -style=file    // works in the shell, doesn't work in vim yet
+map <C-k> :pyf ~/bin/clang-format.py<CR>
 
 " <C-l> toggles whether searches are shown
 nnoremap <C-l> :set hlsearch! hlsearch?<CR>

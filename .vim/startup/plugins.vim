@@ -8,6 +8,7 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'              " Lets Vundle manage Vundle
 
+Plugin 'Lokaltog/powerline'             " Status bar
 Plugin 'Valloric/ListToggle'            " Toggling quickfix and location list
 Plugin 'brhCS/bde_plugins'              " Tools for formatting code according to BDE Standards
 Plugin 'chazmcgarvey/vimcoder'          " Topcoder Vim Plugin

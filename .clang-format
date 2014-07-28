@@ -15,7 +15,7 @@ BreakConstructorInitializersBeforeComma: false
 BinPackParameters: true
 ColumnLimit:     79
 ConstructorInitializerAllOnOneLineOrOnePerLine: true
-DerivePointerBinding: true
+DerivePointerBinding: false
 ExperimentalAutoDetectBinPacking: false
 IndentCaseLabels: true
 MaxEmptyLinesToKeep: 2
@@ -32,7 +32,7 @@ SpacesBeforeTrailingComments: 2
 Cpp11BracedListStyle: true
 Standard:        Auto
 IndentWidth:     4
-TabWidth:        8
+TabWidth:        4
 UseTab:          Never
 BreakBeforeBraces: Allman
 IndentFunctionDeclarationAfterType: true
@@ -40,7 +40,7 @@ SpacesInParentheses: false
 SpacesInAngles:  false
 SpaceInEmptyParentheses: false
 SpacesInCStyleCastParentheses: false
-SpaceAfterControlStatementKeyword: true
+SpaceAfterControlStatementKeyword: false
 SpaceBeforeAssignmentOperators: true
 ContinuationIndentWidth: 4
 ...
