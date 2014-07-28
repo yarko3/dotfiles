@@ -17,11 +17,13 @@ then
     . /bb/unsupported/scrputil/team_profile/scrpenv.sh
 
     # Get specific things only, so they don't mess with scrpenv
-    #export PATH=/opt/bb/bin/clang:$PATH
-    #export PATH=/opt/bb/bin/clang++:$PATH
-    #export PATH=/opt/bb/bin/clang-3.4:$PATH
-    #export PATH=/opt/bb/bin/clang-format:$PATH
-    #export PATH=/opt/bb/bin/tmux:$PATH
+    export PATH=/opt/bb/bin/clang:$PATH
+    export PATH=/opt/bb/bin/clang-cl:$PATH
+    export PATH=/opt/bb/bin/clang++:$PATH
+    export PATH=/opt/bb/bin/clang-format:$PATH
+    export PATH=/opt/bb/bin/clang-check:$PATH
+    export PATH=/opt/bb/bin/git-clang-format:$PATH
+    export PATH=/opt/bb/bin/tmux:$PATH
 
     # My stuff
     export PATH="$PATH:$HOME/bin"
