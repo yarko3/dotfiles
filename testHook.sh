@@ -6,18 +6,19 @@ echo ""
 IFS="
 "
 
-# Reject the commit if the diff contains a certain string or regex
-if [ -n "$(git diff-index --cached -S brogramming HEAD --)" ]; then
-    echo "HOOK REJECTION - The following lines contain unacceptable words:"
-
-    for line in `git diff --cached -S brogramming HEAD | sed '/^[^+-]/d'` ; do
-        if [[ $line =~ "brogramming" ]]; then
-            echo $line
-        fi
-    done
-
-    #exit 1
-fi
+# Reject the commit if the diff added a certain string or regex
+# Proof of concept: don't let people name a pattern *_ONE, make Kartik happy
+#if [ -n "$(git diff-index --cached -S '_ONE' HEAD --)" ]; then
+#    echo "HOOK REJECTION - The following lines contain unacceptable words:"
+#
+#    for line in `git diff --cached -S '_ONE' HEAD | sed '/^[^+]/d'` ; do
+#        if [[ $line =~ "_ONE" ]]; then
+#            echo $line
+#        fi
+#    done
+#
+#    #exit 1
+#fi
 
 echo ""
 

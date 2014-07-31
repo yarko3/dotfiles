@@ -86,6 +86,7 @@ set guioptions-=L    " Left scrollbar
 set guioptions-=r    " Right scrollbar (without split)
 set guioptions-=R    " Right scrollbar
 set guioptions-=T    " Toolbar
+set guioptions-=m    " Menu bar
 
 "" ============================================================================
 ""                               Auto Commands

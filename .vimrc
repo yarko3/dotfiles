@@ -3,6 +3,7 @@
 
 " GVim Settings
 if has("gui_running")
+    set guioptions-=M    " Don't load Menu bar
     colorscheme desert
     set guifont=Monospace\ 11
 else
