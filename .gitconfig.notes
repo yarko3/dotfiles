@@ -20,6 +20,6 @@ If not at Bloomberg, don't use the http section!
     proxy = devproxy.bloomberg.com:82
     sslVerify = false
 [mergetool "gfugitive"]
-        cmd = gvim -f -c \"Gdiff\" \"$MERGED\"
+    cmd = gvim -f -c \"Gvdiff\" \"$MERGED\"
 [merge]
     tool = gfugitive
