@@ -33,6 +33,7 @@ if [ "$BBENV" ]; then
     alias cdscqtosvc='cd ~/mbig/scrape.git/msgscrape/scqtosvc/'
     alias cdscqtrsvc='cd ~/mbig/scrape.git/msgscrape/scqtrsvc/'
     alias cdscradsvc='cd ~/mbig/scrape.git/msgscrape/scradsvc/'
+    alias cdscrpenab='cd ~/mbig/scrape.git/msgscrape/scrpenab/'
     alias cdscrpfxib='cd ~/mbig/scrape.git/msgscrape/scrapefe/scrpfxib/'
     alias cdscrpxbsvc='cd ~/mbig/scrape.git/msgscrape/pcs_xb_mapping/scrpxbsvc/'
     alias cdsxtmpsvc='cd ~/mbig/scrape.git/msgscrape/s_sxtmpsvc/'

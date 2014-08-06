@@ -46,6 +46,7 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_always_populate_location_list = 1
 
 if g:bbenv != ""
+    let g:ycm_filetype_specific_completion_to_disable = { 'c': 0, 'cpp': 0 }
     let g:ycm_path_to_python_interpreter = '/opt/swt/bin/python'
     let g:ycm_extra_conf = '~/mbig/ycm_extra_conf.py'
 else
