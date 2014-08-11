@@ -48,7 +48,6 @@ function installAll() {
     sudo apt-get -y install ubuntu-restricted-extras
     sudo apt-get -y install filezilla
     sudo apt-get -y install keepass2
-    sudo apt-get -y install skype
     sudo apt-get -y install wireshark
     sudo apt-get -y install deluge
 
