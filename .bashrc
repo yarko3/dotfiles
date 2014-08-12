@@ -22,6 +22,7 @@ if [ "$BBENV" ]; then
 
     # cd
     alias cdbbit='cd /bbsrc/thirdparty/bbit/include'
+    alias cdbig='cd ~/mbig/'
     alias cdgit='cd ~/mbig/scrape.git'
     alias cdide='cd ~/mbig/scrape.git/msgscrape/sxide/'
     alias cdmtm='cd ~/mbig/scrape.git/msgscrape/mtm/mtmcore/'

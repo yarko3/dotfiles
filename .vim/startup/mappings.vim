@@ -25,6 +25,10 @@ imap <C-k> <ESC>:pyf ~/bin/clang-format.py<CR>i
 " clang-format
 map <C-k> :pyf ~/bin/clang-format.py<CR>
 
+" YouCompleteMe
+nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
+
+
 " <C-l> toggles whether searches are shown
 nnoremap <C-l> :set hlsearch! hlsearch?<CR>
 
@@ -45,7 +49,6 @@ nnoremap <Space> i_<Esc>r
 " Compilation
 nnoremap <F3> :Make!<CR>
 nnoremap <F4> :make<CR>
-nnoremap <F5> :!./*.tsk<CR>
 
 "" ============================================================================
 ""                         Leader Mappings (Sorted)
@@ -63,6 +66,10 @@ nnoremap <Leader>fj :FSSplitBelow<CR>
 nnoremap <Leader>fk :FSSplitAbove<CR>
 nnoremap <Leader>fl :FSSplitRight<CR>
 nnoremap <Leader>fmt :call Bde_Format()<CR>
+nnoremap <Leader>jc :YcmCompleter GoToDeclaration<CR>
+nnoremap <Leader>jf :YcmCompleter GoToDefinition<CR>
+nnoremap <Leader>ji :YcmCompleter GoToImprecise<CR>
+nnoremap <Leader>jj :YcmCompleter GoTo<CR>
 nnoremap <Leader>se :sp<CR>:e %:h<CR>9j
 nnoremap <Leader>tb :TagbarToggle<CR>
 nnoremap <Leader>te :tabe %:h<CR>9j
