@@ -21,6 +21,7 @@ tags
 .Skype*
 .Xauthority
 .arcrc
+.bash_eternal_history
 .bash_history
 .bash_logout
 .bbalias
