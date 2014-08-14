@@ -68,6 +68,9 @@ fi
 export TERM=xterm-256color
 export EDITOR=vim
 
+# Use vi shortcuts
+set -o vi
+
 # update winsize after each command for better line-wrapping
 shopt -s  checkwinsize
 
