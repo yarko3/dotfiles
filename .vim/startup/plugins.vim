@@ -8,7 +8,6 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'              " Lets Vundle manage Vundle
 
-Plugin 'Lokaltog/powerline'             " Status bar
 Plugin 'Valloric/ListToggle'            " Toggling quickfix and location list
 Plugin 'brhCS/bde_plugins'              " Tools for formatting code according to BDE Standards
 Plugin 'chazmcgarvey/vimcoder'          " Topcoder Vim Plugin
@@ -21,6 +20,7 @@ Plugin 'tpope/vim-fugitive'             " Git Wrapper
 Plugin 'tpope/vim-surround'             " Surrounding text
 Plugin 'tpope/vim-unimpaired.git'       " Pairs of keyboard mappings for common tasks
 
+"Plugin 'Lokaltog/powerline'             " Status bar
 "Plugin 'tpope/vim-dispatch'            " Asynchronous Makes
 "Plugin 'kshenoy/vim-signature'         " Local marks enhancement
 
