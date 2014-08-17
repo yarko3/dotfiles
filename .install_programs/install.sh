@@ -28,16 +28,26 @@ function upgrade() {
 
 function installAll() {
     # Development
+    sudo apt-get -y install vim-gtk
     sudo apt-get -y install build-essential cmake
     sudo apt-get -y install python-dev
     sudo apt-get -y build-dep python3.4
     sudo apt-get -y install icedtea-netx
+    sudo apt-get -y install icedtea-plugin
     sudo apt-get -y install subversion
     sudo apt-get -y install python-software-properties pkg-config
-    sudo apt-get -y install software-properties-common
+    sudo apt-get -y install yakuake
 
-    # Citrix
-    #sudo apt-get -y install libmotif4:i386 nspluginwrapper lib32z1 libc6-i386 libxp6:i386 libxpm4:i386 libasound2:i386
+    # Kubuntu
+    sudo apt-get -y install software-properties-common
+    sudo apt-get -y install aptitude
+    sudo apt-get -y install synaptic
+    sudo apt-get -y install gdebi-core
+    sudo apt-get -y install software-properties-gtk
+    sudo apt-get -y install kubuntu-restricted-extras
+    sudo apt-get -y install libavcodec-extra
+    sudo apt-get -y install kde-wallpapers
+    sudo apt-get -y install plasma-widget-quickaccess
 
     # Browsers
     sudo apt-get -y install chromium-browser
@@ -45,15 +55,18 @@ function installAll() {
     sudo apt-get -y install flashplugin-installer
 
     # Other
-    sudo apt-get -y install ubuntu-restricted-extras
     sudo apt-get -y install filezilla
     sudo apt-get -y install keepass2
     sudo apt-get -y install wireshark
     sudo apt-get -y install deluge
 
     # Media Players
+    sudo apt-get -y install vlc
     sudo apt-get -y install totem
     sudo apt-get -y install xbmc
+
+    # Citrix
+    #sudo apt-get -y install libmotif4:i386 nspluginwrapper lib32z1 libc6-i386 libxp6:i386 libxpm4:i386 libasound2:i386
 }
 
 
