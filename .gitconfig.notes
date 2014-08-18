@@ -23,3 +23,5 @@ If not at Bloomberg, don't use the http section!
     cmd = gvim -f -c \"Gvdiff\" \"$MERGED\"
 [merge]
     tool = gfugitive
+[push]
+    default = simple
