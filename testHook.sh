@@ -7,12 +7,12 @@ IFS="
 "
 
 # Reject the commit if the diff added a certain string or regex
-# Proof of concept: don't let people name a pattern *_ONE, make Kartik happy
-#if [ -n "$(git diff-index --cached -S '_ONE' HEAD --)" ]; then
+# Proof of concept: don't let people name a pattern _NEW
+#if [ -n "$(git diff-index --cached -S '_NEW' HEAD --)" ]; then
 #    echo "HOOK REJECTION - The following lines contain unacceptable words:"
 #
-#    for line in `git diff --cached -S '_ONE' HEAD | sed '/^[^+]/d'` ; do
-#        if [[ $line =~ "_ONE" ]]; then
+#    for line in `git diff --cached -S '_NEW' HEAD | sed '/^[^+]/d'` ; do
+#        if [[ $line =~ "_NEW" ]]; then
 #            echo $line
 #        fi
 #    done
