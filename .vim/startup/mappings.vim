@@ -66,6 +66,7 @@ nnoremap <Leader>fj :FSSplitBelow<CR>
 nnoremap <Leader>fk :FSSplitAbove<CR>
 nnoremap <Leader>fl :FSSplitRight<CR>
 nnoremap <Leader>fmt :call Bde_Format()<CR>
+nnoremap <Leader>gg :Ggrep <C-r><C-w><CR>:copen<CR>
 nnoremap <Leader>jc :YcmCompleter GoToDeclaration<CR>
 nnoremap <Leader>jf :YcmCompleter GoToDefinition<CR>
 nnoremap <Leader>ji :YcmCompleter GoToImprecise<CR>
