@@ -74,6 +74,7 @@ nnoremap <Leader>jj :YcmCompleter GoTo<CR>
 nnoremap <Leader>se :sp<CR>:e %:h<CR>9j
 nnoremap <Leader>tb :TagbarToggle<CR>
 nnoremap <Leader>te :tabe %:h<CR>9j
+nnoremap <Leader>tm :Tabmerge right<CR>
 nnoremap <Leader>ve :vsp<CR>:e %:h<CR>9j
 
 source ~/.vim/bundle/bde_plugins/bde_format.vim

@@ -19,6 +19,7 @@ Plugin 'scrooloose/syntastic'           " Syntax checking
 Plugin 'tpope/vim-fugitive'             " Git Wrapper
 Plugin 'tpope/vim-surround'             " Surrounding text
 Plugin 'tpope/vim-unimpaired.git'       " Pairs of keyboard mappings for common tasks
+Plugin 'vim-scripts/Tabmerge'           " Merge tabs into splits
 
 "Plugin 'Lokaltog/powerline'             " Status bar
 "Plugin 'tpope/vim-dispatch'            " Asynchronous Makes
@@ -47,7 +48,7 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_always_populate_location_list = 1
 
 if g:bbenv != ""
-    "let g:ycm_filetype_specific_completion_to_disable = { 'c': 0, 'cpp': 0 }
+    let g:ycm_filetype_specific_completion_to_disable = { 'c': 0, 'cpp': 0 }
     let g:ycm_path_to_python_interpreter = '/opt/swt/bin/python'
 else
     let g:ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/.ycm_extra_conf.py'
