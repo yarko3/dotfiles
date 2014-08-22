@@ -2,9 +2,7 @@
 *
 
 !.Xmodmaps/*
-!.install_programs/*
 !.vim/*
-!.x_server/*
 !scripts/*
 
 !.Xdefaults
