@@ -16,13 +16,16 @@ Plugin 'derekwyatt/vim-fswitch'         " Fastswitch (cpp/h toggle)
 Plugin 'kien/ctrlp.vim'                 " Ctrl-P
 Plugin 'majutsushi/tagbar'              " Tagbar
 Plugin 'scrooloose/syntastic'           " Syntax checking
+Plugin 'tpope/vim-abolish'              " Coercion and Subvert
+Plugin 'tpope/vim-commentary'           " Comment/uncomment operator
+Plugin 'tpope/vim-dispatch'             " Asynchronous Makes
 Plugin 'tpope/vim-fugitive'             " Git Wrapper
+Plugin 'tpope/vim-repeat'               " Dot operator for plugins
 Plugin 'tpope/vim-surround'             " Surrounding text
 Plugin 'tpope/vim-unimpaired.git'       " Pairs of keyboard mappings for common tasks
 Plugin 'vim-scripts/Tabmerge'           " Merge tabs into splits
 
 "Plugin 'Lokaltog/powerline'             " Status bar
-"Plugin 'tpope/vim-dispatch'            " Asynchronous Makes
 "Plugin 'kshenoy/vim-signature'         " Local marks enhancement
 
 if g:platform == "Linux"

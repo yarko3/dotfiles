@@ -72,6 +72,7 @@ export EDITOR=vim
 shopt -s  checkwinsize
 
 alias gvir='gvim --remote-send ":tabe<CR>" && gvim --remote'
+alias g='git'
 alias vi='vim'
 alias ls='ls --color'
 
