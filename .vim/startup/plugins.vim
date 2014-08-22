@@ -9,9 +9,11 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'              " Lets Vundle manage Vundle
 
 Plugin 'Valloric/ListToggle'            " Toggling quickfix and location list
+Plugin 'benmills/vimux'                 " Vim and Tmux Integration
 Plugin 'brhCS/bde_plugins'              " Tools for formatting code according to BDE Standards
 Plugin 'chazmcgarvey/vimcoder'          " Topcoder Vim Plugin
 Plugin 'chazy/cscope_maps'              " cscope mappings
+Plugin 'christoomey/vim-tmux-navigator' " Window/Pane switching with Vim and Tmux
 Plugin 'derekwyatt/vim-fswitch'         " Fastswitch (cpp/h toggle)
 Plugin 'kien/ctrlp.vim'                 " Ctrl-P
 Plugin 'majutsushi/tagbar'              " Tagbar
