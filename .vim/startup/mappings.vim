@@ -1,4 +1,4 @@
-"" ============================================================================
+" ============================================================================
 ""                           Insert Mode Mappings
 "" ============================================================================
 " Auto-Insertion for closing braces
@@ -16,21 +16,14 @@ inoremap <F5> << BAEL_LOG_END;<ESC>
 " Leaving insert mode with jj
 inoremap jj <Esc><Right>
 
-" clang-format
-imap <C-k> <ESC>:pyf ~/bin/clang-format.py<CR>i
 
 "" ============================================================================
 ""                        Normal/Visual Mode Mappings
 "" ============================================================================
 " clang-format
-map <C-k> :pyf ~/bin/clang-format.py<CR>
 
 " YouCompleteMe
 nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
-
-
-" <C-l> toggles whether searches are shown
-nnoremap <C-l> :set hlsearch! hlsearch?<CR>
 
 " If hl search is off, starting a new search or moving enables it
 nnoremap / :set hlsearch<CR>/
@@ -71,7 +64,9 @@ nnoremap <Leader>jc :YcmCompleter GoToDeclaration<CR>
 nnoremap <Leader>jf :YcmCompleter GoToDefinition<CR>
 nnoremap <Leader>ji :YcmCompleter GoToImprecise<CR>
 nnoremap <Leader>jj :YcmCompleter GoTo<CR>
+nnoremap <Leader>k <ESC>:pyf ~/bin/clang-format.py<CR>
 nnoremap <Leader>se :sp<CR>:e %:h<CR>9j
+nnoremap <Leader>ss :set hlsearch! hlsearch?<CR>
 nnoremap <Leader>tb :TagbarToggle<CR>
 nnoremap <Leader>te :tabe %:h<CR>9j
 nnoremap <Leader>tm :Tabmerge right<CR>
