@@ -39,9 +39,12 @@ nnoremap <silent> <F8> :b#<CR>
 " Set <Space> + Character to insert 1 character, then go back to command mode
 nnoremap <Space> i_<Esc>r
 
-" Compilation
-nnoremap <F3> :Make!<CR>
-nnoremap <F4> :make<CR>
+" Compilation and testing
+if(g:bbenv == "")
+    nnoremap <F4> :make<CR>
+    nnoremap <F3> :!Make\ test
+endif
+
 
 "" ============================================================================
 ""                         Leader Mappings (Sorted)
