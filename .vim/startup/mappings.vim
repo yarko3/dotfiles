@@ -21,6 +21,8 @@ inoremap jj <Esc><Right>
 ""                        Normal/Visual Mode Mappings
 "" ============================================================================
 " clang-format
+map <C-T> :pyf ~/bin/clang-format.py<CR>
+imap <C-T> <ESC>:pyf ~/bin/clang-format.py<CR>
 
 " YouCompleteMe
 nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
@@ -68,7 +70,6 @@ nnoremap <Leader>jc :YcmCompleter GoToDeclaration<CR>
 nnoremap <Leader>jf :YcmCompleter GoToDefinition<CR>
 nnoremap <Leader>ji :YcmCompleter GoToImprecise<CR>
 nnoremap <Leader>jj :YcmCompleter GoTo<CR>
-nnoremap <Leader>k <ESC>:pyf ~/bin/clang-format.py<CR>
 nnoremap <Leader>se :sp<CR>:e %:h<CR>9j
 nnoremap <Leader>tb :TagbarToggle<CR>
 nnoremap <Leader>te :tabe %:h<CR>9j
