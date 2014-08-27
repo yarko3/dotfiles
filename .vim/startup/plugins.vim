@@ -10,6 +10,7 @@ Plugin 'gmarik/Vundle.vim'              " Lets Vundle manage Vundle
 
 Plugin 'Valloric/ListToggle'            " Toggling quickfix and location list
 Plugin 'benmills/vimux'                 " Vim and Tmux Integration
+Plugin 'bling/vim-airline'              " Status line
 Plugin 'brhCS/bde_plugins'              " Tools for formatting code according to BDE Standards
 Plugin 'chazmcgarvey/vimcoder'          " Topcoder Vim Plugin
 Plugin 'chazy/cscope_maps'              " cscope mappings
@@ -27,7 +28,6 @@ Plugin 'tpope/vim-surround'             " Surrounding text
 Plugin 'tpope/vim-unimpaired.git'       " Pairs of keyboard mappings for common tasks
 Plugin 'vim-scripts/Tabmerge'           " Merge tabs into splits
 
-"Plugin 'Lokaltog/powerline'             " Status bar
 "Plugin 'kshenoy/vim-signature'         " Local marks enhancement
 
 if g:platform == "Linux"

@@ -4,7 +4,7 @@
 If not at Bloomberg, don't use the http section!
 
 [user]
-    name = Ben Hipple
+    name = bhipple
     email = bhipple@bloomberg.net
 [color]
     ui = true
@@ -15,9 +15,16 @@ If not at Bloomberg, don't use the http section!
     pager = less -R
     preloadindex = true
 [alias]
-    lg = log --decorate --oneline --graph --branches --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold blue)(%ar) %C(bold yellow)%d%C(reset) %C(green)%s%C(reset) %C(dim green)- %an%C(reset)'
-    st = status
     br = branch
+    ci = commit
+    co = checkout
+    lg = log --decorate --oneline --graph --branches --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold blue)(%ar) %C(bold yellow)%d%C(reset) %C(green)%s%C(reset) %C(dim green)- %an%C(reset)'
+    rb = rebase
+    rbt = rebase trunk
+    st = status
+
+    # List aliases
+    la = "!git config -l | grep alias | cut -c 7-"
 [http]
     proxy = devproxy.bloomberg.com:82
     sslVerify = false
@@ -25,5 +32,3 @@ If not at Bloomberg, don't use the http section!
     cmd = gvim -f -c \"Gvdiff\" \"$MERGED\"
 [merge]
     tool = gfugitive
-[push]
-    default = simple
