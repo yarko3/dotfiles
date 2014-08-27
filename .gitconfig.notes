@@ -1,8 +1,3 @@
-// ============================================================================
-//                                 gitconfig
-// ============================================================================
-If not at Bloomberg, don't use the http section!
-
 [user]
     name = bhipple
     email = bhipple@bloomberg.net
@@ -16,19 +11,28 @@ If not at Bloomberg, don't use the http section!
     preloadindex = true
 [alias]
     br = branch
+    cA = commit --amend --no-edit
     ci = commit
     co = checkout
     lg = log --decorate --oneline --graph --branches --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold blue)(%ar) %C(bold yellow)%d%C(reset) %C(green)%s%C(reset) %C(dim green)- %an%C(reset)'
     rb = rebase
     rbt = rebase trunk
+    rbti = rebase trunk -i
+    srb = svn rebase
     st = status
 
     # List aliases
     la = "!git config -l | grep alias | cut -c 7-"
-[http]
-    proxy = devproxy.bloomberg.com:82
-    sslVerify = false
 [mergetool "gfugitive"]
     cmd = gvim -f -c \"Gvdiff\" \"$MERGED\"
 [merge]
     tool = gfugitive
+
+# Bloomberg ONLY settings
+[http]
+    proxy = devproxy.bloomberg.com:82
+    sslVerify = false
+[pack]
+    packSizeLimit = 500m
+    windowMemory = 500m
+    threads = 1
