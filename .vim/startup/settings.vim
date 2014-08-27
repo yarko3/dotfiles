@@ -58,6 +58,9 @@ set makeprg=make\ all\ &&\ make\ run
 " Set path for file searches
 set path+=/home/bhipple/mbig/scrape.git/**
 
+" Ignore whitespace on diffs
+set diffopt+=iwhite
+
 "" ============================================================================
 ""                                Appearances
 "" ============================================================================
