@@ -26,6 +26,7 @@ Plugin 'tpope/vim-fugitive'             " Git Wrapper
 Plugin 'tpope/vim-repeat'               " Dot operator for plugins
 Plugin 'tpope/vim-surround'             " Surrounding text
 Plugin 'tpope/vim-unimpaired.git'       " Pairs of keyboard mappings for common tasks
+Plugin 'tpope/vim-vinegar.git'          " netrw improvement
 Plugin 'vim-scripts/Tabmerge'           " Merge tabs into splits
 
 "Plugin 'kshenoy/vim-signature'         " Local marks enhancement

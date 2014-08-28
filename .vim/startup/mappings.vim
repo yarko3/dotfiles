@@ -57,7 +57,7 @@ nnoremap <Leader>cdf :call Cdfile()<CR>
 nnoremap <Leader>cdg :call Cdgit()<CR>
 nnoremap <Leader>cds :call Cdscraper()<CR>
 nnoremap <Leader>cmt :call CmtSection("")<Left><Left>
-nnoremap <Leader>e :e %:h<CR>9j
+nnoremap <Leader>e :e %:h<CR>
 nnoremap <Leader>ff :FSHere<CR>
 nnoremap <Leader>fh :FSSplitLeft<CR>
 nnoremap <Leader>fj :FSSplitBelow<CR>
@@ -73,11 +73,11 @@ nnoremap <Leader>jc :YcmCompleter GoToDeclaration<CR>
 nnoremap <Leader>jf :YcmCompleter GoToDefinition<CR>
 nnoremap <Leader>ji :YcmCompleter GoToImprecise<CR>
 nnoremap <Leader>jj :YcmCompleter GoTo<CR>
-nnoremap <Leader>se :sp<CR>:e %:h<CR>9j
+nnoremap <Leader>se :sp<CR>:e %:h<CR>
 nnoremap <Leader>tb :TagbarToggle<CR>
-nnoremap <Leader>te :tabe %:h<CR>9j
+nnoremap <Leader>te :tabe %:h<CR>
 nnoremap <Leader>tm :Tabmerge right<CR>
-nnoremap <Leader>ve :vsp<CR>:e %:h<CR>9j
+nnoremap <Leader>ve :vsp<CR>:e %:h<CR>
 
 source ~/.vim/bundle/bde_plugins/bde_format.vim
 nnoremap <Leader>w :call StripTabsAndTrailingWhitespaces()<CR>
