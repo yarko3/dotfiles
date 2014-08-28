@@ -66,6 +66,9 @@ nnoremap <Leader>fl :FSSplitRight<CR>
 nnoremap <Leader>fmt :call Bde_Format()<CR>
 nnoremap <Leader>gg :Ggrep <C-r><C-w><CR>:copen<CR>
 nnoremap <Leader>h :set hlsearch! hlsearch?<CR>
+nnoremap <Leader>ia O// Application Includes<ESC>
+nnoremap <Leader>ib O// BDE Includes<ESC>
+nnoremap <Leader>is O// System Includes<ESC>
 nnoremap <Leader>jc :YcmCompleter GoToDeclaration<CR>
 nnoremap <Leader>jf :YcmCompleter GoToDefinition<CR>
 nnoremap <Leader>ji :YcmCompleter GoToImprecise<CR>
