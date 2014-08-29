@@ -1,10 +1,13 @@
 # Reverse ignore list
 *
 
+# Directories
 !.Xmodmaps/*
 !.vim/*
+!scr/*
 !scripts/*
 
+# Files
 !.Xdefaults
 !.bashrc
 !.bbprofile
