@@ -1,13 +1,14 @@
 # Reverse ignore list
 *
+!*/
 
-# Directories
+# Directories to track
 !.Xmodmaps/*
 !.vim/*
 !scr/*
 !scripts/*
 
-# Files
+# Files to track
 !.Xdefaults
 !.bashrc
 !.bbprofile
@@ -18,3 +19,9 @@
 !.startup.sh
 !.tmux.conf
 !.vimrc
+
+# Re-ignoring again
+.netrwhist
+.vim/bundle
+mbig/*
+training_*
