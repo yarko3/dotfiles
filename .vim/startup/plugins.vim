@@ -46,6 +46,15 @@ filetype plugin indent on
 " CtrlP
 let g:ctrlp_cmd = 'CtrlP ~/mbig/scrape.git'
 
+" ListToggle
+let g:lt_location_list_toggle_map = '<leader>l'
+let g:lt_quickfix_list_toggle_map = '<leader>q'
+
+" Syntastic
+let g:syntasti_ignore_files = ['cpp$', 'h']
+let g:syntastic_cpp_check_header = 0
+let g:syntastic_cpp_remove_include_errors = 1
+
 " YouCompleteMe
 let g:ycm_server_log_level = 'debug'
 "let g:ycm_server_keep_logfiles = 1
@@ -59,7 +68,3 @@ if g:bbenv != ""
 else
     let g:ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/.ycm_extra_conf.py'
 endif
-
-" ListToggle
-let g:lt_location_list_toggle_map = '<leader>l'
-let g:lt_quickfix_list_toggle_map = '<leader>q'
