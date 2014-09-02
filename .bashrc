@@ -19,6 +19,7 @@ if [ "$BBENV" ]; then
     # Programs
     alias scrptogui='rm -rf scraper.0.log.* && ./run.sh testmsg.msg && ../sxide/demos/reverse-pattern-lookup.py ./scraper_dump.tcl ./patterns.cfg'
     alias scrpgui='../sxide/demos/reverse-pattern-lookup.py ./scraper_dump.tcl ./patterns.cfg'
+    alias cfd='clang-format -style=file -i *.cpp *.h'
 
     # cd
     alias cdbbit='cd /bbsrc/thirdparty/bbit/include'
