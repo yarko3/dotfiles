@@ -7,7 +7,7 @@ if [ "$BBENV" ]; then
     umask a-rwx
     umask u+wrx,g+rw,o+r
 
-    xmodmap ~/.Xmodmaps/Xmodmap_bloomberg
+    #xmodmap ~/.Xmodmaps/Xmodmap_bloomberg
 
     # if chimera generated aliases exist, pull them into the current ENV
     [ -f ~/.bbalias ] && . ~/.bbalias
@@ -25,16 +25,16 @@ if [ "$BBENV" ]; then
     alias cdbbit='cd /bbsrc/thirdparty/bbit/include'
     alias cdbig='cd ~/mbig/'
     alias cdgit='cd ~/mbig/scrape.git'
-    alias cdide='cd ~/mbig/scrape.git/msgscrape/sxide/'
-    alias cdmtm='cd ~/mbig/scrape.git/msgscrape/mtm/mtmcore/'
-    alias cdscraper='cd ~/mbig/scrape.git/msgscrape/scraper/'
-    alias cdscrapefe='cd ~/mbig/scrape.git/msgscrape/scrapefe/'
-    alias cdtest='cd /scrp/data/scraper/testdata/test'
 
-    # cd to bas services
+    # cd msgscrape subdirectories
+    alias cdide='cd ~/mbig/scrape.git/msgscrape/sxide/'
+    alias cdmtm='cd ~/mbig/scrape.git/msgscrape/mtm/'
+    alias cdscqtodb='cd ~/mbig/scrape.git/msgscrape/scqtodb/'
     alias cdscqtosvc='cd ~/mbig/scrape.git/msgscrape/scqtosvc/'
     alias cdscqtrsvc='cd ~/mbig/scrape.git/msgscrape/scqtrsvc/'
     alias cdscradsvc='cd ~/mbig/scrape.git/msgscrape/scradsvc/'
+    alias cdscrapefe='cd ~/mbig/scrape.git/msgscrape/scrapefe/'
+    alias cdscraper='cd ~/mbig/scrape.git/msgscrape/scraper/'
     alias cdscrpenab='cd ~/mbig/scrape.git/msgscrape/scrpenab/'
     alias cdscrpfxib='cd ~/mbig/scrape.git/msgscrape/scrapefe/scrpfxib/'
     alias cdscrpxbsvc='cd ~/mbig/scrape.git/msgscrape/pcs_xb_mapping/scrpxbsvc/'
@@ -74,7 +74,6 @@ shopt -s  checkwinsize
 
 alias gvir='gvim --remote-send ":tabe<CR>" && gvim --remote'
 alias g='git'
-alias vi='vim'
 alias ls='ls --color'
 
 # Prompt

@@ -23,6 +23,7 @@ Plugin 'tpope/vim-abolish'              " Coercion and Subvert
 Plugin 'tpope/vim-commentary'           " Comment/uncomment operator
 Plugin 'tpope/vim-dispatch'             " Asynchronous Makes
 Plugin 'tpope/vim-fugitive'             " Git Wrapper
+Plugin 'tpope/vim-git'                  " Setting textwidth on git commits
 Plugin 'tpope/vim-repeat'               " Dot operator for plugins
 Plugin 'tpope/vim-surround'             " Surrounding text
 Plugin 'tpope/vim-unimpaired.git'       " Pairs of keyboard mappings for common tasks
