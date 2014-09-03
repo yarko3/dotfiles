@@ -55,10 +55,10 @@ else
     fi
 
     # Programs
-    alias ff='nohup ~/scripts/x_server/firefox_launch.sh &'
-    alias firefox='nohup ~/scripts/x_server/firefox_launch.sh &'
-    alias gc='nohup ~/scripts/x_server/chrome_launch.sh &'
-    alias google-chrome='nohup ~/scripts/x_server/chrome_launch.sh &'
+    alias ff='nohup ~/scr/x_server/firefox_launch.sh &'
+    alias firefox='nohup ~/scr/x_server/firefox_launch.sh &'
+    alias gc='nohup ~/scr/x_server/chrome_launch.sh &'
+    alias google-chrome='nohup ~/scr/x_server/chrome_launch.sh &'
 fi
 
 
