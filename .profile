@@ -16,6 +16,9 @@ then
     # Setup scraping team profile
     . /bb/unsupported/scrputil/team_profile/scrpenv.sh
 
+    # db2
+    . /bb/db2/home/db2c/sqllib/db2profile
+
     # Get specific things only, so they don't mess with scrpenv
     export PATH=/opt/bb/bin/clang:$PATH
     export PATH=/opt/bb/bin/clang-cl:$PATH
