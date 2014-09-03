@@ -23,5 +23,6 @@
 # Re-ignoring again
 .netrwhist
 .vim/bundle
+.vimcoder
 mbig/*
 training_*
