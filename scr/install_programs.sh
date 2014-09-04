@@ -54,19 +54,17 @@ function installAll() {
     sudo apt-get -y install google-chrome
     sudo apt-get -y install flashplugin-installer
 
+    # Media
+    sudo apt-get -y install vlc
+    sudo apt-get -y install totem
+    sudo apt-get -y install xbmc
+    sudo apt-get -y install libav-tools
+
     # Other
     sudo apt-get -y install filezilla
     sudo apt-get -y install keepass2
     sudo apt-get -y install wireshark
     sudo apt-get -y install deluge
-
-    # Media Players
-    sudo apt-get -y install vlc
-    sudo apt-get -y install totem
-    sudo apt-get -y install xbmc
-
-    # Citrix
-    #sudo apt-get -y install libmotif4:i386 nspluginwrapper lib32z1 libc6-i386 libxp6:i386 libxpm4:i386 libasound2:i386
 }
 
 
