@@ -12,6 +12,10 @@ if [ "$BBENV" ]; then
     # if chimera generated aliases exist, pull them into the current ENV
     [ -f ~/.bbalias ] && . ~/.bbalias
 
+    # Authentication
+    alias rf='vastool kinit -R'
+    alias make='vastool kinit -R && make'
+
     # Autocomplete for Git
     GIT_AUTOCOMPLETE_PATH="/opt/swt/share/git-contrib/completion/git-completion.bash"
     [ -f $GIT_AUTOCOMPLETE_PATH ] && source $GIT_AUTOCOMPLETE_PATH
