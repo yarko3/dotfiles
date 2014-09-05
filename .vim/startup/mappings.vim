@@ -41,10 +41,12 @@ nnoremap <silent> <F8> :b#<CR>
 " Set <Space> + Character to insert 1 character, then go back to command mode
 nnoremap <Space> i_<Esc>r
 
-" Compilation and testing
+" Compilation and testing with Dispatch
 if(g:bbenv == "")
-    nnoremap <F4> :make<CR>
-    nnoremap <F3> :!Make\ test
+    nnoremap <F4> :Make all<CR>:Make run
+else
+    nnoremap <F3> :Make test<CR>
+    nnoremap <F4> :Make stage<CR>
 endif
 
 
