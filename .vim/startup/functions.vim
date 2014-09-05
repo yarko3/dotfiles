@@ -106,3 +106,24 @@ if has("gui_running")
     autocmd VimEnter * if g:screen_size_restore_pos == 1 | call ScreenRestore() | endif
     autocmd VimLeavePre * if g:screen_size_restore_pos == 1 | call ScreenSave() | endif
 endif
+
+
+"" ============================================================================
+""                     Makefile -I to YCM Flag Formatter
+"" ============================================================================
+function! YcmIncludeFlagFormatter()
+    let startLine = line('.')
+    let paths = split(getline('.'))
+    let ct = 0
+    for path in paths
+        if(path =~ '-I.*')
+            let ct += 1
+            let inc = "'" . path . "',"
+            put=inc
+        endif
+    endfor
+
+    let endLine = startLine + ct
+    let sortCmd = ":" . startLine . "," . endLine . "sort u"
+    execute sortCmd
+endfunction
