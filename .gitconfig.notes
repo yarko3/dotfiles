@@ -28,6 +28,8 @@
     cmd = gvim -f -c \"Gvdiff\" \"$MERGED\"
 [merge]
     tool = gfugitive
+[push]
+    default = simple
 
 # Bloomberg ONLY settings
 [http]
