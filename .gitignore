@@ -6,7 +6,6 @@
 !.Xmodmaps/*
 !.vim/*
 !scr/*
-!scripts/*
 
 # Files to track
 !.Xdefaults
@@ -19,10 +18,13 @@
 !.startup.sh
 !.tmux.conf
 !.vimrc
+!.ycm_extra_conf.py
 
 # Re-ignoring again
 .netrwhist
 .vim/bundle
 .vimcoder
+AlgorithmPractice/*
+llvm/*
 mbig/*
 training_*
