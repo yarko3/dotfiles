@@ -4,8 +4,7 @@
 ## ============================================================================
 if [ "$BBENV" ]; then
     echo "Running Bloomberg BASHRC"
-    umask a-rwx
-    umask u+wrx,g+rw,o+r
+    umask 0022
 
     #xmodmap ~/.Xmodmaps/Xmodmap_bloomberg
 
