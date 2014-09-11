@@ -12,7 +12,7 @@ if [ "$BBENV" ]; then
     [ -f ~/.bbalias ] && . ~/.bbalias
 
     # Authentication
-    alias rf='vastool kinit -R'
+    alias rf='vastool kinit -R && vastool klist'
     alias make='vastool kinit -R && make'
 
     # Autocomplete for Git
@@ -43,6 +43,9 @@ if [ "$BBENV" ]; then
     alias cdscrpxbsvc='cd ~/mbig/scrape.git/msgscrape/pcs_xb_mapping/scrpxbsvc/'
     alias cdsxtmpsvc='cd ~/mbig/scrape.git/msgscrape/s_sxtmpsvc/'
     alias cdsxxbsvc='cd ~/mbig/scrape.git/msgscrape/sxxbsvc/'
+
+    # pwhats
+    alias pwhatscqtosvc='pwhat /scrp/bin/scqtosvc.tsk'
 
 
 ## ============================================================================
