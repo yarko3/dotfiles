@@ -3,3 +3,5 @@ set editing-mode vi
 
 "\e\e[A": history-search-backward
 "\e\e[B": history-search-forward
+
+"\C-l":'clear\n'
