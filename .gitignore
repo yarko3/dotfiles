@@ -14,6 +14,7 @@
 !.dir_colors
 !.gitconfig.notes
 !.gitignore
+!.inputrc
 !.profile
 !.startup.sh
 !.tmux.conf

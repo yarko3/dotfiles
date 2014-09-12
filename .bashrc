@@ -39,6 +39,8 @@ if [ "$BBENV" ]; then
     alias cdscrapefe='cd ~/mbig/scrape.git/msgscrape/scrapefe/'
     alias cdscraper='cd ~/mbig/scrape.git/msgscrape/scraper/'
     alias cdscrpenab='cd ~/mbig/scrape.git/msgscrape/scrpenab/'
+    alias cdscrpfe='cd ~/mbig/scrape.git/msgscrape/scrapefe/'
+    alias cdscrpfebr='cd ~/mbig/scrape.git/msgscrape/scrapefe/scrpfebr/'
     alias cdscrpfxib='cd ~/mbig/scrape.git/msgscrape/scrapefe/scrpfxib/'
     alias cdscrpxbsvc='cd ~/mbig/scrape.git/msgscrape/pcs_xb_mapping/scrpxbsvc/'
     alias cdsxtmpsvc='cd ~/mbig/scrape.git/msgscrape/s_sxtmpsvc/'
@@ -46,6 +48,8 @@ if [ "$BBENV" ]; then
 
     # pwhats
     alias pwhatscqtosvc='pwhat /scrp/bin/scqtosvc.tsk'
+    alias pwhatscrpxbsvc='pwhat /scrp/bin/scrpxbsvc.tsk'
+    alias pwhatsxxbsvc='pwhat /scrp/bin/sxxbsvc.tsk'
 
 
 ## ============================================================================

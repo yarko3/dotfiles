@@ -1,0 +1,5 @@
+# Use Vi, not Emacs, style editing
+set editing-mode vi
+
+"\e\e[A": history-search-backward
+"\e\e[B": history-search-forward
