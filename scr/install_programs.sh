@@ -37,6 +37,9 @@ function installAll() {
     sudo apt-get -y install subversion
     sudo apt-get -y install python-software-properties pkg-config
     sudo apt-get -y install yakuake
+    sudo apt-get -y build-dep awesome
+    sudo apt-get -y install awesome
+
 
     # Kubuntu
     sudo apt-get -y install software-properties-common
