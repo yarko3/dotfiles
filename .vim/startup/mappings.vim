@@ -43,7 +43,7 @@ nnoremap <Space> i_<Esc>r
 
 " Compilation and testing with Dispatch
 if(g:bbenv == "")
-    nnoremap <F4> :Make all<CR>:Make run<CR>
+    nnoremap <F4> :Make all<CR>:Make run<CR>:Copen<CR>/FAILED<CR>
 else
     nnoremap <F3> :Make test<CR>
     nnoremap <F4> :Make stage<CR>
