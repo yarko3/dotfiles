@@ -22,6 +22,7 @@ nohup ~/scr/x_server/firefox_launch.sh &
 DISPLAY=:0.5
 nohup konsole &
 nohup keepass2 &
+nohup ~/scr/x_server/firefox_launch.sh &
 
 # Bottom Left
 DISPLAY=:0.3
