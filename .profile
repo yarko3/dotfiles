@@ -17,7 +17,9 @@ then
     . /bb/unsupported/scrputil/team_profile/scrpenv.sh
 
     # db2
-    . /bb/db2/home/db2c/sqllib/db2profile
+    if [[ $HOSTNAME == "ibm1" || $HOSTNAME == "ibm2" ]]; then
+        . /bb/db2/home/db2c/sqllib/db2profile
+    fi
 
     # Get specific things only, so they don't mess with scrpenv
     export PATH=/opt/bb/bin/clang:$PATH
