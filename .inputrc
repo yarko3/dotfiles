@@ -1,7 +1,12 @@
 # Use Vi, not Emacs, style editing
 set editing-mode vi
 
-"\e\e[A": history-search-backward
-"\e\e[B": history-search-forward
-
+"\e[A": history-search-backward
+"\e[B": history-search-forward
 "\C-l":'clear\n'
+
+set keymap vi-command
+"gg": beginning-of-history
+"G": end-of-history
+set keymap vi-insert
+"jj": vi-movement-mode
