@@ -38,13 +38,8 @@ then
 ## ============================================================================
 else
     echo "Running Home PROFILE"
-
-    PS1="${HOSTNAME}:\${PWD} \$ "
-    PATH=$PATH:/usr/sbin
-    stty erase \^\h kill \^u intr \^c
-    stty echoe echok ixon ixoff -ixany
+    #PATH=$PATH:/usr/sbin
 fi
-
 
 ## ============================================================================
 ##                                  General
