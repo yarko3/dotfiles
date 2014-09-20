@@ -68,4 +68,4 @@ else
 endif
 
 " Vinegar
-let g:wildignore = "d,o"
+let g:netrw_list_hide = "\.[od]$,^nohup.out$"
