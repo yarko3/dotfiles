@@ -4,6 +4,7 @@
 
 # Directories to track
 !.Xmodmaps/*
+!.git_template/*
 !.tmux/*
 !.vim/*
 !scr/*
@@ -26,7 +27,7 @@
 .netrwhist
 .vim/bundle
 .vimcoder
-AlgorithmPractice/*/
+AlgorithmPractice/*
 llvm/*
 mbig/*
 training_*
