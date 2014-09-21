@@ -33,6 +33,12 @@ then
     # My stuff
     export PATH="$PATH:$HOME/bin"
 
+    # Run BASH
+    if [ -x /bin/bash ]; then
+        SHELL=/bin/bash
+        export SHELL
+        exec /bin/bash
+    fi
 ## ============================================================================
 ##                             Home Environment
 ## ============================================================================
@@ -45,11 +51,3 @@ fi
 ##                                  General
 ## ============================================================================
 umask 0022
-
-# Run BASH
-if [ -x /bin/bash ]; then
-    SHELL=/bin/bash
-    export SHELL
-    exec /bin/bash
-fi
-
