@@ -5,6 +5,7 @@
 # Directories to track
 !.Xmodmaps/*
 !.git_template/*
+!.git_template/hooks/*
 !.tmux/*
 !.vim/*
 !scr/*
