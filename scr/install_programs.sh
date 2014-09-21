@@ -30,6 +30,7 @@ function installAll() {
     # Development
     sudo apt-get -y install tmux
     sudo apt-get -y install vim-gtk
+    sudo apt-get -y install exuberant-ctags
     sudo apt-get -y install build-essential cmake
     sudo apt-get -y install python-dev
     sudo apt-get -y build-dep python3.4
