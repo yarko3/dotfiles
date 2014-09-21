@@ -91,6 +91,9 @@ set guioptions-=R    " Right scrollbar
 set guioptions-=T    " Toolbar
 set guioptions-=m    " Menu bar
 
+" Ignoring files (see :help wildignore)
+set wildignore+=*.o,*.d,nohup.out,
+
 "" ============================================================================
 ""                               Auto Commands
 "" ============================================================================
