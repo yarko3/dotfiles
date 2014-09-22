@@ -66,6 +66,3 @@ if g:bbenv != ""
 else
     let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/.ycm_extra_conf.py'
 endif
-
-" Vinegar
-let g:wildignore = "d,o"

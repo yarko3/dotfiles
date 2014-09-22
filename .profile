@@ -33,28 +33,21 @@ then
     # My stuff
     export PATH="$PATH:$HOME/bin"
 
+    # Run BASH
+    if [ -x /bin/bash ]; then
+        SHELL=/bin/bash
+        export SHELL
+        exec /bin/bash
+    fi
 ## ============================================================================
 ##                             Home Environment
 ## ============================================================================
 else
     echo "Running Home PROFILE"
-
-    PS1="${HOSTNAME}:\${PWD} \$ "
-    PATH=$PATH:/usr/sbin
-    stty erase \^\h kill \^u intr \^c
-    stty echoe echok ixon ixoff -ixany
+    #PATH=$PATH:/usr/sbin
 fi
-
 
 ## ============================================================================
 ##                                  General
 ## ============================================================================
 umask 0022
-
-# Run BASH
-if [ -x /bin/bash ]; then
-    SHELL=/bin/bash
-    export SHELL
-    exec /bin/bash
-fi
-
