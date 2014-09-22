@@ -1,0 +1,29 @@
+#!/usr/bin/tmux bloomberg-window
+
+new-window
+
+# 0 is small top left corner
+# 1 is the big center one
+# 2 is the tall one on the left
+# 3 is top one on right
+# 4 is bottom one on right
+split-window -t 0 -h
+split-window -t 0 -v
+resize-pane -t 0 -y 12
+resize-pane -t 0 -x 98
+
+# Right side
+split-window -t 1 -h
+resize-pane -t 3 -x 98
+split-window -t 3 -v
+
+send-keys -t 3 'ssh ibm2' enter
+send-keys -t 4 'ssh ibm2' enter
+
+send-keys -t 1 'cdgit' enter
+
+send-keys -t 0 C-l
+send-keys -t 1 C-l
+send-keys -t 2 C-l
+send-keys -t 3 C-l
+send-keys -t 4 C-l
