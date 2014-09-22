@@ -46,7 +46,7 @@ set shiftwidth=4
 set hidden
 
 " Using the mouse
-set mouse=a
+"set mouse=a
 
 " Autosave before :make and other commands; autoreload when file mod
 set autowrite
