@@ -32,7 +32,7 @@ set ttyfast
 set tags+=./tags;~/mbig/scrape.git/msgscrape/scraper/tags
 
 " cscope database location
-cs add ~/mbig/scrape.git/cscope.out
+"cs add ~/mbig/scrape.git/cscope.out
 
 " runtime path search for Ex
 set ru
@@ -92,7 +92,7 @@ set guioptions-=T    " Toolbar
 set guioptions-=m    " Menu bar
 
 " Ignoring files (see :help wildignore)
-set wildignore+=*.o,*.d,nohup.out,tags
+set wildignore+=*.o,*.d,nohup.out,tags,00*
 
 "" ============================================================================
 ""                               Auto Commands

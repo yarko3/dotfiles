@@ -13,7 +13,6 @@ Plugin 'benmills/vimux'                 " Vim and Tmux Integration
 Plugin 'bling/vim-airline'              " Status line
 Plugin 'brhCS/bde_plugins'              " Tools for formatting code according to BDE Standards
 Plugin 'chazmcgarvey/vimcoder'          " Topcoder Vim Plugin
-Plugin 'chazy/cscope_maps'              " cscope mappings
 Plugin 'christoomey/vim-tmux-navigator' " Window/Pane switching with Vim and Tmux
 Plugin 'derekwyatt/vim-fswitch'         " Fastswitch (cpp/h toggle)
 Plugin 'kien/ctrlp.vim'                 " Ctrl-P
@@ -27,6 +26,8 @@ Plugin 'tpope/vim-surround'             " Surrounding text
 Plugin 'tpope/vim-unimpaired.git'       " Pairs of keyboard mappings for common tasks
 Plugin 'tpope/vim-vinegar.git'          " netrw improvement
 Plugin 'vim-scripts/Tabmerge'           " Merge tabs into splits
+
+" Plugin 'chazy/cscope_maps'              " cscope mappings
 
 if g:platform == "Linux"
     Plugin 'Valloric/YouCompleteMe'
