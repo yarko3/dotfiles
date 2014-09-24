@@ -92,7 +92,7 @@ set guioptions-=T    " Toolbar
 set guioptions-=m    " Menu bar
 
 " Ignoring files (see :help wildignore)
-set wildignore+=*.o,*.d,nohup.out,tags,00*
+set wildignore+=*.o,*.d,nohup.out,tags
 
 "" ============================================================================
 ""                               Auto Commands
