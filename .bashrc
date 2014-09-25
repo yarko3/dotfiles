@@ -17,6 +17,7 @@ if [ "$BBENV" ]; then
     # Authentication
     alias rf='vastool kinit -R && vastool klist'
     alias make='vastool kinit -R && make'
+    alias git='vastool kinit -R && git'
 
     # Autocomplete for Git
     GIT_AUTOCOMPLETE_PATH="/opt/swt/share/git-contrib/completion/git-completion.bash"
