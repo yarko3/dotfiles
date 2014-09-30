@@ -16,6 +16,9 @@ then
     # Setup scraping team profile
     . /bb/unsupported/scrputil/team_profile/scrpenv.sh
 
+    # Source scraping environment variables
+    . /scrp/bin/scraper_instances.sh
+
     # db2
     if [[ $HOSTNAME == "ibm1" || $HOSTNAME == "ibm2" ]]; then
         . /bb/db2/home/db2c/sqllib/db2profile
