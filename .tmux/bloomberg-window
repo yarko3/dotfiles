@@ -1,6 +1,8 @@
-#!/usr/bin/tmux bloomberg-window
+#!/usr/bin/tmux
 
+rename-window singleton
 new-window
+rename-window primary
 
 # 0 is small top left corner
 # 1 is the big center one
