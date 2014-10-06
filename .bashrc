@@ -9,8 +9,6 @@ if [ "$BBENV" ]; then
     echo "Running Bloomberg BASHRC"
     umask 0022
 
-    #xmodmap ~/.Xmodmaps/Xmodmap_bloomberg
-
     # if chimera generated aliases exist, pull them into the current ENV
     [ -f ~/.bbalias ] && . ~/.bbalias
 
@@ -28,32 +26,16 @@ if [ "$BBENV" ]; then
     alias scrpgui='../sxide/demos/reverse-pattern-lookup.py ./scraper_dump.tcl ./patterns.cfg'
     alias cfd='clang-format -style=file -i *.cpp *.h'
 
+    # Scripts
+    alias cs='~/scr/cd_scraper.sh'
+    alias pw='~/scr/pwhat.sh'
+
     # cd
     alias cdbbit='cd /bbsrc/thirdparty/bbit/include'
     alias cdbig='cd ~/mbig/'
     alias cdgit='cd ~/mbig/scrape.git'
 
-    # cd msgscrape subdirectories
-    alias cdide='cd ~/mbig/scrape.git/msgscrape/sxide/'
-    alias cdmtm='cd ~/mbig/scrape.git/msgscrape/mtm/'
-    alias cdscqtodb='cd ~/mbig/scrape.git/msgscrape/scqtodb/'
-    alias cdscqtosvc='cd ~/mbig/scrape.git/msgscrape/scqtosvc/'
-    alias cdscqtrsvc='cd ~/mbig/scrape.git/msgscrape/scqtrsvc/'
-    alias cdscradsvc='cd ~/mbig/scrape.git/msgscrape/scradsvc/'
-    alias cdscrapefe='cd ~/mbig/scrape.git/msgscrape/scrapefe/'
-    alias cdscraper='cd ~/mbig/scrape.git/msgscrape/scraper/'
-    alias cdscrpenab='cd ~/mbig/scrape.git/msgscrape/scrpenab/'
-    alias cdscrpfe='cd ~/mbig/scrape.git/msgscrape/scrapefe/'
-    alias cdscrpfebr='cd ~/mbig/scrape.git/msgscrape/scrapefe/scrpfebr/'
-    alias cdscrpfxib='cd ~/mbig/scrape.git/msgscrape/scrapefe/scrpfxib/'
     alias cdscrpxbsvc='cd ~/mbig/scrape.git/msgscrape/pcs_xb_mapping/scrpxbsvc/'
-    alias cdsxtmpsvc='cd ~/mbig/scrape.git/msgscrape/s_sxtmpsvc/'
-    alias cdsxxbsvc='cd ~/mbig/scrape.git/msgscrape/sxxbsvc/'
-
-    # pwhats
-    alias pwhatscqtosvc='pwhat /scrp/bin/scqtosvc.tsk'
-    alias pwhatscrpxbsvc='pwhat /scrp/bin/scrpxbsvc.tsk'
-    alias pwhatsxxbsvc='pwhat /scrp/bin/sxxbsvc.tsk'
 
 
 ## ============================================================================

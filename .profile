@@ -14,12 +14,10 @@ then
     export PATH="$PATH:/opt/bb/bin"
 
     # Setup scraping team profile
-    . /bb/unsupported/scrputil/team_profile/scrpenv.sh
+    [ -f /bb/unsupported/scrputil/team_profile/scrpenv.sh ] && . /bb/unsupported/scrputil/team_profile/scrpenv.sh
 
     # db2
-    if [[ $HOSTNAME == "ibm1" || $HOSTNAME == "ibm2" ]]; then
-        . /bb/db2/home/db2c/sqllib/db2profile
-    fi
+    [ -f /bb/db2/home/db2c/sqllib/db2profile ] && . /bb/db2/home/db2c/sqllib/db2profile
 
     # Get specific things only, so they don't mess with scrpenv
     export PATH=/opt/bb/bin/clang:$PATH

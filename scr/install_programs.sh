@@ -43,7 +43,6 @@ function installAll() {
     sudo apt-get -y build-dep awesome
     sudo apt-get -y install awesome
 
-
     # Kubuntu
     sudo apt-get -y install software-properties-common
     sudo apt-get -y install aptitude
