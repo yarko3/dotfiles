@@ -9,6 +9,7 @@
 !.tmux/*
 !.vim/*
 !scr/*
+!scr/x_server/*
 
 # Files to track
 !.Xdefaults
@@ -28,7 +29,7 @@
 .netrwhist
 .vim/bundle
 .vimcoder
-AlgorithmPractice/*
+AlgorithmPractice
 llvm/*
 mbig/*
 training_*

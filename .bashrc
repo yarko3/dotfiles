@@ -45,6 +45,8 @@ else
     echo "Running Home BASHRC"
     umask 0022
 
+    export PATH="$PATH:~/bin"
+
     if [ $HOSTNAME == 'brh-laptop' ]; then
         xmodmap ~/.Xmodmaps/Xmodmap_kubuntu_laptop
     elif [ $HOSTNAME == 'brh-desktop' ]; then
@@ -52,10 +54,10 @@ else
     fi
 
     # Programs
-    alias ff='nohup ~/scr/x_server/firefox_launch.sh &'
-    alias firefox='nohup ~/scr/x_server/firefox_launch.sh &'
-    alias gc='nohup ~/scr/x_server/chrome_launch.sh &'
-    alias google-chrome='nohup ~/scr/x_server/chrome_launch.sh &'
+    alias ff='~/scr/x_server/firefox_launch.sh &'
+    alias firefox='~/scr/x_server/firefox_launch.sh &'
+    alias gc='~/scr/x_server/chrome_launch.sh &'
+    alias google-chrome='~/scr/x_server/chrome_launch.sh &'
 fi
 
 
@@ -68,6 +70,7 @@ export EDITOR=vim
 # update winsize after each command for better line-wrapping
 shopt -s  checkwinsize
 
+alias vi='vim'
 alias gvir='gvim --remote-send ":tabe<CR>" && gvim --remote'
 alias g='git'
 alias ls='ls --color'
