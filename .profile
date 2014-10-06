@@ -16,6 +16,9 @@ then
     # Setup scraping team profile
     [ -f /bb/unsupported/scrputil/team_profile/scrpenv.sh ] && . /bb/unsupported/scrputil/team_profile/scrpenv.sh
 
+    # Source scraping environment variables
+    . /scrp/bin/scraper_instances.sh
+
     # db2
     [ -f /bb/db2/home/db2c/sqllib/db2profile ] && . /bb/db2/home/db2c/sqllib/db2profile
 
