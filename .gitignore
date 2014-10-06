@@ -4,12 +4,17 @@
 
 # Directories to track
 !.Xmodmaps/*
+!.config/awesome/*
+!.config/awesome/debian/*
+!.config/awesome/themes/*
+!.config/awesome/themes/default/*
 !.git_template/*
 !.git_template/hooks/*
 !.tmux/*
 !.vim/*
 !scr/*
 !scr/x_server/*
+
 
 # Files to track
 !.Xdefaults
