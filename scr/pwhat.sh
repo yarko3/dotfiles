@@ -5,4 +5,4 @@ if [ -z $1 ]; then
     exit 1;
 fi
 
-eval pwhat "/scrp/bin/$1.tsk"
+eval pwhat /scrp/bin/$1.tsk
