@@ -13,6 +13,7 @@
 !.tmux/*
 !.vim/*
 !scr/*
+!scr/display/*
 !scr/x_server/*
 
 
@@ -38,3 +39,4 @@ AlgorithmPractice
 llvm/*
 mbig/*
 training_*
+display.txt
