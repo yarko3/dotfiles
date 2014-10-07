@@ -5,4 +5,4 @@ if [ -z $1 ]; then
     exit 1;
 fi
 
-eval cd "~/mbig/scrape.git/msgscrape/$1"
+eval cd ~/mbig/scrape.git/msgscrape/$1
