@@ -26,6 +26,7 @@ if [ "$BBENV" ]; then
     alias scrpgui='../sxide/demos/reverse-pattern-lookup.py ./scraper_dump.tcl ./patterns.cfg'
     alias cfd='clang-format -style=file -i *.cpp *.h'
     alias cs='. cs'
+    alias di='. di'
     alias sl='. sl'
 
     # cd

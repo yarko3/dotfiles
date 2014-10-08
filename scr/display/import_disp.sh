@@ -1,5 +1,6 @@
 #!/bin/bash
+echo -e "Previous:\t$DISPLAY"
 disp=$(cat ~/scr/display/display.txt)
 export DISPLAY=$disp
 
-eval echo "Set display to $(cat ~/scr/display/display.txt)"
+echo -e "Exported:\t$disp"
