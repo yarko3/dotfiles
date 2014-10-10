@@ -45,7 +45,7 @@ nnoremap <Space> i_<Esc>r
 if(g:bbenv == "")
     nnoremap <F4> :Make all<CR>:Make run<CR>:Copen<CR>/FAILED<CR>
 else
-    nnoremap <F3> :Make test<CR>
+    nnoremap <F3> :Make gtest<CR>
     nnoremap <F4> :Make stage<CR>
 endif
 
