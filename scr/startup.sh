@@ -29,3 +29,4 @@ skype &
 
 # Bottom Center
 DISPLAY=:0.0
+~/scr/x_server/firefox_launch.sh &
