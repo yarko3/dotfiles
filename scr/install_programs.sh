@@ -39,7 +39,8 @@ function installAll() {
     sudo apt-get -y install icedtea-plugin
     sudo apt-get -y install subversion
     sudo apt-get -y install python-software-properties pkg-config
-    sudo apt-get -y install yakuake
+
+    # Window Manager
     sudo apt-get -y build-dep awesome
     sudo apt-get -y install awesome
 
@@ -53,6 +54,7 @@ function installAll() {
     sudo apt-get -y install libavcodec-extra
     sudo apt-get -y install kde-wallpapers
     sudo apt-get -y install plasma-widget-quickaccess
+    sudo apt-get -y install usb-creator-kde
 
     # Browsers
     sudo apt-get -y install chromium-browser
