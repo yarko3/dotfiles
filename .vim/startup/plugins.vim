@@ -44,6 +44,9 @@ filetype plugin indent on
 " CtrlP
 let g:ctrlp_cmd = 'CtrlP ~/mbig/scrape.git'
 
+" Netrw
+let g:netrw_sort_by = 'name'
+
 " ListToggle
 let g:lt_location_list_toggle_map = '<leader>l'
 let g:lt_quickfix_list_toggle_map = '<leader>q'

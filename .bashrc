@@ -22,12 +22,17 @@ if [ "$BBENV" ]; then
     [ -f $GIT_AUTOCOMPLETE_PATH ] && source $GIT_AUTOCOMPLETE_PATH
 
     # Programs
-    alias scrptogui='rm -rf scraper.0.log.* && ./run.sh testmsg.msg && ../sxide/demos/reverse-pattern-lookup.py ./scraper_dump.tcl ./patterns.cfg'
-    alias scrpgui='../sxide/demos/reverse-pattern-lookup.py ./scraper_dump.tcl ./patterns.cfg'
     alias cfd='clang-format -style=file -i *.cpp *.h'
     alias cs='. cs'
     alias di='. di'
     alias sl='. sl'
+
+    # Programs that need a display
+    alias scrptogui='. di && rm -rf scraper.0.log.* && ./run.sh testmsg.msg && ../sxide/demos/reverse-pattern-lookup.py ./scraper_dump.tcl ./patterns.cfg'
+    alias scrpgui='. di && ../sxide/demos/reverse-pattern-lookup.py ./scraper_dump.tcl ./patterns.cfg'
+    alias gvim='. di && gvim'
+    alias svn='. di && svn'
+    alias xterm='. di && xterm'
 
     # cd
     alias cdbbit='cd /bbsrc/thirdparty/bbit/include'

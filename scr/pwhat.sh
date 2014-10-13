@@ -1,6 +1,11 @@
 #!/bin/bash
 if [ -z $1 ]; then
     echo "No task specified, getting prdwin instead"
+
+    if [ -z $DISPLAY ]; then
+        . ~/scr/display/import_disp.sh
+    fi
+
     eval /bb/bin/getprdwin
     exit 1;
 fi
