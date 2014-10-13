@@ -83,14 +83,6 @@ set foldmethod=manual
 set foldnestmax=3
 set foldminlines=10
 
-" Removing GUI Options on gvim
-set guioptions-=l    " Left scrollbar (without split)
-set guioptions-=L    " Left scrollbar
-set guioptions-=r    " Right scrollbar (without split)
-set guioptions-=R    " Right scrollbar
-set guioptions-=T    " Toolbar
-set guioptions-=m    " Menu bar
-
 " Ignoring files (see :help wildignore)
 set wildignore+=*.o,*.d,nohup.out,tags
 
