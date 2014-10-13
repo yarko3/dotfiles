@@ -34,8 +34,6 @@ if [ "$BBENV" ]; then
     alias cdbig='cd ~/mbig/'
     alias cdgit='cd ~/mbig/scrape.git'
 
-    alias cdscrpxbsvc='cd ~/mbig/scrape.git/msgscrape/pcs_xb_mapping/scrpxbsvc/'
-
 
 ## ============================================================================
 ##                             Home Environment

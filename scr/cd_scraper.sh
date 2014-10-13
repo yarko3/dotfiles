@@ -4,4 +4,9 @@ if [ -z $1 ]; then
     exit 1;
 fi
 
-eval cd ~/mbig/scrape.git/msgscrape/$1
+dir=$1
+if [ $dir == 'scrpxbsvc' ]; then
+    dir=pcs_xb_mapping/$dir
+fi
+
+eval cd ~/mbig/scrape.git/msgscrape/$dir
