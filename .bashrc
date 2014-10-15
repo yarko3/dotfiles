@@ -22,7 +22,7 @@ if [ "$BBENV" ]; then
     [ -f $GIT_AUTOCOMPLETE_PATH ] && source $GIT_AUTOCOMPLETE_PATH
 
     # Programs
-    alias cfd='clang-format -style=file -i *.cpp *.h'
+    alias cfd='~/scr/clang_format.sh'
     alias cs='. cs'
     alias di='. di'
     alias sl='. sl'
