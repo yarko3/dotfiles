@@ -61,7 +61,7 @@ else
     alias gc='~/scr/x_server/chrome_launch.sh &'
     alias google-chrome='~/scr/x_server/chrome_launch.sh &'
 
-    alias start='. ~/scr/startup.sh'
+    alias start='~/scr/startup.sh'
 fi
 
 
