@@ -7,6 +7,8 @@ fi
 dir=$1
 if [ $dir == 'scrpxbsvc' ]; then
     dir=pcs_xb_mapping/$dir
+elif [ $dir == 'scrpxbdb' ]; then
+    dir=pcs_xb_mapping/db
 fi
 
 eval cd ~/mbig/scrape.git/msgscrape/$dir
