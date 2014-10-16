@@ -79,6 +79,7 @@ nnoremap <Leader>jj :YcmCompleter GoTo<CR>
 nnoremap <Leader>se :sp<CR>:e %:h<CR>
 nnoremap <Leader>tb :TagbarToggle<CR>
 nnoremap <Leader>te :tabe %:h<CR>
+nnoremap <Leader>tf :call GTestFixture("")<Left><Left>
 nnoremap <Leader>tm :Tabmerge right<CR>
 nnoremap <Leader>ve :vsp<CR>:e %:h<CR>
 
