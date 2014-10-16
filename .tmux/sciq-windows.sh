@@ -6,10 +6,15 @@ tmux split-window -t 0 -h
 tmux split-window -t 0 -v
 tmux split-window -t 1 -v
 
-tmux send-keys -t 0 '/bb/bin/getprdwin -i' enter
-sleep 3
-tmux send-keys -t 1 '/bb/bin/getprdwin -i' enter
-sleep 3
-tmux send-keys -t 2 '/bb/bin/getprdwin -i' enter
-sleep 3
-tmux send-keys -t 3 '/bb/bin/getprdwin -i' enter
+aliasString="alias ll='ls -lrth' && alias less='less -n'"
+
+
+for i in `seq 0 3`;
+do
+    #eval "tmux send-keys -t $i '/bb/bin/getprdwin -i' enter"
+    sleep 5
+done
+
+sleep 7
+tmux setw synchronize-panes on
+~/.tmux/prod_aliases.sh
