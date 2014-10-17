@@ -6,7 +6,7 @@ if [ -z $1 ]; then
         . ~/scr/display/import_disp.sh
     fi
 
-    eval /bb/bin/getprdwin
+    /bb/bin/getprdwin -i
     exit 1;
 fi
 
