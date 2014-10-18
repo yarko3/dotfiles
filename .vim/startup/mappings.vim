@@ -66,11 +66,12 @@ nnoremap <Leader>fj :FSSplitBelow<CR>
 nnoremap <Leader>fk :FSSplitAbove<CR>
 nnoremap <Leader>fl :FSSplitRight<CR>
 nnoremap <Leader>fmt :call Bde_Format()<CR>
+nnoremap <Leader>fx :call GTestFixture("")<Left><Left>
 nnoremap <Leader>gg :Ggrep <C-r><C-w><CR>:copen<CR>
 nnoremap <Leader>h :set hlsearch! hlsearch?<CR>
-nnoremap <Leader>ii O// Application Includes<CR>// BDE Includes<CR>// System Includes<ESC>
 nnoremap <Leader>ia O// Application Includes<ESC>
 nnoremap <Leader>ib O// BDE Includes<ESC>
+nnoremap <Leader>ii O// Application Includes<CR>// BDE Includes<CR>// System Includes<ESC>
 nnoremap <Leader>is O// System Includes<ESC>
 nnoremap <Leader>jc :YcmCompleter GoToDeclaration<CR>
 nnoremap <Leader>jf :YcmCompleter GoToDefinition<CR>
@@ -79,7 +80,7 @@ nnoremap <Leader>jj :YcmCompleter GoTo<CR>
 nnoremap <Leader>se :sp<CR>:e %:h<CR>
 nnoremap <Leader>tb :TagbarToggle<CR>
 nnoremap <Leader>te :tabe %:h<CR>
-nnoremap <Leader>tf :call GTestFixture("")<Left><Left>
+nnoremap <Leader>tf :call MkGtest()<CR>
 nnoremap <Leader>tm :Tabmerge right<CR>
 nnoremap <Leader>ve :vsp<CR>:e %:h<CR>
 
