@@ -16,6 +16,7 @@ function printHelp() {
     echo "   -h  Print Help"
     echo "   -u  Update and Upgrade"
     echo "   -i  Install new programs"
+    echo "   -m  Install minimum program set"
 }
 
 function update() {
@@ -27,9 +28,10 @@ function upgrade() {
 }
 
 function installAll() {
+    installMin()
+
     # Development
     sudo apt-get -y install tmux
-    sudo apt-get -y install vim-gtk
     sudo apt-get -y install ack-grep
     sudo apt-get -y install exuberant-ctags
     sudo apt-get -y install build-essential cmake
@@ -40,11 +42,7 @@ function installAll() {
     sudo apt-get -y install subversion
     sudo apt-get -y install python-software-properties pkg-config
 
-    # Window Manager
-    sudo apt-get -y build-dep awesome
-    sudo apt-get -y install awesome
-
-    # Kubuntu
+    # Ubuntu
     sudo apt-get -y install software-properties-common
     sudo apt-get -y install aptitude
     sudo apt-get -y install synaptic
@@ -52,9 +50,6 @@ function installAll() {
     sudo apt-get -y install software-properties-gtk
     sudo apt-get -y install kubuntu-restricted-extras
     sudo apt-get -y install libavcodec-extra
-    sudo apt-get -y install kde-wallpapers
-    sudo apt-get -y install plasma-widget-quickaccess
-    sudo apt-get -y install usb-creator-kde
 
     # Browsers
     sudo apt-get -y install chromium-browser
@@ -72,6 +67,13 @@ function installAll() {
     sudo apt-get -y install keepass2
     sudo apt-get -y install wireshark
     sudo apt-get -y install deluge
+}
+
+function installMin() {
+    update()
+
+    sudo apt-get -y install vim-gtk
+    sudo apt-get -y install awesome
 }
 
 
@@ -93,6 +95,10 @@ while getopts "hui" opt; do
         i)
             echo "Installing programs" >&2
             installAll
+            ;;
+        m)
+            echo "Installing minimum program set" >&2
+            installMin
             ;;
         \?)
             echo "Invalid option: -$OPTARG" >&2
