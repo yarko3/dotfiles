@@ -14,7 +14,7 @@ function printHelp() {
     echo "Ben's Software Manager"
     echo "   Options:"
     echo "   -h  Print Help"
-    echo "   -u  Update and Upgrade"
+    echo "   -u  Upgrade"
     echo "   -i  Install new programs"
     echo "   -m  Install minimum program set"
 }
@@ -28,7 +28,7 @@ function upgrade() {
 }
 
 function installAll() {
-    installMin()
+    installMin
 
     # Development
     sudo apt-get -y install tmux
@@ -70,8 +70,6 @@ function installAll() {
 }
 
 function installMin() {
-    update()
-
     sudo apt-get -y install vim-gtk
     sudo apt-get -y install awesome
 
@@ -90,22 +88,24 @@ function installMin() {
 ## ============================================================================
 if [ -z "$1" ]; then printHelp; fi
 
-while getopts "hui" opt; do
+while getopts "huim" opt; do
     case $opt in
         h)
             printHelp
             ;;
         u)
-            echo "Updating and Upgrading"
+            echo "Upgrading"
             update
             upgrade
             ;;
         i)
             echo "Installing programs" >&2
+            update
             installAll
             ;;
         m)
             echo "Installing minimum program set" >&2
+            update
             installMin
             ;;
         \?)
