@@ -74,6 +74,14 @@ function installMin() {
 
     sudo apt-get -y install vim-gtk
     sudo apt-get -y install awesome
+
+    if ! [[ -f ~/.vim/bundle/Vundle.vim/README.md ]]; then
+        git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+    fi
+
+    if ! [[ -f ~/.config/awesome/README.md ]]; then
+        git clone https://github.com/brhCS/awesome_wm ~/.config/awesome
+    fi
 }
 
 
