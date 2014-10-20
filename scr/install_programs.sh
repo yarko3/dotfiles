@@ -14,8 +14,9 @@ function printHelp() {
     echo "Ben's Software Manager"
     echo "   Options:"
     echo "   -h  Print Help"
-    echo "   -u  Update and Upgrade"
+    echo "   -u  Upgrade"
     echo "   -i  Install new programs"
+    echo "   -m  Install minimum program set"
 }
 
 function update() {
@@ -27,9 +28,10 @@ function upgrade() {
 }
 
 function installAll() {
+    installMin
+
     # Development
     sudo apt-get -y install tmux
-    sudo apt-get -y install vim-gtk
     sudo apt-get -y install ack-grep
     sudo apt-get -y install exuberant-ctags
     sudo apt-get -y install build-essential cmake
@@ -40,11 +42,7 @@ function installAll() {
     sudo apt-get -y install subversion
     sudo apt-get -y install python-software-properties pkg-config
 
-    # Window Manager
-    sudo apt-get -y build-dep awesome
-    sudo apt-get -y install awesome
-
-    # Kubuntu
+    # Ubuntu
     sudo apt-get -y install software-properties-common
     sudo apt-get -y install aptitude
     sudo apt-get -y install synaptic
@@ -52,9 +50,6 @@ function installAll() {
     sudo apt-get -y install software-properties-gtk
     sudo apt-get -y install kubuntu-restricted-extras
     sudo apt-get -y install libavcodec-extra
-    sudo apt-get -y install kde-wallpapers
-    sudo apt-get -y install plasma-widget-quickaccess
-    sudo apt-get -y install usb-creator-kde
 
     # Browsers
     sudo apt-get -y install chromium-browser
@@ -74,25 +69,44 @@ function installAll() {
     sudo apt-get -y install deluge
 }
 
+function installMin() {
+    sudo apt-get -y install vim-gtk
+    sudo apt-get -y install awesome
+
+    if ! [[ -f ~/.vim/bundle/Vundle.vim/README.md ]]; then
+        git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+    fi
+
+    if ! [[ -f ~/.config/awesome/README.md ]]; then
+        git clone https://github.com/brhCS/awesome_wm ~/.config/awesome
+    fi
+}
+
 
 ## ============================================================================
 ##                                  OptArgs
 ## ============================================================================
 if [ -z "$1" ]; then printHelp; fi
 
-while getopts "hui" opt; do
+while getopts "huim" opt; do
     case $opt in
         h)
             printHelp
             ;;
         u)
-            echo "Updating and Upgrading"
+            echo "Upgrading"
             update
             upgrade
             ;;
         i)
             echo "Installing programs" >&2
+            update
             installAll
+            ;;
+        m)
+            echo "Installing minimum program set" >&2
+            update
+            installMin
             ;;
         \?)
             echo "Invalid option: -$OPTARG" >&2
