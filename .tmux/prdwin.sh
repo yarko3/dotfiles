@@ -2,12 +2,17 @@
 LOGIN_SECS=7
 RACE_CONDITION_DELAY=0
 
+function send_aliases() {
+    tmux setw synchronize-panes on
+    tmux send-keys "alias ll='ls -lrt' && alias less='less -n'" enter
+}
+
 function n290() {
     tmux new-window
     tmux rename-window N290
     tmux send-keys '/bb/bin/getprdwin -i' enter
 
-    sleep LOGIN_SECS
+    sleep $LOGIN_SECS
     send_aliases
 }
 
@@ -22,11 +27,11 @@ function sciq() {
     for i in `seq 0 3`;
     do
         eval "tmux send-keys -t $i '/bb/bin/getprdwin -i' enter"
-        sleep RACE_CONDITION_DELAY
+        sleep $RACE_CONDITION_DELAY
     done
 
-    sleep LOGIN_SECS
-    send_alises
+    sleep $LOGIN_SECS
+    send_aliases
 }
 function scip {
     tmux new-window
@@ -43,16 +48,11 @@ function scip {
     for i in `seq 0 5`;
     do
         eval "tmux send-keys -t $i '/bb/bin/getprdwin -i' enter"
-        sleep RACE_CONDITION_DELAY
+        sleep $RACE_CONDITION_DELAY
     done
 
-    sleep LOGIN_SECS
-    send_alises
-}
-
-function send_aliases() {
-    tmux setw synchronize-panes on
-    tmux send-keys "alias ll='ls -lrt' && alias less='less -n'" enter
+    sleep $LOGIN_SECS
+    send_aliases
 }
 
 # Frank's aliases to consider

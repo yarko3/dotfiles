@@ -27,6 +27,11 @@ if [ "$BBENV" ]; then
     alias di='. di'
     alias sl='. sl'
 
+    # Production windows in Tmux
+    alias n290='~/.tmux/prdwin.sh -n'
+    alias scip='~/.tmux/prdwin.sh -p'
+    alias sciq='~/.tmux/prdwin.sh -q'
+
     # Programs that need a display
     alias scrptogui='. di && rm -rf scraper.0.log.* && ./run.sh testmsg.msg && ../sxide/demos/reverse-pattern-lookup.py ./scraper_dump.tcl ./patterns.cfg'
     alias scrpgui='. di && ../sxide/demos/reverse-pattern-lookup.py ./scraper_dump.tcl ./patterns.cfg'
