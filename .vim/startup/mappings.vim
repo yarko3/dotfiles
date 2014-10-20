@@ -8,7 +8,7 @@ inoremap {{     {
 inoremap {}     {}
 
 " Bael Log Shortcuts
-inoremap <F2> BAEL_LOG_TRACE << 
+inoremap <F2> BAEL_LOG_INFO << 
 inoremap <F3> BAEL_LOG_DEBUG << 
 inoremap <F4> BAEL_LOG_ERROR << 
 inoremap <F5> << BAEL_LOG_END;<ESC>
