@@ -16,6 +16,7 @@ Plugin 'chazmcgarvey/vimcoder'          " Topcoder Vim Plugin
 Plugin 'christoomey/vim-tmux-navigator' " Window/Pane switching with Vim and Tmux
 Plugin 'derekwyatt/vim-fswitch'         " Fastswitch (cpp/h toggle)
 Plugin 'kien/ctrlp.vim'                 " Ctrl-P
+Plugin 'majutsushi/tagbar'              " Using for JavaScript
 Plugin 'tpope/vim-abolish'              " Coercion and Subvert
 Plugin 'tpope/vim-commentary'           " Comment/uncomment operator
 Plugin 'tpope/vim-dispatch'             " Asynchronous Makes
