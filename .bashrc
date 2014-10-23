@@ -26,6 +26,8 @@ if [ "$BBENV" ]; then
     alias cs='. cs'
     alias di='. di'
     alias sl='. sl'
+    alias rbm='~/scr/update_master.sh'
+    alias pw='~/scr/pwhat.sh'
 
     # Production windows in Tmux
     alias n290='~/.tmux/prdwin.sh -n'
@@ -83,6 +85,9 @@ alias vi='vim'
 alias gvir='gvim --remote-send ":tabe<CR>" && gvim --remote'
 alias g='git'
 alias ls='ls --color'
+alias ll='ls -al'
+
+alias hd='~/scr/hex_decimal.sh'
 
 # Prompt
 PS1='\[\e[1;31m\][\u@\h: \w]\$\[\e[0m\] '
