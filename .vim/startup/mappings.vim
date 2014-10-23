@@ -21,7 +21,7 @@ inoremap jj <Esc><Right>
 ""                        Normal/Visual Mode Mappings
 "" ============================================================================
 " clang-format
-map <C-T> :pyf ~/bin/clang-format.py<CR>
+map <C-T> :pyf ~/bin/clang-format.py<CR>:call Bde_Format()<CR>
 imap <C-T> <ESC>:pyf ~/bin/clang-format.py<CR>
 
 " YouCompleteMe
