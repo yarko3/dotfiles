@@ -67,6 +67,7 @@ function installAll() {
     sudo apt-get -y install keepass2
     sudo apt-get -y install wireshark
     sudo apt-get -y install deluge
+    sudo apt-get -y install htop
 }
 
 function installMin() {
