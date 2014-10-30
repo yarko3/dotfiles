@@ -38,6 +38,7 @@ function! Cdfile()
     pwd
 endfunction
 
+
 "" ============================================================================
 ""                          Searching for Makefile
 "" ============================================================================
@@ -53,13 +54,6 @@ function! MakefileSearch()
     endwhile
 endfunction
 
-
-"" ============================================================================
-""                                   Clang
-"" ============================================================================
-function! ClangFormatting()
-    " TODO - Make the symlink to ~/.clang-format if it doesn't already exist
-endfunction
 
 "" ============================================================================
 ""                      Restoring Screen Size/Position

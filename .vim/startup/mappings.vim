@@ -48,6 +48,7 @@ else
     nnoremap <F3> :call MakefileSearch()<CR>:Make gtest<CR>
     nnoremap <F4> :call MakefileSearch()<CR>:Make stage<CR>
 endif
+noremap <F5> :cex[]<CR>:cclose<CR>
 
 
 "" ============================================================================
@@ -55,6 +56,7 @@ endif
 "" ============================================================================
 nmap <Leader>* yiw/^<C-r><C-0>\s*:<CR>
 nmap <Leader>/ /^\s*:\c<Left><Left><Left><Left><Left><Left>
+nnoremap <Leader>af :call Bde_Format("clang")<CR>
 nnoremap <Leader>cdf :call Cdfile()<CR>
 nnoremap <Leader>cdg :call Cdgit()<CR>
 nnoremap <Leader>cds :call Cdscraper()<CR>
@@ -65,7 +67,7 @@ nnoremap <Leader>fh :FSSplitLeft<CR>
 nnoremap <Leader>fj :FSSplitBelow<CR>
 nnoremap <Leader>fk :FSSplitAbove<CR>
 nnoremap <Leader>fl :FSSplitRight<CR>
-nnoremap <Leader>fmt :call Bde_Format()<CR>
+nnoremap <Leader>fmt :call Bde_Format("")<CR>
 nnoremap <Leader>fx :call GTestFixture("")<Left><Left>
 nnoremap <Leader>gg :Ggrep <C-r><C-w><CR>:copen<CR>
 nnoremap <Leader>h :set hlsearch! hlsearch?<CR>
