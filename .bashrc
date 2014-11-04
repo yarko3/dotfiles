@@ -30,6 +30,7 @@ if [ "$BBENV" ]; then
     alias pw='~/scr/pwhat.sh'
 
     alias arc='cd ~/mbig/scrape.git && arc'
+    alias cr='~/scr/cron.sh'
 
     # Production windows in Tmux
     alias n290='~/.tmux/prdwin.sh -n'
