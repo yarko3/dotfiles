@@ -41,6 +41,7 @@ function installAll() {
     sudo apt-get -y install icedtea-plugin
     sudo apt-get -y install subversion
     sudo apt-get -y install python-software-properties pkg-config
+    sudo apt-get -y install octave
 
     # Ubuntu
     sudo apt-get -y install software-properties-common
