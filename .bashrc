@@ -29,7 +29,6 @@ if [ "$BBENV" ]; then
     alias rbm='~/scr/update_master.sh'
     alias pw='~/scr/pwhat.sh'
 
-    alias arc='cd ~/mbig/scrape.git && arc'
     alias cr='~/scr/cron.sh'
 
     # Production windows in Tmux
