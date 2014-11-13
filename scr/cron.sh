@@ -10,6 +10,8 @@ if [ "$#" -eq 2 ]; then
 fi
 
 shopt -s expand_aliases
+
+echo -e '\nRunning command "'$1'" every $2 seconds\n'
 while [ 1 ]; do
     eval "$1"
     sleep $sleep_duration
