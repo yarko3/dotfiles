@@ -28,13 +28,14 @@
 !.ycm_extra_conf.py
 
 # Re-ignoring again
+.nfs*
 .netrwhist
 .vim/bundle
 .vimcoder
 AlgorithmPractice
+R*
+display.txt
+js*
 llvm/*
 mbig/*
 training_*
-display.txt
-js*
-R*
