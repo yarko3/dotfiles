@@ -1,15 +1,20 @@
 #!/bin/bash
 if [ -z $1 ]; then
-    echo "Specify a subdirectory of msgscrape"
-    exit 1;
+    cd ~/mbig
+    return
 fi
+
+mbig=~/mbig/*
+for d in $mbig
+do
+    if [[ $d =~ $1 ]]; then
+        cd ~/mbig/$1
+        return
+    fi
+done
 
 prefix=~/mbig/scrape.git/msgscrape
 dir=$1
-
-#if [ $1 == 'git' ]; then
-    #prefix=~/mbig/
-#fi
 
 # Second and third git workdirs
 if [[ $2 == '2' ]]; then
@@ -24,8 +29,5 @@ if [ $dir == 'scrpxbsvc' ]; then
 elif [ $dir == 'scrpxbdb' ]; then
     dir=pcs_xb_mapping/db
 fi
-#elif [ $dir == 'msg' ]; then
-    #dir=""
-#fi
 
-eval cd $prefix/$dir
+cd $prefix/$dir

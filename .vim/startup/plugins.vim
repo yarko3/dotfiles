@@ -8,7 +8,6 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'              " Lets Vundle manage Vundle
 
-Plugin 'SirVer/ultisnips'               " Text snippets
 Plugin 'Valloric/ListToggle'            " Toggling quickfix and location list
 Plugin 'benmills/vimux'                 " Vim and Tmux Integration
 Plugin 'bling/vim-airline'              " Status line
@@ -29,9 +28,8 @@ Plugin 'tpope/vim-unimpaired.git'       " Pairs of keyboard mappings for common 
 Plugin 'tpope/vim-vinegar.git'          " netrw improvement
 Plugin 'vim-scripts/Tabmerge'           " Merge tabs into splits
 
-" Plugin 'chazy/cscope_maps'              " cscope mappings
-
 if g:platform == "Linux"
+    Plugin 'SirVer/ultisnips'               " Text snippets
     Plugin 'Valloric/YouCompleteMe'
 endif
 
