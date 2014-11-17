@@ -32,7 +32,7 @@ then
     export PATH=/opt/bb/bin/tmux:$PATH
 
     # My stuff
-    export PATH="$PATH:$HOME/bin"
+    export PATH="$HOME/bin:$PATH"
 
     # Run BASH
     if [ -x /bin/bash ]; then
