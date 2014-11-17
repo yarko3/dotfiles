@@ -62,6 +62,9 @@ function installAll() {
     sudo apt-get -y install totem
     sudo apt-get -y install xbmc
     sudo apt-get -y install libav-tools
+    sudo apt-get -y install mupdf
+    sudo apt-get -y install gimp
+    sudo apt-get -y install imagemagick
 
     # Other
     sudo apt-get -y install filezilla
