@@ -23,11 +23,4 @@ elif [[ $2 == '3' ]]; then
     prefix=~/mbig/thirdscrape.git/msgscrape
 fi
 
-# Special directories
-if [ $dir == 'scrpxbsvc' ]; then
-    dir=pcs_xb_mapping/$dir
-elif [ $dir == 'scrpxbdb' ]; then
-    dir=pcs_xb_mapping/db
-fi
-
 cd $prefix/$dir
