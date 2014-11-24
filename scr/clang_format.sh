@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Running clang-format on all cpp and h files in directory"
-/opt/bb/bin/clang-format style=file -i *.cpp *.h
+/opt/bb/bin/clang-format -i *.cpp *.h
 
 echo "Fixing RCSID comma space"
 # SYSUTIL_ or BDES_

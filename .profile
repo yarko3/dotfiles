@@ -12,6 +12,7 @@ then
 
     export PATH="$PATH:/bb/bin"
     export PATH="$PATH:/opt/bb/bin"
+    export PATH="$PATH:/bb/bigstorq4/scrpbuild/devtools/bin"
 
     # Setup scraping team profile
     [ -f /bb/unsupported/scrputil/team_profile/scrpenv.sh ] && . /bb/unsupported/scrputil/team_profile/scrpenv.sh
