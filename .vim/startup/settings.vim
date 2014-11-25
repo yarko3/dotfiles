@@ -53,7 +53,7 @@ set autowrite
 set autoread
 
 " Configure the :make command
-set makeprg=make
+set makeprg=gmake
 
 " Set path for file searches
 set path+=/home/bhipple/mbig/scrape.git/**
