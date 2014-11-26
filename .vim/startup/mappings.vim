@@ -42,12 +42,15 @@ nnoremap <silent> <F8> :b#<CR>
 nnoremap <Space> i_<Esc>r
 
 " Compilation and testing with Dispatch
+nnoremap <F2> :call MakefileSearch()<CR>:Make clean<CR>
 if(g:bbenv == "")
     nnoremap <F4> :call MakefileSearch()<CR>:Make all<CR>:Make run<CR>:Copen<CR>/FAILED<CR>
 else
     nnoremap <F3> :call MakefileSearch()<CR>:Make gtest<CR>
-    nnoremap <F4> :call MakefileSearch()<CR>:Make stage<CR>
+    nnoremap <F4> :call MakefileSearch()<CR>:Make<CR>
 endif
+
+
 noremap <F5> :cex[]<CR>:cclose<CR>
 
 
