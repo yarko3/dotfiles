@@ -67,9 +67,6 @@ else
     # Programs
     alias ff='~/scr/x_server/firefox_launch.sh &'
     alias firefox='~/scr/x_server/firefox_launch.sh &'
-    alias gc='~/scr/x_server/chrome_launch.sh &'
-    alias google-chrome='~/scr/x_server/chrome_launch.sh &'
-
     alias start='~/scr/startup.sh'
 fi
 

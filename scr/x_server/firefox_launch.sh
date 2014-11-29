@@ -11,22 +11,26 @@ BottomLeft=3
 BottomRight=4
 TopRight=5
 
+if [ "$HOSTNAME" == "brh-laptop" ]; then
+    nohup \firefox
+    exit 0
+fi
 
 if [ "$DISPLAY" == ':0.0' ]; then
-    firefox -no-remote -P $BottomCenter &
+    nohup firefox -no-remote -P $BottomCenter &
 
 elif [ "$DISPLAY" == ':0.1' ]; then
-    firefox -no-remote -P $TopCenter &
+    nohup firefox -no-remote -P $TopCenter &
 
 elif [ "$DISPLAY" == ':0.2' ]; then
-    firefox -no-remote -P $TopLeft &
+    nohup firefox -no-remote -P $TopLeft &
 
 elif [ "$DISPLAY" == ':0.3' ]; then
-    firefox -no-remote -P $BottomLeft &
+    nohup firefox -no-remote -P $BottomLeft &
 
 elif [ "$DISPLAY" == ':0.4' ]; then
-    firefox -no-remote -P $BottomRight &
+    nohup firefox -no-remote -P $BottomRight &
 
 elif [ "$DISPLAY" == ':0.5' ]; then
-    firefox -no-remote -P $TopRight &
+    nohup firefox -no-remote -P $TopRight &
 fi
