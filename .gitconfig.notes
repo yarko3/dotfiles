@@ -1,5 +1,5 @@
 [user]
-    name = bhipple
+    name = Benjamin Hipple
     email = bhipple@bloomberg.net
 [color]
     ui = true
@@ -15,6 +15,7 @@
     ci = commit
     co = checkout
     df = diff
+    l = log --decorate
     lg = log --decorate --oneline --graph --branches --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold blue)(%ar) %C(bold yellow)%d%C(reset) %C(green)%s%C(reset) %C(dim green)- %an%C(reset)'
     rb = rebase
     rbt = rebase trunk
@@ -24,12 +25,14 @@
 
     # List aliases
     la = "!git config -l | grep alias | cut -c 7-"
-[mergetool "gfugitive"]
-    cmd = gvim -f -c \"Gvdiff\" \"$MERGED\"
+[mergetool "fugitive"]
+    cmd = vim -f -c \"Gvdiff\" \"$MERGED\"
 [merge]
-    tool = gfugitive
+    tool = fugitive
 [push]
     default = simple
+[init]
+    templatedir = ~/.git_template
 
 # Bloomberg ONLY settings
 [http]
