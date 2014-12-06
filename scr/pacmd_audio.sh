@@ -3,7 +3,7 @@
 
 # Look up these values with `$ pacmd list-sinks | less`
 headphones_sink=1
-hdmi_sink=2
+hdmi_sink=0
 
 # Default to headphones
 if [ "$1" == "hdmi" ]; then
