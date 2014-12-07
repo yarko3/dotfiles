@@ -12,41 +12,12 @@ if [ "$BBENV" ]; then
     # if chimera generated aliases exist, pull them into the current ENV
     [ -f ~/.bbalias ] && . ~/.bbalias
 
-    # Authentication
-    alias rf='vastool kinit -R && vastool klist'
-    alias make='vastool kinit -R && make'
-    alias git='vastool kinit -R && git'
-
     # Autocomplete for Git
     GIT_AUTOCOMPLETE_PATH="/opt/swt/share/git-contrib/completion/git-completion.bash"
     [ -f $GIT_AUTOCOMPLETE_PATH ] && source $GIT_AUTOCOMPLETE_PATH
 
-    # Programs
-    alias cfd='~/scr/clang_format.sh'
-    alias cs='. cs'
-    alias di='. di'
-    alias sl='. sl'
-    alias rbm='~/scr/update_master.sh'
-    alias pw='~/scr/pwhat.sh'
-
-    alias cr='~/scr/cron.sh'
-
-    # Production windows in Tmux
-    alias n290='~/.tmux/prdwin.sh -n'
-    alias scip='~/.tmux/prdwin.sh -p'
-    alias sciq='~/.tmux/prdwin.sh -q'
-
-    # Programs that need a display
-    alias scrptogui='. di && rm -rf scraper.0.log.* && ./run.sh testmsg.msg && ../sxide/demos/reverse-pattern-lookup.py ./scraper_dump.tcl ./patterns.cfg'
-    alias scrpgui='. di && ../sxide/demos/reverse-pattern-lookup.py ./scraper_dump.tcl ./patterns.cfg'
-    alias gvim='. di && gvim'
-    alias svn='. di && svn'
-    alias xterm='. di && xterm'
-
-    # cd
-    alias cdbbit='cd /bbsrc/thirdparty/bbit/include'
-    alias cdbig='cd ~/mbig/'
-    alias cdgit='cd ~/mbig/scrape.git'
+    # Source my Bloomberg aliases
+    [ -f .bash_aliases_bb ] && . ~/.bash_aliases_bb
 
 
 ## ============================================================================
@@ -58,16 +29,8 @@ else
 
     export PATH="$PATH:~/bin"
 
-    if [ $HOSTNAME == 'brh-laptop' ]; then
-        xmodmap ~/.Xmodmaps/Xmodmap_kubuntu_laptop
-    elif [ $HOSTNAME == 'brh-desktop' ]; then
-        xmodmap ~/.Xmodmaps/Xmodmap_kubuntu_desktop
-    fi
-
-    # Programs
-    alias ff='~/scr/x_server/firefox_launch.sh &'
-    alias firefox='~/scr/x_server/firefox_launch.sh &'
-    alias start='~/scr/startup.sh'
+    # Source my home aliases
+    [ -f .bash_aliases_home ] && . ~/.bash_aliases_home
 fi
 
 
@@ -80,13 +43,8 @@ export EDITOR=vim
 # update winsize after each command for better line-wrapping
 shopt -s  checkwinsize
 
-alias vi='vim'
-alias gvir='gvim --remote-send ":tabe<CR>" && gvim --remote'
-alias g='git'
-alias ls='ls --color'
-alias ll='ls -al'
-
-alias hd='~/scr/hex_decimal.sh'
+# Source my generic aliases
+[ -f .bash_aliases ] && . ~/.bash_aliases
 
 # Prompt
 PS1='\[\e[1;31m\][\u@\h: \w]\$\[\e[0m\] '

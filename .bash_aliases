@@ -1,0 +1,6 @@
+alias g='git'
+alias gvir='gvim --remote-send ":tabe<CR>" && gvim --remote'
+alias hd='~/scr/hex_decimal.sh'
+alias ll='ls -al'
+alias ls='ls --color'
+alias vi='vim'

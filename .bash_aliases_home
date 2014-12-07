@@ -1,0 +1,3 @@
+alias ff='~/scr/x_server/firefox_launch.sh &'
+alias firefox='~/scr/x_server/firefox_launch.sh &'
+alias start='~/scr/startup.sh'

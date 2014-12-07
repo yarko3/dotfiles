@@ -79,8 +79,8 @@ if has("gui_running")
             for line in readfile(f)
                 let sizepos = split(line)
                 if len(sizepos) == 5 && sizepos[0] == vim_instance
-                    silent! execute "set columns=".sizepos[1]." lines=".sizepos[2]
-                    silent! execute "winpos ".sizepos[3]." ".sizepos[4]
+                    silent! exec "set columns=".sizepos[1]." lines=".sizepos[2]
+                    silent! exec "winpos ".sizepos[3]." ".sizepos[4]
                     return
                 endif
             endfor
@@ -134,5 +134,19 @@ function! YcmIncludeFlagFormatter()
 
     let endLine = startLine + ct
     let sortCmd = ":" . startLine . "," . endLine . "sort u"
-    execute sortCmd
+    exec sortCmd
+endfunction
+
+"" ============================================================================
+""                       Sort Section Until Blank Line
+"" ============================================================================
+function! SortSection()
+    let startLine = line('.')
+    let curLine = startLine
+
+    while(getline(curLine+1) != "")
+        let curLine += 1
+    endwhile
+
+    call setline(startLine, sort(getline(startLine, curLine)))
 endfunction

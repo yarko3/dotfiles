@@ -12,9 +12,9 @@
 !scr/display/*
 !scr/x_server/*
 
-
 # Files to track
 !.Xdefaults
+!.bash_aliases*
 !.bashrc
 !.bbprofile
 !.dir_colors
@@ -28,8 +28,8 @@
 !.ycm_extra_conf.py
 
 # Re-ignoring again
-.nfs*
 .netrwhist
+.nfs*
 .vim/bundle
 .vimcoder
 AlgorithmPractice
@@ -37,5 +37,6 @@ R*
 display.txt
 js*
 llvm/*
+machine_learning/*
 mbig/*
 training_*

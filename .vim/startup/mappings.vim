@@ -83,6 +83,7 @@ nnoremap <Leader>jf :YcmCompleter GoToDefinition<CR>
 nnoremap <Leader>ji :YcmCompleter GoToImprecise<CR>
 nnoremap <Leader>jj :YcmCompleter GoTo<CR>
 nnoremap <Leader>se :sp<CR>:e %:h<CR>
+nnoremap <Leader>ss :call SortSection()<CR>
 nnoremap <Leader>tb :TagbarToggle<CR>
 nnoremap <Leader>te :tabe %:h<CR>
 nnoremap <Leader>tf :call MkGtest()<CR>
