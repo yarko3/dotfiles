@@ -7,7 +7,7 @@ if [ -z $1 ]; then
     fi
 
     /bb/bin/getprdwin -i
-    exit 1;
+    return
 fi
 
 eval pwhat /scrp/bin/$1.tsk

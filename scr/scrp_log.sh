@@ -1,7 +1,7 @@
 #!/bin/bash
 if [ -z $1 ]; then
     echo "Specify a service name"
-    exit 1;
+    return
 fi
 
 eval cd /scrp/data/$1/log
