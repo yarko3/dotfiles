@@ -32,6 +32,8 @@ then
     export PATH=/opt/bb/bin/git-clang-format:$PATH
     export PATH=/opt/bb/bin/tmux:$PATH
 
+    export PATH=$PATH:/opt/swt/common/cov-analysis-linux64-7.5.1/bin/cov-build
+
     # My stuff
     export PATH="$HOME/bin:$PATH"
 
@@ -44,10 +46,7 @@ then
 ## ============================================================================
 ##                             Home Environment
 ## ============================================================================
-else
-    echo "Running Home PROFILE"
-    #PATH=$PATH:/usr/sbin
-fi
+# Currently nothing to do
 
 ## ============================================================================
 ##                                  General
