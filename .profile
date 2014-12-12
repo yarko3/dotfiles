@@ -6,8 +6,7 @@
 ## ============================================================================
 ##                           Bloomberg Environment
 ## ============================================================================
-if [ "$BBENV" ]
-then
+if [ "$BBENV" ]; then
     echo "Running Bloomberg PROFILE"
 
     export PATH="$PATH:/bb/bin"
@@ -32,7 +31,7 @@ then
     export PATH=/opt/bb/bin/git-clang-format:$PATH
     export PATH=/opt/bb/bin/tmux:$PATH
 
-    export PATH=$PATH:/opt/swt/common/cov-analysis-linux64-7.5.1/bin/cov-build
+    export PATH=$PATH:/opt/swt/common/cov-analysis-linux64-7.5.1/bin
 
     # My stuff
     export PATH="$HOME/bin:$PATH"
@@ -43,6 +42,7 @@ then
         export SHELL
         exec /bin/bash
     fi
+fi
 ## ============================================================================
 ##                             Home Environment
 ## ============================================================================
