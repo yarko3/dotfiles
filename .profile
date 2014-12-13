@@ -33,22 +33,23 @@ if [ "$BBENV" ]; then
 
     export PATH=$PATH:/opt/swt/common/cov-analysis-linux64-7.5.1/bin
 
-    # My stuff
-    export PATH="$HOME/bin:$PATH"
-
-    # Run BASH
-    if [ -x /bin/bash ]; then
-        SHELL=/bin/bash
-        export SHELL
-        exec /bin/bash
-    fi
 fi
 ## ============================================================================
 ##                             Home Environment
 ## ============================================================================
-# Currently nothing to do
+# Currently nothing
 
 ## ============================================================================
 ##                                  General
 ## ============================================================================
 umask 0022
+
+# My stuff
+export PATH="$HOME/bin:$PATH"
+
+# Run BASH
+if [ -x /bin/bash ]; then
+    SHELL=/bin/bash
+    export SHELL
+    exec /bin/bash
+fi
