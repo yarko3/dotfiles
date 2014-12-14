@@ -2,12 +2,13 @@
 # ~/.profile runs on interactive login shells if it exists
 # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
-
 ## ============================================================================
 ##                           Bloomberg Environment
 ## ============================================================================
 if [ "$BBENV" ]; then
-    echo "Running Bloomberg PROFILE"
+    if [ -z $PS1 ]; then
+        echo "Running Bloomberg PROFILE"
+    fi
 
     export PATH="$PATH:/bb/bin"
     export PATH="$PATH:/opt/bb/bin"
@@ -32,13 +33,14 @@ if [ "$BBENV" ]; then
     export PATH=/opt/bb/bin/tmux:$PATH
 
     export PATH=$PATH:/opt/swt/common/cov-analysis-linux64-7.5.1/bin
-
-fi
+else
 ## ============================================================================
 ##                             Home Environment
 ## ============================================================================
-# Currently nothing
-
+    if [ -z $PS1 ]; then
+        echo "Running Home PROFILE"
+    fi
+fi
 ## ============================================================================
 ##                                  General
 ## ============================================================================
@@ -47,9 +49,11 @@ umask 0022
 # My stuff
 export PATH="$HOME/bin:$PATH"
 
-# Run BASH
-if [ -x /bin/bash ]; then
-    SHELL=/bin/bash
-    export SHELL
-    exec /bin/bash
+# Run BASH, if the shell is interactive
+if [ -z $PS1 ]; then
+    if [ -x /bin/bash ]; then
+        SHELL=/bin/bash
+        export SHELL
+        exec /bin/bash
+    fi
 fi

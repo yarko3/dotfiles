@@ -17,7 +17,7 @@ if [ "$BBENV" ]; then
     [ -f $GIT_AUTOCOMPLETE_PATH ] && source $GIT_AUTOCOMPLETE_PATH
 
     # Source my Bloomberg aliases
-    [ -f .bash_aliases_bb ] && . ~/.bash_aliases_bb
+    [ -f ~/.bash_aliases_bb ] && . ~/.bash_aliases_bb
 
 
 ## ============================================================================
@@ -30,7 +30,7 @@ else
     export PATH="$PATH:~/bin"
 
     # Source my home aliases
-    [ -f .bash_aliases_home ] && . ~/.bash_aliases_home
+    [ -f ~/.bash_aliases_home ] && . ~/.bash_aliases_home
 fi
 
 
@@ -44,7 +44,7 @@ export EDITOR=vim
 shopt -s  checkwinsize
 
 # Source my generic aliases
-[ -f .bash_aliases ] && . ~/.bash_aliases
+[ -f ~/.bash_aliases ] && . ~/.bash_aliases
 
 # Prompt
 PS1='\[\e[1;31m\][\u@\h: \w]\$\[\e[0m\] '
