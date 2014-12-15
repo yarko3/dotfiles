@@ -5,10 +5,9 @@
 ## ============================================================================
 ##                           Bloomberg Environment
 ## ============================================================================
-if [ "$BBENV" ]; then
-    if [ -z $PS1 ]; then
-        echo "Running Bloomberg PROFILE"
-    fi
+if [ "$BBENV" ]
+then
+    echo "Running Bloomberg PROFILE"
 
     export PATH="$PATH:/bb/bin"
     export PATH="$PATH:/opt/bb/bin"
@@ -37,7 +36,7 @@ else
 ## ============================================================================
 ##                             Home Environment
 ## ============================================================================
-    if [ -z $PS1 ]; then
+    if [ -z "$PS1" ]; then
         echo "Running Home PROFILE"
     fi
 fi
@@ -49,11 +48,8 @@ umask 0022
 # My stuff
 export PATH="$HOME/bin:$PATH"
 
-# Run BASH, if the shell is interactive
-if [ -z $PS1 ]; then
-    if [ -x /bin/bash ]; then
-        SHELL=/bin/bash
-        export SHELL
-        exec /bin/bash
-    fi
+if [ -x /bin/bash ]; then
+    SHELL=/bin/bash
+    export SHELL
+    exec /bin/bash
 fi
