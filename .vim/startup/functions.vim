@@ -47,7 +47,7 @@ function! MakefileSearch()
     pwd
     let ct = 0
 
-    while(ct < 5 && len(split(globpath('.', 'Makefile'), '\n')) == 0)
+    while(ct < 5 && ((len(split(globpath('.', 'Makefile'), '\n')) == 0) && (len(split(globpath('.', 'GNUmakefile'), '\n')) == 0)))
         cd ..
         pwd
         let ct += 1
