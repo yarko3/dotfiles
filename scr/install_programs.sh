@@ -34,7 +34,6 @@ function installAll() {
     sudo apt-get -y install tmux
     sudo apt-get -y install ack-grep
     sudo apt-get -y install exuberant-ctags
-    sudo apt-get -y install build-essential cmake
     sudo apt-get -y install python-dev
     sudo apt-get -y build-dep python3.4
     sudo apt-get -y install icedtea-netx
@@ -45,11 +44,9 @@ function installAll() {
 
     # Ubuntu
     sudo apt-get -y install software-properties-common
-    sudo apt-get -y install aptitude
     sudo apt-get -y install synaptic
     sudo apt-get -y install gdebi-core
     sudo apt-get -y install software-properties-gtk
-    sudo apt-get -y install kubuntu-restricted-extras
     sudo apt-get -y install libavcodec-extra
 
     # Browsers
@@ -77,6 +74,7 @@ function installAll() {
 function installMin() {
     sudo apt-get -y install vim-gtk
     sudo apt-get -y install awesome
+    sudo apt-get -y install build-essential cmake
 
     if ! [[ -f ~/.vim/bundle/Vundle.vim/README.md ]]; then
         git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
