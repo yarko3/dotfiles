@@ -54,6 +54,20 @@ function! MakefileSearch()
     endwhile
 endfunction
 
+"" ============================================================================
+""                             Classifier Stuff
+"" ============================================================================
+function! CleanupLabelHelper()
+    " Cleanup tabs and column headers
+    %s/\t/ /ge
+    %s/\s*$//ge
+    normal! gg2dd
+
+    " Trim all of the features (currently 2)
+    %s/^[0-9]*\s*[0-9]*\s*//ge
+
+    %sort
+endfunction
 
 "" ============================================================================
 ""                      Restoring Screen Size/Position

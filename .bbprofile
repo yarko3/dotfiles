@@ -15,3 +15,5 @@
 
 # adds training support
 + contrib/training
+
++ contrib/dpkg
