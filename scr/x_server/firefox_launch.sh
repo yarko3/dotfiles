@@ -11,7 +11,7 @@ BottomLeft=3
 BottomRight=4
 TopRight=5
 
-if [ "$HOSTNAME" == "brh-laptop" ]; then
+if ! [ "$HOSTNAME" = "brh-desktop" ]; then
     \firefox &
     exit 0
 fi
