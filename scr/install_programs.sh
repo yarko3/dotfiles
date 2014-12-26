@@ -54,6 +54,13 @@ function installAll() {
     sudo apt-get -y install google-chrome
     sudo apt-get -y install flashplugin-installer
 
+    # Networking
+    sudo apt-get -y install nmap
+    sudo apt-get -y install vinagre
+    sudo apt-get -y install wireshark
+    sudo apt-get -y install filezilla
+    sudo apt-get -y install curl
+
     # Media
     sudo apt-get -y install vlc
     sudo apt-get -y install totem
@@ -64,9 +71,7 @@ function installAll() {
     sudo apt-get -y install imagemagick
 
     # Other
-    sudo apt-get -y install filezilla
     sudo apt-get -y install keepass2
-    sudo apt-get -y install wireshark
     sudo apt-get -y install deluge
     sudo apt-get -y install htop
 }
