@@ -19,6 +19,7 @@
 !.bbprofile
 !.dir_colors
 !.gitconfig.notes
+!.gitconfig.notes_bb
 !.gitignore
 !.inputrc
 !.startup.sh

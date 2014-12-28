@@ -31,7 +31,6 @@ function installAll() {
     installMin
 
     # Development
-    sudo apt-get -y install tmux
     sudo apt-get -y install ack-grep
     sudo apt-get -y install exuberant-ctags
     sudo apt-get -y install python-dev
@@ -80,6 +79,11 @@ function installMin() {
     sudo apt-get -y install vim-gtk
     sudo apt-get -y install awesome
     sudo apt-get -y install build-essential cmake
+    sudo apt-get -y install tmux
+
+    if ! [[ -f ~/.gitconfig ]]; then
+        cp ~/.gitconfig.notes ~/.gitconfig
+    fi
 
     if ! [[ -f ~/.vim/bundle/Vundle.vim/README.md ]]; then
         git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim

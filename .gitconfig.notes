@@ -1,6 +1,6 @@
 [user]
     name = Benjamin Hipple
-    email = bhipple@bloomberg.net
+    email = brh2113@columbia.edu
 [color]
     ui = true
     status = true
@@ -33,12 +33,3 @@
     default = simple
 [init]
     templatedir = ~/.git_template
-
-# Bloomberg ONLY settings
-[http]
-    proxy = devproxy.bloomberg.com:82
-    sslVerify = false
-[pack]
-    packSizeLimit = 500m
-    windowMemory = 500m
-    threads = 1

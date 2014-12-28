@@ -1,0 +1,7 @@
+[http]
+    proxy = devproxy.bloomberg.com:82
+    sslVerify = false
+[pack]
+    packSizeLimit = 500m
+    windowMemory = 500m
+    threads = 1
