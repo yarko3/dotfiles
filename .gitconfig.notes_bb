@@ -1,3 +1,6 @@
+[user]
+    name = Benjamin Hipple
+    email = bhipple@bloomberg.net
 [http]
     proxy = devproxy.bloomberg.com:82
     sslVerify = false
@@ -5,3 +8,5 @@
     packSizeLimit = 500m
     windowMemory = 500m
     threads = 1
+[pull]
+    rebase = true
