@@ -28,12 +28,6 @@ set directory=""
 " Faster terminal scrolling?  TBD
 set ttyfast
 
-" ctags locations
-set tags+=./tags;~/mbig/scrape.git/msgscrape/scraper/tags
-
-" cscope database location
-"cs add ~/mbig/scrape.git/cscope.out
-
 " runtime path search for Ex
 set ru
 
@@ -44,9 +38,6 @@ set shiftwidth=4
 
 " Allow switching off modified buffers without warning
 set hidden
-
-" Using the mouse
-"set mouse=a
 
 " Autosave before :make and other commands; autoreload when file mod
 set autowrite
@@ -60,6 +51,10 @@ set path+=/home/bhipple/mbig/scrape.git/**
 
 " Ignore whitespace on diffs
 set diffopt+=iwhite
+
+" Smart case sensitivity
+set ignorecase
+set smartcase
 
 "" ============================================================================
 ""                                Appearances

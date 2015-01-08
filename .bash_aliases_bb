@@ -1,6 +1,6 @@
 alias cdbbit='cd /bbsrc/thirdparty/bbit/include'
 alias cdbig='cd ~/mbig/'
-alias cdgit='cd ~/mbig/scrape.git'
+alias cdgit='cd ~/mbig/scrape.git/msgscrape'
 alias cfd='~/scr/clang_format.sh'
 alias cr='~/scr/cron.sh'
 alias cs='. cs'

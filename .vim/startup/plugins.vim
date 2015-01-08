@@ -42,7 +42,7 @@ filetype plugin indent on
 ""                              Plugin Settings
 "" ============================================================================
 " CtrlP
-let g:ctrlp_cmd = 'CtrlP ~/mbig/scrape.git'
+let g:ctrlp_cmd = 'CtrlP ~/mbig'
 
 " Netrw
 let g:netrw_sort_by = 'name'
@@ -50,11 +50,6 @@ let g:netrw_sort_by = 'name'
 " ListToggle
 let g:lt_location_list_toggle_map = '<leader>l'
 let g:lt_quickfix_list_toggle_map = '<leader>q'
-
-" Syntastic
-let g:syntasti_ignore_files = ['cpp$', 'h']
-let g:syntastic_cpp_check_header = 0
-let g:syntastic_cpp_remove_include_errors = 1
 
 " YouCompleteMe
 let g:ycm_server_log_level = 'debug'

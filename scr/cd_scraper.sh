@@ -13,14 +13,4 @@ do
     fi
 done
 
-prefix=~/mbig/scrape.git/msgscrape
-dir=$1
-
-# Second and third git workdirs
-if [[ $2 == '2' ]]; then
-    prefix=~/mbig/secondscrape.git/msgscrape
-elif [[ $2 == '3' ]]; then
-    prefix=~/mbig/thirdscrape.git/msgscrape
-fi
-
-cd $prefix/$dir
+cd ~/mbig/scrape.git/msgscrape/$1
