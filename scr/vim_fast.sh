@@ -1,2 +1,2 @@
 #!/bin/bash
-vim -u ~/.vimrc_minimal $1
+vim -X -u ~/.vimrc_minimal $1
