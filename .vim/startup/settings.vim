@@ -44,7 +44,11 @@ set autowrite
 set autoread
 
 " Configure the :make command
-set makeprg=gmake
+if(g:bbenv == "")
+    set makeprg=make
+else
+    set makeprg=gmake
+endif
 
 " Set path for file searches
 set path+=/home/bhipple/mbig/scrape.git/**

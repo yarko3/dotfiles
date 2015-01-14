@@ -28,12 +28,15 @@ imap <C-T> <ESC>:pyf ~/bin/clang-format.py<CR>
 nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
 
 " If hl search is off, starting a new search or moving enables it
-nnoremap / :set hlsearch<CR>/
 nnoremap * :set hlsearch<CR>*
 nnoremap # :set hlsearch<CR>#
-nnoremap ? :set hlsearch<CR>?
 nnoremap n :set hlsearch<CR>n
 nnoremap N :set hlsearch<CR>N
+
+" Also, commmand and search history by default
+nnoremap : q:i
+nnoremap / :set hlsearch<CR>q/i
+nnoremap ? :set hlsearch<CR>q?i
 
 " Swap to last buffer
 nnoremap <silent> <F8> :b#<CR>
@@ -49,7 +52,6 @@ else
     nnoremap <F3> :call MakefileSearch()<CR>:Make gtest<CR>
     nnoremap <F4> :call MakefileSearch()<CR>:Make<CR>
 endif
-
 
 noremap <F5> :cex[]<CR>:cclose<CR>
 
