@@ -42,7 +42,7 @@ filetype plugin indent on
 ""                              Plugin Settings
 "" ============================================================================
 " CtrlP
-let g:ctrlp_cmd = 'CtrlP ~/mbig'
+let g:ctrlp_working_path_mode = 'ra'
 
 " Netrw
 let g:netrw_sort_by = 'name'
