@@ -32,11 +32,13 @@ nnoremap * :set hlsearch<CR>*
 nnoremap # :set hlsearch<CR>#
 nnoremap n :set hlsearch<CR>n
 nnoremap N :set hlsearch<CR>N
+nnoremap / :set hlsearch<CR>/
+nnoremap ? :set hlsearch<CR>?
 
 " Also, commmand and search history by default
-nnoremap : q:i
-nnoremap / :set hlsearch<CR>q/i
-nnoremap ? :set hlsearch<CR>q?i
+"nnoremap : q:i
+"nnoremap / :set hlsearch<CR>q/i
+"nnoremap ? :set hlsearch<CR>q?i
 
 " Swap to last buffer
 nnoremap <silent> <F8> :b#<CR>
