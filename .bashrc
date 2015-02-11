@@ -27,7 +27,7 @@ else
     echo "Running Home BASHRC"
     umask 0022
 
-    export PATH="$PATH:~/bin"
+    export PATH="$PATH:~/bin:/usr/class/cs143/cool/bin"
 
     # Source my home aliases
     [ -f ~/.bash_aliases_home ] && . ~/.bash_aliases_home
