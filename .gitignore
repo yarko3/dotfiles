@@ -31,13 +31,12 @@
 # Re-ignoring again
 .config/awesome
 .netrwhist
-.nfs*
 .vim/bundle
 .vimcoder
 AlgorithmPractice
 R*
-coursera_machine_learning/*
-display.txt
+cr_*
+fsd_training*
 js*
 llvm/*
 machine_learning/*
