@@ -43,9 +43,6 @@ nnoremap ? :set hlsearch<CR>?
 " Swap to last buffer
 nnoremap <silent> <F8> :b#<CR>
 
-" Set <Space> + Character to insert 1 character, then go back to command mode
-nnoremap <Space> i_<Esc>r
-
 " Compilation and testing with Dispatch
 nnoremap <F2> :call MakefileSearch()<CR>:Make clean<CR>
 if(g:bbenv == "")
