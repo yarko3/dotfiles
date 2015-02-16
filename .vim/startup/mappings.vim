@@ -61,6 +61,7 @@ noremap <F5> :cex[]<CR>:cclose<CR>
 nmap <Leader>* yiw/^<C-r><C-0>\s*:<CR>
 nmap <Leader>/ /^\s*:\c<Left><Left><Left><Left><Left><Left>
 nnoremap <Leader>af :call Bde_Format("clang")<CR>
+nnoremap <Leader>b :CtrlPBuffer<CR>
 nnoremap <Leader>cdf :call Cdfile()<CR>
 nnoremap <Leader>cdg :call Cdgit()<CR>
 nnoremap <Leader>cds :call Cdscraper()<CR>
