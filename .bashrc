@@ -7,7 +7,7 @@
 ## ============================================================================
 if [ "$BBENV" ]; then
     echo "Running Bloomberg BASHRC"
-    umask 0022
+    umask 0002
 
     # if chimera generated aliases exist, pull them into the current ENV
     [ -f ~/.bbalias ] && . ~/.bbalias
