@@ -41,13 +41,6 @@ function installAll() {
     sudo apt-get -y install python-software-properties pkg-config
     sudo apt-get -y install octave
 
-    # Ubuntu
-    sudo apt-get -y install software-properties-common
-    sudo apt-get -y install synaptic
-    sudo apt-get -y install gdebi-core
-    sudo apt-get -y install software-properties-gtk
-    sudo apt-get -y install libavcodec-extra
-
     # Browsers
     sudo apt-get -y install chromium-browser
     sudo apt-get -y install google-chrome
@@ -61,6 +54,7 @@ function installAll() {
     sudo apt-get -y install curl
 
     # Media
+    sudo apt-get -y install libavcodec-extra
     sudo apt-get -y install vlc
     sudo apt-get -y install totem
     sudo apt-get -y install xbmc
@@ -70,7 +64,6 @@ function installAll() {
     sudo apt-get -y install imagemagick
 
     # Other
-    sudo apt-get -y install keepass2
     sudo apt-get -y install deluge
     sudo apt-get -y install htop
 }
@@ -80,6 +73,7 @@ function installMin() {
     sudo apt-get -y install awesome
     sudo apt-get -y install build-essential cmake
     sudo apt-get -y install tmux
+    sudo apt-get -y install keepass2
 
     if ! [[ -f ~/.gitconfig ]]; then
         cp ~/.gitconfig.notes ~/.gitconfig
