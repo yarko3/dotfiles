@@ -23,7 +23,7 @@ split-window -t 3 -v
 send-keys -t 3 'ssh ibm1' enter
 send-keys -t 4 'ssh ibm1' enter
 
-send-keys -t 1 'cdgit' enter
+send-keys -t 1 'cs scraper' enter
 
 send-keys -t 0 C-l
 send-keys -t 1 C-l
