@@ -18,6 +18,10 @@ if [ "$BBENV" ]; then
 
     export APPROVER_UUID=2464742
 
+    # Build with clang
+    #export INSTRUMENT_CC=/bbsrc/bin/clang_transform.pl
+    #export INSTRUMENT_CPP=/bbsrc/bin/clang_transform.pl
+
     # Source my Bloomberg aliases
     [ -f ~/.bash_aliases_bb ] && . ~/.bash_aliases_bb
 
