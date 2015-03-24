@@ -25,7 +25,7 @@ map <C-T> :pyf ~/bin/clang-format.py<CR>:call Bde_Format()<CR>
 imap <C-T> <ESC>:pyf ~/bin/clang-format.py<CR>
 
 " YouCompleteMe
-nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
+nnoremap <F9> :YcmForceCompileAndDiagnostics<CR>
 
 " If hl search is off, starting a new search or moving enables it
 nnoremap * :set hlsearch<CR>*
