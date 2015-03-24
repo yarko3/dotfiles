@@ -66,6 +66,7 @@ nnoremap <Leader>cdf :call Cdfile()<CR>
 nnoremap <Leader>cdg :call Cdgit()<CR>
 nnoremap <Leader>cds :call Cdscraper()<CR>
 nnoremap <Leader>cmt :call CmtSection("")<Left><Left>
+nnoremap <Leader>dom :Gdiff origin/master<CR>
 nnoremap <Leader>e :e %:h<CR>
 nnoremap <Leader>ff :FSHere<CR>
 nnoremap <Leader>fh :FSSplitLeft<CR>
@@ -74,6 +75,7 @@ nnoremap <Leader>fk :FSSplitAbove<CR>
 nnoremap <Leader>fl :FSSplitRight<CR>
 nnoremap <Leader>fmt :call Bde_Format("")<CR>
 nnoremap <Leader>fx :call GTestFixture("")<Left><Left>
+nnoremap <Leader>gd :Gdiff<CR>
 nnoremap <Leader>gg :Ggrep <C-r><C-w><CR>:copen<CR>
 nnoremap <Leader>h :set hlsearch! hlsearch?<CR>
 nnoremap <Leader>ia O// Application Includes<ESC>
