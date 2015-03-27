@@ -8,7 +8,6 @@ else
     do
         if [[ $d =~ $1 ]]; then
             cd ~/mbig/$1
-            exit
         fi
     done
 fi
