@@ -3,6 +3,22 @@
 [ -z "$PS1" ] && return
 
 ## ============================================================================
+##                                  General
+## ============================================================================
+export TERM=xterm-256color
+export EDITOR=vi
+
+# update winsize after each command for better line-wrapping
+shopt -s  checkwinsize
+
+# Source my generic aliases
+[ -f ~/.bash_aliases ] && . ~/.bash_aliases
+
+# Prompt
+PS1='\[\e[1;31m\][\u@\h: \w]\$\[\e[0m\] '
+
+LOCATION=`uname -n`
+## ============================================================================
 ##                           Bloomberg Environment
 ## ============================================================================
 if [ "$BBENV" ]; then
@@ -25,7 +41,13 @@ if [ "$BBENV" ]; then
     # Source my Bloomberg aliases
     [ -f ~/.bash_aliases_bb ] && . ~/.bash_aliases_bb
 
+    # Only use this when not running on the VM
+    alias git='vastool kinit -R && git'
+    alias make='vastool kinit -R && make'
 
+elif [[ "$LOCATION" =~ "bhipple" ]]; then
+    echo "Running Bloomberg VM BASHRC"
+    [ -f ~/.bash_aliases_bb ] && . ~/.bash_aliases_bb
 ## ============================================================================
 ##                             Home Environment
 ## ============================================================================
@@ -39,18 +61,3 @@ else
     [ -f ~/.bash_aliases_home ] && . ~/.bash_aliases_home
 fi
 
-
-## ============================================================================
-##                                  General
-## ============================================================================
-export TERM=xterm-256color
-export EDITOR=vi
-
-# update winsize after each command for better line-wrapping
-shopt -s  checkwinsize
-
-# Source my generic aliases
-[ -f ~/.bash_aliases ] && . ~/.bash_aliases
-
-# Prompt
-PS1='\[\e[1;31m\][\u@\h: \w]\$\[\e[0m\] '

@@ -1,16 +1,14 @@
 #!/bin/bash
-if [ -z $1 ]; then
+if [ -z $1 ]
+then
     cd ~/mbig
-    return
+else
+    mbig=~/mbig/*
+    for d in $mbig
+    do
+        if [[ $d =~ $1 ]]; then
+            cd ~/mbig/$1
+            exit
+        fi
+    done
 fi
-
-mbig=~/mbig/*
-for d in $mbig
-do
-    if [[ $d =~ $1 ]]; then
-        cd ~/mbig/$1
-        return
-    fi
-done
-
-cd ~/mbig/scrape.git/msgscrape/$1
