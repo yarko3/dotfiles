@@ -1,22 +1,24 @@
 #!/bin/bash
-cd ~/
-mkdir llvm
-cd llvm
 
-svn co http://llvm.org/svn/llvm-project/llvm/trunk llvm
+clone_repos() {
+    cd ~/
+    git clone http://llvm.org/git/llvm.git
 
-cd llvm/tools
-svn co http://llvm.org/svn/llvm-project/cfe/trunk clang
+    cd ~/llvm/tools
+    git clone http://llvm.org/git/clang.git
 
-cd clang/tools
-svn co http://llvm.org/svn/llvm-project/clang-tools-extra/trunk extra
+    cd ~/llvm/projects
+    git clone http://llvm.org/git/compiler-rt.git
+    git clone http://llvm.org/git/test-suite.git
 
-cd ../../../..    #go back to top directory
-cd llvm/projects
-svn co http://llvm.org/svn/llvm-project/compiler-rt/trunk compiler-rt
+    cd ~/llvm/tools/clang/tools
+    git clone http://llvm.org/git/clang-tools-extra.git
+}
 
-cd ../..          #go back to top directory
-cd llvm
-./configure
-make              #this takes a few hours
-sudo make install
+build() {
+    cd ~/
+    mkdir -p build && cd build
+    ../llvm/configure
+    make
+    #sudo make install # hmm?
+}
