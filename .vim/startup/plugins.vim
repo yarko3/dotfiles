@@ -27,6 +27,7 @@ Plugin 'tpope/vim-surround'             " Surrounding text
 Plugin 'tpope/vim-unimpaired.git'       " Pairs of keyboard mappings for common tasks
 Plugin 'tpope/vim-vinegar.git'          " netrw improvement
 Plugin 'vim-scripts/Tabmerge'           " Merge tabs into splits
+"Plugin 'jeaye/color_coded'              " Clang color coding
 
 if g:platform == "Linux"
     Plugin 'SirVer/ultisnips'               " Text snippets

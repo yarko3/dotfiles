@@ -32,7 +32,7 @@ if [ "$BBENV" ]; then
     GIT_AUTOCOMPLETE_PATH="/opt/swt/share/git-contrib/completion/git-completion.bash"
     [ -f $GIT_AUTOCOMPLETE_PATH ] && source $GIT_AUTOCOMPLETE_PATH
 
-    export APPROVER_UUID=`/bb/bin/bbempinf.tsk -u sabhyank`
+    export APPROVER_UUID=`/bb/bin/bbempinf.tsk -u fkolarek`
 
     # Build with clang
     #export INSTRUMENT_CC=/bbsrc/bin/clang_transform.pl
