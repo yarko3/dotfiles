@@ -1,16 +1,8 @@
 #!/bin/bash
 # Install script for setting up all of my programs on Linux
 
-## ============================================================================
-##                                  Sources
-## ============================================================================
-# See my_sources.list
-
-
-## ============================================================================
-##                                 Functions
-## ============================================================================
-function printHelp() {
+printHelp()
+{
     echo "Ben's Software Manager"
     echo "   Options:"
     echo "   -h  Print Help"
@@ -19,15 +11,18 @@ function printHelp() {
     echo "   -m  Install minimum program set"
 }
 
-function update() {
+update()
+{
     sudo apt-get -y update
 }
 
-function upgrade() {
+upgrade()
+{
     sudo apt-get -y upgrade
 }
 
-function installAll() {
+installAll()
+{
     installMin
 
     # Development
@@ -40,6 +35,8 @@ function installAll() {
     sudo apt-get -y install subversion
     sudo apt-get -y install python-software-properties pkg-config
     sudo apt-get -y install octave
+
+    installArcanist
 
     # Browsers
     sudo apt-get -y install chromium-browser
@@ -68,7 +65,8 @@ function installAll() {
     sudo apt-get -y install htop
 }
 
-function installMin() {
+installMin()
+{
     sudo apt-get -y install vim-gtk
     sudo apt-get -y install awesome
     sudo apt-get -y install build-essential cmake
@@ -85,6 +83,17 @@ function installMin() {
 
     if ! [[ -f ~/.config/awesome/README.md ]]; then
         git clone https://github.com/brhCS/awesome_wm ~/.config/awesome
+    fi
+}
+
+installArcanist()
+{
+    if ! [[ -f ~/arcanist/arcanist/README ]]; then
+        sudo apt-get -y install php5-cli php5-curl php5-json
+        mkdir ~/arcanist
+        cd ~/arcanist
+        git clone https://github.com/facebook/libphutil.git
+        git clone https://github.com/facebook/arcanist.git
     fi
 }
 
