@@ -35,11 +35,12 @@
 .vimcoder
 AlgorithmPractice
 R*
+arcanist
+bde-tools
+chef-repo
 cr_*
 display.txt
-fsd_training*
-js*
-llvm/*
-machine_learning/*
-mbig/*
+js
+llvm
+mbig
 training_*
