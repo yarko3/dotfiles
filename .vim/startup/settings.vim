@@ -47,11 +47,11 @@ set autoread
 if(g:bbenv == "")
     set makeprg=make
 else
-    set makeprg=gmake
+    set makeprg=toolkit-remote\ nylxdev2\ gmake\ -j
 endif
 
 " Set path for file searches
-set path+=/home/bhipple/mbig/scrape.git/**
+set path+=/home/bhipple/mbig/**
 
 " Ignore whitespace on diffs
 set diffopt+=iwhite

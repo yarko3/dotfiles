@@ -48,6 +48,8 @@ if [ "$BBENV" ]; then
 elif [[ "$LOCATION" =~ "bhipple" ]]; then
     echo "Running Bloomberg VM BASHRC"
     [ -f ~/.bash_aliases_bb ] && . ~/.bash_aliases_bb
+    alias gmake='toolkit-remote nylxdev2 gmake'
+    export BBENV=1
 ## ============================================================================
 ##                             Home Environment
 ## ============================================================================
