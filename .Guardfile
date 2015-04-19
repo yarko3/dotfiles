@@ -27,13 +27,14 @@ clearing :on
 # Add files and commands to this file, like the example:
 #   watch(%r{file/path}) { `command(s)` }
 #
+
 guard :shell do
     watch(%r{^.+\.(cpp|h)$}) do
-        `clang++ -std=c++11 knapsack.cpp`
+        `gmake build`
     end
 
-    watch(%r{^.+\.out}) do
-        `./a.out`
+    watch(%r{^.+\.(out|tsk)}) do
+        `gmake test`
     end
 end
 
@@ -42,4 +43,3 @@ end
 #watch('Gemfile.lock')
 #watch('.+\.cpp')
 #end
-

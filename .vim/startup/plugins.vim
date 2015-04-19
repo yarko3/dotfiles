@@ -17,6 +17,7 @@ Plugin 'christoomey/vim-tmux-navigator' " Window/Pane switching with Vim and Tmu
 Plugin 'derekwyatt/vim-fswitch'         " Fastswitch (cpp/h toggle)
 Plugin 'kien/ctrlp.vim'                 " Ctrl-P
 Plugin 'majutsushi/tagbar'              " Using for JavaScript
+Plugin 'scrooloose/syntastic'           " Syntax checking
 Plugin 'tpope/vim-abolish'              " Coercion and Subvert
 Plugin 'tpope/vim-commentary'           " Comment/uncomment operator
 Plugin 'tpope/vim-dispatch'             " Asynchronous Makes
@@ -27,6 +28,7 @@ Plugin 'tpope/vim-surround'             " Surrounding text
 Plugin 'tpope/vim-unimpaired.git'       " Pairs of keyboard mappings for common tasks
 Plugin 'tpope/vim-vinegar.git'          " netrw improvement
 Plugin 'vim-scripts/Tabmerge'           " Merge tabs into splits
+
 "Plugin 'jeaye/color_coded'              " Clang color coding
 
 if g:platform == "Linux"

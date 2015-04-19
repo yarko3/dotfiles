@@ -35,6 +35,7 @@ installAll()
     sudo apt-get -y install subversion
     sudo apt-get -y install python-software-properties pkg-config
     sudo apt-get -y install octave
+    sudo apt-get -y install shellcheck
 
     installArcanist
 
