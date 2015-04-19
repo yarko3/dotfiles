@@ -1,7 +1,10 @@
 #!/bin/bash
 
-BASE_DIR="/bb/bigstorq4/scrpbuild/ben"
-mkdir -p "$BASE_DIR"
+if [[ "$USER" == "bhipple" ]]; then
+    BASE_DIR="/bb/bigstorq4/scrpbuild/ben"
+else
+    BASE_DIR="/home/$USER"
+fi
 
 clone_repos() {
     cd "$BASE_DIR"

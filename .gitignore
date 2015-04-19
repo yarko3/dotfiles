@@ -13,6 +13,7 @@
 !scr/x_server/*
 
 # Files to track
+!.Guardfile
 !.Xdefaults
 !.bash_aliases*
 !.bashrc
@@ -27,6 +28,8 @@
 !.vimrc
 !.vimrc_minimal
 !.ycm_extra_conf.py
+!Gemfile
+!Gemfile.lock
 
 # Re-ignoring again
 .config/awesome
