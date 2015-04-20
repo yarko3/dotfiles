@@ -17,11 +17,11 @@ shopt -s  checkwinsize
 # Prompt
 PS1='\[\e[1;31m\][\u@\h: \w]\$\[\e[0m\] '
 
-LOCATION=`uname -n`
+LOCATION=$(uname -n)
 ## ============================================================================
 ##                           Bloomberg Environment
 ## ============================================================================
-if [ "$BBENV" ]; then
+if [ "$BBENV" -a ! "$BBENV" -eq 1 ]; then
     echo "Running Bloomberg BASHRC"
     umask 0002
 
@@ -32,7 +32,7 @@ if [ "$BBENV" ]; then
     GIT_AUTOCOMPLETE_PATH="/opt/swt/share/git-contrib/completion/git-completion.bash"
     [ -f $GIT_AUTOCOMPLETE_PATH ] && source $GIT_AUTOCOMPLETE_PATH
 
-    export APPROVER_UUID=`/bb/bin/bbempinf.tsk -u fkolarek`
+    export APPROVER_UUID=$(/bb/bin/bbempinf.tsk -u fkolarek)
 
     # Build with clang
     #export INSTRUMENT_CC=/bbsrc/bin/clang_transform.pl
@@ -45,9 +45,10 @@ if [ "$BBENV" ]; then
     alias git='vastool kinit -R && git'
     alias make='vastool kinit -R && make'
 
-elif [[ "$LOCATION" =~ "bhipple" ]]; then
+elif [[ "$LOCATION" =~ bhipple ]]; then
     echo "Running Bloomberg VM BASHRC"
     [ -f ~/.bash_aliases_bb ] && . ~/.bash_aliases_bb
+    [ -f ~/nfs/.vimrc ] || sshfs-home
     alias gmake='toolkit-remote nylxdev2 gmake'
     export BBENV=1
 ## ============================================================================
