@@ -97,3 +97,6 @@ autocmd FileType make setlocal noexpandtab shiftwidth=8
 
 " Set automatic indentation format for XML files
 autocmd FileType xml setlocal equalprg=xmllint\ --format\ -
+
+" All files ending in md are treated as markdown
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown

@@ -36,6 +36,8 @@ installAll()
     sudo apt-get -y install python-software-properties pkg-config
     sudo apt-get -y install octave
     sudo apt-get -y install shellcheck
+    sudo apt-get -y install npm # Node.js package manager
+    sudo npm -g install instant-markdown-d
 
     installArcanist
 
