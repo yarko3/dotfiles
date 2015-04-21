@@ -21,7 +21,7 @@ LOCATION=$(uname -n)
 ## ============================================================================
 ##                           Bloomberg Environment
 ## ============================================================================
-if [ "$BBENV" -a ! "$BBENV" -eq 1 ]; then
+if [ "$BBENV" -a ! "$BBENV" == "1" ]; then
     echo "Running Bloomberg BASHRC"
     umask 0002
 
