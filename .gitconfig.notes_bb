@@ -2,7 +2,7 @@
     name = Benjamin Hipple
     email = bhipple@bloomberg.net
 [http]
-    proxy = devproxy.bloomberg.com:82
+    proxy = devproxy.bloomberg.com:81
     sslVerify = false
 [pack]
     packSizeLimit = 500m

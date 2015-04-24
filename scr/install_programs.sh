@@ -37,6 +37,8 @@ installAll()
     sudo apt-get -y install octave
     sudo apt-get -y install shellcheck
     sudo apt-get -y install gdb
+    sudo apt-get -y install npm # Node.js package manager
+    sudo npm -g install instant-markdown-d
 
     installArcanist
 
