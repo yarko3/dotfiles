@@ -34,6 +34,7 @@
 # Re-ignoring again
 .config/awesome
 .netrwhist
+.rvm
 .vim/bundle
 .vimcoder
 AlgorithmPractice

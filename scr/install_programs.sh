@@ -101,6 +101,17 @@ installArcanist()
     fi
 }
 
+installRuby()
+{
+    curl -sSL https://rvm.io/mpapis.asc | gpg --import -
+    curl -sSL https://get.rvm.io | bash -s stable --ruby
+}
+
+installGems()
+{
+    gem install bundler
+    bundle install
+}
 
 ## ============================================================================
 ##                                  OptArgs
@@ -126,6 +137,11 @@ while getopts "huim" opt; do
             echo "Installing minimum program set" >&2
             update
             installMin
+            ;;
+        r)
+            echo "Installing Ruby" >&2
+            installRuby
+            installGems
             ;;
         \?)
             echo "Invalid option: -$OPTARG" >&2

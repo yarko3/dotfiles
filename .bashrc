@@ -14,6 +14,9 @@ shopt -s  checkwinsize
 # Source my generic aliases
 [ -f ~/.bash_aliases ] && . ~/.bash_aliases
 
+# Ruby Version Manager
+[ -f ~/.rvm/scripts/rvm ] && source ~/.rvm/scripts/rvm
+
 # Prompt
 PS1='\[\e[1;31m\][\u@\h: \w]\$\[\e[0m\] '
 
@@ -64,3 +67,5 @@ else
     [ -f ~/.bash_aliases_home ] && . ~/.bash_aliases_home
 fi
 
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
