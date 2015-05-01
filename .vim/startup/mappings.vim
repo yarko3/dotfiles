@@ -1,4 +1,14 @@
 "" ============================================================================
+""                             All Mode Mappings
+"" ============================================================================
+" Bael log category at the start of function
+map <F6> <ESC>[[oBAEL_LOG_SET_CATEGORY(LOG_CATEGORY);<ESC><C-o>
+
+" clang-format
+"map <C-T> :pyf <ESC>~/bin/clang-format.py<CR>:call Bde_Format()<CR>
+map <C-T> :w<CR>:!toolkit-remote nylxdev2 "git scrp-format %:p:."
+
+"" ============================================================================
 ""                           Insert Mode Mappings
 "" ============================================================================
 " Auto-Insertion for closing braces
@@ -8,7 +18,7 @@ inoremap {{     {
 inoremap {}     {}
 
 " Bael Log Shortcuts
-inoremap <F2> BAEL_LOG_INFO << 
+inoremap <F2> BAEL_LOG_TRACE << 
 inoremap <F3> BAEL_LOG_DEBUG << 
 inoremap <F4> BAEL_LOG_ERROR << 
 inoremap <F5> << BAEL_LOG_END;<ESC>
@@ -20,10 +30,6 @@ inoremap jj <Esc><Right>
 "" ============================================================================
 ""                        Normal/Visual Mode Mappings
 "" ============================================================================
-" clang-format
-map <C-T> :pyf ~/bin/clang-format.py<CR>:call Bde_Format()<CR>
-imap <C-T> <ESC>:pyf ~/bin/clang-format.py<CR>
-
 " YouCompleteMe
 nnoremap <F9> :YcmForceCompileAndDiagnostics<CR>
 
@@ -48,7 +54,7 @@ nnoremap <F2> :call MakefileSearch()<CR>:Make clean<CR>
 if(g:bbenv == "")
     nnoremap <F4> :call MakefileSearch()<CR>:Make all<CR>:Make run<CR>:Copen<CR>/FAILED<CR>
 else
-    nnoremap <F3> :call MakefileSearch()<CR>:Make test<CR>
+    nnoremap <F3> :call MakefileSearch()<CR>:Make test-build<CR>
     nnoremap <F4> :call MakefileSearch()<CR>:Make<CR>
 endif
 
