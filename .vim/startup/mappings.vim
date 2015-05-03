@@ -8,6 +8,9 @@ map <F6> <ESC>[[oBAEL_LOG_SET_CATEGORY(LOG_CATEGORY);<ESC><C-o>
 "map <C-T> :pyf <ESC>~/bin/clang-format.py<CR>:call Bde_Format()<CR>
 map <C-T> :w<CR>:!toolkit-remote nylxdev2 "git scrp-format %:p:."
 
+" Python Debugger Breakpoint
+map <C-d> <ESC>Opdb.set_trace()<ESC>j
+
 "" ============================================================================
 ""                           Insert Mode Mappings
 "" ============================================================================
@@ -25,6 +28,7 @@ inoremap <F5> << BAEL_LOG_END;<ESC>
 
 " Leaving insert mode with jj
 inoremap jj <Esc><Right>
+
 
 
 "" ============================================================================
