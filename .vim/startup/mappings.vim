@@ -8,8 +8,6 @@ map <F6> <ESC>[[oBAEL_LOG_SET_CATEGORY(LOG_CATEGORY);<ESC><C-o>
 "map <C-T> :pyf <ESC>~/bin/clang-format.py<CR>:call Bde_Format()<CR>
 map <C-T> :w<CR>:!toolkit-remote nylxdev2 "git scrp-format %:p:."
 
-" Python Debugger Breakpoint
-map <C-d> <ESC>Opdb.set_trace()<ESC>j
 
 "" ============================================================================
 ""                           Insert Mode Mappings
@@ -96,6 +94,7 @@ nnoremap <Leader>jc :YcmCompleter GoToDeclaration<CR>
 nnoremap <Leader>jf :YcmCompleter GoToDefinition<CR>
 nnoremap <Leader>ji :YcmCompleter GoToImprecise<CR>
 nnoremap <Leader>jj :YcmCompleter GoTo<CR>
+nnoremap <Leader>pd <ESC>Opdb.set_trace()<ESC>j
 nnoremap <Leader>se :sp<CR>:e %:h<CR>
 nnoremap <Leader>ss :call SortSection()<CR>
 nnoremap <Leader>tb :TagbarToggle<CR>

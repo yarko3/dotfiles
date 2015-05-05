@@ -47,6 +47,7 @@ if [ "$BBENV" -a ! "$BBENV" == "1" ]; then
     # Only use this when not running on the VM
     alias git='vastool kinit -R && git'
     alias make='vastool kinit -R && make'
+    alias gvim='. di && gvim'
 
 elif [[ "$LOCATION" =~ bhipple ]]; then
     echo "Running Bloomberg VM BASHRC"
