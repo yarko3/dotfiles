@@ -11,12 +11,12 @@ printHelp()
     echo "   -m  Install minimum program set"
 }
 
-update()
+getUpdates()
 {
     sudo apt-get -y update
 }
 
-upgrade()
+getUpgrades()
 {
     sudo apt-get -y upgrade
 }
@@ -113,6 +113,13 @@ installGems()
     bundle install
 }
 
+# First install and setup LLVM!
+installClang()
+{
+    sudo ln -s /usr/local/bin/clang++ clang++
+    sudo ln -s /usr/local/bin/clang clang
+}
+
 ## ============================================================================
 ##                                  OptArgs
 ## ============================================================================
@@ -125,17 +132,17 @@ while getopts "huim" opt; do
             ;;
         u)
             echo "Upgrading"
-            update
-            upgrade
+            getUpdates
+            getUpgrades
             ;;
         i)
             echo "Installing programs" >&2
-            update
+            getUpdates
             installAll
             ;;
         m)
             echo "Installing minimum program set" >&2
-            update
+            getUpdates
             installMin
             ;;
         r)

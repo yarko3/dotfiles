@@ -63,6 +63,8 @@ else
     umask 0022
 
     export PATH="$PATH:~/bin:/usr/class/cs143/cool/bin"
+    export CC=/usr/bin/clang
+    export CXX=/usr/bin/clang++
 
     # Source my home aliases
     [ -f ~/.bash_aliases_home ] && . ~/.bash_aliases_home
