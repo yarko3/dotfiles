@@ -54,6 +54,9 @@ elif [[ "$LOCATION" =~ bhipple ]]; then
     [ -f ~/.bash_aliases_bb ] && . ~/.bash_aliases_bb
     #[ -f ~/nfs/.vimrc ] || sshfs-home
     alias gmake='toolkit-remote nylxdev2 gmake'
+    alias tk='toolkit'
+    alias tkl='toolkit nylxdev2'
+    alias tki='toolkit ibm1'
     export BBENV=1
 ## ============================================================================
 ##                             Home Environment
