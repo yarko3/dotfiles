@@ -26,15 +26,13 @@ installAll()
     installMin
 
     # Development
+    installLanguages
     sudo apt-get -y install ack-grep
     sudo apt-get -y install exuberant-ctags
-    sudo apt-get -y install python-dev
-    sudo apt-get -y build-dep python3.4
     sudo apt-get -y install icedtea-netx
     sudo apt-get -y install icedtea-plugin
     sudo apt-get -y install subversion
     sudo apt-get -y install python-software-properties pkg-config
-    sudo apt-get -y install octave
     sudo apt-get -y install shellcheck
     sudo apt-get -y install gdb
     sudo apt-get -y install npm # Node.js package manager
@@ -111,6 +109,16 @@ installGems()
 {
     gem install bundler
     bundle install
+}
+
+installLanguages()
+{
+    sudo apt-get -y install mit-scheme
+    sudo apt-get -y install octave
+    sudo apt-get -y build-dep python3.4
+    sudo apt-get -y install python-dev
+
+    #installRuby
 }
 
 # First install and setup LLVM!
