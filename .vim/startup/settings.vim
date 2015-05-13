@@ -83,7 +83,7 @@ set foldnestmax=3
 set foldminlines=10
 
 " Ignoring files (see :help wildignore)
-set wildignore+=*.o,*.d,nohup.out,tags
+set wildignore+=*.o,*.d,00*,nohup.out,tags
 
 "" ============================================================================
 ""                               Auto Commands
