@@ -113,12 +113,16 @@ installGems()
 
 installLanguages()
 {
-    sudo apt-get -y install mit-scheme
     sudo apt-get -y install ghc
+    sudo apt-get -y install cabal-install
+    cabal update
+    cabal install parsec
+
+    sudo apt-get -y install mit-scheme
     sudo apt-get -y install octave
 
-    sudo apt-get -y build-dep python3.4
-    sudo apt-get -y install python-dev
+    sudo apt-get -y install python-pip
+    sudo pip install "ipython[all]"
 
     #installRuby
 }

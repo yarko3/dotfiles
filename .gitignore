@@ -22,6 +22,7 @@
 !.gitconfig.notes
 !.gitconfig.notes_bb
 !.gitignore
+!.haskeline
 !.inputrc
 !.startup.sh
 !.tmux.conf
