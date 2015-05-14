@@ -114,7 +114,9 @@ installGems()
 installLanguages()
 {
     sudo apt-get -y install mit-scheme
+    sudo apt-get -y install ghc
     sudo apt-get -y install octave
+
     sudo apt-get -y build-dep python3.4
     sudo apt-get -y install python-dev
 
