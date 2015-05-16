@@ -117,6 +117,8 @@ installLanguages()
     sudo apt-get -y install cabal-install
     cabal update
     cabal install parsec
+    cabal install happy
+    cabal install hoogle
 
     sudo apt-get -y install mit-scheme
     sudo apt-get -y install octave
