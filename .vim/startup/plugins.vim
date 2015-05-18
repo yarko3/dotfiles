@@ -14,6 +14,7 @@ Plugin 'bling/vim-airline'              " Status line
 Plugin 'brhCS/bde_plugins'              " Tools for formatting code according to BDE Standards
 Plugin 'chazmcgarvey/vimcoder'          " Topcoder Vim Plugin
 Plugin 'christoomey/vim-tmux-navigator' " Window/Pane switching with Vim and Tmux
+Plugin 'dag/vim2hs'                     " Haskell error checking and syntax highlighting
 Plugin 'derekwyatt/vim-fswitch'         " Fastswitch (cpp/h toggle)
 Plugin 'kien/ctrlp.vim'                 " Ctrl-P
 Plugin 'majutsushi/tagbar'              " Using for JavaScript

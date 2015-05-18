@@ -115,6 +115,7 @@ installLanguages()
 {
     sudo apt-get -y install ghc
     sudo apt-get -y install cabal-install
+    sudo apt-get -y install ghc-mod
     cabal update
     cabal install parsec
     cabal install happy
