@@ -26,7 +26,7 @@ set noswapfile
 set directory=""
 
 " Faster terminal scrolling?  TBD
-set ttyfast
+"set ttyfast
 
 " runtime path search for Ex
 set ru
