@@ -28,7 +28,6 @@ if [ "$BBENV" -a ! "$BBENV" == "1" ]; then
     . ~/bb_dotfiles/.bashrc_bb
 elif [[ "$LOCATION" =~ bhipple ]]; then
     . ~/bb_dotfiles/.bashrc_bb_vm
-    alias tkm='toolkit nymsgscrd1'
 ## ============================================================================
 ##                             Home Environment
 ## ============================================================================
