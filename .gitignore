@@ -29,6 +29,7 @@
 !.vimrc
 !.vimrc_minimal
 !.ycm_extra_conf.py
+!.zshrc
 !Gemfile
 !Gemfile.lock
 
@@ -47,6 +48,7 @@ chef-repo
 cr_*
 display.txt
 js
+lex_yacc
 llvm
 mbig
 training_*

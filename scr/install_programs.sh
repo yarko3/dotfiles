@@ -27,54 +27,57 @@ installAll()
 
     # Development
     installLanguages
+
     sudo apt-get -y install ack-grep
-    sudo apt-get -y install exuberant-ctags
-    sudo apt-get -y install icedtea-netx
-    sudo apt-get -y install icedtea-plugin
-    sudo apt-get -y install subversion
-    sudo apt-get -y install python-software-properties pkg-config
-    sudo apt-get -y install shellcheck
-    sudo apt-get -y install gdb
-    sudo apt-get -y install npm # Node.js package manager
+                            exuberant-ctags \
+                            icedtea-netx \
+                            icedtea-plugin \
+                            subversion \
+                            python-software-properties pkg-config \
+                            shellcheck \
+                            gdb \
+                            byacc flex \
+                            npm
+
     sudo npm -g install instant-markdown-d
-    sudo apt-get -y install byacc flex
 
     installArcanist
 
     # Browsers
-    sudo apt-get -y install chromium-browser
-    sudo apt-get -y install google-chrome
-    sudo apt-get -y install flashplugin-installer
+    sudo apt-get -y install chromium-browser \
+                            google-chrome \
+                            flashplugin-installer
 
     # Networking
-    sudo apt-get -y install nmap
-    sudo apt-get -y install vinagre
-    sudo apt-get -y install wireshark
-    sudo apt-get -y install filezilla
-    sudo apt-get -y install curl
+    sudo apt-get -y install nmap \
+                            install vinagre \
+                            install wireshark \
+                            install filezilla \
+                            install curl
 
     # Media
-    sudo apt-get -y install libavcodec-extra
-    sudo apt-get -y install vlc
-    sudo apt-get -y install totem
-    sudo apt-get -y install xbmc
-    sudo apt-get -y install libav-tools
-    sudo apt-get -y install mupdf
-    sudo apt-get -y install gimp
-    sudo apt-get -y install imagemagick
+    sudo apt-get -y install libavcodec-extra \
+                            vlc \
+                            totem \
+                            xbmc \
+                            libav-tools \
+                            mupdf \
+                            gimp \
+                            imagemagick
 
     # Other
-    sudo apt-get -y install deluge
-    sudo apt-get -y install htop
+    sudo apt-get -y install deluge \
+                            htop
 }
 
 installMin()
 {
-    sudo apt-get -y install vim-gtk
-    sudo apt-get -y install awesome
-    sudo apt-get -y install build-essential cmake
-    sudo apt-get -y install tmux
-    sudo apt-get -y install keepass2
+    sudo apt-get -y install zsh \
+                            vim-gtk \
+                            awesome \
+                            build-essential cmake \
+                            tmux \
+                            keepass2
 
     if ! [[ -f ~/.gitconfig ]]; then
         cp ~/.gitconfig.notes ~/.gitconfig
@@ -114,9 +117,9 @@ installGems()
 
 installLanguages()
 {
-    sudo apt-get -y install ghc
-    sudo apt-get -y install cabal-install
-    sudo apt-get -y install ghc-mod
+    sudo apt-get -y install ghc \
+                            cabal-install \
+                            ghc-mod
     cabal update
     cabal install parsec
     cabal install happy
