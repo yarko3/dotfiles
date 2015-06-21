@@ -14,15 +14,6 @@ export KEYTIMEOUT=1
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-# Path to your oh-my-zsh installation.
-export ZSH=/home/brh/.oh-my-zsh
-
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
-
 # Command auto-correction.
 ENABLE_CORRECTION="true"
 
@@ -35,8 +26,6 @@ ENABLE_CORRECTION="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 export PATH="/home/brh/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:~/bin:/usr/class/cs143/cool/bin:/home/brh/.rvm/bin:~/bin:/usr/class/cs143/cool/bin:/home/brh/.rvm/bin"
-
-source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
