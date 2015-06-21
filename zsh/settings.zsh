@@ -43,3 +43,12 @@ export LANG=en_US.UTF-8
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
+
+# Hitting ctrl+r for nice history searching
+bindkey "^r" history-incremental-search-backward
+bindkey -M vicmd 'k' history-substring-search-up
+bindkey -M vicmd 'j' history-substring-search-down
+
+# Arrow keys, so other people can use my terminal
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
