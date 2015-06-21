@@ -3,6 +3,7 @@
 - link:
     ~/.dotfiles: ''
     ~/.Xdefaults: Xdefaults
+    ~/.oh-my-zsh: oh-my-zsh/
     ~/.Xmodmaps: Xmodmaps/
     ~/.bashrc: bashrc
     ~/.config/awesome: awesome_wm/
@@ -23,7 +24,7 @@
     ~/scr: scr/
 
 - shell:
-  - [git submodule --init --update --recursive, Updating submodules]
+  - [git submodule update --init --recursive, Updating submodules]
   - command: ~/.dotfiles/dependency_install.sh
     stdin: true
     stdout: true
