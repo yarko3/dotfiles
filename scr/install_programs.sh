@@ -82,14 +82,6 @@ installMin()
     if ! [[ -f ~/.gitconfig ]]; then
         cp ~/.gitconfig.notes ~/.gitconfig
     fi
-
-    if ! [[ -f ~/.vim/bundle/Vundle.vim/README.md ]]; then
-        git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-    fi
-
-    if ! [[ -f ~/.config/awesome/README.md ]]; then
-        git clone https://github.com/brhCS/awesome_wm ~/.config/awesome
-    fi
 }
 
 installArcanist()

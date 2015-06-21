@@ -1,0 +1,29 @@
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.Xdefaults: Xdefaults
+    ~/.Xmodmaps: Xmodmaps/
+    ~/.bashrc: bashrc
+    ~/.config/awesome: awesome_wm/
+    ~/.dir_colors: dir_colors
+    ~/.git_template: git_template/
+    ~/.haskeline: haskeline
+    ~/.inputrc: inputrc
+    ~/.tmux.conf: tmux.conf
+    ~/.tmux: tmux/
+    ~/.vim: vim/
+    ~/.vimrc: vimrc
+    ~/.vimrc_minimal: vimrc_minimal
+    ~/.ycm_extra_conf.py: ycm_extra_conf.py
+    ~/.zshrc: zshrc
+    ~/Gemfile.lock: Gemfile.lock
+    ~/Gemfile: Gemfile
+    ~/scr: scr/
+
+- shell:
+  - [git submodule --update --init --remote, Updating submodules]
+  - command: vim +PluginInstall +qall
+    stdin: true
+    stdout: true
+    stderr: true
