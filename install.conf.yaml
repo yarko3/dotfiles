@@ -24,7 +24,10 @@
 
 - shell:
   - [git submodule --init --update --recursive, Updating submodules]
-  - command: dependency_install.sh
+  - command: ~/.dotfiles/dependency_install.sh
+    stdin: true
+    stdout: true
+    stderr: true
   - command: vim +PluginInstall +qall
     stdin: true
     stdout: true
