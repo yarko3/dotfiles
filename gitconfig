@@ -1,6 +1,3 @@
-[user]
-    name = Benjamin Hipple
-    email = brh2113@columbia.edu
 [color]
     ui = true
     status = true
@@ -28,6 +25,7 @@
     la = "!git config -l | grep alias | cut -c 7-"
 [mergetool "fugitive"]
     cmd = vim -f -c \"Gvdiff\" \"$MERGED\"
+    keepBackup = false
 [merge]
     tool = fugitive
 [push]
@@ -36,3 +34,11 @@
     templatedir = ~/.git_template
 [credential]
     helper = cache --timeout=36000
+[grep]
+    lineNumber = true
+[advice]
+    detachedHead = false
+
+# Allow local customizations
+[include]
+    path = ~/.gitconfig_local

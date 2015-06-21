@@ -72,12 +72,7 @@ installAll()
 
 installMin()
 {
-    sudo apt-get -y install zsh \
-                            vim-gtk \
-                            awesome \
-                            build-essential cmake \
-                            tmux \
-                            keepass2
+    sudo apt-get -y install keepass2
 
     if ! [[ -f ~/.gitconfig ]]; then
         cp ~/.gitconfig.notes ~/.gitconfig

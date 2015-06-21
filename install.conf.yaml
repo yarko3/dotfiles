@@ -7,6 +7,7 @@
     ~/.bashrc: bashrc
     ~/.config/awesome: awesome_wm/
     ~/.dir_colors: dir_colors
+    ~/.gitconfig: gitconfig
     ~/.git_template: git_template/
     ~/.haskeline: haskeline
     ~/.inputrc: inputrc
@@ -22,7 +23,8 @@
     ~/scr: scr/
 
 - shell:
-  - [git submodule --update --init --remote, Updating submodules]
+  - [git submodule --init --update --recursive, Updating submodules]
+  - command: dependency_install.sh
   - command: vim +PluginInstall +qall
     stdin: true
     stdout: true
