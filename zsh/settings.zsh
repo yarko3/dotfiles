@@ -1,5 +1,11 @@
 export TERM=xterm-256color
 
+# Vim mode
+bindkey -v
+
+# Reduce delay to 0.1 seconds for switching to normal mode with ESC
+export KEYTIMEOUT=1
+
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
@@ -28,8 +34,7 @@ ENABLE_CORRECTION="true"
 # much, much faster.
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-export PATH="/home/brh/bin:/home/brh/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:~/bin:/usr/class/cs143/cool/bin:/home/brh/.rvm/bin:~/bin:/usr/class/cs143/cool/bin:/home/brh/.rvm/bin"
-# export MANPATH="/usr/local/man:$MANPATH"
+export PATH="/home/brh/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:~/bin:/usr/class/cs143/cool/bin:/home/brh/.rvm/bin:~/bin:/usr/class/cs143/cool/bin:/home/brh/.rvm/bin"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -38,4 +43,3 @@ export LANG=en_US.UTF-8
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
-

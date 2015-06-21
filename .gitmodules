@@ -7,9 +7,6 @@
 [submodule "vim/bundle/Vundle"]
 	path = vim/bundle/Vundle.vim
 	url = https://github.com/gmarik/Vundle
-[submodule "oh-my-zsh"]
-	path = oh-my-zsh
-	url = https://github.com/robbyrussell/oh-my-zsh
 [submodule "zgen"]
 	path = zgen
 	url = https://github.com/tarjoilija/zgen
