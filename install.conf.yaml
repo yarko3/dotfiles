@@ -3,21 +3,22 @@
 - link:
     ~/.dotfiles: ''
     ~/.Xdefaults: Xdefaults
-    ~/.oh-my-zsh: oh-my-zsh/
     ~/.Xmodmaps: Xmodmaps/
     ~/.bashrc: bashrc
     ~/.config/awesome: awesome_wm/
     ~/.dir_colors: dir_colors
-    ~/.gitconfig: gitconfig
     ~/.git_template: git_template/
+    ~/.gitconfig: gitconfig
     ~/.haskeline: haskeline
     ~/.inputrc: inputrc
+    ~/.oh-my-zsh: oh-my-zsh/
     ~/.tmux.conf: tmux.conf
     ~/.tmux: tmux/
     ~/.vim: vim/
     ~/.vimrc: vimrc
     ~/.vimrc_minimal: vimrc_minimal
     ~/.ycm_extra_conf.py: ycm_extra_conf.py
+    ~/.zsh: zsh/
     ~/.zshrc: zshrc
     ~/Gemfile.lock: Gemfile.lock
     ~/Gemfile: Gemfile
