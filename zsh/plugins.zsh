@@ -7,14 +7,17 @@ if ! zgen saved; then
 
     zgen oh-my-zsh
 
-    # plugins
+    # oh-my-zsh plugins
+    #zgen oh-my-zsh plugins/chucknorris
+    zgen oh-my-zsh plugins/command-not-found
     zgen oh-my-zsh plugins/git
     zgen oh-my-zsh plugins/sudo
-    zgen oh-my-zsh plugins/command-not-found
+    zgen oh-my-zsh plugins/wd
+    zgen oh-my-zsh plugins/web-search
+
+    # Github plugins
     zgen load zsh-users/zsh-syntax-highlighting
     zgen load zsh-users/zsh-history-substring-search
-
-    # completions
     zgen load zsh-users/zsh-completions src
 
     # theme
