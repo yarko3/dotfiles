@@ -6,4 +6,4 @@ alias ll='ls -al'
 alias ls='ls --color'
 alias scheme='rlwrap scheme'
 
-[ -f ~/.zsh_local/.zsh_aliases_local ] && source ~/.zsh_local/.zsh_aliases_local
+[ -f ~/.zsh_local/aliases_local.zsh ] && source ~/.zsh_local/aliases_local.zsh
