@@ -1,9 +1,6 @@
 [submodule "dotbot"]
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
-[submodule "awesome_wm"]
-	path = awesome_wm
-	url = https://github.com/brhCS/awesome_wm
 [submodule "vim/bundle/Vundle"]
 	path = vim/bundle/Vundle.vim
 	url = https://github.com/gmarik/Vundle
