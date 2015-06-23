@@ -5,7 +5,6 @@
     ~/.Xdefaults: Xdefaults
     ~/.Xmodmaps: Xmodmaps/
     ~/.bashrc: bashrc
-    ~/.config/awesome: awesome_wm/
     ~/.dir_colors: dir_colors
     ~/.git_template: git_template/
     ~/.gitconfig: gitconfig
