@@ -40,6 +40,7 @@ installAll()
                             npm
 
     sudo npm -g install instant-markdown-d
+    sudo npm -g install glob
 
     installArcanist
 
