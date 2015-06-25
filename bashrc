@@ -20,15 +20,12 @@ shopt -s  checkwinsize
 # Prompt
 PS1='\[\e[1;31m\][\u@\h: \w]\$\[\e[0m\] '
 
-## ============================================================================
-##                           Bloomberg Environment
-## ============================================================================
-if [[ "$USER" =~ bhipple ]]; then
-    . ~/.zsh_local/aliases_local.zsh
+[ -f ~/.zsh_local/aliases_local.zsh ] && . ~/.zsh_local/aliases_local.zsh
+
 ## ============================================================================
 ##                             Home Environment
 ## ============================================================================
-else
+if [ -z "$BBENV" ]; then
     echo "Running Home BASHRC"
     umask 0022
 
@@ -39,6 +36,5 @@ else
     # Source my home aliases
     [ -f ~/.bash_aliases_home ] && . ~/.bash_aliases_home
 fi
-
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
