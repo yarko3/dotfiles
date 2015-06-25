@@ -24,10 +24,8 @@ LOCATION=$(uname -n)
 ## ============================================================================
 ##                           Bloomberg Environment
 ## ============================================================================
-if [ "$BBENV" -a ! "$BBENV" == "1" ]; then
-    . ~/bb_dotfiles/.bashrc_bb
-elif [[ "$LOCATION" =~ bhipple ]]; then
-    . ~/bb_dotfiles/.bashrc_bb_vm
+if [[ "$LOCATION" =~ bhipple ]]; then
+    . ~/bb_dotfiles/.zsh_local/aliases_local.zsh
 ## ============================================================================
 ##                             Home Environment
 ## ============================================================================
