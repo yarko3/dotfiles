@@ -17,6 +17,7 @@ Plugin 'christoomey/vim-tmux-navigator' " Window/Pane switching with Vim and Tmu
 Plugin 'dag/vim2hs'                     " Haskell error checking and syntax highlighting
 Plugin 'derekwyatt/vim-fswitch'         " Fastswitch (cpp/h toggle)
 Plugin 'kien/ctrlp.vim'                 " Ctrl-P
+Plugin 'luochen1990/rainbow'            " Rainbow parenthesis coloring
 Plugin 'majutsushi/tagbar'              " Using for JavaScript
 Plugin 'scrooloose/syntastic'           " Syntax checking
 Plugin 'suan/vim-instant-markdown'      " Side-by-side Markdown editing
