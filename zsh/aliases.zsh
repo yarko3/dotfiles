@@ -1,3 +1,4 @@
+alias beg='bundle exec guard'
 alias g='git'
 alias gm='gmake'
 alias gvir='gvim --remote-send ":tabe<CR>" && gvim --remote'
