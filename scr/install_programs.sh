@@ -134,7 +134,7 @@ installClang()
 ## ============================================================================
 if [ -z "$1" ]; then printHelp; fi
 
-while getopts "huim" opt; do
+while getopts "huimr" opt; do
     case $opt in
         h)
             printHelp
