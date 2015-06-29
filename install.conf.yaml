@@ -20,7 +20,7 @@
     ~/.zshrc: zshrc
     ~/Gemfile.lock: Gemfile.lock
     ~/Gemfile: Gemfile
-    ~/scr: scr/
+    ~/bin: bin/
 
 - shell:
   - [git submodule update --init --recursive, Updating submodules]
