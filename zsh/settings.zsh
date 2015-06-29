@@ -25,7 +25,7 @@ ENABLE_CORRECTION="true"
 # much, much faster.
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-export PATH="/home/bhipple/bin:/home/brh/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:~/bin:/usr/class/cs143/cool/bin:/home/brh/.rvm/bin:~/bin:/usr/class/cs143/cool/bin:/home/brh/.rvm/bin"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:~/bin:/usr/class/cs143/cool/bin:/home/brh/.rvm/bin:~/bin:/usr/class/cs143/cool/bin:/home/brh/.rvm/bin"
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
