@@ -36,10 +36,6 @@ set tabstop=4
 set expandtab
 set shiftwidth=4
 
-" Automatic word wrapping at 79 chars
-set textwidth=79
-set formatoptions+=t
-
 " Allow switching off modified buffers without warning
 set hidden
 
