@@ -30,6 +30,7 @@ installAll()
 
     sudo apt-get -y install ack-grep
                             byacc flex \
+                            clang \
                             curl \
                             exuberant-ctags \
                             gdb \
@@ -117,7 +118,9 @@ installLanguages()
     sudo apt-get -y install mit-scheme
     sudo apt-get -y install octave
 
-    sudo apt-get -y install python-pip
+    sudo apt-get -y install python \
+                            python-dev \
+                            python-pip
     sudo pip install "ipython[all]"
 
     #installRuby
