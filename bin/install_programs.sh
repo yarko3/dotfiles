@@ -29,15 +29,16 @@ installAll()
     installLanguages
 
     sudo apt-get -y install ack-grep
+                            byacc flex \
+                            curl \
                             exuberant-ctags \
+                            gdb \
                             icedtea-netx \
                             icedtea-plugin \
-                            subversion \
+                            npm
                             python-software-properties pkg-config \
                             shellcheck \
-                            gdb \
-                            byacc flex \
-                            npm
+                            subversion \
 
     sudo npm -g install instant-markdown-d
     sudo npm -g install glob
