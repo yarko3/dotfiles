@@ -82,7 +82,7 @@ installArcanist()
 {
     if ! [[ -f ~/arcanist/arcanist/README ]]; then
         sudo apt-get -y install php5-cli php5-curl php5-json
-        mkdir ~/arcanist
+        mkdir -p ~/arcanist
         cd ~/arcanist
         git clone https://github.com/facebook/libphutil.git
         git clone https://github.com/facebook/arcanist.git
