@@ -4,7 +4,9 @@
     ~/.dotfiles: ''
     ~/.Xdefaults: Xdefaults
     ~/.Xmodmaps: Xmodmaps/
-    ~/.bashrc: bashrc
+    ~/.bashrc:
+      force: true
+      path: bashrc
     ~/.dir_colors: dir_colors
     ~/.git_template: git_template/
     ~/.gitconfig: gitconfig

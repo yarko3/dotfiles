@@ -120,6 +120,7 @@ installLanguages()
     sudo pip install "ipython[all]"
 
     #installRuby
+    checkYCM
 }
 
 # First install and setup LLVM!
@@ -127,6 +128,13 @@ installClang()
 {
     sudo ln -s /usr/local/bin/clang++ clang++
     sudo ln -s /usr/local/bin/clang clang
+}
+
+checkYCM()
+{
+    return
+    #[ -f ~/.vim/bundle/YouCompleteMe/
+    #~/bin/ycm_home_install.sh
 }
 
 ## ============================================================================
