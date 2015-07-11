@@ -5,10 +5,11 @@ printHelp()
 {
     echo "Ben's Software Manager"
     echo "   Options:"
-    echo "   -h  Print Help"
-    echo "   -u  Upgrade"
+    echo "   -h  Print this help message and exit"
     echo "   -i  Install new programs"
+    echo "   -l  Install programming languages"
     echo "   -m  Install minimum program set"
+    echo "   -u  Upgrade"
 }
 
 getUpdates()
@@ -26,18 +27,18 @@ installAll()
     installMin
 
     # Development
-    installLanguages
-
-    sudo apt-get -y install ack-grep
-                            byacc flex \
+    sudo apt-get -y install ack-grep \
+                            bison \
                             clang \
                             curl \
                             exuberant-ctags \
+                            flex \
                             gdb \
                             icedtea-netx \
                             icedtea-plugin \
-                            npm
-                            python-software-properties pkg-config \
+                            npm \
+                            pkg-config \
+                            python-software-properties \
                             shellcheck \
                             subversion \
 
@@ -48,29 +49,31 @@ installAll()
 
     # Browsers
     sudo apt-get -y install chromium-browser \
+                            flashplugin-installer \
                             google-chrome \
-                            flashplugin-installer
 
     # Networking
     sudo apt-get -y install nmap \
+                            install curl \
+                            install filezilla \
                             install vinagre \
                             install wireshark \
-                            install filezilla \
-                            install curl
 
     # Media
-    sudo apt-get -y install libavcodec-extra \
-                            vlc \
-                            totem \
-                            xbmc \
-                            libav-tools \
-                            mupdf \
+    sudo apt-get -y install calibre \
                             gimp \
-                            imagemagick
+                            imagemagick \
+                            libav-tools \
+                            libavcodec-extra \
+                            mupdf \
+                            totem \
+                            vlc \
+                            xbmc \
 
     # Other
     sudo apt-get -y install deluge \
-                            htop
+                            htop \
+
 }
 
 installMin()
@@ -101,15 +104,22 @@ installGems()
     bundle install
 }
 
-installLanguages()
+# This one takes a very long time to complete
+installHaskell()
 {
     sudo apt-get -y install ghc \
                             cabal-install \
-                            ghc-mod
+                            ghc-mod \
+
     cabal update
     cabal install parsec
     cabal install happy
     cabal install hoogle
+}
+
+installLanguages()
+{
+    installHaskell
 
     sudo apt-get -y install mit-scheme
     sudo apt-get -y install octave
@@ -123,18 +133,22 @@ installLanguages()
     checkYCM
 }
 
-# First install and setup LLVM!
+# Before enabling this, upgrade the llvm_clang
+# script to be idempotent (or replace with Chef)
 installClang()
 {
+    ~/bin/llvm_clang_install.sh
     sudo ln -s /usr/local/bin/clang++ clang++
     sudo ln -s /usr/local/bin/clang clang
 }
 
 checkYCM()
 {
-    return
-    #[ -f ~/.vim/bundle/YouCompleteMe/
-    #~/bin/ycm_home_install.sh
+    if [ -f ~/.vim/bundle/YouCompleteMe/third_party/ycmd/ycm_core.so ]; then
+        echo "YCM already built."
+    else
+        ~/bin/ycm_home_install.sh
+    fi
 }
 
 ## ============================================================================
@@ -142,20 +156,20 @@ checkYCM()
 ## ============================================================================
 if [ -z "$1" ]; then printHelp; fi
 
-while getopts "huimr" opt; do
+while getopts "hilmru" opt; do
     case $opt in
         h)
             printHelp
-            ;;
-        u)
-            echo "Upgrading"
-            getUpdates
-            getUpgrades
             ;;
         i)
             echo "Installing programs" >&2
             getUpdates
             installAll
+            ;;
+        l)
+            echo "Installing Languages" >&2
+            getUpdates
+            installLanguages
             ;;
         m)
             echo "Installing minimum program set" >&2
@@ -166,6 +180,11 @@ while getopts "huimr" opt; do
             echo "Installing Ruby" >&2
             installRuby
             installGems
+            ;;
+        u)
+            echo "Upgrading"
+            getUpdates
+            getUpgrades
             ;;
         \?)
             echo "Invalid option: -$OPTARG" >&2
