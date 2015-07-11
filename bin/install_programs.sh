@@ -76,10 +76,6 @@ installAll()
 installMin()
 {
     sudo apt-get -y install keepass2
-
-    if ! [[ -f ~/.gitconfig ]]; then
-        cp ~/.gitconfig.notes ~/.gitconfig
-    fi
 }
 
 installArcanist()
