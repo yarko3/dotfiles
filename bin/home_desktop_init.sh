@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # This script is NOT idempotent! It is intended to be run
-# once after installing a new operating system!
+# only once after installing a new operating system!
 
 setup_xorg_conf()
 {
@@ -27,6 +27,18 @@ create_firefox_profiles()
     done
 }
 
+# Pre-compiled binary built from the open source project at
+# https://github.com/prasmussen/gdrive
+setup_google_drive_cli()
+{
+    wget -O drive https://drive.google.com/uc?id=0B3X9GlR6EmbnMHBMVWtKaEZXdDg
+    sudo mv drive /usr/local/bin/drive
+    echo "Google Drive CLI installed"
+}
+
 setup_xorg_conf
 setup_awesome
 create_firefox_profiles
+
+setup_google_drive_cli
+~/bin/fetch_ssh_keys.sh
