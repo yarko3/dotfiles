@@ -27,7 +27,8 @@ installAll()
     installMin
 
     # Development
-    sudo apt-get -y install ack-grep \
+    sudo apt-get -y install \
+                            ack-grep \
                             bison \
                             clang \
                             curl \
@@ -48,19 +49,22 @@ installAll()
     installArcanist
 
     # Browsers
-    sudo apt-get -y install chromium-browser \
+    sudo apt-get -y install \
+                            chromium-browser \
                             flashplugin-installer \
                             google-chrome \
 
     # Networking
-    sudo apt-get -y install nmap \
-                            install curl \
-                            install filezilla \
-                            install vinagre \
-                            install wireshark \
+    sudo apt-get -y install \
+                            curl \
+                            filezilla \
+                            nmap \
+                            vinagre \
+                            wireshark \
 
     # Media
-    sudo apt-get -y install calibre \
+    sudo apt-get -y install \
+                            calibre \
                             gimp \
                             imagemagick \
                             libav-tools \
@@ -71,7 +75,8 @@ installAll()
                             xbmc \
 
     # Other
-    sudo apt-get -y install deluge \
+    sudo apt-get -y install \
+                            deluge \
                             htop \
 
 }
@@ -107,8 +112,9 @@ installGems()
 # This one takes a very long time to complete
 installHaskell()
 {
-    sudo apt-get -y install ghc \
+    sudo apt-get -y install \
                             cabal-install \
+                            ghc \
                             ghc-mod \
 
     cabal update
@@ -121,12 +127,14 @@ installLanguages()
 {
     installHaskell
 
-    sudo apt-get -y install mit-scheme
-    sudo apt-get -y install octave
-
-    sudo apt-get -y install python \
+    sudo apt-get -y install \
+                            golang \
+                            mit-scheme \
+                            octave \
+                            python \
                             python-dev \
-                            python-pip
+                            python-pip \
+
     sudo pip install "ipython[all]"
 
     #installRuby

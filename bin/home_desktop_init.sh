@@ -27,6 +27,6 @@ create_firefox_profiles()
     done
 }
 
-#setup_xorg_conf
-#setup_awesome
+setup_xorg_conf
+setup_awesome
 create_firefox_profiles
