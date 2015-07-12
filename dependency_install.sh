@@ -27,4 +27,4 @@ fi
 # Create ssh dir with appropriate permissions
 #
 mkdir -p $HOME/.ssh
-chmod 0600 $HOME/.ssh
+chmod 0700 $HOME/.ssh
