@@ -19,22 +19,14 @@ setup_awesome()
     git clone https://github.com/brhCS/awesome_wm ~/.config/awesome
 }
 
-setup_nvidia_drivers()
-{
-    sudo apt-add-repository ppa:xorg-edgers/ppa
-    sudo apt-get update
-    sudo apt-get install nvidia-current nvidia-settings
-}
-
 create_firefox_profiles()
 {
     for i in $(seq 0 5); do
-        firefox -no-remote -CreateProfile \""$i"\"
-        echo "$i"
+        echo "Creating profile $i"
+        firefox -no-remote -CreateProfile "$i"
     done
 }
 
 #setup_xorg_conf
 #setup_awesome
-#setup_nvidia_drivers
 create_firefox_profiles
