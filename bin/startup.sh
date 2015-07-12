@@ -4,27 +4,27 @@
 ## ============================================================================
 # Top Center
 DISPLAY=:0.1
-konsole &
+gnome-terminal &
 ~/bin/firefox_launch.sh &
 
 # Top Left
 DISPLAY=:0.2
-konsole &
+gnome-terminal &
 ~/bin/firefox_launch.sh &
 
 # Bottom Right
 DISPLAY=:0.4
-konsole &
+gnome-terminal &
 ~/bin/firefox_launch.sh &
 
 # Top Right
 DISPLAY=:0.5
-konsole &
+gnome-terminal &
 ~/bin/firefox_launch.sh &
 
 # Bottom Left
 DISPLAY=:0.3
-konsole &
+gnome-terminal &
 skype &
 
 # Bottom Center
