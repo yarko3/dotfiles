@@ -105,7 +105,8 @@ installRuby()
 
 installGems()
 {
-    gem install bundler
+    sudo apt-get install -y bundler
+    sudo gem install bundler
     bundle install
 }
 
