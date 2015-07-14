@@ -20,21 +20,6 @@ shopt -s  checkwinsize
 # Prompt
 PS1='\[\e[1;31m\][\u@\h: \w]\$\[\e[0m\] '
 
-[ -f ~/.zsh_local/aliases_local.zsh ] && . ~/.zsh_local/aliases_local.zsh
-
-## ============================================================================
-##                             Home Environment
-## ============================================================================
-if [ -z "$BBENV" ]; then
-    echo "Running Home BASHRC"
-    umask 0022
-
-    export PATH="$PATH:~/bin:/usr/class/cs143/cool/bin"
-    export CC=/usr/bin/clang
-    export CXX=/usr/bin/clang++
-
-    # Source my home aliases
-    [ -f ~/.bash_aliases_home ] && . ~/.bash_aliases_home
-fi
+[ -f ~/.zsh/aliases.zsh ] && . ~/.zsh/aliases.zsh
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
