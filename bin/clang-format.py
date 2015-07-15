@@ -1,0 +1,1 @@
+/usr/share/vim/addons/syntax/clang-format-3.6.py
