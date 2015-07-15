@@ -31,6 +31,7 @@ installAll()
                             ack-grep \
                             bison \
                             clang \
+                            clang-format-3.6 \
                             curl \
                             exuberant-ctags \
                             flex \
