@@ -1,0 +1,19 @@
+#!/bin/sh
+#
+# file-mon [file] [command]
+# Monitors the file for changes and executes the command when updated.
+#
+
+f=$1
+shift
+cmd=$*
+tmpf="`mktemp /tmp/onchange.XXXXX`"
+cp "$f" "$tmpf"
+trap "rm $tmpf; exit 1" 2
+while : ; do
+    if [ "$f" -nt "$tmpf" ]; then
+        cp "$f" "$tmpf"
+        $cmd
+    fi
+    sleep 2
+done
