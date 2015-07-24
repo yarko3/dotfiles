@@ -2,6 +2,8 @@ if [ "$TERM" != "screen-256color" ]; then
     export TERM=xterm-256color
 fi
 
+export EDITOR=vim
+
 # Vim mode
 bindkey -v
 
