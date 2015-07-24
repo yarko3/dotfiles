@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 #
 # file-mon [file] [command]
 # Monitors the file for changes and executes the command when updated.
@@ -7,13 +7,14 @@
 f=$1
 shift
 cmd=$*
-tmpf="`mktemp /tmp/onchange.XXXXX`"
+tmpf=$(mktemp /tmp/onchange.XXXXX)
 cp "$f" "$tmpf"
 trap "rm $tmpf; exit 1" 2
 while : ; do
     if [ "$f" -nt "$tmpf" ]; then
         cp "$f" "$tmpf"
         $cmd
+        date
     fi
-    sleep 2
+    sleep 1
 done
