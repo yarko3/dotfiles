@@ -21,5 +21,3 @@ shopt -s  checkwinsize
 PS1='\[\e[1;31m\][\u@\h: \w]\$\[\e[0m\] '
 
 [ -f ~/.zsh/aliases.zsh ] && . ~/.zsh/aliases.zsh
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

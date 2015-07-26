@@ -29,13 +29,22 @@ ENABLE_CORRECTION="true"
 # much, much faster.
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:~/bin:/usr/class/cs143/cool/bin:/home/brh/.rvm/bin:~/bin:/usr/class/cs143/cool/bin:/home/brh/.rvm/bin"
+export PATH="~/bin"
+export PATH="~/bin_local"
+export PATH="$PATH:/bin"
+export PATH="$PATH:/home/brh/.rvm/bin"
+export PATH="$PATH:/sbin"
+export PATH="$PATH:/usr/bin"
+export PATH="$PATH:/usr/class/cs143/cool/bin"
+export PATH="$PATH:/usr/local/bin"
+export PATH="$PATH:/usr/local/sbin"
+export PATH="$PATH:/usr/sbin"
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
+# export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Hitting ctrl+r for nice history searching
 bindkey "^r" history-incremental-search-backward
