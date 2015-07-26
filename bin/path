@@ -1,0 +1,2 @@
+#!/bin/bash
+echo "$(echo "$PATH" | tr ":" "\n" | sort)"
