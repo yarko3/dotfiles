@@ -12,7 +12,7 @@
     ci = commit
     co = checkout
     df = diff
-    dom = diff origin/master
+    dom = diff origin/master -w
     f = fetch
     l = log
     ld = log --decorate
