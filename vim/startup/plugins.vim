@@ -20,6 +20,7 @@ Plugin 'justinmk/vim-syntax-extra'      " Flex and Bison syntax highlighting
 Plugin 'kien/ctrlp.vim'                 " Ctrl-P
 Plugin 'luochen1990/rainbow'            " Rainbow parenthesis coloring
 Plugin 'majutsushi/tagbar'              " Using for JavaScript
+Plugin 'scrooloose/nerdcommenter'       " Functions for easier commenting
 Plugin 'scrooloose/syntastic'           " Syntax checking
 Plugin 'suan/vim-instant-markdown'      " Side-by-side Markdown editing
 Plugin 'tpope/vim-abolish'              " Coercion and Subvert
