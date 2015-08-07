@@ -39,6 +39,7 @@ export PATH="$PATH:/usr/class/cs143/cool/bin"
 export PATH="$PATH:/usr/local/bin"
 export PATH="$PATH:/usr/local/sbin"
 export PATH="$PATH:/usr/sbin"
+export PATH="$PATH:/usr/games"
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
