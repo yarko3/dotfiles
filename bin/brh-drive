@@ -1,0 +1,64 @@
+#!/bin/bash
+
+printHelp()
+{
+    echo "Key Manager options:"
+    echo " -h   Print this help and exit"
+    echo " -d   Download Keepass DB File"
+}
+
+download_keepass()
+{
+    cd ~/Documents
+    fileId=$(drive list \
+                    | grep MyKeePassDatabase.kdbx \
+                    | awk '{print $1}')
+    drive download --id "$fileId" --force
+}
+
+upload_keepass()
+{
+    cd ~/Documents
+    existingDb=$(drive list \
+                            | grep "MyKeePassDatabase.kdbx" \
+                            | awk '{print $1}')
+
+    echo "Deleting existing DB in Drive"
+    drive delete --id "$existingDb"
+
+    parentFolder=$(drive list \
+                    | grep Keys \
+                    | awk '{print $1}')
+
+    echo "Uploading new file to Drive"
+    drive upload -f MyKeePassDatabase.kdbx -p "$parentFolder"
+}
+
+## ============================================================================
+##                                  OptArgs
+## ============================================================================
+if [ -z "$1" ]; then printHelp; fi
+
+while getopts "hdu" opt; do
+    case $opt in
+        h)
+            printHelp
+            ;;
+        d)
+            echo "Downloading KeePass file from Drive" >&2
+            download_keepass
+            ;;
+        u)
+            echo "Uploading ~/Documents/MyKeePassDatabase.kdbx to Drive" >&2
+            upload_keepass
+            ;;
+        \?)
+            echo "Invalid option: -$OPTARG" >&2
+            exit 1
+            ;;
+        :)
+            echo "Option -$OPTARG requires an argument." >&2
+            exit 1
+            ;;
+    esac
+done
