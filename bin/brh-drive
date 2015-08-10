@@ -1,4 +1,6 @@
 #!/bin/bash
+# Shortcuts using gdrive
+# https://github.com/prasmussen/gdrive
 
 printHelp()
 {

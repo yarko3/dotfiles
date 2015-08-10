@@ -85,6 +85,12 @@ installAll()
 installMin()
 {
     sudo apt-get -y install keepass2
+
+    if [ -z "$(which drive)" ]; then
+        echo "Installing gdrive"
+        wget https://github.com/prasmussen/gdrive -O drive
+        sudo mv drive /usr/local/bin/drive
+    fi
 }
 
 installArcanist()
