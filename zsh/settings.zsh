@@ -3,6 +3,7 @@ if [ "$TERM" != "screen-256color" ]; then
 fi
 
 export EDITOR=vim
+export GTEST_COLOR=yes
 
 # Vim mode
 bindkey -v

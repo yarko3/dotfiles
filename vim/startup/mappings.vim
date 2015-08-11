@@ -58,7 +58,7 @@ nnoremap <F2> :call MakefileSearch()<CR>:Make clean<CR>
 if(g:bbenv == "")
     nnoremap <F4> :call MakefileSearch()<CR>:Make all<CR>:Make run<CR>:Copen<CR>/FAILED<CR>
 else
-    nnoremap <F3> :call MakefileSearch()<CR>:Make test-build<CR>
+    nnoremap <F3> :call MakefileSearch()<CR>:Make test<CR>
     nnoremap <F4> :call MakefileSearch()<CR>:Make<CR>
 endif
 

@@ -45,9 +45,9 @@ set autoread
 
 " Configure the :make command
 if(g:bbenv == "")
-    set makeprg=make
+    set makeprg=gmake
 else
-    set makeprg=toolkit-remote\ nylxdev2\ gmake\ -j
+    set makeprg=brh-make
 endif
 
 " Set path for file searches
