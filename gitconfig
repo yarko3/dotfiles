@@ -13,6 +13,7 @@
     co = checkout
     df = diff
     dom = diff origin/master -w
+    doms = diff origin/master -w --stat
     f = fetch
     l = log
     ld = log --decorate
