@@ -60,6 +60,10 @@ let g:netrw_sort_by = 'name'
 let g:lt_location_list_toggle_map = '<leader>l'
 let g:lt_quickfix_list_toggle_map = '<leader>q'
 
+" Vimux
+let g:VimuxOrientation = "h"
+let g:VimuxHeight = "35"
+
 " YouCompleteMe
 let g:ycm_server_log_level = 'debug'
 let g:ycm_server_keep_logfiles = 0

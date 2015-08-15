@@ -104,6 +104,11 @@ nnoremap <Leader>te :tabe %:h<CR>
 nnoremap <Leader>tf :call MkGtest()<CR>
 nnoremap <Leader>tm :Tabmerge right<CR>
 nnoremap <Leader>ve :vsp<CR>:e %:h<CR>
+nnoremap <Leader>vl :call VimuxRunCommand('(load "' . bufname("%") . '")')<CR>
+nnoremap <Leader>vp :VimuxPromptCommand<CR>
+nnoremap <Leader>vr :VimuxRunLastCommand<CR>
+nnoremap <Leader>vt :call VimuxRunCommand("clear; gmake test")<CR>
+nnoremap <Leader>vx :VimuxInterruptRunner<CR>
 
 source ~/.vim/bundle/bde_plugins/bde_format.vim
 nnoremap <Leader>w :call StripTabsAndTrailingWhitespaces()<CR>
