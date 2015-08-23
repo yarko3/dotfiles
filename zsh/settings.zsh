@@ -56,6 +56,3 @@ bindkey -M vicmd 'j' history-substring-search-down
 # Arrow keys, so other people can use my terminal
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
-
-# Start TMUX (non-recursively) on every session, unless in SSH
-[[ -z "$TMUX" && -z "$SSH_CONNECTION" ]] && exec tmux
