@@ -1,4 +1,6 @@
 #!/bin/bash
-# Requires python-dev package
+# Requires the following packages:
+# build-essential cmake python-dev
+
 cd ~/.vim/bundle/YouCompleteMe
-./install.sh --clang-completer
+./install.py --clang-completer

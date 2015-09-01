@@ -11,7 +11,6 @@ Plugin 'gmarik/Vundle.vim'              " Lets Vundle manage Vundle
 Plugin 'Valloric/ListToggle'            " Toggling quickfix and location list
 Plugin 'benmills/vimux'                 " Vim and Tmux Integration
 Plugin 'bling/vim-airline'              " Status line
-Plugin 'brhCS/bde_plugins'              " Tools for formatting code according to BDE Standards
 Plugin 'chazmcgarvey/vimcoder'          " Topcoder Vim Plugin
 Plugin 'christoomey/vim-tmux-navigator' " Window/Pane switching with Vim and Tmux
 Plugin 'dag/vim2hs'                     " Haskell error checking and syntax highlighting
@@ -34,11 +33,13 @@ Plugin 'tpope/vim-unimpaired.git'       " Pairs of keyboard mappings for common 
 Plugin 'tpope/vim-vinegar.git'          " netrw improvement
 Plugin 'vim-scripts/Tabmerge'           " Merge tabs into splits
 
-"Plugin 'jeaye/color_coded'              " Clang color coding
-
 if g:platform == "Linux"
     Plugin 'SirVer/ultisnips'               " Text snippets
     Plugin 'Valloric/YouCompleteMe'
+endif
+
+if(g:bbenv != "")
+    Plugin 'https://bbgithub.dev.bloomberg.com/bhipple/bde_plugins'  " Tools for formatting code according to BDE Standards
 endif
 
 call vundle#end()
