@@ -104,6 +104,7 @@ nnoremap <Leader>te :tabe %:h<CR>
 nnoremap <Leader>tf :call MkGtest()<CR>
 nnoremap <Leader>tm :Tabmerge right<CR>
 nnoremap <Leader>ve :vsp<CR>:e %:h<CR>
+nnoremap <Leader>rr :w<CR>:call VimuxRunCommand('./' . bufname("%"))<CR>
 nnoremap <Leader>vl :w<CR>:call VimuxRunCommand('(load "' . bufname("%") . '")')<CR>
 nnoremap <Leader>vr :w<CR>:VimuxRunLastCommand<CR>
 nnoremap <Leader>vt :w<CR>:call VimuxRunCommand("clear; gmake test")<CR>
