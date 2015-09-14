@@ -36,6 +36,7 @@ installAll()
                             exuberant-ctags \
                             flex \
                             gdb \
+                            graphviz \
                             icedtea-netx \
                             icedtea-plugin \
                             npm \
