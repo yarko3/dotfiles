@@ -41,6 +41,7 @@ installAll()
                             icedtea-plugin \
                             npm \
                             pkg-config \
+                            python-sklearn \
                             python-software-properties \
                             shellcheck \
                             subversion \
