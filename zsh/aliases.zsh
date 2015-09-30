@@ -7,6 +7,6 @@ alias ll='ls -al'
 alias ls='ls --color'
 alias mkcd='. ~/bin/make_dir_and_cd.sh'
 alias scheme='rlwrap scheme'
-alias sqlite='rlwrap sqlite'
+alias sqlite3='rlwrap sqlite3'
 
 [ -f ~/.zsh_local/aliases_local.zsh ] && source ~/.zsh_local/aliases_local.zsh
