@@ -1,0 +1,2 @@
+#!/bin/bash
+keepass2 ~/Documents/MyKeePassDatabase.kdbx
