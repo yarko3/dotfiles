@@ -12,6 +12,8 @@
     ~/.gitconfig: gitconfig
     ~/.haskeline: haskeline
     ~/.inputrc: inputrc
+    ~/.quicklisp: quicklisp/
+    ~/.sbclrc: sbclrc
     ~/.tmux.conf: tmux.conf
     ~/.tmux: tmux/
     ~/.vim: vim/
