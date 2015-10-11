@@ -6,6 +6,7 @@ alias hd='~/bin/hex_decimal.sh'
 alias ll='ls -al'
 alias ls='ls --color'
 alias mkcd='. ~/bin/make_dir_and_cd.sh'
+alias sbcl='rlwrap sbcl'
 alias scheme='rlwrap scheme'
 alias sqlite3='rlwrap sqlite3'
 
