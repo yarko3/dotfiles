@@ -21,7 +21,7 @@
     p = pull
     rb = rebase
     st = status
-    um = git branch --set-upstream-to=origin/master
+    um = branch --set-upstream-to=origin/master
 
     # List aliases
     la = "!git config -l | grep alias | cut -c 7-"
