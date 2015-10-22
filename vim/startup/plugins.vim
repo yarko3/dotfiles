@@ -33,6 +33,7 @@ Plugin 'tpope/vim-surround'             " Surrounding text
 Plugin 'tpope/vim-unimpaired.git'       " Pairs of keyboard mappings for common tasks
 Plugin 'tpope/vim-vinegar.git'          " netrw improvement
 Plugin 'vim-scripts/Tabmerge'           " Merge tabs into splits
+Plugin 'kovisoft/slimv'                 " Lisp in Vim
 
 if g:platform == "Linux"
     Plugin 'SirVer/ultisnips'               " Text snippets
@@ -86,6 +87,9 @@ let g:rainbow_conf = {
 \       'css': 0,
 \   }
 \}
+
+" SLIMV
+let g:slimv_repl_split=4 " Split Vertically
 
 " Vimux
 let g:VimuxOrientation = "h"
