@@ -22,7 +22,6 @@ Plugin 'luochen1990/rainbow'            " Rainbow parenthesis coloring
 Plugin 'majutsushi/tagbar'              " Using for JavaScript
 Plugin 'scrooloose/nerdcommenter'       " Functions for easier commenting
 Plugin 'scrooloose/syntastic'           " Syntax checking
-Plugin 'suan/vim-instant-markdown'      " Side-by-side Markdown editing
 Plugin 'tpope/vim-abolish'              " Coercion and Subvert
 Plugin 'tpope/vim-commentary'           " Comment/uncomment operator
 Plugin 'tpope/vim-dispatch'             " Asynchronous Makes
