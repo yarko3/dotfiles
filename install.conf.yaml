@@ -32,6 +32,10 @@
     stdin: true
     stdout: true
     stderr: true
+  - command: sudo chef-apply ~/.dotfiles/chef-repo/packages.rb
+    stdin: true
+    stdout: true
+    stderr: true
   - command: vim +PluginInstall +qall
     stdin: true
     stdout: true

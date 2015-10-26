@@ -27,67 +27,14 @@ installAll()
     installMin
 
     # Development
-    sudo apt-get -y install \
-                            ack-grep \
-                            bison \
-                            clang \
-                            clang-format-3.6 \
-                            curl \
-                            exuberant-ctags \
-                            flex \
-                            gdb \
-                            graphviz \
-                            icedtea-netx \
-                            icedtea-plugin \
-                            npm \
-                            pkg-config \
-                            python-sklearn \
-                            python-software-properties \
-                            shellcheck \
-                            subversion \
-
     sudo npm -g install instant-markdown-d
     sudo npm -g install glob
 
     installArcanist
-
-    # Browsers
-    sudo apt-get -y install \
-                            chromium-browser \
-                            flashplugin-installer \
-                            google-chrome \
-
-    # Networking
-    sudo apt-get -y install \
-                            curl \
-                            filezilla \
-                            nmap \
-                            vinagre \
-                            wireshark \
-
-    # Media
-    sudo apt-get -y install \
-                            calibre \
-                            gimp \
-                            imagemagick \
-                            libav-tools \
-                            libavcodec-extra \
-                            mupdf \
-                            totem \
-                            vlc \
-                            xbmc \
-
-    # Other
-    sudo apt-get -y install \
-                            deluge \
-                            htop \
-
 }
 
 installMin()
 {
-    sudo apt-get -y install keepass2
-
     if [ -z "$(which drive)" ]; then
         echo "Installing gdrive"
         wget https://github.com/prasmussen/gdrive -O drive
@@ -122,11 +69,6 @@ installGems()
 # This one takes a very long time to complete
 installHaskell()
 {
-    sudo apt-get -y install \
-                            cabal-install \
-                            ghc \
-                            ghc-mod \
-
     cabal update
     cabal install parsec
     cabal install happy
@@ -136,15 +78,6 @@ installHaskell()
 installLanguages()
 {
     installHaskell
-
-    sudo apt-get -y install \
-                            golang \
-                            mit-scheme \
-                            octave \
-                            python \
-                            python-dev \
-                            python-pip \
-
     sudo pip install "ipython[all]"
 
     #installRuby

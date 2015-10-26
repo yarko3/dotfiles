@@ -1,17 +1,12 @@
 #!/bin/bash
 
-###############################
-# Software package dependencies
+##########################################
+# Check for the Chef SDK
 #
-sudo apt-get install -y \
-awesome \
-build-essential \
-cmake \
-tmux \
-vim-gtk \
-xclip \
-xsel \
-zsh \
+if [ -z "$(which chef-apply)" ]; then
+    wget https://opscode-omnibus-packages.s3.amazonaws.com/ubuntu/12.04/x86_64/chefdk_0.9.0-1_amd64.deb \
+    | sudo dpkg -i chefdk_0.9.0-1_amd64.deb
+fi
 
 ##########################################
 # Change shell to zsh, if not already done
