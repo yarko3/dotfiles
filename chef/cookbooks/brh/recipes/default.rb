@@ -7,3 +7,4 @@
 # All rights reserved - Do Not Redistribute
 #
 include_recipe "brh::packages"
+include_recipe "brh::cabal"
