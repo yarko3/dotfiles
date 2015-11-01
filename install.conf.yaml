@@ -9,6 +9,7 @@
       path: bashrc
     ~/.chef/cookbooks:
       path: chef/cookbooks/
+      create: true
       force: true
       relink: true
     ~/.dir_colors: dir_colors
