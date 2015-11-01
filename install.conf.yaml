@@ -7,6 +7,10 @@
     ~/.bashrc:
       force: true
       path: bashrc
+    ~/.chef/cookbooks:
+      path: chef/cookbooks/
+      force: true
+      relink: true
     ~/.dir_colors: dir_colors
     ~/.git_template: git_template/
     ~/.gitconfig: gitconfig
@@ -32,7 +36,7 @@
     stdin: true
     stdout: true
     stderr: true
-  - command: sudo chef-apply ~/.dotfiles/chef-repo/packages.rb
+  - command: cd chef && sudo chef-client -z -o brh
     stdin: true
     stdout: true
     stderr: true

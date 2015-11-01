@@ -1,0 +1,30 @@
+{
+  "recipes": {
+    "cabal": "Empty recipe. Provides access to lwrp."
+  },
+  "groupings": {
+  },
+  "attributes": {
+  },
+  "dependencies": {
+  },
+  "maintainer_email": "mark@hibberd.id.au",
+  "long_description": "cabal Cookbook\n==============\n\nA cookbook that provides a lwrp for interacting with\n[cabal](http://www.haskell.org/haskellwiki/Cabal-Install), a\ndependency managent tool for haskell.\n\nRequirements\n------------\n\n### Chef\n\nNo specific version requirements. There are no external\ndependencies. Tested on 11.4.0.\n\n### Platform\n\nThe following platforms have been tested with this cookbook, meaning that the\nrecipes run on these platforms without error:\n\n * FreeBSD\n * Arch Linux\n * Ubuntu\n\n\nInstallation\n------------\n\nThere are several ways you can install this cookbook.\n\n### <a name=\"installation-platform\"></a> From the Opscode Community Platform\n\nTo install this cookbook from the Opscode platform, use the *knife* command:\n\n    knife cookbook site install cabal\n\n### <a name=\"installation-librarian\"></a> Using Librarian-Chef\n\n[Librarian-Chef](https://github.com/applicationsonline/librarian-chef)\nis a bundler for your Chef cookbooks.  Include a reference to the\ncookbook in a `Cheffile` and run `librarian-chef install`.\n\nTo reference the latest published version:\n\n    cookbook 'cabal', '>= 0.1.0'\n\nTo reference the github version:\n\n    cookbook 'cookbook'\n      :github => 'apiengine/chef-cabal'\n\nThen run:\n\n    librarian-chef install\n\nResources\n---------\n\n\n### cabal_install\n\nInstall a package from hackage, a path, a git repo or a github repo.\n\n#### Attributes\n\n * `package_name` - This is the name of the package to install from hackage. Ignored if `:path`, `:git` or `:github` are set. This is the name attribute.\n * `path` - Specify path to a cabal project to install from file system. Ignored if `:git` or `:github` are set.\n * `git` - Specify git repository containing cabal project to clone and install. Ignored if `:github` is set.\n * `github` - Specify github repository containing cabal project to clone and install. This is shorthand for `git \"https://github.com/#{github}.git`\n * `reference` - Specify git reference to checkout if using `:git` or `:github`. See git lwrp for more details.\n * `only_dependencies` - Pass `--only-dependencies` flag to cabal. Off by default.\n * `reinstall` - Pass `--reinstall` flag to cabal. Off by default.\n * `force_reinstalls` - Pass `--force-reinstalls` flag to cabal. Off by default.\n * `avoid_reinstalls` - Pass `--avoid-reinstalls` flag to cabal. Off by default.\n * `upgrade_dependencies` - Pass `--upgrade-dependencies` flag to cabal. Off by default.\n * `user_install` - Pass `--user` flag to cabal. Off by default.\n * `global_install` - Pass `--global` flag to cabal. Off by default.\n * `solver` - Pass `--solver #{solver}` flag to cabal. Off by default.\n * `user` - User to run cabal and git checkouts as.\n * `group` - Group to run git checkouts as.\n * `cabal_dev` - Use cabal-dev to the package in isolation. Only used if `:path`, `:git` or `:github` are used. Most useful in conjunction with `:install_binary` to install the isolated binary to some system location. Default is false.\n * `install_binary` - Upon completion of cabal install, copy file to target. The hash must contain :from and :to attributes. The hash can contain :user and :group for setting owner after copy. Paths are relative to the root of the cabal project.\n * `cabal_update` - Run cabal update before install.\n * `cache_for` - See cabal_update resource. This is minutes to cache current cabal index for.\n\n</table>\n\n#### Examples\n\nRun cabal install the yesod package for fred.\n\n    cabal_install 'yesod' do\n      user 'fred'\n    end\n\n\nRun cabal-dev install the angel binary from github and install to /usr/bin.\n\n    cabal_install 'angel' do\n      github 'jamwt/Angel'\n      reference '3ee0a190b354f143273dcf2fe9bfa5b730dc5fe5'\n      install_binary :from => 'angel/dest/build/angel/angel', :to => '/usr/bin/angel'\n      cabal_dev true\n      user username\n      group username\n    end\n\n### cabal_update\n\nRun cabal update to get latest package index from hackage.\n\n#### Attributes\n\n * `user` - Specify the user to run cabal update as. This is the name attribute.\n * `cache_for` - The time (in minutes) that must have elapsed since last cabal update. If the cabal index has been updated in the last `cache_for` minutes, it will not be updated again. Default is 24 hours.\n\n#### Examples\n\nRun cabal update for fred (if it has not been run in last 24 hours)\n\n    cabal_update 'fred'\n\n\nRun cabal update for barney if it has not been run in last 30 minutes.\n\n    cabal_update 'barney' do\n      cache_for 30\n    end\n\nUsage\n-----\n\nTo get access to the cabal resource, include the default cabal recipe.\n\n    include_recipe 'cabal'\n\n\n\nLicense and Author\n------------------\n\nAuthor:: Mark Hibberd <mark@hibberd.id.au>\n\nCopyright:: 2013, Mark Hibberd\n\nAll code is copyright 2013 Mark Hibberd <mark@hibberd.id.au>\n\nAll code is licensed under a 3-point BSD style license.\n\nSee LICENSE or https://github.com/apiengine/chef-cabal/blob/master/LICENSE.\n",
+  "version": "0.1.2",
+  "providing": {
+  },
+  "maintainer": "Mark Hibberd",
+  "description": "lwrp for cabal",
+  "replacing": {
+  },
+  "platforms": {
+  },
+  "conflicting": {
+  },
+  "suggestions": {
+  },
+  "recommendations": {
+  },
+  "license": "BSD3",
+  "name": "cabal"
+}
