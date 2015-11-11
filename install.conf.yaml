@@ -8,9 +8,10 @@
       force: true
       path: bashrc
     ~/.chef/cookbooks:
-      path: chef/cookbooks/
       force: true
       relink: true
+      create: true
+      path: chef/cookbooks/
     ~/.dir_colors: dir_colors
     ~/.git_template: git_template/
     ~/.gitconfig: gitconfig
