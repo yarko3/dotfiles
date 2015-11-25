@@ -19,11 +19,13 @@ package 'pandoc'
 package 'pkg-config'
 package 'shellcheck'
 package 'subversion'
+package 'texlive-latex-base'
 package 'tmux'
 package 'vim-gtk'
 package 'xclip'
 package 'xsel'
 package 'zsh'
+
 
 # Browsers
 package 'chromium-browser'
