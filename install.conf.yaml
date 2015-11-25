@@ -4,9 +4,6 @@
     ~/.dotfiles: ''
     ~/.Xdefaults: Xdefaults
     ~/.Xmodmaps: Xmodmaps/
-    ~/.bashrc:
-      force: true
-      path: bashrc
     ~/.chef/cookbooks:
       force: true
       relink: true
