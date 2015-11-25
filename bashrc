@@ -20,4 +20,13 @@ shopt -s  checkwinsize
 # Prompt
 PS1='\[\e[1;31m\][\u@\h: \w]\$\[\e[0m\] '
 
-[ -f ~/.zsh/aliases.zsh ] && . ~/.zsh/aliases.zsh
+# Pull data out of the zsh files
+if [ -f ~/.zsh_local/zshrc_local_before.zsh ]; then
+    source ~/.zsh_local/zshrc_local_before.zsh
+fi
+
+source ~/.zsh/aliases.zsh
+
+if [ -f ~/.zsh_local/zshrc_local_after.zsh ]; then
+    source ~/.zsh_local/zshrc_local_after.zsh
+fi
