@@ -17,7 +17,7 @@ Plugin 'dag/vim2hs'                     " Haskell error checking and syntax high
 Plugin 'derekwyatt/vim-fswitch'         " Fastswitch (cpp/h toggle)
 Plugin 'ivanov/vim-ipython'             " Vim + IPython Notebook integration
 Plugin 'justinmk/vim-syntax-extra'      " Flex and Bison syntax highlighting
-Plugin 'kien/ctrlp.vim'                 " Ctrl-P
+Plugin 'ctrlpvim/ctrlp.vim'             " Ctrl-P
 Plugin 'luochen1990/rainbow'            " Rainbow parenthesis coloring
 Plugin 'majutsushi/tagbar'              " Using for JavaScript
 Plugin 'scrooloose/nerdcommenter'       " Functions for easier commenting
