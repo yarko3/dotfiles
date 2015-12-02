@@ -1,3 +1,5 @@
+include_recipe 'apt'
+
 # Development
 package 'ack-grep'
 package 'awesome'
