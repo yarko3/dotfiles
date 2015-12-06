@@ -1,6 +1,7 @@
 #!/bin/bash
 ## don't read bashrc if session is not interactive
 [ -z "$PS1" ] && return
+echo "Loading bashrc"
 
 ## ============================================================================
 ##                                  General

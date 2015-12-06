@@ -7,16 +7,37 @@ printHelp()
     echo "Key Manager options:"
     echo " -h   Print this help and exit"
     echo " -d   Download Keepass DB File"
+    echo " -s   Download SSH Keys"
     echo " -u   Upload Keepass DB File"
+}
+
+download_file()
+{
+    fileId=$(drive list \
+                    | grep "\s$1\s" \
+                    | awk '{print $1}')
+    drive download --id "$fileId" --force
 }
 
 download_keepass()
 {
     cd ~/Documents
-    fileId=$(drive list \
-                    | grep MyKeePassDatabase.kdbx \
-                    | awk '{print $1}')
-    drive download --id "$fileId" --force
+    download_file MyKeePassDatabase.kdbx
+}
+
+download_ssh_keys()
+{
+    cd ~/.ssh
+    [ -f brh-key ] || download_file brh-key
+    [ -f brh-key.pub ] || download_file brh-key.pub
+    [ -f digitalocean ] || download_file digitalocean
+    [ -f digitalocean.pub ] || download_file digitalocean.pub
+    [ -f id_rsa ] || download_file id_rsa
+    [ -f id_rsa.pub ] || download_file id_rsa.pub
+    [ -f smilodon_key ] || download_file smilodon_key
+    [ -f smilodon_key.pub ] || download_file smilodon_key.pub
+    chmod 0400 ./*
+    chmod 0600 known_hosts config
 }
 
 upload_keepass()
@@ -42,7 +63,7 @@ upload_keepass()
 ## ============================================================================
 if [ -z "$1" ]; then printHelp; fi
 
-while getopts "hdu" opt; do
+while getopts "hdsu" opt; do
     case $opt in
         h)
             printHelp
@@ -50,6 +71,10 @@ while getopts "hdu" opt; do
         d)
             echo "Downloading KeePass file from Drive" >&2
             download_keepass
+            ;;
+        s)
+            echo "Downloading ssh keys from Drive" >&2
+            download_ssh_keys
             ;;
         u)
             echo "Uploading ~/Documents/MyKeePassDatabase.kdbx to Drive" >&2

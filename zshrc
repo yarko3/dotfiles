@@ -1,4 +1,5 @@
 # Allow local customizations in the ~/.zshrc_local_before file
+echo "Loading zshrc"
 if [ -f ~/.zsh_local/zshrc_local_before.zsh ]; then
     source ~/.zsh_local/zshrc_local_before.zsh
 fi
