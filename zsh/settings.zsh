@@ -2,7 +2,7 @@ if [ "$TERM" != "screen-256color" ]; then
     export TERM=xterm-256color
 fi
 
-export EDITOR=vim
+export EDITOR=vi
 export GTEST_COLOR=yes
 
 # Vim mode
@@ -21,9 +21,6 @@ export KEYTIMEOUT=1
 
 # Command auto-correction.
 ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
