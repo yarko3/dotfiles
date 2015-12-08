@@ -10,7 +10,7 @@ if ! zgen saved; then
     # oh-my-zsh plugins
     #zgen oh-my-zsh plugins/chucknorris
     zgen oh-my-zsh plugins/command-not-found
-    zgen oh-my-zsh plugins/git
+    #zgen oh-my-zsh plugins/git
     zgen oh-my-zsh plugins/sudo
     zgen oh-my-zsh plugins/wd
     zgen oh-my-zsh plugins/web-search
@@ -21,7 +21,7 @@ if ! zgen saved; then
     zgen load zsh-users/zsh-completions src
 
     # theme
-    zgen oh-my-zsh themes/lambda
+    zgen oh-my-zsh themes/norm
 
     # save all to init script
     zgen save
