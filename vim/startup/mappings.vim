@@ -111,7 +111,9 @@ nnoremap <Leader>vt :w<CR>:call VimuxRunCommand("clear; gmake test")<CR>
 nnoremap <Leader>vv :w<CR>:VimuxPromptCommand<CR>
 nnoremap <Leader>vx :VimuxInterruptRunner<CR>
 
-source ~/.vim/bundle/bde_plugins/bde_format.vim
-nnoremap <Leader>w :call StripTabsAndTrailingWhitespaces()<CR>
+if(g:bbenv != "")
+    source ~/.vim/bundle/bde_plugins/bde_format.vim
+    nnoremap <Leader>w :call StripTabsAndTrailingWhitespaces()<CR>
+endif
 
 " Note - l and q are used for the location list and quickfix toggle by ListToggle

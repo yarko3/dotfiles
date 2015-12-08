@@ -42,6 +42,8 @@ export PATH="$PATH:/usr/local/sbin"
 export PATH="$PATH:/usr/sbin"
 export PATH="$PATH:/usr/games"
 
+export PYTHONPATH=~/bin
+
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 
