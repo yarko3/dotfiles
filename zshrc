@@ -10,9 +10,6 @@ source ~/.zsh/plugins.zsh
 # Settings
 source ~/.zsh/settings.zsh
 
-# Bootstrap
-source ~/.zsh/bootstrap.zsh
-
 # Aliases
 source ~/.zsh/aliases.zsh
 
