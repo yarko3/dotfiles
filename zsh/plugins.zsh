@@ -1,7 +1,8 @@
 # load zgen
 source "${HOME}/.dotfiles/zgen/zgen.zsh"
 
-# check if there's no init script
+# Check only when there's no init script
+# To regenerate zgen config from scratch, rm ~/.zgen/init.zsh
 if ! zgen saved; then
     echo "Creating a zgen save"
 
@@ -19,9 +20,6 @@ if ! zgen saved; then
     zgen load zsh-users/zsh-syntax-highlighting
     zgen load zsh-users/zsh-history-substring-search
     zgen load zsh-users/zsh-completions src
-
-    # theme
-    zgen oh-my-zsh themes/norm
 
     # save all to init script
     zgen save

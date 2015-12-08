@@ -1,3 +1,6 @@
+## ============================================================================
+##                           Environment Variables
+## ============================================================================
 if [ "$TERM" != "screen-256color" ]; then
     export TERM=xterm-256color
 fi
@@ -5,19 +8,8 @@ fi
 export EDITOR=vi
 export GTEST_COLOR=yes
 
-# Vim mode
-bindkey -v
-
 # Reduce delay to 0.1 seconds for switching to normal mode with ESC
 export KEYTIMEOUT=1
-
-# Command auto-correction.
-ENABLE_CORRECTION="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 export PATH="/home/$USER/bin"
 export PATH="$PATH:/home/$USER/bin_local"
@@ -34,8 +26,16 @@ export PYTHONPATH="/home/$USER/bin"
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 
-# ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
+## ============================================================================
+##                                 Settings
+## ============================================================================
+# Command auto-correction.
+ENABLE_CORRECTION="true"
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Hitting ctrl+r for nice history searching
 bindkey "^r" history-incremental-search-backward
@@ -48,3 +48,14 @@ bindkey '^[[B' history-substring-search-down
 
 # Unmap ctrl-s as "stop flow"
 stty stop undef
+
+# Vim mode
+bindkey -v
+
+## ============================================================================
+##                                  Prompt
+## ============================================================================
+PROMPT='%{$fg[yellow]%}λ %m %{$fg[green]%}%c %{$fg[yellow]%}→ $(git_prompt_info)%{$reset_color%}'
+
+ZSH_THEME_GIT_PROMPT_PREFIX="λ %{$fg[blue]%}git %{$fg[red]%}"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$fg[yellow]%} → %{$reset_color%}"
