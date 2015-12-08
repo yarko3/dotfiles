@@ -11,14 +11,6 @@ bindkey -v
 # Reduce delay to 0.1 seconds for switching to normal mode with ESC
 export KEYTIMEOUT=1
 
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
 # Command auto-correction.
 ENABLE_CORRECTION="true"
 
@@ -27,18 +19,17 @@ ENABLE_CORRECTION="true"
 # much, much faster.
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-export PATH="~/.dotfiles/bin"
-export PATH="$PATH:~/.dotfiles_local/bin_local"
+export PATH="/home/$USER/bin"
+export PATH="$PATH:/home/$USER/bin_local"
 export PATH="$PATH:/bin"
-export PATH="$PATH:/home/brh/.rvm/bin"
+export PATH="$PATH:/home/$USER/.rvm/bin"
 export PATH="$PATH:/sbin"
 export PATH="$PATH:/usr/bin"
 export PATH="$PATH:/usr/local/bin"
 export PATH="$PATH:/usr/local/sbin"
 export PATH="$PATH:/usr/sbin"
-export PATH="$PATH:/usr/games"
 
-export PYTHONPATH=~/bin
+export PYTHONPATH="/home/$USER/bin"
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
