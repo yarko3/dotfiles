@@ -2,17 +2,18 @@ include_recipe 'cabal'
 
 cabal_update 'brh'
 
-cabal_install 'hoogle' do
-    user 'brh'
-    force_reinstalls true
-end
+packages = [
+        "hoogle",
+        "pandoc",
+        "hunit",
+        "ghc-mod",
+        "pointfree",
+        "hdevtools"
+]
 
-cabal_install 'pandoc' do
-    user 'brh'
-    force_reinstalls true
-end
-
-cabal_install 'hunit' do
-    user 'brh'
-    force_reinstalls true
+for p in packages
+    cabal_install p do
+        user 'brh'
+        force_reinstalls true
+    end
 end

@@ -94,12 +94,17 @@ set wildignore+=*.o,*.d,00*,nohup.out,tags,*.hi,*.gcno,*.gcda,*.fasl
 " Automatically open the QuickFix Window after a make
 autocmd QuickFixCmdPost *make* cwindow
 
-" in Makefiles, don't expand tabs to spaces and reset the standard tab
-" length because Makefiles require the indentation of tabs for targets
+" Make
 autocmd FileType make setlocal noexpandtab shiftwidth=8
 
-" Set automatic indentation format for XML files
+" XML
 autocmd FileType xml setlocal equalprg=xmllint\ --format\ -
 
-" All files ending in md are treated as markdown
+" Markdown
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+
+" Haskell
+autocmd FileType haskell set formatprg=pointfree
+autocmd FileType haskell nnoremap <buffer> <F1> :HdevtoolsType<CR>
+autocmd FileType haskell nnoremap <buffer> <silent> <F2> :HdevtoolsClear<CR>
+autocmd FileType haskell nnoremap <buffer> <silent> <F3> :HdevtoolsInfo<CR>

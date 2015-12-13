@@ -10,14 +10,16 @@ Plugin 'gmarik/Vundle.vim'              " Lets Vundle manage Vundle
 
 Plugin 'Valloric/ListToggle'            " Toggling quickfix and location list
 Plugin 'benmills/vimux'                 " Vim and Tmux Integration
+Plugin 'bitc/vim-hdevtools'             " Haskell
 Plugin 'bling/vim-airline'              " Status line
 Plugin 'chazmcgarvey/vimcoder'          " Topcoder Vim Plugin
 Plugin 'christoomey/vim-tmux-navigator' " Window/Pane switching with Vim and Tmux
+Plugin 'ctrlpvim/ctrlp.vim'             " Ctrl-P
 Plugin 'dag/vim2hs'                     " Haskell error checking and syntax highlighting
 Plugin 'derekwyatt/vim-fswitch'         " Fastswitch (cpp/h toggle)
 Plugin 'ivanov/vim-ipython'             " Vim + IPython Notebook integration
 Plugin 'justinmk/vim-syntax-extra'      " Flex and Bison syntax highlighting
-Plugin 'ctrlpvim/ctrlp.vim'             " Ctrl-P
+Plugin 'kovisoft/slimv'                 " Lisp in Vim
 Plugin 'luochen1990/rainbow'            " Rainbow parenthesis coloring
 Plugin 'majutsushi/tagbar'              " Using for JavaScript
 Plugin 'scrooloose/nerdcommenter'       " Functions for easier commenting
@@ -32,7 +34,6 @@ Plugin 'tpope/vim-surround'             " Surrounding text
 Plugin 'tpope/vim-unimpaired.git'       " Pairs of keyboard mappings for common tasks
 Plugin 'tpope/vim-vinegar.git'          " netrw improvement
 Plugin 'vim-scripts/Tabmerge'           " Merge tabs into splits
-Plugin 'kovisoft/slimv'                 " Lisp in Vim
 
 if g:platform == "Linux"
     Plugin 'SirVer/ultisnips'               " Text snippets
