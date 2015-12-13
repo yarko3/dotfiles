@@ -5,11 +5,14 @@
     ~/.Xdefaults: Xdefaults
     ~/.Xmodmaps: Xmodmaps/
     ~/.chef/cookbooks:
+      create: true
       force: true
       relink: true
-      create: true
       path: chef/cookbooks/
     ~/.dir_colors: dir_colors
+    ~/.ghc/ghci.conf:
+      create: true
+      path: ghc/ghci.conf
     ~/.git_template: git_template/
     ~/.gitconfig: gitconfig
     ~/.haskeline: haskeline
