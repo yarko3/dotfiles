@@ -13,8 +13,9 @@ export KEYTIMEOUT=1
 
 export PATH="/home/$USER/bin"
 export PATH="$PATH:/home/$USER/bin_local"
-export PATH="$PATH:/bin"
+export PATH="$PATH:/home/$USER/.cabal/bin"
 export PATH="$PATH:/home/$USER/.rvm/bin"
+export PATH="$PATH:/bin"
 export PATH="$PATH:/sbin"
 export PATH="$PATH:/usr/bin"
 export PATH="$PATH:/usr/local/bin"
