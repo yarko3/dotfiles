@@ -38,6 +38,7 @@ Plugin 'vim-scripts/Tabmerge'           " Merge tabs into splits
 if g:platform == "Linux"
     Plugin 'SirVer/ultisnips'               " Text snippets
     Plugin 'Valloric/YouCompleteMe'
+    Plugin 'brhCS/vim-snippets'
 endif
 
 if(g:bbenv != "")
@@ -90,6 +91,20 @@ let g:rainbow_conf = {
 
 " SLIMV
 let g:slimv_repl_split=4 " Split Vertically
+
+" UltiSnips
+" Magic to make the <enter> key expand snippes, even with YouCompleteMe installed.
+let g:UltiSnipsExpandTrigger = "<nop>"
+let g:ulti_expand_or_jump_res = 0
+function ExpandSnippetOrCarriageReturn()
+    let snippet = UltiSnips#ExpandSnippetOrJump()
+    if g:ulti_expand_or_jump_res > 0
+        return snippet
+    else
+        return "\<CR>"
+    endif
+endfunction
+inoremap <expr> <CR> pumvisible() ? "<C-R>=ExpandSnippetOrCarriageReturn()<CR>" : "\<CR>"
 
 " Vimux
 let g:VimuxOrientation = "h"

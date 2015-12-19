@@ -22,3 +22,6 @@
 [submodule "tmux/plugins/tmux-yank"]
 	path = tmux/plugins/tmux-yank
 	url = https://github.com/tmux-plugins/tmux-yank
+[submodule "vim/UltiSnips"]
+	path = vim/UltiSnips
+	url = https://github.com/brhCS/vim-snippets
