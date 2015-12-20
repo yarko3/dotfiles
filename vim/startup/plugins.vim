@@ -12,6 +12,7 @@ Plugin 'Valloric/ListToggle'            " Toggling quickfix and location list
 Plugin 'benmills/vimux'                 " Vim and Tmux Integration
 Plugin 'bitc/vim-hdevtools'             " Haskell
 Plugin 'bling/vim-airline'              " Status line
+Plugin 'brhCS/vim-snippets'             " My snippets fork
 Plugin 'chazmcgarvey/vimcoder'          " Topcoder Vim Plugin
 Plugin 'christoomey/vim-tmux-navigator' " Window/Pane switching with Vim and Tmux
 Plugin 'ctrlpvim/ctrlp.vim'             " Ctrl-P
@@ -39,7 +40,6 @@ Plugin 'vim-scripts/Tabmerge'           " Merge tabs into splits
 if g:platform == "Linux"
     Plugin 'SirVer/ultisnips'               " Text snippets
     Plugin 'Valloric/YouCompleteMe'
-    Plugin 'brhCS/vim-snippets'
 endif
 
 if(g:bbenv != "")
