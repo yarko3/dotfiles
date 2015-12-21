@@ -8,6 +8,7 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'              " Lets Vundle manage Vundle
 
+Plugin 'Twinside/vim-hoogle'            " Haskell function information
 Plugin 'Valloric/ListToggle'            " Toggling quickfix and location list
 Plugin 'benmills/vimux'                 " Vim and Tmux Integration
 Plugin 'bitc/vim-hdevtools'             " Haskell

@@ -63,6 +63,18 @@ set smartcase
 " Fix background color
 set t_ut=
 
+" When multiple completions are possible, show all
+set wildmenu
+
+" Complete only up to point of ambiguity, like the shell does
+set wildmode=list:longest
+
+" Ignoring files (see :help wildignore)
+set wildignore+=*.o,*.d,00*,nohup.out,tags,*.hi,*.gcno,*.gcda,*.fasl
+
+" Extend functionality of the % key's matching
+runtime macros/matchit.vim
+
 "" ============================================================================
 ""                                Appearances
 "" ============================================================================
@@ -84,9 +96,6 @@ set hlsearch
 set foldmethod=manual
 set foldnestmax=3
 set foldminlines=10
-
-" Ignoring files (see :help wildignore)
-set wildignore+=*.o,*.d,00*,nohup.out,tags,*.hi,*.gcno,*.gcda,*.fasl
 
 "" ============================================================================
 ""                               Auto Commands
