@@ -72,6 +72,9 @@ set wildmode=list:longest
 " Ignoring files (see :help wildignore)
 set wildignore+=*.o,*.d,00*,nohup.out,tags,*.hi,*.gcno,*.gcda,*.fasl
 
+" Number of lines to scroll past when the cursor scrolls off the screen
+set scrolloff=2
+
 " Extend functionality of the % key's matching
 runtime macros/matchit.vim
 
