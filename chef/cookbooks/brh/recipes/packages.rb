@@ -31,10 +31,8 @@ package 'flashplugin-installer'
 
 # Networking
 package 'curl'
-package 'filezilla'
 package 'nmap'
 package 'vinagre'
-package 'wireshark'
 
 # Media
 package 'calibre'
@@ -43,9 +41,7 @@ package 'imagemagick'
 package 'libav-tools'
 package 'libavcodec-extra'
 package 'mupdf'
-package 'totem'
 package 'vlc'
-package 'xbmc'
 
 # Other
 package 'deluge'
