@@ -12,13 +12,15 @@ fi
 useradd -m -s /bin/bash "$USR"
 adduser "$USR" sudo
 
+export HOME=/home/$USR
+export USER=$USR
 cd /home/"$USR"
 mkdir .ssh
 cp /root/.ssh/authorized_keys /home/"$USR"/.ssh/authorized_keys
 
 touch "cloud-init-in-progress.tmp"
 apt-get update
-apt-get install git
+apt-get install -y git
 git clone https://github.com/brhCS/dotfiles
 cd dotfiles
 ./install
