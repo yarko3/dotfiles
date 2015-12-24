@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # To be run after booting a machine on a virtual cloud provider like DigitalOcean
 # Put this as the user data:
-# #/bin/bash
+# #!/bin/bash
 # wget https://raw.githubusercontent.com/brhCS/dotfiles/master/cloud_init.sh | bash
 
 USR=bhipple
@@ -15,7 +15,7 @@ adduser "$USR" sudo
 sudo -iu "$USR"
 cd /home/"$USR"
 mkdir .ssh
-cp /root/.ssh/known_hosts /home/"$USR"/.ssh/known_hosts
+cp /root/.ssh/authorized_keys /home/"$USR"/.ssh/authorized_keys
 
 touch "cloud-init-in-progress.tmp"
 apt-get update
