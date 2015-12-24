@@ -42,7 +42,7 @@
     stdin: true
     stdout: true
     stderr: true
-  - command: vim +PluginInstall +qall
+  - command: vim/vundle_wrapper.sh
     stdin: true
     stdout: true
     stderr: true
