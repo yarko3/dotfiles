@@ -32,7 +32,7 @@ cp /root/.ssh/authorized_keys /home/"$USR"/.ssh/authorized_keys
 echo "Setting up dotfiles"
 git clone https://github.com/brhCS/dotfiles
 cd dotfiles
-./install
+./install || echo "Looks like the installer had an issue. Investigate."
 
 cd /home/"$USR"
 rm -f "cloud-init-in-progress.tmp"
