@@ -2,7 +2,7 @@
 # To be run after booting a machine on a virtual cloud provider like DigitalOcean
 # Put this as the user data:
 # #!/bin/bash
-# wget https://raw.githubusercontent.com/brhCS/dotfiles/master/cloud_init.sh | bash
+# curl https://raw.githubusercontent.com/brhCS/dotfiles/master/cloud_init.sh | bash
 
 USR=bhipple
 if ! [ -z "$1" ]; then
@@ -15,11 +15,11 @@ adduser "$USR" sudo
 sudo -iu "$USR"
 cd /home/"$USR"
 mkdir .ssh
-cp /root/.ssh/authorized_keys /home/"$USR"/.ssh/authorized_keys
+sudo cp /root/.ssh/authorized_keys /home/"$USR"/.ssh/authorized_keys
 
 touch "cloud-init-in-progress.tmp"
-apt-get update
-apt-get install git
+sudo apt-get update
+sudo apt-get install git
 git clone https://github.com/brhCS/dotfiles
 cd dotfiles
 ./install
