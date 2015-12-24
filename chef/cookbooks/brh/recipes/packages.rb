@@ -1,7 +1,6 @@
 include_recipe 'apt'
 
 # Development
-package 'ack-grep'
 package 'awesome'
 package 'bison'
 package 'build-essential'
@@ -17,9 +16,7 @@ package 'icedtea-netx'
 package 'icedtea-plugin'
 package 'keepass2'
 package 'npm'
-package 'pandoc'
 package 'pkg-config'
-package 'shellcheck'
 package 'subversion'
 package 'texlive-latex-base'
 package 'tmux'
@@ -27,7 +24,6 @@ package 'vim-gtk'
 package 'xclip'
 package 'xsel'
 package 'zsh'
-
 
 # Browsers
 package 'chromium-browser'
@@ -56,18 +52,26 @@ package 'deluge'
 package 'htop'
 package 'weather-util'
 
-# Languages
-package 'cabal-install'
-package 'ghc'
-package 'ghc-mod'
+# Programming Languages
 package 'golang'
-package 'hdevtools'
-package 'ipython'
-package 'ipython-qtconsole'
 package 'mit-scheme'
 package 'octave'
+
+# Python
+package 'ipython'
+package 'ipython-qtconsole'
 package 'python'
 package 'python-dev'
 package 'python-pip'
 package 'python-sklearn'
 package 'python-software-properties'
+
+# Haskell
+package 'cabal-install'
+package 'ghc'
+package 'ghc-mod'
+package 'hdevtools'
+package 'hoogle'
+package 'libghc-hunit-dev'
+package 'pandoc'
+package 'shellcheck'
