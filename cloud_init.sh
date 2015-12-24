@@ -33,11 +33,8 @@ echo "Setting up dotfiles"
 git clone https://github.com/brhCS/dotfiles
 cd dotfiles
 ./install
-cd ..
-git clone https://github.com/brhCS/dotfiles_local
-cd dotfiles_local
-./install
-cd ..
+
+cd /home/"$USR"
 rm -f "cloud-init-in-progress.tmp"
 
 echo "Changing ownership from root to $USR"

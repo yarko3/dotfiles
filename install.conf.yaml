@@ -38,7 +38,7 @@
     stdin: true
     stdout: true
     stderr: true
-  - command: cd chef && sudo chef-client -z -o brh
+  - command: cd chef && sudo chef-client -z -o $USER &
     stdin: true
     stdout: true
     stderr: true
