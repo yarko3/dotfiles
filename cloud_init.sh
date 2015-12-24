@@ -2,8 +2,8 @@
 # To be run after booting a machine on a virtual cloud provider like DigitalOcean
 #
 # Put this as the user data:
-# #!/bin/bash
-# curl https://raw.githubusercontent.com/brhCS/dotfiles/master/cloud_init.sh | bash
+#!/bin/bash
+#curl https://raw.githubusercontent.com/brhCS/dotfiles/master/cloud_init.sh | bash
 #
 # Inspect its progress with:
 # less +F /var/log/cloud-init-output.log
@@ -32,7 +32,7 @@ cp /root/.ssh/authorized_keys /home/"$USR"/.ssh/authorized_keys
 echo "Setting up dotfiles"
 git clone https://github.com/brhCS/dotfiles
 cd dotfiles
-./install || echo "Looks like the installer had an issue. Investigate."
+./install
 
 cd /home/"$USR"
 rm -f "cloud-init-in-progress.tmp"
