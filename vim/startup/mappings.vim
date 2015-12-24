@@ -76,6 +76,7 @@ nnoremap <Leader>cdf :call Cdfile()<CR>
 nnoremap <Leader>cdg :call Cdgit()<CR>
 nnoremap <Leader>cds :call Cdscraper()<CR>
 nnoremap <Leader>cmt :call CmtSection("")<Left><Left>
+nnoremap <Leader>cx :!chmod a+x %<CR>
 nnoremap <Leader>df :Gdiff<CR>
 nnoremap <Leader>dom :Gdiff origin/master<CR>
 nnoremap <Leader>e :e %:h<CR>
