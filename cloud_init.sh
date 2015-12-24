@@ -12,7 +12,7 @@ fi
 useradd -m -s /bin/bash "$USR"
 adduser "$USR" sudo
 
-sudo -iu "$USR"
+su "USR" <<'EOF'
 cd /home/"$USR"
 mkdir .ssh
 sudo cp /root/.ssh/authorized_keys /home/"$USR"/.ssh/authorized_keys
@@ -29,3 +29,4 @@ cd dotfiles_local
 ./install
 cd ..
 rm -f "cloud-init-in-progress.tmp"
+EOF
