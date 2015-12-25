@@ -112,6 +112,15 @@ nnoremap <Leader>vt :w<CR>:call VimuxRunCommand("clear; gmake test")<CR>
 nnoremap <Leader>vv :w<CR>:VimuxPromptCommand<CR>
 nnoremap <Leader>vx :VimuxInterruptRunner<CR>
 
+" Local Leaders
+autocmd FileType haskell nmap <buffer> <LocalLeader>sc :HoogleClose<CR>
+autocmd FileType haskell nmap <buffer> <LocalLeader>sh :Hoogle
+autocmd FileType haskell nmap <buffer> <LocalLeader>si :HoogleInfo<CR>
+
+autocmd FileType haskell nmap <buffer> <F1> :HdevtoolsType<CR>
+autocmd FileType haskell nmap <buffer> <F2> :HdevtoolsClear<CR>
+autocmd FileType haskell nmap <buffer> <F3> :HdevtoolsInfo<CR>
+
 if(g:bbenv != "")
     source ~/.vim/bundle/bde_plugins/bde_format.vim
     nnoremap <Leader>w :call StripTabsAndTrailingWhitespaces()<CR>

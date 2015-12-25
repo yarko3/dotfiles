@@ -117,6 +117,3 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
 " Haskell
 autocmd FileType haskell set formatprg=pointfree
-autocmd FileType haskell nmap <buffer> <F1> :HdevtoolsType<CR>
-autocmd FileType haskell nmap <buffer> <F2> :HdevtoolsClear<CR>
-autocmd FileType haskell nmap <buffer> <F3> :HdevtoolsInfo<CR>
