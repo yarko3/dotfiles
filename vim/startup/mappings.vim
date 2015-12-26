@@ -30,7 +30,6 @@ inoremap <F5> << BAEL_LOG_END;<ESC>
 inoremap jj <Esc><Right>
 
 
-
 "" ============================================================================
 ""                        Normal/Visual Mode Mappings
 "" ============================================================================
@@ -98,6 +97,7 @@ nnoremap <Leader>jf :YcmCompleter GoToDefinition<CR>
 nnoremap <Leader>ji :YcmCompleter GoToImprecise<CR>
 nnoremap <Leader>jj :YcmCompleter GoTo<CR>
 nnoremap <Leader>pd <ESC>Opdb.set_trace()<ESC>j
+nnoremap <Leader>rr :w<CR>:call VimuxRunCommand('./' . bufname("%"))<CR>
 nnoremap <Leader>se :sp<CR>:e %:h<CR>
 nnoremap <Leader>ss :call SortSection()<CR>
 nnoremap <Leader>tb :TagbarToggle<CR>
@@ -105,12 +105,12 @@ nnoremap <Leader>te :tabe %:h<CR>
 nnoremap <Leader>tf :call MkGtest()<CR>
 nnoremap <Leader>tm :Tabmerge right<CR>
 nnoremap <Leader>ve :vsp<CR>:e %:h<CR>
-nnoremap <Leader>rr :w<CR>:call VimuxRunCommand('./' . bufname("%"))<CR>
 nnoremap <Leader>vl :w<CR>:call VimuxRunCommand('(load "' . bufname("%") . '")')<CR>
 nnoremap <Leader>vr :w<CR>:VimuxRunLastCommand<CR>
 nnoremap <Leader>vt :w<CR>:call VimuxRunCommand("clear; gmake test")<CR>
 nnoremap <Leader>vv :w<CR>:VimuxPromptCommand<CR>
 nnoremap <Leader>vx :VimuxInterruptRunner<CR>
+nnoremap <Leader>w :call StripTabsAndTrailingWhitespaces()<CR>
 
 " Local Leaders
 autocmd FileType haskell nmap <buffer> <LocalLeader>sc :HoogleClose<CR>
@@ -123,7 +123,6 @@ autocmd FileType haskell nmap <buffer> <F3> :HdevtoolsInfo<CR>
 
 if(g:bbenv != "")
     source ~/.vim/bundle/bde_plugins/bde_format.vim
-    nnoremap <Leader>w :call StripTabsAndTrailingWhitespaces()<CR>
 endif
 
 " Note - l and q are used for the location list and quickfix toggle by ListToggle
