@@ -11,7 +11,6 @@ alias rfwifi='nmcli r wifi off && nmcli r wifi on'
 alias sbcl='rlwrap sbcl'
 alias scheme='rlwrap scheme'
 alias sqlite3='rlwrap sqlite3'
-alias vol='volume.hs'
 alias wfc='weather -f NYC'
 
 [ -f ~/.zsh_local/aliases_local.zsh ] && source ~/.zsh_local/aliases_local.zsh
