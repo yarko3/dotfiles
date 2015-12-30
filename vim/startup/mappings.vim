@@ -86,7 +86,7 @@ nnoremap <Leader>fk :FSSplitAbove<CR>
 nnoremap <Leader>fl :FSSplitRight<CR>
 nnoremap <Leader>fmt :call Bde_Format("")<CR>
 nnoremap <Leader>fx :call GTestFixture("")<Left><Left>
-nnoremap <Leader>gg :Ggrep <C-r><C-w><CR>:copen<CR>
+nnoremap <Leader>gg :Grepper<CR>
 nnoremap <Leader>h :set hlsearch! hlsearch?<CR>
 nnoremap <Leader>ia O// Application Includes<ESC>
 nnoremap <Leader>ib O// BDE Includes<ESC>

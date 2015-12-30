@@ -46,3 +46,4 @@
     stdin: true
     stdout: true
     stderr: true
+  - chmod -R 0700 ghc

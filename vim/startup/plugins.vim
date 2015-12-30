@@ -24,6 +24,7 @@ Plugin 'justinmk/vim-syntax-extra'      " Flex and Bison syntax highlighting
 Plugin 'kovisoft/slimv'                 " Lisp in Vim
 Plugin 'luochen1990/rainbow'            " Rainbow parenthesis coloring
 Plugin 'majutsushi/tagbar'              " Using for JavaScript
+Plugin 'mhinz/vim-grepper'              " Asynchronous Grep -> QuickFix List
 Plugin 'scrooloose/nerdcommenter'       " Functions for easier commenting
 Plugin 'scrooloose/syntastic'           " Syntax checking
 Plugin 'tommcdo/vim-exchange'           " cx operator for exchanging text regions
@@ -58,6 +59,10 @@ filetype plugin indent on
 "" ============================================================================
 " CtrlP
 let g:ctrlp_working_path_mode = 'ra'
+
+" Grepper
+nmap gs  <plug>(GrepperOperator)
+xmap gs  <plug>(GrepperOperator)
 
 " Netrw
 let g:netrw_sort_by = 'name'
@@ -98,7 +103,7 @@ let g:slimv_repl_split=4 " Split Vertically
 " Magic to make the <enter> key expand snippes, even with YouCompleteMe installed.
 let g:UltiSnipsExpandTrigger = "<nop>"
 let g:ulti_expand_or_jump_res = 0
-function ExpandSnippetOrCarriageReturn()
+function! ExpandSnippetOrCarriageReturn()
     let snippet = UltiSnips#ExpandSnippetOrJump()
     if g:ulti_expand_or_jump_res > 0
         return snippet

@@ -78,6 +78,9 @@ set scrolloff=2
 " Extend functionality of the % key's matching
 runtime macros/matchit.vim
 
+" Tool to use for Grepper
+set grepprg="git"
+
 "" ============================================================================
 ""                                Appearances
 "" ============================================================================
