@@ -2,9 +2,9 @@ language: bash
 addons:
   apt:
     packages:
-    - shellcheck
     - hlint
 script:
-    - pushd chef/cookbooks/brh/recipes; ./test.sh; popd
+    - pushd chef/cookbooks/brh/recipes
+    - ./test.sh
+    - popd
     - hlint bin/*.hs
-    - shellcheck bin/*.hs

@@ -15,8 +15,3 @@ git pull
 ./install
 ```
 In addition to creating symlinks with dotbot, this will run the `brh` Cookbook with `Chef Solo`.
-
-### zgen note
-To refresh and update zgen plugins, run `zgen update`. They are cached normally.
-
-If for some reason it did not clone submodules on the first go, run `zgen reset`.

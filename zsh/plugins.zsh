@@ -17,6 +17,7 @@ if ! zgen saved; then
     # Github plugins
     zgen load zsh-users/zsh-syntax-highlighting
     zgen load zsh-users/zsh-history-substring-search
+    zgen load djui/alias-tips
 
     # save all to init script
     zgen save
