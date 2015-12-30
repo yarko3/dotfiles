@@ -2,6 +2,8 @@
 # Small test to make sure that I don't declare the same package install
 # in multiple recipes (cuts down on dead code / install time).
 
+echo "Checking for multiple package definitions in Chef recipe."
+
 packages=$(grep -ho "package '.*'" ./*.rb | sort | uniq -c | grep '^\s*[2-9]')
 
 if [ -z "$packages" ]; then

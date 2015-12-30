@@ -1,4 +1,4 @@
-## dotfiles
+# dotfiles  [![Build Status](https://travis-ci.org/brhCS/dotfiles.svg?branch=master)](https://travis-ci.org/brhCS/dotfiles)
 My dotfiles for vim, zsh, tmux, lisp, ghc, irssi, etc.
 
 ### Installation
