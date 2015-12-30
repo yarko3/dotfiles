@@ -1,33 +1,21 @@
 #!/bin/sh
-analyze_shell()
+lint()
 {
-    shell_files=$(git ls-files "*.sh")
-    if [ -z "$shell_files" ]; then
+    fileregex="$1"
+    binary="$2"
+
+    files=$(git diff --name-only --cached -- "$fileregex")
+    if [ -z "$files" ]; then
         return
     fi
 
-    shell_lint=$(git ls-files "*.sh" | xargs shellcheck)
+    lint=$(echo "$files" | xargs "$binary")
     if [ "$?" -ne "0" ]; then
-        echo "Shellcheck linting errors:"
-        echo "$shell_lint"
+        echo "$binary linting errors:"
+        echo "$lint"
         exit 1
     fi
 }
 
-analyze_haskell()
-{
-    haskell_files=$(git ls-files "*.hs")
-    if [ -z "$haskell_files" ]; then
-        return
-    fi
-
-    haskell_lint=$(git ls-files "*.sh" | xargs shellcheck)
-    if [ "$?" -ne "0" ]; then
-        echo "HLint errors:"
-        echo "$haskell_lint"
-        exit 1
-    fi
-}
-
-analyze_shell
-analyze_haskell
+lint "*.sh" "shellcheck"
+lint "*.hs" "hlint"
