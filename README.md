@@ -1,20 +1,22 @@
-##dotfiles
-My dotfiles for vim, zsh, tmux, etc.
+## dotfiles
+My dotfiles for vim, zsh, tmux, lisp, ghc, irssi, etc.
 
-###Basic Installation from a fresh OS install
+### Installation
+#### Initial Install
+Run this as the cloud-init user data, or on first boot:
 ```
-sudo apt-get install -y git
-git clone https://github.com/brhCS/dotfiles
-cd dotfiles && ./install
-bin/install_programs.sh -il
-chsh -s $(which zsh)
+#!/bin/bash
+curl https://raw.githubusercontent.com/brhCS/dotfiles/master/cloud_init.sh | bash
 ```
-If using local dotfiles, `cd ~/dotfiles_local && ./install`
-
-###Extra notes for my home desktop
-After doing the above, also:
- * Run `bin/home_desktop_init.sh` (see script for details)
- * Install and use nVidia proprietary gfx drivers, using the Ubuntu Software Center
+#### Update and Run Idempotent Installer
+```
+cd ~/dotfiles
+git pull
+./install
+```
+In addition to creating symlinks with dotbot, this will run the `brh` Cookbook with `Chef Solo`.
 
 ### zgen note
-To refresh and update zgen plugins, run `zgen update`. They are cached normally.  If for some reason it did not clone submodules on the first go, run `zgen reset`.
+To refresh and update zgen plugins, run `zgen update`. They are cached normally.
+
+If for some reason it did not clone submodules on the first go, run `zgen reset`.
