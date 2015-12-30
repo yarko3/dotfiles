@@ -26,8 +26,8 @@ echo ""
 if [ -n "$(git diff-index --cached --check HEAD --)" ]; then
     echo "HOOK REJECTION - The following lines contain trailing whitespace:"
 
-    for line in `git diff --cached --check HEAD | sed '/^[^+]/d'` ; do
-        echo $line
+    for line in $(git diff --cached --check HEAD | sed '/^[^+]/d') ; do
+        echo "$line"
     done
 
     # TODO - Fix the whitespace automatically with sed and re-add it to

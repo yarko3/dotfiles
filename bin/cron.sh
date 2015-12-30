@@ -11,8 +11,9 @@ fi
 
 shopt -s expand_aliases
 
-echo -e '\nRunning command "'$1'" every "'$2'" seconds\n'
-while [ 1 ]; do
+echo "Running command $1 every $2 seconds"
+while true
+do
     eval "$1"
-    sleep $sleep_duration
+    sleep "$sleep_duration"
 done

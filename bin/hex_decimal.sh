@@ -1,5 +1,5 @@
 #!/bin/bash
-if [ -z $1 ]; then
+if [ -z "$1" ]; then
     echo "Specify a number"
     exit 1;
 fi
@@ -12,6 +12,6 @@ echo -e "Dec value:\t$((16#$1))"
 if ! [[ $1 =~ [A-Fa-f] ]]; then
     echo ""
     echo "Decimal --> Hex"
-    printf 'Hex value:\t%x\n' $1
+    printf 'Hex value:\t%x\n' "$1"
     echo -e "Dec value:\t$1"
 fi
