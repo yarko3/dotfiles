@@ -27,4 +27,3 @@ package 'vinagre'
 # Other
 package 'htop'
 package 'weather-util'
-

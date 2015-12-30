@@ -17,5 +17,6 @@ lint()
     fi
 }
 
-lint "*.sh" "shellcheck"
 lint "*.hs" "hlint"
+lint "*.py" "pyflakes"
+lint "*.sh" "shellcheck"

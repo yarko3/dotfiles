@@ -28,6 +28,7 @@ package 'octave'
 # Python
 package 'ipython'
 package 'ipython-qtconsole'
+package 'pyflakes'
 package 'python'
 package 'python-dev'
 package 'python-pip'
