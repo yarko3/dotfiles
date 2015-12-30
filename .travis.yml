@@ -5,6 +5,6 @@ addons:
     - shellcheck
     - hlint
 script:
-    - cd chef/cookbooks/brh/recipes && ./test.sh
+    - pushd chef/cookbooks/brh/recipes; ./test.sh; popd
     - hlint bin/*.hs
     - shellcheck bin/*.hs
