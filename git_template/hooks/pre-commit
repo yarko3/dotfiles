@@ -1,0 +1,8 @@
+#!/bin/sh
+shell_lint=$(git ls-files "*.sh" | xargs shellcheck)
+if [ "$?" -ne "0" ]; then
+    echo "Shellcheck linting errors:"
+    echo "$shell_lint"
+    exit 1
+fi
+exit 0
