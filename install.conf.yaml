@@ -38,12 +38,12 @@
     stdin: true
     stdout: true
     stderr: true
-  - command: cd chef && sudo chef-client -z -o brh &
-    stdin: true
-    stdout: true
-    stderr: true
-  - command: vim/vundle_wrapper.sh
+  - command: vim +PlugUpdate +PlugUpgrade +qall
     stdin: true
     stdout: true
     stderr: true
   - chmod -R 0700 ghc
+  - command: cd chef && sudo chef-client -z -o brh
+    stdin: true
+    stdout: true
+    stderr: true

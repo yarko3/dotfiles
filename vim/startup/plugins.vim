@@ -1,58 +1,46 @@
-"" ============================================================================
-""                                  Vundle
-"" ============================================================================
-set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
-Plugin 'gmarik/Vundle.vim'              " Lets Vundle manage Vundle
-
-Plugin 'Twinside/vim-hoogle'            " Haskell function information
-Plugin 'Valloric/ListToggle'            " Toggling quickfix and location list
-Plugin 'benmills/vimux'                 " Vim and Tmux Integration
-Plugin 'bitc/vim-hdevtools'             " Haskell
-Plugin 'bling/vim-airline'              " Status line
-Plugin 'brhCS/vim-snippets'             " My snippets fork
-Plugin 'chazmcgarvey/vimcoder'          " Topcoder Vim Plugin
-Plugin 'christoomey/vim-tmux-navigator' " Window/Pane switching with Vim and Tmux
-Plugin 'ctrlpvim/ctrlp.vim'             " Ctrl-P
-Plugin 'dag/vim2hs'                     " Haskell error checking and syntax highlighting
-Plugin 'derekwyatt/vim-fswitch'         " Fastswitch (cpp/h toggle)
-Plugin 'ivanov/vim-ipython'             " Vim + IPython Notebook integration
-Plugin 'justinmk/vim-syntax-extra'      " Flex and Bison syntax highlighting
-Plugin 'kovisoft/slimv'                 " Lisp in Vim
-Plugin 'luochen1990/rainbow'            " Rainbow parenthesis coloring
-Plugin 'majutsushi/tagbar'              " Using for JavaScript
-Plugin 'mhinz/vim-grepper'              " Asynchronous Grep -> QuickFix List
-Plugin 'scrooloose/nerdcommenter'       " Functions for easier commenting
-Plugin 'scrooloose/syntastic'           " Syntax checking
-Plugin 'tommcdo/vim-exchange'           " cx operator for exchanging text regions
-Plugin 'tpope/vim-abolish'              " Coercion and Subvert
-Plugin 'tpope/vim-commentary'           " Comment/uncomment operator
-Plugin 'tpope/vim-dispatch'             " Asynchronous Makes
-Plugin 'tpope/vim-fugitive'             " Git Wrapper
-Plugin 'tpope/vim-git'                  " Setting textwidth on git commits
-Plugin 'tpope/vim-repeat'               " Dot operator for plugins
-Plugin 'tpope/vim-surround'             " Surrounding text
-Plugin 'tpope/vim-unimpaired.git'       " Pairs of keyboard mappings for common tasks
-Plugin 'tpope/vim-vinegar.git'          " netrw improvement
-Plugin 'vim-scripts/Tabmerge'           " Merge tabs into splits
+Plug 'Twinside/vim-hoogle'            " Haskell function information
+Plug 'Valloric/ListToggle'            " Toggling quickfix and location list
+Plug 'benmills/vimux'                 " Vim and Tmux Integration
+Plug 'bitc/vim-hdevtools'             " Haskell
+Plug 'bling/vim-airline'              " Status line
+Plug 'brhCS/vim-snippets'             " My snippets fork
+Plug 'chazmcgarvey/vimcoder'          " Topcoder Vim Plugin
+Plug 'christoomey/vim-tmux-navigator' " Window/Pane switching with Vim and Tmux
+Plug 'ctrlpvim/ctrlp.vim'             " Ctrl-P
+Plug 'dag/vim2hs'                     " Haskell error checking and syntax highlighting
+Plug 'derekwyatt/vim-fswitch'         " Fastswitch (cpp/h toggle)
+Plug 'ivanov/vim-ipython'             " Vim + IPython Notebook integration
+Plug 'justinmk/vim-syntax-extra'      " Flex and Bison syntax highlighting
+Plug 'kovisoft/slimv'                 " Lisp in Vim
+Plug 'luochen1990/rainbow'            " Rainbow parenthesis coloring
+Plug 'majutsushi/tagbar'              " Using for JavaScript
+Plug 'mhinz/vim-grepper'              " Asynchronous Grep -> QuickFix List
+Plug 'scrooloose/nerdcommenter'       " Functions for easier commenting
+Plug 'scrooloose/syntastic'           " Syntax checking
+Plug 'tommcdo/vim-exchange'           " cx operator for exchanging text regions
+Plug 'tpope/vim-abolish'              " Coercion and Subvert
+Plug 'tpope/vim-commentary'           " Comment/uncomment operator
+Plug 'tpope/vim-dispatch'             " Asynchronous Makes
+Plug 'tpope/vim-fugitive'             " Git Wrapper
+Plug 'tpope/vim-git'                  " Setting textwidth on git commits
+Plug 'tpope/vim-repeat'               " Dot operator for plugins
+Plug 'tpope/vim-surround'             " Surrounding text
+Plug 'tpope/vim-unimpaired'           " Pairs of keyboard mappings for common tasks
+Plug 'tpope/vim-vinegar'              " netrw improvement
+Plug 'vim-scripts/Tabmerge'           " Merge tabs into splits
 
 if g:platform == "Linux"
-    Plugin 'SirVer/ultisnips'               " Text snippets
-    Plugin 'Valloric/YouCompleteMe'
+    Plug 'SirVer/ultisnips'               " Text snippets
+    Plug 'Valloric/YouCompleteMe'
 endif
 
 if(g:bbenv != "")
-    Plugin 'https://bbgithub.dev.bloomberg.com/bhipple/bde_plugins'  " Tools for formatting code according to BDE Standards
+    Plug 'https://bbgithub.dev.bloomberg.com/bhipple/bde_plugins'  " Tools for formatting code according to BDE Standards
 endif
 
-call vundle#end()
-filetype plugin indent on
-
-" === End Vundle ===
-"
+call plug#end()
 
 "" ============================================================================
 ""                              Plugin Settings
