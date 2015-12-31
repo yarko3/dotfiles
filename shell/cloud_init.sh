@@ -11,7 +11,7 @@ fi
 echo "Starting dotfiles cloud_init.sh with USR=$USR"
 
 apt-get update
-apt-get install -y git zsh
+apt-get install -y git zsh build-essential cmake python-dev
 
 useradd -m -s /usr/bin/zsh "$USR"
 adduser "$USR" sudo
@@ -19,7 +19,6 @@ adduser "$USR" sudo
 export HOME=/home/$USR
 export USER=$USR
 cd /home/"$USR"
-touch "cloud-init-in-progress.tmp"
 
 mkdir .ssh
 cp /root/.ssh/authorized_keys /home/"$USR"/.ssh/authorized_keys
@@ -31,4 +30,3 @@ cd dotfiles
 ./install
 
 echo "Finished dotfiles cloud_init.sh"
-rm -f "/home/$USR/cloud-init-in-progress.tmp"
