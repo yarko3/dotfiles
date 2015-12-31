@@ -23,6 +23,7 @@ touch "cloud-init-in-progress.tmp"
 
 mkdir .ssh
 cp /root/.ssh/authorized_keys /home/"$USR"/.ssh/authorized_keys
+chown -R "$USR:$USR" /home/"$USR"/.ssh
 
 echo "Setting up dotfiles"
 git clone https://github.com/brhCS/dotfiles

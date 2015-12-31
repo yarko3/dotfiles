@@ -46,7 +46,7 @@
     stdin: true
     stdout: true
     stderr: true
-  - sudo chown -R $USER:$USER .
+  - sudo chown -R $USER:$USER /home/$USER/dotfiles
   - chmod -R 0700 ghc
   - command: shell/run_chef.sh &
     stdin: true
