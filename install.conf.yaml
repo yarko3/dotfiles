@@ -46,8 +46,8 @@
     stdin: true
     stdout: true
     stderr: true
-  - chmod -R 0700 ghc
-  - command: cd chef && sudo chef-client -z -o brh
+  - sudo chmod -R 0700 ghc
+  - command: cd chef && sudo chef-client -z -o brh &
     stdin: true
     stdout: true
     stderr: true
