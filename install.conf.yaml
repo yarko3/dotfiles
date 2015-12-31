@@ -38,7 +38,7 @@
     stdin: true
     stdout: true
     stderr: true
-  - command: vim +PlugInstall +PlugUpgrade +qall
+  - command: vim +PlugUpdate +PlugUpgrade +qall
     stdin: true
     stdout: true
     stderr: true
