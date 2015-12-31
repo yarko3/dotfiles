@@ -29,8 +29,5 @@ git clone https://github.com/brhCS/dotfiles
 cd dotfiles
 ./install
 
-echo "Finished running dotfiles installer."
-cd /home/"$USR"
-
 echo "Finished dotfiles cloud_init.sh"
-rm -f "cloud-init-in-progress.tmp"
+rm -f "/home/$USR/cloud-init-in-progress.tmp"
