@@ -3,6 +3,7 @@
 include_recipe 'apt'
 
 package 'awesome'
+package 'graphviz'
 package 'icedtea-netx'
 package 'icedtea-plugin'
 package 'keepass2'
@@ -27,3 +28,19 @@ package 'vinagre'
 # Other
 package 'htop'
 package 'weather-util'
+
+# Programming Languages
+package 'golang'
+package 'mit-scheme'
+package 'octave'
+
+# Python
+package 'ipython'
+package 'ipython-qtconsole'
+package 'python-pip'
+package 'python-sklearn'
+
+# Haskell
+#package 'hoogle' # Installs Apache2, which causes issues on DigitalOcean?
+package 'pandoc'
+package 'texlive-latex-recommended'

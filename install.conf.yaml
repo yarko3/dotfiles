@@ -34,20 +34,20 @@
 
 - shell:
   - [git submodule update --init --recursive, Updating submodules]
-  - command: ~/.dotfiles/dependency_install.sh
+  - command: shell/dependency_install.sh
     stdin: true
     stdout: true
     stderr: true
-  - command: vim +PlugUpdate +PlugUpgrade +qall
+  - command: vim +PlugInstall +PlugUpgrade +qall
     stdin: true
     stdout: true
     stderr: true
-  - command: bin/ycm_regular_install.sh &
+  - command: shell/ycm_regular_install.sh &
     stdin: true
     stdout: true
     stderr: true
   - sudo chmod -R 0700 ghc
-  - command: cd chef && sudo chef-client -z -o brh &
+  - command: shell/run_chef.sh &
     stdin: true
     stdout: true
     stderr: true
