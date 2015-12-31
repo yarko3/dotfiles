@@ -42,6 +42,10 @@
     stdin: true
     stdout: true
     stderr: true
+  - command: bin/ycm_regular_install.sh &
+    stdin: true
+    stdout: true
+    stderr: true
   - chmod -R 0700 ghc
   - command: cd chef && sudo chef-client -z -o brh
     stdin: true
