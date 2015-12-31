@@ -46,7 +46,8 @@
     stdin: true
     stdout: true
     stderr: true
-  - sudo chmod -R 0700 ghc
+  - sudo chown -R $USER:$USER .
+  - chmod -R 0700 ghc
   - command: shell/run_chef.sh &
     stdin: true
     stdout: true
