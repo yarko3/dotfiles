@@ -38,11 +38,15 @@
     stdin: true
     stdout: true
     stderr: true
-  - command: vim +PlugUpdate +PlugUpgrade +qall
+  - command: vim +PlugInstall +PlugUpgrade +qall
     stdin: true
     stdout: true
     stderr: true
   - command: shell/ycm_regular_install.sh &
+    stdin: true
+    stdout: true
+    stderr: true
+  - command: shell/firefox_user_settings.py
     stdin: true
     stdout: true
     stderr: true
