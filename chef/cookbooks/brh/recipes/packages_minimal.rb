@@ -2,6 +2,8 @@
 include_recipe 'apt'
 
 # Development Tools
+package 'libtool'
+package 'autoconf'
 package 'build-essential'
 package 'clang'
 package 'clang-format-3.6'
