@@ -31,6 +31,7 @@ package 'bitlbee-dev'
 package 'bitlbee-plugin-otr'
 package 'irssi'
 package 'irssi-plugin-otr'
+package 'irssi-plugin-xmpp'
 package 'libnotify-bin'
 package 'libtime-duration-perl'
 
