@@ -11,7 +11,7 @@ fi
 echo "Starting dotfiles cloud_init.sh with USR=$USR"
 
 apt-get update
-apt-get install -y git zsh build-essential cmake python-dev
+apt-get install -y git zsh build-essential cmake python-dev ghc
 
 useradd -m -s /usr/bin/zsh "$USR"
 adduser "$USR" sudo

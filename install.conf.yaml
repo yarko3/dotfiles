@@ -46,13 +46,8 @@
     stdin: true
     stdout: true
     stderr: true
-  - command: shell/firefox_user_settings.py
-    stdin: true
-    stdout: true
-    stderr: true
+  - shell/firefox_user_settings.py
   - sudo chown -R $USER:$USER /home/$USER/dotfiles
+  - ghc -o bin/vol bin/volume.hs
   - chmod -R 0700 ghc
-  - command: shell/run_chef.sh &
-    stdin: true
-    stdout: true
-    stderr: true
+  - shell/run_chef.sh &
