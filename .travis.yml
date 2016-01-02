@@ -4,6 +4,7 @@ addons:
     packages:
     - hlint
     - ghc
+    - libghc-regex-posix-dev
 script:
     - pushd chef/cookbooks/brh/recipes
     - ./test.sh
