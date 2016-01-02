@@ -3,7 +3,6 @@ addons:
   apt:
     packages:
     - hlint
-    - ghc
     - haskell-platform
 script:
     - pushd chef/cookbooks/brh/recipes
