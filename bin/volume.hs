@@ -30,17 +30,19 @@ sinksToIndices :: [String] -> [Int]
 sinksToIndices sx = readMany $ concat parts
         where parts = filter (=~ "index") sx
 
+showVolumes :: IO ()
+showVolumes = do
+    sinkVols <- run "pacmd dump-volumes"
+    let vols = sinkVol . lines $ sinkVols
+    putStrLn "Current sink volumes:"
+    mapM_ putStrLn vols
+
+setVolumes :: Float -> IO ()
+setVolumes arg = do
+    sinkInfo <- run "pacmd list-sinks"
+    let indices = sinksToIndices (lines sinkInfo)
+    mapM_ (setVol arg) indices
+
 main = do
     args <- getArgs
-    sinkInfo <- run "pacmd list-sinks"
-
-    if null args then do
-        sinkVols <- run "pacmd dump-volumes"
-        let vols = sinkVol . lines $ sinkVols
-        putStrLn "Current sink volumes:"
-        mapM_ putStrLn vols
-    else do
-        let setter = setVol $ read . head $ args
-        let indices = sinksToIndices (lines sinkInfo)
-        mapM_ setter indices
-
+    if null args then showVolumes else setVolumes . read . head $ args
