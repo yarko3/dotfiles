@@ -3,8 +3,10 @@ addons:
   apt:
     packages:
     - hlint
+    - ghc
 script:
     - pushd chef/cookbooks/brh/recipes
     - ./test.sh
     - popd
     - hlint bin/*.hs
+    - make -C bin/ all

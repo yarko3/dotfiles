@@ -47,7 +47,10 @@
     stdout: true
     stderr: true
   - shell/firefox_user_settings.py
-  - sudo chown -R $USER:$USER /home/$USER/dotfiles
-  - ghc -o bin/vol bin/volume.hs
+  - command: make -C bin/ all
+    stdin: true
+    stdout: true
+    stderr: true
   - chmod -R 0700 ghc
+  - sudo chown -R $USER:$USER /home/$USER/dotfiles
   - shell/run_chef.sh &
