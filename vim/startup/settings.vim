@@ -81,6 +81,8 @@ runtime macros/matchit.vim
 " Tool to use for Grepper
 set grepprg="git"
 
+set formatprg=par\ -w80
+
 "" ============================================================================
 ""                                Appearances
 "" ============================================================================
@@ -117,6 +119,3 @@ autocmd FileType xml setlocal equalprg=xmllint\ --format\ -
 
 " Markdown
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-
-" Haskell
-autocmd FileType haskell set formatprg=pointfree
