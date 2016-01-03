@@ -12,6 +12,7 @@
     ci = commit
     co = checkout
     df = diff
+    dfc = diff --cached
     dom = diff origin/master -w
     doms = diff origin/master -w --stat
     f = fetch
@@ -19,6 +20,7 @@
     ld = log --decorate
     lg = log --decorate --oneline --graph --branches --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold blue)(%ar) %C(bold yellow)%d%C(reset) %C(green)%s%C(reset) %C(dim green)- %an%C(reset)'
     p = pull
+    pu = push
     rb = rebase
     st = status
     um = branch --set-upstream-to=origin/master
