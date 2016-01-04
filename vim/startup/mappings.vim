@@ -69,22 +69,17 @@ noremap <F5> :cex[]<CR>:cclose<CR>
 "" ============================================================================
 nmap <Leader>* yiw/^<C-r><C-0>\s*:<CR>
 nmap <Leader>/ /^\s*:\c<Left><Left><Left><Left><Left><Left>
-nnoremap <Leader>af :call Bde_Format("clang")<CR>
 nnoremap <Leader>b :CtrlPBuffer<CR>
 nnoremap <Leader>cdf :call Cdfile()<CR>
-nnoremap <Leader>cdg :call Cdgit()<CR>
-nnoremap <Leader>cds :call Cdscraper()<CR>
 nnoremap <Leader>cmt :call CmtSection("")<Left><Left>
 nnoremap <Leader>cx :!chmod a+x %<CR>
 nnoremap <Leader>df :Gdiff<CR>
 nnoremap <Leader>dom :Gdiff origin/master<CR>
-nnoremap <Leader>e :e %:h<CR>
 nnoremap <Leader>ff :FSHere<CR>
 nnoremap <Leader>fh :FSSplitLeft<CR>
 nnoremap <Leader>fj :FSSplitBelow<CR>
 nnoremap <Leader>fk :FSSplitAbove<CR>
 nnoremap <Leader>fl :FSSplitRight<CR>
-nnoremap <Leader>fmt :call Bde_Format("")<CR>
 nnoremap <Leader>fx :call GTestFixture("")<Left><Left>
 nnoremap <Leader>gg :Grepper<CR>
 nnoremap <Leader>h :set hlsearch! hlsearch?<CR>
@@ -100,9 +95,8 @@ nnoremap <Leader>pd <ESC>Opdb.set_trace()<ESC>j
 nnoremap <Leader>rr :w<CR>:call VimuxRunCommand('./' . bufname("%"))<CR>
 nnoremap <Leader>se :sp<CR>:e %:h<CR>
 nnoremap <Leader>ss :call SortSection()<CR>
-nnoremap <Leader>tb :TagbarToggle<CR>
 nnoremap <Leader>te :tabe %:h<CR>
-nnoremap <Leader>tf :call MkGtest()<CR>
+nnoremap <Leader>tf :call Cdfile()<CR>:call MkGtest()<CR>
 nnoremap <Leader>tm :Tabmerge right<CR>
 nnoremap <Leader>ve :vsp<CR>:e %:h<CR>
 nnoremap <Leader>vl :w<CR>:call VimuxRunCommand('(load "' . bufname("%") . '")')<CR>
