@@ -1,3 +1,2 @@
 #!/bin/bash
-echo "Running cppcheck and displaying errors . . ."
-cppcheck . | grep "(error)"
+cppcheck --enable=all --xml --xml-version=2
