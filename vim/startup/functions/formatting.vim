@@ -10,3 +10,10 @@ function! SortSection()
     call setline(startLine, sort(getline(startLine, curLine)))
 endfunction
 
+function! StripTabsAndTrailingWhitespaces()
+  let _s=@/
+  retab
+  %s/\s\+$//e
+  let @/=_s
+  exec "normal ``"
+endfunction
