@@ -81,7 +81,11 @@ runtime macros/matchit.vim
 " Tool to use for Grepper
 set grepprg="git"
 
+" What to use for gq
 set formatprg=par\ -w80
+
+" Use the system clipboard for yank and put!
+set clipboard=unnamedplus
 
 "" ============================================================================
 ""                                Appearances
