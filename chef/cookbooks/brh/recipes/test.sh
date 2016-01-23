@@ -4,13 +4,14 @@
 
 echo "Checking for multiple package definitions in Chef recipe."
 
-packages=$(grep -ho "package '.*'" ./*.rb | sort | uniq -c | grep '^\s*[2-9]')
+packages=$(grep -ho "package '.*'" ./*.rb | sort | uniq -c)
+duplicates=$(grep '^\s*[2-9]' "$packages")
 
-if [ -z "$packages" ]; then
+if [ -z "$duplicates" ]; then
     echo "No package multiply defined."
     exit 0
 else
     echo "The following packages are multiply defined:"
-    echo "$packages"
+    echo "$duplicates"
     exit 1
 fi

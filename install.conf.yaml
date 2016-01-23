@@ -34,7 +34,7 @@
 
 - shell:
   - [git submodule update --init --recursive, Updating submodules]
-  - command: shell/dependency_install.sh
+  - command: scripts/dependency_install.sh
     stdin: true
     stdout: true
     stderr: true
@@ -42,18 +42,18 @@
     stdin: true
     stdout: true
     stderr: true
-  - command: shell/ycm_regular_install.sh &
+  - command: scripts/ycm_regular_install.sh &
     stdin: true
     stdout: true
     stderr: true
-  - shell/firefox_user_settings.py
+  - scripts/firefox_user_settings.py
   - command: make -C bin/ all
     stdin: true
     stdout: true
     stderr: true
   - chmod -R 0700 ghc
   - sudo chown -R $USER:$USER /home/$USER/dotfiles
-  - command: shell/run_chef.sh &
+  - command: scripts/run_chef.sh &
     stdin: true
     stdout: true
     stderr: true

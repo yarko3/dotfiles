@@ -7,8 +7,6 @@ package 'graphviz'
 package 'icedtea-netx'
 package 'icedtea-plugin'
 package 'keepass2'
-package 'vagrant'
-package 'virtualbox'
 
 # Browsers
 package 'chromium-browser'
