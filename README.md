@@ -6,7 +6,7 @@ My dotfiles for vim, zsh, tmux, lisp, ghc, irssi, etc.
 Run this as the cloud-init user data, or on first boot:
 ```
 #!/bin/bash
-curl https://raw.githubusercontent.com/brhCS/dotfiles/master/shell/cloud_init.sh | bash
+curl https://raw.githubusercontent.com/brhCS/dotfiles/master/scripts/cloud_init.sh | bash
 ```
 #### Update and Run Idempotent Installer
 ```
