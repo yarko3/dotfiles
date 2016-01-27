@@ -1,5 +1,6 @@
 call plug#begin('~/.vim/plugged')
 
+Plug 'Shougo/vimproc'                 " Asynchronous command execution library
 Plug 'Twinside/vim-hoogle'            " Haskell function information
 Plug 'Valloric/ListToggle'            " Toggling quickfix and location list
 Plug 'benmills/vimux'                 " Vim and Tmux Integration
@@ -9,11 +10,13 @@ Plug 'brhCS/vim-snippets'             " My snippets fork
 Plug 'chazmcgarvey/vimcoder'          " Topcoder Vim Plugin
 Plug 'christoomey/vim-tmux-navigator' " Window/Pane switching with Vim and Tmux
 Plug 'ctrlpvim/ctrlp.vim'             " Ctrl-P
-Plug 'dag/vim2hs'                     " Haskell error checking and syntax highlighting
 Plug 'derekwyatt/vim-fswitch'         " Fastswitch (cpp/h toggle)
+Plug 'eagletmt/ghcmod-vim'            " Displays types of expressions and warings/errors
+Plug 'eagletmt/neco-ghc'              " Haskell completion engine
 Plug 'ivanov/vim-ipython'             " Vim + IPython Notebook integration
 Plug 'justinmk/vim-syntax-extra'      " Flex and Bison syntax highlighting
 Plug 'kovisoft/slimv'                 " Lisp in Vim
+Plug 'lukerandall/haskellmode-vim'    " Tons of useful things
 Plug 'luochen1990/rainbow'            " Rainbow parenthesis coloring
 Plug 'majutsushi/tagbar'              " Using for JavaScript
 Plug 'mhinz/vim-grepper'              " Asynchronous Grep -> QuickFix List
@@ -51,6 +54,14 @@ let g:ctrlp_working_path_mode = 'ra'
 " Grepper
 nmap gs  <plug>(GrepperOperator)
 xmap gs  <plug>(GrepperOperator)
+
+" Haskellmode-vim
+let g:haddock_browser="/usr/bin/firefox"
+
+" Necoghc
+let g:haskellmode_completion_ghc = 0
+let g:ycm_semantic_triggers = {'haskell' : ['.']}
+autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 
 " Netrw
 let g:netrw_sort_by = 'name'

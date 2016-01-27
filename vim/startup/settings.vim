@@ -123,3 +123,6 @@ autocmd FileType xml setlocal equalprg=xmllint\ --format\ -
 
 " Markdown
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+
+" Haskell
+au BufEnter *.hs compiler ghc
