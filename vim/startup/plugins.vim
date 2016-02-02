@@ -40,7 +40,7 @@ if g:platform == "Linux"
 endif
 
 if(g:bbenv != "")
-    Plug 'https://bbgithub.dev.bloomberg.com/bhipple/bde_plugins'  " Tools for formatting code according to BDE Standards
+    Plug 'brhCS/bde_plugins'  " Tools for formatting code according to BDE Standards
 endif
 
 call plug#end()
@@ -62,6 +62,11 @@ let g:haddock_browser="/usr/bin/firefox"
 let g:haskellmode_completion_ghc = 0
 let g:ycm_semantic_triggers = {'haskell' : ['.']}
 autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
+
+let g:grepper = {
+    \ 'tools':     ['git'],
+    \ 'jump':      1,
+    \ }
 
 " Netrw
 let g:netrw_sort_by = 'name'
