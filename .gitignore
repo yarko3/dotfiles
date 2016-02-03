@@ -1,3 +1,4 @@
 *.log
 *.pyc
 nodes
+vim/autoload/plug.vim.old
