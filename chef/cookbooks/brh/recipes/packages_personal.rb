@@ -5,14 +5,9 @@ include_recipe 'apt'
 package 'awesome'
 package 'dzen2'
 package 'graphviz'
-package 'icedtea-netx'
-package 'icedtea-plugin'
 package 'keepass2'
+package 'suckless-tools'
 package 'xmonad'
-
-# Browsers
-package 'chromium-browser'
-package 'flashplugin-installer'
 
 # Media
 package 'calibre'
@@ -43,7 +38,6 @@ package 'weather-util'
 
 # Programming Languages
 package 'golang'
-package 'mit-scheme'
 package 'octave'
 
 # Python

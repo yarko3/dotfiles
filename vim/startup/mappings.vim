@@ -110,9 +110,9 @@ nnoremap <Leader>vx :VimuxInterruptRunner<CR>
 nnoremap <Leader>w :call StripTabsAndTrailingWhitespaces()<CR>
 
 " Local Leaders
-autocmd FileType haskell nmap <buffer> <LocalLeader>sc :HoogleClose<CR>
-autocmd FileType haskell nmap <buffer> <LocalLeader>sh :Hoogle
-autocmd FileType haskell nmap <buffer> <LocalLeader>si :HoogleInfo<CR>
+autocmd FileType haskell nmap <buffer> <Leader>sc :HoogleClose<CR>
+autocmd FileType haskell nmap <buffer> <Leader>sh :Hoogle
+autocmd FileType haskell nmap <buffer> <Leader>si :HoogleInfo<CR>
 
 autocmd FileType haskell nmap <buffer> <F1> :HdevtoolsType<CR>
 autocmd FileType haskell nmap <buffer> <F2> :HdevtoolsClear<CR>
