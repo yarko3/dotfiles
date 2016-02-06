@@ -1,3 +1,8 @@
+*.hi
 *.log
+*.o
 *.pyc
 nodes
+vim/autoload/plug.vim.old
+xmonad.errors
+xmonad-x86*
