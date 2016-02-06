@@ -25,6 +25,7 @@
     ~/.vim: vim/
     ~/.vimrc: vimrc
     ~/.vimrc_minimal: vimrc_minimal
+    ~/.xmonad: xmonad/
     ~/.ycm_extra_conf.py: ycm_extra_conf.py
     ~/.zsh: zsh/
     ~/.zshrc: zshrc
