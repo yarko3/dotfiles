@@ -2,16 +2,14 @@
 # I will be using for substantial periods of time.
 include_recipe 'apt'
 
-package 'awesome'
-package 'dzen2'
 package 'graphviz'
 package 'keepass2'
 package 'suckless-tools'
+package 'xmobar'
 package 'xmonad'
 
 # Media
 package 'calibre'
-package 'gimp'
 package 'imagemagick'
 package 'libav-tools'
 package 'libavcodec-extra'
