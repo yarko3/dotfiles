@@ -3,7 +3,6 @@
 - link:
     ~/.dotfiles: ''
     ~/.Xdefaults: Xdefaults
-    ~/.Xmodmaps: Xmodmaps/
     ~/.chef/cookbooks:
       create: true
       force: true

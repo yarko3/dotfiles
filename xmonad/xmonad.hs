@@ -1,16 +1,25 @@
+import System.IO (hPutStrLn)
 import XMonad
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
-import XMonad.Util.Run (spawnPipe)
 import XMonad.Util.EZConfig (additionalKeys)
-import System.IO (hPutStrLn)
+import XMonad.Util.Run (spawnPipe)
+
+myTerminal = "gnome-terminal"
+myModMask = mod4Mask
+
+-- Program names that should not be managed and tiled
+myManageHook = composeAll [
+        className =? "Gimp" --> doFloat
+    ]
 
 main = do
     xmproc <- spawnPipe "xmobar"
+    _ <- spawn myTerminal
     xmonad $ defaultConfig {
             terminal = myTerminal,
             modMask = myModMask,
-            manageHook = manageDocks <+> manageHook defaultConfig,
+            manageHook = manageDocks <+> myManageHook <+> manageHook defaultConfig,
             layoutHook = avoidStruts $ layoutHook defaultConfig,
             logHook = dynamicLogWithPP xmobarPP {
                             ppOutput = hPutStrLn xmproc,
@@ -22,5 +31,3 @@ main = do
             ((controlMask .|. shiftMask, xK_l), spawn "slock")
         ]
 
-myTerminal = "gnome-terminal"
-myModMask = mod4Mask
