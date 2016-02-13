@@ -22,6 +22,9 @@ myLogHook xmproc = dynamicLogWithPP xmobarPP {
                             ppTitle = xmobarColor "green" "" . shorten 50
                         }
 
+restartCmd :: String
+restartCmd = "if type xmonad; then xmonad --recompile && xmonad --restart; else xmessage xmonad not in \\$PATH: \"$PATH\"; fi"
+
 -- Disable greedyView
 isVisible w ws = any ((w ==) . W.tag . W.workspace) (W.visible ws)
 lazyView w ws = if isVisible w ws then ws else W.view w ws
@@ -33,37 +36,43 @@ myWorkspaces = map show [1..6 :: Int]
 main = do
     xmproc <- spawnPipe "xmobar"
     _ <- spawn myTerminal
-    xmonad $ defaultConfig {
-            terminal = myTerminal,
-            modMask = myModMask,
-            XMonad.workspaces = myWorkspaces,
-            manageHook = myManageHook,
-            layoutHook = myLayoutHook,
-            logHook = myLogHook xmproc
-        } `additionalKeys`
-        [((mod4Mask, xK_Return), spawn myTerminal)
-        ,((controlMask .|. shiftMask, xK_l), spawn "slock")
+    xmonad $ defaultConfig
+        { terminal = myTerminal
+        , modMask = myModMask
+        , XMonad.workspaces = myWorkspaces
+        , manageHook = myManageHook
+        , layoutHook = myLayoutHook
+        , logHook = myLogHook xmproc
+        } `additionalKeys` (
+        [ ((mod4Mask, xK_Return), spawn myTerminal)
+        , ((controlMask .|. shiftMask, xK_l), spawn "slock")
+        , ((mod4Mask, xK_r), spawn restartCmd)
         ]
-        {--
         ++
-        -- mod-[1..9] %! Switch to workspace N
-        -- mod-shift-[1..9] %! Move client to workspace N
-        [((m .|. mod4Mask, k), windows $ f i)
-            | (i, k) <- zip myWorkspaces [xK_1 .. xK_9]
-            , (f, m) <- [(W.greedyView, 0), (W.shift, shiftMask)]]
-        ++
-        -- mod-{w,e,r} %! Switch to physical/Xinerama screens 1, 2, or 3
-        -- mod-shift-{w,e,r} %! Move client to screen 1, 2, or 3
+
+        -- mod-{q,w,e,a,s,d} %! Switch to physical/Xinerama screens [1..6]
+        -- mod-shift-{q,w,e,a,s,d} %! Move client to screen [1..6]
         [((m .|. mod4Mask, key), screenWorkspace sc >>= flip whenJust (windows . f))
-            | (key, sc) <- zip [xK_w, xK_e, xK_r] [0..]
+            | (key, sc) <- zip [xK_q, xK_w, xK_e, xK_a, xK_s, xK_d, xK_f] [0..]
             , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]]
-        --}
-         -- ++
+
+
+        {--
+
+        -- mod-[1..6] %! Switch to workspace N
+        -- mod-shift-[1..6] %! Move client to workspace N
+        [((m .|. mod4Mask, k), windows $ f i)
+        | (i, k) <- zip myWorkspaces [xK_1 .. xK_9]
+        , (f, m) <- [(W.greedyView, 0), (W.shift, shiftMask)]]
+        ++
+        ++
          --
          -- mod-[1..9], Switch to workspace N
          -- mod-shift-[1..9], Move client to workspace N
          --
---        [((m .|. mod4Mask, k), windows $ f i)
---        , (i, k) <- zip (myWorkspaces) [xK_1 .. xK_9]
---        , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]]
+        [((m .|. mod4Mask, k), windows $ f i)
+        , (i, k) <- zip (myWorkspaces) [xK_1 .. xK_9]
+        , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]]
 
+-}
+        )
