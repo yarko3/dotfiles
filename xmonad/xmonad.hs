@@ -72,9 +72,10 @@ main = do
 
         ++
         -- mod-[1..6] %! Switch focus to workspace N (TODO: of this screen)
-        -- mod-ctrl-[1..6] %! Move client to workspace N (TODO: of this screen)
+        -- mod-shift-[1..6] %! Move client to workspace N (TODO: of this screen)
         [ ((m .|. mod4Mask, k), windows $ f i)
         | (i, k) <- zip myWorkspaces [xK_1 .. xK_9]
-        , (f, m) <- [(W.view, 0), (W.shift, controlMask)]
+        , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]
         ]
         )
+
