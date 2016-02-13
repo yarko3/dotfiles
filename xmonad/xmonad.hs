@@ -59,14 +59,14 @@ main = do
         } `additionalKeys` (
         [ ((mod4Mask, xK_Return), spawn myTerminal)
         , ((controlMask .|. shiftMask, xK_l), spawn "slock")
-        , ((mod4Mask, xK_q), spawn restartCmd)
+        , ((mod4Mask, xK_r), spawn restartCmd)
         ]
 
         ++
         -- mod-{w,e,r,s,d,f} %! Switch focus to physical/Xinerama screens
         -- mod-shift-{w,e,r,s,d,f} %! Throw client to physical/Xinerama screen
         [ ((m .|. mod4Mask, key), screenWorkspace sc >>= flip whenJust (windows . f))
-          | (key, sc) <- zip [xK_w, xK_e, xK_r, xK_s, xK_d, xK_f] xOrder
+          | (key, sc) <- zip [xK_q, xK_w, xK_e, xK_a, xK_s, xK_d] xOrder
           , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]
         ]
 
