@@ -4,5 +4,6 @@
 *.pyc
 nodes
 vim/autoload/plug.vim.old
-xmonad.errors
 xmonad-x86*
+xmonad.errors
+xmonad/xmonad
