@@ -48,7 +48,7 @@ main = do
     xmproc <- spawnPipe "xmobar"
     screens <- getScreens
     _ <- spawn myTerminal
-    let myWorkspaces = map show screens
+    let myWorkspaces = map show [1 .. (5 * length screens)]
     xmonad $ defaultConfig
         { terminal = myTerminal
         , modMask = myModMask

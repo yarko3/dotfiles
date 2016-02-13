@@ -4,6 +4,7 @@
 *.pyc
 nodes
 vim/autoload/plug.vim.old
+vim/haskellmode.config
 xmonad-x86*
 xmonad.errors
 xmonad/xmonad
