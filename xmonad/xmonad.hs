@@ -38,6 +38,8 @@ getScreens = openDisplay "" >>= liftA2 (<*) f closeDisplay
 -- Relationship between physical placement of monitor and screen number in Xinerama
 xOrder = [2, 1, 5,
           3, 0, 4]
+xKeys = [xK_q, xK_w, xK_e,
+         xK_a, xK_s, xK_d]
 
 -- xmobar on every screen
 xmobarScreen :: Int -> IO Handle
@@ -52,6 +54,7 @@ main = do
     xmonad $ defaultConfig
         { terminal = myTerminal
         , modMask = myModMask
+        , borderWidth = 2
         , XMonad.workspaces = myWorkspaces
         , manageHook = myManageHook
         , layoutHook = myLayoutHook
@@ -66,7 +69,7 @@ main = do
         -- mod-{w,e,r,s,d,f} %! Switch focus to physical/Xinerama screens
         -- mod-shift-{w,e,r,s,d,f} %! Throw client to physical/Xinerama screen
         [ ((m .|. mod4Mask, key), screenWorkspace sc >>= flip whenJust (windows . f))
-          | (key, sc) <- zip [xK_q, xK_w, xK_e, xK_a, xK_s, xK_d] xOrder
+          | (key, sc) <- zip xKeys xOrder
           , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]
         ]
 
@@ -78,4 +81,3 @@ main = do
         , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]
         ]
         )
-
