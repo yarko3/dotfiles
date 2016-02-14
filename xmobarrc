@@ -1,0 +1,5 @@
+Config {
+    allDesktops = True
+}
+
+-- vim:set ft=haskell:

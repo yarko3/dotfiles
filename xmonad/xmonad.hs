@@ -16,6 +16,7 @@ myModMask = mod4Mask
 
 -- Program names that should not be managed and tiled
 composeHook = composeAll [
+        className =? "Bloomberg" --> doFloat,
         className =? "Gimp" --> doFloat
     ]
 
