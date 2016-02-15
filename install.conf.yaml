@@ -28,6 +28,7 @@
     ~/.xmonad: xmonad/
     ~/.ycm_extra_conf.py: ycm_extra_conf.py
     ~/.zsh: zsh/
+    ~/.zshenv: zshenv
     ~/.zshrc: zshrc
     ~/Gemfile.lock: Gemfile.lock
     ~/Gemfile: Gemfile

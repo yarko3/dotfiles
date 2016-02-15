@@ -9,7 +9,7 @@ Plug 'bling/vim-airline'              " Status line
 Plug 'brhCS/vim-snippets'             " My snippets fork
 Plug 'chazmcgarvey/vimcoder'          " Topcoder Vim Plugin
 Plug 'christoomey/vim-tmux-navigator' " Window/Pane switching with Vim and Tmux
-Plug 'ctrlpvim/ctrlp.vim'             " Ctrl-P
+Plug 'ctrlpvim/ctrlp.vim'             " File searchin and opening
 Plug 'derekwyatt/vim-fswitch'         " Fastswitch (cpp/h toggle)
 Plug 'eagletmt/ghcmod-vim'            " Displays types of expressions and warings/errors
 Plug 'eagletmt/neco-ghc'              " Haskell completion engine
@@ -27,7 +27,6 @@ Plug 'tpope/vim-abolish'              " Coercion and Subvert
 Plug 'tpope/vim-commentary'           " Comment/uncomment operator
 Plug 'tpope/vim-dispatch'             " Asynchronous Makes
 Plug 'tpope/vim-fugitive'             " Git Wrapper
-Plug 'tpope/vim-git'                  " Setting textwidth on git commits
 Plug 'tpope/vim-repeat'               " Dot operator for plugins
 Plug 'tpope/vim-surround'             " Surrounding text
 Plug 'tpope/vim-unimpaired'           " Pairs of keyboard mappings for common tasks

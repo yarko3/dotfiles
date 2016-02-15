@@ -26,8 +26,9 @@ inoremap <F3> BAEL_LOG_DEBUG <<
 inoremap <F4> BAEL_LOG_ERROR << 
 inoremap <F5> << BAEL_LOG_END;<ESC>
 
-" Leaving insert mode with jj
+" Leaving insert mode with jj or jk
 inoremap jj <Esc><Right>
+inoremap jk <Esc><Right>
 
 
 "" ============================================================================
@@ -43,11 +44,6 @@ nnoremap n :set hlsearch<CR>n
 nnoremap N :set hlsearch<CR>N
 nnoremap / :set hlsearch<CR>/
 nnoremap ? :set hlsearch<CR>?
-
-" Also, commmand and search history by default
-"nnoremap : q:i
-"nnoremap / :set hlsearch<CR>q/i
-"nnoremap ? :set hlsearch<CR>q?i
 
 " Swap to last buffer
 nnoremap <silent> <F8> :b#<CR>
@@ -70,8 +66,6 @@ noremap <F5> :cex[]<CR>:cclose<CR>
 " Also use spacebar as a leader
 nmap <Space> \
 
-nmap <Leader>* yiw/^<C-r><C-0>\s*:<CR>
-nmap <Leader>/ /^\s*:\c<Left><Left><Left><Left><Left><Left>
 nnoremap <Leader>b :CtrlPBuffer<CR>
 nnoremap <Leader>cdf :call Cdfile()<CR>
 nnoremap <Leader>cmt :call CmtSection("")<Left><Left>
@@ -94,7 +88,6 @@ nnoremap <Leader>jc :YcmCompleter GoToDeclaration<CR>
 nnoremap <Leader>jf :YcmCompleter GoToDefinition<CR>
 nnoremap <Leader>ji :YcmCompleter GoToImprecise<CR>
 nnoremap <Leader>jj :YcmCompleter GoTo<CR>
-nnoremap <Leader>pd <ESC>Opdb.set_trace()<ESC>j
 nnoremap <Leader>rr :w<CR>:call VimuxRunCommand('./' . bufname("%"))<CR>
 nnoremap <Leader>se :sp<CR>:e %:h<CR>
 nnoremap <Leader>ss :call SortSection()<CR>
