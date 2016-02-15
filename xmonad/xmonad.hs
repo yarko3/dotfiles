@@ -49,9 +49,9 @@ xmobarScreen = spawnPipe . ("xmobar -x " ++) . show
 --------------------------------------------------------------------------------
 main = do
     xmproc <- spawnPipe "xmobar"
-    screens <- getScreens
+    screenCt <- countScreens
     _ <- spawn myTerminal
-    let myWorkspaces = map show [1 .. (5 * length screens)]
+    let myWorkspaces = withScreens screenCt $ map show [1..6]
     xmonad $ defaultConfig
         { terminal = myTerminal
         , modMask = myModMask
@@ -75,9 +75,9 @@ main = do
         ]
 
         ++
-        -- mod-[1..6] %! Switch focus to workspace N (TODO: of this screen)
-        -- mod-shift-[1..6] %! Move client to workspace N (TODO: of this screen)
-        [ ((m .|. mod4Mask, k), windows $ f i)
+        -- mod-[1..6] %! Switch focus to workspace N of this screen
+        -- mod-shift-[1..6] %! Move client to workspace N of this screen
+        [ ((m .|. mod4Mask, k), windows $ onCurrentScreen f i)
         | (i, k) <- zip myWorkspaces [xK_1 .. xK_9]
         , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]
         ]
