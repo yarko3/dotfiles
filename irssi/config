@@ -1,5 +1,11 @@
 servers = (
   {
+    address = "localhost";
+    chatnet = "BitlBee";
+    port = "6667";
+    autoconnect = "yes";
+  },
+  {
     address = "chat.freenode.net";
     chatnet = "Freenode";
     port = "6667";
@@ -9,7 +15,13 @@ servers = (
   }
 );
 
-chatnets = { Freenode = { type = "IRC"; }; };
+chatnets = {
+    Freenode = { type = "IRC"; };
+    BitlBee = {
+        type = "IRC";
+        autosendcmd = "/^MSG root identify ben";
+    }
+};
 
 channels = (
   { name = "#haskell"; chatnet = "Freenode"; autojoin = "yes"; },
