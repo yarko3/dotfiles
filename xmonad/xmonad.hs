@@ -46,13 +46,7 @@ xKeys = [xK_q, xK_w, xK_e,
 xmobarScreen :: Int -> IO Handle
 xmobarScreen = spawnPipe . ("xmobar -x " ++) . show
 
---------------------------------------------------------------------------------
-main = do
-    xmproc <- spawnPipe "xmobar"
-    screenCt <- countScreens
-    _ <- spawn myTerminal
-    let myWorkspaces = withScreens screenCt $ map show [1..6]
-    xmonad $ defaultConfig
+conf myWorkspaces xmproc = defaultConfig
         { terminal = myTerminal
         , modMask = myModMask
         , borderWidth = 2
@@ -82,3 +76,10 @@ main = do
         , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]
         ]
         )
+--------------------------------------------------------------------------------
+main = do
+    xmproc <- spawnPipe "xmobar"
+    screenCt <- countScreens
+    _ <- spawn myTerminal
+    let myWorkspaces = withScreens screenCt $ map show [1..6]
+    xmonad $ conf myWorkspaces xmproc
