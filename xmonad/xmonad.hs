@@ -46,7 +46,7 @@ xKeys = [xK_q, xK_w, xK_e,
          xK_a, xK_s, xK_d]
 
 conf screenCt xmproc =
-        let myWorkspaces = withScreens screenCt $ map show [1..6] in
+        let myWorkspaces = withScreens screenCt $ map show [1..9] in
         defaultConfig
         { terminal = myTerminal
         , modMask = mod4Mask
