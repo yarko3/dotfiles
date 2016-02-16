@@ -2,6 +2,7 @@ import Control.Applicative
 import System.Exit
 import System.IO (hPutStrLn, Handle)
 import XMonad
+import XMonad.Core (WorkspaceId)
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
 import XMonad.Layout.IndependentScreens
