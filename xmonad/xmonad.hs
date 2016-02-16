@@ -1,19 +1,16 @@
+import Control.Applicative
+import System.Exit
 import System.IO (hPutStrLn, Handle)
 import XMonad
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
 import XMonad.Layout.IndependentScreens
-import qualified XMonad.StackSet as W
-import XMonad.Util.EZConfig (additionalKeys)
 import XMonad.Util.Run (spawnPipe)
-
-import Control.Applicative
-import Graphics.X11.Xinerama (getScreenInfo)
-import Graphics.X11.Xlib.Display (closeDisplay)
-
 import qualified Data.Map as M
+import qualified XMonad.StackSet as W
 
 main = do
+    screenCt <- countScreens
     xmproc <- spawnPipe "xmobar"
     _ <- spawn myTerminal
     xmonad $ conf xmproc
@@ -55,31 +52,68 @@ conf xmproc =
         defaultConfig
         { terminal = myTerminal
         , modMask = myModMask
-        , borderWidth = 2
+        , borderWidth = 3
         , XMonad.workspaces = myWorkspaces
         , manageHook = myManageHook
         , layoutHook = myLayoutHook
         , logHook = myLogHook xmproc
-        } `additionalKeys` (
+        , keys = myKeys
+        }
 
-        [ ((mod4Mask, xK_Return), spawn myTerminal)
-        , ((controlMask .|. shiftMask, xK_l), spawn "slock")
-        , ((mod4Mask, xK_r), spawn restartCmd)
-        ]
 
-        ++
-        -- mod-{w,e,r,s,d,f} %! Switch focus to physical/Xinerama screens
-        -- mod-shift-{w,e,r,s,d,f} %! Throw client to physical/Xinerama screen
-        [ ((m .|. mod4Mask, key), screenWorkspace sc >>= flip whenJust (windows . f))
-          | (key, sc) <- zip xKeys xOrder
-          , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]
-        ]
+myKeys :: XConfig Layout -> M.Map (KeyMask, KeySym) (X ())
+myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
+    -- launching and killing programs
+    [ ((modMask .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf)
+    , ((modMask,               xK_p     ), spawn "dmenu_run")
+    , ((modMask .|. shiftMask, xK_c     ), kill)
 
-        ++
-        -- mod-[1..6] %! Switch focus to workspace N of this screen
-        -- mod-shift-[1..6] %! Move client to workspace N of this screen
-        [ ((m .|. mod4Mask, k), windows $ onCurrentScreen f i)
-        | (i, k) <- zip myWorkspaces [xK_1 .. xK_9]
-        , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]
-        ]
-        )
+    , ((modMask,               xK_space ), sendMessage NextLayout)
+    , ((modMask .|. shiftMask, xK_space ), setLayout $ XMonad.layoutHook conf)
+
+    , ((modMask,               xK_n     ), refresh)
+
+    -- move focus up or down the window stack
+    , ((modMask,               xK_Tab   ), windows W.focusDown)
+    , ((modMask .|. shiftMask, xK_Tab   ), windows W.focusUp  )
+    , ((modMask,               xK_j     ), windows W.focusDown)
+    , ((modMask,               xK_k     ), windows W.focusUp  )
+    , ((modMask,               xK_m     ), windows W.focusMaster  )
+
+    -- modifying the window order
+    , ((modMask,               xK_Return), windows W.swapMaster)
+    , ((modMask .|. shiftMask, xK_j     ), windows W.swapDown  )
+    , ((modMask .|. shiftMask, xK_k     ), windows W.swapUp    )
+
+    -- resizing the master/slave ratio
+    , ((modMask,               xK_h     ), sendMessage Shrink)
+    , ((modMask,               xK_l     ), sendMessage Expand)
+
+    -- floating layer support
+    , ((modMask,               xK_t     ), withFocused $ windows . W.sink)
+
+    -- increase or decrease number of windows in the master area
+    , ((modMask              , xK_comma ), sendMessage (IncMasterN 1))
+    , ((modMask              , xK_period), sendMessage (IncMasterN (-1)))
+    ]
+    ++
+    [ ((mod4Mask, xK_Return), spawn myTerminal)
+    , ((controlMask .|. shiftMask, xK_l), spawn "slock")
+    , ((mod4Mask, xK_r), spawn restartCmd)
+    ]
+
+    ++
+    -- mod-{w,e,r,s,d,f} %! Switch focus to physical/Xinerama screens
+    -- mod-shift-{w,e,r,s,d,f} %! Throw client to physical/Xinerama screen
+    [ ((m .|. mod4Mask, key), screenWorkspace sc >>= flip whenJust (windows . f))
+      | (key, sc) <- zip xKeys xOrder
+      , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]
+    ]
+
+    ++
+    -- mod-[1..6] %! Switch focus to workspace N of this screen
+    -- mod-shift-[1..6] %! Move client to workspace N of this screen
+    [ ((m .|. mod4Mask, k), windows $ onCurrentScreen f i)
+    | (i, k) <- zip (XMonad.workspaces conf) [xK_1 .. xK_9]
+    , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]
+    ]
