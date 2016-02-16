@@ -13,13 +13,10 @@ main = do
     screenCt <- countScreens
     xmproc <- spawnPipe "xmobar"
     _ <- spawn myTerminal
-    xmonad $ conf xmproc
+    xmonad $ conf screenCt xmproc
 
 myTerminal :: String
 myTerminal = "gnome-terminal"
-
-myModMask :: KeyMask
-myModMask = mod4Mask
 
 -- Program names that should not be managed and tiled
 composeHook = composeAll [
@@ -47,11 +44,11 @@ xKeys :: [KeySym]
 xKeys = [xK_q, xK_w, xK_e,
          xK_a, xK_s, xK_d]
 
-conf xmproc =
-        let myWorkspaces = withScreens 6 $ map show [1..9] in
+conf screenCt xmproc =
+        let myWorkspaces = withScreens screenCt $ map show [1..6] in
         defaultConfig
         { terminal = myTerminal
-        , modMask = myModMask
+        , modMask = mod4Mask
         , borderWidth = 3
         , XMonad.workspaces = myWorkspaces
         , manageHook = myManageHook
@@ -59,7 +56,6 @@ conf xmproc =
         , logHook = myLogHook xmproc
         , keys = myKeys
         }
-
 
 myKeys :: XConfig Layout -> M.Map (KeyMask, KeySym) (X ())
 myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
@@ -78,10 +74,9 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
     , ((modMask .|. shiftMask, xK_Tab   ), windows W.focusUp  )
     , ((modMask,               xK_j     ), windows W.focusDown)
     , ((modMask,               xK_k     ), windows W.focusUp  )
-    , ((modMask,               xK_m     ), windows W.focusMaster  )
+    , ((modMask,               xK_m     ), windows W.focusMaster)
 
     -- modifying the window order
-    , ((modMask,               xK_Return), windows W.swapMaster)
     , ((modMask .|. shiftMask, xK_j     ), windows W.swapDown  )
     , ((modMask .|. shiftMask, xK_k     ), windows W.swapUp    )
 
@@ -101,8 +96,8 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
     , ((modMask, xK_r), spawn restartCmd)
     ]
     ++
-    -- mod-{w,e,r,s,d,f} %! Switch focus to physical/Xinerama screens
-    -- mod-shift-{w,e,r,s,d,f} %! Throw client to physical/Xinerama screen
+    -- mod-{q,w,e,a,s,d} %! Switch focus to physical/Xinerama screens
+    -- mod-shift-{q,w,e,a,s,d} %! Throw client to physical/Xinerama screen
     [ ((m .|. modMask, key), screenWorkspace sc >>= flip whenJust (windows . f))
       | (key, sc) <- zip xKeys xOrder
       , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]
@@ -111,6 +106,6 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
     -- mod-[1..6] %! Switch focus to workspace N of this screen
     -- mod-shift-[1..6] %! Move client to workspace N of this screen
     [ ((m .|. modMask, k), windows $ onCurrentScreen f i)
-    | (i, k) <- zip (XMonad.workspaces conf) [xK_1 .. xK_9]
+    | (i, k) <- zip (workspaces' conf) [xK_1 .. xK_9]
     , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]
     ]
