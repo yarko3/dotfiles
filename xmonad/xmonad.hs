@@ -10,6 +10,9 @@ import XMonad.Util.Run (spawnPipe)
 import qualified Data.Map as M
 import qualified XMonad.StackSet as W
 
+-- Put any local configuration here
+import XMonadLocal
+
 main = do
     screenCt <- countScreens
     xmproc <- spawnPipe "xmobar"
@@ -21,8 +24,14 @@ myTerminal = "gnome-terminal"
 
 -- Program names that should not be managed and tiled
 composeHook = composeAll [
+        className =? "1-BLOOMBERG" --> doFloat,
+        className =? "2-BLOOMBERG" --> doFloat,
+        className =? "3-BLOOMBERG" --> doFloat,
+        className =? "4-BLOOMBERG" --> doFloat,
         className =? "Bloomberg" --> doFloat,
-        className =? "Gimp" --> doFloat
+        className =? "Gimp" --> doFloat,
+        className =? "IB" --> doFloat,
+        className =? "Laundhpad - Ben View" --> doFloat
     ]
 
 myManageHook = manageDocks <+> composeHook <+> manageHook defaultConfig
@@ -35,15 +44,6 @@ myLogHook xmproc = dynamicLogWithPP xmobarPP {
 restartCmd :: String
 restartCmd = "if type xmonad; then xmonad --recompile && \
               \xmonad --restart; else xmessage xmonad not in PATH; fi"
-
--- Relationship between physical placement of monitor and screen number in Xinerama
-xOrder :: [ScreenId]
-xOrder = [2, 1, 5,
-          3, 0, 4]
-
-xKeys :: [KeySym]
-xKeys = [xK_q, xK_w, xK_e,
-         xK_a, xK_s, xK_d]
 
 conf screenCt xmproc =
         let myWorkspaces = withScreens screenCt $ map show [1..9] in

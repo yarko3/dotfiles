@@ -8,3 +8,4 @@ vim/haskellmode.config
 xmonad-x86*
 xmonad.errors
 xmonad/xmonad
+xmonad/lib
