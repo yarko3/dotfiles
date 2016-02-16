@@ -1,4 +1,4 @@
-# dotfiles  [![Build Status](https://travis-ci.org/brhCS/dotfiles.svg?branch=master)](https://travis-ci.org/brhCS/dotfiles)
+# dotfiles  [![Build Status](https://travis-ci.org/bhipple/dotfiles.svg?branch=master)](https://travis-ci.org/bhipple/dotfiles)
 My dotfiles for vim, zsh, tmux, lisp, ghc, irssi, etc.
 
 ### Installation
@@ -6,7 +6,7 @@ My dotfiles for vim, zsh, tmux, lisp, ghc, irssi, etc.
 Run this as the cloud-init user data, or on first boot:
 ```
 #!/bin/bash
-curl https://raw.githubusercontent.com/brhCS/dotfiles/master/scripts/cloud_init.sh | bash
+curl https://raw.githubusercontent.com/bhipple/dotfiles/master/scripts/cloud_init.sh | bash
 ```
 #### Update and Run Idempotent Installer
 ```
