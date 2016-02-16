@@ -64,7 +64,7 @@ conf xmproc =
 myKeys :: XConfig Layout -> M.Map (KeyMask, KeySym) (X ())
 myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
     -- launching and killing programs
-    [ ((modMask .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf)
+    [ ((modMask, xK_Return), spawn $ XMonad.terminal conf)
     , ((modMask,               xK_p     ), spawn "dmenu_run")
     , ((modMask .|. shiftMask, xK_c     ), kill)
 
@@ -95,25 +95,22 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
     -- increase or decrease number of windows in the master area
     , ((modMask              , xK_comma ), sendMessage (IncMasterN 1))
     , ((modMask              , xK_period), sendMessage (IncMasterN (-1)))
-    ]
-    ++
-    [ ((mod4Mask, xK_Return), spawn myTerminal)
-    , ((controlMask .|. shiftMask, xK_l), spawn "slock")
-    , ((mod4Mask, xK_r), spawn restartCmd)
-    ]
 
+    -- locking and restarting
+    , ((controlMask .|. shiftMask, xK_l), spawn "slock")
+    , ((modMask, xK_r), spawn restartCmd)
+    ]
     ++
     -- mod-{w,e,r,s,d,f} %! Switch focus to physical/Xinerama screens
     -- mod-shift-{w,e,r,s,d,f} %! Throw client to physical/Xinerama screen
-    [ ((m .|. mod4Mask, key), screenWorkspace sc >>= flip whenJust (windows . f))
+    [ ((m .|. modMask, key), screenWorkspace sc >>= flip whenJust (windows . f))
       | (key, sc) <- zip xKeys xOrder
       , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]
     ]
-
     ++
     -- mod-[1..6] %! Switch focus to workspace N of this screen
     -- mod-shift-[1..6] %! Move client to workspace N of this screen
-    [ ((m .|. mod4Mask, k), windows $ onCurrentScreen f i)
+    [ ((m .|. modMask, k), windows $ onCurrentScreen f i)
     | (i, k) <- zip (XMonad.workspaces conf) [xK_1 .. xK_9]
     , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]
     ]
