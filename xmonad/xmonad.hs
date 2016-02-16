@@ -11,7 +11,17 @@ import Control.Applicative
 import Graphics.X11.Xinerama (getScreenInfo)
 import Graphics.X11.Xlib.Display (closeDisplay)
 
+import qualified Data.Map as M
+
+main = do
+    xmproc <- spawnPipe "xmobar"
+    _ <- spawn myTerminal
+    xmonad $ conf xmproc
+
+myTerminal :: String
 myTerminal = "gnome-terminal"
+
+myModMask :: KeyMask
 myModMask = mod4Mask
 
 -- Program names that should not be managed and tiled
@@ -31,22 +41,18 @@ restartCmd :: String
 restartCmd = "if type xmonad; then xmonad --recompile && \
               \xmonad --restart; else xmessage xmonad not in PATH; fi"
 
--- Get all Xinerama Screen #'s
-getScreens :: IO [Int]
-getScreens = openDisplay "" >>= liftA2 (<*) f closeDisplay
-    where f = fmap (zipWith const [0..]) . getScreenInfo
-
 -- Relationship between physical placement of monitor and screen number in Xinerama
+xOrder :: [ScreenId]
 xOrder = [2, 1, 5,
           3, 0, 4]
+
+xKeys :: [KeySym]
 xKeys = [xK_q, xK_w, xK_e,
          xK_a, xK_s, xK_d]
 
--- xmobar on every screen
-xmobarScreen :: Int -> IO Handle
-xmobarScreen = spawnPipe . ("xmobar -x " ++) . show
-
-conf myWorkspaces xmproc = defaultConfig
+conf xmproc =
+        let myWorkspaces = withScreens 6 $ map show [1..9] in
+        defaultConfig
         { terminal = myTerminal
         , modMask = myModMask
         , borderWidth = 2
@@ -55,6 +61,7 @@ conf myWorkspaces xmproc = defaultConfig
         , layoutHook = myLayoutHook
         , logHook = myLogHook xmproc
         } `additionalKeys` (
+
         [ ((mod4Mask, xK_Return), spawn myTerminal)
         , ((controlMask .|. shiftMask, xK_l), spawn "slock")
         , ((mod4Mask, xK_r), spawn restartCmd)
@@ -76,10 +83,3 @@ conf myWorkspaces xmproc = defaultConfig
         , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]
         ]
         )
---------------------------------------------------------------------------------
-main = do
-    xmproc <- spawnPipe "xmobar"
-    screenCt <- countScreens
-    _ <- spawn myTerminal
-    let myWorkspaces = withScreens screenCt $ map show [1..6]
-    xmonad $ conf myWorkspaces xmproc
