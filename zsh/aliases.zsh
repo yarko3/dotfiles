@@ -1,6 +1,7 @@
 alias battery='upower -i /org/freedesktop/UPower/devices/battery_BAT0'
 alias be='bundle exec'
 alias beg='bundle exec guard'
+alias ff='firefox'
 alias g='hub'
 alias git='hub'
 alias gm='gmake'
