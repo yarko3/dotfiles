@@ -51,6 +51,7 @@ conf screenCt xmproc =
         { terminal = myTerminal
         , modMask = mod4Mask
         , borderWidth = 3
+        , focusFollowsMouse = False
         , XMonad.workspaces = myWorkspaces
         , manageHook = myManageHook
         , layoutHook = myLayoutHook
