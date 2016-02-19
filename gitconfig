@@ -45,9 +45,9 @@
     lineNumber = true
 [advice]
     detachedHead = false
+[url "git://github.com/ghc/packages-"]
+    insteadOf = git://github.com/ghc/packages/
 
 # Allow local customizations
 [include]
     path = ~/.gitconfig_local
-[url "git://github.com/ghc/packages-"]
-    insteadOf = git://github.com/ghc/packages/
