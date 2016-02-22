@@ -46,6 +46,7 @@ package 'python-sklearn'
 
 # Haskell
 #package 'hoogle' # Installs Apache2, which causes issues on DigitalOcean?
+package 'haskell-stack'
 package 'libghc-regex-posix-dev'
 package 'pandoc'
 package 'texlive-latex-recommended'
