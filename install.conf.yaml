@@ -19,6 +19,10 @@
     ~/.irssi: irssi/
     ~/.quicklisp: quicklisp/
     ~/.sbclrc: sbclrc
+    ~/.stack/config.yaml:
+        create: true
+        force: true
+        path: stack/config.yaml
     ~/.tmux.conf: tmux.conf
     ~/.tmux: tmux/
     ~/.vim: vim/

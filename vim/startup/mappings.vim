@@ -106,6 +106,7 @@ nnoremap <Leader>w :call StripTabsAndTrailingWhitespaces()<CR>
 autocmd FileType haskell nmap <buffer> <Leader>sc :HoogleClose<CR>
 autocmd FileType haskell nmap <buffer> <Leader>sh :Hoogle
 autocmd FileType haskell nmap <buffer> <Leader>si :HoogleInfo<CR>
+autocmd FileType haskell nmap <buffer> <Leader>vt :w<CR>:call VimuxRunCommand("stack test")<CR>
 
 autocmd FileType haskell nmap <buffer> <F1> :HdevtoolsType<CR>
 autocmd FileType haskell nmap <buffer> <F2> :HdevtoolsClear<CR>
