@@ -70,7 +70,7 @@ set wildmenu
 set wildmode=list:longest
 
 " Ignoring files (see :help wildignore)
-set wildignore+=*.o,*.d,00*,nohup.out,tags,.hs-tags,*.hi,*.gcno,*.gcda,*.fasl
+set wildignore+=*.o,*.d,00*,nohup.out,tags,.hs-tags,*.hi,*.gcno,*.gcda,*.fasl,*.pyc
 
 " Number of lines to scroll past when the cursor scrolls off the screen
 set scrolloff=2
