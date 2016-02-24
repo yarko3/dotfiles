@@ -13,6 +13,7 @@ Plug 'ctrlpvim/ctrlp.vim'             " File searchin and opening
 Plug 'derekwyatt/vim-fswitch'         " Fastswitch (cpp/h toggle)
 Plug 'eagletmt/ghcmod-vim'            " Displays types of expressions and warings/errors
 Plug 'eagletmt/neco-ghc'              " Haskell completion engine
+Plug 'elaforge/fast-tags'             " Ctags generation for Haskell
 Plug 'ivanov/vim-ipython'             " Vim + IPython Notebook integration
 Plug 'justinmk/vim-syntax-extra'      " Flex and Bison syntax highlighting
 Plug 'kovisoft/slimv'                 " Lisp in Vim

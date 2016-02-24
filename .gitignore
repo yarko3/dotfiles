@@ -3,9 +3,10 @@
 *.o
 *.pyc
 nodes
+tags
 vim/autoload/plug.vim.old
 vim/haskellmode.config
 xmonad-x86*
 xmonad.errors
-xmonad/xmonad
 xmonad/lib
+xmonad/xmonad

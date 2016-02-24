@@ -17,3 +17,4 @@ fi
 
 stack setup
 stack install hdevtools
+stack install fast-tags
