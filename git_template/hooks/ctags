@@ -8,4 +8,4 @@ git ls-files | \
           mv "$dir/$$.tags" "$dir/tags"
 
 # Haskell!
-git ls-files '*.hs' | xargs fast-tags
+git ls-files '*.hs' | xargs fast-tags -o .hs-tags

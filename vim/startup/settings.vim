@@ -70,7 +70,7 @@ set wildmenu
 set wildmode=list:longest
 
 " Ignoring files (see :help wildignore)
-set wildignore+=*.o,*.d,00*,nohup.out,tags,*.hi,*.gcno,*.gcda,*.fasl
+set wildignore+=*.o,*.d,00*,nohup.out,tags,.hs-tags,*.hi,*.gcno,*.gcda,*.fasl
 
 " Number of lines to scroll past when the cursor scrolls off the screen
 set scrolloff=2
@@ -125,4 +125,5 @@ autocmd FileType xml setlocal equalprg=xmllint\ --format\ -
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
 " Haskell
+au FileType haskell setlocal tags=.hs-tags
 au BufEnter *.hs compiler ghc
