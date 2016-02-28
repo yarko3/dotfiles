@@ -57,10 +57,6 @@
     stdin: true
     stdout: true
     stderr: true
-  - command: make -C vim/plugged/vimproc
-    stdin: true
-    stdout: true
-    stderr: true
   - chmod -R 0700 ghc
   - sudo chown -R $USER:$USER /home/$USER/dotfiles
   - command: scripts/stack.sh

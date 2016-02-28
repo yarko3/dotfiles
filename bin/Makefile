@@ -3,4 +3,4 @@
 all: vol
 
 vol: volume.hs
-	ghc -o vol volume.hs
+	stack ghc -- volume.hs -o vol
