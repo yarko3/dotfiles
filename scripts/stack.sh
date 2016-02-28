@@ -19,7 +19,7 @@ fi
 
 stack setup
 
-tools=(fast-tags hdevtools hindent hlint)
+tools=(fast-tags hdevtools hindent hlint hoogle pointfree)
 for t in "${tools[@]}"; do
     echo "### Stack Installing $t ###"
     stack install "$t"

@@ -103,6 +103,10 @@ let g:rainbow_conf = {
 " SLIMV
 let g:slimv_repl_split=4 " Split Vertically
 
+" Syntastic
+let g:syntastic_aggregate_errors = 1
+let g:syntastic_check_on_wq = 0
+
 " UltiSnips
 " Magic to make the <enter> key expand snippes, even with YouCompleteMe installed.
 let g:UltiSnipsExpandTrigger = "<nop>"
