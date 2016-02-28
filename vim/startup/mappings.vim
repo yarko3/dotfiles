@@ -89,6 +89,7 @@ nnoremap <Leader>jf :YcmCompleter GoToDefinition<CR>
 nnoremap <Leader>ji :YcmCompleter GoToImprecise<CR>
 nnoremap <Leader>jj :YcmCompleter GoTo<CR>
 nnoremap <Leader>rr :w<CR>:call VimuxRunCommand('./' . bufname("%"))<CR>
+nnoremap <Leader>rd :redraw!<CR>
 nnoremap <Leader>se :sp<CR>:e %:h<CR>
 nnoremap <Leader>ss :call SortSection()<CR>
 nnoremap <Leader>te :tabe %:h<CR>

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 if ! [ "$(which stack)" ]; then
     echo "Installing Stack"
@@ -8,13 +8,19 @@ if ! [ "$(which stack)" ]; then
     else
         echo "Not sure what version to add."
         echo "See: https://github.com/commercialhaskell/stack/blob/master/doc/install_and_upgrade.md#ubuntu"
-        exit 1
+        exit 0
     fi
 
     sudo apt-get update
     sudo apt-get install stack
+else
+    echo "Stack is already installed."
 fi
 
 stack setup
-stack install hdevtools
-stack install fast-tags
+
+tools=(fast-tags hdevtools hindent hlint)
+for t in "${tools[@]}"; do
+    echo "### Stack Installing $t ###"
+    stack install "$t"
+done

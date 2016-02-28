@@ -4,7 +4,9 @@ include_recipe 'apt'
 
 package 'graphviz'
 package 'keepass2'
+package 'pandoc'
 package 'suckless-tools'
+package 'texlive-latex-recommended'
 package 'xmobar'
 package 'xmonad'
 
@@ -47,5 +49,3 @@ package 'python-sklearn'
 # Haskell
 #package 'hoogle' # Installs Apache2, which causes issues on DigitalOcean?
 package 'libghc-regex-posix-dev'
-package 'pandoc'
-package 'texlive-latex-recommended'

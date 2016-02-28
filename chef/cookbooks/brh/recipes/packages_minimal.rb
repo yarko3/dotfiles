@@ -25,12 +25,3 @@ package 'pyflakes'
 package 'python'
 package 'python-dev'
 package 'python-software-properties'
-
-# Haskell
-package 'cabal-install'
-package 'ghc'
-package 'ghc-mod'
-package 'hdevtools'
-package 'hlint'
-package 'libghc-hunit-dev'
-package 'shellcheck'

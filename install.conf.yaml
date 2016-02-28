@@ -63,6 +63,10 @@
     stderr: true
   - chmod -R 0700 ghc
   - sudo chown -R $USER:$USER /home/$USER/dotfiles
+  - command: scripts/stack.sh
+    stdin: true
+    stdout: true
+    stderr: true
   - command: scripts/run_chef.sh &
     stdin: true
     stdout: true
