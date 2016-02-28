@@ -6,7 +6,7 @@ Plug 'Valloric/ListToggle'            " Toggling quickfix and location list
 Plug 'benmills/vimux'                 " Vim and Tmux Integration
 Plug 'bitc/vim-hdevtools'             " Haskell
 Plug 'bling/vim-airline'              " Status line
-Plug 'brhCS/vim-snippets'             " My snippets fork
+Plug 'bhipple/vim-snippets'           " My snippets fork
 Plug 'chazmcgarvey/vimcoder'          " Topcoder Vim Plugin
 Plug 'christoomey/vim-tmux-navigator' " Window/Pane switching with Vim and Tmux
 Plug 'ctrlpvim/ctrlp.vim'             " File searchin and opening
@@ -40,7 +40,7 @@ if g:platform == "Linux"
 endif
 
 if(g:bbenv != "")
-    Plug 'brhCS/bde_plugins'  " Tools for formatting code according to BDE Standards
+    Plug 'bhipple/bde_plugins'  " Tools for formatting code according to BDE Standards
 endif
 
 call plug#end()
