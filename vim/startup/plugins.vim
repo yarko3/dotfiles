@@ -23,7 +23,7 @@ Plug 'luochen1990/rainbow'                                 " Rainbow parenthesis
 Plug 'majutsushi/tagbar'                                   " Using for JavaScript
 Plug 'mhinz/vim-grepper'                                   " Asynchronous Grep -> QuickFix List
 Plug 'scrooloose/nerdcommenter'                            " Functions for easier commenting
-Plug 'bhipple/syntastic'                                   " Syntax checking
+Plug 'scrooloose/syntastic'                                " Syntax checking
 Plug 'tommcdo/vim-exchange'                                " cx operator for exchanging text regions
 Plug 'tpope/vim-abolish'                                   " Coercion and Subvert
 Plug 'tpope/vim-commentary'                                " Comment/uncomment operator
