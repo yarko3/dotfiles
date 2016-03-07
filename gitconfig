@@ -13,6 +13,7 @@
     co = checkout
     df = diff
     dfc = diff --cached
+    dfh = diff -- .
     dfs = diff --stat
     dom = diff origin/master -w
     doms = diff origin/master -w --stat
