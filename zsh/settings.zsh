@@ -11,21 +11,22 @@ export GTEST_COLOR=yes
 # Reduce delay to 0.1 seconds for switching to normal mode with ESC
 export KEYTIMEOUT=1
 
-export PATH="/home/$USER/bin"
-export PATH="$PATH:/home/$USER/bin_local"
-export PATH="$PATH:/home/$USER/.local/bin"
-export PATH="$PATH:/home/$USER/.stack/programs/x86_64-linux/ghc-7.10.2/bin"
-export PATH="$PATH:/home/$USER/.cabal/bin"
-export PATH="$PATH:/home/$USER/.rvm/bin"
-export PATH="$PATH:/opt/chefdk/bin"
-export PATH="$PATH:/bin"
-export PATH="$PATH:/sbin"
-export PATH="$PATH:/usr/bin"
-export PATH="$PATH:/usr/local/bin"
-export PATH="$PATH:/usr/local/sbin"
-export PATH="$PATH:/usr/sbin"
+PATH=~/bin
+PATH=$PATH:~/bin_local
+PATH=$PATH:~/.local/bin
+PATH=$PATH:~/.stack/programs/x86_64-linux/ghc-7.10.2/bin
+PATH=$PATH:~/.stack/programs/x86_64-linux/ghc-7.10.3/bin
+PATH=$PATH:~/.cabal/bin
+PATH=$PATH:~/.rvm/bin
+PATH=$PATH:/opt/chefdk/bin
+PATH=$PATH:/bin
+PATH=$PATH:/sbin
+PATH=$PATH:/usr/bin
+PATH=$PATH:/usr/local/bin
+PATH=$PATH:/usr/local/sbin
+PATH=$PATH:/usr/sbin
 
-export PYTHONPATH="/home/$USER/bin"
+export PYTHONPATH=~/bin
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
