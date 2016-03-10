@@ -9,4 +9,3 @@ script:
     - ./test.sh
     - popd
     - hlint bin/*.hs
-    - make -C bin/ all
