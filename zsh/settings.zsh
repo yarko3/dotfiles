@@ -5,8 +5,14 @@ if [ "$TERM" != "screen-256color" ]; then
     export TERM=xterm-256color
 fi
 
-export EDITOR=vi
 export GTEST_COLOR=yes
+export EDITOR=vi
+
+cmd=$(uname -a | grep -q "Darwin")
+if [ $? -eq 0 ]; then
+    export MACOS="true"
+    export EDITOR=vim
+fi
 
 # Reduce delay to 0.1 seconds for switching to normal mode with ESC
 export KEYTIMEOUT=1
