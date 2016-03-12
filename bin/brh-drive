@@ -13,10 +13,10 @@ printHelp()
 
 download_file()
 {
-    fileId=$(drive list \
+    fileId=$(gdrive list \
                     | grep "\s$1\s" \
                     | awk '{print $1}')
-    drive download --id "$fileId" --force
+    gdrive download --id "$fileId" --force
 }
 
 download_keepass()
@@ -43,19 +43,19 @@ download_ssh_keys()
 upload_keepass()
 {
     cd ~/Documents
-    existingDb=$(drive list \
+    existingDb=$(gdrive list \
                             | grep "MyKeePassDatabase.kdbx" \
                             | awk '{print $1}')
 
-    echo "Deleting existing DB in Drive"
-    drive delete --id "$existingDb"
+    echo "Deleting existing DB in gDrive"
+    gdrive delete --id "$existingDb"
 
-    parentFolder=$(drive list \
+    parentFolder=$(gdrive list \
                     | grep Keys \
                     | awk '{print $1}')
 
-    echo "Uploading new file to Drive"
-    drive upload -f MyKeePassDatabase.kdbx -p "$parentFolder"
+    echo "Uploading new file to gDrive"
+    gdrive upload -f MyKeePassDatabase.kdbx -p "$parentFolder"
 }
 
 ## ============================================================================
@@ -69,15 +69,15 @@ while getopts "hdsu" opt; do
             printHelp
             ;;
         d)
-            echo "Downloading KeePass file from Drive" >&2
+            echo "Downloading KeePass file from gDrive" >&2
             download_keepass
             ;;
         s)
-            echo "Downloading ssh keys from Drive" >&2
+            echo "Downloading ssh keys from gDrive" >&2
             download_ssh_keys
             ;;
         u)
-            echo "Uploading ~/Documents/MyKeePassDatabase.kdbx to Drive" >&2
+            echo "Uploading ~/Documents/MyKeePassDatabase.kdbx to gDrive" >&2
             upload_keepass
             ;;
         \?)
