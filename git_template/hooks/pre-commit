@@ -3,8 +3,8 @@ lint()
 {
     fileregex="$1"
     binary="$2"
+    files=$(git diff --name-only --diff-filter=ACMRTUXB --cached -- "$fileregex")
 
-    files=$(git diff --name-only --cached -- "$fileregex")
     if [ -z "$files" ]; then
         return
     fi
