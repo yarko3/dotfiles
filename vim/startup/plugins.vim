@@ -105,6 +105,9 @@ let g:slimv_repl_split=4 " Split Vertically
 let g:syntastic_aggregate_errors = 1
 let g:syntastic_check_on_wq = 0
 
+" Tagbar
+let g:tagbar_left = 1
+
 " UltiSnips
 " Magic to make the <enter> key expand snippes, even with YouCompleteMe installed.
 let g:UltiSnipsExpandTrigger = "<nop>"
