@@ -11,7 +11,7 @@ Plug 'bling/vim-airline'                                   " Status line
 Plug 'chazmcgarvey/vimcoder'                               " Topcoder Vim Plugin
 Plug 'christoomey/vim-tmux-navigator'                      " Window/Pane switching with Vim and Tmux
 Plug 'ctrlpvim/ctrlp.vim'                                  " File searchin and opening
-Plug 'derekwyatt/vim-fswitch'                              " Fastswitch (cpp/h toggle)
+Plug 'derekwyatt/vim-fswitch', { 'for': 'cpp' }            " Fastswitch (cpp/h toggle)
 Plug 'eagletmt/ghcmod-vim', { 'for': 'haskell' }           " Displays types and warings/errors
 Plug 'eagletmt/neco-ghc', { 'for': 'haskell' }             " Haskell completion engine
 Plug 'elaforge/fast-tags', { 'for': 'haskell' }            " Ctags generation for Haskell
