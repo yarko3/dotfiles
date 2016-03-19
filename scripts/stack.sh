@@ -15,7 +15,17 @@ fi
 
 stack setup
 
-tools=(fast-tags hdevtools hindent hlint hoogle pandoc pointfree regex-posix)
+tools=(\
+    fast-tags \
+    ghc-mod \
+    hdevtools \
+    hindent \
+    hlint \
+    hoogle \
+    pandoc \
+    pointfree \
+    regex-posix \
+)
 for t in "${tools[@]}"; do
     echo "### Stack Installing $t ###"
     stack install "$t"
