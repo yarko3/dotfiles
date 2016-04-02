@@ -113,8 +113,4 @@ autocmd FileType haskell nmap <buffer> <F1> :HdevtoolsType<CR>
 autocmd FileType haskell nmap <buffer> <F2> :HdevtoolsClear<CR>
 autocmd FileType haskell nmap <buffer> <F3> :HdevtoolsInfo<CR>
 
-if(g:bbenv != "")
-    source ~/.vim/bundle/bde_plugins/bde_format.vim
-endif
-
 " Note - l and q are used for the location list and quickfix toggle by ListToggle

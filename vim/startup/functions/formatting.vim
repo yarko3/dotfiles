@@ -88,3 +88,13 @@ function! FixIncludeGuard()
     %s/^#endif.*$/#endif/ge
 endfunction
 
+" Optional second argument specifies what character to use for comment (if not in C/C++)
+function! s:CenteredStringStartColumn(str)
+    if strlen(a:str) >= 79
+        return 0
+    endif
+
+    let midCol = 40
+    let strMidptDist = strlen(a:str) / 2
+    return midCol - strMidptDist
+endfunction

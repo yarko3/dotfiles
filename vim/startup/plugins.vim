@@ -11,7 +11,7 @@ Plug 'bling/vim-airline'                                   " Status line
 Plug 'chazmcgarvey/vimcoder'                               " Topcoder Vim Plugin
 Plug 'christoomey/vim-tmux-navigator'                      " Window/Pane switching with Vim and Tmux
 Plug 'ctrlpvim/ctrlp.vim'                                  " File searchin and opening
-Plug 'derekwyatt/vim-fswitch'                              " Fastswitch (cpp/h toggle)
+Plug 'derekwyatt/vim-fswitch', { 'for': 'cpp' }            " Fastswitch (cpp/h toggle)
 Plug 'eagletmt/ghcmod-vim', { 'for': 'haskell' }           " Displays types and warings/errors
 Plug 'eagletmt/neco-ghc', { 'for': 'haskell' }             " Haskell completion engine
 Plug 'elaforge/fast-tags', { 'for': 'haskell' }            " Ctags generation for Haskell
@@ -104,6 +104,9 @@ let g:slimv_repl_split=4 " Split Vertically
 " Syntastic
 let g:syntastic_aggregate_errors = 1
 let g:syntastic_check_on_wq = 0
+
+" Tagbar
+let g:tagbar_left = 1
 
 " UltiSnips
 " Magic to make the <enter> key expand snippes, even with YouCompleteMe installed.
