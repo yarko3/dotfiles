@@ -68,10 +68,11 @@ nmap <Space> \
 
 nnoremap <Leader>b :CtrlPBuffer<CR>
 nnoremap <Leader>cdf :call Cdfile()<CR>
-nnoremap <Leader>cmt :call CmtSection("")<Left><Left>
+nnoremap <Leader>cmt :call CmtSection("", "#")<Left><Left><Left><Left><Left><Left><Left>
 nnoremap <Leader>cx :!chmod a+x %<CR>
 nnoremap <Leader>df :Gdiff<CR>
 nnoremap <Leader>dom :Gdiff origin/master<CR>
+nnoremap <Leader>ev :e $MYVIMRC<CR>G$F/
 nnoremap <Leader>ff :FSHere<CR>
 nnoremap <Leader>fh :FSSplitLeft<CR>
 nnoremap <Leader>fj :FSSplitBelow<CR>
@@ -108,9 +109,12 @@ autocmd FileType haskell nmap <buffer> <Leader>sc :HoogleClose<CR>
 autocmd FileType haskell nmap <buffer> <Leader>sh :Hoogle
 autocmd FileType haskell nmap <buffer> <Leader>si :HoogleInfo<CR>
 autocmd FileType haskell nmap <buffer> <Leader>vt :w<CR>:call VimuxRunCommand("stack test")<CR>
+autocmd FileType haskell nmap <buffer> <Leader>ga :w<CR>:GhcModTypeInsert<CR>
+autocmd FileType haskell nmap <buffer> <Leader>gi :w<CR>:GhcModInfoPreview<CR>
+autocmd FileType haskell nmap <buffer> <Leader>gt :w<CR>:HdevtoolsType<CR>
+autocmd FileType haskell nmap <buffer> <Leader>gc :w<CR>:HdevtoolsClear<CR>
 
-autocmd FileType haskell nmap <buffer> <F1> :HdevtoolsType<CR>
-autocmd FileType haskell nmap <buffer> <F2> :HdevtoolsClear<CR>
-autocmd FileType haskell nmap <buffer> <F3> :HdevtoolsInfo<CR>
+autocmd FileType haskell nmap <buffer> <F4> :w<CR>:call VimuxRunCommand("stack test")<CR>
 
 " Note - l and q are used for the location list and quickfix toggle by ListToggle
+nnoremap <Leader>p :pclose<CR>
