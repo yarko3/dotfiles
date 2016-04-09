@@ -16,6 +16,14 @@
     ~/.gitconfig: gitconfig
     ~/.haskeline: haskeline
     ~/.inputrc: inputrc
+    ~/.ipython/profile_default/ipython_notebook_config.py:
+        create: true
+        force: true
+        path: ipython/ipython_notebook_config.py
+    ~/.ipython/profile_default/startup/00-pyspark-setup.py:
+        create: true
+        force: true
+        path: ipython/startup/00-pyspark-setup.py
     ~/.irssi: irssi/
     ~/.quicklisp: quicklisp/
     ~/.sbclrc: sbclrc
