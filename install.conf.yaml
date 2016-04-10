@@ -60,7 +60,6 @@
     stdin: true
     stdout: true
     stderr: true
-  - scripts/firefox_user_settings.py
   - command: make -C bin/ all
     stdin: true
     stdout: true
