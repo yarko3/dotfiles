@@ -8,6 +8,7 @@
       force: true
       relink: true
       path: chef/cookbooks/
+    ~/.clang-format: clang-format
     ~/.dir_colors: dir_colors
     ~/.ghc/ghci.conf:
       create: true
