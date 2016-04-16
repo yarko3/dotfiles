@@ -80,7 +80,7 @@
     stdin: true
     stdout: true
     stderr: true
-  - command: scripts/run_chef.sh &
+  - command: scripts/run_chef.sh
     stdin: true
     stdout: true
     stderr: true
