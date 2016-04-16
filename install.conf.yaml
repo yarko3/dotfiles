@@ -32,6 +32,10 @@
         create: true
         force: true
         path: stack/config.yaml
+    ~/.stack/global/stack.yaml:
+        create: true
+        force: true
+        path: stack/stack.yaml
     ~/.tmux.conf: tmux.conf
     ~/.tmux: tmux/
     ~/.vim: vim/
