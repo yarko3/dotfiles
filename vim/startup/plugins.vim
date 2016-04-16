@@ -22,6 +22,7 @@ Plug 'lukerandall/haskellmode-vim', { 'for': 'haskell' }   " Tons of useful thin
 Plug 'luochen1990/rainbow'                                 " Rainbow parenthesis coloring
 Plug 'majutsushi/tagbar'                                   " Using for JavaScript
 Plug 'mhinz/vim-grepper'                                   " Asynchronous Grep -> QuickFix List
+Plug 'mhinz/vim-startify'                                  " Recently opened start screen
 Plug 'scrooloose/nerdcommenter'                            " Functions for easier commenting
 Plug 'scrooloose/syntastic'                                " Syntax checking
 Plug 'tommcdo/vim-exchange'                                " cx operator for exchanging text regions
