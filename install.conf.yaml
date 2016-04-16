@@ -73,9 +73,14 @@
     stdin: true
     stdout: true
     stderr: true
-  - chmod -R 0700 ghc
-  - sudo chown -R $USER:$USER /home/$USER/dotfiles
-  - sudo timedatectl set-timezone America/New_York
+  - command: scripts/fix_permissions.sh
+    stdin: true
+    stdout: true
+    stderr: true
+  - command: scripts/set_timezone.sh
+    stdin: true
+    stdout: true
+    stderr: true
   - command: scripts/stack.sh
     stdin: true
     stdout: true
