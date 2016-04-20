@@ -105,6 +105,7 @@ let g:slimv_repl_split=4 " Split Vertically
 " Syntastic
 let g:syntastic_aggregate_errors = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_always_populate_loc_list = 1
 
 " Tagbar
 let g:tagbar_left = 1
