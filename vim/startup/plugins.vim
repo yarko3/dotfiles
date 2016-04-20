@@ -36,7 +36,7 @@ Plug 'tpope/vim-unimpaired'                                " Pairs of keyboard m
 Plug 'tpope/vim-vinegar'                                   " netrw improvement
 Plug 'vim-scripts/Tabmerge'                                " Merge tabs into splits
 
-if g:platform == "Linux"
+if g:platform == "Linux" || g:platform == "Darwin"
     Plug 'SirVer/ultisnips'               " Text snippets
     Plug 'Valloric/YouCompleteMe'
 endif

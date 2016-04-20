@@ -26,6 +26,7 @@ tools=(\
     pandoc \
     pointfree \
     regex-posix \
+    turtle \
 )
 for t in "${tools[@]}"; do
     echo "### Stack Installing $t ###"

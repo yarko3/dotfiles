@@ -27,8 +27,8 @@ PATH=$PATH:~/.rvm/bin
 PATH=$PATH:/opt/chefdk/bin
 PATH=$PATH:/bin
 PATH=$PATH:/sbin
-PATH=$PATH:/usr/bin
 PATH=$PATH:/usr/local/bin
+PATH=$PATH:/usr/bin
 PATH=$PATH:/usr/local/sbin
 PATH=$PATH:/usr/sbin
 
