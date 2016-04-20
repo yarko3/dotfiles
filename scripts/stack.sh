@@ -16,6 +16,7 @@ fi
 stack setup
 
 tools=(\
+    StringTemplate \
     fast-tags \
     ghc-mod \
     hdevtools \
