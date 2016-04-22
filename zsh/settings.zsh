@@ -76,3 +76,32 @@ ZSH_THEME_GIT_PROMPT_PREFIX=""
 ZSH_THEME_GIT_PROMPT_SUFFIX=""
 
 export SPARK_HOME="/home/brh/spark-1.6.0-bin-hadoop2.6"
+
+## ============================================================================
+##                              Auto-Fu Config
+## ============================================================================
+# https://github.com/hchbaw/auto-fu.zsh/issues/29
+zle-line-init () { auto-fu-init; }; zle -N zle-line-init
+zle -N zle-keymap-select auto-fu-zle-keymap-select
+zstyle ':completion:*' completer _oldlist _complete
+zstyle ':auto-fu:var' postdisplay $'
+'
+
+my-reset-prompt-maybe () {
+  # XXX: While auto-stuff is in effect,
+  # when hitting <Return>, $KEYMAP becomes to `main`:
+  # <Return> → `reset-prompt`(*) → `accept-line` → `zle-line-init`
+  # → `zle-keymap-select` → `reset-promt` (again!)
+  # Skip unwanted `reset-prompt`(*).
+  ((auto_fu_init_p==1)) && [[ ${KEYMAP-} == main ]] && return
+
+  # XXX: Please notice that `afu` is treated as Insert-mode-ish.
+  RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins|afu)/}"
+  zle reset-prompt
+}
+
+zle-keymap-select () {
+  auto-fu-zle-keymap-select "$@"
+  my-reset-prompt-maybe
+}
+zle -N zle-keymap-select
