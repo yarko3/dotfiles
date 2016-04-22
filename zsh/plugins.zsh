@@ -15,6 +15,7 @@ if ! zgen saved; then
 
     # Github plugins
     zgen load djui/alias-tips
+    zgen load rupa/z
     zgen load zsh-users/zsh-completions
     zgen load zsh-users/zsh-history-substring-search
     zgen load zsh-users/zsh-syntax-highlighting
