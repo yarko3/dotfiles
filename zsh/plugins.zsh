@@ -19,7 +19,7 @@ if ! zgen saved; then
 
     # Github plugins
     zgen load djui/alias-tips
-    zgen load hchbaw/auto-fu.zsh
+    zgen load hchbaw/auto-fu.zsh . pu
     zgen load rupa/z
     zgen load zsh-users/zsh-completions
     zgen load zsh-users/zsh-history-substring-search
