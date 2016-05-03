@@ -86,6 +86,8 @@ export SPARK_HOME="/home/brh/spark-1.6.0-bin-hadoop2.6"
 ##                              Auto-Fu Config
 ## ============================================================================
 # https://github.com/hchbaw/auto-fu.zsh/issues/29
+if [ "$AUTO_FU" = "skip" ]; then return fi
+
 zle-line-init () { auto-fu-init; }; zle -N zle-line-init
 zle -N zle-keymap-select auto-fu-zle-keymap-select
 zstyle ':completion:*' completer _oldlist _complete
