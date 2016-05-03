@@ -20,8 +20,13 @@ export KEYTIMEOUT=1
 PATH=~/bin
 PATH=$PATH:~/bin_local
 PATH=$PATH:~/.local/bin
-PATH=$PATH:~/.stack/programs/x86_64-linux/ghc-7.10.3/bin
-PATH=$PATH:~/.stack/programs/x86_64-linux/ghc-7.10.2/bin
+
+if [ -n "$MACOS" ]; then
+    PATH=$PATH:~/.stack/programs/x86_64-osx/ghc-7.10.3/bin
+else
+    PATH=$PATH:~/.stack/programs/x86_64-linux/ghc-7.10.3/bin
+fi
+
 PATH=$PATH:~/.cabal/bin
 PATH=$PATH:~/.rvm/bin
 PATH=$PATH:/opt/chefdk/bin
