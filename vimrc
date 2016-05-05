@@ -8,6 +8,7 @@ else
 endif
 
 " Load functions
+source ~/.vim/startup/functions/vimscript-helpers.vim
 source ~/.vim/startup/functions/environment.vim
 source ~/.vim/startup/functions/directories.vim
 source ~/.vim/startup/functions/formatting.vim

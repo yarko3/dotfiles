@@ -49,12 +49,12 @@ nnoremap ? :set hlsearch<CR>?
 nnoremap <silent> <F8> :b#<CR>
 
 " Compilation and testing with Dispatch
-nnoremap <F2> :call MakefileSearch()<CR>:Make clean<CR>
+nnoremap <F2> :call Cdroot()<CR>:Make clean<CR>
 if(g:bbenv == "")
-    nnoremap <F4> :call MakefileSearch()<CR>:Make all<CR>:Make run<CR>:Copen<CR>/FAILED<CR>
+    nnoremap <F4> :call Cdroot()<CR>:Make all<CR>:Make run<CR>:Copen<CR>/FAILED<CR>
 else
-    nnoremap <F3> :call MakefileSearch()<CR>:Make test<CR>
-    nnoremap <F4> :call MakefileSearch()<CR>:Make<CR>
+    nnoremap <F3> :call Cdroot()<CR>:Make test<CR>
+    nnoremap <F4> :call Cdroot()<CR>:Make<CR>
 endif
 
 noremap <F5> :cex[]<CR>:cclose<CR>
@@ -68,6 +68,7 @@ nmap <Space> \
 
 nnoremap <Leader>b :CtrlPBuffer<CR>
 nnoremap <Leader>cdf :call Cdfile()<CR>
+nnoremap <Leader>cdr :call Cdroot()<CR>
 nnoremap <Leader>cmt :call CmtSection("", "#")<Left><Left><Left><Left><Left><Left><Left>
 nnoremap <Leader>cx :!chmod a+x %<CR>
 nnoremap <Leader>df :Gdiff<CR>
@@ -79,7 +80,7 @@ nnoremap <Leader>fj :FSSplitBelow<CR>
 nnoremap <Leader>fk :FSSplitAbove<CR>
 nnoremap <Leader>fl :FSSplitRight<CR>
 nnoremap <Leader>fx :call GTestFixture("")<Left><Left>
-nnoremap <Leader>gg :Grepper<CR>
+nnoremap <Leader>gg :call Cdroot()<CR>:Grepper<CR>
 nnoremap <Leader>h :set hlsearch! hlsearch?<CR>
 nnoremap <Leader>ia O// Application Includes<ESC>
 nnoremap <Leader>ib O// BDE Includes<ESC>
@@ -94,12 +95,12 @@ nnoremap <Leader>rd :redraw!<CR>
 nnoremap <Leader>se :sp<CR>:e %:h<CR>
 nnoremap <Leader>ss :call SortSection()<CR>
 nnoremap <Leader>te :tabe %:h<CR>
-nnoremap <Leader>tf :call Cdfile()<CR>:call MkGtest()<CR>
+nnoremap <Leader>tf :call Cdroot()<CR>:call MkGtest()<CR>
 nnoremap <Leader>tm :Tabmerge right<CR>
 nnoremap <Leader>ve :vsp<CR>:e %:h<CR>
 nnoremap <Leader>vl :w<CR>:call VimuxRunCommand('(load "' . bufname("%") . '")')<CR>
 nnoremap <Leader>vr :w<CR>:VimuxRunLastCommand<CR>
-nnoremap <Leader>vt :w<CR>:call VimuxRunCommand("clear; LOCUM_LOCAL=1 gmake gtest")<CR>
+nnoremap <Leader>vt :w<CR>:call VimuxRunCommand("clear; gmake gtest")<CR>
 nnoremap <Leader>vv :w<CR>:VimuxPromptCommand<CR>
 nnoremap <Leader>vx :VimuxInterruptRunner<CR>
 nnoremap <Leader>w :call StripTabsAndTrailingWhitespaces()<CR>

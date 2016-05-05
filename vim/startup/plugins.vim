@@ -51,8 +51,8 @@ call plug#end()
 let g:ctrlp_working_path_mode = 'ra'
 
 " Grepper
-nmap gs  <plug>(GrepperOperator)
-xmap gs  <plug>(GrepperOperator)
+nmap gs :call Cdroot()<CR><plug>(GrepperOperator)
+xmap gs :call Cdroot()<CR><plug>(GrepperOperator)
 
 " Haskellmode-vim
 let g:haddock_browser="/usr/bin/firefox"
