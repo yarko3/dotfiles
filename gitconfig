@@ -26,6 +26,7 @@
     pu = push
     rb = rebase
     rbc = rebase --continue
+    rom = rebase origin/master -i
     st = status
     um = branch --set-upstream-to=origin/master
 
