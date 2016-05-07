@@ -8,4 +8,4 @@ script:
     - pushd chef/cookbooks/brh/recipes
     - ./test.sh
     - popd
-    - hlint bin/*.hs
+    - hlint lib/*.hs
