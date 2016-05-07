@@ -69,7 +69,7 @@
     stdin: true
     stdout: true
     stderr: true
-  - command: make -C bin/ all
+  - command: make -C lib/ all
     stdin: true
     stdout: true
     stderr: true
