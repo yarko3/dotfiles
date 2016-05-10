@@ -11,6 +11,11 @@
     ca = commit --amend --no-edit
     ci = commit
     co = checkout
+    db = "!echo 'Deleting all branches merged into master ...' ; \
+       git fetch --all --prune ; \
+       git branch --merged master | grep -Ev '(master|releases)' | xargs -n 1 git branch -d ; \
+       git branch --merged master -r | grep -Ev '(master|releases)' \
+            | grep $USER | cut -f2- -d'/' | xargs -n 1 git push --delete $USER "
     df = diff
     dfc = diff --cached
     dfh = diff -- .
