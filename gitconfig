@@ -28,6 +28,9 @@
     rba = rebase --abort
     rbc = rebase --continue
     rom = rebase origin/master -i
+    s = show
+    ss = show --stat
+    shows = show --stat
     st = status
     um = branch --set-upstream-to=origin/master
 
