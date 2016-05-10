@@ -4,7 +4,7 @@
     branch = true
     diff = true
 [core]
-    pager = less -R
+    pager = less -F -X -R
     preloadindex = true
 [alias]
     br = branch
