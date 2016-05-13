@@ -2,6 +2,7 @@
 *.log
 *.o
 *.pyc
+bin/hub
 nodes
 tags
 vim/autoload/plug.vim.old
