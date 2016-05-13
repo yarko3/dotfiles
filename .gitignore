@@ -5,9 +5,12 @@
 bin/hub
 nodes
 tags
+tmux/plugins
 vim/autoload/plug.vim.old
 vim/haskellmode.config
 xmonad-x86*
 xmonad.errors
 xmonad/lib
 xmonad/xmonad
+
+!tmux/plugins/tpm
