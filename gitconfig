@@ -4,13 +4,18 @@
     branch = true
     diff = true
 [core]
-    pager = less -R
+    pager = less -F -X -R
     preloadindex = true
 [alias]
     br = branch
     ca = commit --amend --no-edit
     ci = commit
     co = checkout
+    db = "!echo 'Deleting all branches merged into master ...' ; \
+       git fetch --all --prune ; \
+       git branch --merged origin/master | grep -Ev '(master|releases|[*])' | xargs -n 1 git branch -d ; \
+       git branch --merged origin/master -r | grep -Ev '(master|releases)' \
+            | grep $USER | cut -f2- -d'/' | xargs -n 1 git push --delete $USER "
     df = diff
     dfc = diff --cached
     dfh = diff -- .
@@ -25,8 +30,12 @@
     p = pull
     pu = push
     rb = rebase
+    rba = rebase --abort
     rbc = rebase --continue
     rom = rebase origin/master -i
+    s = show
+    ss = show --stat
+    shows = show --stat
     st = status
     um = branch --set-upstream-to=origin/master
 

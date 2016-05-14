@@ -81,6 +81,10 @@
     stdin: true
     stdout: true
     stderr: true
+  - command: scripts/hub_install.sh
+    stdin: true
+    stdout: true
+    stderr: true
   - command: scripts/stack.sh
     stdin: true
     stdout: true
