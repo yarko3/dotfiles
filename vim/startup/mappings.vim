@@ -69,7 +69,7 @@ nmap <Space> \
 nnoremap <Leader>b :CtrlPBuffer<CR>
 nnoremap <Leader>cdf :call Cdfile()<CR>
 nnoremap <Leader>cdr :call Cdroot()<CR>
-nnoremap <Leader>cmt :call CmtSection("", "#")<Left><Left><Left><Left><Left><Left><Left>
+nnoremap <Leader>cmt :call CmtSection("")<Left><Left>
 nnoremap <Leader>cx :!chmod a+x %<CR>
 nnoremap <Leader>df :Gdiff<CR>
 nnoremap <Leader>dom :Gdiff origin/master<CR>

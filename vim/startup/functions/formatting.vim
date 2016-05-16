@@ -18,8 +18,20 @@ function! StripTabsAndTrailingWhitespaces()
   exec "normal ``"
 endfunction
 
+function! RightPad(str, padSequence, desiredLen)
+    let padded = a:str
+    let ct = len(a:str)
+    while ct < a:desiredLen
+        let padded = padded . a:padSequence
+        let ct += 1
+    endwhile
+    return padded
+endfunction
+
+" Optional argument forces a specific comment string; otherwise, uses vim's
+" commentstring variable
 function! CmtSection(title, ...)
-    let commentChar = "/"
+    let commentChar = split(&commentstring, "%s")[0]
     if(a:0 == 1)
         let commentChar = a:1
     endif
@@ -27,19 +39,14 @@ function! CmtSection(title, ...)
     put!=s:CmtSection(a:title, commentChar)
 endfunction
 
-function! s:CmtSection(title, commentChar)
-    let str = a:commentChar . a:commentChar . " ============================================================================\n"
-    let str = str . a:commentChar . a:commentChar . " "
+function! s:CmtSection(title, commentStr)
+    let str = RightPad(a:commentStr . " ", "=", 79) . "\n"
 
-    let startCol = s:CenteredStringStartColumn(a:title) - strlen("// ") - 1
-    let ct = 0
-    while ct < startCol
-        let str = str . " "
-        let ct += 1
-    endwhile
+    let startCol = s:CenteredStringStartColumn(a:title) - strlen(a:commentStr) - 1
+    let str = str . RightPad(a:commentStr, " ", startCol)
 
     let str = str . a:title . "\n"
-    let str = str . a:commentChar . a:commentChar . " ============================================================================"
+    let str = str . RightPad(a:commentStr . " ", "=", 79)
     return str
 endfunction
 
@@ -88,7 +95,6 @@ function! FixIncludeGuard()
     %s/^#endif.*$/#endif/ge
 endfunction
 
-" Optional second argument specifies what character to use for comment (if not in C/C++)
 function! s:CenteredStringStartColumn(str)
     if strlen(a:str) >= 79
         return 0
