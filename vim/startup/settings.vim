@@ -44,11 +44,7 @@ set autowrite
 set autoread
 
 " Configure the :make command
-if(g:bbenv == "")
-    set makeprg=gmake
-else
-    set makeprg=brh-make
-endif
+set makeprg=gmake
 
 " Set path for file searches
 set path+=/home/bhipple/mbig/**

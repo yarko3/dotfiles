@@ -53,8 +53,8 @@ nnoremap <F2> :call Cdroot()<CR>:Make clean<CR>
 if(g:bbenv == "")
     nnoremap <F4> :call Cdroot()<CR>:Make all<CR>:Make run<CR>:Copen<CR>/FAILED<CR>
 else
-    nnoremap <F3> :call Cdroot()<CR>:Make test<CR>
-    nnoremap <F4> :call Cdroot()<CR>:Make<CR>
+    nnoremap <F3> :w<CR>:call Cdroot()<CR>:call VimuxRunCommand("clear; gmake gtest -j")<CR>
+    nnoremap <F4> :w<CR>:call Cdroot()<CR>:call VimuxRunCommand("clear; gmake -j")<CR>
 endif
 
 noremap <F5> :cex[]<CR>:cclose<CR>
@@ -100,7 +100,7 @@ nnoremap <Leader>tm :Tabmerge right<CR>
 nnoremap <Leader>ve :vsp<CR>:e %:h<CR>
 nnoremap <Leader>vl :w<CR>:call VimuxRunCommand('(load "' . bufname("%") . '")')<CR>
 nnoremap <Leader>vr :w<CR>:VimuxRunLastCommand<CR>
-nnoremap <Leader>vt :w<CR>:call VimuxRunCommand("clear; gmake gtest")<CR>
+nnoremap <Leader>vt :w<CR>:call VimuxRunCommand("clear; gmake test -j")<CR>
 nnoremap <Leader>vv :w<CR>:VimuxPromptCommand<CR>
 nnoremap <Leader>vx :VimuxInterruptRunner<CR>
 nnoremap <Leader>w :call StripTabsAndTrailingWhitespaces()<CR>
