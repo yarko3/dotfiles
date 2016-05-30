@@ -26,6 +26,7 @@ tools=(\
     pandoc \
     pointfree \
     regex-posix \
+    shake \
     turtle \
 )
 for t in "${tools[@]}"; do
