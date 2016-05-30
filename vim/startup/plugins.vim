@@ -5,6 +5,7 @@ Plug 'Twinside/vim-hoogle', { 'for': 'haskell' }           " Haskell function in
 Plug 'Valloric/ListToggle'                                 " Toggling quickfix and location list
 Plug 'benmills/vimux'                                      " Vim and Tmux Integration
 Plug 'bhipple/bde_plugins'                                 " Tools for formatting code according to BDE Standards
+Plug 'bhipple/vim-hindent'                                 " Haskell code formatter
 Plug 'bhipple/vim-snippets'                                " My snippets fork
 Plug 'bitc/vim-hdevtools', { 'for': 'haskell' }            " Haskell
 Plug 'bling/vim-airline'                                   " Status line
@@ -57,6 +58,9 @@ xmap gs :call Cdroot()<CR><plug>(GrepperOperator)
 
 " Haskellmode-vim
 let g:haddock_browser="/usr/bin/firefox"
+
+" HIndent
+let g:hindent_style = "cramer"
 
 " Necoghc
 let g:haskellmode_completion_ghc = 0
