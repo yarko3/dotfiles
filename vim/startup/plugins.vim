@@ -25,6 +25,7 @@ Plug 'luochen1990/rainbow'                                 " Rainbow parenthesis
 Plug 'majutsushi/tagbar'                                   " Using for JavaScript
 Plug 'mhinz/vim-grepper'                                   " Asynchronous Grep -> QuickFix List
 Plug 'mhinz/vim-startify'                                  " Recently opened start screen
+Plug 'slurps-mad-rips/cmake.vim'                           " Better syntax highlighting for cmake
 Plug 'scrooloose/nerdcommenter'                            " Functions for easier commenting
 Plug 'scrooloose/syntastic'                                " Syntax checking
 Plug 'spf13/vim-autoclose'                                 " Matching [({'
