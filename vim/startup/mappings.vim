@@ -14,12 +14,6 @@ cmap w!! w !sudo tee > /dev/null %
 "" ============================================================================
 ""                           Insert Mode Mappings
 "" ============================================================================
-" Auto-Insertion for closing braces
-inoremap {      {}<Left>
-inoremap {<CR>  {<CR>}<Esc>O
-inoremap {{     {
-inoremap {}     {}
-
 " Bael Log Shortcuts
 inoremap <F2> BAEL_LOG_TRACE << 
 inoremap <F3> BAEL_LOG_DEBUG << 

@@ -27,6 +27,7 @@ Plug 'mhinz/vim-grepper'                                   " Asynchronous Grep -
 Plug 'mhinz/vim-startify'                                  " Recently opened start screen
 Plug 'scrooloose/nerdcommenter'                            " Functions for easier commenting
 Plug 'scrooloose/syntastic'                                " Syntax checking
+Plug 'spf13/vim-autoclose'                                 " Matching [({'
 Plug 'tommcdo/vim-exchange'                                " cx operator for exchanging text regions
 Plug 'tpope/vim-abolish'                                   " Coercion and Subvert
 Plug 'tpope/vim-commentary'                                " Comment/uncomment operator
