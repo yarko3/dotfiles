@@ -3,7 +3,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'Shougo/vimproc', { 'do': 'make' }                    " Asynchronous command execution library
 Plug 'Twinside/vim-hoogle', { 'for': 'haskell' }           " Haskell function information
 Plug 'Valloric/ListToggle'                                 " Toggling quickfix and location list
-Plug 'benmills/vimux'                                      " Vim and Tmux Integration
+Plug 'bhipple/vimux'                                       " Vim and Tmux Integration
 Plug 'bhipple/bde_plugins'                                 " Tools for formatting code according to BDE Standards
 Plug 'bhipple/vim-hindent'                                 " Haskell code formatter
 Plug 'bhipple/vim-snippets'                                " My snippets fork
