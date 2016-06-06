@@ -108,6 +108,7 @@ autocmd FileType haskell nmap <buffer> <Leader>sc :HoogleClose<CR>
 autocmd FileType haskell nmap <buffer> <Leader>sh :Hoogle
 autocmd FileType haskell nmap <buffer> <Leader>si :HoogleInfo<CR>
 
+autocmd FileType haskell nmap <buffer> <Leader>vr :w<CR>:call VimuxRunCommand(":r")<CR>
 autocmd FileType haskell nmap <buffer> <Leader>vt :w<CR>:call VimuxRunCommand("clear; stack test")<CR>
 autocmd FileType haskell nmap <buffer> <F4> :w<CR>:call VimuxRunCommand("clear; stack test")<CR>
 
