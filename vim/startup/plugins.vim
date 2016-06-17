@@ -17,7 +17,7 @@ Plug 'eagletmt/ghcmod-vim', { 'for': 'haskell' }           " Displays types and 
 Plug 'eagletmt/neco-ghc', { 'for': 'haskell' }             " Haskell completion engine
 Plug 'elaforge/fast-tags', { 'for': 'haskell' }            " Ctags generation for Haskell
 Plug 'ivanov/vim-ipython', { 'for': 'python' }             " Vim + IPython Notebook integration
-Plug 'justinmk/vim-sneak'                                  " S motion operator
+"Plug 'justinmk/vim-sneak'                                  " S motion operator
 Plug 'justinmk/vim-syntax-extra'                           " Flex and Bison syntax highlighting
 Plug 'kovisoft/slimv'                                      " Lisp in Vim
 Plug 'lukerandall/haskellmode-vim', { 'for': 'haskell' }   " Tons of useful things
@@ -26,7 +26,6 @@ Plug 'majutsushi/tagbar'                                   " Using for JavaScrip
 Plug 'mhinz/vim-grepper'                                   " Asynchronous Grep -> QuickFix List
 Plug 'mhinz/vim-startify'                                  " Recently opened start screen
 Plug 'slurps-mad-rips/cmake.vim'                           " Better syntax highlighting for cmake
-Plug 'scrooloose/nerdcommenter'                            " Functions for easier commenting
 Plug 'scrooloose/syntastic'                                " Syntax checking
 Plug 'spf13/vim-autoclose'                                 " Matching [({'
 Plug 'tommcdo/vim-exchange'                                " cx operator for exchanging text regions

@@ -46,7 +46,7 @@ export LANG=en_US.UTF-8
 
 . ~/bin/resty
 
-[ -f ~/.config/hub ] && export GITHUB_TOKEN=$(grep oauth_token ~/.config/hub | awk '{print $2}')
+[ -f ~/.config/hub ] && export GITHUB_STANDARD_TOKEN=$(grep oauth_token ~/.config/hub | awk '{print $2}')
 
 ## ============================================================================
 ##                                 Settings
