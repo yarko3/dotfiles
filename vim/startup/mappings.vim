@@ -97,7 +97,7 @@ nnoremap <Leader>vr :w<CR>:VimuxRunLastCommand<CR>
 nnoremap <Leader>vt :w<CR>:call VimuxRunCommand("clear; gmake test -j")<CR>
 nnoremap <Leader>vv :w<CR>:VimuxPromptCommand<CR>
 nnoremap <Leader>vx :VimuxInterruptRunner<CR>
-nnoremap <Leader>w :call StripTabsAndTrailingWhitespaces()<CR>
+nnoremap <Leader>w :call StripTabsAndTrailingWhitespaces()<CR>:w<CR>
 
 " Local Leaders
 autocmd FileType haskell nmap <buffer> <Leader>ga :w<CR>:GhcModTypeInsert<CR>
