@@ -80,6 +80,9 @@ set grepprg="git"
 " What to use for gq
 set formatprg=par\ -w80
 
+" Additional words for the spell checker
+set spellfile=~/.vim/spell/extra-words.add
+
 "" ============================================================================
 ""                                Appearances
 "" ============================================================================
