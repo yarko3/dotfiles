@@ -27,6 +27,7 @@ alias sbcl='rlwrap sbcl'
 alias scheme='rlwrap scheme'
 alias se='stack exec'
 alias sqlite3='rlwrap sqlite3'
+alias st='stack test'
 alias uu='sudo apt-get update && sudo apt-get upgrade'
 alias wfc='weather -f NYC'
 
