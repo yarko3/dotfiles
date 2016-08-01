@@ -17,6 +17,7 @@ alias hd='~/bin/hex_decimal.sh'
 alias hdevtools='stack exec --no-ghc-package-path hdevtools --'
 alias livestreamer='livestreamer --default-stream best'
 alias ll='ls -al'
+alias lower="tr '[:upper:]' '[:lower:]'"
 alias ls='ls --color'
 alias mkcd='. ~/bin/make_dir_and_cd.sh'
 alias myip='curl cmyip.com 2>/dev/null | grep -o "My IP Address is [0-9.]*"'
@@ -28,6 +29,7 @@ alias scheme='rlwrap scheme'
 alias se='stack exec'
 alias sqlite3='rlwrap sqlite3'
 alias st='stack test'
+alias upper="tr '[:lower:]' '[:upper:]'"
 alias uu='sudo apt-get update && sudo apt-get upgrade'
 alias wfc='weather -f NYC'
 
