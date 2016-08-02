@@ -1,11 +1,3 @@
-[color]
-    ui = true
-    status = true
-    branch = true
-    diff = true
-[core]
-    pager = less -F -X -R
-    preloadindex = true
 [alias]
     br = branch
     ca = commit --amend --no-edit
@@ -29,6 +21,7 @@
     lg = log --decorate --oneline --graph --branches --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold blue)(%ar) %C(bold yellow)%d%C(reset) %C(green)%s%C(reset) %C(dim green)- %an%C(reset)'
     logdog = log --decorate --oneline --graph
     p = pull
+    pr = pull-request
     pu = push
     rb = rebase
     rba = rebase --abort
@@ -44,6 +37,14 @@
 
     # List aliases
     la = "!git config -l | grep alias | cut -c 7-"
+[color]
+    ui = true
+    status = true
+    branch = true
+    diff = true
+[core]
+    pager = less -F -X -R
+    preloadindex = true
 [mergetool "fugitive"]
     cmd = vim -f -c \"Gvdiff\" \"$MERGED\"
 [mergetool]
