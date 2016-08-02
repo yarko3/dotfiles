@@ -4,10 +4,6 @@
 " Bael log category at the start of function
 map <F6> <ESC>[[oBAEL_LOG_SET_CATEGORY(LOG_CATEGORY);<ESC><C-o>
 
-" clang-format
-map <C-T> :pyf ~/bin/clang-format.py<CR>
-imap <C-T> <C-o>:pyf ~/bin/clang-format.py<CR>
-
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! w !sudo tee > /dev/null %
 
