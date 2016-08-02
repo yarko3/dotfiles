@@ -51,8 +51,8 @@ call plug#end()
 ""                              Plugin Settings
 "" ============================================================================
 " Clang-format
-let g:clang_format#detect_style_file
-let g:clang_format#auto_formatexpr
+let g:clang_format#detect_style_file = 1
+let g:clang_format#auto_formatexpr = 1
 map <C-T> :ClangFormat<CR>
 imap <C-T> <C-o>:ClangFormat<CR>
 autocmd FileType c,cpp setlocal textwidth=0
