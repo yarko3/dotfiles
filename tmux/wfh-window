@@ -13,15 +13,3 @@ resize-pane -t 0 -y 65
 resize-pane -t 0 -x 240
 resize-pane -t 1 -y 65
 resize-pane -t 1 -x 240
-
-send-keys -t 0 'ssh ibm2' enter
-
-send-keys -t 0 'cdgit' enter
-send-keys -t 1 'cdgit' enter
-send-keys -t 2 'cdgit' enter
-send-keys -t 3 'cdgit' enter
-
-send-keys -t 0 C-l
-send-keys -t 1 C-l
-send-keys -t 2 C-l
-send-keys -t 3 C-l
