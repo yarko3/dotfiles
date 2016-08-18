@@ -3,6 +3,7 @@
     ca = commit --amend --no-edit
     ci = commit
     co = checkout
+    cop = "!f() { git fetch ${2:-origin} pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
     db = "!echo 'Deleting all branches merged into master ...' ; \
        git fetch --all --prune ; \
        git branch --merged origin/master | grep -Ev '(master|releases|[*])' | xargs -n 1 git branch -d ; \
@@ -22,6 +23,7 @@
     logdog = log --decorate --oneline --graph
     p = pull
     pr = pull-request
+    pr-clean = "!git for-each-ref refs/heads/pr/* --format='%(refname)' | while read ref ; do branch=${ref#refs/heads/} ; git branch -D $branch ; done"
     pu = push
     rb = rebase
     rba = rebase --abort
@@ -30,8 +32,8 @@
     rom = rebase origin/master -i
     s = show
     sed = "!git ls-files | xargs sed -i ''"
-    ss = show --stat
     shows = show --stat
+    ss = show --stat
     st = status
     um = branch --set-upstream-to=origin/master
 
