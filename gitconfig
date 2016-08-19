@@ -3,6 +3,7 @@
     ca = commit --amend --no-edit
     ci = commit
     co = checkout
+    cob = checkout -b
     cop = "!f() { git fetch ${2:-origin} pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
     db = "!echo 'Deleting all branches merged into master ...' ; \
        git fetch --all --prune ; \
