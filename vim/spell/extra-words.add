@@ -31,3 +31,11 @@ io
 SYMV
 sysi
 def/!
+cppcheck
+bb
+https
+SunOS
+DPKG
+buildall
+valgrind
+GTest
