@@ -13,7 +13,7 @@ endfunction
 function! StripTabsAndTrailingWhitespaces()
   let _s=@/
   retab
-  %s///g
+  %s///ge
   %s/\s\+$//e
   let @/=_s
   exec "normal ``"
