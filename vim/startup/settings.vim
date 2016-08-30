@@ -122,5 +122,4 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
 " Haskell
 au FileType haskell setlocal tags=.hs-tags
-au
 au BufEnter *.hs compiler ghc
