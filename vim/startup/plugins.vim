@@ -21,7 +21,6 @@ Plug 'jceb/vim-orgmode'                                    " Emacs orgmode port
 Plug 'justinmk/vim-syntax-extra'                           " Flex and Bison syntax highlighting
 Plug 'kovisoft/slimv'                                      " Lisp in Vim
 Plug 'lukerandall/haskellmode-vim', { 'for': 'haskell' }   " Tons of useful things
-Plug 'luochen1990/rainbow'                                 " Rainbow parenthesis coloring
 Plug 'majutsushi/tagbar'                                   " Using for JavaScript
 Plug 'mhinz/vim-grepper'                                   " Asynchronous Grep -> QuickFix List
 Plug 'rhysd/vim-clang-format'                              " Vim wrapper plugin for clang-format
@@ -38,6 +37,7 @@ Plug 'tpope/vim-surround'                                  " Surrounding text
 Plug 'tpope/vim-unimpaired'                                " Pairs of keyboard mappings for common tasks
 Plug 'tpope/vim-vinegar'                                   " netrw improvement
 Plug 'vim-scripts/Tabmerge'                                " Merge tabs into splits
+Plug 'flazz/vim-colorschemes'                              " Color schemes
 
 if g:platform == "Linux" || g:platform == "Darwin"
     Plug 'SirVer/ultisnips'               " Text snippets
@@ -87,30 +87,9 @@ let g:netrw_sort_by = 'name'
 let g:lt_location_list_toggle_map = '<leader>l'
 let g:lt_quickfix_list_toggle_map = '<leader>q'
 
-" Rainbow coloring
-let g:rainbow_active = 1
-let g:rainbow_conf = {
-\   'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
-\   'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta'],
-\   'operators': '_,_',
-\   'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
-\   'separately': {
-\       '*': {},
-\       'tex': {
-\           'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/'],
-\       },
-\       'lisp': {
-\           'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick', 'darkorchid3'],
-\       },
-\       'vim': {
-\           'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/ fold', 'start=/(/ end=/)/ containedin=vimFuncBody', 'start=/\[/ end=/\]/ containedin=vimFuncBody', 'start=/{/ end=/}/ fold containedin=vimFuncBody'],
-\       },
-\       'html': {
-\           'parentheses': ['start=/\v\<((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ >])@!\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'|[^ '."'".'"><=`]*))?)*\>/ end=#</\z1># fold'],
-\       },
-\       'css': 0,
-\   }
-\}
+" Set color scheme
+set t_Co=256
+colorscheme Tomorrow-Night-Eighties
 
 " SLIMV
 let g:slimv_repl_split=4 " Split Vertically

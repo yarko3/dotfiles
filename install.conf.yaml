@@ -3,19 +3,10 @@
 - link:
     ~/.dotfiles: ''
     ~/.Xdefaults: Xdefaults
-    ~/.chef/cookbooks:
-      create: true
-      force: true
-      relink: true
-      path: chef/cookbooks/
     ~/.clang-format: clang-format
     ~/.dir_colors: dir_colors
-    ~/.ghc/ghci.conf:
-      create: true
-      path: ghc/ghci.conf
     ~/.git_template: git_template/
     ~/.gitconfig: gitconfig
-    ~/.haskeline: haskeline
     ~/.inputrc: inputrc
     ~/.ipython/profile_default/ipython_notebook_config.py:
         create: true
@@ -25,22 +16,12 @@
         create: true
         force: true
         path: ipython/startup/00-pyspark-setup.py
-    ~/.irssi: irssi/
-    ~/.quicklisp: quicklisp/
-    ~/.sbclrc: sbclrc
     ~/.tmux.conf: tmux.conf
     ~/.tmux: tmux/
     ~/.vim: vim/
     ~/.vimrc: vimrc
     ~/.vimrc_minimal: vimrc_minimal
-    ~/.xmobarrc: xmobarrc
-    ~/.xmonad: xmonad/
     ~/.ycm_extra_conf.py: ycm_extra_conf.py
-    ~/.zsh: zsh/
-    ~/.zshenv: zshenv
-    ~/.zshrc: zshrc
-    ~/Gemfile.lock: Gemfile.lock
-    ~/Gemfile: Gemfile
     ~/bin: bin/
 
 - shell:
@@ -57,27 +38,11 @@
     stdin: true
     stdout: true
     stderr: true
-  - command: make -C lib/ all
-    stdin: true
-    stdout: true
-    stderr: true
   - command: scripts/fix_permissions.sh
     stdin: true
     stdout: true
     stderr: true
   - command: scripts/set_timezone.sh
-    stdin: true
-    stdout: true
-    stderr: true
-  - command: scripts/hub_install.sh
-    stdin: true
-    stdout: true
-    stderr: true
-  - command: scripts/stack.sh
-    stdin: true
-    stdout: true
-    stderr: true
-  - command: scripts/run_chef.sh
     stdin: true
     stdout: true
     stderr: true

@@ -3,7 +3,7 @@
 #
 # Inspect its progress with:
 # less +F /var/log/cloud-init-output.log
-USR=bhipple
+USR=ysenyuta
 if ! [ -z "$1" ]; then
     USR="$1"
 fi
@@ -11,9 +11,8 @@ fi
 echo "Starting dotfiles cloud_init.sh with USR=$USR"
 
 apt-get update
-apt-get install -y git zsh build-essential cmake python-dev ghc
+apt-get install -y git build-essential cmake python-dev
 
-useradd -m -s /usr/bin/zsh "$USR"
 adduser "$USR" sudo
 
 export HOME=/home/$USR

@@ -21,6 +21,9 @@ set autoindent
 set cindent
 set backspace=indent,eol,start
 
+" oh no, enable mouse
+set mouse=a
+
 " Backup directory for swp files
 set noswapfile
 set directory=""
@@ -83,11 +86,23 @@ set formatprg=par\ -w80
 " Additional words for the spell checker
 set spellfile=~/.vim/spell/extra-words.add
 
+" Enable window switching with Alt+arrow key
+nmap <silent> <A-Up> :wincmd k<CR>
+nmap <silent> <A-Down> :wincmd j<CR>
+nmap <silent> <A-Left> :wincmd h<CR>
+nmap <silent> <A-Right> :wincmd l<CR>
+
 "" ============================================================================
 ""                                Appearances
 "" ============================================================================
 " Show line numbers
 set number
+
+" show the cursor position
+set ruler
+
+" no linewrap
+set nowrap
 
 " Show tab and trailing whitespace characters
 set listchars=tab:>-,trail:-
@@ -104,6 +119,9 @@ set hlsearch
 set foldmethod=manual
 set foldnestmax=3
 set foldminlines=10
+
+" double click to highlight all occurrences
+nnoremap <silent> <2-LeftMouse> :let @/='\V\<'.escape(expand('<cword>'), '\').'\>'<cr>:set hls<cr>
 
 "" ============================================================================
 ""                               Auto Commands
@@ -123,3 +141,4 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 " Haskell
 au FileType haskell setlocal tags=.hs-tags
 au BufEnter *.hs compiler ghc
+

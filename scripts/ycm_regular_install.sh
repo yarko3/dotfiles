@@ -1,7 +1,6 @@
 #!/bin/bash
 # Requires the following packages:
 # build-essential cmake python-dev
-# When initializing in the cloud, this may happen before Chef has finished.
 cmd='./install.py --clang-complete || echo "YCM Build failed. Are its dependencies installed?"'
 
 cd ~/.vim/plugged/YouCompleteMe

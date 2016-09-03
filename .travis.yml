@@ -2,10 +2,6 @@ language: bash
 addons:
   apt:
     packages:
-    - hlint
-    - haskell-platform
 script:
-    - pushd chef/cookbooks/brh/recipes
     - ./test.sh
     - popd
-    - hlint lib/*.hs
