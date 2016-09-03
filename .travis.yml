@@ -3,5 +3,3 @@ addons:
   apt:
     packages:
 script:
-    - ./test.sh
-    - popd
