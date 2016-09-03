@@ -2,12 +2,6 @@
 My dotfiles for vim, tmux, etc.
 
 ### Installation
-#### Initial Install
-Run this as the cloud-init user data, or on first boot:
-```
-#!/bin/bash
-curl https://raw.githubusercontent.com/yarko3/dotfiles/master/scripts/cloud_init.sh | bash
-```
 #### Update and Run Idempotent Installer
 ```
 cd ~/dotfiles
