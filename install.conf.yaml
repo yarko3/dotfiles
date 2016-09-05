@@ -47,7 +47,3 @@
     stdin: true
     stdout: true
     stderr: true
-  - command: scripts/link_privates.sh
-    stdin: true
-    stdout: true
-    stderr: true
