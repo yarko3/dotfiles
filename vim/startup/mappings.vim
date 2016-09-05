@@ -96,18 +96,6 @@ nnoremap <Leader>vv :w<CR>:VimuxPromptCommand<CR>
 nnoremap <Leader>vx :VimuxInterruptRunner<CR>
 nnoremap <Leader>w :call StripTabsAndTrailingWhitespaces()<CR>:w<CR>
 
-" Local Leaders
-autocmd FileType haskell nmap <buffer> <Leader>ga :w<CR>:GhcModTypeInsert<CR>
-autocmd FileType haskell nmap <buffer> <Leader>gc :w<CR>:HdevtoolsClear<CR>
-autocmd FileType haskell nmap <buffer> <Leader>gi :w<CR>:GhcModInfoPreview<CR>
-autocmd FileType haskell nmap <buffer> <Leader>gt :w<CR>:HdevtoolsType<CR>
-autocmd FileType haskell nmap <buffer> <Leader>sc :HoogleClose<CR>
-autocmd FileType haskell nmap <buffer> <Leader>sh :Hoogle
-autocmd FileType haskell nmap <buffer> <Leader>si :HoogleInfo<CR>
-
-autocmd FileType haskell nmap <buffer> <Leader>vr :w<CR>:call VimuxRunCommand(":r")<CR>
-autocmd FileType haskell nmap <buffer> <Leader>vt :w<CR>:call VimuxRunCommand("clear; stack test")<CR>
-autocmd FileType haskell nmap <buffer> <F4> :w<CR>:call VimuxRunCommand("clear; stack test")<CR>
 
 " Note - l and q are used for the location list and quickfix toggle by ListToggle
 nnoremap <Leader>p :pclose<CR>

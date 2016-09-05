@@ -7,5 +7,3 @@ git ls-files | \
           ctags --tag-relative -L - -f"$dir/$$.tags" --languages=-javascript,sql
           mv "$dir/$$.tags" "$dir/tags"
 
-# Haskell!
-git ls-files '*.hs' | xargs fast-tags -o .hs-tags

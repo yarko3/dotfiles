@@ -32,7 +32,7 @@ XTerm*faceName: DejaVu Sans Mono:size=12
 XTerm*font:     -misc-fixed-medium-r-normal--18-120-100-100-c-90-iso10646-1
 XTerm*boldFont: -misc-fixed-medium-r-normal--18-120-100-100-c-90-iso10646-1
 XTerm*background: black
-XTerm*foreground: green
+XTerm*foreground: white
 xterm*termName: xterm-256color
 
 *ttyModes: erase ^?
