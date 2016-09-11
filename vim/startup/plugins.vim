@@ -35,6 +35,7 @@ Plug 'eagletmt/neco-ghc', { 'for': 'haskell' }             " Haskell completion 
 Plug 'elaforge/fast-tags', { 'for': 'haskell' }            " Ctags generation for Haskell
 Plug 'lukerandall/haskellmode-vim', { 'for': 'haskell' }   " Tons of useful things
 Plug 'bhipple/vim-hindent'                                 " Haskell code formatter
+Plug 'bitc/vim-hdevtools', { 'for': 'haskell' }            " Haskell
 
 if g:platform == "Linux" || g:platform == "Darwin"
     Plug 'SirVer/ultisnips'               " Text snippets
