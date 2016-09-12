@@ -24,6 +24,9 @@ set backspace=indent,eol,start
 " oh no, enable mouse
 set mouse=a
 
+" yank everything into register
+nmap <C-A> ggVGy
+
 " Backup directory for swp files
 set noswapfile
 set directory=""
