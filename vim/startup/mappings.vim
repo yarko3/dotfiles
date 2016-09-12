@@ -14,7 +14,6 @@ cmap w!! w !sudo tee > /dev/null %
 inoremap jj <Esc><Right>
 inoremap jk <Esc><Right>
 
-
 "" ============================================================================
 ""                        Normal/Visual Mode Mappings
 "" ============================================================================
@@ -32,17 +31,7 @@ nnoremap ? :set hlsearch<CR>?
 " Swap to last buffer
 nnoremap <silent> <F8> :b#<CR>
 
-" Compilation and testing with Dispatch
-nnoremap <F2> :call Cdroot()<CR>:Make clean<CR>
-if(g:bbenv == "")
-    nnoremap <F4> :call Cdroot()<CR>:Make all<CR>:Make run<CR>:Copen<CR>/FAILED<CR>
-else
-    nnoremap <F3> :w<CR>:call Cdroot()<CR>:call VimuxRunCommand("clear; gmake gtest -j")<CR>
-    nnoremap <F4> :w<CR>:call Cdroot()<CR>:call VimuxRunCommand("clear; gmake -j")<CR>
-endif
-
 noremap <F5> :cex[]<CR>:cclose<CR>
-
 
 "" ============================================================================
 ""                         Leader Mappings (Sorted)
@@ -57,13 +46,13 @@ nnoremap <Leader>cmt :call CmtSection("")<Left><Left>
 nnoremap <Leader>cx :!chmod a+x %<CR>
 nnoremap <Leader>df :Gdiff<CR>
 nnoremap <Leader>dom :Gdiff origin/master<CR>
+nnoremap <Leader>dum :Gdiff upstream/master<CR>
 nnoremap <Leader>ev :e $MYVIMRC<CR>G$F/
 nnoremap <Leader>ff :FSHere<CR>
 nnoremap <Leader>fh :FSSplitLeft<CR>
 nnoremap <Leader>fj :FSSplitBelow<CR>
 nnoremap <Leader>fk :FSSplitAbove<CR>
 nnoremap <Leader>fl :FSSplitRight<CR>
-nnoremap <Leader>fx :call GTestFixture("")<Left><Left>
 nnoremap <Leader>gg :call Cdroot()<CR>:Grepper<CR>
 nnoremap <Leader>h :set hlsearch! hlsearch?<CR>
 nnoremap <Leader>jc :YcmCompleter GoToDeclaration<CR>

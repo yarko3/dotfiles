@@ -96,7 +96,7 @@ nmap <silent> <A-Left> :wincmd h<CR>
 nmap <silent> <A-Right> :wincmd l<CR>
 
 "" ============================================================================
-""                                Appearances
+""                                Appearance
 "" ============================================================================
 " Show line numbers
 set number
