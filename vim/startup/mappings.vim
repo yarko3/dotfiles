@@ -10,12 +10,6 @@ cmap w!! w !sudo tee > /dev/null %
 "" ============================================================================
 ""                           Insert Mode Mappings
 "" ============================================================================
-" Bael Log Shortcuts
-inoremap <F2> BAEL_LOG_TRACE << 
-inoremap <F3> BAEL_LOG_DEBUG << 
-inoremap <F4> BAEL_LOG_ERROR << 
-inoremap <F5> << BAEL_LOG_END;<ESC>
-
 " Leaving insert mode with jj or jk
 inoremap jj <Esc><Right>
 inoremap jk <Esc><Right>
@@ -72,15 +66,10 @@ nnoremap <Leader>fl :FSSplitRight<CR>
 nnoremap <Leader>fx :call GTestFixture("")<Left><Left>
 nnoremap <Leader>gg :call Cdroot()<CR>:Grepper<CR>
 nnoremap <Leader>h :set hlsearch! hlsearch?<CR>
-nnoremap <Leader>ia O// Application Includes<ESC>
-nnoremap <Leader>ib O// BDE Includes<ESC>
-nnoremap <Leader>ii O// Application Includes<CR>// BDE Includes<CR>// System Includes<ESC>
-nnoremap <Leader>is O// System Includes<ESC>
 nnoremap <Leader>jc :YcmCompleter GoToDeclaration<CR>
 nnoremap <Leader>jf :YcmCompleter GoToDefinition<CR>
 nnoremap <Leader>ji :YcmCompleter GoToImprecise<CR>
 nnoremap <Leader>jj :YcmCompleter GoTo<CR>
-nnoremap <Leader>rr :w<CR>:call VimuxRunCommand('./' . bufname("%"))<CR>
 nnoremap <Leader>rd :redraw!<CR>
 nnoremap <Leader>se :sp<CR>:e %:h<CR>
 nnoremap <Leader>sp :setlocal spell! spelllang=en_us<CR>
@@ -89,11 +78,6 @@ nnoremap <Leader>te :tabe %:h<CR>
 nnoremap <Leader>tf :call Cdroot()<CR>:call MkGtest()<CR>
 nnoremap <Leader>tm :Tabmerge right<CR>
 nnoremap <Leader>ve :vsp<CR>:e %:h<CR>
-nnoremap <Leader>vl :w<CR>:call VimuxRunCommand('(load "' . bufname("%") . '")')<CR>
-nnoremap <Leader>vr :w<CR>:VimuxRunLastCommand<CR>
-nnoremap <Leader>vt :w<CR>:call VimuxRunCommand("clear; gmake test -j")<CR>
-nnoremap <Leader>vv :w<CR>:VimuxPromptCommand<CR>
-nnoremap <Leader>vx :VimuxInterruptRunner<CR>
 nnoremap <Leader>w :call StripTabsAndTrailingWhitespaces()<CR>:w<CR>
 
 

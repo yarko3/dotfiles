@@ -2,9 +2,6 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'Shougo/vimproc', { 'do': 'make' }                    " Asynchronous command execution library
 Plug 'Valloric/ListToggle'                                 " Toggling quickfix and location list
-Plug 'bhipple/bde_plugins'                                 " Tools for formatting code according to BDE Standards
-Plug 'bhipple/vim-snippets'                                " My snippets fork
-Plug 'bhipple/vimux'                                       " Vim and Tmux Integration
 Plug 'bling/vim-airline'                                   " Status line
 Plug 'chazmcgarvey/vimcoder'                               " Topcoder Vim Plugin
 Plug 'christoomey/vim-tmux-navigator'                      " Window/Pane switching with Vim and Tmux
@@ -34,7 +31,6 @@ Plug 'eagletmt/ghcmod-vim', { 'for': 'haskell' }           " Displays types and 
 Plug 'eagletmt/neco-ghc', { 'for': 'haskell' }             " Haskell completion engine
 Plug 'elaforge/fast-tags', { 'for': 'haskell' }            " Ctags generation for Haskell
 Plug 'lukerandall/haskellmode-vim', { 'for': 'haskell' }   " Tons of useful things
-Plug 'bhipple/vim-hindent'                                 " Haskell code formatter
 Plug 'bitc/vim-hdevtools', { 'for': 'haskell' }            " Haskell
 
 if g:platform == "Linux" || g:platform == "Darwin"
@@ -65,9 +61,6 @@ xmap gs :call Cdroot()<CR><plug>(GrepperOperator)
 " Haskellmode-vim
 let g:haddock_browser="/usr/bin/firefox"
 
-" HIndent
-let g:hindent_style = "cramer"
-
 let g:grepper = {
     \ 'tools':     ['git'],
     \ 'jump':      1,
@@ -88,20 +81,6 @@ colorscheme Tomorrow-Night-Eighties
 let g:syntastic_aggregate_errors = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_always_populate_loc_list = 1
-
-" UltiSnips
-" Magic to make the <enter> key expand snippes, even with YouCompleteMe installed.
-let g:UltiSnipsExpandTrigger = "<nop>"
-let g:ulti_expand_or_jump_res = 0
-function! ExpandSnippetOrCarriageReturn()
-    let snippet = UltiSnips#ExpandSnippetOrJump()
-    if g:ulti_expand_or_jump_res > 0
-        return snippet
-    else
-        return "\<CR>"
-    endif
-endfunction
-inoremap <expr> <CR> pumvisible() ? "<C-R>=ExpandSnippetOrCarriageReturn()<CR>" : "\<CR>"
 
 " Rainbow coloring
 let g:rainbow_active = 1
@@ -127,10 +106,6 @@ let g:rainbow_conf = {
 \       'css': 0,
 \   }
 \}
-
-" Vimux
-let g:VimuxOrientation = "h"
-let g:VimuxHeight = "35"
 
 " YouCompleteMe
 let g:ycm_server_log_level = 'debug'
