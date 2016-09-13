@@ -63,7 +63,7 @@ let g:haddock_browser="/usr/bin/firefox"
 
 let g:grepper = {
     \ 'tools':     ['git'],
-    \ 'jump':      1,
+    \ 'jump':      0,
     \ }
 
 " Netrw
