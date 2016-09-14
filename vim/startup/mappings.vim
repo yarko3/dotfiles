@@ -33,6 +33,15 @@ nnoremap <silent> <F8> :b#<CR>
 
 noremap <F5> :cex[]<CR>:cclose<CR>
 
+" Compilation and testing with Dispatch
+nnoremap <F2> :call Cdroot()<CR>:Make clean<CR>
+if(g:bbenv == "")
+    nnoremap <F4> :call Cdroot()<CR>:Make all<CR>:Make run<CR>:Copen<CR>/FAILED<CR>
+else
+    let b:dispatch = 'gmake -j'
+    nnoremap <F4> :w<CR>:call Cdroot()<CR>:Dispatch!<CR>
+endif
+
 "" ============================================================================
 ""                         Leader Mappings (Sorted)
 "" ============================================================================
