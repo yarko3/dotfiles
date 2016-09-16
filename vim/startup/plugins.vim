@@ -44,6 +44,7 @@ call plug#end()
 "" ============================================================================
 ""                              Plugin Settings
 "" ============================================================================
+
 " Clang-format
 let g:clang_format#detect_style_file = 1
 let g:clang_format#auto_formatexpr = 1
