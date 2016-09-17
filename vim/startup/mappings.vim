@@ -41,6 +41,16 @@ else
     nnoremap <F4> :w<CR>:call Cdroot()<CR>:Make!<CR>
 endif
 
+" Shift + movement for selection
+nmap <S-Up> v<Up>
+nmap <S-Down> v<Down>
+nmap <S-Left> v<Left>
+nmap <S-Right> v<Right>
+vmap <S-Up> <Up>
+vmap <S-Down> <Down>
+vmap <S-Left> <Left>
+vmap <S-Right> <Right>
+
 "" ============================================================================
 ""                         Leader Mappings (Sorted)
 "" ============================================================================
@@ -76,7 +86,6 @@ nnoremap <Leader>tf :call Cdroot()<CR>:call MkGtest()<CR>
 nnoremap <Leader>tm :Tabmerge right<CR>
 nnoremap <Leader>ve :vsp<CR>:e %:h<CR>
 nnoremap <Leader>w :call StripTabsAndTrailingWhitespaces()<CR>:w<CR>
-
 
 " Note - l and q are used for the location list and quickfix toggle by ListToggle
 nnoremap <Leader>p :pclose<CR>

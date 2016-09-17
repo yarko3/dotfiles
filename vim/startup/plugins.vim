@@ -30,8 +30,8 @@ Plug 'Twinside/vim-hoogle', { 'for': 'haskell' }           " Haskell function in
 Plug 'eagletmt/ghcmod-vim', { 'for': 'haskell' }           " Displays types and warings/errors
 Plug 'eagletmt/neco-ghc', { 'for': 'haskell' }             " Haskell completion engine
 Plug 'elaforge/fast-tags', { 'for': 'haskell' }            " Ctags generation for Haskell
-Plug 'lukerandall/haskellmode-vim', { 'for': 'haskell' }   " Tons of useful things
 Plug 'bitc/vim-hdevtools', { 'for': 'haskell' }            " Haskell
+Plug 'tpope/vim-rhubarb'                                   " Vim + Git + Hub
 
 if g:platform == "Linux" || g:platform == "Darwin"
     Plug 'SirVer/ultisnips'               " Text snippets
@@ -58,9 +58,6 @@ let g:ctrlp_working_path_mode = 'ra'
 " Grepper
 nmap gs :call Cdroot()<CR><plug>(GrepperOperator)
 xmap gs :call Cdroot()<CR><plug>(GrepperOperator)
-
-" Haskellmode-vim
-let g:haddock_browser="/usr/bin/firefox"
 
 let g:grepper = {
     \ 'tools':     ['git'],
@@ -114,6 +111,7 @@ let g:ycm_server_keep_logfiles = 0
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_always_populate_location_list = 1
+let g:ycm_semantic_triggers = {'haskell' : ['.']}
 
 if g:bbenv != ""
     let g:ycm_seed_identifiers_with_syntax = 1
