@@ -42,14 +42,18 @@ else
 endif
 
 " Shift + movement for selection
-nmap <S-Up> v<Up>
-nmap <S-Down> v<Down>
-nmap <S-Left> v<Left>
-nmap <S-Right> v<Right>
-vmap <S-Up> <Up>
-vmap <S-Down> <Down>
-vmap <S-Left> <Left>
-vmap <S-Right> <Right>
+nnoremap <S-Up> v<Up>
+nnoremap <S-Down> v<Down>
+nnoremap <S-Left> v<Left>
+nnoremap <S-Right> v<Right>
+inoremap <S-Up> <ESC>v<Up>
+inoremap <S-Down> <ESC>v<Down>
+inoremap <S-Left> <ESC>v<Left>
+inoremap <S-Right> <ESC>v<Right>
+vnoremap <S-Up> <Up>
+vnoremap <S-Down> <Down>
+vnoremap <S-Left> <Left>
+vnoremap <S-Right> <Right>
 
 "" ============================================================================
 ""                         Leader Mappings (Sorted)
