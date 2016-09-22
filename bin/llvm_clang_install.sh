@@ -1,7 +1,7 @@
 #!/bin/bash
 
-if [[ "$USER" == "bhipple" ]]; then
-    BASE_DIR="/bb/bigstorq4/scrpbuild/ben"
+if [[ "$USER" == "ysenyuta" ]]; then
+    BASE_DIR="/bb/bigstorq4/scrpbuild/yarko"
 else
     BASE_DIR="/home/$USER"
 fi
