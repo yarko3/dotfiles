@@ -32,6 +32,10 @@ Plug 'eagletmt/neco-ghc', { 'for': 'haskell' }             " Haskell completion 
 Plug 'elaforge/fast-tags', { 'for': 'haskell' }            " Ctags generation for Haskell
 Plug 'bitc/vim-hdevtools', { 'for': 'haskell' }            " Haskell
 Plug 'tpope/vim-rhubarb'                                   " Vim + Git + Hub
+Plug 'bhipple/bde_plugins'                                 " Tools for formatting code according to BDE Standards
+Plug 'bhipple/vim-hindent'                                 " Haskell code formatter
+Plug 'bhipple/vim-snippets'                                " My snippets fork
+Plug 'bhipple/vimux'                                       " Vim and Tmux Integration
 
 if g:platform == "Linux" || g:platform == "Darwin"
     Plug 'SirVer/ultisnips'               " Text snippets
@@ -80,6 +84,7 @@ let g:syntastic_aggregate_errors = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_haskell_checkers = ['hlint']
+let g:syntastic_java_javac_autoload_maven_classpath = 0
 
 " Rainbow coloring
 let g:rainbow_active = 1
