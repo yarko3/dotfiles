@@ -70,7 +70,8 @@ nnoremap <F2> :call Cdroot()<CR>:Make clean<CR>
 if(g:bbenv == "")
     nnoremap <F4> :call Cdroot()<CR>:Make all<CR>:Make run<CR>:Copen<CR>/FAILED<CR>
 else
-    nnoremap <F4> :w<CR>:call Cdroot()<CR>:Make!<CR>
+    nnoremap <F3> :w<CR>:call Cdroot()<CR>:call VimuxRunCommand("clear; make gtest -j")<CR>
+    nnoremap <F4> :w<CR>:call Cdroot()<CR>:call VimuxRunCommand("clear; make -j")<CR>
 endif
 
 " Shift + movement for selection
