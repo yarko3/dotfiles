@@ -53,7 +53,7 @@ set autoread
 set makeprg=gmake
 
 " Set path for file searches
-set path+=/home/bhipple/mbig/**
+set path+=/home/ysenyuta/mbig/**
 
 " Ignore whitespace on diffs
 set diffopt+=iwhite
