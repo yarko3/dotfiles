@@ -43,6 +43,10 @@ PATH=$PATH:/usr/sbin
 
 export PYTHONPATH=~/bin
 
+if [ -d /opt/bb/bin ]; then
+    PATH=$PATH:/opt/bb/bin
+fi
+
 export LIBRARY_PATH="/opt/X11/lib:$LIBRARY_PATH"
 
 # You may need to manually set your language environment
