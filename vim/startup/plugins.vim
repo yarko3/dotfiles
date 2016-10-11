@@ -36,6 +36,8 @@ Plug 'bhipple/bde_plugins'                                 " Tools for formattin
 Plug 'bhipple/vim-hindent'                                 " Haskell code formatter
 Plug 'bhipple/vim-snippets'                                " My snippets fork
 Plug 'bhipple/vimux'                                       " Vim and Tmux Integration
+Plug 'godlygeek/tabular'                                   " Align things
+
 
 if g:platform == "Linux" || g:platform == "Darwin"
     Plug 'SirVer/ultisnips'               " Text snippets

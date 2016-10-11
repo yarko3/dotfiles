@@ -16,6 +16,17 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/command-not-found
     zgen oh-my-zsh plugins/wd
     zgen oh-my-zsh plugins/web-search
+    zgen oh-my-zsh plugins/tmux
+    zgen oh-my-zsh plugins/git
+    zgen oh-my-zsh plugins/colored-man
+    zgen oh-my-zsh plugins/colorize
+    zgen oh-my-zsh plugins/web-search
+
+    # directory lister
+    zgen load supercrabtree/k
+
+    # update zgen and plugins automatically
+    zgen load unixorn/autoupdate-zgen
 
     # Github plugins
     zgen load djui/alias-tips
