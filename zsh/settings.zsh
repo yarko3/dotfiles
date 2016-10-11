@@ -17,10 +17,6 @@ fi
 # Reduce delay to 0.1 seconds for switching to normal mode with ESC
 export KEYTIMEOUT=1
 
-PATH=~/bin
-if [ -d /opt/bb/bin ]; then
-    PATH=$PATH:/opt/bb/bin
-fi
 PATH=$PATH:~/bin_local
 PATH=$PATH:~/.local/bin
 
