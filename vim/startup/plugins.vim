@@ -37,7 +37,7 @@ Plug 'bhipple/vim-hindent'                                 " Haskell code format
 Plug 'bhipple/vim-snippets'                                " My snippets fork
 Plug 'bhipple/vimux'                                       " Vim and Tmux Integration
 Plug 'godlygeek/tabular'                                   " Align things
-
+Plug 'edkolev/promptline.vim'                              " Prompt line
 
 if g:platform == "Linux" || g:platform == "Darwin"
     Plug 'SirVer/ultisnips'               " Text snippets

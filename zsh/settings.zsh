@@ -92,8 +92,6 @@ PROMPT='%{$fg[yellow]%}λ %m %{$fg[green]%}%c%{$fg[yellow]%} →  %{$reset_color
 ZSH_THEME_GIT_PROMPT_PREFIX=""
 ZSH_THEME_GIT_PROMPT_SUFFIX=""
 
-export SPARK_HOME="/home/brh/spark-1.6.0-bin-hadoop2.6"
-
 ## ============================================================================
 ##                              Auto-Fu Config
 ## ============================================================================
