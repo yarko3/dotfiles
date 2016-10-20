@@ -74,20 +74,6 @@ else
     nnoremap <F4> :w<CR>:call Cdroot()<CR>:call VimuxRunCommand("clear; make -j")<CR>
 endif
 
-" Shift + movement for selection
-nnoremap <S-Up> v<Up>
-nnoremap <S-Down> v<Down>
-nnoremap <S-Left> v<Left>
-nnoremap <S-Right> v<Right>
-inoremap <S-Up> <ESC>v<Up>
-inoremap <S-Down> <ESC>v<Down>
-inoremap <S-Left> <ESC>v<Left>
-inoremap <S-Right> <ESC>v<Right>
-vnoremap <S-Up> <Up>
-vnoremap <S-Down> <Down>
-vnoremap <S-Left> <Left>
-vnoremap <S-Right> <Right>
-
 "" ============================================================================
 ""                         Leader Mappings (Sorted)
 "" ============================================================================
