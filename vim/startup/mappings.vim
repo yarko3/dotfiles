@@ -65,8 +65,8 @@ nnoremap <silent> <F8> :b#<CR>
 
 noremap <F5> :cex[]<CR>:cclose<CR>
 
-" Compilation and testing with Dispatch
-nnoremap <F2> :call Cdroot()<CR>:Make clean<CR>
+" Compilation and testing
+nnoremap <F2> :w<CR>:call Cdroot()<CR>:call VimuxRunCommand("clear; make clean -j")<CR>
 if(g:bbenv == "")
     nnoremap <F4> :call Cdroot()<CR>:Make all<CR>:Make run<CR>:Copen<CR>/FAILED<CR>
 else
