@@ -23,7 +23,12 @@ fi
 # Reduce delay to 0.1 seconds for switching to normal mode with ESC
 export KEYTIMEOUT=1
 
-PATH=$PATH:~/bin_local
+if [ -d /opt/bb/bin ]; then
+    PATH=/opt/bb/bin:$PATH
+fi
+
+PATH=~/bin:$PATH
+PATH=~/bin_local:$PATH
 PATH=$PATH:~/.local/bin
 
 if [ -n "$MACOS" ]; then
@@ -44,10 +49,6 @@ PATH=$PATH:/usr/local/sbin
 PATH=$PATH:/usr/sbin
 
 export PYTHONPATH=~/bin
-
-if [ -d /opt/bb/bin ]; then
-    PATH=$PATH:/opt/bb/bin
-fi
 
 export LIBRARY_PATH="/opt/X11/lib:$LIBRARY_PATH"
 
@@ -71,12 +72,20 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Hitting ctrl+r for nice history searching
 bindkey "^r" history-incremental-search-backward
-bindkey -M vicmd 'k' history-substring-search-up
-bindkey -M vicmd 'j' history-substring-search-down
 
-# Arrow keys, so other people can use my terminal
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
+for m in "vicmd" "afu-vicmd"; do
+    bindkey -M vicmd 'k' history-substring-search-up
+    bindkey -M vicmd 'j' history-substring-search-down
+done
+
+# Run `bindkey -l` to see a list of modes, and `bindkey -M foo` to see a list of commands active in mode foo
+# Move to vim escape mode
+for m in "viins" "afu"; do
+    bindkey -M "$m" jj vi-cmd-mode
+    bindkey -M "$m" kk vi-cmd-mode
+    bindkey -M "$m" jk vi-cmd-mode
+    bindkey -M "$m" kj vi-cmd-mode
+done
 
 # Unmap ctrl-s as "stop flow"
 stty stop undef
