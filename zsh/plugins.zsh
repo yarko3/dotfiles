@@ -18,7 +18,6 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/web-search
     zgen oh-my-zsh plugins/tmux
     zgen oh-my-zsh plugins/git
-    zgen oh-my-zsh plugins/colored-man
     zgen oh-my-zsh plugins/colorize
     zgen oh-my-zsh plugins/web-search
 

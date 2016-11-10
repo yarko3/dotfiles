@@ -3,11 +3,9 @@ call plug#begin('~/.vim/plugged')
 Plug 'Shougo/vimproc', { 'do': 'make' }                    " Asynchronous command execution library
 Plug 'Valloric/ListToggle'                                 " Toggling quickfix and location list
 Plug 'bling/vim-airline'                                   " Status line
-Plug 'chazmcgarvey/vimcoder'                               " Topcoder Vim Plugin
 Plug 'christoomey/vim-tmux-navigator'                      " Window/Pane switching with Vim and Tmux
 Plug 'ctrlpvim/ctrlp.vim'                                  " File searchin and opening
 Plug 'derekwyatt/vim-fswitch', { 'for': 'cpp' }            " Fastswitch (cpp/h toggle)
-Plug 'ivanov/vim-ipython', { 'for': 'python' }             " Vim + IPython Notebook integration
 Plug 'jceb/vim-orgmode'                                    " Emacs orgmode port
 Plug 'mhinz/vim-grepper'                                   " Asynchronous Grep -> QuickFix List
 Plug 'rhysd/vim-clang-format'                              " Vim wrapper plugin for clang-format
@@ -34,13 +32,11 @@ Plug 'bitc/vim-hdevtools', { 'for': 'haskell' }            " Haskell
 Plug 'tpope/vim-rhubarb'                                   " Vim + Git + Hub
 Plug 'bhipple/bde_plugins'                                 " Tools for formatting code according to BDE Standards
 Plug 'bhipple/vim-hindent'                                 " Haskell code formatter
-Plug 'bhipple/vim-snippets'                                " My snippets fork
 Plug 'bhipple/vimux'                                       " Vim and Tmux Integration
 Plug 'godlygeek/tabular'                                   " Align things
 Plug 'edkolev/promptline.vim'                              " Prompt line
 
 if g:platform == "Linux" || g:platform == "Darwin"
-    Plug 'SirVer/ultisnips'               " Text snippets
     Plug 'Valloric/YouCompleteMe'
 endif
 
