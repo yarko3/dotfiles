@@ -27,6 +27,10 @@
     stdin: true
     stdout: true
     stderr: true
+  - command: ./fonts/install.sh
+    stdin: true
+    stdout: true
+    stderr: true
   - command: vim +PlugUpdate +PlugUpgrade +qall
     stdin: true
     stdout: true
