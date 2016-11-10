@@ -104,6 +104,7 @@ nnoremap <Leader>rd :redraw!<CR>
 nnoremap <Leader>se :sp<CR>:e %:h<CR>
 nnoremap <Leader>sp :setlocal spell! spelllang=en_us<CR>
 nnoremap <Leader>ss :call SortSection()<CR>
+nnoremap <Leader>st :SyntasticToggleMode<CR>
 nnoremap <Leader>te :tabe %:h<CR>
 nnoremap <Leader>tf :call Cdroot()<CR>:call MkGtest()<CR>
 nnoremap <Leader>tm :Tabmerge right<CR>
