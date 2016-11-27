@@ -47,7 +47,3 @@
     stdin: true
     stdout: true
     stderr: true
-  - command: scripts/hub_install.sh
-    stdin: true
-    stdout: true
-    stderr: true
