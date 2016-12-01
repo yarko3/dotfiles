@@ -86,7 +86,9 @@ nnoremap <Leader>cdr :call Cdroot()<CR>
 nnoremap <Leader>cmt :call CmtSection("")<Left><Left>
 nnoremap <Leader>cx :!chmod a+x %<CR>
 nnoremap <Leader>df :Gdiff<CR>
+nnoremap <Leader>do :windo diffoff<CR>
 nnoremap <Leader>dom :Gdiff origin/master<CR>
+nnoremap <Leader>dt :windo diffthis<CR>
 nnoremap <Leader>dum :Gdiff upstream/master<CR>
 nnoremap <Leader>ev :e $MYVIMRC<CR>G$F/
 nnoremap <Leader>ff :FSHere<CR>
