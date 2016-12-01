@@ -23,10 +23,6 @@
 
 - shell:
   - [git submodule update --init --recursive, Updating submodules]
-  - command: scripts/dependency_install.sh
-    stdin: true
-    stdout: true
-    stderr: true
   - command: ./fonts/install.sh
     stdin: true
     stdout: true
@@ -36,14 +32,6 @@
     stdout: true
     stderr: true
   - command: scripts/ycm_regular_install.sh &
-    stdin: true
-    stdout: true
-    stderr: true
-  - command: scripts/fix_permissions.sh
-    stdin: true
-    stdout: true
-    stderr: true
-  - command: scripts/set_timezone.sh
     stdin: true
     stdout: true
     stderr: true
