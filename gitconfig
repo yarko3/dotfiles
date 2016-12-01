@@ -1,5 +1,6 @@
 [alias]
     br = branch
+    bra = branch --all
     ca = commit --amend --no-edit
     ci = commit
     co = checkout
