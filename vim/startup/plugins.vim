@@ -35,6 +35,7 @@ Plug 'bhipple/vim-hindent'                                 " Haskell code format
 Plug 'bhipple/vimux'                                       " Vim and Tmux Integration
 Plug 'godlygeek/tabular'                                   " Align things
 Plug 'edkolev/promptline.vim'                              " Prompt line
+Plug 'yssl/QFEnter'                                        " quickfix open in different places
 
 if g:platform == "Linux" || g:platform == "Darwin"
     Plug 'Valloric/YouCompleteMe'
@@ -60,6 +61,11 @@ autocmd FileType c,cpp setlocal textwidth=0
 
 " CtrlP
 let g:ctrlp_working_path_mode = 'ra'
+
+" QFEnter
+let g:qfenter_vopen_map = ['<C-v>']
+let g:qfenter_hopen_map = ['<C-CR>', '<C-s>', '<C-x>']
+let g:qfenter_topen_map = ['<C-t>']
 
 " Grepper
 nmap gs :call Cdroot()<CR><plug>(GrepperOperator)
