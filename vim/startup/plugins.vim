@@ -10,7 +10,6 @@ Plug 'jceb/vim-orgmode'                                    " Emacs orgmode port
 Plug 'mhinz/vim-grepper'                                   " Asynchronous Grep -> QuickFix List
 Plug 'rhysd/vim-clang-format'                              " Vim wrapper plugin for clang-format
 Plug 'scrooloose/syntastic'                                " Syntax checking
-Plug 'slurps-mad-rips/cmake.vim'                           " Better syntax highlighting for cmake
 Plug 'spf13/vim-autoclose'                                 " Matching [({'
 Plug 'tommcdo/vim-exchange'                                " cx operator for exchanging text regions
 Plug 'tpope/vim-commentary'                                " Comment/uncomment operator
