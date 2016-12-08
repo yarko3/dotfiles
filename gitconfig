@@ -70,6 +70,3 @@
 # Allow local customizations
 [include]
     path = ~/.gitconfig_local
-[user]
-	email = yarko3@hotmail.com
-	name = yarko3
