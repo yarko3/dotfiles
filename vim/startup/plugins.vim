@@ -35,6 +35,7 @@ Plug 'bhipple/vimux'                                       " Vim and Tmux Integr
 Plug 'godlygeek/tabular'                                   " Align things
 Plug 'edkolev/promptline.vim'                              " Prompt line
 Plug 'yssl/QFEnter'                                        " quickfix open in different places
+Plug 'airblade/vim-gitgutter'                              " git changes in gutter
 
 if g:platform == "Linux" || g:platform == "Darwin"
     Plug 'Valloric/YouCompleteMe'
