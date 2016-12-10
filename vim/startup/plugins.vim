@@ -42,7 +42,6 @@ if g:platform == "Linux" || g:platform == "Darwin"
     Plug 'Valloric/YouCompleteMe'
 endif
 
-
 call plug#end()
 
 "" ============================================================================
