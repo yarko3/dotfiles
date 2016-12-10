@@ -21,18 +21,12 @@ set autoindent
 set cindent
 set backspace=indent,eol,start
 
-" oh no, enable mouse
+" oh no, mouse
 set mouse=a
-
-" yank everything into register
-nmap <C-A> ggVGy
 
 " Backup directory for swp files
 set noswapfile
 set directory=""
-
-" Faster terminal scrolling?  TBD
-"set ttyfast
 
 " runtime path search for Ex
 set ru
@@ -89,12 +83,6 @@ set formatprg=par\ -w80
 " Additional words for the spell checker
 set spellfile=~/.vim/spell/extra-words.add
 
-" Enable window switching with Alt+arrow key
-nmap <silent> <A-Up> :wincmd k<CR>
-nmap <silent> <A-Down> :wincmd j<CR>
-nmap <silent> <A-Left> :wincmd h<CR>
-nmap <silent> <A-Right> :wincmd l<CR>
-
 "" ============================================================================
 ""                                Appearance
 "" ============================================================================
@@ -118,6 +106,9 @@ set splitright
 set incsearch
 set hlsearch
 
+" Always show status bar
+set laststatus=2
+
 " Set the folding method
 set foldmethod=manual
 set foldnestmax=3
@@ -125,6 +116,9 @@ set foldminlines=10
 
 " double click to highlight all occurrences
 nnoremap <silent> <2-LeftMouse> :let @/='\V\<'.escape(expand('<cword>'), '\').'\>'<cr>:set hls<cr>
+
+" no beeps
+set visualbell
 
 "" ============================================================================
 ""                               Auto Commands
