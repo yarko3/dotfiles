@@ -18,6 +18,8 @@ let g:screen_size_restore_pos = 1
 "" ============================================================================
 syntax on
 set autoindent
+" copy the previous indentation on autoindenting
+set copyindent
 set cindent
 set backspace=indent,eol,start
 
@@ -35,6 +37,8 @@ set ru
 set tabstop=4
 set expandtab
 set shiftwidth=4
+" makes indenting a multiple of shiftwidth
+set shiftround
 
 " Allow switching off modified buffers without warning
 set hidden
@@ -83,6 +87,9 @@ set formatprg=par\ -w80
 " Additional words for the spell checker
 set spellfile=~/.vim/spell/extra-words.add
 
+" stores undo state even when files are closed (in undodir)
+set undofile
+
 "" ============================================================================
 ""                                Appearance
 "" ============================================================================
@@ -119,6 +126,15 @@ nnoremap <silent> <2-LeftMouse> :let @/='\V\<'.escape(expand('<cword>'), '\').'\
 
 " no beeps
 set visualbell
+
+" highlights the current line
+set cursorline
+
+" tries to avoid those annoying "hit enter to continue" messages
+" if it still doesn't help with certain commands, add a second <cr>
+" at the end of the map command
+set shortmess=a
+
 
 "" ============================================================================
 ""                               Auto Commands

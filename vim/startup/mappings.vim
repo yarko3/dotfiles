@@ -7,9 +7,9 @@ map <F6> <ESC>[[oBAEL_LOG_SET_CATEGORY(LOG_CATEGORY);<ESC><C-o>
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! w !sudo tee > /dev/null %
 
-" =============================================================================
-"                             Fix Tmux Mappings
-" =============================================================================
+"" =============================================================================
+""                             Fix Tmux Mappings
+"" =============================================================================
 if &term =~ '^screen' && exists('$TMUX')
     set mouse+=a
     " tmux knows the extended mouse mode
@@ -76,6 +76,20 @@ else
     nnoremap <F3> :w<CR>:call Cdroot()<CR>:call VimuxRunCommand("clear; make gtest -j")<CR>
     nnoremap <F4> :w<CR>:call Cdroot()<CR>:call VimuxRunCommand("clear; make -j")<CR>
 endif
+
+" Basically you press * or # to search for the current selection
+vnoremap <silent> * :call VisualSearch('f')<CR>
+vnoremap <silent> # :call VisualSearch('b')<CR>
+vnoremap <silent> gv :call VisualSearch('gv')<CR>
+
+"" =============================================================================
+""                           Command Mode Mappings
+"" =============================================================================
+" Now we don't have to move our fingers so far when we want to scroll through
+" the command history; also, don't forget the q: command (see :h q: for more
+" info)
+cnoremap <c-j> <down>
+cnoremap <c-k> <up>
 
 "" ============================================================================
 ""                         Leader Mappings (Sorted)
