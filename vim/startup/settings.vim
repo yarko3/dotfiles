@@ -130,12 +130,6 @@ set visualbell
 " highlights the current line
 set cursorline
 
-" tries to avoid those annoying "hit enter to continue" messages
-" if it still doesn't help with certain commands, add a second <cr>
-" at the end of the map command
-set shortmess=a
-
-
 "" ============================================================================
 ""                               Auto Commands
 "" ============================================================================
