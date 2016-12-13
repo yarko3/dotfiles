@@ -1,6 +1,5 @@
 call plug#begin('~/.vim/plugged')
 
-" Plug 'spf13/vim-autoclose'                                 " Matching [({'
 Plug 'Shougo/vimproc', { 'do': 'make' }                    " Asynchronous command execution library
 Plug 'Twinside/vim-hoogle', { 'for': 'haskell' }           " Haskell function information
 Plug 'Valloric/ListToggle'                                 " Toggling quickfix and location list
@@ -28,6 +27,7 @@ Plug 'octol/vim-cpp-enhanced-highlight'                    " enhanced C++11/14/1
 Plug 'raimondi/delimitMate'                                " matching brackets
 Plug 'rhysd/vim-clang-format'                              " Vim wrapper plugin for clang-format
 Plug 'scrooloose/syntastic'                                " Syntax checking
+Plug 'sjl/gundo.vim'                                       " un/redo tree visualizer
 Plug 'tommcdo/vim-exchange'                                " cx operator for exchanging text regions
 Plug 'tpope/vim-commentary'                                " Comment/uncomment operator
 Plug 'tpope/vim-dispatch'                                  " Asynchronous Makes
