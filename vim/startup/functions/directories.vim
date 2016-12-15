@@ -1,11 +1,14 @@
 function! Cdfile()
-    cd %:h
-    pwd
+    if expand('%') != ''
+        cd %:h
+    else
+        echom "Not currently in a file."
+    endif
 endfunction
 
 " cd to the root of the current file's git directory
 function! Cdroot()
-    cd %:h
+    call Cdfile()
     exec "cd " . Trim(system("git rev-parse --show-toplevel"))
-    pwd
+    echom expand('.')
 endfunction
