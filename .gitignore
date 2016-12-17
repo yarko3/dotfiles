@@ -8,4 +8,7 @@ tags
 tmux/plugins
 vim/autoload/plug.vim.old
 
+/* don't include nvim symlink in repo; it is handled by dotbot*/
+vim/init.vim
+
 !tmux/plugins/tpm
