@@ -42,9 +42,11 @@ endif
 "" ============================================================================
 ""                           Insert Mode Mappings
 "" ============================================================================
-" Leaving insert mode with jj or jk
+" Leaving insert mode with some ups and downs
 inoremap jj <Esc><Right>
 inoremap jk <Esc><Right>
+inoremap kj <Esc><Right>
+inoremap kk <Esc><Right>
 
 "" ============================================================================
 ""                        Normal/Visual Mode Mappings
