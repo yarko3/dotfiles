@@ -13,7 +13,8 @@ lint()
     if [ "$?" -ne "0" ]; then
         echo "$binary linting errors:"
         echo "$lint"
-        exit 1
+        # make linters non-blocking
+        # exit 1
     fi
 }
 
