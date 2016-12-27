@@ -38,6 +38,7 @@
     shows = show --stat
     ss = show --stat
     st = status
+    sh = stash show -p
     um = branch --set-upstream-to=origin/master
 
     # List aliases
