@@ -68,7 +68,8 @@ nmap <C-A> ggVGy
 " Swap to last buffer
 nnoremap <silent> <F8> :b#<CR>
 
-noremap <F5> :cex[]<CR>:cclose<CR>
+" rerun last command
+noremap <F5> :w<CR>:call VimuxRunCommand("!!")<CR>
 
 " Compilation and testing
 nnoremap <F2> :w<CR>:call Cdroot()<CR>:call VimuxRunCommand("clear; make clean -j")<CR>
