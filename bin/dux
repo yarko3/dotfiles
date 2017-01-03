@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# background disk usage command
+( cd "$1" && du -ah | sort -h > du.txt.tmp && mv du.txt.tmp du.txt && echo "wrote $1/du.txt") &
