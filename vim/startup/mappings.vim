@@ -103,6 +103,7 @@ nmap <Space> \
 nnoremap <Leader>b :CtrlPBuffer<CR>
 nnoremap <Leader>cdf :call Cdfile()<CR>
 nnoremap <Leader>cdr :call Cdroot()<CR>
+nnoremap <Leader>clr :let @/ = ""<CR>
 nnoremap <Leader>cmt :call CmtSection("")<Left><Left>
 nnoremap <Leader>cx :!chmod a+x %<CR>
 nnoremap <Leader>df :Gdiff<CR>
