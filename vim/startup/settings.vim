@@ -88,6 +88,10 @@ set formatprg=par\ -w80
 set spellfile=~/.vim/spell/extra-words.add
 
 " stores undo state even when files are closed (in undodir)
+if !isdirectory($HOME . '/.vim/backups')
+    call mkdir($HOME . '/.vim/backups', 'p')
+endif
+set undodir=~/.vim/backups
 set undofile
 
 "" ============================================================================
