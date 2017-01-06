@@ -39,3 +39,7 @@
     stdin: true
     stdout: true
     stderr: true
+  - command: scripts/install_tmux_plugins.sh
+    stdin: true
+    stdout: true
+    stderr: true
