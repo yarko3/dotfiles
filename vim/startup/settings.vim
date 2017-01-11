@@ -110,8 +110,9 @@ set nowrap
 set listchars=tab:>-,trail:-
 set list!
 
-" Make vsplit split the new window to the right, not left
+" Make splitting more natural
 set splitright
+set splitbelow
 
 " Incremental Search and Highlighting Results
 set incsearch
