@@ -142,5 +142,3 @@ nnoremap <Leader>vv :w<CR>:VimuxPromptCommand<CR>
 nnoremap <Leader>vx :VimuxInterruptRunner<CR>
 nnoremap <Leader>w :call StripTabsAndTrailingWhitespaces()<CR>:w<CR>
 
-" Note - l and q are used for the location list and quickfix toggle by ListToggle
-nnoremap <Leader>p :pclose<CR>
