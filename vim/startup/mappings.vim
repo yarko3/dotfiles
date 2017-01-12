@@ -103,8 +103,6 @@ cnoremap <c-l> <right>
 nmap <Space> \
 
 nnoremap <Leader>b :CtrlPBuffer<CR>
-nnoremap <Leader>cdf :call Cdfile()<CR>
-nnoremap <Leader>cdr :call Cdroot()<CR>
 nnoremap <Leader>clr :let @/ = ""<CR>
 nnoremap <Leader>cmt :call CmtSection("")<Left><Left>
 nnoremap <Leader>cx :!chmod a+x %<CR>
@@ -113,7 +111,6 @@ nnoremap <Leader>do :windo diffoff<CR>
 nnoremap <Leader>dom :Gdiff origin/master<CR>
 nnoremap <Leader>dt :windo diffthis<CR>
 nnoremap <Leader>dum :Gdiff upstream/master<CR>
-nnoremap <Leader>ev :e $MYVIMRC<CR>G$F/
 nnoremap <Leader>ff :FSHere<CR>
 nnoremap <Leader>fh :FSSplitLeft<CR>
 nnoremap <Leader>fj :FSSplitBelow<CR>
@@ -131,11 +128,8 @@ nnoremap <Leader>se :sp<CR>:e %:h<CR>
 nnoremap <Leader>sp :setlocal spell! spelllang=en_us<CR>
 nnoremap <Leader>ss :call SortSection()<CR>
 nnoremap <Leader>st :SyntasticToggleMode<CR>
-nnoremap <Leader>te :tabe %:h<CR>
-nnoremap <Leader>tf :call Cdroot()<CR>:call MkGtest()<CR>
 nnoremap <Leader>tm :Tabmerge right<CR>
 nnoremap <Leader>ve :vsp<CR>:e %:h<CR>
-nnoremap <Leader>vl :w<CR>:call VimuxRunCommand('(load "' . bufname("%") . '")')<CR>
 nnoremap <Leader>vr :w<CR>:VimuxRunLastCommand<CR>
 nnoremap <Leader>vt :w<CR>:call VimuxRunCommand("clear; make test -j")<CR>
 nnoremap <Leader>vv :w<CR>:VimuxPromptCommand<CR>
