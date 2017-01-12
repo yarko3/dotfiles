@@ -93,6 +93,8 @@ vnoremap <silent> gv :call VisualSearch('gv')<CR>
 " info)
 cnoremap <c-j> <down>
 cnoremap <c-k> <up>
+cnoremap <c-h> <left>
+cnoremap <c-l> <right>
 
 "" ============================================================================
 ""                         Leader Mappings (Sorted)
