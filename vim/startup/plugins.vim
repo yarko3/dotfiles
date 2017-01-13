@@ -28,6 +28,7 @@ Plug 'raimondi/delimitMate'                                " matching brackets
 Plug 'rhysd/vim-clang-format'                              " Vim wrapper plugin for clang-format
 Plug 'scrooloose/syntastic'                                " Syntax checking
 Plug 'sjl/gundo.vim'                                       " un/redo tree visualizer
+Plug 'terryma/vim-expand-region'                           " quickly expand visual regions
 Plug 'tommcdo/vim-exchange'                                " cx operator for exchanging text regions
 Plug 'tpope/vim-commentary'                                " Comment/uncomment operator
 Plug 'tpope/vim-dispatch'                                  " Asynchronous Makes
@@ -138,3 +139,8 @@ if g:bbenv != ""
 else
     let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/.ycm_extra_conf.py'
 endif
+
+" vim-expand-region
+" (this shit is wild so I/you might not like it)
+vmap v <Plug>(expand_region_expand)
+vmap <C-v> <Plug>(expand_region_shrink)
