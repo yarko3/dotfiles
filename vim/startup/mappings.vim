@@ -1,9 +1,6 @@
 "" ============================================================================
 ""                             All Mode Mappings
 "" ============================================================================
-" Bael log category at the start of function
-map <F6> <ESC>[[oBAEL_LOG_SET_CATEGORY(LOG_CATEGORY);<ESC><C-o>
-
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! w !sudo tee > /dev/null %
 
@@ -51,9 +48,6 @@ inoremap kk <Esc><Right>
 "" ============================================================================
 ""                        Normal/Visual Mode Mappings
 "" ============================================================================
-" YouCompleteMe
-nnoremap <F9> :YcmForceCompileAndDiagnostics<CR>
-
 " If hl search is off, starting a new search or moving enables it
 nnoremap * :set hlsearch<CR>*
 nnoremap # :set hlsearch<CR>#
@@ -83,7 +77,6 @@ endif
 " Basically you press * or # to search for the current selection
 vnoremap <silent> * :call VisualSearch('f')<CR>
 vnoremap <silent> # :call VisualSearch('b')<CR>
-vnoremap <silent> gv :call VisualSearch('gv')<CR>
 
 "" =============================================================================
 ""                           Command Mode Mappings
@@ -123,7 +116,6 @@ nnoremap <Leader>jc :YcmCompleter GoToDeclaration<CR>
 nnoremap <Leader>jf :YcmCompleter GoToDefinition<CR>
 nnoremap <Leader>ji :YcmCompleter GoToImprecise<CR>
 nnoremap <Leader>jj :YcmCompleter GoTo<CR>
-nnoremap <Leader>rd :redraw!<CR>
 nnoremap <Leader>se :sp<CR>:e %:h<CR>
 nnoremap <Leader>sp :setlocal spell! spelllang=en_us<CR>
 nnoremap <Leader>ss :call SortSection()<CR>
@@ -135,4 +127,3 @@ nnoremap <Leader>vt :w<CR>:call VimuxRunCommand("clear; make test -j")<CR>
 nnoremap <Leader>vv :w<CR>:VimuxPromptCommand<CR>
 nnoremap <Leader>vx :VimuxInterruptRunner<CR>
 nnoremap <Leader>w :call StripTabsAndTrailingWhitespaces()<CR>:w<CR>
-

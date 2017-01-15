@@ -1,23 +1,16 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'Shougo/vimproc', { 'do': 'make' }                    " Asynchronous command execution library
-Plug 'Twinside/vim-hoogle', { 'for': 'haskell' }           " Haskell function information
 Plug 'Valloric/ListToggle'                                 " Toggling quickfix and location list
 Plug 'airblade/vim-gitgutter'                              " git changes in gutter
 Plug 'bhipple/bde_plugins'                                 " Tools for formatting code according to BDE Standards
-Plug 'bhipple/vim-hindent'                                 " Haskell code formatter
 Plug 'bhipple/vimux'                                       " Vim and Tmux Integration
-Plug 'bitc/vim-hdevtools', { 'for': 'haskell' }            " Haskell
 Plug 'bling/vim-airline'                                   " Status line
 Plug 'christoomey/vim-tmux-navigator'                      " Window/Pane switching with Vim and Tmux
 Plug 'conradirwin/vim-bracketed-paste'                     " paste with no fuss
 Plug 'ctrlpvim/ctrlp.vim'                                  " File searchin and opening
 Plug 'derekwyatt/vim-fswitch', { 'for': 'cpp' }            " Fastswitch (cpp/h toggle)
 Plug 'derekwyatt/vim-scala'                                " Scala syntax
-Plug 'eagletmt/ghcmod-vim', { 'for': 'haskell' }           " Displays types and warings/errors
-Plug 'eagletmt/neco-ghc', { 'for': 'haskell' }             " Haskell completion engine
-Plug 'edkolev/promptline.vim'                              " Prompt line
-Plug 'elaforge/fast-tags', { 'for': 'haskell' }            " Ctags generation for Haskell
 Plug 'flazz/vim-colorschemes'                              " Color schemes
 Plug 'godlygeek/tabular'                                   " Align things
 Plug 'luochen1990/rainbow'                                 " Rainbow parenthesis coloring
@@ -34,7 +27,6 @@ Plug 'tpope/vim-commentary'                                " Comment/uncomment o
 Plug 'tpope/vim-dispatch'                                  " Asynchronous Makes
 Plug 'tpope/vim-fugitive'                                  " Git Wrapper
 Plug 'tpope/vim-repeat'                                    " Dot operator for plugins
-Plug 'tpope/vim-rhubarb'                                   " Vim + Git + Hub
 Plug 'tpope/vim-surround'                                  " Surrounding text
 Plug 'tpope/vim-unimpaired'                                " Pairs of keyboard mappings for common tasks
 Plug 'tpope/vim-vinegar'                                   " netrw improvement
@@ -141,6 +133,5 @@ else
 endif
 
 " vim-expand-region
-" (this shit is wild so I/you might not like it)
 vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
