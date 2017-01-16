@@ -11,12 +11,13 @@ function! SortSection()
 endfunction
 
 function! StripTabsAndTrailingWhitespaces()
+  exec "normal ms"
   let _s=@/
   retab
   %s///ge
   %s/\s\+$//e
   let @/=_s
-  exec "normal ``"
+  exec "normal `s"
 endfunction
 
 function! RightPad(str, padSequence, desiredLen)
