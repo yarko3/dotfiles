@@ -32,6 +32,7 @@ Plug 'tpope/vim-unimpaired'                                " Pairs of keyboard m
 Plug 'tpope/vim-vinegar'                                   " netrw improvement
 Plug 'vim-airline/vim-airline-themes'                      " Status line themes
 Plug 'vim-scripts/Tabmerge'                                " Merge tabs into splits
+Plug 'wesQ3/vim-windowswap'                                " swap splits
 Plug 'yssl/QFEnter'                                        " quickfix open in different places
 
 if g:platform == "Linux" || g:platform == "Darwin"
@@ -117,6 +118,9 @@ let g:rainbow_conf = {
 \       'css': 0,
 \   }
 \}
+
+" windowswap
+let g:windowswap_map_keys = 0 "prevent default bindings
 
 " YouCompleteMe
 let g:ycm_server_log_level = 'debug'
