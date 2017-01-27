@@ -13,6 +13,7 @@ Plug 'derekwyatt/vim-fswitch', { 'for': 'cpp' }            " Fastswitch (cpp/h t
 Plug 'derekwyatt/vim-scala'                                " Scala syntax
 Plug 'flazz/vim-colorschemes'                              " Color schemes
 Plug 'godlygeek/tabular'                                   " Align things
+Plug 'imkmf/ctrlp-branches'                                " search for branches with ctrlp
 Plug 'luochen1990/rainbow'                                 " Rainbow parenthesis coloring
 Plug 'mhinz/vim-grepper'                                   " Asynchronous Grep -> QuickFix List
 Plug 'mhinz/vim-startify'                                  " dope start screen
@@ -61,6 +62,9 @@ autocmd FileType c,cpp setlocal textwidth=0
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_use_caching = 0
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
+let g:ctrlp_extensions = [
+    \ 'branches',
+    \ ]
 
 " QFEnter
 let g:qfenter_vopen_map = ['<C-v>']
