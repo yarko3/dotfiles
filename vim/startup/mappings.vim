@@ -96,6 +96,7 @@ cnoremap <c-l> <right>
 nmap <Space> \
 
 nnoremap <Leader>b :CtrlPBuffer<CR>
+nnoremap <Leader>bt :Gblame!<CR>
 nnoremap <Leader>clr :let @/ = ""<CR>
 nnoremap <Leader>cmt :call CmtSection("")<Left><Left>
 nnoremap <Leader>cx :!chmod a+x %<CR>
