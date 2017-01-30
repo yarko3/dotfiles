@@ -4,7 +4,8 @@ if has("gui_running")
     colorscheme desert
     set guifont=Monospace\ 11
 else
-    colorscheme desert256
+    set t_Co=256
+    colorscheme Tomorrow-Night-Eighties
 endif
 
 " Load functions

@@ -11,7 +11,6 @@ Plug 'conradirwin/vim-bracketed-paste'                     " paste with no fuss
 Plug 'ctrlpvim/ctrlp.vim'                                  " File searchin and opening
 Plug 'derekwyatt/vim-fswitch', { 'for': 'cpp' }            " Fastswitch (cpp/h toggle)
 Plug 'derekwyatt/vim-scala'                                " Scala syntax
-Plug 'flazz/vim-colorschemes'                              " Color schemes
 Plug 'godlygeek/tabular'                                   " Align things
 Plug 'luochen1990/rainbow'                                 " Rainbow parenthesis coloring
 Plug 'mhinz/vim-grepper'                                   " Asynchronous Grep -> QuickFix List
@@ -82,10 +81,6 @@ let g:netrw_sort_by = 'name'
 " ListToggle
 let g:lt_location_list_toggle_map = '<leader>l'
 let g:lt_quickfix_list_toggle_map = '<leader>q'
-
-" Set color scheme
-set t_Co=256
-colorscheme Tomorrow-Night-Eighties
 
 " Syntastic
 let g:syntastic_aggregate_errors = 1
