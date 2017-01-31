@@ -56,8 +56,8 @@ nnoremap N :set hlsearch<CR>N
 nnoremap / :set hlsearch<CR>/
 nnoremap ? :set hlsearch<CR>?
 
-" yank everything into register
-nmap <C-A> ggVGy
+" select everything
+nmap <C-A> ggVG
 
 " Swap to last buffer
 nnoremap <silent> <F8> :b#<CR>
