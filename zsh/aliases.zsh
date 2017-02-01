@@ -20,6 +20,7 @@ alias mkcd='. ~/bin/make_dir_and_cd.sh'
 alias mt='make -j test'
 alias myip='curl cmyip.com 2>/dev/null | grep -o "My IP Address is [0-9.]*"'
 alias rfwifi='nmcli r wifi off && nmcli r wifi on'
+alias tmux='tmux -2u'
 alias upper="tr '[:lower:]' '[:upper:]'"
 alias uu='sudo apt-get update && sudo apt-get upgrade'
 alias wfc='weather -f NYC'
