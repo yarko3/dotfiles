@@ -49,12 +49,17 @@ inoremap kk <Esc><Right>
 ""                        Normal/Visual Mode Mappings
 "" ============================================================================
 " If hl search is off, starting a new search or moving enables it
-nnoremap * :set hlsearch<CR>*
-nnoremap # :set hlsearch<CR>#
-nnoremap n :set hlsearch<CR>n
-nnoremap N :set hlsearch<CR>N
+" remove zz if the jumps are too much
+nnoremap * :set hlsearch<CR>*zz
+nnoremap # :set hlsearch<CR>#zz
+nnoremap n :set hlsearch<CR>nzz
+nnoremap N :set hlsearch<CR>Nzz
 nnoremap / :set hlsearch<CR>/
 nnoremap ? :set hlsearch<CR>?
+
+" Basically you press * or # to search for the current selection
+vnoremap <silent> * :call VisualSearch('f')<CR>zz
+vnoremap <silent> # :call VisualSearch('b')<CR>zz
 
 " select everything
 nmap <C-A> ggVG
@@ -73,10 +78,6 @@ else
     nnoremap <F3> :w<CR>:call Cdroot()<CR>:call VimuxRunCommand("clear; make gtest -j")<CR>
     nnoremap <F4> :w<CR>:call Cdroot()<CR>:call VimuxRunCommand("clear; make -j")<CR>
 endif
-
-" Basically you press * or # to search for the current selection
-vnoremap <silent> * :call VisualSearch('f')<CR>
-vnoremap <silent> # :call VisualSearch('b')<CR>
 
 "" =============================================================================
 ""                           Command Mode Mappings
