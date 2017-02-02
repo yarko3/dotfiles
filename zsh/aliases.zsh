@@ -19,15 +19,14 @@ alias m='make -j'
 alias mkcd='. ~/bin/make_dir_and_cd.sh'
 alias mt='make -j test'
 alias myip='curl cmyip.com 2>/dev/null | grep -o "My IP Address is [0-9.]*"'
+alias p='ps aux | grep '
 alias rfwifi='nmcli r wifi off && nmcli r wifi on'
 alias tmux='tmux -2u'
+alias topcpu='/bin/ps -eo pcpu,pid,user,args | sort -k 1 -r | head -10'
 alias upper="tr '[:lower:]' '[:upper:]'"
 alias uu='sudo apt-get update && sudo apt-get upgrade'
 alias wfc='weather -f NYC'
-
-# Search running processes
-alias p='ps aux | grep '
-alias topcpu='/bin/ps -eo pcpu,pid,user,args | sort -k 1 -r | head -10'
+alias :q='exit'
 
 [ -f ~/.zsh_local/aliases_local.zsh ] && source ~/.zsh_local/aliases_local.zsh
 
