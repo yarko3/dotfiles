@@ -12,6 +12,10 @@ export EDITOR=vi
 # update winsize after each command for better line-wrapping
 shopt -s  checkwinsize
 
+# To have colors for ls and all grep commands such as grep, egrep and zgrep
+export CLICOLOR=1
+export GREP_OPTIONS='--color=auto'
+
 # Source my generic aliases
 [ -f ~/.bash_aliases ] && . ~/.bash_aliases
 
