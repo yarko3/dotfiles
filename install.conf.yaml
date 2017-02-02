@@ -24,6 +24,9 @@
     ~/.zsh: zsh/
     ~/.zshenv: zshenv
     ~/.zshrc: zshrc
+    ~/.bashrc:
+        force: true
+        path: bashrc
 
 - shell:
   - [git submodule update --init --recursive, Updating submodules]
