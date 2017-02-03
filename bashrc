@@ -46,6 +46,9 @@ shopt -s histverify
 ## don't start auto-completion if there is nothing on the command line
 shopt -s no_empty_cmd_completion
 
+## bind space to be magic
+bind Space:magic-space
+
 if [ "4" = "${BASH_VERSINFO[0]}" ]; then
     ## auto-correct minor typos on directory word completion
     shopt -s dirspell
