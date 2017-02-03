@@ -67,7 +67,9 @@ export CLICOLOR=1
 export GREP_OPTIONS='--color=auto'
 
 # Prompt
-PS1='\[\e]0;\u@\h:\w\a\][\u@\h \W$(__git_ps1 " (%s)")]\$ '
+PS1='\[\e]0;\u@\h:\w\a\]\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[33m\]$(__git_ps1 " %s")\[\033[00m\]\$ '
+# old one
+# PS1='\[\e]0;\u@\h:\w\a\][\u@\h \W$(__git_ps1 " (%s)")]\$ '
 
 # Less Colors for Man Pages
 export LESS_TERMCAP_mb=$'\e[01;31m'       # begin blinking
