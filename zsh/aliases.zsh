@@ -28,8 +28,5 @@ alias uu='sudo apt-get update && sudo apt-get upgrade'
 alias wfc='weather -f NYC'
 alias :q='exit'
 
-# to help with autocompletion
-__git_complete g _git
-
 [ -f ~/.zsh_local/aliases_local.zsh ] && source ~/.zsh_local/aliases_local.zsh
 

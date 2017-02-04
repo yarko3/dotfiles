@@ -88,7 +88,15 @@ bindkey -v
 ## ============================================================================
 ##                                  Prompt
 ## ============================================================================
-PROMPT='%{$fg[yellow]%}%m %{$fg[green]%}%c%{$fg[yellow]%} →  %{$reset_color%}'
+git_prompt_info_mine() {
+    git_prompt_text="$(git_prompt_info)"
+    if [[ -n $git_prompt_text ]]; then
+        echo " <$git_prompt_text>"
+    else
+        echo ""
+    fi
+}
+PROMPT='%{$fg[green]%}%m %{$fg[cyan]%}%c%{$fg[yellow]%}$(git_prompt_info_mine)%{$reset_color%} $ '
 
 ZSH_THEME_GIT_PROMPT_PREFIX=""
 ZSH_THEME_GIT_PROMPT_SUFFIX=""
