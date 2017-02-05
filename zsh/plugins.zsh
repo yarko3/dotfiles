@@ -21,9 +21,6 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/colorize
     zgen oh-my-zsh plugins/web-search
 
-    # directory lister
-    zgen load supercrabtree/k
-
     # update zgen and plugins automatically
     zgen load unixorn/autoupdate-zgen
 
