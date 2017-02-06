@@ -105,5 +105,10 @@ if ! shopt -oq posix; then
 fi
 
 # to help with autocompletion for g
-_completion_loader git
-__git_complete g _git
+if [[ -n $(type -t _completion_loader) ]]; then
+    _completion_loader git
+fi
+
+if [[ -n $(type -t __git_complete) ]]; then
+    __git_complete g _git
+fi
