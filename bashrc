@@ -108,7 +108,6 @@ fi
 if [[ -n $(type -t _completion_loader) ]]; then
     _completion_loader git
 fi
-
 if [[ -n $(type -t __git_complete) ]]; then
     __git_complete g _git
 fi
