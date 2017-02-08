@@ -96,7 +96,7 @@ cnoremap <c-l> <right>
 " Also use spacebar as a leader
 nmap <Space> \
 
-nnoremap <Leader>b :CtrlPBuffer<CR>
+nnoremap <Leader>bf :CtrlPBuffer<CR>
 nnoremap <Leader>bl :Gblame!<CR>
 nnoremap <Leader>clr :let @/ = ""<CR>
 nnoremap <Leader>cmt :call CmtSection("")<Left><Left>
