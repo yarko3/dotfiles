@@ -24,6 +24,7 @@
     ~/.zsh: zsh/
     ~/.zshenv: zshenv
     ~/.zshrc: zshrc
+    ~/.bash: bash/
     ~/.bashrc:
         force: true
         path: bashrc

@@ -16,3 +16,4 @@ function resize() {
     convert "$file" -resize "$dimensions" "$1"
 }
 
+[ -f ~/.bash/functions.sh ] && . ~/.bash/functions.sh
