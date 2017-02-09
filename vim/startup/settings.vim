@@ -129,8 +129,8 @@ set foldminlines=10
 " double click to highlight all occurrences
 nnoremap <silent> <2-LeftMouse> :let @/='\V\<'.escape(expand('<cword>'), '\').'\>'<cr>:set hls<cr>
 
-" no beeps
-set visualbell
+" no beeps or flashes
+set t_vb=
 
 " highlights the current line
 set cursorline
