@@ -5,6 +5,9 @@ set editing-mode vi
 "\e[B": history-search-forward
 "\C-l":'clear\n'
 
+# for fzf completion like Ctrl+P in vim
+"\C-p":'**\t'
+
 set keymap vi-command
 "gg": beginning-of-history
 "G": end-of-history

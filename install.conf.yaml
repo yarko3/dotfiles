@@ -28,9 +28,14 @@
     ~/.bashrc:
         force: true
         path: bashrc
+    ~/.fzf: fzf/
 
 - shell:
   - [git submodule update --init --recursive, Updating submodules]
+  - command: ./fzf/install --key-bindings --completion --no-update-rc
+    stdin: true
+    stdout: true
+    stderr: true
   - command: ./fonts/install.sh
     stdin: true
     stdout: true

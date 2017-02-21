@@ -102,3 +102,4 @@ if [[ -n $(type -t __git_complete) ]]; then
     __git_complete g _git
 fi
 
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

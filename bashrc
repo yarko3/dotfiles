@@ -14,4 +14,3 @@ source ~/.bash/aliases.sh
 if [ -f ~/.bash_local/bash_local_after.zsh ]; then
     source ~/.bash_local/bash_local_after.zsh
 fi
-
