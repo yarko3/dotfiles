@@ -9,6 +9,11 @@ lint()
         return
     fi
 
+    if ! hash "$binary" 2>/dev/null; then
+        echo "Warning: no $binary binary in PATH."
+        return
+    fi
+
     lint=$(echo "$files" | xargs "$binary")
     if [ "$?" -ne "0" ]; then
         echo "$binary linting errors:"
