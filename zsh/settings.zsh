@@ -11,9 +11,6 @@ if [ -n "$SSH_CONNECTION" ]; then
     export ZSH_TMUX_AUTOSTART=false
 fi
 
-export GTEST_COLOR=yes
-export EDITOR=vi
-
 cmd=$(uname -a | grep -q "Darwin")
 if [ $? -eq 0 ]; then
     export MACOS="true"
@@ -39,13 +36,6 @@ PATH=$PATH:/usr/local/bin
 PATH=$PATH:/usr/bin
 PATH=$PATH:/usr/local/sbin
 PATH=$PATH:/usr/sbin
-
-export PYTHONPATH=~/bin
-
-export LIBRARY_PATH="/opt/X11/lib:$LIBRARY_PATH"
-
-# You may need to manually set your language environment
-export LANG=en_US.UTF-8
 
 . ~/bin/resty
 

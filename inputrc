@@ -6,7 +6,7 @@ set editing-mode vi
 "\C-l":'clear\n'
 
 # for fzf completion like Ctrl+P in vim
-"\C-p":'**\t'
+"\C-p":'~~\t'
 
 set keymap vi-command
 "gg": beginning-of-history

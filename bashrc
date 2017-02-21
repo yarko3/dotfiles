@@ -10,6 +10,7 @@ fi
 source ~/.bash/functions.sh
 source ~/.bash/settings.sh
 source ~/.bash/aliases.sh
+source ~/.bash/exports.sh
 
 if [ -f ~/.bash_local/bash_local_after.zsh ]; then
     source ~/.bash_local/bash_local_after.zsh
