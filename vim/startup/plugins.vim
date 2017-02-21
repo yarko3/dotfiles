@@ -15,7 +15,7 @@ Plug 'godlygeek/tabular'                                   " Align things
 Plug 'luochen1990/rainbow'                                 " Rainbow parenthesis coloring
 Plug 'mhinz/vim-grepper'                                   " Asynchronous Grep -> QuickFix List
 Plug 'mhinz/vim-startify'                                  " dope start screen
-Plug 'octol/vim-cpp-enhanced-highlight'                    " enhanced C++11/14/17 highlighting
+Plug 'octol/vim-cpp-enhanced-highlight', { 'for': 'cpp' }  " enhanced C++11/14/17 highlighting
 Plug 'raimondi/delimitMate'                                " matching brackets
 Plug 'rhysd/vim-clang-format'                              " Vim wrapper plugin for clang-format
 Plug 'scrooloose/syntastic'                                " Syntax checking
