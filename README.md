@@ -1,8 +1,7 @@
-# dotfiles [![Build Status](https://travis-ci.org/yarko3/dotfiles.svg?branch=master)](https://travis-ci.org/yarko3/dotfiles) 
+# dotfiles [![Build Status](https://travis-ci.org/yarko3/dotfiles.svg?branch=master)](https://travis-ci.org/yarko3/dotfiles)
 My dotfiles for vim, tmux, etc.
 
 ### Installation
-#### Update and Run Idempotent Installer
 ```
 cd ~/dotfiles
 git pull
