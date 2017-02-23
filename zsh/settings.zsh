@@ -28,16 +28,12 @@ PATH=~/bin:$PATH
 PATH=~/bin_local:$PATH
 PATH=$PATH:~/.local/bin
 
-PATH=$PATH:~/.rvm/bin
-PATH=$PATH:/opt/chefdk/bin
 PATH=$PATH:/bin
 PATH=$PATH:/sbin
 PATH=$PATH:/usr/local/bin
 PATH=$PATH:/usr/bin
 PATH=$PATH:/usr/local/sbin
 PATH=$PATH:/usr/sbin
-
-. ~/bin/resty
 
 [ -f ~/.config/hub ] && export GITHUB_STANDARD_TOKEN=$(grep oauth_token ~/.config/hub | awk '{print $2}')
 

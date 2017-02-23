@@ -2,13 +2,8 @@
 export FZF_COMPLETION_TRIGGER='~~'
 
 export GTEST_COLOR=yes
-export EDITOR=vi
-
-export PYTHONPATH=~/bin
 
 export LIBRARY_PATH="/opt/X11/lib:$LIBRARY_PATH"
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
-
-
