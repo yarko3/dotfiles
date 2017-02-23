@@ -16,4 +16,6 @@ function resize() {
     convert "$file" -resize "$dimensions" "$1"
 }
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 [ -f ~/.bash/functions.sh ] && . ~/.bash/functions.sh
