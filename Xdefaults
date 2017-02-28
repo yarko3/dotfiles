@@ -13,7 +13,7 @@
 *lookAndFeel: motif
 
 
-! The following sets the customization resource to get 
+! The following sets the customization resource to get
 ! special app-defaults, if they exist:
 #ifdef COLOR
 *Customization: -color
