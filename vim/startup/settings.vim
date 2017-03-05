@@ -98,6 +98,13 @@ endif
 set undodir=~/.vim/backups
 set undofile
 
+" allow for scrolling to next/prev line with left/right
+set whichwrap+=<,>,h,l,[,]
+
+" This shortens about every message to a minimum and thus avoids scrolling within
+" the output of messages and the 'press a key' prompt that goes with these
+set shm=at
+
 "" ============================================================================
 ""                                Appearance
 "" ============================================================================
@@ -117,6 +124,9 @@ set list!
 " Make splitting more natural
 set splitright
 set splitbelow
+
+" Splits resize on open/close
+set equalalways
 
 " Incremental Search and Highlighting Results
 set incsearch
