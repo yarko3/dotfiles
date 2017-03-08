@@ -126,6 +126,7 @@ let g:ycm_semantic_triggers = {'haskell' : ['.']}
 
 if g:bbenv != ""
     let g:ycm_seed_identifiers_with_syntax = 1
+    let g:ycm_server_python_interpreter = '/opt/bb/bin/python'
 else
     let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/.ycm_extra_conf.py'
 endif
