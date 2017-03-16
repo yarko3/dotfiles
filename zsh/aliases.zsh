@@ -13,7 +13,6 @@ alias hd='~/bin/hex_decimal.sh'
 alias less='less -N'
 alias ll='ls -al'
 alias lower="tr '[:upper:]' '[:lower:]'"
-alias ls='ls --color'
 alias m='make -j'
 alias mkcd='. ~/bin/make_dir_and_cd.sh'
 alias mt='make -j test'
