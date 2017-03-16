@@ -91,6 +91,8 @@ if ! shopt -oq posix; then
     . /usr/share/bash-completion/bash_completion
   elif [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
+  elif [ -f /usr/local/etc/bash_completion ]; then
+      . /usr/local/etc/bash_completion
   fi
 fi
 
@@ -98,6 +100,7 @@ fi
 if [[ -n $(type -t _completion_loader) ]]; then
     _completion_loader git
 fi
+
 if [[ -n $(type -t __git_complete) ]]; then
     __git_complete g _git
 fi
