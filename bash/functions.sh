@@ -13,3 +13,6 @@ fshow() {
                 {}
 FZF-EOF"
 }
+
+# load local functions
+[ -f ~/.bashrc_local/bashrc_local_functions.sh ] && source ~/.bashrc_local/bashrc_local_functions.sh
