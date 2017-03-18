@@ -1,6 +1,4 @@
-alias battery='upower -i /org/freedesktop/UPower/devices/battery_BAT0'
 alias cdr='cd $(git rev-parse --show-toplevel)'
-alias ff='firefox'
 alias fn='find . -name'
 alias g='git'
 alias gg='git grep'

@@ -1,3 +1,31 @@
+# =============================================================================
+#                           Environment Variables
+# =============================================================================
+if [ "$TERM" != "screen-256color" ]; then
+    export TERM=xterm-256color
+fi
+
+cmd=$(uname -a | grep -q "Darwin")
+if [ $? -eq 0 ]; then
+    export MACOS="true"
+    export EDITOR=vim
+fi
+
+if [ -d /opt/bb/bin ]; then
+    PATH=/opt/bb/bin:$PATH
+fi
+
+PATH=~/bin:$PATH
+PATH=~/bin_local:$PATH
+PATH=$PATH:~/.local/bin
+
+PATH=$PATH:/bin
+PATH=$PATH:/sbin
+PATH=$PATH:/usr/local/bin
+PATH=$PATH:/usr/bin
+PATH=$PATH:/usr/local/sbin
+PATH=$PATH:/usr/sbin
+
 ## ============================================================================
 ##                                  General
 ## ============================================================================
