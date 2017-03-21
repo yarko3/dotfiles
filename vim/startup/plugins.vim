@@ -124,7 +124,7 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_always_populate_location_list = 1
 let g:ycm_semantic_triggers = {'haskell' : ['.']}
 
-if g:bbenv != ""
+if g:bbenv != "" && g:platform != "Darwin"
     let g:ycm_seed_identifiers_with_syntax = 1
     let g:ycm_server_python_interpreter = '/opt/bb/bin/python'
 else
