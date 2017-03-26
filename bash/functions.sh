@@ -18,6 +18,12 @@ function noproxy() {
     env -u http_proxy -u https_proxy -u HTTP_PROXY -u HTTPS_PROXY "$@"
 }
 
+pathDeduplicate() {
+    export PATH="$(echo "$PATH" |
+        awk 'BEGIN{RS=":";} \
+            {sub(sprintf("%c$",10),"");if(A[$0]){}else{A[$0]=1;printf(((NR==1)?"":":")$0)}}' \
+        )";
+}
 
 # load local functions
 [ -f ~/.bashrc_local/bashrc_local_functions.sh ] && source ~/.bashrc_local/bashrc_local_functions.sh

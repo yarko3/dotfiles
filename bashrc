@@ -15,3 +15,5 @@ source ~/.bash/exports.sh
 if [ -f ~/.bashrc_local/bashrc_local_after.sh ]; then
     source ~/.bashrc_local/bashrc_local_after.sh
 fi
+
+pathDeduplicate

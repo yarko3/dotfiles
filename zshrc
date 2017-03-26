@@ -14,3 +14,5 @@ source ~/.zsh/exports.zsh
 if [ -f ~/.zsh_local/zshrc_local_after.zsh ]; then
     source ~/.zsh_local/zshrc_local_after.zsh
 fi
+
+pathDeduplicate
