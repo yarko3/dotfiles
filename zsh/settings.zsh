@@ -11,8 +11,7 @@ if [ -n "$SSH_CONNECTION" ]; then
     export ZSH_TMUX_AUTOSTART=false
 fi
 
-cmd=$(uname -a | grep -q "Darwin")
-if [ $? -eq 0 ]; then
+if [ $(uname) = "Darwin" ]; then
     export MACOS="true"
     export EDITOR=vim
 fi

@@ -1,3 +1,10 @@
+if [ $(uname) = "Darwin" ]; then
+    # if no gls, brew intall coreutils
+    alias ls='gls --color=auto'
+else
+    alias ls='ls --color=auto'
+fi
+
 alias :q='exit'
 alias cdr='cd $(git rev-parse --show-toplevel)'
 alias fn='find . -name'
@@ -12,7 +19,6 @@ alias hd='~/bin/hex_decimal.sh'
 alias less='less -N'
 alias ll='ls -al'
 alias lower="tr '[:upper:]' '[:lower:]'"
-alias ls='ls --color=auto'
 alias m='make -j'
 alias mkcd='. ~/bin/make_dir_and_cd.sh'
 alias mt='make -j test'

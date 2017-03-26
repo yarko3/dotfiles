@@ -5,8 +5,7 @@ if [ "$TERM" != "screen-256color" ]; then
     export TERM=xterm-256color
 fi
 
-cmd=$(uname -a | grep -q "Darwin")
-if [ $? -eq 0 ]; then
+if [ $(uname) = "Darwin" ]; then
     export MACOS="true"
     export EDITOR=vim
 fi
