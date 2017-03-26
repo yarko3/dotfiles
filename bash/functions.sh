@@ -3,7 +3,7 @@
 # =============================================================================
 
 # git commit browser
-fshow() {
+glg() {
   git log --graph --oneline --branches --decorate --color=always \
       --format=format:'%C(bold blue)%h%C(reset) - %C(bold blue)(%ar) %C(bold yellow)%d%C(reset) %C(green)%s%C(reset) %C(dim green)- %an%C(reset)' "$@" |
   fzf --ansi --no-sort --reverse --tiebreak=index --bind=ctrl-s:toggle-sort \
