@@ -29,7 +29,6 @@ PATH=$PATH:/usr/sbin
 ## ============================================================================
 ##                                  General
 ## ============================================================================
-export TERM=xterm-256color
 export EDITOR=vi
 
 # update winsize after each command for better line-wrapping
