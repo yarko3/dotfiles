@@ -12,6 +12,8 @@ Plug 'ctrlpvim/ctrlp.vim'                                  " File searchin and o
 Plug 'derekwyatt/vim-fswitch', { 'for': 'cpp' }            " Fastswitch (cpp/h toggle)
 Plug 'derekwyatt/vim-scala'                                " Scala syntax
 Plug 'godlygeek/tabular'                                   " Align things
+Plug 'junegunn/gv.vim'                                     " commit viewer
+Plug 'junegunn/vim-peekaboo'                               " show content of registers
 Plug 'luochen1990/rainbow'                                 " Rainbow parenthesis coloring
 Plug 'mhinz/vim-grepper'                                   " Asynchronous Grep -> QuickFix List
 Plug 'mhinz/vim-startify'                                  " dope start screen
@@ -33,8 +35,8 @@ Plug 'vim-airline/vim-airline-themes'                      " Status line themes
 Plug 'vim-scripts/Tabmerge'                                " Merge tabs into splits
 Plug 'wesQ3/vim-windowswap'                                " swap splits
 Plug 'yssl/QFEnter'                                        " quickfix open in different places
+Plug 'majutsushi/tagbar'                                   " view tags awesomely
 
-Plug 'junegunn/gv.vim'                                     " commit viewer
 
 if g:platform == "Linux" || g:platform == "Darwin"
     Plug 'Valloric/YouCompleteMe'
@@ -136,3 +138,4 @@ endif
 " vim-expand-region
 vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
+

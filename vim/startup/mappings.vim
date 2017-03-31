@@ -125,6 +125,7 @@ nnoremap <Leader>ss :call SortSection()<CR>
 nnoremap <Leader>st :SyntasticToggleMode<CR>
 nnoremap <Leader>sw :call WindowSwap#EasyWindowSwap()<CR>
 nnoremap <Leader>tm :Tabmerge right<CR>
+nnoremap <Leader>tt :TagbarToggle<CR>
 nnoremap <Leader>ve :vsp<CR>:e %:h<CR>
 nnoremap <Leader>vr :w<CR>:VimuxRunLastCommand<CR>
 nnoremap <Leader>vt :w<CR>:call VimuxRunCommand("clear; make test -j")<CR>
