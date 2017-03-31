@@ -110,9 +110,10 @@ nnoremap <Leader>fh :FSSplitLeft<CR>
 nnoremap <Leader>fj :FSSplitBelow<CR>
 nnoremap <Leader>fk :FSSplitAbove<CR>
 nnoremap <Leader>fl :FSSplitRight<CR>
-nnoremap <Leader>gg :call Cdroot()<CR>:Grepper<CR>
 nnoremap <Leader>gb :call Cdroot()<CR>:Grepper -buffer<CR>
+nnoremap <Leader>gg :call Cdroot()<CR>:Grepper<CR>
 nnoremap <Leader>gt :GundoToggle<CR>
+nnoremap <Leader>gv :GV<CR>
 nnoremap <Leader>h :set hlsearch! hlsearch?<CR>
 nnoremap <Leader>jc :YcmCompleter GoToDeclaration<CR>
 nnoremap <Leader>jf :YcmCompleter GoToDefinition<CR>
