@@ -34,6 +34,8 @@ Plug 'vim-scripts/Tabmerge'                                " Merge tabs into spl
 Plug 'wesQ3/vim-windowswap'                                " swap splits
 Plug 'yssl/QFEnter'                                        " quickfix open in different places
 
+Plug 'junegunn/gv.vim'                                     " commit viewer
+
 if g:platform == "Linux" || g:platform == "Darwin"
     Plug 'Valloric/YouCompleteMe'
 endif
