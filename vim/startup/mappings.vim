@@ -112,7 +112,6 @@ nnoremap <Leader>fk :FSSplitAbove<CR>
 nnoremap <Leader>fl :FSSplitRight<CR>
 nnoremap <Leader>gb :call Cdroot()<CR>:Grepper -buffer<CR>
 nnoremap <Leader>gg :call Cdroot()<CR>:Grepper<CR>
-nnoremap <Leader>gt :GundoToggle<CR>
 nnoremap <Leader>gv :GV<CR>
 nnoremap <Leader>h :set hlsearch! hlsearch?<CR>
 nnoremap <Leader>jc :YcmCompleter GoToDeclaration<CR>
@@ -126,6 +125,7 @@ nnoremap <Leader>st :SyntasticToggleMode<CR>
 nnoremap <Leader>sw :call WindowSwap#EasyWindowSwap()<CR>
 nnoremap <Leader>tm :Tabmerge right<CR>
 nnoremap <Leader>tt :TagbarToggle<CR>
+nnoremap <Leader>ut :UndotreeToggle<CR>
 nnoremap <Leader>ve :vsp<CR>:e %:h<CR>
 nnoremap <Leader>vr :w<CR>:VimuxRunLastCommand<CR>
 nnoremap <Leader>vt :w<CR>:call VimuxRunCommand("clear; make test -j")<CR>

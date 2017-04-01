@@ -21,7 +21,6 @@ Plug 'octol/vim-cpp-enhanced-highlight', { 'for': 'cpp' }  " enhanced C++11/14/1
 Plug 'raimondi/delimitMate'                                " matching brackets
 Plug 'rhysd/vim-clang-format'                              " Vim wrapper plugin for clang-format
 Plug 'scrooloose/syntastic'                                " Syntax checking
-Plug 'sjl/gundo.vim'                                       " un/redo tree visualizer
 Plug 'terryma/vim-expand-region'                           " quickly expand visual regions
 Plug 'tommcdo/vim-exchange'                                " cx operator for exchanging text regions
 Plug 'tpope/vim-commentary'                                " Comment/uncomment operator
@@ -36,7 +35,7 @@ Plug 'vim-scripts/Tabmerge'                                " Merge tabs into spl
 Plug 'wesQ3/vim-windowswap'                                " swap splits
 Plug 'yssl/QFEnter'                                        " quickfix open in different places
 Plug 'majutsushi/tagbar'                                   " view tags awesomely
-
+Plug 'mbbill/undotree'                                     " history visualizer
 
 if g:platform == "Linux" || g:platform == "Darwin"
     Plug 'Valloric/YouCompleteMe'
