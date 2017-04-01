@@ -15,6 +15,8 @@ Plug 'godlygeek/tabular'                                   " Align things
 Plug 'junegunn/gv.vim'                                     " commit viewer
 Plug 'junegunn/vim-peekaboo'                               " show content of registers
 Plug 'luochen1990/rainbow'                                 " Rainbow parenthesis coloring
+Plug 'majutsushi/tagbar'                                   " view tags awesomely
+Plug 'mbbill/undotree'                                     " history visualizer
 Plug 'mhinz/vim-grepper'                                   " Asynchronous Grep -> QuickFix List
 Plug 'mhinz/vim-startify'                                  " dope start screen
 Plug 'octol/vim-cpp-enhanced-highlight', { 'for': 'cpp' }  " enhanced C++11/14/17 highlighting
@@ -34,8 +36,6 @@ Plug 'vim-airline/vim-airline-themes'                      " Status line themes
 Plug 'vim-scripts/Tabmerge'                                " Merge tabs into splits
 Plug 'wesQ3/vim-windowswap'                                " swap splits
 Plug 'yssl/QFEnter'                                        " quickfix open in different places
-Plug 'majutsushi/tagbar'                                   " view tags awesomely
-Plug 'mbbill/undotree'                                     " history visualizer
 
 if g:platform == "Linux" || g:platform == "Darwin"
     Plug 'Valloric/YouCompleteMe'
@@ -137,4 +137,3 @@ endif
 " vim-expand-region
 vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
-
