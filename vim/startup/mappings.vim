@@ -96,7 +96,7 @@ cnoremap <c-l> <right>
 " Also use spacebar as a leader
 nmap <Space> \
 
-nnoremap <Leader>bf :CtrlPBuffer<CR>
+nnoremap <Leader><Space> :CtrlPBuffer<CR>
 nnoremap <Leader>bl :Gblame!<CR>
 nnoremap <Leader>cmt :call CmtSection("")<Left><Left>
 nnoremap <Leader>cx :!chmod a+x %<CR>
