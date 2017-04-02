@@ -27,7 +27,6 @@ Plug 'scrooloose/syntastic'                                " Syntax checking
 Plug 'terryma/vim-expand-region'                           " quickly expand visual regions
 Plug 'tommcdo/vim-exchange'                                " cx operator for exchanging text regions
 Plug 'tpope/vim-commentary'                                " Comment/uncomment operator
-Plug 'tpope/vim-dispatch'                                  " Asynchronous Makes
 Plug 'tpope/vim-fugitive'                                  " Git Wrapper
 Plug 'tpope/vim-repeat'                                    " Dot operator for plugins
 Plug 'tpope/vim-surround'                                  " Surrounding text
