@@ -143,3 +143,6 @@ let g:gutentags_ctags_tagfile=".git/tags"
 let g:gutentags_generate_on_missing=0
 let g:gutentags_generate_on_new=0
 let g:gutentags_file_list_command='git ls-files'
+
+" tagbar
+let g:tagbar_autofocus=1
