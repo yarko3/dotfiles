@@ -14,7 +14,6 @@ Plug 'derekwyatt/vim-scala'                                " Scala syntax
 Plug 'godlygeek/tabular'                                   " Align things
 Plug 'junegunn/gv.vim'                                     " commit viewer
 Plug 'junegunn/vim-peekaboo'                               " show content of registers
-Plug 'ludovicchabant/vim-gutentags'                        " keep tags updated
 Plug 'luochen1990/rainbow'                                 " Rainbow parenthesis coloring
 Plug 'majutsushi/tagbar'                                   " view tags awesomely
 Plug 'mbbill/undotree'                                     " history visualizer
@@ -137,12 +136,6 @@ endif
 " vim-expand-region
 vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
-
-" guttentags
-let g:gutentags_ctags_tagfile=".git/tags"
-let g:gutentags_generate_on_missing=0
-let g:gutentags_generate_on_new=0
-let g:gutentags_file_list_command='git ls-files'
 
 " tagbar
 let g:tagbar_autofocus=1
