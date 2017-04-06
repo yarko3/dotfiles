@@ -14,7 +14,7 @@ Plug 'derekwyatt/vim-scala'                                " Scala syntax
 Plug 'godlygeek/tabular'                                   " Align things
 Plug 'junegunn/gv.vim'                                     " commit viewer
 Plug 'junegunn/vim-peekaboo'                               " show content of registers
-Plug 'kovisoft/slimv'                                      " lisp integration
+Plug 'kovisoft/slimv', { 'for': 'lisp'}                    " lisp integration
 Plug 'luochen1990/rainbow'                                 " Rainbow parenthesis coloring
 Plug 'majutsushi/tagbar'                                   " view tags awesomely
 Plug 'mbbill/undotree'                                     " history visualizer
