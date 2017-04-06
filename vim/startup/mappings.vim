@@ -94,7 +94,7 @@ cnoremap <c-l> <right>
 ""                         Leader Mappings (Sorted)
 "" ============================================================================
 " Also use spacebar as a leader
-nmap <Space> \
+let mapleader = "\<Space>"
 
 nnoremap <Leader><Space> :CtrlPBuffer<CR>
 nnoremap <Leader>bl :Gblame!<CR>
