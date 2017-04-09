@@ -55,7 +55,6 @@ let g:airline_theme = 'tomorrow'
 let g:clang_format#detect_style_file = 1
 let g:clang_format#auto_formatexpr = 1
 map <C-T> :ClangFormat<CR>
-imap <C-T> <C-o>:ClangFormat<CR>
 autocmd FileType c,cpp setlocal textwidth=0
 
 " CtrlP
