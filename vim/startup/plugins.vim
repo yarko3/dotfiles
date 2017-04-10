@@ -14,7 +14,6 @@ Plug 'derekwyatt/vim-scala'                                " Scala syntax
 Plug 'godlygeek/tabular'                                   " Align things
 Plug 'junegunn/gv.vim'                                     " commit viewer
 Plug 'junegunn/vim-peekaboo'                               " show content of registers
-Plug 'kovisoft/slimv', { 'for': 'lisp'}                    " lisp integration
 Plug 'luochen1990/rainbow'                                 " Rainbow parenthesis coloring
 Plug 'majutsushi/tagbar'                                   " view tags awesomely
 Plug 'mbbill/undotree'                                     " history visualizer
@@ -141,5 +140,3 @@ vmap <C-v> <Plug>(expand_region_shrink)
 let g:tagbar_autofocus=1
 let g:tagbar_sort=0
 
-" slimv
-let g:slimv_swank_cmd = '! tmux new-window -d -n REPL-SBCL "sbcl --load ~/.vim/plugged/slimv/slime/start-swank.lisp"'
