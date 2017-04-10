@@ -146,9 +146,6 @@ nnoremap <silent> <2-LeftMouse> :let @/='\V\<'.escape(expand('<cword>'), '\').'\
 " no beeps or flashes
 set t_vb=
 
-" highlights the current line
-set cursorline
-
 "" ============================================================================
 ""                               Auto Commands
 "" ============================================================================
