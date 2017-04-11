@@ -2,6 +2,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'Shougo/vimproc', { 'do': 'make' }                    " Asynchronous command execution library
 Plug 'Valloric/ListToggle'                                 " Toggling quickfix and location list
+Plug 'Yggdroot/indentLine'                                 " show indent
 Plug 'airblade/vim-gitgutter'                              " git changes in gutter
 Plug 'bhipple/bde_plugins'                                 " Tools for formatting code according to BDE Standards
 Plug 'bhipple/vimux'                                       " Vim and Tmux Integration
@@ -23,9 +24,11 @@ Plug 'octol/vim-cpp-enhanced-highlight', { 'for': 'cpp' }  " enhanced C++11/14/1
 Plug 'raimondi/delimitMate'                                " matching brackets
 Plug 'rhysd/vim-clang-format'                              " Vim wrapper plugin for clang-format
 Plug 'scrooloose/syntastic'                                " Syntax checking
+Plug 'sheerun/vim-polyglot'                                " languages
 Plug 'terryma/vim-expand-region'                           " quickly expand visual regions
 Plug 'tommcdo/vim-exchange'                                " cx operator for exchanging text regions
 Plug 'tpope/vim-commentary'                                " Comment/uncomment operator
+Plug 'tpope/vim-endwise'                                   " auto-end certain structures
 Plug 'tpope/vim-fugitive'                                  " Git Wrapper
 Plug 'tpope/vim-repeat'                                    " Dot operator for plugins
 Plug 'tpope/vim-surround'                                  " Surrounding text
@@ -140,3 +143,15 @@ vmap <C-v> <Plug>(expand_region_shrink)
 let g:tagbar_autofocus=1
 let g:tagbar_sort=0
 
+" indentLine
+let g:indentLine_char='|'
+" Specify a character to  be used as indent line on the first level
+let g:indentLine_first_char='¦'
+" Whether the first indent level should be shown
+let g:indentLine_showFirstIndentLevel=1
+" Specify how much indent level do you want to use for indentLine
+let g:indentLine_indentLevel=10
+" Whether to show leading spaces
+let g:indentLine_leadingSpaceEnabled=0
+" Allow to see the concealed in the current cursor line when in normal & indent mode as intended
+let g:indentLine_noConcealCursor=''
