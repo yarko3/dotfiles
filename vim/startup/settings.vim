@@ -110,6 +110,7 @@ set shm=at
 "" ============================================================================
 " Show line numbers
 set number
+set relativenumber
 
 " show the cursor position
 set ruler
