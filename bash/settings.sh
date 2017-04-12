@@ -5,7 +5,7 @@ if [ "$TERM" != "screen-256color" ]; then
     export TERM=xterm-256color
 fi
 
-if [ $(uname) = "Darwin" ]; then
+if [ "$(uname)" = "Darwin" ]; then
     export MACOS="true"
     export EDITOR=vim
 fi
@@ -120,7 +120,7 @@ if ! shopt -oq posix; then
   elif [ -f /etc/bash_completion.d/git ]; then
     . /etc/bash_completion.d/git
   elif [ -f /usr/local/etc/bash_completion ]; then
-      . /usr/local/etc/bash_completion
+    . /usr/local/etc/bash_completion
   fi
 fi
 
