@@ -30,6 +30,7 @@ Plug 'tpope/vim-commentary'                                " Comment/uncomment o
 Plug 'tpope/vim-endwise'                                   " auto-end certain structures
 Plug 'tpope/vim-fugitive'                                  " Git Wrapper
 Plug 'tpope/vim-repeat'                                    " Dot operator for plugins
+Plug 'tpope/vim-rhubarb'                                   " github support
 Plug 'tpope/vim-surround'                                  " Surrounding text
 Plug 'tpope/vim-unimpaired'                                " Pairs of keyboard mappings for common tasks
 Plug 'tpope/vim-vinegar'                                   " netrw improvement
