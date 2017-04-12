@@ -145,6 +145,10 @@ let g:tagbar_sort=0
 
 " indentLine
 let g:indentLine_char='|'
+" Specify a character to  be used as indent line on the first level
+let g:indentLine_first_char='¦'
+" Whether the first indent level should be shown
+let g:indentLine_showFirstIndentLevel=1
 " Specify how much indent level do you want to use for indentLine
 let g:indentLine_indentLevel=10
 " Whether to show leading spaces
