@@ -54,8 +54,8 @@ nnoremap * :set hlsearch<CR>*zz
 nnoremap # :set hlsearch<CR>#zz
 nnoremap n :set hlsearch<CR>nzz
 nnoremap N :set hlsearch<CR>Nzz
-nnoremap / :set hlsearch<CR>/
-nnoremap ? :set hlsearch<CR>?
+map / :set hlsearch<CR><Plug>(incsearch-forward)
+map ? :set hlsearch<CR><Plug>(incsearch-backward)
 
 " Basically you press * or # to search for the current selection
 vnoremap <silent> * y:let @/ = @"<CR>n:set hlsearch<CR>
