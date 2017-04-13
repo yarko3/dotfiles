@@ -71,6 +71,9 @@ noremap <F5> :w<CR>:call VimuxRunCommand("!! ")<CR>
 " yank from cursor to end of line
 nnoremap Y y$
 
+" replay @q macro for each line of a visual selection
+vnoremap @q :normal @q<CR>
+
 " Compilation and testing
 nnoremap <F2> :w<CR>:call Cdroot()<CR>:call VimuxRunCommand("clear; make clean -j")<CR>
 if(g:bbenv == "")
