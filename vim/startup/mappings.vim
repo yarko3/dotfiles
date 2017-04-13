@@ -68,6 +68,9 @@ nnoremap <silent> <F8> :b#<CR>
 " rerun last command (space is important for zsh to expand)
 noremap <F5> :w<CR>:call VimuxRunCommand("!! ")<CR>
 
+" yank from cursor to end of line
+nnoremap Y y$
+
 " Compilation and testing
 nnoremap <F2> :w<CR>:call Cdroot()<CR>:call VimuxRunCommand("clear; make clean -j")<CR>
 if(g:bbenv == "")
