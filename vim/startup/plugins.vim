@@ -158,9 +158,12 @@ let g:indentLine_leadingSpaceEnabled=0
 " Allow to see the concealed in the current cursor line when in normal & indent mode as intended
 let g:indentLine_noConcealCursor=''
 
-
 " easymotion
 " turn off default mappings
 let g:EasyMotion_do_mapping = 0
 " Turn on case insensitive feature
 let g:EasyMotion_smartcase = 1
+
+" incsearch
+map / :set hlsearch<CR><Plug>(incsearch-forward)
+map ? :set hlsearch<CR><Plug>(incsearch-backward)
