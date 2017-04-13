@@ -133,3 +133,5 @@ nnoremap <Leader>vv :w<CR>:VimuxPromptCommand<CR>
 nnoremap <Leader>vx :VimuxInterruptRunner<CR>
 nnoremap <Leader>w :call StripTabsAndTrailingWhitespaces()<CR>:w<CR>
 nnoremap <Leader>xe :sp<CR>:e %:h<CR>
+
+nmap <Space>e <Plug>(easymotion-overwin-f)

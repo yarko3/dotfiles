@@ -12,6 +12,7 @@ Plug 'conradirwin/vim-bracketed-paste'                     " paste with no fuss
 Plug 'ctrlpvim/ctrlp.vim'                                  " File searchin and opening
 Plug 'derekwyatt/vim-fswitch', { 'for': 'cpp' }            " Fastswitch (cpp/h toggle)
 Plug 'derekwyatt/vim-scala'                                " Scala syntax
+Plug 'easymotion/vim-easymotion'                           " I get around round round round
 Plug 'godlygeek/tabular'                                   " Align things
 Plug 'google/vim-searchindex'                              " show count of search items
 Plug 'junegunn/gv.vim'                                     " commit viewer
@@ -156,3 +157,10 @@ let g:indentLine_indentLevel=10
 let g:indentLine_leadingSpaceEnabled=0
 " Allow to see the concealed in the current cursor line when in normal & indent mode as intended
 let g:indentLine_noConcealCursor=''
+
+
+" easymotion
+" turn off default mappings
+let g:EasyMotion_do_mapping = 0
+" Turn on case insensitive feature
+let g:EasyMotion_smartcase = 1
