@@ -58,8 +58,8 @@ nnoremap / :set hlsearch<CR>/
 nnoremap ? :set hlsearch<CR>?
 
 " Basically you press * or # to search for the current selection
-vnoremap <silent> * :call VisualSearch('f')<CR>zz
-vnoremap <silent> # :call VisualSearch('b')<CR>zz
+vnoremap <silent> * y:let @/ = @"<CR>n:set hlsearch<CR>
+vnoremap <silent> # y:let @? = @"<CR>n:set hlsearch<CR>
 
 " select everything
 nmap <C-A> ggVG
