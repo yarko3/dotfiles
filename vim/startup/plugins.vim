@@ -14,7 +14,6 @@ Plug 'derekwyatt/vim-fswitch', { 'for': 'cpp' }            " Fastswitch (cpp/h t
 Plug 'derekwyatt/vim-scala'                                " Scala syntax
 Plug 'easymotion/vim-easymotion'                           " I get around round round round
 Plug 'godlygeek/tabular'                                   " Align things
-Plug 'google/vim-searchindex'                              " show count of search items
 Plug 'junegunn/gv.vim'                                     " commit viewer
 Plug 'junegunn/vim-peekaboo'                               " show content of registers
 Plug 'luochen1990/rainbow'                                 " Rainbow parenthesis coloring
