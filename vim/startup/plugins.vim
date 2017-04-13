@@ -161,8 +161,11 @@ let g:indentLine_noConcealCursor=''
 " easymotion
 " turn off default mappings
 let g:EasyMotion_do_mapping = 0
-" Turn on case insensitive feature
+" turn on case insensitive feature
 let g:EasyMotion_smartcase = 1
+" set colors
+hi link EasyMotionTarget WarningMsg
+hi link EasyMotionShade  Comment
 
 " incsearch
 map / :set hlsearch<CR><Plug>(incsearch-forward)
