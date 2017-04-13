@@ -13,6 +13,7 @@ Plug 'ctrlpvim/ctrlp.vim'                                  " File searchin and o
 Plug 'derekwyatt/vim-fswitch', { 'for': 'cpp' }            " Fastswitch (cpp/h toggle)
 Plug 'derekwyatt/vim-scala'                                " Scala syntax
 Plug 'godlygeek/tabular'                                   " Align things
+Plug 'google/vim-searchindex'                              " show count of search items
 Plug 'junegunn/gv.vim'                                     " commit viewer
 Plug 'junegunn/vim-peekaboo'                               " show content of registers
 Plug 'luochen1990/rainbow'                                 " Rainbow parenthesis coloring
