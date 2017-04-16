@@ -76,12 +76,8 @@ vnoremap @q :normal @q<CR>
 
 " Compilation and testing
 nnoremap <F2> :w<CR>:call Cdroot()<CR>:call VimuxRunCommand("clear; make clean -j")<CR>
-if(g:bbenv == "")
-    nnoremap <F4> :call Cdroot()<CR>:Make all<CR>:Make run<CR>:Copen<CR>/FAILED<CR>
-else
-    nnoremap <F3> :w<CR>:call Cdroot()<CR>:call VimuxRunCommand("clear; make gtest -j")<CR>
-    nnoremap <F4> :w<CR>:call Cdroot()<CR>:call VimuxRunCommand("clear; make -j")<CR>
-endif
+nnoremap <F3> :w<CR>:call Cdroot()<CR>:call VimuxRunCommand("clear; make gtest -j")<CR>
+nnoremap <F4> :w<CR>:call Cdroot()<CR>:call VimuxRunCommand("clear; make -j")<CR>
 
 "" =============================================================================
 ""                           Command Mode Mappings
@@ -131,8 +127,6 @@ nnoremap <Leader>tm :Tabmerge right<CR>
 nnoremap <Leader>tt :TagbarToggle<CR>
 nnoremap <Leader>ut :UndotreeToggle<CR>
 nnoremap <Leader>ve :vsp<CR>:e %:h<CR>
-nnoremap <Leader>vr :w<CR>:VimuxRunLastCommand<CR>
-nnoremap <Leader>vt :w<CR>:call VimuxRunCommand("clear; make test -j")<CR>
 nnoremap <Leader>vv :w<CR>:VimuxPromptCommand<CR>
 nnoremap <Leader>vx :VimuxInterruptRunner<CR>
 nnoremap <Leader>w :call StripTabsAndTrailingWhitespaces()<CR>:w<CR>
