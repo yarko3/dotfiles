@@ -1,6 +1,5 @@
 call plug#begin('~/.vim/plugged')
 
-Plug 'Shougo/vimproc', { 'do': 'make' }                    " Asynchronous command execution library
 Plug 'Valloric/ListToggle'                                 " Toggling quickfix and location list
 Plug 'Yggdroot/indentLine'                                 " show indent
 Plug 'airblade/vim-gitgutter'                              " git changes in gutter
