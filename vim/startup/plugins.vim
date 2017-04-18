@@ -13,6 +13,7 @@ Plug 'derekwyatt/vim-fswitch', { 'for': 'cpp' }            " Fastswitch (cpp/h t
 Plug 'derekwyatt/vim-scala'                                " Scala syntax
 Plug 'easymotion/vim-easymotion'                           " I get around round round round
 Plug 'godlygeek/tabular'                                   " Align things
+Plug 'haya14busa/incsearch-fuzzy.vim'                      " introduce fuzzy fearch
 Plug 'haya14busa/incsearch.vim'                            " show search as you type
 Plug 'junegunn/gv.vim'                                     " commit viewer
 Plug 'junegunn/vim-peekaboo'                               " show content of registers
@@ -166,6 +167,6 @@ let g:EasyMotion_smartcase = 1
 hi link EasyMotionTarget WarningMsg
 hi link EasyMotionShade  Comment
 
-" incsearch
-map / :set hlsearch<CR><Plug>(incsearch-forward)
-map ? :set hlsearch<CR><Plug>(incsearch-backward)
+" incsearch (with fuzz)
+map / :set hlsearch<CR><Plug>(incsearch-fuzzy-/)
+map ? :set hlsearch<CR><Plug>(incsearch-fuzzy-?)
