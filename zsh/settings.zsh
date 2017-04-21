@@ -73,6 +73,10 @@ bindkey "^r" history-incremental-search-backward
 # Unmap ctrl-s as "stop flow"
 stty stop undef
 
+# zsh-autosuggestions cfg
+# # Bind <CTRL><SPC> to accept and execute
+bindkey '^ ' autosuggest-execute
+
 ## ============================================================================
 ##                                  Prompt
 ## ============================================================================
