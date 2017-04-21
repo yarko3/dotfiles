@@ -8,6 +8,9 @@ fi
 if [ "$(uname)" = "Darwin" ]; then
     export MACOS="true"
     export EDITOR=vim
+    # fix nvim + tmux navigator <c-h> binding
+    infocmp $TERM | sed 's/kbs=^[hH]/kbs=\\177/' > $TERM.ti
+    tic $TERM.ti
 fi
 
 if [ -d /opt/bb/bin ]; then
