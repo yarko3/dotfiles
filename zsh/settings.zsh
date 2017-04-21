@@ -39,6 +39,9 @@ PATH=$PATH:/usr/sbin
 ## ============================================================================
 ##                                 Settings
 ## ============================================================================
+# Vim mode
+bindkey -v
+
 # Command auto-correction.
 ENABLE_CORRECTION="true"
 
@@ -47,28 +50,28 @@ ENABLE_CORRECTION="true"
 # much, much faster.
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# Hitting ctrl+r for nice history searching
-bindkey "^r" history-incremental-search-backward
+# Visual modes added in zsh 5.0.8
+visualModes=()
+is-at-least 5.0.8
+if [ $? -eq 0 ]; then
+    visualModes=("visual")
+fi
 
-for m in "vicmd" "afu-vicmd"; do
-    bindkey -M vicmd 'k' history-substring-search-up
-    bindkey -M vicmd 'j' history-substring-search-down
-done
+bindkey -M "vicmd" 'k' history-substring-search-up
+bindkey -M "vicmd" 'j' history-substring-search-down
 
 # Run `bindkey -l` to see a list of modes, and `bindkey -M foo` to see a list of commands active in mode foo
 # Move to vim escape mode
-for m in "viins" "afu"; do
-    bindkey -M "$m" jj vi-cmd-mode
-    bindkey -M "$m" kk vi-cmd-mode
-    bindkey -M "$m" jk vi-cmd-mode
-    bindkey -M "$m" kj vi-cmd-mode
-done
+bindkey -M "viins" jj vi-cmd-mode
+bindkey -M "viins" kk vi-cmd-mode
+bindkey -M "viins" jk vi-cmd-mode
+bindkey -M "viins" kj vi-cmd-mode
+
+# Hitting ctrl+r for nice history searching
+bindkey "^r" history-incremental-search-backward
 
 # Unmap ctrl-s as "stop flow"
 stty stop undef
-
-# Vim mode
-bindkey -v
 
 ## ============================================================================
 ##                                  Prompt
@@ -89,39 +92,5 @@ ZSH_THEME_GIT_PROMPT_SUFFIX=""
 #  ============================================================================
 #                               FZF Config
 #  ============================================================================
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-## ============================================================================
-##                              Auto-Fu Config
-## ============================================================================
-# https://github.com/hchbaw/auto-fu.zsh/issues/29
-if [ "$AUTO_FU" = "skip" ]; then
-    echo "Skipping auto-fu"
-    return
-fi
-
-zle-line-init () { auto-fu-init; }; zle -N zle-line-init
-zle -N zle-keymap-select auto-fu-zle-keymap-select
-zstyle ':completion:*' completer _oldlist _complete
-zstyle ':auto-fu:var' postdisplay $'
-'
-
-my-reset-prompt-maybe () {
-  # XXX: While auto-stuff is in effect,
-  # when hitting <Return>, $KEYMAP becomes to `main`:
-  # <Return> → `reset-prompt`(*) → `accept-line` → `zle-line-init`
-  # → `zle-keymap-select` → `reset-promt` (again!)
-  # Skip unwanted `reset-prompt`(*).
-  ((auto_fu_init_p==1)) && [[ ${KEYMAP-} == main ]] && return
-
-  # XXX: Please notice that `afu` is treated as Insert-mode-ish.
-  RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins|afu)/}"
-  zle reset-prompt
-}
-
-zle-keymap-select () {
-  auto-fu-zle-keymap-select "$@"
-  my-reset-prompt-maybe
-}
-zle -N zle-keymap-select
