@@ -1,40 +1,4 @@
 ## ============================================================================
-##                           Environment Variables
-## ============================================================================
-export ZSH_TMUX_AUTOSTART=true
-export ZSH_TMUX_AUTOCONNECT=false
-if [ "$TERM" != "screen-256color" ]; then
-    export TERM=xterm-256color
-fi
-
-if [ -n "$SSH_CONNECTION" ]; then
-    export ZSH_TMUX_AUTOSTART=false
-fi
-
-if [ $(uname) = "Darwin" ]; then
-    export MACOS="true"
-    export EDITOR=vim
-fi
-
-# Reduce delay to 0.1 seconds for switching to normal mode with ESC
-export KEYTIMEOUT=20
-
-if [ -d /opt/bb/bin ]; then
-    PATH=/opt/bb/bin:$PATH
-fi
-
-PATH=~/bin:$PATH
-PATH=~/bin_local:$PATH
-PATH=$PATH:~/.local/bin
-
-PATH=$PATH:/bin
-PATH=$PATH:/sbin
-PATH=$PATH:/usr/local/bin
-PATH=$PATH:/usr/bin
-PATH=$PATH:/usr/local/sbin
-PATH=$PATH:/usr/sbin
-
-## ============================================================================
 ##                                 Settings
 ## ============================================================================
 # Vim mode

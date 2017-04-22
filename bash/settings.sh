@@ -1,33 +1,3 @@
-# =============================================================================
-#                           Environment Variables
-# =============================================================================
-if [ "$TERM" != "screen-256color" ]; then
-    export TERM=xterm-256color
-fi
-
-if [ "$(uname)" = "Darwin" ]; then
-    export MACOS="true"
-    export EDITOR=vim
-    # fix nvim + tmux navigator <c-h> binding
-    infocmp $TERM | sed 's/kbs=^[hH]/kbs=\\177/' > $TERM.ti
-    tic $TERM.ti
-fi
-
-if [ -d /opt/bb/bin ]; then
-    PATH=/opt/bb/bin:$PATH
-fi
-
-PATH=~/bin:$PATH
-PATH=~/bin_local:$PATH
-PATH=$PATH:~/.local/bin
-
-PATH=$PATH:/bin
-PATH=$PATH:/sbin
-PATH=$PATH:/usr/local/bin
-PATH=$PATH:/usr/bin
-PATH=$PATH:/usr/local/sbin
-PATH=$PATH:/usr/sbin
-
 ## ============================================================================
 ##                                  General
 ## ============================================================================
