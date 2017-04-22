@@ -5,7 +5,7 @@ else
     alias ls='ls --color=auto'
 fi
 
-alias :q='exit'
+alias ai='sudo apt-get install'
 alias cdr='cd $(git rev-parse --show-toplevel)'
 alias fn='find . -name'
 alias g='git'
@@ -30,6 +30,13 @@ alias topcpu='/bin/ps -eo pcpu,pid,user,args | sort -k 1 -r | head -10'
 alias upper="tr '[:lower:]' '[:upper:]'"
 alias uu='sudo apt-get update && sudo apt-get upgrade'
 alias wfc='weather -f NYC'
+
+
+hash hub > /dev/null 2>&1
+if [[ $? -eq 0 ]]; then
+    alias git='hub'
+    alias g='hub'
+fi
 
 [ -f ~/.zsh_local/aliases_local.zsh ] && source ~/.zsh_local/aliases_local.zsh
 

@@ -17,7 +17,7 @@ if [ $(uname) = "Darwin" ]; then
 fi
 
 # Reduce delay to 0.1 seconds for switching to normal mode with ESC
-export KEYTIMEOUT=1
+export KEYTIMEOUT=20
 
 if [ -d /opt/bb/bin ]; then
     PATH=/opt/bb/bin:$PATH
@@ -33,8 +33,6 @@ PATH=$PATH:/usr/local/bin
 PATH=$PATH:/usr/bin
 PATH=$PATH:/usr/local/sbin
 PATH=$PATH:/usr/sbin
-
-[ -f ~/.config/hub ] && export GITHUB_STANDARD_TOKEN=$(grep oauth_token ~/.config/hub | awk '{print $2}')
 
 ## ============================================================================
 ##                                 Settings

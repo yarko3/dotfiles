@@ -92,22 +92,8 @@ PATH=~/bin:$PATH
 # =============================================================================
 #                                  Visual
 # =============================================================================
-# To have colors for ls and all grep commands such as grep, egrep and zgrep
-export CLICOLOR=1
-export GREP_OPTIONS='--color=auto'
-
 # Prompt
 PS1='\[\e]0;\u@\h:\w\a\]\[\033[01;32m\]\u@\h\[\033[00m\] \[\033[36m\]\W\[\033[33m\]$(__git_ps1 " <%s>")\[\033[00m\] $ '
-# old one
-# PS1='\[\e]0;\u@\h:\w\a\][\u@\h \W$(__git_ps1 " (%s)")]\$ '
-
-# Less Colors for Man Pages
-export LESS_TERMCAP_mb=$'\e[01;31m'       # begin blinking
-export LESS_TERMCAP_md=$'\e[01;38;5;74m'  # begin bold
-export LESS_TERMCAP_me=$'\e[0m'           # end mode
-export LESS_TERMCAP_se=$'\e[0m'           # end standout-mode
-export LESS_TERMCAP_ue=$'\e[0m'           # end underline
-export LESS_TERMCAP_us=$'\e[04;38;5;146m' # begin underline]]]]]]]'
 
 # =============================================================================
 #                                Completion
