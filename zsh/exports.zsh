@@ -7,7 +7,6 @@ export LANG=en_US.UTF-8
 
 # To have colors for ls and all grep commands such as grep, egrep and zgrep
 export CLICOLOR=1
-export GREP_OPTIONS='--color=auto'
 
 # Less Colors for Man Pages
 export LESS_TERMCAP_mb=$'\e[01;31m'       # begin blinking

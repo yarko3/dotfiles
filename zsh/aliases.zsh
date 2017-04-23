@@ -15,6 +15,7 @@ alias gm='gmake -j'
 alias gmc='gmake -j clean'
 alias gmr='gmake clean -j && gmake -j'
 alias gmt='gmake test -j'
+alias grep='grep --color=auto'
 alias hd='~/bin/hex_decimal.sh'
 alias less='less -N'
 alias ll='ls -al'
@@ -30,7 +31,6 @@ alias topcpu='/bin/ps -eo pcpu,pid,user,args | sort -k 1 -r | head -10'
 alias upper="tr '[:lower:]' '[:upper:]'"
 alias uu='sudo apt-get update && sudo apt-get upgrade'
 alias wfc='weather -f NYC'
-
 
 hash hub > /dev/null 2>&1
 if [[ $? -eq 0 ]]; then
