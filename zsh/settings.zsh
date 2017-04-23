@@ -43,7 +43,7 @@ bindkey '^ ' autosuggest-execute
 ##                                  Prompt
 ## ============================================================================
 git_prompt_info_mine() {
-    git_prompt_text="$(git_prompt_info)"
+    git_prompt_text="$(git symbolic-ref HEAD 2>/dev/null | cut -d'/' -f3)" || ""
     if [[ -n $git_prompt_text ]]; then
         echo " <$git_prompt_text>"
     else
