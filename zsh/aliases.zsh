@@ -30,7 +30,7 @@ alias tmux='tmux -2u'
 alias topcpu='/bin/ps -eo pcpu,pid,user,args | sort -k 1 -r | head -10'
 alias upper="tr '[:lower:]' '[:upper:]'"
 alias uu='sudo apt-get update && sudo apt-get upgrade'
-alias wfc='weather -f NYC'
+alias wfc='curl "wttr.in/nyc?m"'
 
 hash hub > /dev/null 2>&1
 if [[ $? -eq 0 ]]; then
