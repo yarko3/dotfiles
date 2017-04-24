@@ -38,5 +38,5 @@ if [[ $? -eq 0 ]]; then
     alias g='hub'
 fi
 
-[ -f ~/.zsh_local/aliases_local.zsh ] && source ~/.zsh_local/aliases_local.zsh
+[ -f ~/.zsh_local/zshrc_local_aliases.zsh ] && source ~/.zsh_local/zshrc_local_aliases.zsh
 

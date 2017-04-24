@@ -14,7 +14,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Visual modes added in zsh 5.0.8
 visualModes=()
-is-at-least 5.0.8
+is-at-least 5.0.8 2>/dev/null
 if [ $? -eq 0 ]; then
     visualModes=("visual")
 fi
