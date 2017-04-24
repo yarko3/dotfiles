@@ -37,7 +37,7 @@ stty stop undef
 
 # zsh-autosuggestions cfg
 # # Bind <CTRL><SPC> to accept and execute
-bindkey '^ ' autosuggest-execute
+bindkey '^ ' autosuggest-accept
 
 ## ============================================================================
 ##                                  Prompt
