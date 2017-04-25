@@ -66,7 +66,7 @@ nmap <C-A> ggVG
 nnoremap <silent> <F8> :b#<CR>
 
 " rerun last command (space is important for zsh to expand)
-noremap <F5> :w<CR>:call VimuxRunCommand("!! ")<CR>
+noremap <F5> :w<CR>:call VimuxRunCommand("!! \t")<CR>
 
 " yank from cursor to end of line
 nnoremap Y y$
