@@ -171,7 +171,3 @@ hi link EasyMotionShade  Comment
 " incsearch (with fuzz)
 map / :set hlsearch<CR><Plug>(incsearch-fuzzy-/)
 map ? :set hlsearch<CR><Plug>(incsearch-fuzzy-?)
-
-" no fuzz
-map <Space>/ :set hlsearch<CR><Plug>(incsearch-forward)
-map <Space>? :set hlsearch<CR><Plug>(incsearch-backward)
