@@ -16,14 +16,10 @@ export LESS_TERMCAP_se=$'\e[0m'           # end standout-mode
 export LESS_TERMCAP_ue=$'\e[0m'           # end underline
 export LESS_TERMCAP_us=$'\e[04;38;5;146m' # begin underline]]]]]]]'
 
-export ZSH_TMUX_AUTOSTART=true
+export ZSH_TMUX_AUTOSTART=false
 export ZSH_TMUX_AUTOCONNECT=false
 if [ "$TERM" != "screen-256color" ]; then
     export TERM=xterm-256color
-fi
-
-if [ -n "$SSH_CONNECTION" ]; then
-    export ZSH_TMUX_AUTOSTART=false
 fi
 
 if [ $(uname) = "Darwin" ]; then
