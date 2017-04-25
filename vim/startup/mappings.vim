@@ -133,6 +133,7 @@ nnoremap <Leader>w :call StripTabsAndTrailingWhitespaces()<CR>:w<CR>
 nnoremap <Leader>xe :sp<CR>:e %:h<CR>
 
 nmap <Leader>e <Plug>(easymotion-overwin-f)
-" no fuzz incsearch
+
+" incsearch (no fuzz)
 nmap <Leader>/ :set hlsearch<CR><Plug>(incsearch-forward)
 nmap <Leader>? :set hlsearch<CR><Plug>(incsearch-backward)
