@@ -96,9 +96,7 @@ cnoremap <c-l> <right>
 " Also use spacebar as a leader
 let mapleader = "\<Space>"
 
-nnoremap <Leader>/ :set hlsearch<CR>/
 nnoremap <Leader><Space> :CtrlPBuffer<CR>
-nnoremap <Leader>? :set hlsearch<CR>?
 nnoremap <Leader>bl :Gblame!<CR>
 nnoremap <Leader>cmt :call CmtSection("")<Left><Left>
 nnoremap <Leader>cx :!chmod a+x %<CR>
