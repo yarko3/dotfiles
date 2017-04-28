@@ -11,7 +11,6 @@ if ! zgen saved; then
     zgen oh-my-zsh
 
     # oh-my-zsh plugins
-    zgen oh-my-zsh plugins/brew
     zgen oh-my-zsh plugins/colorize
     zgen oh-my-zsh plugins/command-not-found
     zgen oh-my-zsh plugins/tmux
