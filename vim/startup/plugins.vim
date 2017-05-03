@@ -34,7 +34,6 @@ Plug 'tpope/vim-fugitive'                                  " Git Wrapper
 Plug 'tpope/vim-repeat'                                    " Dot operator for plugins
 Plug 'tpope/vim-rhubarb'                                   " github support
 Plug 'tpope/vim-surround'                                  " Surrounding text
-Plug 'tpope/vim-unimpaired'                                " Pairs of keyboard mappings for common tasks
 Plug 'tpope/vim-vinegar'                                   " netrw improvement
 Plug 'vim-airline/vim-airline-themes'                      " Status line themes
 Plug 'vim-scripts/Tabmerge'                                " Merge tabs into splits
