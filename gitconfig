@@ -6,6 +6,7 @@
     co = checkout
     cob = checkout -b
     df = diff
+    dfs = diff --staged
     dfc = "!git log --left-right --graph --cherry-mark --oneline HEAD...$1"
     dom = diff origin/master -w
     dum = diff upstream/master -w
