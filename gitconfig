@@ -1,5 +1,5 @@
 [alias]
-    br = branch
+    br = branch --sort=committerdate
     bra = branch --all
     ca = commit --amend --no-edit
     ci = commit
