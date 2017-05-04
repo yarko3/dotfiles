@@ -14,7 +14,6 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/colorize
     zgen oh-my-zsh plugins/command-not-found
     zgen oh-my-zsh plugins/last-working-dir
-    zgen oh-my-zsh plugins/tmux
     zgen oh-my-zsh plugins/wd
     zgen oh-my-zsh plugins/web-search
 
