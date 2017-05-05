@@ -28,7 +28,7 @@
     rum = rebase upstream/master -i
     sh = stash show -p
     st = status
-    su = submodule update --recursive --remote
+    su = submodule update --init --recursive
 
     # List aliases
     la = "!git config -l | grep alias | cut -c 7-"
