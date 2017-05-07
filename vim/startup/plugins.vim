@@ -1,5 +1,6 @@
 call plug#begin('~/.vim/plugged')
 
+Plug 'JamshedVesuna/vim-markdown-preview'                  " preview markdown locally
 Plug 'Valloric/ListToggle'                                 " Toggling quickfix and location list
 Plug 'Yggdroot/indentLine'                                 " show indent
 Plug 'airblade/vim-gitgutter'                              " git changes in gutter
@@ -170,3 +171,8 @@ hi link EasyMotionShade  Comment
 " incsearch (with fuzz)
 map / :set hlsearch<CR><Plug>(incsearch-fuzzy-/)
 map ? :set hlsearch<CR><Plug>(incsearch-fuzzy-?)
+
+" vim-markdown-preview
+let vim_markdown_preview_github=1
+let vim_markdown_preview_browser='Google Chrome'
+let vim_markdown_preview_hotkey='<C-m>'
