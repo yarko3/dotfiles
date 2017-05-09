@@ -1,8 +1,10 @@
 if [ $(uname) = "Darwin" ]; then
     # if no gls, brew intall coreutils
     alias ls='gls --color=auto'
+    alias uu='brew update && brew upgrade'
 else
     alias ls='ls --color=auto'
+    alias uu='sudo apt-get update && sudo apt-get upgrade'
 fi
 
 alias ai='sudo apt-get install'
@@ -29,7 +31,6 @@ alias rfwifi='nmcli r wifi off && nmcli r wifi on'
 alias tmux='tmux -2u'
 alias topcpu='/bin/ps -eo pcpu,pid,user,args | sort -k 1 -r | head -10'
 alias upper="tr '[:lower:]' '[:upper:]'"
-alias uu='sudo apt-get update && sudo apt-get upgrade'
 alias wfc='curl "wttr.in/nyc?m"'
 
 hash hub > /dev/null 2>&1
