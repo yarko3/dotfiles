@@ -1,4 +1,5 @@
 [alias]
+    a = add -u
     br = branch --sort=committerdate
     bra = branch --all
     ca = commit --amend --no-edit
