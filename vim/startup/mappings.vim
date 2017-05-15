@@ -101,6 +101,7 @@ nnoremap <Leader>bl :Gblame!<CR>
 nnoremap <Leader>cmt :call CmtSection("")<Left><Left>
 nnoremap <Leader>cx :!chmod a+x %<CR>
 nnoremap <Leader>df :Gdiff<CR>
+nnoremap <Leader>df :Gdiff<CR>
 nnoremap <Leader>do :windo diffoff<CR>
 nnoremap <Leader>dom :Gdiff origin/master<CR>
 nnoremap <Leader>dt :windo diffthis<CR>
