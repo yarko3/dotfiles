@@ -34,5 +34,4 @@ brew cask install spectacle
 brew cask install vagrant
 brew cask install virtualbox
 
-# Remove outdated versions from the cellar.
 brew cleanup
