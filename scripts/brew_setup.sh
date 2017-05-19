@@ -29,6 +29,7 @@ brew install tree
 brew install vim
 brew install zsh
 
+brew cask install java
 brew cask install spectacle
 brew cask install vagrant
 brew cask install virtualbox
