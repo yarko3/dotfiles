@@ -134,6 +134,9 @@ nnoremap <Leader>xe :sp<CR>:e %:h<CR>
 
 nmap <Leader>e <Plug>(easymotion-overwin-f)
 
+xmap <Leader>ga <Plug>(EasyAlign)
+nmap <Leader>ga <Plug>(EasyAlign)
+
 " incsearch (no fuzz)
 nmap <Leader>/ :set hlsearch<CR><Plug>(incsearch-forward)
 nmap <Leader>? :set hlsearch<CR><Plug>(incsearch-backward)
