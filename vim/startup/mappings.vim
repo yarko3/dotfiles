@@ -119,6 +119,7 @@ nnoremap <Leader>jf :YcmCompleter GoToDefinition<CR>
 nnoremap <Leader>ji :YcmCompleter GoToImprecise<CR>
 nnoremap <Leader>jj :YcmCompleter GoTo<CR>
 nnoremap <Leader>pu :PlugUpgrade<CR>:PlugUpdate<CR>
+nnoremap <Leader>so :so %<CR>
 nnoremap <Leader>sp :setlocal spell! spelllang=en_us<CR>
 nnoremap <Leader>ss :call SortSection()<CR>
 nnoremap <Leader>st :SyntasticToggleMode<CR>
