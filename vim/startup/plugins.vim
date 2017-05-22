@@ -15,7 +15,6 @@ Plug 'derekwyatt/vim-scala'                               " Scala syntax
 Plug 'easymotion/vim-easymotion'                          " I get around round round round
 Plug 'haya14busa/incsearch-fuzzy.vim'                     " introduce fuzzy fearch
 Plug 'haya14busa/incsearch.vim'                           " show search as you type
-Plug 'junegunn/gv.vim'                                    " commit viewer
 Plug 'junegunn/vim-easy-align'                            " align things
 Plug 'junegunn/vim-peekaboo'                              " show content of registers
 Plug 'luochen1990/rainbow'                                " Rainbow parenthesis coloring
