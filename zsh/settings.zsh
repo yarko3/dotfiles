@@ -29,9 +29,6 @@ bindkey -M "viins" kk vi-cmd-mode
 bindkey -M "viins" jk vi-cmd-mode
 bindkey -M "viins" kj vi-cmd-mode
 
-# Hitting ctrl+r for nice history searching
-bindkey "^r" history-incremental-search-backward
-
 # Unmap ctrl-s as "stop flow"
 stty stop undef
 
