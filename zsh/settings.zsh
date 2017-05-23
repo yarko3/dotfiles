@@ -32,7 +32,10 @@ bindkey -M "viins" kj vi-cmd-mode
 # Unmap ctrl-s as "stop flow"
 stty stop undef
 
-# zsh-autosuggestions cfg
+#  ============================================================================
+#                            Configure Plugins
+#  ============================================================================
+# zsh-autosuggestions
 # # Bind <CTRL><SPC> to accept and execute
 bindkey '^ ' autosuggest-accept
 
