@@ -31,10 +31,3 @@ if ! zgen saved; then
     zgen save
 fi
 
-#  ============================================================================
-#                          Plugin Configuration
-#  ============================================================================
-# zsh-autosuggestions cfg
-# # Bind <CTRL><SPC> to accept and execute
-bindkey '^ ' autosuggest-accept
-
