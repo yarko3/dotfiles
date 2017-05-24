@@ -25,6 +25,7 @@ if ! zgen saved; then
     zgen load rupa/z
     zgen load zsh-users/zsh-autosuggestions
     zgen load zsh-users/zsh-completions
+    zgen load zsh-users/zsh-history-substring-search
     zgen load zsh-users/zsh-syntax-highlighting
 
     # save all to init script
