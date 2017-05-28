@@ -1,6 +1,4 @@
 # load zgen
-# auto-fu expects us to be in emacs mode before sourcing (wtf)
-bindkey -v
 source "${HOME}/.dotfiles/zgen/zgen.zsh"
 
 # Check only when there's no init script
