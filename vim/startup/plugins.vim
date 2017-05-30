@@ -11,7 +11,7 @@ Plug 'christoomey/vim-tmux-navigator'                     " Window/Pane switchin
 Plug 'conradirwin/vim-bracketed-paste'                    " paste with no fuss
 Plug 'ctrlpvim/ctrlp.vim'                                 " File searchin and opening
 Plug 'derekwyatt/vim-fswitch', { 'for': 'cpp' }           " Fastswitch (cpp/h toggle)
-Plug 'derekwyatt/vim-scala'                               " Scala syntax
+Plug 'derekwyatt/vim-scala', { 'for': 'scala' }           " Scala syntax
 Plug 'easymotion/vim-easymotion'                          " I get around round round round
 Plug 'haya14busa/incsearch-fuzzy.vim'                     " introduce fuzzy fearch
 Plug 'haya14busa/incsearch.vim'                           " show search as you type
