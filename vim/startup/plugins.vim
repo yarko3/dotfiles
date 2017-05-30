@@ -15,6 +15,7 @@ Plug 'derekwyatt/vim-scala'                               " Scala syntax
 Plug 'easymotion/vim-easymotion'                          " I get around round round round
 Plug 'haya14busa/incsearch-fuzzy.vim'                     " introduce fuzzy fearch
 Plug 'haya14busa/incsearch.vim'                           " show search as you type
+Plug 'honza/vim-snippets'                                 " snippets repo
 Plug 'junegunn/vim-easy-align'                            " align things
 Plug 'junegunn/vim-peekaboo'                              " show content of registers
 Plug 'luochen1990/rainbow'                                " Rainbow parenthesis coloring
@@ -26,10 +27,10 @@ Plug 'octol/vim-cpp-enhanced-highlight', { 'for': 'cpp' } " enhanced C++11/14/17
 Plug 'raimondi/delimitMate'                               " matching brackets
 Plug 'rhysd/vim-clang-format'                             " Vim wrapper plugin for clang-format
 Plug 'scrooloose/syntastic'                               " Syntax checking
+Plug 'sirver/ultisnips'                                   " snippet engine with integration into ycm
 Plug 'terryma/vim-expand-region'                          " quickly expand visual regions
 Plug 'tommcdo/vim-exchange'                               " cx operator for exchanging text regions
 Plug 'tpope/vim-commentary'                               " Comment/uncomment operator
-Plug 'tpope/vim-endwise'                                  " auto-end certain structures
 Plug 'tpope/vim-fugitive'                                 " Git Wrapper
 Plug 'tpope/vim-repeat'                                   " Dot operator for plugins
 Plug 'tpope/vim-rhubarb'                                  " github support
@@ -175,3 +176,18 @@ map ? :set hlsearch<CR><Plug>(incsearch-fuzzy-?)
 let vim_markdown_preview_github=1
 let vim_markdown_preview_browser='Google Chrome'
 let vim_markdown_preview_hotkey='<C-m>'
+
+" snippets
+let g:UltiSnipsExpandTrigger = "<nop>"
+let g:ulti_expand_or_jump_res = 0
+function ExpandSnippetOrCarriageReturn()
+    let snippet = UltiSnips#ExpandSnippetOrJump()
+    if g:ulti_expand_or_jump_res > 0
+        return snippet
+    else
+        return "\<CR>"
+    endif
+endfunction
+inoremap <expr> <CR> pumvisible() ? "\<C-R>=ExpandSnippetOrCarriageReturn()\<CR>" : "\<CR>"
+let g:UltiSnipsJumpForwardTrigger = '<Tab>'
+let g:UltiSnipsJumpBackwardTrigger = '<S-Tab>'
