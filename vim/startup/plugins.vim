@@ -27,7 +27,7 @@ Plug 'octol/vim-cpp-enhanced-highlight', { 'for': 'cpp' } " enhanced C++11/14/17
 Plug 'raimondi/delimitMate'                               " matching brackets
 Plug 'rhysd/vim-clang-format'                             " Vim wrapper plugin for clang-format
 Plug 'scrooloose/syntastic'                               " Syntax checking
-Plug 'sirver/ultisnips'                                   " snippet engine with integration into ycm
+Plug 'sirver/ultisnips'                                   " snippet engine with integration into ycm; needs vim compiled with python
 Plug 'terryma/vim-expand-region'                          " quickly expand visual regions
 Plug 'tommcdo/vim-exchange'                               " cx operator for exchanging text regions
 Plug 'tpope/vim-commentary'                               " Comment/uncomment operator
