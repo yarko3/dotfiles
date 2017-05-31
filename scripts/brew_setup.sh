@@ -1,9 +1,7 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
-which -s brew 2>&1
-if [[ $? != 0 ]] ; then
+if ! which -s brew 2>&1 ; then
     echo "brew not installed"
-    exit
 fi
 
 brew update
@@ -28,6 +26,8 @@ brew install tmux
 brew install tree
 brew install vim
 brew install zsh
+brew install shellcheck
+brew install python
 
 brew cask install java
 brew cask install spectacle
