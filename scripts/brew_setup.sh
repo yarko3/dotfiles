@@ -22,12 +22,13 @@ brew install llvm
 brew install maven
 brew install neovim
 brew install node
+brew install python
+brew install shellcheck
 brew install tmux
 brew install tree
 brew install vim
+brew install watch
 brew install zsh
-brew install shellcheck
-brew install python
 
 brew cask install java
 brew cask install spectacle
