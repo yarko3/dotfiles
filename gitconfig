@@ -18,6 +18,8 @@
     pl = pull
     pr = pull-request
     pr-clean = "!git for-each-ref refs/heads/pr/* --format='%(refname)' | while read ref ; do branch=${ref#refs/heads/} ; git branch -D $branch ; done"
+    plom = pull origin master
+    plum = pull upstream master
     prom = pull --rebase origin master
     prum = pull --rebase upstream master
     pu = push
