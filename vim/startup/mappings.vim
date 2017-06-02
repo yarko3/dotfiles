@@ -65,9 +65,6 @@ nmap <C-A> ggVG
 " Swap to last buffer
 nnoremap <silent> <F8> :b#<CR>
 
-" rerun last command (space is important for zsh to expand)
-noremap <F5> :w<CR>:call VimuxRunCommand("!! \t")<CR>
-
 " yank from cursor to end of line
 nnoremap Y y$
 
@@ -78,6 +75,10 @@ vnoremap @q :normal @q<CR>
 nnoremap <F2> :w<CR>:call Cdroot()<CR>:call VimuxRunCommand("clear; make clean -j")<CR>
 nnoremap <F3> :w<CR>:call Cdroot()<CR>:call VimuxRunCommand("clear; make gtest -j")<CR>
 nnoremap <F4> :w<CR>:call Cdroot()<CR>:call VimuxRunCommand("clear; make -j")<CR>
+" rerun last command (space is important for zsh to expand)
+nnoremap <F5> :w<CR>:call VimuxRunCommand("!! \t")<CR>
+nnoremap <F6> :w<CR>:VimuxInterruptRunner<CR>
+nnoremap <F7> :w<CR>:VimuxPromptCommand<CR>
 
 "" =============================================================================
 ""                           Command Mode Mappings
@@ -128,8 +129,6 @@ nnoremap <Leader>tt :TagbarToggle<CR>
 nnoremap <Leader>ut :UndotreeToggle<CR>
 nnoremap <Leader>uu :PlugUpgrade<CR>:PlugUpdate<CR>
 nnoremap <Leader>ve :vsp<CR>:e %:h<CR>
-nnoremap <Leader>vv :w<CR>:VimuxPromptCommand<CR>
-nnoremap <Leader>vx :VimuxInterruptRunner<CR>
 nnoremap <Leader>w :call StripTabsAndTrailingWhitespaces()<CR>:w<CR>
 nnoremap <Leader>xe :sp<CR>:e %:h<CR>
 
