@@ -113,12 +113,12 @@ nnoremap <Leader>fk :FSSplitAbove<CR>
 nnoremap <Leader>fl :FSSplitRight<CR>
 nnoremap <Leader>gb :call Cdroot()<CR>:Grepper -buffer<CR>
 nnoremap <Leader>gg :call Cdroot()<CR>:Grepper<CR>
-nnoremap <Leader>glg :GV<CR>
 nnoremap <Leader>h :set hlsearch! hlsearch?<CR>
 nnoremap <Leader>jc :YcmCompleter GoToDeclaration<CR>
 nnoremap <Leader>jf :YcmCompleter GoToDefinition<CR>
 nnoremap <Leader>ji :YcmCompleter GoToImprecise<CR>
 nnoremap <Leader>jj :YcmCompleter GoTo<CR>
+nnoremap <Leader>lg :Glog<CR>
 nnoremap <Leader>so :so %<CR>
 nnoremap <Leader>sp :setlocal spell! spelllang=en_us<CR>
 nnoremap <Leader>ss :call SortSection()<CR>
