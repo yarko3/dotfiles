@@ -7,6 +7,17 @@ set nocompatible
 scriptencoding utf-8
 set encoding=utf-8
 
+" =============================================================================
+"                                   GVim
+" =============================================================================
+if has("gui_running")
+    set guioptions-=M    " Don't load Menu bar
+    colorscheme desert
+else
+    set t_Co=256
+    colorscheme Tomorrow-Night-Eighties
+endif
+
 "" ============================================================================
 ""                                  Globals
 "" ============================================================================
@@ -108,6 +119,8 @@ set shm=at
 "" ============================================================================
 ""                                Appearance
 "" ============================================================================
+set guifont=Cousine\ for\ Powerline\ Regular\ 10
+
 " Show line numbers
 set number
 set relativenumber

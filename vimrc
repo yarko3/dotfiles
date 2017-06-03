@@ -1,13 +1,3 @@
-" GVim Settings
-if has("gui_running")
-    set guioptions-=M    " Don't load Menu bar
-    colorscheme desert
-    set guifont=Monospace\ 11
-else
-    set t_Co=256
-    colorscheme Tomorrow-Night-Eighties
-endif
-
 " Load functions
 source ~/.vim/startup/functions/vimscript-helpers.vim
 source ~/.vim/startup/functions/environment.vim
