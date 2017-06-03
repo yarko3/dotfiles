@@ -75,7 +75,7 @@ vnoremap @q :normal @q<CR>
 nnoremap <F2> :w<CR>:call Cdroot()<CR>:call VimuxRunCommand("clear; make clean -j")<CR>
 nnoremap <F3> :w<CR>:call Cdroot()<CR>:call VimuxRunCommand("clear; make gtest -j")<CR>
 nnoremap <F4> :w<CR>:call Cdroot()<CR>:call VimuxRunCommand("clear; make -j")<CR>
-" rerun last command (space is important for zsh to expand)
+" rerun last command (that weird whitespace is important for zsh/bash to expand)
 nnoremap <F5> :w<CR>:call VimuxRunCommand("!! \t")<CR>
 nnoremap <F6> :w<CR>:VimuxInterruptRunner<CR>
 nnoremap <F7> :w<CR>:VimuxPromptCommand<CR>
@@ -111,7 +111,6 @@ nnoremap <Leader>fh :FSSplitLeft<CR>
 nnoremap <Leader>fj :FSSplitBelow<CR>
 nnoremap <Leader>fk :FSSplitAbove<CR>
 nnoremap <Leader>fl :FSSplitRight<CR>
-nnoremap <Leader>gb :call Cdroot()<CR>:Grepper -buffer<CR>
 nnoremap <Leader>gg :call Cdroot()<CR>:Grepper<CR>
 nnoremap <Leader>h :set hlsearch! hlsearch?<CR>
 nnoremap <Leader>jc :YcmCompleter GoToDeclaration<CR>
