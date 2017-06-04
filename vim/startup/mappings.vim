@@ -55,6 +55,10 @@ nnoremap # :set hlsearch<CR>#zz
 nnoremap n :set hlsearch<CR>nzz
 nnoremap N :set hlsearch<CR>Nzz
 
+" search highlights incrementally everywhere instead of just the first match
+map / :set hlsearch<CR><Plug>(incsearch-forward)
+map ? :set hlsearch<CR><Plug>(incsearch-backward)
+
 " Basically you press * or # to search for the current selection
 vnoremap <silent> * y:let @/ = @"<CR>n:set hlsearch<CR>
 vnoremap <silent> # y:let @? = @"<CR>n:set hlsearch<CR>
@@ -98,44 +102,47 @@ cnoremap <c-l> <right>
 let mapleader = "\<Space>"
 
 nnoremap <Leader><Space> :CtrlPBuffer<CR>
-nnoremap <Leader>bl :Gblame!<CR>
-nnoremap <Leader>cmt :call CmtSection("")<Left><Left>
-nnoremap <Leader>cx :!chmod a+x %<CR>
-nnoremap <Leader>df :Gdiff<CR>
-nnoremap <Leader>do :windo diffoff<CR>
-nnoremap <Leader>dom :Gdiff origin/master<CR>
-nnoremap <Leader>dt :windo diffthis<CR>
-nnoremap <Leader>dum :Gdiff upstream/master<CR>
-nnoremap <Leader>ff :FSHere<CR>
-nnoremap <Leader>fh :FSSplitLeft<CR>
-nnoremap <Leader>fj :FSSplitBelow<CR>
-nnoremap <Leader>fk :FSSplitAbove<CR>
-nnoremap <Leader>fl :FSSplitRight<CR>
-nnoremap <Leader>gg :call Cdroot()<CR>:Grepper<CR>
-nnoremap <Leader>h :set hlsearch! hlsearch?<CR>
-nnoremap <Leader>jc :YcmCompleter GoToDeclaration<CR>
-nnoremap <Leader>jf :YcmCompleter GoToDefinition<CR>
-nnoremap <Leader>ji :YcmCompleter GoToImprecise<CR>
-nnoremap <Leader>jj :YcmCompleter GoTo<CR>
-nnoremap <Leader>lg :Glog<CR>
-nnoremap <Leader>so :so %<CR>
-nnoremap <Leader>sp :setlocal spell! spelllang=en_us<CR>
-nnoremap <Leader>ss :call SortSection()<CR>
-nnoremap <Leader>st :SyntasticToggleMode<CR>
-nnoremap <Leader>sw :call WindowSwap#EasyWindowSwap()<CR>
-nnoremap <Leader>tm :Tabmerge right<CR>
-nnoremap <Leader>tt :TagbarToggle<CR>
-nnoremap <Leader>ut :UndotreeToggle<CR>
-nnoremap <Leader>uu :PlugUpgrade<CR>:PlugUpdate<CR>
-nnoremap <Leader>ve :vsp<CR>:e %:h<CR>
-nnoremap <Leader>w :call StripTabsAndTrailingWhitespaces()<CR>:w<CR>
-nnoremap <Leader>xe :sp<CR>:e %:h<CR>
+nnoremap <Leader>bl      :Gblame!<CR>
+nnoremap <Leader>cmt     :call CmtSection("")<Left><Left>
+nnoremap <Leader>cx      :!chmod a+x %<CR>
+nnoremap <Leader>df      :Gdiff<CR>
+nnoremap <Leader>do      :windo diffoff<CR>
+nnoremap <Leader>dom     :Gdiff origin/master<CR>
+nnoremap <Leader>dt      :windo diffthis<CR>
+nnoremap <Leader>dum     :Gdiff upstream/master<CR>
+nnoremap <Leader>ff      :FSHere<CR>
+nnoremap <Leader>fh      :FSSplitLeft<CR>
+nnoremap <Leader>fj      :FSSplitBelow<CR>
+nnoremap <Leader>fk      :FSSplitAbove<CR>
+nnoremap <Leader>fl      :FSSplitRight<CR>
+nnoremap <Leader>gg      :call Cdroot()<CR>:Grepper<CR>
+nnoremap <Leader>h       :set hlsearch! hlsearch?<CR>
+nnoremap <Leader>jc      :YcmCompleter GoToDeclaration<CR>
+nnoremap <Leader>jf      :YcmCompleter GoToDefinition<CR>
+nnoremap <Leader>ji      :YcmCompleter GoToImprecise<CR>
+nnoremap <Leader>jj      :YcmCompleter GoTo<CR>
+nnoremap <Leader>lg      :Glog<CR>
+nnoremap <Leader>so      :so %<CR>
+nnoremap <Leader>sp      :setlocal spell! spelllang=en_us<CR>
+nnoremap <Leader>ss      :call SortSection()<CR>
+nnoremap <Leader>st      :SyntasticToggleMode<CR>
+nnoremap <Leader>sw      :call WindowSwap#EasyWindowSwap()<CR>
+nnoremap <Leader>tm      :Tabmerge right<CR>
+nnoremap <Leader>tt      :TagbarToggle<CR>
+nnoremap <Leader>ut      :UndotreeToggle<CR>
+nnoremap <Leader>uu      :PlugUpgrade<CR>:PlugUpdate<CR>
+nnoremap <Leader>ve      :vsp<CR>:e %:h<CR>
+nnoremap <Leader>w       :call StripTabsAndTrailingWhitespaces()<CR>:w<CR>
+nnoremap <Leader>xe      :sp<CR>:e %:h<CR>
 
+" =============================================================================
+"                          <Plug> Leader Mappings
+" =============================================================================
 nmap <Leader>e <Plug>(easymotion-overwin-f)
 
+" align things from visual mode as well as a motion
 xmap <Leader>ga <Plug>(EasyAlign)
 nmap <Leader>ga <Plug>(EasyAlign)
 
-" incsearch (no fuzz)
-nmap <Leader>/ :set hlsearch<CR><Plug>(incsearch-forward)
-nmap <Leader>? :set hlsearch<CR><Plug>(incsearch-backward)
+nmap <Leader>/ :set hlsearch<CR><Plug>(incsearch-fuzzy-/)
+nmap <Leader>? :set hlsearch<CR><Plug>(incsearch-fuzzy-?)

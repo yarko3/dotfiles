@@ -168,10 +168,6 @@ let g:EasyMotion_smartcase = 1
 hi link EasyMotionTarget WarningMsg
 hi link EasyMotionShade  Comment
 
-" incsearch (with fuzz)
-map / :set hlsearch<CR><Plug>(incsearch-fuzzy-/)
-map ? :set hlsearch<CR><Plug>(incsearch-fuzzy-?)
-
 " vim-markdown-preview
 let vim_markdown_preview_github=1
 let vim_markdown_preview_browser='Google Chrome'
