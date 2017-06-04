@@ -138,11 +138,13 @@ nnoremap <Leader>xe      :sp<CR>:e %:h<CR>
 " =============================================================================
 "                          <Plug> Leader Mappings
 " =============================================================================
+" jump around easier
 nmap <Leader>e <Plug>(easymotion-overwin-f)
 
 " align things from visual mode as well as a motion
 xmap <Leader>ga <Plug>(EasyAlign)
 nmap <Leader>ga <Plug>(EasyAlign)
 
+" fuzzy search
 nmap <Leader>/ :set hlsearch<CR><Plug>(incsearch-fuzzy-/)
 nmap <Leader>? :set hlsearch<CR><Plug>(incsearch-fuzzy-?)
