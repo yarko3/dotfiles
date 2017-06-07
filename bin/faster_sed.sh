@@ -22,7 +22,7 @@ replace_in_dir()
         echo "search string=$search not found in dir=$target"
         exit
     fi
-    echo "replacing $search with $replace in $grep_results"
+    printf "replacing %s with %s in: \n%s\n" "$search" "$replace" "$grep_results"
     echo "$grep_results" | xargs sed -i "s/$search/$replace/g"
 }
 
