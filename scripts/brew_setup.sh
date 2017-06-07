@@ -7,32 +7,35 @@ fi
 brew update
 brew upgrade
 
-brew install bash-completion
-brew install boost
-brew install cmake
-brew install coreutils
-brew install ctags
-brew install doxygen
-brew install gcc
-brew install git
-brew install gnome-common
-brew install htop
-brew install hub
-brew install llvm
-brew install maven
-brew install neovim
-brew install node
-brew install python
-brew install shellcheck
-brew install tmux
-brew install tree
-brew install vim
-brew install watch
-brew install zsh
+brew install \
+    bash-completion \
+    boost \
+    cmake \
+    coreutils \
+    cppcheck \
+    ctags \
+    doxygen \
+    gcc \
+    git \
+    gnome-common \
+    htop \
+    hub \
+    llvm \
+    maven \
+    neovim \
+    node \
+    python \
+    shellcheck \
+    tmux \
+    tree \
+    vim \
+    watch \
+    zsh
 
-brew cask install java
-brew cask install spectacle
-brew cask install vagrant
-brew cask install virtualbox
+brew cask install \
+    java \
+    spectacle \
+    vagrant \
+    virtualbox
 
 brew cleanup
