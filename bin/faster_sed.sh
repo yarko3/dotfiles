@@ -5,7 +5,11 @@ grep_cmd='grep -l'
 
 usage()
 {
-    echo "Usage: $0 -a <search_string> -b <replace_string> -t <target_file/dir> [-r]"
+    echo "$0 usage:"
+    echo "-a search string (required)"
+    echo "-b replace string (required)"
+    echo "-t file/dir (required)"
+    echo "-r replace recursively if dir provided"
     exit 1
 }
 
