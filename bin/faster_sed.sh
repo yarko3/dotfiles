@@ -3,11 +3,16 @@
 # sed inline files faster by first grepping for the replacement string
 search=$1
 replace=$2
-target=$3
+target=$(readlink -f "$3")
 
-if [ -f "$target" ]; then
+replace_in_file()
+{
+    echo "replacing $search with $replace in $target"
     sed -i "s/$search/$replace/g" "$target"
-elif [ -d "$target" ]; then
+}
+
+replace_in_dir()
+{
     if ! compgen -G "$target/*" > /dev/null; then
         echo "no files found in dir=$target"
         exit
@@ -19,4 +24,10 @@ elif [ -d "$target" ]; then
     fi
     echo "replacing $search with $replace in $grep_results"
     echo "$grep_results" | xargs sed -i "s/$search/$replace/g"
+}
+
+if [ -f "$target" ]; then
+    replace_in_file
+elif [ -d "$target" ]; then
+    replace_in_dir
 fi
