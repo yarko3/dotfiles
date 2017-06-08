@@ -128,6 +128,7 @@ nnoremap <Leader>lg      :Glog<CR>
 nnoremap <Leader>so      :so %<CR>
 nnoremap <Leader>sp      :setlocal spell! spelllang=en_us<CR>
 nnoremap <Leader>ss      :call SortSection()<CR>
+nnoremap <Leader>st      :ALEToggle<CR>
 nnoremap <Leader>sw      :call WindowSwap#EasyWindowSwap()<CR>
 nnoremap <Leader>tm      :Tabmerge right<CR>
 nnoremap <Leader>tt      :TagbarToggle<CR>
