@@ -151,3 +151,8 @@ nmap <Leader>ga <Plug>(EasyAlign)
 " fuzzy search
 nmap <Leader>/ :set hlsearch<CR><Plug>(incsearch-fuzzy-/)
 nmap <Leader>? :set hlsearch<CR><Plug>(incsearch-fuzzy-?)
+
+" ale
+" navigate syntax issues
+nmap <silent> <Leader>n <Plug>(ale_next_wrap)
+nmap <silent> <Leader>N <Plug>(ale_previous_wrap)
