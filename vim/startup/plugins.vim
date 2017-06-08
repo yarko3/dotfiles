@@ -26,7 +26,6 @@ Plug 'mhinz/vim-startify'                                 " dope start screen
 Plug 'octol/vim-cpp-enhanced-highlight', { 'for': 'cpp' } " enhanced C++11/14/17 highlighting
 Plug 'raimondi/delimitMate'                               " matching brackets
 Plug 'rhysd/vim-clang-format'                             " Vim wrapper plugin for clang-format
-Plug 'scrooloose/syntastic'                               " Syntax checking
 Plug 'sirver/ultisnips'                                   " snippet engine with integration into ycm; needs vim compiled with python
 Plug 'terryma/vim-expand-region'                          " quickly expand visual regions
 Plug 'tommcdo/vim-exchange'                               " cx operator for exchanging text regions
@@ -38,6 +37,7 @@ Plug 'tpope/vim-surround'                                 " Surrounding text
 Plug 'tpope/vim-vinegar'                                  " netrw improvement
 Plug 'vim-airline/vim-airline-themes'                     " Status line themes
 Plug 'vim-scripts/Tabmerge'                               " Merge tabs into splits
+Plug 'w0rp/ale'                                           " Syntax checking
 Plug 'wesQ3/vim-windowswap'                               " swap splits
 Plug 'yssl/QFEnter'                                       " quickfix open in different places
 
@@ -87,13 +87,6 @@ let g:netrw_sort_by = 'name'
 " ListToggle
 let g:lt_location_list_toggle_map = '<leader>l'
 let g:lt_quickfix_list_toggle_map = '<leader>q'
-
-" Syntastic
-let g:syntastic_aggregate_errors = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_haskell_checkers = ['hlint']
-let g:syntastic_java_javac_autoload_maven_classpath = 0
 
 " Rainbow coloring
 let g:rainbow_active = 1
@@ -187,3 +180,7 @@ endfunction
 inoremap <expr> <CR> pumvisible() ? "\<C-R>=ExpandSnippetOrCarriageReturn()\<CR>" : "\<CR>"
 let g:UltiSnipsJumpForwardTrigger = '<Tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<S-Tab>'
+
+" Ale
+" turn off convention pylint messages and misc
+let g:ale_python_pylint_options='--disable=C --disable=W0311'
