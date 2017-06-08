@@ -9,7 +9,7 @@ usage()
     echo "-a search string (required)"
     echo "-b replace string (required)"
     echo "-t file/dir (required)"
-    echo "-r replace recursively if dir provided"
+    echo "-r act recursively if dir provided"
     exit 1
 }
 
@@ -63,4 +63,7 @@ if [ -f "$target" ]; then
     replace_in_file
 elif [ -d "$target" ]; then
     replace_in_dir
+else
+    usage
 fi
+
