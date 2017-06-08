@@ -21,6 +21,7 @@ Plug 'junegunn/vim-peekaboo'                              " show content of regi
 Plug 'luochen1990/rainbow'                                " Rainbow parenthesis coloring
 Plug 'majutsushi/tagbar'                                  " view tags awesomely
 Plug 'mbbill/undotree'                                    " history visualizer
+Plug 'metakirby5/codi.vim'                                " interactive repl-like scratchpad
 Plug 'mhinz/vim-grepper'                                  " Asynchronous Grep -> QuickFix List
 Plug 'mhinz/vim-startify'                                 " dope start screen
 Plug 'octol/vim-cpp-enhanced-highlight', { 'for': 'cpp' } " enhanced C++11/14/17 highlighting
