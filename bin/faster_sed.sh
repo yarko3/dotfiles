@@ -10,6 +10,7 @@ usage()
     echo "-b replace string (required)"
     echo "-t file/dir (required)"
     echo "-r act recursively if dir provided"
+    echo "-c grep with the C language (ASCII only)"
     exit 1
 }
 
@@ -21,7 +22,7 @@ replace_in_file()
 
 replace_in_dir()
 {
-    if ! compgen -G "$target/*" > /dev/null; then
+    if ! ls -A "$target" > /dev/null; then
         echo "no files found in dir=$target"
         exit
     fi
@@ -34,7 +35,7 @@ replace_in_dir()
     echo "$grep_results" | xargs sed -i "s/$search/$replace/g"
 }
 
-while getopts "a:b:t:rh" o; do
+while getopts "a:b:t:rch" o; do
     case "${o}" in
         a)
             search=${OPTARG}
@@ -46,7 +47,12 @@ while getopts "a:b:t:rh" o; do
             target=$(readlink -f "${OPTARG}")
             ;;
         r)
-            grep_cmd='grep -rl'
+            grep_cmd="$grep_cmd""r"
+            echo "will search recursively"
+            ;;
+        c)
+            grep_cmd="LANG=C $grep_cmd"
+            echo "will search for ASCII only"
             ;;
         *)
             usage
