@@ -186,5 +186,6 @@ let g:UltiSnipsJumpBackwardTrigger = '<S-Tab>'
 " turn off convention pylint messages and misc
 let g:ale_python_pylint_options='--disable=C --disable=W0311'
 let g:ale_linters = {
-\   'cpp': ['cppcheck']
+\   'cpp': ['cppcheck'],
+\   'java': ['checkstyle'],
 \}
