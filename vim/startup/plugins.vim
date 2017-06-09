@@ -16,8 +16,8 @@ Plug 'easymotion/vim-easymotion'                          " I get around round r
 Plug 'haya14busa/incsearch-fuzzy.vim'                     " introduce fuzzy fearch
 Plug 'haya14busa/incsearch.vim'                           " show search as you type
 Plug 'honza/vim-snippets'                                 " snippets repo
-Plug 'junegunn/vim-easy-align'                            " align things
 Plug 'junegunn/limelight.vim'                             " tone down surrounding code
+Plug 'junegunn/vim-easy-align'                            " align things
 Plug 'junegunn/vim-peekaboo'                              " show content of registers
 Plug 'luochen1990/rainbow'                                " Rainbow parenthesis coloring
 Plug 'majutsushi/tagbar'                                  " view tags awesomely
@@ -27,6 +27,7 @@ Plug 'mhinz/vim-startify'                                 " dope start screen
 Plug 'octol/vim-cpp-enhanced-highlight', { 'for': 'cpp' } " enhanced C++11/14/17 highlighting
 Plug 'raimondi/delimitMate'                               " matching brackets
 Plug 'rhysd/vim-clang-format'                             " Vim wrapper plugin for clang-format
+Plug 'sickill/vim-pasta'                                  " paste with proper indenting
 Plug 'sirver/ultisnips'                                   " snippet engine with integration into ycm; needs vim compiled with python
 Plug 'terryma/vim-expand-region'                          " quickly expand visual regions
 Plug 'tommcdo/vim-exchange'                               " cx operator for exchanging text regions
