@@ -17,6 +17,7 @@ Plug 'haya14busa/incsearch-fuzzy.vim'                     " introduce fuzzy fear
 Plug 'haya14busa/incsearch.vim'                           " show search as you type
 Plug 'honza/vim-snippets'                                 " snippets repo
 Plug 'junegunn/vim-easy-align'                            " align things
+Plug 'junegunn/limelight.vim'                             " tone down surrounding code
 Plug 'junegunn/vim-peekaboo'                              " show content of registers
 Plug 'luochen1990/rainbow'                                " Rainbow parenthesis coloring
 Plug 'majutsushi/tagbar'                                  " view tags awesomely
