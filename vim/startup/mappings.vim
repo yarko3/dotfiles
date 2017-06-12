@@ -87,6 +87,10 @@ nnoremap <F5> :w<CR>:call VimuxRunCommand("!! \t")<CR>
 nnoremap <F6> :w<CR>:VimuxInterruptRunner<CR>
 nnoremap <F7> :w<CR>:VimuxPromptCommand<CR>
 
+" don't exit visual mode when shifting
+vnoremap < <gv
+vnoremap > >gv
+
 "" =============================================================================
 ""                           Command Mode Mappings
 "" =============================================================================

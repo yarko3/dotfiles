@@ -117,10 +117,6 @@ set whichwrap+=<,>,h,l,[,]
 " the output of messages and the 'press a key' prompt that goes with these
 set shm=at
 
-" don't exit visual mode when shifting
-vnoremap < <gv
-vnoremap > >gv
-
 "" ============================================================================
 ""                                Appearance
 "" ============================================================================
