@@ -19,7 +19,7 @@ convert_to_epoch_secs()
 
 print_epoch_secs()
 {
-    if date --version 2>/dev/null | grep "GNU coreutils"; then
+    if date --version 2>/dev/null | grep "GNU coreutils" > /dev/null 2>&1; then
         date -d @"$1"
     else
         date -r "$1"
