@@ -17,10 +17,19 @@ convert_to_epoch_secs()
     fi
 }
 
+print_epoch_secs()
+{
+    if date --version 2>/dev/null | grep "GNU coreutils"; then
+        date -d @"$1"
+    else
+        date -r "$1"
+    fi
+}
+
 main()
 {
     epoch_seconds=$(convert_to_epoch_secs "$1")
-    date -r "$epoch_seconds"
+    print_epoch_secs "$epoch_seconds"
 }
 
 if [ $# -eq 1 ]; then
