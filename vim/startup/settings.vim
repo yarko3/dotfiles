@@ -60,6 +60,7 @@ set hidden
 
 " Autosave before :make and other commands; autoreload when file mod
 set autowrite
+" automatically reload file on change
 set autoread
 
 " Configure the :make command
