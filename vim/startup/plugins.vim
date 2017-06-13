@@ -194,4 +194,6 @@ let g:ale_linters = {
 \}
 
 " vim-highlightedyank
-map y <Plug>(highlightedyank)
+if !has('nvim')
+    map y <Plug>(highlightedyank)
+endif
