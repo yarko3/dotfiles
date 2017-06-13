@@ -10,6 +10,7 @@ convert_to_epoch_secs()
 {
     epoch=$1
     num_chars_in_epoch_secs=10
+    # assuming nobody is gonna be using this script past 2286; plz prove me wrong
     if [ ${#epoch} -gt $num_chars_in_epoch_secs ]; then
         echo $((epoch / 1000))
     else
