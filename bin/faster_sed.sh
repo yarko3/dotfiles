@@ -2,6 +2,7 @@
 
 # sed inline files faster by first grepping for the replacement string
 grep_cmd='grep -l'
+sed_delim='#'
 
 usage()
 {
@@ -11,13 +12,29 @@ usage()
     echo "-t file/dir (required)"
     echo "-r act recursively if dir provided"
     echo "-c grep with the C language (ASCII only)"
+    echo "-d a specific delimiter to be used by sed"
     exit 1
 }
 
 replace_in_file()
 {
     echo "replacing $search with $replace in $target"
-    sed -i "s/$search/$replace/g" "$target"
+    sed -i "s$sed_delim$search$sed_delim$replace$sed_delim""g" "$target"
+}
+
+validate_input()
+{
+    search=$1
+    replace=$2
+    target=$3
+    if [ ! -n "$search" ] || [ ! -n "$replace" ] || [ ! -n "$target" ]; then
+        usage
+    fi
+
+    if echo "$search$replace" | grep "$sed_delim" > /dev/null; then
+        echo "search or replace string contains default sed_delim=$sed_delim; please use -d to specify a different delimiter"
+        exit 1
+    fi
 }
 
 replace_in_dir()
@@ -32,10 +49,10 @@ replace_in_dir()
         exit
     fi
     printf "replacing %s with %s in: \n%s\n" "$search" "$replace" "$grep_results"
-    echo "$grep_results" | xargs sed -i "s/$search/$replace/g"
+    echo "$grep_results" | xargs sed -i "s$sed_delim$search$sed_delim$replace$sed_delim""g"
 }
 
-while getopts "a:b:t:rch" o; do
+while getopts "d:a:b:t:rch" o; do
     case "${o}" in
         a)
             search=${OPTARG}
@@ -54,6 +71,10 @@ while getopts "a:b:t:rch" o; do
             grep_cmd="LANG=C $grep_cmd"
             echo "will search for ASCII only"
             ;;
+        d)
+            sed_delim=${OPTARG}
+            echo "will use $sed_delim as sed delimiter"
+            ;;
         *)
             usage
             ;;
@@ -61,9 +82,7 @@ while getopts "a:b:t:rch" o; do
 done
 shift $((OPTIND-1))
 
-if [ ! -n "$search" ] || [ ! -n "$replace" ] || [ ! -n "$target" ]; then
-    usage
-fi
+validate_input "$search" "$replace" "$target"
 
 if [ -f "$target" ]; then
     replace_in_file
