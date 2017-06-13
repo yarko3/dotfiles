@@ -1,6 +1,8 @@
 #! /bin/bash
 
 # sed inline files faster by first grepping for the replacement string
+# DISCLAIMER: this script doesn't play well with escaped strings or regex
+
 grep_cmd='grep -l'
 sed_delim='#'
 
@@ -32,7 +34,7 @@ validate_input()
     fi
 
     if echo "$search$replace" | grep "$sed_delim" > /dev/null; then
-        echo "search or replace string contains default sed_delim=$sed_delim; please use -d to specify a different delimiter"
+        echo "search or replace string contains default sed_delim=$sed_delim; please use -d to specify a different delimiter; you cannot escape"
         exit 1
     fi
 }
