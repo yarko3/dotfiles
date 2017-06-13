@@ -87,6 +87,12 @@ nnoremap <F5> :w<CR>:call VimuxRunCommand("!! \t")<CR>
 nnoremap <F6> :w<CR>:VimuxInterruptRunner<CR>
 nnoremap <F7> :w<CR>:VimuxPromptCommand<CR>
 
+" resize splits easily
+nnoremap <silent> <S-Left> :<C-U>ObviousResizeLeft<CR>
+nnoremap <silent> <S-Down> :<C-U>ObviousResizeDown<CR>
+nnoremap <silent> <S-Up> :<C-U>ObviousResizeUp<CR>
+nnoremap <silent> <S-Right> :<C-U>ObviousResizeRight<CR>
+
 "" =============================================================================
 ""                           Command Mode Mappings
 "" =============================================================================

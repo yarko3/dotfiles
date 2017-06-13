@@ -30,6 +30,7 @@ Plug 'raimondi/delimitMate'                               " matching brackets
 Plug 'rhysd/vim-clang-format'                             " Vim wrapper plugin for clang-format
 Plug 'sickill/vim-pasta'                                  " paste with proper indenting
 Plug 'sirver/ultisnips'                                   " snippet engine with integration into ycm; needs vim compiled with python
+Plug 'talek/obvious-resize'                               " resize splits
 Plug 'terryma/vim-expand-region'                          " quickly expand visual regions
 Plug 'tommcdo/vim-exchange'                               " cx operator for exchanging text regions
 Plug 'tpope/vim-commentary'                               " Comment/uncomment operator
@@ -197,3 +198,6 @@ let g:ale_linters = {
 if !has('nvim')
     map y <Plug>(highlightedyank)
 endif
+
+" obvious resize
+let g:obvious_resize_default = 5
