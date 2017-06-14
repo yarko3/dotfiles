@@ -57,45 +57,45 @@ call plug#end()
 "" ============================================================================
 
 " airline
-let g:airline_powerline_fonts = 1
-let g:airline_theme = 'tomorrow'
+let g:airline_powerline_fonts=1
+let g:airline_theme='tomorrow'
 
 " Clang-format
-let g:clang_format#detect_style_file = 1
-let g:clang_format#auto_formatexpr = 1
+let g:clang_format#detect_style_file=1
+let g:clang_format#auto_formatexpr=1
 map <C-T> :ClangFormat<CR>
 autocmd FileType c,cpp setlocal textwidth=0
 
 " CtrlP
-let g:ctrlp_working_path_mode = 'ra'
-let g:ctrlp_use_caching = 0
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
+let g:ctrlp_working_path_mode='ra'
+let g:ctrlp_use_caching=0
+let g:ctrlp_user_command=['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
 
 " QFEnter
-let g:qfenter_keymap = {}
-let g:qfenter_keymap.vopen = ['<C-v>']
-let g:qfenter_keymap.hopen = ['<C-x>']
-let g:qfenter_keymap.topen = ['<C-t>']
+let g:qfenter_keymap={}
+let g:qfenter_keymap.vopen=['<C-v>']
+let g:qfenter_keymap.hopen=['<C-x>']
+let g:qfenter_keymap.topen=['<C-t>']
 
 " Grepper
 nmap gs :call Cdroot()<CR><plug>(GrepperOperator)
 xmap gs :call Cdroot()<CR><plug>(GrepperOperator)
 
-let g:grepper = {
+let g:grepper={
     \ 'tools':     ['git'],
     \ 'jump':      0,
     \ }
 
 " Netrw
-let g:netrw_sort_by = 'name'
+let g:netrw_sort_by='name'
 
 " ListToggle
-let g:lt_location_list_toggle_map = '<leader>l'
-let g:lt_quickfix_list_toggle_map = '<leader>q'
+let g:lt_location_list_toggle_map='<leader>l'
+let g:lt_quickfix_list_toggle_map='<leader>q'
 
 " Rainbow coloring
-let g:rainbow_active = 1
-let g:rainbow_conf = {
+let g:rainbow_active=1
+let g:rainbow_conf={
 \   'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
 \   'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta'],
 \   'operators': '_,_',
@@ -119,21 +119,21 @@ let g:rainbow_conf = {
 \}
 
 " windowswap
-let g:windowswap_map_keys = 0 "prevent default bindings
+let g:windowswap_map_keys=0 "prevent default bindings
 
 " YouCompleteMe
-let g:ycm_server_log_level = 'debug'
-let g:ycm_server_keep_logfiles = 0
-let g:ycm_confirm_extra_conf = 0
-let g:ycm_autoclose_preview_window_after_insertion = 1
-let g:ycm_always_populate_location_list = 1
-let g:ycm_semantic_triggers = {'haskell' : ['.']}
+let g:ycm_server_log_level='debug'
+let g:ycm_server_keep_logfiles=0
+let g:ycm_confirm_extra_conf=0
+let g:ycm_autoclose_preview_window_after_insertion=1
+let g:ycm_always_populate_location_list=1
+let g:ycm_semantic_triggers={'haskell' : ['.']}
 
-if g:bbenv != "" && g:platform != "Darwin"
-    let g:ycm_seed_identifiers_with_syntax = 1
-    let g:ycm_server_python_interpreter = '/opt/bb/bin/python'
+if g:bbenv!="" && g:platform!="Darwin"
+    let g:ycm_seed_identifiers_with_syntax=1
+    let g:ycm_server_python_interpreter='/opt/bb/bin/python'
 else
-    let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/.ycm_extra_conf.py'
+    let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/cpp/.ycm_extra_conf.py'
 endif
 
 " vim-expand-region
@@ -159,9 +159,9 @@ let g:indentLine_noConcealCursor=''
 
 " easymotion
 " turn off default mappings
-let g:EasyMotion_do_mapping = 0
+let g:EasyMotion_do_mapping=0
 " turn on case insensitive feature
-let g:EasyMotion_smartcase = 1
+let g:EasyMotion_smartcase=1
 " set colors
 hi link EasyMotionTarget WarningMsg
 hi link EasyMotionShade  Comment
@@ -172,10 +172,10 @@ let vim_markdown_preview_browser='Google Chrome'
 let vim_markdown_preview_hotkey='<C-m>'
 
 " snippets
-let g:UltiSnipsExpandTrigger = "<nop>"
-let g:ulti_expand_or_jump_res = 0
+let g:UltiSnipsExpandTrigger="<nop>"
+let g:ulti_expand_or_jump_res=0
 function ExpandSnippetOrCarriageReturn()
-    let snippet = UltiSnips#ExpandSnippetOrJump()
+    let snippet=UltiSnips#ExpandSnippetOrJump()
     if g:ulti_expand_or_jump_res > 0
         return snippet
     else
@@ -183,13 +183,13 @@ function ExpandSnippetOrCarriageReturn()
     endif
 endfunction
 inoremap <expr> <CR> pumvisible() ? "\<C-R>=ExpandSnippetOrCarriageReturn()\<CR>" : "\<CR>"
-let g:UltiSnipsJumpForwardTrigger = '<Tab>'
-let g:UltiSnipsJumpBackwardTrigger = '<S-Tab>'
+let g:UltiSnipsJumpForwardTrigger='<Tab>'
+let g:UltiSnipsJumpBackwardTrigger='<S-Tab>'
 
 " Ale
 " turn off convention pylint messages and misc
 let g:ale_python_pylint_options='--disable=C --disable=W0311'
-let g:ale_linters = {
+let g:ale_linters={
 \   'cpp': ['cppcheck'],
 \   'java': ['checkstyle'],
 \}
@@ -200,4 +200,4 @@ if !has('nvim')
 endif
 
 " obvious resize
-let g:obvious_resize_default = 5
+let g:obvious_resize_default=5
