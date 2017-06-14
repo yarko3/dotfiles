@@ -17,6 +17,7 @@ Plug 'haya14busa/incsearch-fuzzy.vim'                     " introduce fuzzy fear
 Plug 'haya14busa/incsearch.vim'                           " show search as you type
 Plug 'honza/vim-snippets'                                 " snippets repo
 Plug 'junegunn/limelight.vim'                             " tone down surrounding code
+Plug 'junegunn/vim-after-object'                          " provide text object targets after (like da=)
 Plug 'junegunn/vim-easy-align'                            " align things
 Plug 'junegunn/vim-peekaboo'                              " show content of registers
 Plug 'luochen1990/rainbow'                                " Rainbow parenthesis coloring
@@ -201,3 +202,6 @@ endif
 
 " obvious resize
 let g:obvious_resize_default=5
+
+" vim-after-object
+autocmd VimEnter * call after_object#enable('=', ':', '-', '#', ' ')
