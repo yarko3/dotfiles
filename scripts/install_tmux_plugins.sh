@@ -5,5 +5,7 @@ tmux start-server
 tmux new-session -d
 # install the plugins
 ~/.tmux/plugins/tpm/scripts/install_plugins.sh
+# update plugins
+~/.tmux/plugins/tpm/bin/update_plugins all
 # killing the server is not required
 # tmux kill-server
