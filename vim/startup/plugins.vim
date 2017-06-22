@@ -204,3 +204,7 @@ let g:obvious_resize_default=5
 
 " vim-after-object
 autocmd VimEnter * call after_object#enable('=', ':', '-', '#', ' ')
+
+" undotree
+" grab focus on toggle
+let g:undotree_SetFocusWhenToggle = 1
