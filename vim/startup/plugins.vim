@@ -200,7 +200,7 @@ if !has('nvim')
 endif
 
 " obvious resize
-let g:obvious_resize_default=5
+let g:obvious_resize_default=10
 
 " vim-after-object
 autocmd VimEnter * call after_object#enable('=', ':', '-', '#', ' ')
