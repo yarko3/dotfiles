@@ -13,7 +13,6 @@ Plug 'ctrlpvim/ctrlp.vim'                                  " File searchin and o
 Plug 'derekwyatt/vim-fswitch', { 'for': 'cpp' }            " Fastswitch (cpp/h toggle)
 Plug 'derekwyatt/vim-scala', { 'for': 'scala' }            " Scala syntax
 Plug 'easymotion/vim-easymotion'                           " I get around round round round
-Plug 'haya14busa/incsearch-fuzzy.vim'                      " introduce fuzzy fearch
 Plug 'haya14busa/incsearch.vim'                            " show search as you type
 Plug 'honza/vim-snippets'                                  " snippets repo
 Plug 'junegunn/limelight.vim'                              " tone down surrounding code

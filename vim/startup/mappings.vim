@@ -123,10 +123,6 @@ nmap <Leader>e <Plug>(easymotion-overwin-f)
 xmap <Leader>ga <Plug>(EasyAlign)
 nmap <Leader>ga <Plug>(EasyAlign)
 
-" fuzzy search
-nmap <Leader>/ :set hlsearch<CR><Plug>(incsearch-fuzzy-/)
-nmap <Leader>? :set hlsearch<CR><Plug>(incsearch-fuzzy-?)
-
 " ale
 " navigate syntax issues
 nmap <silent> <Leader>n <Plug>(ale_next_wrap)
