@@ -4,7 +4,6 @@ Plug 'JamshedVesuna/vim-markdown-preview'                  " preview markdown lo
 Plug 'Valloric/ListToggle'                                 " Toggling quickfix and location list
 Plug 'Yggdroot/indentLine'                                 " show indent
 Plug 'airblade/vim-gitgutter'                              " git changes in gutter
-Plug 'bhipple/bde_plugins'                                 " Tools for formatting code according to BDE Standards
 Plug 'bhipple/vimux'                                       " Vim and Tmux Integration
 Plug 'bling/vim-airline'                                   " Status line
 Plug 'christoomey/vim-tmux-navigator'                      " Window/Pane switching with Vim and Tmux
