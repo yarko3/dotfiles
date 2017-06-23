@@ -7,7 +7,6 @@ Plug 'airblade/vim-gitgutter'                              " git changes in gutt
 Plug 'bhipple/vimux'                                       " Vim and Tmux Integration
 Plug 'bling/vim-airline'                                   " Status line
 Plug 'christoomey/vim-tmux-navigator'                      " Window/Pane switching with Vim and Tmux
-Plug 'conradirwin/vim-bracketed-paste'                     " paste with no fuss
 Plug 'ctrlpvim/ctrlp.vim'                                  " File searchin and opening
 Plug 'derekwyatt/vim-fswitch', { 'for': 'cpp' }            " Fastswitch (cpp/h toggle)
 Plug 'derekwyatt/vim-scala', { 'for': 'scala' }            " Scala syntax
@@ -15,7 +14,6 @@ Plug 'easymotion/vim-easymotion'                           " I get around round 
 Plug 'haya14busa/incsearch.vim'                            " show search as you type
 Plug 'honza/vim-snippets'                                  " snippets repo
 Plug 'junegunn/limelight.vim'                              " tone down surrounding code
-Plug 'junegunn/vim-after-object'                           " provide text object targets after (like da=)
 Plug 'junegunn/vim-easy-align'                             " align things
 Plug 'junegunn/vim-peekaboo'                               " show content of registers
 Plug 'luochen1990/rainbow'                                 " Rainbow parenthesis coloring
@@ -40,14 +38,12 @@ Plug 'tpope/vim-surround'                                  " Surrounding text
 Plug 'tpope/vim-vinegar'                                   " netrw improvement
 Plug 'uguu-org/vim-matrix-screensaver', { 'on': 'Matrix' } " dope screensaver
 Plug 'vim-airline/vim-airline-themes'                      " Status line themes
-Plug 'vim-scripts/Tabmerge'                                " Merge tabs into splits
 Plug 'w0rp/ale'                                            " Syntax checking
 Plug 'wesQ3/vim-windowswap'                                " swap splits
 Plug 'yssl/QFEnter'                                        " quickfix open in different places
 
 if g:platform == "Linux" || g:platform == "Darwin"
     Plug 'Valloric/YouCompleteMe'
-    Plug 'metakirby5/codi.vim'                             " interactive repl-like scratchpad
 endif
 
 call plug#end()
