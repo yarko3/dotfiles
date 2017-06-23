@@ -47,7 +47,7 @@ Plug 'yssl/QFEnter'                                        " quickfix open in di
 
 if g:platform == "Linux" || g:platform == "Darwin"
     Plug 'Valloric/YouCompleteMe'
-    Plug 'metakirby5/codi.vim'                                                       " interactive repl-like scratchpad
+    Plug 'metakirby5/codi.vim'                             " interactive repl-like scratchpad
 endif
 
 call plug#end()
