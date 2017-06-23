@@ -1,49 +1,49 @@
 call plug#begin('~/.vim/plugged')
 
-Plug 'JamshedVesuna/vim-markdown-preview'                                            " preview markdown locally
-Plug 'Valloric/ListToggle'                                                           " Toggling quickfix and location list
-Plug 'Yggdroot/indentLine'                                                           " show indent
-Plug 'airblade/vim-gitgutter'                                                        " git changes in gutter
-Plug 'bhipple/vimux'                                                                 " Vim and Tmux Integration
-Plug 'bling/vim-airline'                                                             " Status line
-Plug 'christoomey/vim-tmux-navigator'                                                " Window/Pane switching with Vim and Tmux
-Plug 'conradirwin/vim-bracketed-paste'                                               " paste with no fuss
-Plug 'ctrlpvim/ctrlp.vim', { 'commit' : '019f20a6f280b875b3812ea4d03a4cf1647cd0d9' } " File searchin and opening
-Plug 'derekwyatt/vim-fswitch', { 'for': 'cpp' }                                      " Fastswitch (cpp/h toggle)
-Plug 'derekwyatt/vim-scala', { 'for': 'scala' }                                      " Scala syntax
-Plug 'easymotion/vim-easymotion'                                                     " I get around round round round
-Plug 'haya14busa/incsearch.vim'                                                      " show search as you type
-Plug 'honza/vim-snippets'                                                            " snippets repo
-Plug 'junegunn/limelight.vim'                                                        " tone down surrounding code
-Plug 'junegunn/vim-after-object'                                                     " provide text object targets after (like da=)
-Plug 'junegunn/vim-easy-align'                                                       " align things
-Plug 'junegunn/vim-peekaboo'                                                         " show content of registers
-Plug 'luochen1990/rainbow'                                                           " Rainbow parenthesis coloring
-Plug 'machakann/vim-highlightedyank'                                                 " highlight on yank
-Plug 'majutsushi/tagbar'                                                             " view tags awesomely
-Plug 'mbbill/undotree'                                                               " history visualizer
-Plug 'mhinz/vim-grepper'                                                             " Asynchronous Grep -> QuickFix List
-Plug 'mhinz/vim-startify'                                                            " dope start screen
-Plug 'octol/vim-cpp-enhanced-highlight', { 'for': 'cpp' }                            " enhanced C++11/14/17 highlighting
-Plug 'raimondi/delimitMate'                                                          " matching brackets
-Plug 'rhysd/vim-clang-format'                                                        " Vim wrapper plugin for clang-format
-Plug 'sickill/vim-pasta'                                                             " paste with proper indenting
-Plug 'sirver/ultisnips'                                                              " snippet engine with integration into ycm; needs vim compiled with python
-Plug 'talek/obvious-resize'                                                          " resize splits
-Plug 'terryma/vim-expand-region'                                                     " quickly expand visual regions
-Plug 'tommcdo/vim-exchange'                                                          " cx operator for exchanging text regions
-Plug 'tpope/vim-commentary'                                                          " Comment/uncomment operator
-Plug 'tpope/vim-fugitive'                                                            " Git Wrapper
-Plug 'tpope/vim-repeat'                                                              " Dot operator for plugins
-Plug 'tpope/vim-rhubarb'                                                             " github support
-Plug 'tpope/vim-surround'                                                            " Surrounding text
-Plug 'tpope/vim-vinegar'                                                             " netrw improvement
-Plug 'uguu-org/vim-matrix-screensaver', { 'on': 'Matrix' }                           " dope screensaver
-Plug 'vim-airline/vim-airline-themes'                                                " Status line themes
-Plug 'vim-scripts/Tabmerge'                                                          " Merge tabs into splits
-Plug 'w0rp/ale'                                                                      " Syntax checking
-Plug 'wesQ3/vim-windowswap'                                                          " swap splits
-Plug 'yssl/QFEnter'                                                                  " quickfix open in different places
+Plug 'JamshedVesuna/vim-markdown-preview'                  " preview markdown locally
+Plug 'Valloric/ListToggle'                                 " Toggling quickfix and location list
+Plug 'Yggdroot/indentLine'                                 " show indent
+Plug 'airblade/vim-gitgutter'                              " git changes in gutter
+Plug 'bhipple/vimux'                                       " Vim and Tmux Integration
+Plug 'bling/vim-airline'                                   " Status line
+Plug 'christoomey/vim-tmux-navigator'                      " Window/Pane switching with Vim and Tmux
+Plug 'conradirwin/vim-bracketed-paste'                     " paste with no fuss
+Plug 'ctrlpvim/ctrlp.vim'                                  " File searchin and opening
+Plug 'derekwyatt/vim-fswitch', { 'for': 'cpp' }            " Fastswitch (cpp/h toggle)
+Plug 'derekwyatt/vim-scala', { 'for': 'scala' }            " Scala syntax
+Plug 'easymotion/vim-easymotion'                           " I get around round round round
+Plug 'haya14busa/incsearch.vim'                            " show search as you type
+Plug 'honza/vim-snippets'                                  " snippets repo
+Plug 'junegunn/limelight.vim'                              " tone down surrounding code
+Plug 'junegunn/vim-after-object'                           " provide text object targets after (like da=)
+Plug 'junegunn/vim-easy-align'                             " align things
+Plug 'junegunn/vim-peekaboo'                               " show content of registers
+Plug 'luochen1990/rainbow'                                 " Rainbow parenthesis coloring
+Plug 'machakann/vim-highlightedyank'                       " highlight on yank
+Plug 'majutsushi/tagbar'                                   " view tags awesomely
+Plug 'mbbill/undotree'                                     " history visualizer
+Plug 'mhinz/vim-grepper'                                   " Asynchronous Grep -> QuickFix List
+Plug 'mhinz/vim-startify'                                  " dope start screen
+Plug 'octol/vim-cpp-enhanced-highlight', { 'for': 'cpp' }  " enhanced C++11/14/17 highlighting
+Plug 'raimondi/delimitMate'                                " matching brackets
+Plug 'rhysd/vim-clang-format'                              " Vim wrapper plugin for clang-format
+Plug 'sickill/vim-pasta'                                   " paste with proper indenting
+Plug 'sirver/ultisnips'                                    " snippet engine with integration into ycm; needs vim compiled with python
+Plug 'talek/obvious-resize'                                " resize splits
+Plug 'terryma/vim-expand-region'                           " quickly expand visual regions
+Plug 'tommcdo/vim-exchange'                                " cx operator for exchanging text regions
+Plug 'tpope/vim-commentary'                                " Comment/uncomment operator
+Plug 'tpope/vim-fugitive'                                  " Git Wrapper
+Plug 'tpope/vim-repeat'                                    " Dot operator for plugins
+Plug 'tpope/vim-rhubarb'                                   " github support
+Plug 'tpope/vim-surround'                                  " Surrounding text
+Plug 'tpope/vim-vinegar'                                   " netrw improvement
+Plug 'uguu-org/vim-matrix-screensaver', { 'on': 'Matrix' } " dope screensaver
+Plug 'vim-airline/vim-airline-themes'                      " Status line themes
+Plug 'vim-scripts/Tabmerge'                                " Merge tabs into splits
+Plug 'w0rp/ale'                                            " Syntax checking
+Plug 'wesQ3/vim-windowswap'                                " swap splits
+Plug 'yssl/QFEnter'                                        " quickfix open in different places
 
 if g:platform == "Linux" || g:platform == "Darwin"
     Plug 'Valloric/YouCompleteMe'
