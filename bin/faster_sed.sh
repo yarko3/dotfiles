@@ -46,10 +46,13 @@ replace_in_dir()
         exit
     fi
 
-    if ! grep_results=$(eval "$grep_cmd" "$search" "$target"/* 2> /dev/null); then
+    grep_results=$(eval "$grep_cmd" "$search" "$target"/* 2> /dev/null)
+
+    if [ "$grep_results" = '' ]; then
         echo "search string=$search not found in dir=$target"
         exit
     fi
+
     printf "replacing %s with %s in: \n%s\n" "$search" "$replace" "$grep_results"
     echo "$grep_results" | xargs sed -i "s$sed_delim$search$sed_delim$replace$sed_delim""g"
 }
