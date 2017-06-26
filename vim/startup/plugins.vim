@@ -43,7 +43,7 @@ Plug 'wesQ3/vim-windowswap'                                " swap splits
 Plug 'yssl/QFEnter'                                        " quickfix open in different places
 
 if g:platform == "Linux" || g:platform == "Darwin"
-    Plug 'Valloric/YouCompleteMe'
+    Plug 'Valloric/YouCompleteMe', { 'commit' : '37d63e1a' }
 endif
 
 call plug#end()
