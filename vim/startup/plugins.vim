@@ -203,6 +203,5 @@ let g:obvious_resize_default=10
 " grab focus on toggle
 let g:undotree_SetFocusWhenToggle = 1
 
-
 " maximizer
 let g:maximizer_set_default_mapping = 0
