@@ -27,6 +27,7 @@ Plug 'raimondi/delimitMate'                                " matching brackets
 Plug 'rhysd/vim-clang-format'                              " Vim wrapper plugin for clang-format
 Plug 'sickill/vim-pasta'                                   " paste with proper indenting
 Plug 'sirver/ultisnips'                                    " snippet engine with integration into ycm; needs vim compiled with python
+Plug 'szw/vim-maximizer'                                   " maximize a split
 Plug 'talek/obvious-resize'                                " resize splits
 Plug 'terryma/vim-expand-region'                           " quickly expand visual regions
 Plug 'tommcdo/vim-exchange'                                " cx operator for exchanging text regions
@@ -201,3 +202,7 @@ let g:obvious_resize_default=10
 " undotree
 " grab focus on toggle
 let g:undotree_SetFocusWhenToggle = 1
+
+
+" maximizer
+let g:maximizer_set_default_mapping = 0

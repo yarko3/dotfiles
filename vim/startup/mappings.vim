@@ -111,6 +111,7 @@ nnoremap <Leader>uu      :PlugUpgrade<CR>:PlugUpdate<CR>
 nnoremap <Leader>ve      :vsp<CR>:e %:h<CR>
 nnoremap <Leader>w       :call StripTabsAndTrailingWhitespaces()<CR>:w<CR>
 nnoremap <Leader>xe      :sp<CR>:e %:h<CR>
+nnoremap <Leader>z       :MaximizerToggle<CR>
 
 " =============================================================================
 "                          <Plug> Leader Mappings
