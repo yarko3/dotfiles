@@ -41,7 +41,7 @@ nnoremap <silent> <F8> :b#<CR>
 nnoremap Y y$
 
 " replay @q macro for each line of a visual selection
-vnoremap @q :normal @q<CR>
+vnoremap Q :normal @q<CR>
 
 " qq to record, Q to replay
 nnoremap Q @q
