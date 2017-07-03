@@ -5,7 +5,11 @@
 *.pyc
 nodes
 tags
+
+/* only keep plugin manager */
 tmux/plugins
+!tmux/plugins/tpm
+
 vim/autoload/plug.vim.old
 
 /* spell files are pretty big */
@@ -13,5 +17,3 @@ vim/spell/en.utf-8.*
 
 /* don't include nvim symlink in repo; it is handled by dotbot */
 vim/init.vim
-
-!tmux/plugins/tpm
