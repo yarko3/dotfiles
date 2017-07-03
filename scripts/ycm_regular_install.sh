@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Requires the following packages:
 # build-essential cmake python-dev
 cmd='./install.py --clang-complete || echo "YCM Build failed. Are its dependencies installed?"'
@@ -13,4 +13,3 @@ if [ -f third_party/ycmd/ycm_core.so ]; then
 else
     eval "$cmd"
 fi
-
