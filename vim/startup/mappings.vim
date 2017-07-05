@@ -8,10 +8,10 @@ cmap w!! w !sudo tee > /dev/null %
 ""                           Insert Mode Mappings
 "" ============================================================================
 " Leaving insert mode with some ups and downs
-inoremap jj <Esc><Right>
-inoremap jk <Esc><Right>
-inoremap kj <Esc><Right>
-inoremap kk <Esc><Right>
+inoremap jj <Esc>
+inoremap jk <Esc>
+inoremap kj <Esc>
+inoremap kk <Esc>
 
 "" ============================================================================
 ""                        Normal/Visual Mode Mappings
