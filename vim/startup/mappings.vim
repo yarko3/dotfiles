@@ -48,7 +48,7 @@ nnoremap Q @q
 
 " Compilation and testing
 nnoremap <F2> :w<CR>:call Cdroot()<CR>:call VimuxRunCommand("clear; make clean -j")<CR>
-nnoremap <F3> :w<CR>:call Cdroot()<CR>:call VimuxRunCommand("clear; make gtest -j")<CR>
+nnoremap <F3> :w<CR>:call Cdroot()<CR>:call VimuxRunCommand("clear; make test -j")<CR>
 nnoremap <F4> :w<CR>:call Cdroot()<CR>:call VimuxRunCommand("clear; make -j")<CR>
 " rerun last command (that weird whitespace is important for zsh/bash to expand)
 nnoremap <F5> :w<CR>:call VimuxRunCommand("!! \t")<CR>
