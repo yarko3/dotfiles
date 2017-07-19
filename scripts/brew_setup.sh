@@ -33,6 +33,7 @@ brew install \
     zsh
 
 brew cask install \
+    docker \
     java \
     spectacle \
     vagrant \
