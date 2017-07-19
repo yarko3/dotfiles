@@ -6,6 +6,7 @@
     ci = commit
     co = checkout
     cob = checkout -b
+    cp = cherry-pick
     df = diff
     dfc = "!git log --left-right --graph --cherry-mark --oneline HEAD...$1"
     dfs = diff --staged
@@ -16,10 +17,10 @@
     lg = log --decorate --oneline --graph --branches --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold blue)(%ar) %C(bold yellow)%d%C(reset) %C(green)%s%C(reset) %C(dim green)- %an%C(reset)'
     lp = log -p --stat
     pl = pull
-    pr = pull-request
-    pr-clean = "!git for-each-ref refs/heads/pr/* --format='%(refname)' | while read ref ; do branch=${ref#refs/heads/} ; git branch -D $branch ; done"
     plom = pull origin master
     plum = pull upstream master
+    pr = pull-request
+    pr-clean = "!git for-each-ref refs/heads/pr/* --format='%(refname)' | while read ref ; do branch=${ref#refs/heads/} ; git branch -D $branch ; done"
     prom = pull --rebase origin master
     prum = pull --rebase upstream master
     pu = push
