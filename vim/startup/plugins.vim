@@ -116,7 +116,8 @@ let g:rainbow_conf={
 \}
 
 " windowswap
-let g:windowswap_map_keys=0 "prevent default bindings
+" prevent default bindings
+let g:windowswap_map_keys=0
 
 " YouCompleteMe
 let g:ycm_server_log_level='debug'
