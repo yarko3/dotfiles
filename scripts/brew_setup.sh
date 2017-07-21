@@ -10,6 +10,7 @@ brew upgrade
 brew install \
     bash-completion \
     boost \
+    checkstyle \
     cmake \
     coreutils \
     cppcheck \
