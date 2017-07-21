@@ -11,6 +11,7 @@ brew install \
     bash-completion \
     boost \
     checkstyle \
+    clang-format \
     cmake \
     coreutils \
     cppcheck \
