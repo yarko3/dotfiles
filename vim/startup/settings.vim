@@ -89,7 +89,7 @@ set wildmode=list:longest
 set wildignore+=*.o,*.d,00*,nohup.out,tags,.hs-tags,*.hi,*.gcno,*.gcda,*.fasl,*.pyc
 
 " Number of lines to scroll past when the cursor scrolls off the screen
-set scrolloff=2
+set scrolloff=5
 
 " Extend functionality of the % key's matching
 runtime macros/matchit.vim
