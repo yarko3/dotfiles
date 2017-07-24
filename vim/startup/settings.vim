@@ -36,6 +36,8 @@ set autoindent
 " copy the previous indentation on autoindenting
 set copyindent
 set cindent
+
+" make backspace traverse between lines
 set backspace=indent,eol,start
 
 " oh no, mouse
