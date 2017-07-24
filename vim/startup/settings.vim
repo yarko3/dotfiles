@@ -56,6 +56,8 @@ set expandtab
 set shiftwidth=4
 " makes indenting a multiple of shiftwidth
 set shiftround
+" make backspace eat a tab worth of spaces
+set smarttab
 
 " Allow switching off modified buffers without warning
 set hidden
