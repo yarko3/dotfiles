@@ -187,6 +187,7 @@ let g:UltiSnipsJumpBackwardTrigger='<S-Tab>'
 " Ale
 " turn off convention pylint messages and misc
 let g:ale_python_pylint_options='--disable=C --disable=W0311'
+let g:ale_java_checkstyle_options='-c ~/.vim/config/checkstyle_custom_checks.xml'
 let g:ale_linters={
 \   'cpp': ['cppcheck'],
 \   'java': ['checkstyle'],
