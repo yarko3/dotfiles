@@ -87,6 +87,7 @@ nnoremap <Leader>do      :windo diffoff<CR>
 nnoremap <Leader>dom     :Gdiff origin/master<CR>
 nnoremap <Leader>dt      :windo diffthis<CR>
 nnoremap <Leader>dum     :Gdiff upstream/master<CR>
+nnoremap <Leader>ew      <C-S-w>=
 nnoremap <Leader>ff      :FSHere<CR>
 nnoremap <Leader>fh      :FSSplitLeft<CR>
 nnoremap <Leader>fj      :FSSplitBelow<CR>
