@@ -22,6 +22,7 @@ Plug 'majutsushi/tagbar'                                   " view tags awesomely
 Plug 'mbbill/undotree'                                     " history visualizer
 Plug 'mhinz/vim-grepper'                                   " Asynchronous Grep -> QuickFix List
 Plug 'mhinz/vim-startify'                                  " dope start screen
+Plug 'michaeljsmith/vim-indent-object'                     " indentation-level text objects (ai/I, ii/I)
 Plug 'octol/vim-cpp-enhanced-highlight', { 'for': 'cpp' }  " enhanced C++11/14/17 highlighting
 Plug 'raimondi/delimitMate'                                " matching brackets
 Plug 'rhysd/vim-clang-format'                              " Vim wrapper plugin for clang-format
