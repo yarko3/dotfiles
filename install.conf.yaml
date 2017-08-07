@@ -29,6 +29,7 @@
         force: true
         path: bashrc
     ~/.fzf: fzf/
+    ~/.jshintrc: jshintrc
 
 - shell:
   - [git submodule update --init --recursive, Updating submodules]
