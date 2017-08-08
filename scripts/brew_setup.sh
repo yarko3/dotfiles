@@ -36,6 +36,7 @@ brew install \
 
 brew cask install \
     docker \
+    iterm2 \
     java \
     spectacle \
     vagrant \
