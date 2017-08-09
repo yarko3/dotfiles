@@ -99,6 +99,7 @@ nnoremap <Leader>jc      :YcmCompleter GoToDeclaration<CR>
 nnoremap <Leader>jf      :YcmCompleter GoToDefinition<CR>
 nnoremap <Leader>ji      :YcmCompleter GoToImprecise<CR>
 nnoremap <Leader>jj      :YcmCompleter GoTo<CR>
+nnoremap <Leader>lc      `.
 nnoremap <Leader>lg      :Glog<CR>
 nnoremap <Leader>ll      :Limelight!!<CR>
 nnoremap <Leader>so      :so %<CR>
