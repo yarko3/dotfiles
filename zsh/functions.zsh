@@ -35,5 +35,15 @@ pathDeduplicate() {
         )";
 }
 
+function logview {
+    if (( $# == 3 )); then
+        ls -rt $1/$2.log* | tail -$3 | head -1
+    elif (( $# == 2 )); then
+        less -n -S $(ls -rt $1/$2.log* | tail -1)
+    else
+        less -n -S $(ls -rt ${LOCAL_LOG_DIR}/$1.log* | tail -1)
+    fi
+}
+
 # load local functions
 [ -f ~/.zshrc_local/zshrc_local_functions.sh ] && source ~/.zshrc_local/zshrc_local_functions.sh
