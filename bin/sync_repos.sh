@@ -32,8 +32,10 @@ update() {
     fi
 }
 
+echo "Updating repos"
+
 update ~/.dotfiles
 update ~/.dotfiles_local
 
 wait
-echo "Finished updating"
+echo "Finished updating repos"
