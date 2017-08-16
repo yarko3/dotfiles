@@ -32,7 +32,6 @@ update() {
     fi
 }
 
-
 update ~/.dotfiles
 update ~/.dotfiles_local
 
