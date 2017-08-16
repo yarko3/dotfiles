@@ -14,19 +14,19 @@ update() {
         echo "Synchronizing $1"
         cd "$1" || exit 1
         if ! check_uncommitted "$1"; then
-            git pull > /dev/null
+            git pull
 
-            git submodule update --remote --init > /dev/null
+            git submodule update --remote --init
             if ! check_uncommitted "$1"; then
-                git add -u > /dev/null
-                git commit -m "updating submodules" > /dev/null
+                git add -u
+                git commit -m "updating submodules"
             fi
 
-            git push > /dev/null
+            git push
         fi
     }
     if [ -d "$1" ]; then
-        f "$1" &
+        f "$1"
     else
         echo "Skipping $1 - Not deployed on this machine."
     fi
