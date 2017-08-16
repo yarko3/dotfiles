@@ -7,4 +7,4 @@ vim +PlugUpdate +PlugUpgrade +qall
 update_env.sh
 
 # sync personal repos
-sync_repos.sh &
+sync_repos.sh
