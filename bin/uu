@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-# vim
-vim +PlugUpdate +PlugUpgrade +qall
+# sync personal repos
+sync_repos.sh
 
 # environment-specific update/upgrade
 update_env.sh
 
-# sync personal repos
-sync_repos.sh
+# vim
+vim +PlugUpdate +PlugUpgrade +qall
