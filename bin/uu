@@ -3,7 +3,7 @@
 # vim
 vim +PlugUpdate +PlugUpgrade +qall
 
-# environment-specific update/upgrade alias
+# environment-specific update/upgrade
 update_env.sh
 
 # sync personal repos
