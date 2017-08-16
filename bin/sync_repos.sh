@@ -4,8 +4,9 @@ check_uncommitted() {
     diff=$(git diff-index HEAD)
     if [ -n "$diff" ]; then
         echo "WARNING: $1 has uncommitted files."
-        return 1
+        return 0
     fi
+    return 1
 }
 
 update() {
