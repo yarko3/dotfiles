@@ -1,10 +1,8 @@
 if [ $(uname) = "Darwin" ]; then
     # if no gls, brew intall coreutils
     alias ls='gls --color=auto'
-    alias uu='brew update && brew upgrade'
 else
     alias ls='ls --color=auto'
-    alias uu='sudo apt-get update && sudo apt-get upgrade'
 fi
 
 alias cdr='cd $(git rev-parse --show-toplevel)'

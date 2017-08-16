@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# vim
+vim +PlugUpdate +PlugUpgrade +qall
+
+# environment-specific update/upgrade alias
+update_env.sh
+
+# sync personal repos
+sync_repos.sh &
