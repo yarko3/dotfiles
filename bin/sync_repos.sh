@@ -9,19 +9,21 @@ has_uncommitted_changes() {
     return 1
 }
 
+check_submodules_and_commit_on_update() {
+    git submodule update --remote --init
+    if has_uncommitted_changes "$1"; then
+        git add -u
+        git commit -m "updating submodules"
+    fi
+}
+
 update() {
     f() {
         echo "Synchronizing $1"
         cd "$1" || exit 1
         if ! has_uncommitted_changes "$1"; then
             git pull
-
-            git submodule update --remote --init
-            if has_uncommitted_changes "$1"; then
-                git add -u
-                git commit -m "updating submodules"
-            fi
-
+            check_submodules_and_commit_on_update "$1"
             git push
         fi
     }
