@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-check_uncommitted() {
+has_uncommitted_changes() {
     diff=$(git diff-index HEAD)
     if [ -n "$diff" ]; then
         echo "WARNING: $1 has uncommitted files."
@@ -13,11 +13,11 @@ update() {
     f() {
         echo "Synchronizing $1"
         cd "$1" || exit 1
-        if ! check_uncommitted "$1"; then
+        if ! has_uncommitted_changes "$1"; then
             git pull
 
             git submodule update --remote --init
-            if ! check_uncommitted "$1"; then
+            if has_uncommitted_changes "$1"; then
                 git add -u
                 git commit -m "updating submodules"
             fi
