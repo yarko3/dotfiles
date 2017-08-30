@@ -53,7 +53,6 @@ nnoremap <F4> :w<CR>:call Cdroot()<CR>:call VimuxRunCommand("clear; make -j")<CR
 " rerun last command (that weird whitespace is important for zsh/bash to expand)
 nnoremap <F5> :w<CR>:call VimuxRunCommand("!! \t")<CR>
 nnoremap <F6> :w<CR>:VimuxInterruptRunner<CR>
-nnoremap <F7> :w<CR>:VimuxPromptCommand<CR>
 
 " resize splits easily
 nnoremap <silent> <Tab>h :<C-U>ObviousResizeLeft<CR>
@@ -80,6 +79,7 @@ let mapleader = "\<Space>"
 
 nnoremap <Leader><Space> :CtrlPBuffer<CR>
 nnoremap <Leader>bl      :Gblame!<CR>
+nnoremap <Leader>cmd     :w<CR>:VimuxPromptCommand<CR>
 nnoremap <Leader>cmt     :call CmtSection("")<Left><Left>
 nnoremap <Leader>cx      :!chmod a+x %<CR>
 nnoremap <Leader>df      :Gdiff<CR>
