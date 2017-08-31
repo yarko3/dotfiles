@@ -209,3 +209,7 @@ let g:undotree_SetFocusWhenToggle = 1
 
 " maximizer
 let g:maximizer_set_default_mapping = 0
+
+" vimux
+let g:VimuxOrientation = "h"
+let g:VimuxHeight = "40"
