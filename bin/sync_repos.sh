@@ -3,7 +3,6 @@
 has_uncommitted_changes() {
     diff=$(git diff-index HEAD)
     if [ -n "$diff" ]; then
-        echo "WARNING: $1 has uncommitted files."
         return 0
     fi
     return 1
