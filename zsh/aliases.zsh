@@ -1,5 +1,5 @@
 if [ "$(uname)" = "Darwin" ]; then
-    # if no gls, brew intall coreutils
+    # if no gls, brew install coreutils
     alias ls='gls --color=auto'
 else
     alias ls='ls --color=auto'
