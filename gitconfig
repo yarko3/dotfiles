@@ -5,6 +5,7 @@
     bra = branch --all
     ca = commit --amend --no-edit
     ci = commit
+    cim = commit -m
     co = checkout
     cob = checkout -b
     cp = cherry-pick
