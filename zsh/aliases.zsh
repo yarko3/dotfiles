@@ -1,4 +1,4 @@
-if [ $(uname) = "Darwin" ]; then
+if [ "$(uname)" = "Darwin" ]; then
     # if no gls, brew intall coreutils
     alias ls='gls --color=auto'
 else

@@ -1,5 +1,9 @@
 export GTEST_COLOR=yes
 
+# Command auto-correction.
+export ENABLE_CORRECTION="true"
+
+
 export LIBRARY_PATH="/opt/X11/lib:$LIBRARY_PATH"
 
 # You may need to manually set your language environment
@@ -22,7 +26,7 @@ if [ "$TERM" != "screen-256color" ]; then
     export TERM=xterm-256color
 fi
 
-if [ $(uname) = "Darwin" ]; then
+if [ "$(uname)" = "Darwin" ]; then
     export MACOS="true"
     export EDITOR=vim
 fi

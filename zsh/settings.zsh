@@ -4,21 +4,6 @@
 # Vim mode
 bindkey -v
 
-# Command auto-correction.
-ENABLE_CORRECTION="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Visual modes added in zsh 5.0.8
-visualModes=()
-is-at-least 5.0.8 2>/dev/null
-if [ $? -eq 0 ]; then
-    visualModes=("visual")
-fi
-
 bindkey -M "vicmd" 'k' history-substring-search-up
 bindkey -M "vicmd" 'j' history-substring-search-down
 
@@ -50,10 +35,10 @@ git_prompt_info_mine() {
         echo ""
     fi
 }
-PROMPT='%{$fg[green]%}%n@%m %{$fg[cyan]%}%c%{$fg[yellow]%}$(git_prompt_info_mine)%{$reset_color%} $ '
+export PROMPT='%{$fg[green]%}%n@%m %{$fg[cyan]%}%c%{$fg[yellow]%}$(git_prompt_info_mine)%{$reset_color%} $ '
 
-ZSH_THEME_GIT_PROMPT_PREFIX=""
-ZSH_THEME_GIT_PROMPT_SUFFIX=""
+export ZSH_THEME_GIT_PROMPT_PREFIX=""
+export ZSH_THEME_GIT_PROMPT_SUFFIX=""
 
 #  ============================================================================
 #                               FZF Config
