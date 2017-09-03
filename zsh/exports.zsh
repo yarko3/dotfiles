@@ -3,7 +3,6 @@ export GTEST_COLOR=yes
 # Command auto-correction.
 export ENABLE_CORRECTION="true"
 
-
 export LIBRARY_PATH="/opt/X11/lib:$LIBRARY_PATH"
 
 # You may need to manually set your language environment
