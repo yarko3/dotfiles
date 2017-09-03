@@ -193,6 +193,7 @@ let g:ale_java_checkstyle_options='-c ~/.vim/config/checkstyle_custom_checks.xml
 let g:ale_linters={
 \   'cpp': ['cppcheck'],
 \   'java': ['checkstyle'],
+\   'zsh': ['shellcheck'],
 \}
 
 " vim-highlightedyank
