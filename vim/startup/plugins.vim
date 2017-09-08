@@ -2,6 +2,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'JamshedVesuna/vim-markdown-preview'                  " preview markdown locally
 Plug 'Valloric/ListToggle'                                 " Toggling quickfix and location list
+Plug 'Valloric/MatchTagAlways'                             " always highlight matching tags
 Plug 'Yggdroot/indentLine'                                 " show indent
 Plug 'airblade/vim-gitgutter'                              " git changes in gutter
 Plug 'benmills/vimux'                                      " Vim and Tmux Integration
