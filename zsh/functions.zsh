@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 # git commit browser
 function glg() {
   git log --graph --oneline --branches --decorate --color=always \

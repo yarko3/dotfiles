@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 export GTEST_COLOR=yes
 
 # Command auto-correction.

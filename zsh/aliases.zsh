@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 if [ "$(uname)" = "Darwin" ]; then
     # if no gls, brew install coreutils
     alias ls='gls --color=auto'
