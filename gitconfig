@@ -11,6 +11,7 @@
     cp = cherry-pick
     df = diff
     dfc = "!git log --left-right --graph --cherry-mark --oneline HEAD...$1"
+    dfo = "!git shortlog --no-merges HEAD...$1"
     dfs = diff --staged
     dom = diff origin/master -w
     dum = diff upstream/master -w
