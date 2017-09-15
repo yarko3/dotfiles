@@ -19,7 +19,7 @@ Plug 'junegunn/vim-easy-align'                             " align things
 Plug 'junegunn/vim-peekaboo'                               " show content of registers
 Plug 'luochen1990/rainbow'                                 " Rainbow parenthesis coloring
 Plug 'machakann/vim-highlightedyank'                       " highlight on yank
-Plug 'majutsushi/tagbar'                                   " view tags awesomely
+Plug 'majutsushi/tagbar'                                   " view ctags awesomely
 Plug 'mbbill/undotree'                                     " history visualizer
 Plug 'mhinz/vim-grepper'                                   " Asynchronous Grep -> QuickFix List
 Plug 'mhinz/vim-startify'                                  " dope start screen
