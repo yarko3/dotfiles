@@ -10,6 +10,10 @@ function! SortSection()
     call setline(startLine, sort(getline(startLine, curLine)))
 endfunction
 
+function! FormatInPlaceJSON()
+    exec "%!python -m json.tool"
+endfunction
+
 function! StripTabsAndTrailingWhitespaces()
   exec "normal ms"
   let _s=@/
