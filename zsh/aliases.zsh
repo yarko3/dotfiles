@@ -18,7 +18,7 @@ alias gmr='gmake clean -j && gmake -j'
 alias gmt='gmake test -j'
 alias grep='grep --color=auto'
 alias less='less -N'
-alias ll='ls -lrta'
+alias ll='ls -lrtah'
 alias lower="tr '[:upper:]' '[:lower:]'"
 alias m='make -j'
 alias mt='make -j test'
