@@ -3,10 +3,10 @@
 SCRIPTS_DIR=~/.dotfiles/scripts
 
 # sync personal repos
-sync_repos.sh
+$SCRIPTS_DIR/sync_repos.sh
 
 # environment-specific update/upgrade
-update_env.sh
+$SCRIPTS_DIR/update_env.sh
 
 # vim
 vim +PlugUpdate +PlugUpgrade +qall
