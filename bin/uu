@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+SCRIPTS_DIR=~/.dotfiles/scripts
+
 # sync personal repos
 sync_repos.sh
 
@@ -8,3 +10,6 @@ update_env.sh
 
 # vim
 vim +PlugUpdate +PlugUpgrade +qall
+
+# tmux
+$SCRIPTS_DIR/install_tmux_plugins.sh
