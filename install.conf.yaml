@@ -41,15 +41,11 @@
     stdin: true
     stdout: true
     stderr: true
-  - command: vim +PlugUpdate +PlugUpgrade +qall
+  - command: scripts/ycm_regular_install.sh
     stdin: true
     stdout: true
     stderr: true
-  - command: scripts/ycm_regular_install.sh &
-    stdin: true
-    stdout: true
-    stderr: true
-  - command: scripts/install_tmux_plugins.sh
+  - command: bin/uu
     stdin: true
     stdout: true
     stderr: true
