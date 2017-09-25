@@ -37,9 +37,6 @@ set autoindent
 set copyindent
 set cindent
 
-" use system clipboard by default
-set clipboard=unnamed
-
 " make backspace traverse between lines
 set backspace=indent,eol,start
 
