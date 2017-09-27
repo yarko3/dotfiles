@@ -41,11 +41,11 @@
     stdin: true
     stdout: true
     stderr: true
-  - command: scripts/ycm_regular_install.sh
+  - command: bin/uu
     stdin: true
     stdout: true
     stderr: true
-  - command: bin/uu
+  - command: scripts/ycm_regular_install.sh
     stdin: true
     stdout: true
     stderr: true
