@@ -1,20 +1,15 @@
 [submodule "dotbot"]
     path = dotbot
     url = https://github.com/anishathalye/dotbot
-    branch = master
 [submodule "tmux/plugins/tpm"]
     path = tmux/plugins/tpm
     url = https://github.com/tmux-plugins/tpm
-    branch = master
 [submodule "zgen"]
     path = zgen
     url = https://github.com/tarjoilija/zgen.git
-    branch = master
 [submodule "fonts"]
     path = fonts
     url = https://github.com/powerline/fonts.git
-    branch = master
 [submodule "fzf"]
     path = fzf
     url = https://github.com/junegunn/fzf.git
-    branch = master
