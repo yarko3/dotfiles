@@ -46,11 +46,6 @@ vnoremap Q :normal @q<CR>
 " qq to record, Q to replay
 nnoremap Q @q
 
-" Compilation and testing
-nnoremap <F2> :w<CR>:call Cdroot()<CR>:call VimuxRunCommand("clear; make clean -j")<CR>
-nnoremap <F3> :w<CR>:call Cdroot()<CR>:call VimuxRunCommand("clear; make test -j")<CR>
-nnoremap <F4> :w<CR>:call Cdroot()<CR>:call VimuxRunCommand("clear; make -j")<CR>
-
 " resize splits easily
 nnoremap <silent> <Tab>h :<C-U>ObviousResizeLeft<CR>
 nnoremap <silent> <Tab>j :<C-U>ObviousResizeDown<CR>
@@ -76,6 +71,7 @@ let mapleader = "\<Space>"
 
 nnoremap <Leader><Space> :CtrlPBuffer<CR>
 nnoremap <Leader>bl      :Gblame!<CR>
+nnoremap <Leader>clean   :w<CR>:call Cdroot()<CR>:call VimuxRunCommand("clear; make clean -j")<CR>
 nnoremap <Leader>cmd     :w<CR>:VimuxPromptCommand<CR>
 nnoremap <Leader>cmt     :call CmtSection("")<Left><Left>
 nnoremap <Leader>cx      :!chmod a+x %<CR>
@@ -100,13 +96,14 @@ nnoremap <Leader>jj      :YcmCompleter GoTo<CR>
 nnoremap <Leader>lc      `.
 nnoremap <Leader>lg      :Glog<CR>
 nnoremap <Leader>ll      :Limelight!!<CR>
-nnoremap <Leader>m       :CtrlPMRU<CR>
-nnoremap <Leader>rpt     :w<CR>:call VimuxRunCommand("!! \t")<CR>
+nnoremap <Leader>m       :w<CR>:call Cdroot()<CR>:call VimuxRunCommand("clear; make -j")<CR>
+nnoremap <Leader>r       :call VimuxRunCommand("!! \t")<CR>
 nnoremap <Leader>so      :so %<CR>
 nnoremap <Leader>sp      :setlocal spell! spelllang=en_us<CR>
 nnoremap <Leader>ss      :call SortSection()<CR>
 nnoremap <Leader>st      :ALEToggle<CR>
 nnoremap <Leader>sw      :call WindowSwap#EasyWindowSwap()<CR>
+nnoremap <Leader>test    :w<CR>:call Cdroot()<CR>:call VimuxRunCommand("clear; make test -j")<CR>
 nnoremap <Leader>tt      :TagbarToggle<CR>
 nnoremap <Leader>ut      :UndotreeToggle<CR>
 nnoremap <Leader>uu      :PlugUpgrade<CR>:PlugUpdate<CR>
@@ -114,6 +111,7 @@ nnoremap <Leader>ve      :vsp<CR>:e %:h<CR>
 nnoremap <Leader>w       :call StripTabsAndTrailingWhitespaces()<CR>:w<CR>
 nnoremap <Leader>xe      :sp<CR>:e %:h<CR>
 nnoremap <Leader>z       :MaximizerToggle<CR>
+
 
 " =============================================================================
 "                          <Plug> Leader Mappings
