@@ -50,9 +50,6 @@ nnoremap Q @q
 nnoremap <F2> :w<CR>:call Cdroot()<CR>:call VimuxRunCommand("clear; make clean -j")<CR>
 nnoremap <F3> :w<CR>:call Cdroot()<CR>:call VimuxRunCommand("clear; make test -j")<CR>
 nnoremap <F4> :w<CR>:call Cdroot()<CR>:call VimuxRunCommand("clear; make -j")<CR>
-" rerun last command (that weird whitespace is important for zsh/bash to expand)
-nnoremap <F5> :w<CR>:call VimuxRunCommand("!! \t")<CR>
-nnoremap <F6> :w<CR>:VimuxInterruptRunner<CR>
 
 " resize splits easily
 nnoremap <silent> <Tab>h :<C-U>ObviousResizeLeft<CR>
@@ -104,6 +101,7 @@ nnoremap <Leader>lc      `.
 nnoremap <Leader>lg      :Glog<CR>
 nnoremap <Leader>ll      :Limelight!!<CR>
 nnoremap <Leader>m       :CtrlPMRU<CR>
+nnoremap <Leader>rpt     :w<CR>:call VimuxRunCommand("!! \t")<CR>
 nnoremap <Leader>so      :so %<CR>
 nnoremap <Leader>sp      :setlocal spell! spelllang=en_us<CR>
 nnoremap <Leader>ss      :call SortSection()<CR>
