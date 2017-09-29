@@ -144,8 +144,8 @@ set list!
 set splitright
 set splitbelow
 
-" Splits resize on open/close
-set equalalways
+" Splits (don't) resize on open/close
+set noequalalways
 
 " Incremental Search and Highlighting Results
 set incsearch
