@@ -20,6 +20,7 @@ brew install \
     gcc \
     git \
     gnome-common \
+    grip \
     htop \
     hub \
     llvm \
