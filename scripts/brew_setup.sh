@@ -7,6 +7,14 @@ fi
 brew update
 brew upgrade
 
+brew cask install \
+    docker \
+    iterm2 \
+    java \
+    spectacle \
+    vagrant \
+    virtualbox
+
 brew install \
     bash-completion \
     boost \
@@ -34,13 +42,5 @@ brew install \
     vim \
     watch \
     zsh
-
-brew cask install \
-    docker \
-    iterm2 \
-    java \
-    spectacle \
-    vagrant \
-    virtualbox
 
 brew cleanup
