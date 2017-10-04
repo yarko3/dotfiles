@@ -41,7 +41,7 @@
     stdin: true
     stdout: true
     stderr: true
-  - command: ./bin/uu
+  - command: ./bin/uu --no-sync
     stdin: true
     stdout: true
     stderr: true

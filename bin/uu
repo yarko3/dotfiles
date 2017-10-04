@@ -2,8 +2,10 @@
 
 SCRIPTS_DIR=~/.dotfiles/scripts
 
-# pull/push/update submodules of personal repos
-$SCRIPTS_DIR/sync_repos.sh
+if [ "$1" != "--no-sync" ]; then
+    # pull/push/update submodules of personal repos
+    $SCRIPTS_DIR/sync_repos.sh
+fi
 
 # environment-specific update/upgrade
 $SCRIPTS_DIR/update_env.sh
