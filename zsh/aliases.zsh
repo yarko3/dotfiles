@@ -28,11 +28,5 @@ alias topcpu='/bin/ps -eo pcpu,pid,user,args | sort -k 1 -r | head -10'
 alias upper="tr '[:lower:]' '[:upper:]'"
 alias wfc='curl "wttr.in/nyc?m"'
 
-hash hub > /dev/null 2>&1
-if [[ $? -eq 0 ]]; then
-    alias git='hub'
-    alias g='hub'
-fi
-
 [ -f ~/.zsh_local/zshrc_local_aliases.zsh ] && source ~/.zsh_local/zshrc_local_aliases.zsh
 
