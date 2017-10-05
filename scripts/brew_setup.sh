@@ -36,6 +36,7 @@ brew install \
     neovim \
     node \
     python \
+    python3 \
     shellcheck \
     tmux \
     tree \
