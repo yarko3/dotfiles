@@ -131,12 +131,7 @@ let g:ycm_autoclose_preview_window_after_insertion=1
 let g:ycm_always_populate_location_list=1
 let g:ycm_semantic_triggers={'haskell' : ['.']}
 
-if g:bbenv!="" && g:platform!="Darwin"
-    let g:ycm_seed_identifiers_with_syntax=1
-    let g:ycm_server_python_interpreter='/opt/bb/bin/python'
-else
-    let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/cpp/.ycm_extra_conf.py'
-endif
+let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/cpp/.ycm_extra_conf.py'
 
 " vim-expand-region
 vmap v <Plug>(expand_region_expand)
