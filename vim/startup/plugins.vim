@@ -88,7 +88,9 @@ let g:grepper={
     \ }
 
 " Netrw
-let g:netrw_sort_by='name'
+let g:netrw_liststyle='1'
+let g:netrw_timefmt='%d %b %Y %T %Z'
+let g:netrw_sizestyle='h'
 
 " ListToggle
 let g:lt_location_list_toggle_map='<leader>l'
