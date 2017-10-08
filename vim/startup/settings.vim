@@ -129,9 +129,11 @@ set ruler
 " no linewrap
 set nowrap
 
-" Show tab and trailing whitespace characters
+" trailing whitespace characters
 set listchars=tab:>-,trail:-
-set list!
+
+" enable display of whitespace
+set list
 
 " Make splitting more natural
 set splitright
@@ -182,3 +184,6 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
 " set commentstring to not be /* for cpp
 autocmd FileType cpp setlocal commentstring=//\ %s
+
+" don't show whitespace chars in netrw
+autocmd FileType netrw setlocal nolist
