@@ -129,7 +129,7 @@ set ruler
 " no linewrap
 set nowrap
 
-" trailing whitespace characters
+" whitespace characters
 set listchars=tab:>-,trail:-
 
 " enable display of whitespace
