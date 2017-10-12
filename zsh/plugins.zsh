@@ -1,5 +1,3 @@
-#!/usr/bin/env zsh
-
 # load zgen
 source "${HOME}/.dotfiles/zgen/zgen.zsh"
 
