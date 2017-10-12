@@ -17,6 +17,9 @@ bindkey -M "viins" kj vi-cmd-mode
 # Unmap ctrl-s as "stop flow"
 stty stop undef
 
+# don't autocorrect
+unsetopt correctall
+
 #  ============================================================================
 #                            Configure Plugins
 #  ============================================================================
