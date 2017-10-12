@@ -5,8 +5,8 @@ fi
 
 fpath+=(~/.zsh/completions $fpath)
 
-source ~/.zsh/functions.zsh
 source ~/.zsh/plugins.zsh
+source ~/.zsh/functions.zsh
 source ~/.zsh/settings.zsh
 source ~/.zsh/aliases.zsh
 source ~/.zsh/exports.zsh
