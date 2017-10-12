@@ -186,7 +186,6 @@ let g:UltiSnipsJumpForwardTrigger='<Tab>'
 let g:UltiSnipsJumpBackwardTrigger='<S-Tab>'
 
 " Ale
-let g:ale_lint_delay = 1000
 " turn off convention pylint messages and misc
 let g:ale_python_pylint_options='--disable=C --disable=W0311'
 let g:ale_java_checkstyle_options='-c ~/.vim/config/checkstyle_custom_checks.xml'
