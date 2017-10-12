@@ -44,7 +44,6 @@ export ZSH_THEME_GIT_PROMPT_PREFIX=""
 export ZSH_THEME_GIT_PROMPT_SUFFIX=""
 
 #  ============================================================================
-#                               FZF Config
+#                                   FZF
 #  ============================================================================
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
