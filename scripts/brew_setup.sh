@@ -18,6 +18,7 @@ brew install \
     gnome-common \
     grip \
     llvm \
-    neovim
+    neovim \
+    vim
 
 brew cleanup
