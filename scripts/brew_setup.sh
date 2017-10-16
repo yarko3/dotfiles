@@ -1,47 +1,24 @@
 #!/bin/sh
 
-if ! which -s brew 2>&1 ; then
-    echo "brew not installed"
+if ! which brew 2>&1 ; then
+    echo "brew not installed; installing..."
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
 brew update
 brew upgrade
 
 brew cask install \
-    docker \
     iterm2 \
-    java \
-    spectacle \
-    vagrant \
-    virtualbox
+    spectacle
 
 brew install \
-    bash-completion \
-    boost \
-    checkstyle \
     clang-format \
-    cmake \
-    coreutils \
-    cppcheck \
-    ctags \
-    doxygen \
     gcc \
-    git \
     gnome-common \
     grip \
-    htop \
-    hub \
     llvm \
-    maven \
     neovim \
-    node \
-    python \
-    python3 \
-    shellcheck \
-    tmux \
-    tree \
-    vim \
-    watch \
-    zsh
+    vim
 
 brew cleanup
