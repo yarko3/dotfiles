@@ -24,7 +24,6 @@
         tmux
         tree
         unzip
-        vimNox
         watch
         wget
         zsh
