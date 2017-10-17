@@ -4,7 +4,7 @@ update_nix() {
     if ! which nix-env 2>&1 ; then
         [[ -f ~/.nix-profile/etc/profile.d/nix.sh ]] && . ~/.nix-profile/etc/profile.d/nix.sh
     fi
-    nix-env -u
+    nix-env -j 4 -u
 }
 
 update_native() {
