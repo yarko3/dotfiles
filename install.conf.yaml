@@ -30,6 +30,7 @@
         path: bashrc
     ~/.fzf: fzf/
     ~/.jshintrc: jshintrc
+    ~/.nixpkgs: nixpkgs/
 
 - shell:
   - [git submodule update --init --recursive, Updating submodules]
