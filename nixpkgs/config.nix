@@ -24,6 +24,7 @@
         tmux
         tree
         unzip
+        vim_configurable
         watch
         wget
         zsh
