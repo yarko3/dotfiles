@@ -57,4 +57,4 @@ change_to_zsh
 create_ssh
 fzf_install
 fonts_install
-nix_install "$1" # pass --big to install full env
+nix_install "$1" # pass flag to install full env
