@@ -10,6 +10,7 @@
       paths = [
         bash-completion
         bashInteractive
+        cmake
         coreutils
         ctags
         curl
@@ -38,7 +39,6 @@
         boost
         checkstyle
         # chromium
-        cmake
         docker
         doxygen
         gnumake
