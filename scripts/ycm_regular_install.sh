@@ -3,7 +3,7 @@
 # build-essential cmake python-dev
 cmd='./install.py --clang-complete || echo "YCM Build failed. Are its dependencies installed?"'
 
-cd ~/.vim/plugged/YouCompleteMe
+cd ~/.vim/plugged/YouCompleteMe || exit
 if [ -f third_party/ycmd/ycm_core.so ]; then
     if [ "$1" == "-f" ]; then
         eval "$cmd"
