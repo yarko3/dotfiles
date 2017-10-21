@@ -10,6 +10,7 @@
       paths = [
         bash-completion
         bashInteractive
+        cmake
         coreutils
         ctags
         curl
