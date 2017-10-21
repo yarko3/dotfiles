@@ -16,8 +16,11 @@
     ~/.vimrc: vimrc
     ~/.config/nvim:
         force: true
+        create: true
         path: vim/
-    ~/.config/nvim/init.vim: vimrc
+    ~/.config/nvim/init.vim:
+        create: true
+        path: vimrc
     ~/.vimrc_minimal: vimrc_minimal
     ~/.ycm_extra_conf.py: ycm_extra_conf.py
     ~/bin: bin/
