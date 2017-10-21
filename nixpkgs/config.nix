@@ -10,11 +10,11 @@
       paths = [
         bash-completion
         bashInteractive
-        cmake
         coreutils
         ctags
         curl
         file
+        gcc
         git
         global
         gnused
