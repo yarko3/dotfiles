@@ -4,56 +4,50 @@
   useSandbox = true;
 
   packageOverrides = pkgs: with pkgs; {
-    # Minimal set of packages to install everywhere
-    minEnv = hiPrio (buildEnv {
-      name = "minEnv";
+    # dev packages to install everywhere
+    devEnv = hiPrio (buildEnv {
+      name = "devEnv";
       paths = [
+        # chromium
+        # virtualbox
         bash-completion
         bashInteractive
+        boost
+        checkstyle
         cmake
         coreutils
         ctags
         curl
+        docker
+        doxygen
         file
         gcc
         git
         global
+        gnumake
+        gnupg
         gnused
         gnutar
+        gnutls
+        graphviz
         htop
+        imagemagick
+        jdk
+        maven
         nox
         shellcheck
         tmux
         tree
         unzip
+        vagrant
+        vimPlugins.youcompleteme
         vim_configurable
         watch
         wget
-        zsh
-      ];
-    });
-
-    # For "permanent" systems; compatible on both Mac and Linux
-    bigEnv = hiPrio (buildEnv {
-      name = "bigEnv";
-      paths = [
-        boost
-        checkstyle
-        # chromium
-        docker
-        doxygen
-        gnumake
-        gnupg
-        gnutls
-        graphviz
-        imagemagick
-        jdk
-        maven
-        vagrant
-        # virtualbox
         xclip
         xsel
         zlib
+        zsh
       ];
     });
 

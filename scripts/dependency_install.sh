@@ -45,12 +45,7 @@ nix_install() {
     [[ -f ~/.nix-profile/etc/profile.d/nix.sh ]] && . ~/.nix-profile/etc/profile.d/nix.sh
 
     CHANNEL="nixpkgs"
-    nix-env -j 4 -iA "$CHANNEL.minEnv" "$CHANNEL.pyEnv"
-
-    if [ "$1" == "--big" ]; then
-        nix-env -j 4 -iA "$CHANNEL.bigEnv"
-    fi
-
+    nix-env -j 4 -iA "$CHANNEL.devEnv" "$CHANNEL.pyEnv"
 }
 
 change_to_zsh

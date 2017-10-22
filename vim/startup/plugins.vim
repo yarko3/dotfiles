@@ -47,9 +47,8 @@ Plug 'w0rp/ale'                                            " Syntax checking
 Plug 'wesQ3/vim-windowswap'                                " swap splits
 Plug 'yssl/QFEnter'                                        " quickfix open in different places
 
-if g:platform == "Linux" || g:platform == "Darwin"
-    Plug 'Valloric/YouCompleteMe'
-endif
+" Include plugins installed with nixpkgs
+set rtp+=~/.nix-profile/share/vim-plugins/youcompleteme
 
 call plug#end()
 
