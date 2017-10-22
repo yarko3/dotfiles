@@ -45,7 +45,3 @@
     stdin: true
     stdout: true
     stderr: true
-  - command: ./scripts/ycm_regular_install.sh
-    stdin: true
-    stdout: true
-    stderr: true

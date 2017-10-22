@@ -1,5 +1,7 @@
 #! /usr/bin/env bash
 
+DOTFILES_DIR="$HOME/.dotfiles"
+
 change_to_zsh() {
     if [ "$(echo "$SHELL" | grep -c "zsh")" -eq "0" ]; then
         echo "Setting shell to zsh"
@@ -17,7 +19,7 @@ create_ssh() {
 fzf_install() {
     if ! [ -f ~/.fzf.zsh ]; then
         echo "Installing fzf"
-        ./fzf/install --key-bindings --completion --no-update-rc
+        "$DOTFILES_DIR"/fzf/install --key-bindings --completion --no-update-rc
     else
         echo "fzf already installed"
     fi
@@ -25,7 +27,7 @@ fzf_install() {
 
 fonts_install() {
     if ! [ -d ~/.local/share/fonts ]; then
-        ./fonts/install.sh
+        "$DOTFILES_DIR"/fonts/install.sh
     else
         echo "fonts already installed"
     fi
@@ -34,9 +36,9 @@ fonts_install() {
 local_install() {
     echo "Installing local packages..."
     if [ "$(uname)" = "Darwin" ]; then
-        ./brew_setup.sh
+        "$DOTFILES_DIR"/scripts/brew_setup.sh
     else
-        ./apt_setup.sh
+        "$DOTFILES_DIR"/scripts/apt_setup.sh
     fi
     echo "Finished installing local packages"
 }
@@ -58,9 +60,9 @@ nix_install() {
     nix-env -j 4 -iA "$CHANNEL.devEnv" "$CHANNEL.pyEnv"
 }
 
-change_to_zsh
 create_ssh
 fzf_install
 fonts_install
 local_install
 nix_install
+change_to_zsh
