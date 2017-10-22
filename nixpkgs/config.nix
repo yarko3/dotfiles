@@ -17,7 +17,6 @@
         cmake
         coreutils
         ctags
-        curl
         docker
         doxygen
         file
@@ -47,7 +46,6 @@
         xclip
         xsel
         zlib
-        zsh
       ];
     });
 

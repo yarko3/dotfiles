@@ -14,10 +14,12 @@ brew cask install \
 
 brew install \
     clang-format \
+    curl \
     gcc \
     gnome-common \
     grip \
     llvm \
-    neovim
+    neovim \
+    zsh
 
 brew cleanup

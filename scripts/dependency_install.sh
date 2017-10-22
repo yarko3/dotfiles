@@ -31,6 +31,16 @@ fonts_install() {
     fi
 }
 
+local_install() {
+    echo "Installing local packages..."
+    if [ "$(uname)" = "Darwin" ]; then
+        ./brew_setup.sh
+    else
+        ./apt_setup.sh
+    fi
+    echo "Finished installing local packages"
+}
+
 nix_install() {
     if ! [ -d /nix ]; then
         echo "NixPkg not installed on this machine."
@@ -52,4 +62,5 @@ change_to_zsh
 create_ssh
 fzf_install
 fonts_install
+local_install
 nix_install
