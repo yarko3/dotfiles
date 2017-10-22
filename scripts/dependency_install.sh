@@ -60,9 +60,14 @@ nix_install() {
     nix-env -j 4 -iA "$CHANNEL.devEnv" "$CHANNEL.pyEnv"
 }
 
+post_install_init() {
+    "$DOTFILES_DIR"/bin/uu --no-sync
+}
+
 create_ssh
 fzf_install
 fonts_install
 local_install
 nix_install
 change_to_zsh
+post_install_init

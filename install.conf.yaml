@@ -41,7 +41,3 @@
     stdin: true
     stdout: true
     stderr: true
-  - command: bash --rcfile bashrc ./bin/uu --no-sync
-    stdin: true
-    stdout: true
-    stderr: true
