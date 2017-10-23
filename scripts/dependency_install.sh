@@ -44,6 +44,7 @@ local_install() {
 }
 
 nix_install() {
+    echo "Installing nix packages..."
     if ! [ -d /nix ]; then
         echo "NixPkg not installed on this machine."
         if groups | grep -q sudo; then
@@ -58,16 +59,22 @@ nix_install() {
 
     CHANNEL="nixpkgs"
     nix-env -j 4 -iA "$CHANNEL.devEnv" "$CHANNEL.pyEnv"
+    echo "Finished installing nix packages"
 }
 
-post_install_init() {
+install() {
+    fzf_install
+    fonts_install
+    local_install
+    nix_install
+}
+
+post_install() {
+    change_to_zsh
+    # requires all of our dependencies to be in the $PATH already
     "$DOTFILES_DIR"/bin/uu --no-sync
 }
 
 create_ssh
-fzf_install
-fonts_install
-local_install
-nix_install
-change_to_zsh
-post_install_init
+install
+post_install
