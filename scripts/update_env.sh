@@ -3,7 +3,7 @@
 update_nix() {
     update_nix_cmd() {
         nix-channel --update
-        nix-env -j 4 -u
+        nix-env -j4 -u
     }
 
     echo "Updating nix..."

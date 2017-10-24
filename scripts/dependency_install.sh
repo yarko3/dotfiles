@@ -58,7 +58,7 @@ nix_install() {
     [[ -f ~/.nix-profile/etc/profile.d/nix.sh ]] && . ~/.nix-profile/etc/profile.d/nix.sh
 
     CHANNEL="nixpkgs"
-    nix-env -j 4 -iA "$CHANNEL.devEnv" "$CHANNEL.pyEnv"
+    nix-env -j4 -iA "$CHANNEL.devEnv" "$CHANNEL.pyEnv"
     echo "Finished installing nix packages"
 }
 
