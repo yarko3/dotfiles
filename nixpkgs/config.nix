@@ -39,7 +39,6 @@
         tree
         unzip
         vagrant
-        vimPlugins.youcompleteme
         vim_configurable
         watch
         wget
