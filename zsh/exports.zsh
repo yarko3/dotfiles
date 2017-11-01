@@ -34,7 +34,7 @@ fi
 export KEYTIMEOUT=20
 
 PATH=~/bin:$PATH
-PATH=~/.nix-profile/bin:~/bin_local:$PATH
+PATH=~/bin_local:$PATH
 PATH=$PATH:~/.local/bin
 
 PATH=$PATH:/bin

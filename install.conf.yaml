@@ -33,11 +33,14 @@
         path: bashrc
     ~/.fzf: fzf/
     ~/.jshintrc: jshintrc
-    ~/.nixpkgs: nixpkgs/
 
 - shell:
   - [git submodule update --init --recursive, Updating submodules]
   - command: ./scripts/dependency_install.sh
+    stdin: true
+    stdout: true
+    stderr: true
+  - command: ./bin/uu
     stdin: true
     stdout: true
     stderr: true

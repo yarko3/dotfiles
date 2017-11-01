@@ -10,4 +10,3 @@ git pull
 
 ### Caveats
 1. Default [push] option in the gitconfig is not supported by earlier versions of git.
-2. After initial run of ./install, the $PATH will not be populated with nixpkgs; start a new shell.

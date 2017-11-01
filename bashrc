@@ -8,9 +8,6 @@ if [ -f ~/.bashrc_local/bashrc_local_before.sh ]; then
     source ~/.bashrc_local/bashrc_local_before.sh
 fi
 
-[ -f "$HOME"/.nix-profile/etc/profile.d/nix.sh ] && \
-    . "$HOME"/.nix-profile/etc/profile.d/nix.sh
-
 source ~/.bash/functions.sh
 source ~/.bash/settings.sh
 source ~/.bash/aliases.sh
