@@ -1,7 +1,4 @@
-if [ "$(uname)" = "Darwin" ]; then
-    # if no gls, brew install coreutils
-    alias ls='gls --color=auto'
-else
+if [ "$(uname)" = "Linux" ]; then
     alias ls='ls --color=auto'
 fi
 
@@ -23,4 +20,3 @@ alias upper="tr '[:lower:]' '[:upper:]'"
 alias wfc='curl "wttr.in/nyc?m"'
 
 [ -f ~/.zsh_local/zshrc_local_aliases.zsh ] && source ~/.zsh_local/zshrc_local_aliases.zsh
-

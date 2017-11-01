@@ -35,10 +35,10 @@ fonts_install() {
 
 local_install() {
     echo "Installing local packages..."
-    if [ "$(uname)" = "Darwin" ]; then
-        "$DOTFILES_DIR"/scripts/brew_setup.sh
-    else
+    if [ "$(uname)" = "Linux" ]; then
         "$DOTFILES_DIR"/scripts/apt_setup.sh
+    else
+        echo "No local packages to install..."
     fi
     echo "Finished installing local packages"
 }
