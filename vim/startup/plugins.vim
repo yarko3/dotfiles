@@ -4,7 +4,6 @@ Plug 'JamshedVesuna/vim-markdown-preview'                  " preview markdown lo
 Plug 'Valloric/ListToggle'                                 " Toggling quickfix and location list
 Plug 'Valloric/MatchTagAlways'                             " always highlight matching tags
 Plug 'Yggdroot/indentLine'                                 " show indent
-Plug 'airblade/vim-gitgutter'                              " git changes in gutter
 Plug 'benmills/vimux'                                      " Vim and Tmux Integration
 Plug 'bling/vim-airline'                                   " Status line
 Plug 'christoomey/vim-tmux-navigator'                      " Window/Pane switching with Vim and Tmux
@@ -22,6 +21,7 @@ Plug 'machakann/vim-highlightedyank'                       " highlight on yank
 Plug 'majutsushi/tagbar'                                   " view ctags awesomely
 Plug 'mbbill/undotree'                                     " history visualizer
 Plug 'mhinz/vim-grepper'                                   " Asynchronous Grep -> QuickFix List
+Plug 'mhinz/vim-signify'                                   " changes in gutter
 Plug 'mhinz/vim-startify'                                  " dope start screen
 Plug 'michaeljsmith/vim-indent-object'                     " indentation-level text objects (ai/I, ii/I)
 Plug 'octol/vim-cpp-enhanced-highlight', { 'for': 'cpp' }  " enhanced C++11/14/17 highlighting
