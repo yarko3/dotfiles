@@ -11,11 +11,11 @@ set encoding=utf-8
 "                                   GVim
 " =============================================================================
 if has("gui_running")
-    set guioptions-=M    " Don't load Menu bar
-    colorscheme desert
+  set guioptions-=M    " Don't load Menu bar
+  colorscheme desert
 else
-    set t_Co=256
-    colorscheme Tomorrow-Night-Eighties
+  set t_Co=256
+  colorscheme Tomorrow-Night-Eighties
 endif
 
 "" ============================================================================
@@ -50,9 +50,9 @@ set directory=""
 set ru
 
 " Fixing tabs
-set tabstop=4
+set tabstop=2
 set expandtab
-set shiftwidth=4
+set shiftwidth=2
 " makes indenting a multiple of shiftwidth
 set shiftround
 " make backspace eat a tab worth of spaces
@@ -102,7 +102,7 @@ set spellfile=~/.vim/spell/extra-words.add
 
 " stores undo state even when files are closed (in undodir)
 if !isdirectory($HOME . '/.vim/backups')
-    call mkdir($HOME . '/.vim/backups', 'p')
+  call mkdir($HOME . '/.vim/backups', 'p')
 endif
 set undodir=~/.vim/backups
 set undofile
