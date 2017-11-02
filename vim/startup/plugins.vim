@@ -49,7 +49,7 @@ Plug 'wesQ3/vim-windowswap'                                " swap splits
 Plug 'yssl/QFEnter'                                        " quickfix open in different places
 
 if g:platform == "Linux" && !AtWork()
-    Plug 'Valloric/YouCompleteMe'
+  Plug 'Valloric/YouCompleteMe'
 endif
 
 call plug#end()
@@ -84,9 +84,9 @@ nmap gs :call Cdroot()<CR><plug>(GrepperOperator)
 xmap gs :call Cdroot()<CR><plug>(GrepperOperator)
 
 let g:grepper={
-    \ 'tools':     ['git'],
-    \ 'jump':      0,
-    \ }
+      \ 'tools':     ['git'],
+      \ 'jump':      0,
+      \ }
 
 " Netrw
 let g:netrw_liststyle='1'
@@ -100,27 +100,27 @@ let g:lt_quickfix_list_toggle_map='<leader>q'
 " Rainbow coloring
 let g:rainbow_active=1
 let g:rainbow_conf={
-\   'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
-\   'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta'],
-\   'operators': '_,_',
-\   'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
-\   'separately': {
-\       '*': {},
-\       'tex': {
-\           'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/'],
-\       },
-\       'lisp': {
-\           'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick', 'darkorchid3'],
-\       },
-\       'vim': {
-\           'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/ fold', 'start=/(/ end=/)/ containedin=vimFuncBody', 'start=/\[/ end=/\]/ containedin=vimFuncBody', 'start=/{/ end=/}/ fold containedin=vimFuncBody'],
-\       },
-\       'html': {
-\           'parentheses': ['start=/\v\<((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ >])@!\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'|[^ '."'".'"><=`]*))?)*\>/ end=#</\z1># fold'],
-\       },
-\       'css': 0,
-\   }
-\}
+      \  'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
+      \  'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta'],
+      \  'operators': '_,_',
+      \  'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
+      \  'separately': {
+      \     '*': {},
+      \     'tex': {
+      \         'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/'],
+      \     },
+      \     'lisp': {
+      \         'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick', 'darkorchid3'],
+      \     },
+      \     'vim': {
+      \         'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/ fold', 'start=/(/ end=/)/ containedin=vimFuncBody', 'start=/\[/ end=/\]/ containedin=vimFuncBody', 'start=/{/ end=/}/ fold containedin=vimFuncBody'],
+      \     },
+      \     'html': {
+      \         'parentheses': ['start=/\v\<((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ >])@!\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'|[^ '."'".'"><=`]*))?)*\>/ end=#</\z1># fold'],
+      \     },
+      \     'css': 0,
+      \  }
+      \}
 
 " windowswap
 " prevent default bindings
@@ -177,12 +177,12 @@ let vim_markdown_preview_hotkey='<C-m>'
 let g:UltiSnipsExpandTrigger="<nop>"
 let g:ulti_expand_or_jump_res=0
 function ExpandSnippetOrCarriageReturn()
-    let snippet=UltiSnips#ExpandSnippetOrJump()
-    if g:ulti_expand_or_jump_res > 0
-        return snippet
-    else
-        return "\<CR>"
-    endif
+  let snippet=UltiSnips#ExpandSnippetOrJump()
+  if g:ulti_expand_or_jump_res > 0
+    return snippet
+  else
+    return "\<CR>"
+  endif
 endfunction
 inoremap <expr> <CR> pumvisible() ? "\<C-R>=ExpandSnippetOrCarriageReturn()\<CR>" : "\<CR>"
 let g:UltiSnipsJumpForwardTrigger='<Tab>'
@@ -193,14 +193,14 @@ let g:UltiSnipsJumpBackwardTrigger='<S-Tab>'
 let g:ale_python_pylint_options='--disable=C --disable=W0311'
 let g:ale_java_checkstyle_options='-c ~/.vim/config/checkstyle_custom_checks.xml'
 let g:ale_linters={
-\   'cpp': ['cppcheck'],
-\   'java': ['checkstyle'],
-\   'zsh': ['shellcheck'],
-\}
+      \  'cpp': ['cppcheck'],
+      \  'java': ['checkstyle'],
+      \  'zsh': ['shellcheck'],
+      \}
 
 " vim-highlightedyank
 if !has('nvim')
-    map y <Plug>(highlightedyank)
+  map y <Plug>(highlightedyank)
 endif
 
 " obvious resize
