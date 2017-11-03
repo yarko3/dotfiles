@@ -220,3 +220,8 @@ let g:VimuxHeight = "40"
 " fswitch
 au BufEnter *.h let b:fswitchdst  = 'cpp,cc'
 au BufEnter *.cc let b:fswitchdst  = 'h'
+
+" signify
+highlight SignifySignAdd    cterm=bold ctermbg=235  ctermfg=119
+highlight SignifySignDelete cterm=bold ctermbg=235  ctermfg=167
+highlight SignifySignChange cterm=bold ctermbg=235  ctermfg=227
