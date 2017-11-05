@@ -30,13 +30,26 @@ bindkey '^ ' autosuggest-accept
 ## ============================================================================
 ##                                  Prompt
 ## ============================================================================
-git_prompt_info_mine() {
-    git_prompt_text="$(git symbolic-ref HEAD 2>/dev/null | cut -d'/' -f3)" || ""
-    if [[ -n $git_prompt_text ]]; then
-        echo " <$git_prompt_text>"
-    else
-        echo ""
+git_prompt_info_mine_text() {
+  prompt_text="$(git symbolic-ref HEAD 2>/dev/null | cut -d'/' -f3)" || ""
+
+  # override with local, if exists
+  if [[ -n $(whence git_prompt_info_mine_text_local) ]]; then
+    prompt_text_local="$(git_prompt_info_mine_text_local)"
+    if [[ -n $prompt_text_local ]]; then
+      prompt_text=$prompt_text_local
     fi
+  fi
+  echo $prompt_text
+}
+
+git_prompt_info_mine() {
+  git_prompt_text="$(git_prompt_info_mine_text)"
+  if [[ -n $git_prompt_text ]]; then
+    echo " <$git_prompt_text>"
+  else
+    echo ""
+  fi
 }
 export PROMPT='%{$fg[green]%}%n@%m %{$fg[cyan]%}%c%{$fg[yellow]%}$(git_prompt_info_mine)%{$reset_color%} $ '
 
