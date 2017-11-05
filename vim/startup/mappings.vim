@@ -70,7 +70,6 @@ cnoremap <c-l> <right>
 let mapleader = "\<Space>"
 
 nnoremap <Leader><Space> :CtrlPBuffer<CR>
-nnoremap <Leader>bl      :Gblame!<CR>
 nnoremap <Leader>cmd     :w<CR>:VimuxPromptCommand<CR>
 nnoremap <Leader>cmt     :call CmtSection("")<Left><Left>
 nnoremap <Leader>cx      :!chmod a+x %<CR>
