@@ -158,6 +158,8 @@ let g:indentLine_indentLevel=10
 let g:indentLine_leadingSpaceEnabled=0
 " Allow to see the concealed in the current cursor line when in normal & indent mode as intended
 let g:indentLine_noConcealCursor=''
+" ignore startify
+let g:indentLine_fileTypeExclude=['startify']
 
 " easymotion
 " turn off default mappings
