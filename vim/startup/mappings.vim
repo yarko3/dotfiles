@@ -94,8 +94,6 @@ nnoremap <Leader>jj      :YcmCompleter GoTo<CR>
 nnoremap <Leader>lc      `.
 nnoremap <Leader>lg      :Glog<CR>
 nnoremap <Leader>ll      :Limelight!!<CR>
-nnoremap <Leader>m       :w<CR>:call Cdroot()<CR>:call VimuxRunCommand("clear; make -j")<CR>
-nnoremap <Leader>mt      :w<CR>:call Cdroot()<CR>:call VimuxRunCommand("clear; make test -j")<CR>
 nnoremap <Leader>purge   :set vi+='0<CR>:wv!<CR>
 nnoremap <Leader>r       :call VimuxRunCommand("!! \t")<CR>
 nnoremap <Leader>so      :so %<CR>
