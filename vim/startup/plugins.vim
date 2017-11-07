@@ -80,8 +80,8 @@ let g:qfenter_keymap.hopen=['<C-x>']
 let g:qfenter_keymap.topen=['<C-t>']
 
 " Grepper
-nmap gs <plug>(GrepperOperator)
-xmap gs <plug>(GrepperOperator)
+nmap gs :call Cdfile()<CR><plug>(GrepperOperator)
+xmap gs :call Cdfile()<CR><plug>(GrepperOperator)
 
 let g:grepper = {
       \ 'tools':     ['ag'],

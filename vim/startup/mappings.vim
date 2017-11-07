@@ -84,7 +84,7 @@ nnoremap <Leader>fh      :FSSplitLeft<CR>
 nnoremap <Leader>fj      :FSSplitBelow<CR>
 nnoremap <Leader>fk      :FSSplitAbove<CR>
 nnoremap <Leader>fl      :FSSplitRight<CR>
-nnoremap <Leader>gg      :Grepper<CR>
+nnoremap <Leader>gg      :call Cdfile()<CR>:Grepper<CR>
 nnoremap <Leader>goog    :VimuxRunCommand("google ".input("Google for: "))<CR>
 nnoremap <Leader>h       :set hlsearch! hlsearch?<CR>
 nnoremap <Leader>jc      :YcmCompleter GoToDeclaration<CR>
