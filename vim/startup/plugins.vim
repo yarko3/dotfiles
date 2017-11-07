@@ -80,11 +80,14 @@ let g:qfenter_keymap.hopen=['<C-x>']
 let g:qfenter_keymap.topen=['<C-t>']
 
 " Grepper
-nmap gs :call Cdroot()<CR><plug>(GrepperOperator)
-xmap gs :call Cdroot()<CR><plug>(GrepperOperator)
+nmap gs <plug>(GrepperOperator)
+xmap gs <plug>(GrepperOperator)
 
-let g:grepper={
-      \ 'tools':     ['git'],
+let g:grepper = {
+      \ 'tools':     ['ag'],
+      \ 'ag': {
+      \   'grepprg':    'ag --nogroup --nocolor --column --skip-vcs-ignores',
+      \ },
       \ 'jump':      0,
       \ }
 
