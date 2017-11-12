@@ -1,3 +1,8 @@
 #!/usr/bin/env bash
 
-sudo apt-get install curl zsh
+sudo apt-get install \
+  cmake \
+  curl \
+  tmux \
+  vim \
+  zsh
