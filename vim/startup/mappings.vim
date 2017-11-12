@@ -104,7 +104,9 @@ nnoremap <Leader>sw      :call WindowSwap#EasyWindowSwap()<CR>
 nnoremap <Leader>t       :TagbarToggle<CR>
 nnoremap <Leader>ut      :UndotreeToggle<CR>
 nnoremap <Leader>uu      :PlugUpgrade<CR>:PlugUpdate<CR>
+nnoremap <Leader>vh      :abo vsp<CR>:e %:h<CR>
 nnoremap <Leader>vj      :sp<CR>:e %:h<CR>
+nnoremap <Leader>vk      :abo sp<CR>:e %:h<CR>
 nnoremap <Leader>vl      :vsp<CR>:e %:h<CR>
 nnoremap <Leader>w       :call StripTabsAndTrailingWhitespaces()<CR>:w<CR>
 nnoremap <Leader>z       :MaximizerToggle<CR>
