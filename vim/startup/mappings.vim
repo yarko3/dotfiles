@@ -23,6 +23,12 @@ nnoremap # :set hlsearch<CR>#zz
 nnoremap n :set hlsearch<CR>nzz
 nnoremap N :set hlsearch<CR>Nzz
 
+" This makes j and k work on "screen lines" instead of on "file lines"; now, when
+" we have a long line that wraps to multiple screen lines, j and k behave as we
+" expect them to.
+nnoremap j gj
+nnoremap k gk
+
 " search highlights incrementally everywhere instead of just the first match
 map / :set hlsearch<CR><Plug>(incsearch-forward)
 map ? :set hlsearch<CR><Plug>(incsearch-backward)
