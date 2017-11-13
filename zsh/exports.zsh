@@ -27,8 +27,10 @@ fi
 
 if [ "$(uname)" = "Darwin" ]; then
     export MACOS="true"
-    export EDITOR=vim
 fi
+
+# set default editor (probably my lightweight vim masquerading as vi)
+export EDITOR=vi
 
 # Reduce delay to 0.1 seconds for switching to normal mode with ESC
 export KEYTIMEOUT=20
