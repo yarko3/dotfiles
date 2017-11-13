@@ -167,6 +167,9 @@ set scrolloff=5
 set winminwidth=0
 set winminheight=0
 
+" increase preview window height from default
+set previewheight=15
+
 "" ============================================================================
 ""                               Auto Commands
 "" ============================================================================
