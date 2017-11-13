@@ -43,8 +43,8 @@ nmap <C-A> ggVG
 " Swap to last buffer
 nnoremap <silent> <F8> :b#<CR>
 
-" yank from cursor to end of line
-nnoremap Y y$
+" yank from cursor to end of line (not nnoremap because highlighted yank)
+nmap Y y$
 
 " replay @q macro for each line of a visual selection
 vnoremap Q :normal @q<CR>
