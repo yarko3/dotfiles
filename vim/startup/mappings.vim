@@ -114,6 +114,7 @@ nnoremap <Leader>vk      :abo sp<CR>:e %:h<CR>
 nnoremap <Leader>vl      :vsp<CR>:e %:h<CR>
 nnoremap <Leader>vv      ::e %:h<CR>
 nnoremap <Leader>w       :call StripTabsAndTrailingWhitespaces()<CR>:w<CR>
+nnoremap <Leader>x       :q<CR>
 nnoremap <Leader>z       :MaximizerToggle<CR>
 
 
