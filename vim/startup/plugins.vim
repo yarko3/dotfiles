@@ -27,7 +27,6 @@ Plug 'michaeljsmith/vim-indent-object'                     " indentation-level t
 Plug 'octol/vim-cpp-enhanced-highlight', { 'for': 'cpp' }  " enhanced C++11/14/17 highlighting
 Plug 'osyo-manga/vim-brightest'                            " highlight current word
 Plug 'raimondi/delimitMate'                                " matching brackets
-Plug 'rhysd/vim-clang-format'                              " Vim wrapper plugin for clang-format
 Plug 'roxma/vim-tmux-clipboard'                            " integrate vim's yank register with tmux
 Plug 'sickill/vim-pasta'                                   " paste with proper indenting
 Plug 'sirver/ultisnips'                                    " snippet engine with integration into ycm; needs vim compiled with python
@@ -61,12 +60,6 @@ call plug#end()
 " airline
 let g:airline_powerline_fonts=1
 let g:airline_theme='tomorrow'
-
-" Clang-format
-let g:clang_format#detect_style_file=1
-let g:clang_format#auto_formatexpr=1
-map <C-T> :ClangFormat<CR>
-autocmd FileType c,cpp setlocal textwidth=0
 
 " CtrlP
 let g:ctrlp_working_path_mode='ra'
