@@ -33,6 +33,7 @@
         path: bashrc
     ~/.fzf: fzf/
     ~/.jshintrc: jshintrc
+    ~/.hgrc: hgrc
 
 - shell:
   - [git submodule update --init --recursive, Updating submodules]
