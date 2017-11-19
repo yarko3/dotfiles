@@ -25,6 +25,7 @@ Plug 'mhinz/vim-signify'                                   " changes in gutter
 Plug 'mhinz/vim-startify'                                  " dope start screen
 Plug 'michaeljsmith/vim-indent-object'                     " indentation-level text objects (ai/I, ii/I)
 Plug 'octol/vim-cpp-enhanced-highlight', { 'for': 'cpp' }  " enhanced C++11/14/17 highlighting
+Plug 'osyo-manga/vim-brightest'                            " highlight current word
 Plug 'raimondi/delimitMate'                                " matching brackets
 Plug 'roxma/vim-tmux-clipboard'                            " integrate vim's yank register with tmux
 Plug 'sickill/vim-pasta'                                   " paste with proper indenting
