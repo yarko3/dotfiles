@@ -237,3 +237,7 @@ let g:brightest#pattern = '\k\+'
 let g:brightest#highlight = {
 \   "group" : "BrightestUnderline",
 \}
+
+" Fugitive
+" automatically delete fugitive buffers when leaving them
+autocmd BufReadPost fugitive://* set bufhidden=delete
