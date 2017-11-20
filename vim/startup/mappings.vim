@@ -76,6 +76,7 @@ cnoremap <c-l> <right>
 let mapleader = "\<Space>"
 
 nnoremap <Leader><Space> :CtrlPBuffer<CR>
+nnoremap <Leader>=       mmgg=G`m
 nnoremap <Leader>cmd     :VimuxPromptCommand<CR>
 nnoremap <Leader>cmt     :call CmtSection("")<Left><Left>
 nnoremap <Leader>cx      :!chmod a+x %<CR>
@@ -116,7 +117,6 @@ nnoremap <Leader>vv      ::e %:h<CR>
 nnoremap <Leader>w       :call StripTabsAndTrailingWhitespaces()<CR>:w<CR>
 nnoremap <Leader>x       :q<CR>
 nnoremap <Leader>z       :MaximizerToggle<CR>
-
 
 " =============================================================================
 "                          <Plug> Leader Mappings
