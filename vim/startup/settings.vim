@@ -190,3 +190,6 @@ autocmd FileType cpp setlocal commentstring=//\ %s
 
 " don't show whitespace chars in netrw
 autocmd FileType netrw setlocal nolist
+
+" equalize splits when window resized
+autocmd VimResized * exe "normal! \<c-w>="
