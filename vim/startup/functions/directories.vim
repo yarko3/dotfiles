@@ -10,7 +10,9 @@ endfunction
 " append local project root directories
 let g:local_project_roots=[]
 
-" cd into a local root that matches
+" cd into a local root that matches something
+" in g:local_project_roots
+"
 " returns 1 if a local root was found and cd'd into;
 " 0 otherwise
 function! Cdlocalroot()
