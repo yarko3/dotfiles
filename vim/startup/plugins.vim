@@ -72,6 +72,11 @@ let g:ctrlp_user_command = {
     \ 'fallback': 'find %s -type f'
 \ }
 
+" cd into local working directory root if present, use CtrlP to find project root (.git, .hg, etc.) otherwise
+"
+" Note: this seems to work but the canonical way is to provide the working path to CtrlP as an arg
+let g:ctrlp_cmd = 'call Cdlocalroot()<CR>:CtrlP'
+
 " QFEnter
 let g:qfenter_keymap={}
 let g:qfenter_keymap.vopen=['<C-v>']
