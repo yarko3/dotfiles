@@ -6,7 +6,7 @@ function! Cdfile()
   endif
 endfunction
 
-" local_project_dirs must contain full paths;
+" local_project_dirs must contain full paths or regexes of paths;
 " append local project root directories
 let g:local_project_roots=[]
 
@@ -17,8 +17,9 @@ let g:local_project_roots=[]
 " 0 otherwise
 function! Cdlocalroot()
   let cur_dir = expand('%:p')
-  for local_root in g:local_project_roots
-    if cur_dir =~ local_root
+  for local_root_pat in g:local_project_roots
+    if cur_dir =~ local_root_pat
+      let local_root = matchstr(cur_dir, local_root_pat)
       exec "cd " . local_root
       return 1
     endif
