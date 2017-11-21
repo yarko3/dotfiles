@@ -16,9 +16,9 @@ let g:local_project_roots=[]
 " returns 1 if a local root was found and cd'd into;
 " 0 otherwise
 function! Cdlocalroot()
-  let cur_dir = expand('%:p')
+  let cur_path = expand('%:p')
   for local_root in g:local_project_roots
-    if cur_dir =~ local_root
+    if cur_path =~ local_root
       exec "cd " . local_root
       return 1
     endif
