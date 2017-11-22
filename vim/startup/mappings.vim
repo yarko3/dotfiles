@@ -8,8 +8,6 @@ cmap w!! w !sudo tee > /dev/null %
 ""                           Insert Mode Mappings
 "" ============================================================================
 " Leaving insert mode with some ups and downs
-inoremap jj <Esc>
-inoremap jk <Esc>
 inoremap kj <Esc>
 inoremap kk <Esc>
 
