@@ -19,8 +19,8 @@ function! Cdlocalroot()
   let cur_dir = expand('%:p')
   for local_root_pat in g:local_project_roots
     if cur_dir =~ local_root_pat
-      let local_root = matchstr(cur_dir, local_root_pat)
-      exec "cd " . local_root
+      let local_root_dir = matchstr(cur_dir, local_root_pat)
+      exec "cd " . local_root_dir
       return 1
     endif
   endfor
