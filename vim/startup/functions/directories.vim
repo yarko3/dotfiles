@@ -27,7 +27,7 @@ function! Cdlocalroot()
   return 0
 endfunction
 
-" cd to the root of the current file's git directory
+" cd to the root of the current file's project directory
 function! Cdroot()
   if Cdlocalroot()
     return
