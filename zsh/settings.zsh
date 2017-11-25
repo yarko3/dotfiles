@@ -20,6 +20,9 @@ stty stop undef
 # don't autocorrect
 unsetopt correctall
 
+# Don't save duplicated entries into history
+setopt hist_ignore_all_dups
+
 #  ============================================================================
 #                            Configure Plugins
 #  ============================================================================
