@@ -35,9 +35,6 @@ map ? :set hlsearch<CR><Plug>(incsearch-backward)
 vnoremap <silent> * y:let @/ = @"<CR>n:set hlsearch<CR>
 vnoremap <silent> # y:let @? = @"<CR>n:set hlsearch<CR>
 
-" select everything
-nmap <C-A> ggVG
-
 " Swap to last buffer
 nnoremap <silent> <F8> :b#<CR>
 
