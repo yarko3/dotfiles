@@ -16,6 +16,7 @@ Plug 'honza/vim-snippets'                                  " snippets repo
 Plug 'junegunn/limelight.vim'                              " tone down surrounding code
 Plug 'junegunn/vim-easy-align'                             " align things
 Plug 'junegunn/vim-peekaboo'                               " show content of registers
+Plug 'kshenoy/vim-signature'                               " show where marks exist in gutter
 Plug 'luochen1990/rainbow'                                 " Rainbow parenthesis coloring
 Plug 'machakann/vim-highlightedyank'                       " highlight on yank
 Plug 'majutsushi/tagbar'                                   " view ctags awesomely
