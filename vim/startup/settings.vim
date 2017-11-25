@@ -170,6 +170,9 @@ set winminheight=0
 " increase preview window height from default
 set previewheight=15
 
+" Diff options
+set diffopt=filler,vertical
+
 "" ============================================================================
 ""                               Auto Commands
 "" ============================================================================
