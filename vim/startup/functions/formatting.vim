@@ -15,13 +15,13 @@ function! FormatInPlaceJSON()
 endfunction
 
 function! StripTabsAndTrailingWhitespaces()
-  exec "normal ms"
+  let l:pos = getcurpos()
   let _s=@/
   retab
   %s///ge
   %s/\s\+$//e
   let @/=_s
-  exec "normal `s"
+  call setpos('.', l:pos)
 endfunction
 
 function! RightPad(str, padSequence, desiredLen)
