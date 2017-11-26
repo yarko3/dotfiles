@@ -155,6 +155,8 @@ set laststatus=2
 set foldmethod=manual
 set foldnestmax=3
 set foldminlines=10
+" but don't use folds because they're annoying
+set nofoldenable
 
 " double click to highlight all occurrences
 nnoremap <silent> <2-LeftMouse> :let @/='\V\<'.escape(expand('<cword>'), '\').'\>'<cr>:set hls<cr>
