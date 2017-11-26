@@ -42,6 +42,7 @@ Plug 'tpope/vim-rhubarb'                                   " github support
 Plug 'tpope/vim-surround'                                  " Surrounding text
 Plug 'tpope/vim-vinegar'                                   " netrw improvement
 Plug 'uguu-org/vim-matrix-screensaver', { 'on': 'Matrix' } " dope screensaver
+Plug 'unblevable/quick-scope'                              " show what f do
 Plug 'vim-airline/vim-airline-themes'                      " Status line themes
 Plug 'w0rp/ale'                                            " Syntax checking
 Plug 'wesQ3/vim-windowswap'                                " swap splits
@@ -247,3 +248,6 @@ let g:brightest#highlight = {
 " Fugitive
 " automatically delete fugitive buffers when leaving them
 autocmd BufReadPost fugitive://* set bufhidden=delete
+
+" quick-scope
+let g:qs_highlight_on_keys = [ 'f', 'F', 't', 'T' ]
