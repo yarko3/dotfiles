@@ -15,12 +15,12 @@ let g:local_project_roots=[]
 "
 " returns 1 if a local root was found and cd'd into;
 " 0 otherwise
-function! Cdlocalroot()
-  let cur_dir = expand('%:p')
-  for local_root_pat in g:local_project_roots
-    if cur_dir =~ local_root_pat
-      let local_root_dir = matchstr(cur_dir, local_root_pat)
-      exec "cd " . local_root_dir
+function! CdLocalRoot()
+  let l:cur_dir = expand('%:p')
+  for l:local_root_pat in g:local_project_roots
+    if l:cur_dir =~ l:local_root_pat
+      let l:local_root_dir = matchstr(l:cur_dir, l:local_root_pat)
+      exec "cd " . l:local_root_dir
       return 1
     endif
   endfor
@@ -28,8 +28,8 @@ function! Cdlocalroot()
 endfunction
 
 " cd to the root of the current file's project directory
-function! Cdroot()
-  if Cdlocalroot()
+function! CdRoot()
+  if CdLocalRoot()
     return
   endif
 
