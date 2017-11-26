@@ -71,6 +71,8 @@ set makeprg=make
 
 " Ignore whitespace on diffs
 set diffopt+=iwhite
+set diffopt+=filler
+set diffopt+=vertical
 
 " Smart case sensitivity
 set ignorecase
@@ -169,9 +171,6 @@ set winminheight=0
 
 " increase preview window height from default
 set previewheight=15
-
-" Diff options
-set diffopt=filler,vertical
 
 "" ============================================================================
 ""                               Auto Commands
