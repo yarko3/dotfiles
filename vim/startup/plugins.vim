@@ -88,13 +88,16 @@ let g:qfenter_keymap.topen=['<C-t>']
 nmap gs :call CdRoot()<CR><plug>(GrepperOperator)
 xmap gs :call CdRoot()<CR><plug>(GrepperOperator)
 
-let g:grepper = {
+let my_grepper_options = {
       \ 'tools':     ['ag'],
       \ 'ag': {
       \   'grepprg':    'ag --nogroup --nocolor --column --skip-vcs-ignores',
       \ },
       \ 'jump':      0,
       \ }
+
+let g:grepper = my_grepper_options
+let g:grepper.operator = my_grepper_options
 
 " Netrw
 let g:netrw_liststyle='1'
