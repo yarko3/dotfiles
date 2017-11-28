@@ -16,10 +16,10 @@ inoremap kk <Esc>
 "" ============================================================================
 " If hl search is off, starting a new search or moving enables it
 " remove zz if the jumps are too much
-nnoremap * :set hlsearch<CR>*zz
-nnoremap # :set hlsearch<CR>#zz
-nnoremap n :set hlsearch<CR>nzz
-nnoremap N :set hlsearch<CR>Nzz
+nnoremap * :set hlsearch<CR>*zt
+nnoremap # :set hlsearch<CR>#zt
+nnoremap n :set hlsearch<CR>nzt
+nnoremap N :set hlsearch<CR>Nzt
 
 " This makes j and k work on "screen lines" instead of on "file lines"; now, when
 " we have a long line that wraps to multiple screen lines, j and k behave as we
