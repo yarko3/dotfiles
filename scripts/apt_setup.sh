@@ -3,6 +3,7 @@
 sudo apt-get install \
   cmake \
   curl \
+  silversearcher-ag \
   tmux \
   vim \
   zsh
