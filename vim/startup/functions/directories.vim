@@ -27,13 +27,23 @@ function! CdLocalRoot()
   return 0
 endfunction
 
+function! GetCSVRoot()
+  call Cdfile()
+  let l:git_root = Trim(system("git rev-parse --show-toplevel"))
+  if empty(matchstr(l:git_root, '^fatal:.*'))
+    return l:git_root
+  endif
+  return ""
+endfunction
+
 " cd to the root of the current file's project directory
 function! CdRoot()
   if CdLocalRoot()
     return
   endif
 
-  call Cdfile()
-  exec "cd " . Trim(system("git rev-parse --show-toplevel"))
-  echom expand('.')
+  let l:csv_root = GetCSVRoot()
+  if !empty(l:csv_root)
+    exec "cd " . l:csv_root
+  endif
 endfunction
