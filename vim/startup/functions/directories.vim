@@ -6,7 +6,7 @@ function! Cdfile()
   endif
 endfunction
 
-" local_project_dirs must contain full paths or regexes of paths;
+" local_project_roots must contain full paths or regexes of paths;
 " append local project root directories
 let g:local_project_roots=[]
 
