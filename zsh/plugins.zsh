@@ -26,10 +26,8 @@ if ! zgen saved; then
     zgen load zsh-users/zsh-history-substring-search
     zgen load zsh-users/zsh-syntax-highlighting
 
-    # temporary fix while someone boned upstream
-    if $ZSH_VERSION > 5.0.8; then
-      zgen load zsh-users/zsh-autosuggestions
-    fi
+    # TODO: move to og repo when they get their shit together
+    zgen load yarko3/zsh-autosuggestions
 
     # save all to init script
     zgen save
