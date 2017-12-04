@@ -22,10 +22,14 @@ if ! zgen saved; then
     # Github plugins
     zgen load djui/alias-tips
     zgen load rupa/z
-    zgen load zsh-users/zsh-autosuggestions
     zgen load zsh-users/zsh-completions
     zgen load zsh-users/zsh-history-substring-search
     zgen load zsh-users/zsh-syntax-highlighting
+
+    # temporary fix while someone boned upstream
+    if $ZSH_VERSION > 5.0.8; then
+      zgen load zsh-users/zsh-autosuggestions
+    fi
 
     # save all to init script
     zgen save
