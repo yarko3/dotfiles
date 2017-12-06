@@ -22,12 +22,10 @@ if ! zgen saved; then
     # Github plugins
     zgen load djui/alias-tips
     zgen load rupa/z
+    zgen load zsh-users/zsh-autosuggestions
     zgen load zsh-users/zsh-completions
     zgen load zsh-users/zsh-history-substring-search
     zgen load zsh-users/zsh-syntax-highlighting
-
-    # TODO: move to og repo when they get their shit together
-    zgen load yarko3/zsh-autosuggestions
 
     # save all to init script
     zgen save
