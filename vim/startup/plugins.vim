@@ -234,7 +234,7 @@ let g:VimuxOrientation = "h"
 let g:VimuxHeight = "40"
 
 " fswitch
-au BufEnter *.h let b:fswitchdst  = 'cpp,cc'
+au BufEnter *.h let b:fswitchdst  = 'cc,cpp'
 au BufEnter *.cc let b:fswitchdst  = 'h'
 
 " signify
