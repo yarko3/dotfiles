@@ -92,12 +92,12 @@ nnoremap <Leader>h       :set hlsearch! hlsearch?<CR>
 nnoremap <Leader>jf      :YcmCompleter FixIt<CR>
 nnoremap <Leader>ji      :YcmCompleter GoToImprecise<CR>
 nnoremap <Leader>jj      :YcmCompleter GoTo<CR>
+nnoremap <Leader>jr      :YcmRestartServer<CR>
 nnoremap <Leader>lg      :Glog<CR>
 nnoremap <Leader>ll      :Limelight!!<CR>
 nnoremap <Leader>m       `
 nnoremap <Leader>purge   :set vi+='0<CR>:wv!<CR>
 nnoremap <Leader>r       :call VimuxRunCommand("!! \t")<CR>
-nnoremap <Leader>restart :YcmRestartServer<CR>
 nnoremap <Leader>so      :so %<CR>
 nnoremap <Leader>sp      :setlocal spell! spelllang=en_us<CR>
 nnoremap <Leader>ss      :call SortSection()<CR>
