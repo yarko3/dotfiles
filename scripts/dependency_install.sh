@@ -17,16 +17,19 @@ create_ssh() {
 }
 
 fzf_install() {
-  echo "Installing fzf"
+  echo "Installing fzf..."
   "$DOTFILES_DIR"/fzf/install --key-bindings --completion --no-update-rc
+  echo "Finished installing fzf"
 }
 
 fonts_install() {
+  echo "Installing fonts..."
   if ! [ -d ~/.local/share/fonts ]; then
     "$DOTFILES_DIR"/fonts/install.sh
   else
-    echo "fonts already installed"
+    echo "Fonts already installed"
   fi
+  echo "Finished fonts"
 }
 
 local_install() {
