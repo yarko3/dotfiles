@@ -49,4 +49,5 @@ install() {
 }
 
 create_ssh
+change_to_zsh
 install
