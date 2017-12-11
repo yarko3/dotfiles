@@ -235,7 +235,7 @@ let g:VimuxHeight = "40"
 
 " fswitch
 au BufEnter *.h let b:fswitchdst  = 'cc,cpp'
-au BufEnter *_test.cc let b:fswitchdst  = 'h' | let b:fswitchfnames = '/_test$//'
+au BufEnter *_test.cc let b:fswitchfnames = '/_test$//'
 au BufEnter *.cc let b:fswitchdst  = 'h'
 
 " signify
