@@ -2,6 +2,7 @@ if [ "$(uname)" = "Linux" ]; then
     alias ls='ls --color=auto'
 fi
 
+alias cast='DEBUG=castnow* castnow --address 192.168.0.103 --myip "$(hostname -I | sed "s/ .*//")"'
 alias cdr='cd $(git rev-parse --show-toplevel)'
 alias fn='find . -name'
 alias g='git'
