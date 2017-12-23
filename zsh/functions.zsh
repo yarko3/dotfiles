@@ -39,17 +39,14 @@ z() {
 
 
 function cast {
-  if (( $# != 1 )); then
-    echo "Expected one argument for filename!"
-    exit
-  fi
+  # assuming first arg is filename; can take other flags after as supported by castnow (eg: --seek mm:ss)
 
   cmd="DEBUG=castnow* castnow --address 192.168.0.103 --myip $(hostname -I | sed "s/ .*//")"
   filename=$1
   if [[ $filename == *.avi ]]; then
     cmd+=" --tomp4"
   fi
-  eval "$cmd" "$filename"
+  eval "$cmd" "$@"
 }
 
 # load local functions
