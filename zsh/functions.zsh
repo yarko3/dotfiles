@@ -37,5 +37,20 @@ z() {
     cd "$(_z -l 2>&1 | fzf --height 40% --nth 2.. --reverse --inline-info +s --tac --query "${*##-* }" | sed 's/^[0-9,.]* *//')"
 }
 
+
+function cast {
+  if (( $# != 1 )); then
+    echo "Expected one argument for filename!"
+    exit
+  fi
+
+  cmd="DEBUG=castnow* castnow --address 192.168.0.103 --myip $(hostname -I | sed "s/ .*//")"
+  filename=$1
+  if [[ $filename == *.avi ]]; then
+    cmd+=" --tomp4"
+  fi
+  eval "$cmd $filename"
+}
+
 # load local functions
 [ -f ~/.zshrc_local/zshrc_local_functions.sh ] && source ~/.zshrc_local/zshrc_local_functions.sh
