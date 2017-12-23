@@ -49,7 +49,7 @@ function cast {
   if [[ $filename == *.avi ]]; then
     cmd+=" --tomp4"
   fi
-  eval "$cmd $filename"
+  eval "$cmd" "$filename"
 }
 
 # load local functions
