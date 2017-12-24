@@ -41,12 +41,18 @@ z() {
 function cast {
   # assuming first arg is filename; can take other flags after as supported by castnow (eg: --seek mm:ss)
 
-  cmd="DEBUG=castnow* castnow --address 192.168.0.103 --myip $(hostname -I | sed "s/ .*//")"
+  myIp=$(hostname -I | sed "s/ .*//")
+  chromecastIp="192.168.0.103"
+  cmd="DEBUG=castnow* castnow --address $chromecastIp --myip $myIp"
   filename=$1
+
+  extraFlags=""
   if [[ $filename == *.avi ]]; then
-    cmd+=" --tomp4"
+    extraFlags+="--tomp4"
   fi
-  eval "$cmd" "$@"
+
+  echo "$cmd" "$@" "$extraFlags"
+  eval "$cmd" "$@" "$extraFlags"
 }
 
 # load local functions
