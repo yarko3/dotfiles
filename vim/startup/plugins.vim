@@ -13,6 +13,7 @@ Plug 'derekwyatt/vim-scala', { 'for': 'scala' }            " Scala syntax
 Plug 'easymotion/vim-easymotion'                           " I get around round round round
 Plug 'haya14busa/incsearch.vim'                            " show search as you type
 Plug 'honza/vim-snippets'                                  " snippets repo
+Plug 'google/vim-searchindex'                              " show search result progress
 Plug 'junegunn/limelight.vim'                              " tone down surrounding code
 Plug 'junegunn/vim-easy-align'                             " align things
 Plug 'junegunn/vim-peekaboo'                               " show content of registers
