@@ -13,7 +13,7 @@ alias ll='ls -lrtah'
 alias lower="tr '[:upper:]' '[:lower:]'"
 alias m='make -j'
 alias mt='make -j test'
-alias p='ps aux | grep '
+alias p='ps --sort=start_time aux | grep '
 alias tmux='tmux -2u'
 alias topcpu='/bin/ps -eo pcpu,pid,user,args | sort -k 1 -r | head -10'
 alias upper="tr '[:lower:]' '[:upper:]'"
