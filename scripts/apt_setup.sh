@@ -5,5 +5,6 @@ sudo apt-get install \
   curl \
   silversearcher-ag \
   tmux \
+  tree \
   vim \
   zsh
