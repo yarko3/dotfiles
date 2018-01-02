@@ -116,6 +116,9 @@ set whichwrap+=<,>,h,l,[,]
 " the output of messages and the 'press a key' prompt that goes with these
 set shm=at
 
+" use system clipboard by default
+set clipboard=unnamedplus
+
 "" ============================================================================
 ""                                Appearance
 "" ============================================================================
