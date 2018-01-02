@@ -7,4 +7,5 @@ sudo apt-get install \
   tmux \
   tree \
   vim \
+  xclip \
   zsh
