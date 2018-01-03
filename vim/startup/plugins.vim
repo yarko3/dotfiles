@@ -70,7 +70,7 @@ let g:ctrlp_user_command = {
         \ 1: ['.git/', 'cd %s && git ls-files -oc --exclude-standard'],
         \ 2: ['.hg/', 'hg --cwd %s locate -I .'],
     \ },
-    \ 'fallback': 'ag %s -l --nocolor -g ""'
+    \ 'fallback': 'ag --literal --files-with-matches --nocolor --hidden -g "" %s'
 \ }
 
 " cd into local working directory root if present, use CtrlP to find project root (.git, .hg, etc.) otherwise
