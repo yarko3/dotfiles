@@ -13,3 +13,6 @@
 [submodule "fzf"]
     path = fzf
     url = https://github.com/junegunn/fzf.git
+[submodule "rainbarf"]
+  path = rainbarf
+  url = https://github.com/creaktive/rainbarf

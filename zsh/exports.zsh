@@ -38,6 +38,7 @@ export KEYTIMEOUT=20
 PATH=~/bin:$PATH
 PATH=~/bin_local:$PATH
 PATH=$PATH:~/.local/bin
+PATH=$PATH:~/lib/perl5/bin
 
 PATH=$PATH:/bin
 PATH=$PATH:/sbin

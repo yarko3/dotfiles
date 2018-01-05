@@ -42,10 +42,21 @@ local_install() {
   echo "Finished installing local packages"
 }
 
+rainbarf_install() {
+  echo "Installing rainbarf..."
+  cd "$DOTFILES_DIR"/rainbarf
+  perl Build.PL --install_base ~/lib/perl5
+  ./Build test
+  ./Build install
+  cd -
+  echo "Finished installing rainbarf locally"
+}
+
 install() {
   fzf_install
   fonts_install
   local_install
+  rainbarf_install
 }
 
 create_ssh
