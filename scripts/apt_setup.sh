@@ -3,6 +3,7 @@
 sudo apt-get install \
   cmake \
   curl \
+  perl \
   silversearcher-ag \
   tmux \
   tree \
