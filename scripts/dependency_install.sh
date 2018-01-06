@@ -44,10 +44,11 @@ local_install() {
 
 rainbarf_install() {
   echo "Installing rainbarf..."
-  rainbarf_dir="$DOTFILES_DIR"/rainbarf
-  perl "$rainbarf_dir"/Build.PL --install_base ~/lib/perl5
-  "$rainbarf_dir"/Build test
-  "$rainbarf_dir"/Build install
+  cd "$DOTFILES_DIR"/rainbarf
+  perl Build.PL --install_base ~/lib/perl5
+  ./Build test
+  ./Build install
+  cd -
   echo "Finished installing rainbarf locally"
 }
 
