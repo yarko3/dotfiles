@@ -4,6 +4,7 @@ sudo apt-get install \
   cmake \
   curl \
   perl \
+  shellcheck \
   silversearcher-ag \
   tmux \
   tree \
