@@ -8,6 +8,7 @@ alias g='git'
 alias gg='git grep'
 alias ggi='git grep -i'
 alias grep='grep --color=auto'
+alias home='cd $HOME'
 alias less='less -N'
 alias ll='ls -lrtah'
 alias lower="tr '[:upper:]' '[:lower:]'"
