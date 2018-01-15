@@ -32,7 +32,6 @@
         force: true
         path: bashrc
     ~/.fzf: fzf/
-    ~/.jshintrc: jshintrc
     ~/.hgrc: hgrc
 
 - shell:
