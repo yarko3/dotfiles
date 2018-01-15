@@ -41,6 +41,7 @@ Plug 'tpope/vim-repeat'                                    " Dot operator for pl
 Plug 'tpope/vim-rhubarb'                                   " github support
 Plug 'tpope/vim-surround'                                  " Surrounding text
 Plug 'tpope/vim-vinegar'                                   " netrw improvement
+Plug 'uarun/vim-protobuf'                                  " proto syntax
 Plug 'uguu-org/vim-matrix-screensaver', { 'on': 'Matrix' } " dope screensaver
 Plug 'unblevable/quick-scope'                              " show what f do
 Plug 'vim-airline/vim-airline-themes'                      " Status line themes
