@@ -177,6 +177,9 @@ set winminheight=0
 " increase preview window height from default
 set previewheight=15
 
+" don't redraw when executing macros
+set lazyredraw
+
 "" ============================================================================
 ""                               Auto Commands
 "" ============================================================================
