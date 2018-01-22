@@ -1,5 +1,6 @@
 call plug#begin('~/.vim/plugged')
 
+Plug 'AndrewRadev/switch.vim'                              " alternate between strings quickly
 Plug 'JamshedVesuna/vim-markdown-preview'                  " preview markdown locally
 Plug 'Valloric/ListToggle'                                 " Toggling quickfix and location list
 Plug 'Valloric/MatchTagAlways'                             " always highlight matching tags
@@ -255,3 +256,9 @@ autocmd BufReadPost fugitive://* set bufhidden=delete
 
 " quick-scope
 let g:qs_highlight_on_keys = [ 'f', 'F', 't', 'T' ]
+
+" switch
+let g:switch_mapping = '<leader>n'
+let g:switch_custom_definitions = [
+\   ['true', 'false']
+\ ]
