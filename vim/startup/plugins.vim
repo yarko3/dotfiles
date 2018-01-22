@@ -1,7 +1,6 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'AndrewRadev/switch.vim'                              " alternate between strings quickly
-Plug 'JamshedVesuna/vim-markdown-preview'                  " preview markdown locally
 Plug 'Valloric/ListToggle'                                 " Toggling quickfix and location list
 Plug 'Valloric/MatchTagAlways'                             " always highlight matching tags
 Plug 'Yggdroot/indentLine'                                 " show indent
@@ -184,11 +183,6 @@ let g:EasyMotion_smartcase=1
 " set colors
 hi link EasyMotionTarget WarningMsg
 hi link EasyMotionShade  Comment
-
-" vim-markdown-preview
-let vim_markdown_preview_github=1
-let vim_markdown_preview_browser='Google Chrome'
-let vim_markdown_preview_hotkey='<C-m>'
 
 " snippets
 let g:UltiSnipsExpandTrigger="<nop>"
