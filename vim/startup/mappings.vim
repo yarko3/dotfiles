@@ -124,11 +124,6 @@ nmap <Leader>e <Plug>(easymotion-overwin-f)
 xmap <Leader>ga <Plug>(EasyAlign)
 nmap <Leader>ga <Plug>(EasyAlign)
 
-" ale
-" navigate syntax issues
-nmap <silent> <Leader>n <Plug>(ale_next_wrap)
-nmap <silent> <Leader>N <Plug>(ale_previous_wrap)
-
 "" =============================================================================
 ""                             Fix Tmux Mappings
 "" =============================================================================
