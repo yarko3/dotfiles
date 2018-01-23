@@ -254,5 +254,6 @@ let g:qs_highlight_on_keys = [ 'f', 'F', 't', 'T' ]
 " switch
 let g:switch_mapping = '<leader>n'
 let g:switch_custom_definitions = [
-\   ['true', 'false']
+\   ['true', 'false'],
+\   ['EXPECT_EQ', 'EXPECT_NE', 'EXPECT_TRUE', 'EXPECT_FALSE', 'EXPECT_THAT'],
 \ ]
