@@ -256,4 +256,5 @@ let g:switch_mapping = '<leader>n'
 let g:switch_custom_definitions = [
 \   ['true', 'false'],
 \   ['EXPECT_EQ', 'EXPECT_NE', 'EXPECT_TRUE', 'EXPECT_FALSE', 'EXPECT_THAT'],
+\   ['small', 'medium', 'large'],
 \ ]
