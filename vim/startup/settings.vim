@@ -180,6 +180,9 @@ set previewheight=15
 " don't redraw when executing macros
 set lazyredraw
 
+" show the column limit
+set colorcolumn=80
+
 "" ============================================================================
 ""                               Auto Commands
 "" ============================================================================
@@ -198,8 +201,8 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 " set commentstring to not be /* for cpp
 autocmd FileType cpp setlocal commentstring=//\ %s
 
-" don't show whitespace chars in netrw
-autocmd FileType netrw setlocal nolist
+" don't show whitespace chars in netrw, don't show column limit
+autocmd FileType netrw setlocal nolist colorcolumn=
 
 " equalize splits when window resized
 autocmd VimResized * exe "normal! \<c-w>="
