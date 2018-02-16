@@ -186,12 +186,6 @@ set colorcolumn=80
 "" ============================================================================
 ""                               Auto Commands
 "" ============================================================================
-" Automatically open the QuickFix Window after a make
-autocmd QuickFixCmdPost *make* cwindow
-
-" Make
-autocmd FileType make setlocal noexpandtab shiftwidth=8
-
 " XML
 autocmd FileType xml setlocal equalprg=xmllint\ --format\ -
 
@@ -201,7 +195,7 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 " set commentstring to not be /* for cpp
 autocmd FileType cpp setlocal commentstring=//\ %s
 
-" don't show whitespace chars in netrw, don't show column limit
+" formatting for netrw
 autocmd FileType netrw setlocal nolist colorcolumn=
 
 " equalize splits when window resized
