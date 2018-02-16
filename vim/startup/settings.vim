@@ -186,6 +186,9 @@ set colorcolumn=80
 "" ============================================================================
 ""                               Auto Commands
 "" ============================================================================
+" Quickfix
+autocmd FileType qf setlocal colorcolumn=
+
 " XML
 autocmd FileType xml setlocal equalprg=xmllint\ --format\ -
 
