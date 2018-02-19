@@ -69,9 +69,10 @@ set autoread
 " Configure the :make command
 set makeprg=make
 
-" Ignore whitespace on diffs
-set diffopt+=iwhite
+" make diff windows match by adding filler
 set diffopt+=filler
+
+" diff in vertical split
 set diffopt+=vertical
 
 " Smart case sensitivity
