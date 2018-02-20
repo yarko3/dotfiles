@@ -237,6 +237,8 @@ au BufEnter *.cc let b:fswitchdst  = 'h'
 highlight SignifySignAdd    cterm=bold ctermbg=235  ctermfg=119
 highlight SignifySignDelete cterm=bold ctermbg=235  ctermfg=167
 highlight SignifySignChange cterm=bold ctermbg=235  ctermfg=227
+" refresh on focus
+let g:signify_update_on_focusgained = 1
 
 " brightest
 let g:brightest#pattern = '\k\+'
