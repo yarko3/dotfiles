@@ -37,22 +37,12 @@ z() {
     cd "$(_z -l 2>&1 | fzf --height 40% --nth 2.. --reverse --inline-info +s --tac --query "${*##-* }" | sed 's/^[0-9,.]* *//')"
 }
 
-
-function cast {
-  # assuming first arg is filename; can take other flags after as supported by castnow (eg: --seek mm:ss)
-
-  myIp=$(hostname -I | sed "s/ .*//")
-  chromecastIp="192.168.0.103"
-  cmd="DEBUG=castnow* castnow --address $chromecastIp --myip $myIp"
-  filename=$1
-
-  extraFlags=""
-  if [[ $filename == *.avi ]]; then
-    extraFlags+="--tomp4"
-  fi
-
-  echo "$cmd" "$@" "$extraFlags"
-  eval "$cmd" "$@" "$extraFlags"
+function pager_wrapper () {
+    if [[ -t 1 ]]; then
+        "$@" | less -+c -FRX
+    else
+        "$@"
+    fi
 }
 
 # load local functions
