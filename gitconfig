@@ -8,6 +8,7 @@
     cim = commit -m
     co = checkout
     cob = checkout -b
+    conflicts = diff --name-only --diff-filter=U
     cp = cherry-pick
     df = diff
     dfc = "!git log --left-right --graph --cherry-mark --oneline HEAD...$1"
