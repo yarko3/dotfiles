@@ -12,6 +12,7 @@ Plug 'derekwyatt/vim-fswitch', { 'for': 'cpp' }            " Fastswitch (cpp/h t
 Plug 'derekwyatt/vim-scala', { 'for': 'scala' }            " Scala syntax
 Plug 'easymotion/vim-easymotion'                           " I get around round round round
 Plug 'haya14busa/incsearch.vim'                            " show search as you type
+Plug 'haya14busa/vim-edgemotion'                           " easily navigate to boundaries
 Plug 'honza/vim-snippets'                                  " snippets repo
 Plug 'junegunn/limelight.vim'                              " tone down surrounding code
 Plug 'junegunn/vim-easy-align'                             " align things
@@ -260,3 +261,7 @@ let g:switch_custom_definitions = [
 \   ['EXPECT_EQ', 'EXPECT_NE', 'EXPECT_TRUE', 'EXPECT_FALSE', 'EXPECT_THAT'],
 \   ['small', 'medium', 'large'],
 \ ]
+
+" edgemotion
+map <C-j> <Plug>(edgemotion-j)
+map <C-k> <Plug>(edgemotion-k)
