@@ -260,3 +260,7 @@ let g:switch_custom_definitions = [
 \   ['EXPECT_EQ', 'EXPECT_NE', 'EXPECT_TRUE', 'EXPECT_FALSE', 'EXPECT_THAT'],
 \   ['small', 'medium', 'large'],
 \ ]
+
+" startify
+" speed up a bit
+let g:startify_enable_unsafe = 1
