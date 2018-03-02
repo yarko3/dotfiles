@@ -120,6 +120,10 @@ set shm=at
 " use system clipboard by default
 set clipboard=unnamedplus
 
+" Instead of failing a command because of unsaved changes, instead raise a
+" dialogue asking if you wish to save changed files.
+set confirm
+
 "" ============================================================================
 ""                                Appearance
 "" ============================================================================
