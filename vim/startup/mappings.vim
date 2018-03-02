@@ -132,7 +132,6 @@ map <Leader>y <Plug>(operator-poweryank-osc52)
 ""                             Fix Tmux Mappings
 "" =============================================================================
 if &term =~ '^screen' && exists('$TMUX')
-    set mouse+=a
     " tmux knows the extended mouse mode
     set ttymouse=xterm2
     " tmux will send xterm-style keys when xterm-keys is on
