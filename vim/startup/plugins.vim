@@ -92,7 +92,7 @@ xmap gs :call CdRoot()<CR><plug>(GrepperOperator)
 let my_grepper_options = {
       \ 'tools':     ['ag'],
       \ 'ag': {
-      \   'grepprg':    'ag --nogroup --nocolor --column --skip-vcs-ignores',
+      \   'grepprg':    'ag --nogroup --nocolor --column',
       \ },
       \ 'jump':      0,
       \ }
