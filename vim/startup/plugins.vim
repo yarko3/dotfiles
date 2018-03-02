@@ -12,6 +12,7 @@ Plug 'derekwyatt/vim-fswitch', { 'for': 'cpp' }            " Fastswitch (cpp/h t
 Plug 'derekwyatt/vim-scala', { 'for': 'scala' }            " Scala syntax
 Plug 'easymotion/vim-easymotion'                           " I get around round round round
 Plug 'haya14busa/incsearch.vim'                            " show search as you type
+Plug 'haya14busa/vim-poweryank'                            " yank over SSH
 Plug 'honza/vim-snippets'                                  " snippets repo
 Plug 'junegunn/limelight.vim'                              " tone down surrounding code
 Plug 'junegunn/vim-easy-align'                             " align things

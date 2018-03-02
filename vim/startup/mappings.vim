@@ -124,6 +124,9 @@ nmap <Leader>e <Plug>(easymotion-overwin-f)
 xmap <Leader>ga <Plug>(EasyAlign)
 nmap <Leader>ga <Plug>(EasyAlign)
 
+" yank over SSH
+map <Leader>y <Plug>(operator-poweryank-osc52)
+
 "" =============================================================================
 ""                             Fix Tmux Mappings
 "" =============================================================================
