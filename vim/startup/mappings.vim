@@ -95,6 +95,7 @@ nnoremap <Leader>jj      :YcmCompleter GoTo<CR>
 nnoremap <Leader>jr      :YcmRestartServer<CR>
 nnoremap <Leader>lg      :Glog<CR>
 nnoremap <Leader>ll      :Limelight!!<CR>
+nnoremap <Leader>mi      :VimuxInspectRunner<CR>
 nnoremap <Leader>purge   :set vi+='0<CR>:wv!<CR>
 nnoremap <Leader>r       :call VimuxRunCommand("!! \t")<CR>
 nnoremap <Leader>so      :so %<CR>
