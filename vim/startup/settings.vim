@@ -186,7 +186,7 @@ set previewheight=15
 set lazyredraw
 
 " show the column limit
-set colorcolumn=80
+set colorcolumn=81
 
 "" ============================================================================
 ""                               Auto Commands
