@@ -90,11 +90,11 @@ nmap gs :call CdRoot()<CR><plug>(GrepperOperator)
 xmap gs :call CdRoot()<CR><plug>(GrepperOperator)
 
 let my_grepper_options = {
-      \ 'tools':     ['ag'],
+      \ 'tools': ['ag'],
       \ 'ag': {
-      \   'grepprg':    'ag --nogroup --nocolor --column',
+      \   'grepprg': 'ag --nogroup --nocolor --column',
       \ },
-      \ 'jump':      0,
+      \ 'jump': 0,
       \ }
 
 let g:grepper = my_grepper_options
