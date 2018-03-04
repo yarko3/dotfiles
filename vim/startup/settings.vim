@@ -194,6 +194,9 @@ set lazyredraw
 " show the column limit
 set colorcolumn=81
 
+" Stop certain movements from always going to the first character of a line.
+set nostartofline
+
 "" ============================================================================
 ""                               Auto Commands
 "" ============================================================================
