@@ -45,5 +45,14 @@ function pager_wrapper () {
     fi
 }
 
+# find and kill a process
+snipe () {
+  pid=$(ps -ef | sed 1d | grep -v "fzf -m --query='$1" | fzf -m --query="'$1" | awk '{print $2}')
+  if [ -n "$pid" ]
+  then
+    kill -9 "$pid"
+  fi
+}
+
 # load local functions
 [ -f ~/.zshrc_local/zshrc_local_functions.sh ] && source ~/.zshrc_local/zshrc_local_functions.sh
