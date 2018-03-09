@@ -208,6 +208,10 @@ let g:ale_linters={
       \  'java': ['checkstyle'],
       \  'zsh': ['shellcheck'],
       \}
+let g:ale_sign_error = '◉'
+let g:ale_sign_warning = '◉'
+highlight ALEErrorSign   ctermfg=9  ctermbg=235
+highlight ALEWarningSign ctermfg=11 ctermbg=235
 
 " vim-highlightedyank
 if !has('nvim')
