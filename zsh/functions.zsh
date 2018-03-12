@@ -55,4 +55,4 @@ snipe () {
 }
 
 # load local functions
-[ -f ~/.zshrc_local/zshrc_local_functions.sh ] && source ~/.zshrc_local/zshrc_local_functions.sh
+[ -f ~/.zsh_local/zshrc_local_functions.zsh ] && source ~/.zsh_local/zshrc_local_functions.zsh
