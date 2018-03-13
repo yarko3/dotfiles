@@ -191,9 +191,6 @@ set previewheight=15
 " don't redraw when executing macros
 set lazyredraw
 
-" show the column limit
-set colorcolumn=81
-
 " Stop certain movements from always going to the first character of a line.
 set nostartofline
 

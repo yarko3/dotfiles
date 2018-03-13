@@ -2,6 +2,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'AndrewRadev/switch.vim'                              " alternate between strings quickly
 Plug 'Valloric/ListToggle'                                 " Toggling quickfix and location list
+Plug 'whatyouhide/vim-lengthmatters'                       " highlight too portion of line that's too long
 Plug 'Valloric/MatchTagAlways'                             " always highlight matching tags
 Plug 'Yggdroot/indentLine'                                 " show indent
 Plug 'benmills/vimux'                                      " Vim and Tmux Integration
@@ -268,3 +269,6 @@ let g:switch_custom_definitions = [
 " startify
 " speed up a bit
 let g:startify_enable_unsafe = 1
+
+" lengthmatters
+call lengthmatters#highlight('ctermbg=239')
