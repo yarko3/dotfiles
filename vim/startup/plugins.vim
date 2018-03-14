@@ -2,7 +2,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'AndrewRadev/switch.vim'                              " alternate between strings quickly
 Plug 'Valloric/ListToggle'                                 " Toggling quickfix and location list
-Plug 'whatyouhide/vim-lengthmatters'                       " highlight too portion of line that's too long
+Plug 'whatyouhide/vim-lengthmatters'                       " highlight portion of line that's longer than limit
 Plug 'Valloric/MatchTagAlways'                             " always highlight matching tags
 Plug 'Yggdroot/indentLine'                                 " show indent
 Plug 'benmills/vimux'                                      " Vim and Tmux Integration
