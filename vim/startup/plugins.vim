@@ -272,3 +272,4 @@ let g:startify_enable_unsafe = 1
 
 " lengthmatters
 call lengthmatters#highlight('ctermbg=239')
+let g:lengthmatters_excluded = ['unite', 'tagbar', 'startify', 'gundo', 'vimshell', 'w3m', 'nerdtree', 'help', 'qf', 'dirvish', 'netrw']
