@@ -97,6 +97,9 @@ set wildmode=list:longest
 " Ignoring files (see :help wildignore)
 set wildignore+=*.o,*.d,00*,nohup.out,tags,.hs-tags,*.hi,*.gcno,*.gcda,*.fasl,*.pyc
 
+" Ignore case sensitivity in filenames
+set wildignorecase
+
 " Extend functionality of the % key's matching
 runtime macros/matchit.vim
 
