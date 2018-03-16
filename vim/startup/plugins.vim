@@ -2,7 +2,6 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'AndrewRadev/switch.vim'                              " alternate between strings quickly
 Plug 'Valloric/ListToggle'                                 " Toggling quickfix and location list
-Plug 'whatyouhide/vim-lengthmatters'                       " highlight portion of line that's longer than limit
 Plug 'Valloric/MatchTagAlways'                             " always highlight matching tags
 Plug 'Yggdroot/indentLine'                                 " show indent
 Plug 'benmills/vimux'                                      " Vim and Tmux Integration
@@ -35,6 +34,7 @@ Plug 'sirver/ultisnips'                                    " snippet engine with
 Plug 'szw/vim-maximizer'                                   " maximize a split
 Plug 'talek/obvious-resize'                                " resize splits
 Plug 'terryma/vim-expand-region'                           " quickly expand visual regions
+Plug 'terryma/vim-multiple-cursors'                        " multiple cursors
 Plug 'tmux-plugins/vim-tmux-focus-events'                  " focusing help with tmux and certain plugins
 Plug 'tommcdo/vim-exchange'                                " cx operator for exchanging text regions
 Plug 'tpope/vim-commentary'                                " Comment/uncomment operator
@@ -48,6 +48,7 @@ Plug 'unblevable/quick-scope'                              " show what f do
 Plug 'vim-airline/vim-airline-themes'                      " Status line themes
 Plug 'w0rp/ale'                                            " Syntax checking
 Plug 'wesQ3/vim-windowswap'                                " swap splits
+Plug 'whatyouhide/vim-lengthmatters'                       " highlight portion of line that's longer than limit
 Plug 'yssl/QFEnter'                                        " quickfix open in different places
 
 if g:platform == "Linux" && !AtWork()
