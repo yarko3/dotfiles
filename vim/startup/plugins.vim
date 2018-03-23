@@ -81,6 +81,9 @@ let g:ctrlp_user_command = {
 " Note: this seems to work but the canonical way is to provide the working path to CtrlP as an arg
 let g:ctrlp_cmd = 'call CdLocalRoot()<CR>:CtrlP'
 
+" increase maximum window height
+let g:ctrlp_match_window = 'max:20'
+
 " QFEnter
 let g:qfenter_keymap={}
 let g:qfenter_keymap.vopen=['<C-v>']
