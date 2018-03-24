@@ -213,11 +213,6 @@ let g:ale_linters={
       \  'java': ['checkstyle'],
       \  'zsh': ['shellcheck'],
       \}
-let g:ale_sign_error = '✗'
-let g:ale_sign_warning = '⚠'
-let g:ale_sign_style_error = '✗'
-let g:ale_sign_style_warning = '⚠'
-let g:ale_sign_info = 'ℹ'
 highlight ALEErrorSign   ctermfg=9  ctermbg=235
 highlight ALEWarningSign ctermfg=11 ctermbg=235
 
