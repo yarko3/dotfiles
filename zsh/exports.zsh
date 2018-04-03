@@ -21,6 +21,9 @@ export LESS_TERMCAP_us=$'\e[04;38;5;146m' # begin underline]]]]]]]'
 
 export ZSH_TMUX_AUTOSTART=false
 export ZSH_TMUX_AUTOCONNECT=false
+
+export DISABLE_AUTO_TITLE="true"
+
 if [ "$TERM" != "screen-256color" ]; then
     export TERM=xterm-256color
 fi

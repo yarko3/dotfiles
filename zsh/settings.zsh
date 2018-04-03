@@ -30,9 +30,6 @@ setopt hist_ignore_all_dups
 # # Bind <CTRL><SPC> to accept and execute
 bindkey '^ ' autosuggest-accept
 
-# oh-my-zsh
-export DISABLE_AUTO_TITLE="true"
-
 ## ============================================================================
 ##                                  Prompt
 ## ============================================================================
