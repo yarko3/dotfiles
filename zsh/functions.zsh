@@ -40,5 +40,33 @@ snipe () {
   fi
 }
 
+vcs_name() {
+  prompt_text="$(git symbolic-ref HEAD 2>/dev/null | cut -d'/' -f3)" || ""
+
+  # override with local, if exists
+  if [[ -n $(whence local_vcs_name) ]]; then
+    prompt_text_local="$(local_vcs_name)"
+    if [[ -n $prompt_text_local ]]; then
+      prompt_text=$prompt_text_local
+    fi
+  fi
+  echo $prompt_text
+}
+
+cd() {
+  builtin cd "$@" || return
+
+  # rename tmux window if we're in tmux
+  if ! { [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; } then
+    tmux_name="$(vcs_name)"
+    if [ -z "$tmux_name" ]; then
+      tmux_name=$(basename "$(pwd)")
+    fi
+    tmux rename-window "$tmux_name"
+  fi
+
+  return 0
+}
+
 # load local functions
 [ -f ~/.zsh_local/zshrc_local_functions.zsh ] && source ~/.zsh_local/zshrc_local_functions.zsh
