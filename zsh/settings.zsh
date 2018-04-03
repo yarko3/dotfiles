@@ -30,6 +30,9 @@ setopt hist_ignore_all_dups
 # # Bind <CTRL><SPC> to accept and execute
 bindkey '^ ' autosuggest-accept
 
+# oh-my-zsh
+export DISABLE_AUTO_TITLE="true"
+
 ## ============================================================================
 ##                                  Prompt
 ## ============================================================================
@@ -37,8 +40,8 @@ git_prompt_info_mine_text() {
   prompt_text="$(git symbolic-ref HEAD 2>/dev/null | cut -d'/' -f3)" || ""
 
   # override with local, if exists
-  if [[ -n $(whence git_prompt_info_mine_text_local) ]]; then
-    prompt_text_local="$(git_prompt_info_mine_text_local)"
+  if [[ -n $(whence local_vcs_name) ]]; then
+    prompt_text_local="$(local_vcs_name)"
     if [[ -n $prompt_text_local ]]; then
       prompt_text=$prompt_text_local
     fi
