@@ -40,7 +40,7 @@ snipe () {
   fi
 }
 
-vcs_name() {
+vcs_window_name() {
   git_branch_text="$(git symbolic-ref HEAD 2>/dev/null | cut -d'/' -f3)" || ""
   if [ -n "$git_branch_text" ]; then
     git_dir_text=$(basename "$(git rev-parse --show-toplevel)")
@@ -59,10 +59,23 @@ vcs_name() {
   echo $prompt_text
 }
 
+vcs_prompt_name() {
+  prompt_text="$(git symbolic-ref HEAD 2>/dev/null | cut -d'/' -f3)" || ""
+
+  # override with local, if exists
+  if [[ -n $(whence local_vcs_name) ]]; then
+    prompt_text_local="$(local_vcs_name)"
+    if [[ -n $prompt_text_local ]]; then
+      prompt_text=$prompt_text_local
+    fi
+  fi
+  echo $prompt_text
+}
+
 rename_tmux_window() {
   # rename tmux window if we're in tmux
   if ! { [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; } then
-    tmux_name="$(vcs_name)"
+    tmux_name="$(vcs_window_name)"
     if [ -z "$tmux_name" ]; then
       tmux_name=$(basename "$(pwd)")
     fi

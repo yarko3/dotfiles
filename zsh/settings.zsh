@@ -34,9 +34,9 @@ bindkey '^ ' autosuggest-accept
 ##                                  Prompt
 ## ============================================================================
 git_prompt_info_mine() {
-  vcs_name_text="$(vcs_name)"
-  if [[ -n $vcs_name_text ]]; then
-    echo " <$vcs_name_text>"
+  vcs_prompt_name_text="$(vcs_prompt_name)"
+  if [[ -n $vcs_prompt_name_text ]]; then
+    echo " <$vcs_prompt_name_text>"
   else
     echo ""
   fi
