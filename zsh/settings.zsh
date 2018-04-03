@@ -33,7 +33,7 @@ bindkey '^ ' autosuggest-accept
 ## ============================================================================
 ##                                  Prompt
 ## ============================================================================
-git_prompt_info_mine_text() {
+vcs_name() {
   prompt_text="$(git symbolic-ref HEAD 2>/dev/null | cut -d'/' -f3)" || ""
 
   # override with local, if exists
@@ -47,9 +47,9 @@ git_prompt_info_mine_text() {
 }
 
 git_prompt_info_mine() {
-  git_prompt_text="$(git_prompt_info_mine_text)"
-  if [[ -n $git_prompt_text ]]; then
-    echo " <$git_prompt_text>"
+  vcs_name_text="$(vcs_name)"
+  if [[ -n $vcs_name_text ]]; then
+    echo " <$vcs_name_text>"
   else
     echo ""
   fi
