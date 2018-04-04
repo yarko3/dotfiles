@@ -74,7 +74,7 @@ vcs_prompt_name() {
 
 rename_tmux_window() {
   # rename tmux window if we're in tmux
-  if ! { [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; } then
+  if [ -n "$TMUX" ]; then
     tmux_name="$(vcs_window_name)"
     if [ -z "$tmux_name" ]; then
       tmux_name=$(basename "$(pwd)")
