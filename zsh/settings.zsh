@@ -40,7 +40,7 @@ git_prompt_info_mine() {
   else
     echo ""
   fi
-  rename_tmux_window
+  rename_tmux_window > /dev/null 2>&1
 }
 export PROMPT='%{$fg[green]%}%n@%m %{$fg[cyan]%}%c%{$fg[yellow]%}$(git_prompt_info_mine)%{$reset_color%} $ '
 
