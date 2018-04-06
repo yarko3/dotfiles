@@ -3,6 +3,8 @@
 sudo apt-get install \
   cmake \
   curl \
+  git \
+  htop \
   perl \
   shellcheck \
   silversearcher-ag \
