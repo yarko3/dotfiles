@@ -45,7 +45,7 @@ local_install() {
 rainbarf_install() {
   echo "Installing rainbarf..."
   if ! [ -x ~/lib/perl5/bin/rainbarf ]; then
-    cpan Module::Build
+    cpan Module::Build # choose sudo when installing
     cd "$DOTFILES_DIR"/rainbarf
     perl Build.PL --install_base ~/lib/perl5
     ./Build test
