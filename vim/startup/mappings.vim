@@ -67,7 +67,7 @@ cnoremap <c-l> <right>
 "" ============================================================================
 ""                         Leader Mappings (Sorted)
 "" ============================================================================
-" Also use spacebar as a leader
+" use spacebar as a leader
 let mapleader = "\<Space>"
 
 nnoremap <Leader><Space> :CtrlPBuffer<CR>
