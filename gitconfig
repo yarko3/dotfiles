@@ -1,6 +1,7 @@
 [alias]
     a = add -u
     ap = add --patch
+    authors = "!f() { git log --oneline --pretty='%ae' | sort | uniq -c | sort -nk1; }; f"
     br = branch --sort=committerdate
     bra = branch --all
     ca = commit --amend --no-edit
