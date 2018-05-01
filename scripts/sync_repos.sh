@@ -8,6 +8,15 @@ has_uncommitted_changes() {
     return 1
 }
 
+is_on_master() {
+  branch=$(git symbolic-ref HEAD 2>/dev/null | cut -d'/' -f3)
+  if [[ $branch == "master" ]]; then
+    return 1
+  else
+    return 0
+  fi
+}
+
 check_submodules_and_commit_on_update() {
     git submodule update --remote --init
     if has_uncommitted_changes "$1"; then
@@ -20,7 +29,7 @@ update() {
     f() {
         echo "Synchronizing $1"
         cd "$1" || exit 1
-        if ! has_uncommitted_changes "$1"; then
+        if is_on_master && ! has_uncommitted_changes "$1"; then
             git pull
             check_submodules_and_commit_on_update "$1"
             git push
