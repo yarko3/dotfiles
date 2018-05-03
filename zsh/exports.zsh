@@ -22,6 +22,11 @@ export LESS_TERMCAP_us=$'\e[04;38;5;146m' # begin underline]]]]]]]'
 export ZSH_TMUX_AUTOSTART=false
 export ZSH_TMUX_AUTOCONNECT=false
 
+# know which tmux window to rename
+if [ -n "$TMUX" ]; then
+  export TMUX_WINDOW=$(tmux display-message -p '#I')
+fi
+
 export DISABLE_AUTO_TITLE="true"
 
 if [ "$TERM" != "screen-256color" ]; then
