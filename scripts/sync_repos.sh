@@ -10,10 +10,10 @@ has_uncommitted_changes() {
 
 is_on_master() {
   branch=$(git symbolic-ref HEAD 2>/dev/null | cut -d'/' -f3)
-  if [[ $branch == "master" ]]; then
-    return 1
-  else
+  if [ "$branch" == "master" ]; then
     return 0
+  else
+    return 1
   fi
 }
 
@@ -33,6 +33,8 @@ update() {
       git pull
       check_submodules_and_commit_on_update "$1"
       git push
+    else
+      echo "Skipping $1"
     fi
   }
   if [ -d "$1" ]; then
