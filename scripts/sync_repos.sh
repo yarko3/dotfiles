@@ -34,7 +34,7 @@ update() {
       check_submodules_and_commit_on_update "$1"
       git push
     else
-      echo "Skipping $1"
+      echo "Skipping $1 -- not in a valid state to sync"
     fi
   }
   if [ -d "$1" ]; then
