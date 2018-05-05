@@ -33,6 +33,8 @@
         path: bashrc
     ~/.fzf: fzf/
     ~/.hgrc: hgrc
+    ~/.Xmodmap: Xmodmap
+    ~/.xinitrc: xinitrc
 
 - shell:
   - [git submodule update --init --recursive, Updating submodules]
