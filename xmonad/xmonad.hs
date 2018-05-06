@@ -2,6 +2,7 @@ import Control.Applicative
 import System.Exit
 import System.IO (hPutStrLn, Handle)
 import XMonad
+import XMonad.Actions.PhysicalScreens
 import XMonad.Core (WorkspaceId)
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
@@ -58,10 +59,6 @@ myKeys conf@XConfig {XMonad.modMask = modMask} = M.fromList $
     , ((modMask,               xK_k     ), windows W.focusUp  )
     , ((modMask,               xK_m     ), windows W.focusMaster)
 
-    -- modifying the window order
-    , ((modMask .|. shiftMask, xK_j     ), windows W.swapDown  )
-    , ((modMask .|. shiftMask, xK_k     ), windows W.swapUp    )
-
     -- resizing the master/slave ratio
     , ((modMask,               xK_h     ), sendMessage Shrink)
     , ((modMask,               xK_l     ), sendMessage Expand)
@@ -76,13 +73,10 @@ myKeys conf@XConfig {XMonad.modMask = modMask} = M.fromList $
     -- locking and restarting
     , ((controlMask .|. shiftMask, xK_l), spawn "slock")
     , ((modMask, xK_r), spawn restartCmd)
-    ]
-    ++
-    -- mod-[1..6] %! Switch focus to workspace N of this screen
-    -- mod-shift-[1..6] %! Move client to workspace N of this screen
-    [ ((m .|. modMask, k), windows $ onCurrentScreen f i)
-    | (i, k) <- zip (workspaces' conf) [xK_1 .. xK_9]
-    , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]
+
+    -- cycling screen focus
+    , ((modMask .|. shiftMask, xK_h), onPrevNeighbour W.view)
+    , ((modMask .|. shiftMask, xK_l), onNextNeighbour W.view)
     ]
 
 --  ===========================================================================
