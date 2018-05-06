@@ -10,6 +10,6 @@ sudo apt-get install \
   silversearcher-ag \
   tmux \
   tree \
-  vim \
+  vim-nox \
   xclip \
   zsh
