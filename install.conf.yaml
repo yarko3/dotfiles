@@ -33,6 +33,10 @@
         path: bashrc
     ~/.fzf: fzf/
     ~/.hgrc: hgrc
+    ~/.xmonad:
+        force: true
+        path: xmonad/
+    ~/.xmobarrc: xmobarrc
     ~/.Xmodmap: Xmodmap
     ~/.xinitrc: xinitrc
 
