@@ -41,7 +41,7 @@ myManageHook = composeAll
 --                              Mappings
 --  ===========================================================================
 myKeys :: XConfig Layout -> M.Map (KeyMask, KeySym) (X ())
-myKeys conf@XConfig {XMonad.modMask = modMask} = M.fromList $
+myKeys conf@XConfig {XMonad.modMask = modMask} = M.fromList
     -- launching and killing programs
     [ ((modMask, xK_Return), spawn $ XMonad.terminal conf)
     , ((modMask,               xK_p     ), spawn "dmenu_run")
@@ -77,6 +77,11 @@ myKeys conf@XConfig {XMonad.modMask = modMask} = M.fromList $
     -- cycling screen focus
     , ((modMask .|. shiftMask, xK_h), onPrevNeighbour W.view)
     , ((modMask .|. shiftMask, xK_l), onNextNeighbour W.view)
+
+    -- media keys
+    , ((0, 0x1008FF11), spawn "pactl set-sink-volume 0 -5%")
+    , ((0, 0x1008FF13), spawn "pactl set-sink-volume 0 +5%")
+    , ((0, 0x1008FF12), spawn "pactl set-sink-mute 0 toggle")
     ]
 
 --  ===========================================================================
