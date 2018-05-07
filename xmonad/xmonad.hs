@@ -125,6 +125,8 @@ myKeys conf@XConfig {XMonad.modMask = modMask} = M.fromList $
     , ((0, 0x1008FF13), spawn "amixer set Master 5%+")
     , ((0, 0x1008FF12), spawn "amixer set Master toggle")
     , ((0, 0x1008ff14), spawn "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause")
+    , ((0, 0x1008ff16), spawn "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous")
+    , ((0, 0x1008ff17), spawn "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next")
     ]
 
     -- mod + N to select workspace N
