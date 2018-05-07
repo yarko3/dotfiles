@@ -2,7 +2,9 @@ import Control.Applicative
 import System.Exit
 import System.IO (hPutStrLn, Handle)
 import XMonad
+import XMonad.Actions.DynamicProjects
 import XMonad.Actions.PhysicalScreens
+import XMonad.Actions.SpawnOn
 import XMonad.Core (WorkspaceId)
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
@@ -23,7 +25,46 @@ myTerminal = "gnome-terminal"
 restartCmd = "if type xmonad; then xmonad --recompile && \
               \xmonad --restart; else xmessage xmonad not in PATH; fi"
 
-myWorkspaces = ["1:term","2:web","3:media"] ++ map show [4..9]
+--  ===========================================================================
+--                             Workspaces
+--  ===========================================================================
+
+wsWORK_TERM    = "WORK_TERM"
+wsWORK_BROWSER = "WORK_BROWSER"
+wsMEDIA        = "MEDIA"
+wsSCRATCH      = "SCRATCH"
+wsDOTFILES     = "DOTFILES"
+
+myWorkspaces = [wsWORK_TERM, wsWORK_BROWSER, wsMEDIA, wsSCRATCH]
+
+projects :: [Project]
+projects =
+    [ Project   { projectName      = wsWORK_TERM
+                , projectDirectory = "~/"
+                , projectStartHook = Just $ do spawn myTerminal
+            }
+
+    , Project   { projectName       = wsWORK_BROWSER
+                , projectDirectory  = "~/"
+                , projectStartHook  = Just $ do spawnOn wsWORK_BROWSER "google-chrome m/"
+            }
+
+    , Project   { projectName       = wsMEDIA
+                , projectDirectory  = "~/"
+                , projectStartHook  = Just $ do spawnOn wsMEDIA "google-chrome --new-window news.ycombinator.com"
+                                                spawnOn wsMEDIA "spotify"
+            }
+
+    , Project   { projectName       = wsSCRATCH
+                , projectDirectory  = "~/"
+                , projectStartHook  = Nothing
+            }
+
+    , Project   { projectName       = wsDOTFILES
+                , projectDirectory  = "~/.dotfiles"
+                , projectStartHook  = Just $ do spawn myTerminal
+        }
+    ]
 
 myLayout = avoidStruts (
     ThreeColMid 1 (3/100) (1/2) |||
@@ -139,7 +180,9 @@ myBorderWidth = 1
 --  ===========================================================================
 main = do
   xmproc <- spawnPipe "xmobar"
-  xmonad $ defaults {
+  xmonad
+    $ dynamicProjects projects
+    $ defaults {
       logHook = dynamicLogWithPP $ xmobarPP {
             ppOutput = hPutStrLn xmproc
           , ppTitle = xmobarColor xmobarTitleColor "" . shorten 100
