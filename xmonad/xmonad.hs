@@ -41,7 +41,7 @@ myManageHook = composeAll
 --                              Mappings
 --  ===========================================================================
 myKeys :: XConfig Layout -> M.Map (KeyMask, KeySym) (X ())
-myKeys conf@XConfig {XMonad.modMask = modMask} = M.fromList
+myKeys conf@XConfig {XMonad.modMask = modMask} = M.fromList $
     -- launching and killing programs
     [ ((modMask, xK_Return), spawn $ XMonad.terminal conf)
     , ((modMask,               xK_p     ), spawn "dmenu_run")
@@ -84,6 +84,12 @@ myKeys conf@XConfig {XMonad.modMask = modMask} = M.fromList
     , ((0, 0x1008FF12), spawn "pactl set-sink-mute 0 toggle")
     , ((0, 0x1008ff14), spawn "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause")
     ]
+
+    -- mod + N to select workspace N
+    ++
+    [((m .|. modMask, k), windows $ f i)
+        | (i, k) <- zip (XMonad.workspaces conf) [xK_1 .. xK_9]
+        , (f, m) <- [(W.greedyView, 0), (W.shift, shiftMask)]]
 
 --  ===========================================================================
 --                                Mouse
