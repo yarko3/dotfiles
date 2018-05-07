@@ -120,9 +120,9 @@ myKeys conf@XConfig {XMonad.modMask = modMask} = M.fromList $
     , ((modMask .|. shiftMask, xK_l), onNextNeighbour W.view)
 
     -- media keys
-    , ((0, 0x1008FF11), spawn "pactl set-sink-volume 0 -5%")
-    , ((0, 0x1008FF13), spawn "pactl set-sink-volume 0 +5%")
-    , ((0, 0x1008FF12), spawn "pactl set-sink-mute 0 toggle")
+    , ((0, 0x1008FF11), spawn "amixer set Master 5%-")
+    , ((0, 0x1008FF13), spawn "amixer set Master 5%+")
+    , ((0, 0x1008FF12), spawn "amixer set Master toggle")
     , ((0, 0x1008ff14), spawn "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause")
     ]
 
