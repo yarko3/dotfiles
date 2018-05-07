@@ -51,7 +51,8 @@ projects =
 
     , Project   { projectName       = wsMEDIA
                 , projectDirectory  = "~/"
-                , projectStartHook  = Just $ do spawnOn wsMEDIA "google-chrome --new-window news.ycombinator.com"
+                , projectStartHook  = Just $ do spawnOn wsMEDIA "google-chrome --new-window coolmaterial.com"
+                                                spawnOn wsMEDIA "google-chrome news.ycombinator.com"
                                                 spawnOn wsMEDIA "spotify"
             }
 
