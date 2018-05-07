@@ -113,7 +113,7 @@ myMouseBindings XConfig {XMonad.modMask = modMask} = M.fromList
 --                               Colors
 --  ===========================================================================
 myNormalBorderColor  = "#7c7c7c"
-myFocusedBorderColor = "#ffb6b0"
+myFocusedBorderColor = "#008000"
 
 -- Colors for text and backgrounds of each tab when in "Tabbed" layout.
 tabConfig = defaultTheme {
