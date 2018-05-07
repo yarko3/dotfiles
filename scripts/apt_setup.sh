@@ -12,4 +12,6 @@ sudo apt-get install \
   tree \
   vim-nox \
   xclip \
+  xmobar \
+  xmonad \
   zsh
