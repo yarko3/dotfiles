@@ -85,35 +85,36 @@ myKeys :: XConfig Layout -> M.Map (KeyMask, KeySym) (X ())
 myKeys conf@XConfig {XMonad.modMask = modMask} = M.fromList $
     -- launching and killing programs
     [ ((modMask, xK_Return), spawn $ XMonad.terminal conf)
-    , ((modMask,               xK_p     ), spawn "dmenu_run")
-    , ((modMask .|. shiftMask, xK_c     ), kill)
+    , ((modMask,                    xK_p      ), spawn "dmenu_run")
+    , ((modMask .|. shiftMask,      xK_c      ), kill)
 
-    , ((modMask,               xK_space ), sendMessage NextLayout)
-    , ((modMask .|. shiftMask, xK_space ), setLayout $ XMonad.layoutHook conf)
+    , ((modMask,                    xK_space  ), sendMessage NextLayout)
+    , ((modMask .|. shiftMask,      xK_space  ), setLayout $ XMonad.layoutHook conf)
 
-    , ((modMask,               xK_n     ), refresh)
+    , ((modMask,                    xK_n           ), refresh)
 
     -- move focus up or down the window stack
-    , ((modMask,               xK_Tab   ), windows W.focusDown)
-    , ((modMask .|. shiftMask, xK_Tab   ), windows W.focusUp  )
-    , ((modMask,               xK_j     ), windows W.focusDown)
-    , ((modMask,               xK_k     ), windows W.focusUp  )
-    , ((modMask,               xK_m     ), windows W.focusMaster)
+    , ((modMask,                    xK_Tab    ), windows W.focusDown)
+    , ((modMask .|. shiftMask,      xK_Tab    ), windows W.focusUp  )
+    , ((modMask,                    xK_j      ), windows W.focusDown)
+    , ((modMask,                    xK_k      ), windows W.focusUp  )
+    , ((modMask,                    xK_m      ), windows W.focusMaster)
 
     -- resizing the master/slave ratio
-    , ((modMask,               xK_h     ), sendMessage Shrink)
-    , ((modMask,               xK_l     ), sendMessage Expand)
+    , ((modMask,                    xK_h      ), sendMessage Shrink)
+    , ((modMask,                    xK_l      ), sendMessage Expand)
 
     -- floating layer support
-    , ((modMask,               xK_t     ), withFocused $ windows . W.sink)
+    , ((modMask,                    xK_t      ), withFocused $ windows . W.sink)
 
     -- increase or decrease number of windows in the master area
-    , ((modMask              , xK_comma ), sendMessage (IncMasterN 1))
-    , ((modMask              , xK_period), sendMessage (IncMasterN (-1)))
+    , ((modMask,                    xK_comma  ), sendMessage (IncMasterN 1))
+    , ((modMask,                    xK_period ), sendMessage (IncMasterN (-1)))
 
-    -- locking and restarting
-    , ((controlMask .|. shiftMask, xK_l), spawn "slock")
-    , ((modMask, xK_r), spawn restartCmd)
+    -- locking, quitting, restarting
+    , ((controlMask .|. shiftMask,  xK_l      ), spawn "slock")
+    , ((modMask .|. shiftMask,      xK_q      ), io (exitWith ExitSuccess))
+    , ((modMask,                    xK_r      ), spawn restartCmd)
 
     -- cycling screen focus
     , ((modMask .|. shiftMask, xK_h), onPrevNeighbour W.view)
