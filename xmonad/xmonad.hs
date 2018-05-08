@@ -159,7 +159,7 @@ myNormalBorderColor  = "#7c7c7c"
 myFocusedBorderColor = "#008000"
 
 -- Colors for text and backgrounds of each tab when in "Tabbed" layout.
-tabConfig = defaultTheme {
+tabConfig = def {
     activeBorderColor = "#7C7C7C",
     activeTextColor = "#CEFFAC",
     activeColor = "#000000",
@@ -196,7 +196,7 @@ main = do
   }
 
 
-defaults = defaultConfig {
+defaults = def {
     -- simple stuff
     terminal           = myTerminal,
     borderWidth        = myBorderWidth,
