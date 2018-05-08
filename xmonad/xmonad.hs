@@ -46,7 +46,7 @@ projects =
 
     , Project   { projectName       = wsWORK_BROWSER
                 , projectDirectory  = "~/"
-                , projectStartHook  = Just $ do spawnOn wsWORK_BROWSER "google-chrome m/"
+                , projectStartHook  = Just $ do spawnOn wsWORK_BROWSER "google-chrome --new-window gmail.com"
             }
 
     , Project   { projectName       = wsMEDIA
