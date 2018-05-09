@@ -35,7 +35,7 @@ wsMEDIA        = "MEDIA"
 wsSCRATCH      = "SCRATCH"
 wsDOTFILES     = "DOTFILES"
 
-myWorkspaces = [wsWORK_TERM, wsWORK_BROWSER, wsMEDIA, wsSCRATCH]
+myWorkspaces = [wsWORK_TERM, wsWORK_BROWSER, wsMEDIA, wsSCRATCH, wsDOTFILES]
 
 projects :: [Project]
 projects =
