@@ -154,8 +154,11 @@ myMouseBindings XConfig {XMonad.modMask = modMask} = M.fromList
   ]
 
 --  ===========================================================================
---                               Colors
+--                                Theme
 --  ===========================================================================
+myFocusFollowsMouse = False
+myClickJustFocuses = True
+
 myNormalBorderColor  = "#7c7c7c"
 myFocusedBorderColor = "#008000"
 
@@ -204,6 +207,8 @@ defaults = def {
     workspaces         = myWorkspaces,
     normalBorderColor  = myNormalBorderColor,
     focusedBorderColor = myFocusedBorderColor,
+    clickJustFocuses   = myClickJustFocuses,
+    focusFollowsMouse  = myFocusFollowsMouse,
 
     -- key bindings
     keys               = myKeys,
