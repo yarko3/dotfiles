@@ -41,12 +41,12 @@ projects :: [Project]
 projects =
     [ Project   { projectName      = wsWORK_TERM
                 , projectDirectory = "~/"
-                , projectStartHook = Just $ do spawn myTerminal
+                , projectStartHook = Just $ spawn myTerminal
             }
 
     , Project   { projectName       = wsWORK_BROWSER
                 , projectDirectory  = "~/"
-                , projectStartHook  = Just $ do spawnOn wsWORK_BROWSER "google-chrome --new-window gmail.com"
+                , projectStartHook  = Just $ spawnOn wsWORK_BROWSER "google-chrome --new-window gmail.com"
             }
 
     , Project   { projectName       = wsMEDIA
@@ -62,7 +62,7 @@ projects =
 
     , Project   { projectName       = wsDOTFILES
                 , projectDirectory  = "~/.dotfiles"
-                , projectStartHook  = Just $ do spawn myTerminal
+                , projectStartHook  = Just $ spawn myTerminal
         }
     ]
 
@@ -113,7 +113,7 @@ myKeys conf@XConfig {XMonad.modMask = modMask} = M.fromList $
 
     -- locking, quitting, restarting
     , ((controlMask .|. shiftMask,  xK_l      ), spawn "slock")
-    , ((modMask .|. shiftMask,      xK_q      ), io (exitWith ExitSuccess))
+    , ((modMask .|. shiftMask,      xK_q      ), io exitSuccess)
     , ((modMask,                    xK_r      ), spawn restartCmd)
 
     -- cycling screen focus
