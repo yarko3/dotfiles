@@ -40,7 +40,7 @@ update() {
   if [ -d "$1" ]; then
     f "$1"
   else
-    echo "Skipping $1 - Not deployed on this machine."
+    echo "Skipping $1 -- Not deployed on this machine."
   fi
 }
 
