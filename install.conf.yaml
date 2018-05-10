@@ -38,7 +38,7 @@
         path: xmonad/
     ~/.xmobarrc: xmobarrc
     ~/.Xmodmap: Xmodmap
-    ~/.xinitrc: xinitrc
+    ~/.xsession: xsession
 
 - shell:
   - [git submodule update --init --recursive, Updating submodules]
