@@ -1,3 +1,6 @@
-Config { allDesktops = True }
+Config {
+  position = TopW L 90,
+  allDesktops = True
+}
 
 -- vim:set ft=haskell:
