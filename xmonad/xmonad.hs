@@ -100,12 +100,12 @@ myKeys conf@XConfig {XMonad.modMask = modMask} = M.fromList $
     , ((modMask,                    xK_k      ), windows W.focusUp  )
     , ((modMask,                    xK_m      ), windows W.focusMaster)
 
-    -- resizing the master/slave ratio
-    , ((modMask,                    xK_h      ), sendMessage Shrink)
-    , ((modMask,                    xK_l      ), sendMessage Expand)
-
     -- floating layer support
     , ((modMask,                    xK_t      ), withFocused $ windows . W.sink)
+
+    -- modifying the window order
+    , ((modMask .|. shiftMask, xK_j     ), windows W.swapDown  )
+    , ((modMask .|. shiftMask, xK_k     ), windows W.swapUp    )
 
     -- increase or decrease number of windows in the master area
     , ((modMask,                    xK_comma  ), sendMessage (IncMasterN 1))
