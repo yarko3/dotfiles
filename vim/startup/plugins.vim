@@ -29,7 +29,7 @@ Plug 'octol/vim-cpp-enhanced-highlight', { 'for': 'cpp' }  " enhanced C++11/14/1
 Plug 'osyo-manga/vim-brightest'                            " highlight/underline current word
 Plug 'raimondi/delimitMate'                                " matching brackets
 Plug 'roxma/vim-tmux-clipboard'                            " integrate vim's yank register with tmux
-Plug 'sickill/vim-pasta'                                   " paste with proper indenting
+" Plug 'sickill/vim-pasta'                                   " paste with proper indenting
 Plug 'sirver/ultisnips'                                    " snippet engine with integration into ycm; needs vim compiled with python
 Plug 'szw/vim-maximizer'                                   " maximize a split
 Plug 'talek/obvious-resize'                                " resize splits
