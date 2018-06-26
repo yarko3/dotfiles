@@ -48,6 +48,7 @@ echo "Updating repos"
 
 update ~/.dotfiles
 update ~/.dotfiles_local
+update ~/notes
 
 wait
 echo "Finished updating repos"
