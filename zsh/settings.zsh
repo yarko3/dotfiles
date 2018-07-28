@@ -25,7 +25,7 @@ setopt hist_ignore_all_dups
 #                            Configure Plugins
 #  ============================================================================
 # zsh-autosuggestions
-# # Bind <CTRL><SPC> to accept and execute
+# # Bind <CTRL><SPC> to accept
 bindkey '^ ' autosuggest-accept
 
 ## ============================================================================
