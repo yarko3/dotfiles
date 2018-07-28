@@ -271,6 +271,7 @@ let g:brightest#pattern = '\k\+'
 let g:brightest#highlight = {
 \   "group" : "BrightestUnderline",
 \}
+let g:brightest#enable_highlight_all_window = 1
 
 " Fugitive
 " automatically delete fugitive buffers when leaving them
