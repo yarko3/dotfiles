@@ -76,6 +76,8 @@ let mapleader = "\<Space>"
 
 nnoremap <Leader><Space> :CtrlPBuffer<CR>
 nnoremap <Leader>=       mmgg=G`m
+nnoremap <Leader>bj      :sp<CR>:b#<CR>
+nnoremap <Leader>bl      :vsp<CR>:b#<CR>
 nnoremap <Leader>cmd     :VimuxPromptCommand<CR>
 nnoremap <Leader>cmt     :call CmtSection("")<Left><Left>
 nnoremap <Leader>cx      :!chmod a+x %<CR>
