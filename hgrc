@@ -1,2 +1,5 @@
 [ui]
 merge = vimdiff
+
+[ui]
+username = ysenyuta
