@@ -96,7 +96,6 @@ nnoremap <Leader>gg      :call CdRoot()<CR>:Grepper<CR>
 nnoremap <Leader>goog    :VimuxRunCommand("google ".input("Google for: "))<CR>
 nnoremap <Leader>h       :set hlsearch! hlsearch?<CR>
 nnoremap <Leader>jf      :YcmCompleter FixIt<CR>
-nnoremap <Leader>ji      :YcmCompleter GoToInclude<CR>
 nnoremap <Leader>jj      :YcmCompleter GoTo<CR>
 nnoremap <Leader>jr      :YcmRestartServer<CR>
 nnoremap <Leader>lg      :Glog<CR>
