@@ -1,5 +1,8 @@
 call plug#begin('~/.vim/plugged')
 
+" TODO: Look at sodapopcan/vim-twiggy and lambdalisue/gina.vim if I ever need
+" to work with git on the daily.
+"
 Plug 'AndrewRadev/switch.vim'                              " alternate between strings quickly
 Plug 'Valloric/ListToggle'                                 " Toggling quickfix and location list
 Plug 'Valloric/MatchTagAlways'                             " always highlight matching tags
