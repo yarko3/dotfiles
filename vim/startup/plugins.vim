@@ -4,6 +4,7 @@ call plug#begin('~/.vim/plugged')
 " to work with git on the daily.
 "
 Plug 'AndrewRadev/switch.vim'                              " alternate between strings quickly
+Plug 'FelikZ/ctrlp-py-matcher'                             " fast CtrlP matcher
 Plug 'Valloric/ListToggle'                                 " Toggling quickfix and location list
 Plug 'Valloric/MatchTagAlways'                             " always highlight matching tags
 Plug 'Yggdroot/indentLine'                                 " show indent
@@ -85,6 +86,9 @@ let g:ctrlp_cmd = 'call CdLocalRoot()<CR>:CtrlP'
 
 " increase maximum window height
 let g:ctrlp_match_window = 'max:20'
+
+" Quick matching function.
+let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 
 " QFEnter
 let g:qfenter_keymap={}
