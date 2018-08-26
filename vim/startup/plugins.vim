@@ -70,14 +70,21 @@ let g:airline_theme='tomorrow'
 
 " CtrlP
 let g:ctrlp_working_path_mode='ra'
-let g:ctrlp_use_caching=0
+  let g:ctrlp_use_caching = 0
+
+if executable('rg')
+  let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
+elseif executable('ag')
+  let g:ctrlp_user_command = 'ag --literal --files-with-matches --nocolor --hidden -g "" %s'
+else
 let g:ctrlp_user_command = {
     \ 'types': {
         \ 1: ['.git/', 'cd %s && git ls-files -oc --exclude-standard'],
         \ 2: ['.hg/', 'hg --cwd %s locate -I .'],
     \ },
-    \ 'fallback': 'ag --literal --files-with-matches --nocolor --hidden -g "" %s'
+    \ 'fallback': 'find %s -type f'
 \ }
+endif
 
 " cd into local working directory root if present, use CtrlP to find project root (.git, .hg, etc.) otherwise
 "
@@ -101,7 +108,10 @@ nmap gs :call CdRoot()<CR><plug>(GrepperOperator)
 xmap gs :call CdRoot()<CR><plug>(GrepperOperator)
 
 let my_grepper_options = {
-      \ 'tools': ['ag'],
+      \ 'tools': ['rg', 'ag'],
+      \ 'rg': {
+      \   'grepprg': 'rg --vimgrep --no-heading',
+      \ },
       \ 'ag': {
       \   'grepprg': 'ag --nogroup --nocolor --column',
       \ },
