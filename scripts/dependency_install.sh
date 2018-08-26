@@ -57,11 +57,21 @@ rainbarf_install() {
   echo "Finished installing rainbarf locally"
 }
 
+ripgrep_install() {
+  if [ -x "$(command -v rg)" ]; then
+    echo "rg already installed"
+  else
+    echo "rg is not installed; consider downloading a binary from https://github.com/BurntSushi/ripgrep/releases"
+  fi
+
+}
+
 install() {
   fzf_install
   fonts_install
   local_install
   rainbarf_install
+  ripgrep_install
 }
 
 create_ssh
