@@ -103,9 +103,6 @@ set wildignorecase
 " Extend functionality of the % key's matching
 runtime macros/matchit.vim
 
-" Tool to use for Grepper
-set grepprg="git"
-
 " What to use for gq
 set formatprg=par\ -w80
 
