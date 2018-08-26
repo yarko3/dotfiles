@@ -15,6 +15,9 @@ bindkey -M "viins" kk vi-cmd-mode
 # Unmap ctrl-s as "stop flow"
 stty stop undef
 
+# Shift-tab to cycle backwards in autocompletions
+bindkey '^[[Z' reverse-menu-complete
+
 # don't autocorrect
 unsetopt correctall
 
