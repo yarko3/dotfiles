@@ -40,7 +40,7 @@ fi
 # set default editor (probably my lightweight vim masquerading as vi)
 export EDITOR=vi
 
-# Reduce delay to 0.1 seconds for switching to normal mode with ESC
+# Reduce delay for switching to normal mode with ESC
 export KEYTIMEOUT=20
 
 PATH=~/bin:$PATH
