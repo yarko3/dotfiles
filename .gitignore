@@ -15,6 +15,9 @@ vim/autoload/plug.vim.old
 /* spell files are pretty big */
 vim/spell/en.utf-8.*
 
+/* compiled spell files */
+vim/spell/*.spl
+
 /* don't include nvim symlink in repo; it is handled by dotbot */
 vim/init.vim
 
