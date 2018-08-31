@@ -33,3 +33,7 @@ function! AtWork()
   endif
 endfunction
 
+" Compile spell files.
+function! MakeSpell()
+  silent mkspell! ~/.vim/spell/extra-words.add
+endfunction
