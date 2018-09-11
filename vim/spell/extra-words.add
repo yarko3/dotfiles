@@ -6,6 +6,7 @@ PRs
 RPC
 SDLC
 SMED
+Senyuta
 Yarko
 Yaroslav
 blackbox
@@ -15,9 +16,9 @@ cppcheck
 github
 https
 io
+namespace
 proto
 protos
 pseudorandom
 shellscripts
 xor
-namespace
