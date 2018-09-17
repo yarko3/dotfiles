@@ -2,6 +2,7 @@
 
 sudo apt-get install \
   cmake \
+  colordiff \
   curl \
   git \
   htop \
