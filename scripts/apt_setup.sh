@@ -4,6 +4,7 @@ sudo apt-get install \
   cmake \
   colordiff \
   curl \
+  exuberant-ctags\
   git \
   htop \
   perl \
