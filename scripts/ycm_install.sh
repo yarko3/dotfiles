@@ -5,11 +5,11 @@ cmd='./install.py --clang-complete || echo "YCM Build failed. Are its dependenci
 
 cd ~/.vim/plugged/YouCompleteMe || exit
 if [ -f third_party/ycmd/ycm_core.so ]; then
-    if [ "$1" == "-f" ]; then
-        eval "$cmd"
-    else
-        echo "YCM already built. Use the -f flag to rebuild it."
-    fi
-else
+  if [ "$1" == "-f" ]; then
     eval "$cmd"
+  else
+    echo "YCM already built. Use the -f flag to rebuild it."
+  fi
+else
+  eval "$cmd"
 fi
