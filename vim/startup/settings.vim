@@ -194,6 +194,9 @@ set lazyredraw
 " Stop certain movements from always going to the first character of a line.
 set nostartofline
 
+" Smoother redraws
+set ttyfast
+
 "" ============================================================================
 ""                               Auto Commands
 "" ============================================================================
