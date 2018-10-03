@@ -61,11 +61,12 @@ ripgrep_install() {
   if [ -x "$(command -v rg)" ]; then
     echo "rg already installed"
   else
-    echo "rg is not installed; downloading from https://github.com/BurntSushi/ripgrep/releases"
+    ripgrep_releases_website="https://github.com/BurntSushi/ripgrep/releases"
+    echo "rg is not installed; downloading from $ripgrep_releases_website"
     latest_ripgrep_version="0.10.0"
     latest_ripgrep_filename="ripgrep_${latest_ripgrep_version}_amd64.deb"
     cd /tmp
-    curl -LO "https://github.com/BurntSushi/ripgrep/releases/download/$latest_ripgrep_version/$latest_ripgrep_filename"
+    curl -LO "$ripgrep_releases_website/download/$latest_ripgrep_version/$latest_ripgrep_filename"
     sudo dpkg -i "$latest_ripgrep_filename"
     rm -f "$latest_ripgrep_filename"
     cd -
