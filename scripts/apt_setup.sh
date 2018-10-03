@@ -8,6 +8,7 @@ sudo apt-get install \
   git \
   htop \
   perl \
+  ripgrep \
   shellcheck \
   silversearcher-ag \
   tmux \
