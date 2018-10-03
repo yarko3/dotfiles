@@ -57,28 +57,11 @@ rainbarf_install() {
   echo "Finished installing rainbarf locally"
 }
 
-ripgrep_install() {
-  if [ -x "$(command -v rg)" ]; then
-    echo "rg already installed"
-  else
-    ripgrep_releases_website="https://github.com/BurntSushi/ripgrep/releases"
-    echo "rg is not installed; downloading from $ripgrep_releases_website"
-    latest_ripgrep_version="0.10.0"
-    latest_ripgrep_filename="ripgrep_${latest_ripgrep_version}_amd64.deb"
-    cd /tmp
-    curl -LO "$ripgrep_releases_website/download/$latest_ripgrep_version/$latest_ripgrep_filename"
-    sudo dpkg -i "$latest_ripgrep_filename"
-    rm -f "$latest_ripgrep_filename"
-    cd -
-  fi
-}
-
 install() {
   fzf_install
   fonts_install
   local_install
   rainbarf_install
-  ripgrep_install
 }
 
 create_ssh
