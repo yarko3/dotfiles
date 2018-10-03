@@ -100,9 +100,6 @@ set wildignore+=*.o,*.d,00*,nohup.out,tags,.hs-tags,*.hi,*.gcno,*.gcda,*.fasl,*.
 " Ignore case sensitivity in filenames
 set wildignorecase
 
-" Extend functionality of the % key's matching
-runtime macros/matchit.vim
-
 " What to use for gq
 set formatprg=par\ -w80
 
