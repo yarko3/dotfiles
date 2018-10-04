@@ -2,6 +2,7 @@ call plug#begin('~/.vim/plugged')
 
 " TODO: Look at sodapopcan/vim-twiggy and lambdalisue/gina.vim if I ever need
 " to work with git on the daily.
+" TODO: Use mg979/vim-visual-multi for multiple cursors.
 
 Plug 'AndrewRadev/switch.vim'                              " alternate between strings quickly
 Plug 'FelikZ/ctrlp-py-matcher'                             " fast CtrlP matcher
