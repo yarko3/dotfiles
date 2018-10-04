@@ -2,7 +2,7 @@ call plug#begin('~/.vim/plugged')
 
 " TODO: Look at sodapopcan/vim-twiggy and lambdalisue/gina.vim if I ever need
 " to work with git on the daily.
-"
+
 Plug 'AndrewRadev/switch.vim'                              " alternate between strings quickly
 Plug 'FelikZ/ctrlp-py-matcher'                             " fast CtrlP matcher
 Plug 'Valloric/ListToggle'                                 " Toggling quickfix and location list
@@ -15,12 +15,14 @@ Plug 'ctrlpvim/ctrlp.vim'                                  " File searchin and o
 Plug 'derekwyatt/vim-fswitch', { 'for': 'cpp' }            " Fastswitch (cpp/h toggle)
 Plug 'derekwyatt/vim-scala', { 'for': 'scala' }            " Scala syntax
 Plug 'easymotion/vim-easymotion'                           " I get around round round round
+Plug 'glts/vim-textobj-comment'                            " provides ac, ic, aC text targets
 Plug 'haya14busa/incsearch.vim'                            " show search as you type
 Plug 'haya14busa/vim-poweryank'                            " yank over SSH
 Plug 'honza/vim-snippets'                                  " snippets repo
 Plug 'junegunn/limelight.vim'                              " tone down surrounding code
 Plug 'junegunn/vim-easy-align'                             " align things
 Plug 'junegunn/vim-peekaboo'                               " show content of registers
+Plug 'kana/vim-textobj-user'                               " user-defined text objects (dependency for other plugins)
 Plug 'luochen1990/rainbow'                                 " Rainbow parenthesis coloring
 Plug 'machakann/vim-highlightedyank'                       " highlight on yank
 Plug 'majutsushi/tagbar'                                   " view ctags awesomely
