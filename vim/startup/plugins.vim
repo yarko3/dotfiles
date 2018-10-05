@@ -2,7 +2,6 @@ call plug#begin('~/.vim/plugged')
 
 " TODO: Look at sodapopcan/vim-twiggy and lambdalisue/gina.vim if I ever need
 " to work with git on the daily.
-" TODO: Use mg979/vim-visual-multi for multiple cursors.
 
 Plug 'AndrewRadev/switch.vim'                              " alternate between strings quickly
 Plug 'FelikZ/ctrlp-py-matcher'                             " fast CtrlP matcher
@@ -40,7 +39,7 @@ Plug 'sirver/ultisnips'                                    " snippet engine with
 Plug 'szw/vim-maximizer'                                   " maximize a split
 Plug 'talek/obvious-resize'                                " resize splits
 Plug 'terryma/vim-expand-region'                           " quickly expand visual regions
-Plug 'terryma/vim-multiple-cursors'                        " multiple cursors
+Plug 'mg979/vim-visual-multi', { 'branch': 'test' }        " multiple cursors
 Plug 'tmux-plugins/vim-tmux-focus-events'                  " focusing help with tmux and certain plugins
 Plug 'tommcdo/vim-exchange'                                " cx operator for exchanging text regions
 Plug 'tpope/vim-commentary'                                " Comment/uncomment operator
