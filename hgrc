@@ -8,6 +8,7 @@ rev = reset
 st = status
 
 [ui]
-color=always
+color = always
+paginate = never
 merge = vimdiff
 username = ysenyuta
