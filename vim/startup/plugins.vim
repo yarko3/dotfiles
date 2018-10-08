@@ -96,7 +96,7 @@ if l:local_pwd == ""
 else
   echom "Found local project directory " . l:local_pwd
   exec "cd " . l:local_pwd
-  let g:ctrlp_working_path_mode = 'c'
+  let g:ctrlp_working_path_mode = ''
 endif
 :CtrlP
 endfunction
