@@ -15,9 +15,7 @@ let g:local_project_roots=[]
 function! GetLocalRoot()
   let l:cur_dir = expand('%:p')
   for l:local_root_pat in g:local_project_roots
-    echom "Comparing l:cur_dir " . l:cur_dir . " with l:local_root_pat " . l:local_root_pat
     if l:cur_dir =~ l:local_root_pat
-      echom "Matched l:cur_dir " . l:cur_dir . " with l:local_root_pat " . l:local_root_pat
       return matchstr(l:cur_dir, l:local_root_pat)
     endif
   endfor
