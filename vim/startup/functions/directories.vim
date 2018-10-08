@@ -10,20 +10,31 @@ endfunction
 " append local project root directories
 let g:local_project_roots=[]
 
+" Returns local project root in g:local_project_roots if one is found,
+" empty string otherwise.
+function! GetLocalRoot()
+  let l:cur_dir = expand('%:p')
+  for l:local_root_pat in g:local_project_roots
+    echom "Comparing l:cur_dir " . l:cur_dir . " with l:local_root_pat " . l:local_root_pat
+    if l:cur_dir =~ l:local_root_pat
+      echom "Matched l:cur_dir " . l:cur_dir . " with l:local_root_pat " . l:local_root_pat
+      return matchstr(l:cur_dir, l:local_root_pat)
+    endif
+  endfor
+  return ""
+endfunction
+
 " cd into a local root that matches something
 " in g:local_project_roots
 "
 " returns 1 if a local root was found and cd'd into;
 " 0 otherwise
 function! CdLocalRoot()
-  let l:cur_dir = expand('%:p')
-  for l:local_root_pat in g:local_project_roots
-    if l:cur_dir =~ l:local_root_pat
-      let l:local_root_dir = matchstr(l:cur_dir, l:local_root_pat)
-      exec "cd " . l:local_root_dir
-      return 1
-    endif
-  endfor
+  let l:local_root_dir = GetLocalRoot()
+  if l:local_root_dir != ""
+    exec "cd " . l:local_root_dir
+    return 1
+  endif
   return 0
 endfunction
 

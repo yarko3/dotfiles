@@ -71,7 +71,6 @@ let g:airline_powerline_fonts=1
 let g:airline_theme='tomorrow'
 
 " CtrlP
-let g:ctrlp_working_path_mode='ra'
 let g:ctrlp_use_caching = 0
 
 if executable('rg')
@@ -88,10 +87,21 @@ let g:ctrlp_user_command = {
 \ }
 endif
 
-" cd into local working directory root if present, use CtrlP to find project root (.git, .hg, etc.) otherwise
-"
-" Note: this seems to work but the canonical way is to provide the working path to CtrlP as an arg
-let g:ctrlp_cmd = 'call CdLocalRoot()<CR>:CtrlP'
+" cd into local working directory root if present,
+" use CtrlP to find project root (.git, .hg, etc.) otherwise.
+function! MyCtrlP()
+let l:local_pwd = GetLocalRoot()
+if l:local_pwd == ""
+  let g:ctrlp_working_path_mode = 'ra'
+else
+  echom "Found local project directory " . l:local_pwd
+  exec "cd " . l:local_pwd
+  let g:ctrlp_working_path_mode = 'c'
+endif
+:CtrlP
+endfunction
+
+let g:ctrlp_cmd = 'call MyCtrlP()'
 
 " increase maximum window height
 let g:ctrlp_match_window = 'max:20'
