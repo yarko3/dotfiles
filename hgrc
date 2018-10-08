@@ -1,5 +1,13 @@
-[ui]
-merge = vimdiff
+[alias]
+a = add
+ci = commit
+df = diff
+pl = sync
+pu = uploadchain
+rev = reset
+st = status
 
 [ui]
+color=always
+merge = vimdiff
 username = ysenyuta
