@@ -295,6 +295,10 @@ highlight SignifySignChange cterm=bold ctermbg=235  ctermfg=227
 " refresh on focus
 let g:signify_update_on_focusgained = 1
 
+let g:signify_vcs_cmds = {
+\  'hg':       'hg diff --color=never --config defaults.diff= --nodates -U0 -- %f',
+\}
+
 " brightest
 let g:brightest#pattern = '\k\+'
 let g:brightest#highlight = {
