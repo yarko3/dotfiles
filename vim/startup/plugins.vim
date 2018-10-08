@@ -328,3 +328,9 @@ let g:startify_enable_unsafe = 1
 " lengthmatters
 call lengthmatters#highlight('ctermbg=239')
 let g:lengthmatters_excluded = ['unite', 'tagbar', 'startify', 'gundo', 'vimshell', 'w3m', 'nerdtree', 'help', 'qf', 'dirvish', 'netrw']
+
+" vim-visual-multi
+let g:VM_default_mappings = 0
+let g:VM_maps = {}
+let g:VM_maps['Find Under']         = '<C-n>'
+let g:VM_maps['Find Subword Under'] = '<C-n>'
