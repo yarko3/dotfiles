@@ -6,6 +6,18 @@ function! Cdfile()
   endif
 endfunction
 
+" Returns the current dir of buffer.
+function! GetCurDir()
+  let l:cur_file_dir = expand('%:p')
+  if l:cur_file_dir != ""
+    return l:cur_file_dir
+  elseif &ft ==# "netrw"
+    return b:netrw_curdir
+  else
+    echom "Could identify environment in GetCurDir!"
+  endif
+endfunction
+
 " local_project_roots must contain full paths or regexes of paths;
 " append local project root directories
 let g:local_project_roots=[]
@@ -13,7 +25,7 @@ let g:local_project_roots=[]
 " Returns local project root in g:local_project_roots if one is found,
 " empty string otherwise.
 function! GetLocalRoot()
-  let l:cur_dir = expand('%:p')
+  let l:cur_dir = GetCurDir()
   for l:local_root_pat in g:local_project_roots
     if l:cur_dir =~ l:local_root_pat
       return matchstr(l:cur_dir, l:local_root_pat)
