@@ -94,7 +94,6 @@ let l:local_pwd = GetLocalRoot()
 if l:local_pwd == ""
   let g:ctrlp_working_path_mode = 'ra'
 else
-  echom "Found local project directory " . l:local_pwd
   exec "cd " . l:local_pwd
   let g:ctrlp_working_path_mode = ''
 endif
