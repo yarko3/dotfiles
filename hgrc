@@ -1,5 +1,6 @@
 [alias]
 a = add
+ca = amend
 ci = commit
 df = diff
 pl = sync
