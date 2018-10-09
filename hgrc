@@ -13,3 +13,5 @@ color = always
 paginate = never
 merge = vimdiff
 username = ysenyuta
+
+%include ~/.hgrc_local
