@@ -10,6 +10,6 @@ st = status
 
 [ui]
 color = always
-paginate = never
+paginate = True
 merge = vimdiff
 username = ysenyuta
