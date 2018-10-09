@@ -3,10 +3,14 @@ a = add
 ca = amend
 ci = commit
 df = diff
+dfs = outgoing -p
 pl = sync
 pu = uploadchain
 rev = reset
 st = status
+
+[diff]
+git = True
 
 [ui]
 color = always
