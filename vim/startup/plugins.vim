@@ -39,7 +39,7 @@ Plug 'sirver/ultisnips'                                    " snippet engine with
 Plug 'szw/vim-maximizer'                                   " maximize a split
 Plug 'talek/obvious-resize'                                " resize splits
 Plug 'terryma/vim-expand-region'                           " quickly expand visual regions
-Plug 'mg979/vim-visual-multi', { 'branch': 'test' }        " multiple cursors
+Plug 'mg979/vim-visual-multi'                              " multiple cursors
 Plug 'tmux-plugins/vim-tmux-focus-events'                  " focusing help with tmux and certain plugins
 Plug 'tommcdo/vim-exchange'                                " cx operator for exchanging text regions
 Plug 'tpope/vim-commentary'                                " Comment/uncomment operator
