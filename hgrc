@@ -6,6 +6,7 @@ df = diff
 dfs = outgoing -p
 pl = sync
 pu = uploadchain
+rb = histedit
 rev = reset
 st = status
 
