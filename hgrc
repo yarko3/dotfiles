@@ -2,6 +2,7 @@
 a = add
 ca = amend
 ci = commit
+cii = commit --interactive
 df = diff
 dfs = outgoing -p
 pl = sync
