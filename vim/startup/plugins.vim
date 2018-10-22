@@ -259,6 +259,7 @@ let g:ale_linters={
       \  'cpp': ['cppcheck'],
       \  'java': ['checkstyle'],
       \  'zsh': ['shellcheck'],
+      \  'markdown': [],
       \}
 highlight ALEErrorSign   ctermfg=9  ctermbg=235
 highlight ALEWarningSign ctermfg=11 ctermbg=235
