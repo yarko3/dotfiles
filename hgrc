@@ -5,9 +5,10 @@ ci = commit
 cii = commit --interactive
 df = diff
 dfs = outgoing -p
+he = histedit
 pl = sync
 pu = uploadchain
-rb = histedit
+rb = rebase
 rev = reset
 st = status
 
