@@ -6,6 +6,7 @@ cii = commit --interactive
 df = diff
 dfs = outgoing -p
 he = histedit
+hec = histedit --continue
 pl = sync
 pu = uploadchain
 rb = rebase
