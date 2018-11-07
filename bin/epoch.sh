@@ -1,11 +1,5 @@
 #!/usr/bin/env bash
 
-usage()
-{
-  echo "$0 usage: <epoch_seconds|epoch_millis>"
-  exit 1
-}
-
 convert_to_epoch_secs()
 {
   epoch=$1
@@ -18,7 +12,7 @@ convert_to_epoch_secs()
   fi
 }
 
-print_epoch_secs()
+print_human_readable()
 {
   if date --version 2>/dev/null | grep "GNU coreutils" > /dev/null 2>&1; then
     date -d @"$1"
@@ -27,14 +21,14 @@ print_epoch_secs()
   fi
 }
 
-main()
+print_epoch_seconds()
 {
   epoch_seconds=$(convert_to_epoch_secs "$1")
-  print_epoch_secs "$epoch_seconds"
+  print_human_readable "$epoch_seconds"
 }
 
 if [ $# -eq 1 ]; then
-  main "$1"
+  print_epoch_seconds "$1"
 else
-  usage
+  date +'%s'
 fi
