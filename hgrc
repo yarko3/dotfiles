@@ -18,6 +18,7 @@ git = True
 
 [trainingwheels]
 prevent-push-dirty=false
+prevent-update-noarg=false
 
 [ui]
 color = always
