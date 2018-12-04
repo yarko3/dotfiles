@@ -27,6 +27,7 @@ Plug 'luochen1990/rainbow'                                 " Rainbow parenthesis
 Plug 'machakann/vim-highlightedyank'                       " highlight on yank
 Plug 'majutsushi/tagbar'                                   " view ctags awesomely
 Plug 'mbbill/undotree'                                     " history visualizer
+Plug 'mg979/vim-visual-multi'                              " multiple cursors
 Plug 'mhinz/vim-grepper'                                   " Asynchronous Grep -> QuickFix List
 Plug 'mhinz/vim-signify'                                   " changes in gutter
 Plug 'mhinz/vim-startify'                                  " dope start screen
@@ -39,7 +40,6 @@ Plug 'sirver/ultisnips'                                    " snippet engine with
 Plug 'szw/vim-maximizer'                                   " maximize a split
 Plug 'talek/obvious-resize'                                " resize splits
 Plug 'terryma/vim-expand-region'                           " quickly expand visual regions
-Plug 'mg979/vim-visual-multi'                              " multiple cursors
 Plug 'tmux-plugins/vim-tmux-focus-events'                  " focusing help with tmux and certain plugins
 Plug 'tommcdo/vim-exchange'                                " cx operator for exchanging text regions
 Plug 'tpope/vim-commentary'                                " Comment/uncomment operator
