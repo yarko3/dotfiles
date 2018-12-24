@@ -14,22 +14,11 @@ inoremap kk <Esc>
 "" ============================================================================
 ""                        Normal/Visual Mode Mappings
 "" ============================================================================
-" If hl search is off, starting a new search or moving enables it
-" remove zz if the jumps are too much
-nnoremap * :set hlsearch<CR>*zz
-nnoremap # :set hlsearch<CR>#zz
-nnoremap n :set hlsearch<CR>nzz
-nnoremap N :set hlsearch<CR>Nzz
-
 " This makes j and k work on "screen lines" instead of on "file lines"; now, when
 " we have a long line that wraps to multiple screen lines, j and k behave as we
 " expect them to.
 nnoremap j gj
 nnoremap k gk
-
-" search highlights incrementally everywhere instead of just the first match
-map / :set hlsearch<CR><Plug>(incsearch-forward)
-map ? :set hlsearch<CR><Plug>(incsearch-backward)
 
 " Basically you press * or # to search for the current selection
 vnoremap <silent> * y:let @/ = @"<CR>n:set hlsearch<CR>
@@ -94,7 +83,6 @@ nnoremap <Leader>fk      :FSSplitAbove<CR>
 nnoremap <Leader>fl      :FSSplitRight<CR>
 nnoremap <Leader>gg      :call CdRoot()<CR>:Grepper<CR>
 nnoremap <Leader>goog    :VimuxRunCommand("google ".input("Google for: "))<CR>
-nnoremap <Leader>h       :set hlsearch! hlsearch?<CR>
 nnoremap <Leader>jf      :YcmCompleter FixIt<CR>
 nnoremap <Leader>jj      :YcmCompleter GoTo<CR>
 nnoremap <Leader>jr      :YcmRestartServer<CR>
