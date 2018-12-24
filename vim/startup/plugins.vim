@@ -334,17 +334,3 @@ let g:VM_default_mappings = 0
 let g:VM_maps = {}
 let g:VM_maps['Find Under']         = '<C-n>'
 let g:VM_maps['Find Subword Under'] = '<C-n>'
-
-" incsearch
-let g:incsearch#auto_nohlsearch = 1
-map / <Plug>(incsearch-forward)
-map ? <Plug>(incsearch-backward)
-map g/ <Plug>(incsearch-stay)
-
-" Next or previous match
-map n <Plug>(incsearch-nohl-n)zz
-map N <Plug>(incsearch-nohl-N)zz
-map * <Plug>(incsearch-nohl-*)zz
-map # <Plug>(incsearch-nohl-#)zz
-map g* <Plug>(incsearch-nohl-g*)zz
-map g# <Plug>(incsearch-nohl-g#)zz
