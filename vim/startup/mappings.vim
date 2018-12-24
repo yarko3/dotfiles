@@ -53,10 +53,6 @@ nnoremap <silent> <Tab>j :<C-U>ObviousResizeDown<CR>
 nnoremap <silent> <Tab>k :<C-U>ObviousResizeUp<CR>
 nnoremap <silent> <Tab>l :<C-U>ObviousResizeRight<CR>
 
-" Easier indent visual blocks
-vnoremap > >gv
-vnoremap < <gv
-
 "" =============================================================================
 ""                           Command Mode Mappings
 "" =============================================================================
