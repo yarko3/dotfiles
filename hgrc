@@ -8,6 +8,7 @@ dfs = outgoing -p
 he = histedit
 hec = histedit --continue
 pl = sync
+pla = sync --all
 pu = uploadchain
 rb = rebase
 rev = reset
