@@ -9,7 +9,4 @@ set keymap vi-command
 "gg": beginning-of-history
 "G": end-of-history
 set keymap vi-insert
-"jj": vi-movement-mode
-"jk": vi-movement-mode
 "kj": vi-movement-mode
-"kk": vi-movement-mode

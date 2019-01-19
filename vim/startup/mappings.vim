@@ -9,7 +9,6 @@ cmap w!! w !sudo tee > /dev/null %
 "" ============================================================================
 " Leaving insert mode with some ups and downs
 inoremap kj <Esc>
-inoremap kk <Esc>
 
 "" ============================================================================
 ""                        Normal/Visual Mode Mappings

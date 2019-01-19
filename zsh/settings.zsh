@@ -10,7 +10,6 @@ bindkey -M "vicmd" 'j' history-substring-search-down
 # Run `bindkey -l` to see a list of modes, and `bindkey -M foo` to see a list of commands active in mode foo
 # Move to vim escape mode
 bindkey -M "viins" kj vi-cmd-mode
-bindkey -M "viins" kk vi-cmd-mode
 
 # Unmap ctrl-s as "stop flow"
 stty stop undef
