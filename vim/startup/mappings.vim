@@ -26,9 +26,9 @@ nnoremap N :set hlsearch<CR>Nzz
 nnoremap j gj
 nnoremap k gk
 
-" search highlights incrementally everywhere instead of just the first match
-map / :set hlsearch<CR><Plug>(incsearch-forward)
-map ? :set hlsearch<CR><Plug>(incsearch-backward)
+" enable hlsearch (and, implicitly, incsearch) when searching
+nnoremap / :set hlsearch<CR>/
+nnoremap ? :set hlsearch<CR>?
 
 " Basically you press * or # to search for the current selection
 vnoremap <silent> * y:let @/ = @"<CR>n:set hlsearch<CR>

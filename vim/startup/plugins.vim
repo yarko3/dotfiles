@@ -3,7 +3,6 @@ call plug#begin('~/.vim/plugged')
 " TODO: Look at sodapopcan/vim-twiggy and lambdalisue/gina.vim if I ever need
 " to work with git on the daily.
 
-Plug 'AndrewRadev/switch.vim'                              " alternate between strings quickly
 Plug 'FelikZ/ctrlp-py-matcher'                             " fast CtrlP matcher
 Plug 'Valloric/ListToggle'                                 " Toggling quickfix and location list
 Plug 'Valloric/MatchTagAlways'                             " always highlight matching tags
@@ -17,7 +16,6 @@ Plug 'derekwyatt/vim-fswitch', { 'for': 'cpp' }            " Fastswitch (cpp/h t
 Plug 'derekwyatt/vim-scala', { 'for': 'scala' }            " Scala syntax
 Plug 'easymotion/vim-easymotion'                           " I get around round round round
 Plug 'glts/vim-textobj-comment'                            " provides ac, ic, aC text targets
-Plug 'haya14busa/incsearch.vim'                            " show search as you type
 Plug 'haya14busa/vim-poweryank'                            " yank over SSH
 Plug 'honza/vim-snippets'                                  " snippets repo
 Plug 'junegunn/limelight.vim'                              " tone down surrounding code
@@ -49,7 +47,6 @@ Plug 'tpope/vim-repeat'                                    " Dot operator for pl
 Plug 'tpope/vim-rhubarb'                                   " github support
 Plug 'tpope/vim-surround'                                  " Surrounding text
 Plug 'tpope/vim-vinegar'                                   " netrw improvement
-Plug 'uguu-org/vim-matrix-screensaver', { 'on': 'Matrix' } " dope screensaver
 Plug 'unblevable/quick-scope'                              " show what f do
 Plug 'vim-airline/vim-airline-themes'                      " Status line themes
 Plug 'w0rp/ale'                                            " Syntax checking
@@ -313,14 +310,6 @@ autocmd BufReadPost fugitive://* set bufhidden=delete
 
 " quick-scope
 let g:qs_highlight_on_keys = [ 'f', 'F', 't', 'T' ]
-
-" switch
-let g:switch_mapping = '<leader>n'
-let g:switch_custom_definitions = [
-\   ['true', 'false'],
-\   ['EXPECT_EQ', 'EXPECT_NE', 'EXPECT_TRUE', 'EXPECT_FALSE', 'EXPECT_THAT'],
-\   ['small', 'medium', 'large'],
-\ ]
 
 " startify
 " speed up a bit
