@@ -1,5 +1,5 @@
 [alias]
-a = add
+a = addremove
 ca = amend
 ci = commit
 cii = commit --interactive
