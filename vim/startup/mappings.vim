@@ -73,7 +73,6 @@ nnoremap <Leader><Space> :CtrlPBuffer<CR>
 nnoremap <Leader>=       mmgg=G`m
 nnoremap <Leader>bj      :sp<CR>:b#<CR>
 nnoremap <Leader>bl      :vsp<CR>:b#<CR>
-nnoremap <Leader>cmd     :VimuxPromptCommand<CR>
 nnoremap <Leader>cmt     :call CmtSection("")<Left><Left>
 nnoremap <Leader>cx      :!chmod a+x %<CR>
 nnoremap <Leader>df      :Gdiff<CR>
@@ -93,6 +92,7 @@ nnoremap <Leader>h       :set hlsearch! hlsearch?<CR>
 nnoremap <Leader>jf      :YcmCompleter FixIt<CR>
 nnoremap <Leader>jj      :YcmCompleter GoTo<CR>
 nnoremap <Leader>jr      :YcmRestartServer<CR>
+nnoremap <Leader>k       :VimuxPromptCommand<CR>
 nnoremap <Leader>lg      :Glog<CR>
 nnoremap <Leader>ll      :Limelight!!<CR>
 nnoremap <Leader>lt      :LengthmattersToggle<CR>
