@@ -21,8 +21,7 @@ nnoremap <silent> n :set hlsearch<CR>nzz:ShowSearchIndex<CR>
 nnoremap <silent> N :set hlsearch<CR>Nzz:ShowSearchIndex<CR>
 
 " Homerow navigation
-" Note: These mappings give up the default for K and J but are way more
-" intuitive.
+" Note: These mappings give up the default for J :/
 nnoremap H 0
 nnoremap J L
 nnoremap K H
@@ -96,6 +95,7 @@ nnoremap <Leader>gg      :call CdRoot()<CR>:Grepper<CR>
 nnoremap <Leader>h       :set hlsearch! hlsearch?<CR>
 nnoremap <Leader>jf      :YcmCompleter FixIt<CR>
 nnoremap <Leader>jj      :YcmCompleter GoTo<CR>
+nnoremap <Leader>jk      :YcmCompleter GoToReferences<CR>
 nnoremap <Leader>jr      :YcmRestartServer<CR>
 nnoremap <Leader>k       :VimuxPromptCommand<CR>
 nnoremap <Leader>lg      :Glog<CR>
