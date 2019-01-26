@@ -22,7 +22,6 @@
         create: true
         path: vimrc
     ~/.vimrc_minimal: vimrc_minimal
-    ~/.ycm_extra_conf.py: ycm_extra_conf.py
     ~/bin: bin/
     ~/.zsh: zsh/
     ~/.zshenv: zshenv
