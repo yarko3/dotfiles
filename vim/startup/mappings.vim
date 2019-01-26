@@ -71,8 +71,6 @@ let mapleader = "\<Space>"
 
 nnoremap <Leader><Space> :CtrlPBuffer<CR>
 nnoremap <Leader>=       mmgg=G`m
-nnoremap <Leader>bj      :sp<CR>:b#<CR>
-nnoremap <Leader>bl      :vsp<CR>:b#<CR>
 nnoremap <Leader>cmt     :call CmtSection("")<Left><Left>
 nnoremap <Leader>cx      :!chmod a+x %<CR>
 nnoremap <Leader>df      :Gdiff<CR>
@@ -87,7 +85,6 @@ nnoremap <Leader>fj      :FSSplitBelow<CR>
 nnoremap <Leader>fk      :FSSplitAbove<CR>
 nnoremap <Leader>fl      :FSSplitRight<CR>
 nnoremap <Leader>gg      :call CdRoot()<CR>:Grepper<CR>
-nnoremap <Leader>goog    :VimuxRunCommand("google ".input("Google for: "))<CR>
 nnoremap <Leader>h       :set hlsearch! hlsearch?<CR>
 nnoremap <Leader>jf      :YcmCompleter FixIt<CR>
 nnoremap <Leader>jj      :YcmCompleter GoTo<CR>
@@ -111,7 +108,7 @@ nnoremap <Leader>vh      :abo vsp<CR>:e %:h<CR>
 nnoremap <Leader>vj      :sp<CR>:e %:h<CR>
 nnoremap <Leader>vk      :abo sp<CR>:e %:h<CR>
 nnoremap <Leader>vl      :vsp<CR>:e %:h<CR>
-nnoremap <Leader>vv      ::e %:h<CR>
+nnoremap <Leader>vv      :e %:h<CR>
 nnoremap <Leader>w       :call StripTabsAndTrailingWhitespaces()<CR>:w<CR>
 nnoremap <Leader>x       :q<CR>
 nnoremap <Leader>z       :MaximizerToggle<CR>
