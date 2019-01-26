@@ -20,6 +20,14 @@ nnoremap <silent> # :set hlsearch<CR>#zz:ShowSearchIndex<CR>
 nnoremap <silent> n :set hlsearch<CR>nzz:ShowSearchIndex<CR>
 nnoremap <silent> N :set hlsearch<CR>Nzz:ShowSearchIndex<CR>
 
+" Homerow navigation
+" Note: These mappings give up the default for K and J but are way more
+" intuitive.
+nnoremap H 0
+nnoremap J L
+nnoremap K H
+nnoremap L $
+
 " This makes j and k work on "screen lines" instead of on "file lines"; now, when
 " we have a long line that wraps to multiple screen lines, j and k behave as we
 " expect them to.
