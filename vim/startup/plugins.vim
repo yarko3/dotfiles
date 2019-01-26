@@ -178,6 +178,13 @@ let g:ycm_always_populate_location_list=1
 let g:ycm_goto_buffer_command = 'vertical-split'
 let g:ycm_complete_in_comments = 0
 
+" Configure quickfix window settings when opened from YCM.
+function! s:CustomizeYcmQuickFixWindow()
+  " Set the window height.
+  20wincmd _
+endfunction
+autocmd User YcmQuickFixOpened call s:CustomizeYcmQuickFixWindow()
+
 if !AtWork()
   let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/cpp/.ycm_extra_conf.py'
 endif
