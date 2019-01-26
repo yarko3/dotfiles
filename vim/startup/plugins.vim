@@ -181,7 +181,7 @@ let g:ycm_complete_in_comments = 0
 " Configure quickfix window settings when opened from YCM.
 function! s:CustomizeYcmQuickFixWindow()
   " Set the window height.
-  20wincmd _
+  15wincmd _
 endfunction
 autocmd User YcmQuickFixOpened call s:CustomizeYcmQuickFixWindow()
 
