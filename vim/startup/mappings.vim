@@ -15,10 +15,10 @@ inoremap kj <Esc>
 "" ============================================================================
 " If hl search is off, starting a new search or moving enables it
 " remove zz if the jumps are too much
-nnoremap * :set hlsearch<CR>*zz
-nnoremap # :set hlsearch<CR>#zz
-nnoremap n :set hlsearch<CR>nzz
-nnoremap N :set hlsearch<CR>Nzz
+nnoremap <silent> * :set hlsearch<CR>*zz:ShowSearchIndex<CR>
+nnoremap <silent> # :set hlsearch<CR>#zz:ShowSearchIndex<CR>
+nnoremap <silent> n :set hlsearch<CR>nzz:ShowSearchIndex<CR>
+nnoremap <silent> N :set hlsearch<CR>Nzz:ShowSearchIndex<CR>
 
 " This makes j and k work on "screen lines" instead of on "file lines"; now, when
 " we have a long line that wraps to multiple screen lines, j and k behave as we
@@ -27,8 +27,8 @@ nnoremap j gj
 nnoremap k gk
 
 " enable hlsearch (and, implicitly, incsearch) when searching
-nnoremap / :set hlsearch<CR>/
-nnoremap ? :set hlsearch<CR>?
+nnoremap <silent> / :set hlsearch<CR>/
+nnoremap <silent> ? :set hlsearch<CR>?
 
 " Basically you press * or # to search for the current selection
 vnoremap <silent> * y:let @/ = @"<CR>n:set hlsearch<CR>
