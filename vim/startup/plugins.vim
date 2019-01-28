@@ -7,7 +7,6 @@ Plug 'FelikZ/ctrlp-py-matcher'                             " fast CtrlP matcher
 Plug 'Valloric/ListToggle'                                 " Toggling quickfix and location list
 Plug 'Valloric/MatchTagAlways'                             " always highlight matching tags
 Plug 'Yggdroot/indentLine'                                 " show indent
-Plug 'andymass/vim-matchup'                                " extend functionality of %
 Plug 'benmills/vimux'                                      " Vim and Tmux Integration
 Plug 'bling/vim-airline'                                   " Status line
 Plug 'christoomey/vim-tmux-navigator'                      " Window/Pane switching with Vim and Tmux
