@@ -77,7 +77,7 @@ nnoremap <Leader><Space> :CtrlPBuffer<CR>
 nnoremap <Leader>=       mmgg=G`m
 nnoremap <Leader>cmt     :call CmtSection("")<Left><Left>
 nnoremap <Leader>cx      :!chmod a+x %<CR>
-nnoremap <Leader>df      :Gdiff<CR>
+nnoremap <Leader>df      :SignifyDiff<CR>
 nnoremap <Leader>doff    :windo diffoff<CR>
 nnoremap <Leader>dom     :Gdiff origin/master<CR>
 nnoremap <Leader>dt      :windo diffthis<CR>
