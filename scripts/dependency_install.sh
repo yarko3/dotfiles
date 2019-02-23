@@ -57,11 +57,26 @@ rainbarf_install() {
   echo "Finished installing rainbarf locally"
 }
 
+shfmt_install() {
+  echo "Installing shfmt..."
+  if hash shfmt; then
+    echo "shfmt already installed"
+  fi
+
+  if ! hash go; then
+    echo "go executable not found!"
+    return
+  fi
+
+  go get -u mvdan.cc/sh/cmd/shfmt
+}
+
 install() {
   fzf_install
   fonts_install
   local_install
   rainbarf_install
+  shfmt_install
 }
 
 create_ssh
