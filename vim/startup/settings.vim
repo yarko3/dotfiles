@@ -206,8 +206,9 @@ autocmd FileType xml setlocal equalprg=xmllint\ --format\ -
 " Markdown
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
-" set commentstring to not be /* for cpp
+" set appropriate commentstrings
 autocmd FileType cpp setlocal commentstring=//\ %s
+autocmd FileType textpb setlocal commentstring=#\ %s
 
 " formatting for netrw
 autocmd FileType netrw setlocal nolist colorcolumn=
