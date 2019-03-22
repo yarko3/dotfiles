@@ -93,6 +93,7 @@ nnoremap <Leader>h       :set hlsearch! hlsearch?<CR>
 nnoremap <Leader>jf      :YcmCompleter FixIt<CR>
 nnoremap <Leader>jj      :YcmCompleter GoTo<CR>
 nnoremap <Leader>jk      :YcmCompleter GoToReferences<CR>
+nnoremap <Leader>jl      :vsp<CR>:LspDefinition<CR>
 nnoremap <Leader>jr      :YcmRestartServer<CR>
 nnoremap <Leader>k       :VimuxPromptCommand<CR>
 nnoremap <Leader>lg      :Glog<CR>
