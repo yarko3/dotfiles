@@ -82,7 +82,7 @@ rename_tmux_window() {
     if [ -z "$tmux_name" ]; then
       tmux_name=$(basename "$(pwd)")
     fi
-    tmux rename-window -t "$(tmux display-message -p '#I')" "$tmux_name"
+    tmux rename-window -t "$TMUX_WINDOW" "$tmux_name"
   fi
 }
 
