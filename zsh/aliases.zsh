@@ -17,6 +17,7 @@ alias lower="tr '[:upper:]' '[:lower:]'"
 alias m='make -j'
 alias mt='make -j test'
 alias p='ps --sort=start_time aux | grep '
+alias reboot='sudo reboot now'
 alias t='tmux'
 alias tmux='tmux -2u'
 alias to_clipboard='xclip -selection c'
