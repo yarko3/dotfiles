@@ -1,0 +1,1 @@
+post-invoke='sudo -u $USER dmenu_path > /dev/null'

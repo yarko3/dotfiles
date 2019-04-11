@@ -40,6 +40,11 @@
     ~/.xsession: xsession
 
 - shell:
+    # link plugin doesn't support linking with sudo (https://github.com/anishathalye/dotbot/issues/125).
+  - command: sudo ln -s $(realpath ./dpkg.cfg.d/dmenu-path-update-hook) /etc/dpkg/dpkg.cfg.d/dmenu-path-update-hook
+    stdin: true
+    stdout: true
+    stderr: true
   - [git submodule update --init --recursive, Updating submodules]
   - command: ./scripts/dependency_install.sh
     stdin: true
