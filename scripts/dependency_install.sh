@@ -59,8 +59,9 @@ rainbarf_install() {
 
 shfmt_install() {
   echo "Installing shfmt..."
-  if hash shfmt; then
+  if [ -x ~/go/bin/shfmt ]; then
     echo "shfmt already installed"
+    return
   fi
 
   if ! hash go; then
