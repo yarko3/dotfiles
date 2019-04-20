@@ -12,13 +12,10 @@ Plug 'bling/vim-airline'                                  " Status line
 Plug 'christoomey/vim-tmux-navigator'                     " Window/Pane switching with Vim and Tmux
 Plug 'ctrlpvim/ctrlp.vim'                                 " File searchin and opening
 Plug 'derekwyatt/vim-fswitch', { 'for': 'cpp' }           " Fastswitch (cpp/h toggle)
-Plug 'derekwyatt/vim-scala', { 'for': 'scala' }           " Scala syntax
 Plug 'easymotion/vim-easymotion'                          " I get around round round round
-Plug 'glts/vim-textobj-comment'                           " provides ac, ic, aC text targets
 Plug 'haya14busa/vim-poweryank'                           " yank over SSH
 Plug 'henrik/vim-indexed-search'                          " show count for search results
 Plug 'honza/vim-snippets'                                 " snippets repo
-Plug 'junegunn/limelight.vim'                             " tone down surrounding code
 Plug 'junegunn/vim-easy-align'                            " align things
 Plug 'junegunn/vim-peekaboo'                              " show content of registers
 Plug 'kana/vim-textobj-user'                              " user-defined text objects (dependency for other plugins)
@@ -46,10 +43,8 @@ Plug 'tommcdo/vim-exchange'                               " cx operator for exch
 Plug 'tpope/vim-commentary'                               " Comment/uncomment operator
 Plug 'tpope/vim-fugitive'                                 " Git Wrapper
 Plug 'tpope/vim-repeat'                                   " Dot operator for plugins
-Plug 'tpope/vim-rhubarb'                                  " github support
 Plug 'tpope/vim-surround'                                 " Surrounding text
 Plug 'tpope/vim-vinegar'                                  " netrw improvement
-Plug 'unblevable/quick-scope'                             " show what f do
 Plug 'vim-airline/vim-airline-themes'                     " Status line themes
 Plug 'w0rp/ale'                                           " Syntax checking
 Plug 'wesQ3/vim-windowswap'                               " swap splits
@@ -316,9 +311,6 @@ let g:brightest#enable_highlight_all_window = 1
 " Fugitive
 " automatically delete fugitive buffers when leaving them
 autocmd BufReadPost fugitive://* set bufhidden=delete
-
-" quick-scope
-let g:qs_highlight_on_keys = [ 'f', 'F', 't', 'T' ]
 
 " startify
 " speed up a bit

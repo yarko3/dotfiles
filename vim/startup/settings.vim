@@ -7,25 +7,11 @@ set nocompatible
 scriptencoding utf-8
 set encoding=utf-8
 
-" =============================================================================
-"                                   GVim
-" =============================================================================
-if has("gui_running")
-  set guioptions-=M    " Don't load Menu bar
-  colorscheme desert
-else
-  set t_Co=256
-  colorscheme Tomorrow-Night-Eighties
-endif
-
 "" ============================================================================
 ""                                  Globals
 "" ============================================================================
 " Determine Environment
 let g:platform=GetPlatform()
-
-" To enable the saving and restoring of screen positions.
-let g:screen_size_restore_pos=1
 
 "" ============================================================================
 ""                            Editing and Moving
@@ -72,9 +58,6 @@ set autowrite
 " automatically reload file on change
 set autoread
 
-" Configure the :make command
-set makeprg=make
-
 " make diff windows match by adding filler
 set diffopt+=filler
 
@@ -100,9 +83,6 @@ set wildignore+=*.o,*.d,00*,nohup.out,tags,.hs-tags,*.hi,*.gcno,*.gcda,*.fasl,*.
 " Ignore case sensitivity in filenames
 set wildignorecase
 
-" What to use for gq
-set formatprg=par\ -w80
-
 " Additional words for the spell checker
 set spellfile=~/.vim/spell/extra-words.add
 
@@ -123,14 +103,15 @@ set shm=at
 " use system clipboard by default
 set clipboard=unnamedplus
 
-" Instead of failing a command because of unsaved changes, instead raise a
-" dialogue asking if you wish to save changed files.
+" Instead of failing a command because of unsaved changes, raise a dialogue
+" asking if you wish to save changed files.
 set confirm
 
 "" ============================================================================
 ""                                Appearance
 "" ============================================================================
-set guifont=Cousine\ for\ Powerline\ Regular\ 10
+colorscheme Tomorrow-Night-Eighties
+set t_Co=256
 
 " Show line numbers
 set number
@@ -155,7 +136,7 @@ set splitbelow
 " Splits (don't) resize on open/close
 set noequalalways
 
-" Incremental Search and Highlighting Results
+" Incremental search and sighlighting sesults
 set incsearch
 set hlsearch
 
