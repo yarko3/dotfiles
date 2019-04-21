@@ -8,7 +8,9 @@ sudo apt-get install \
   git \
   htop \
   perl \
+  ranger \
   ripgrep \
+  screenkey \
   shellcheck \
   silversearcher-ag \
   tmux \
