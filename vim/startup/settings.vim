@@ -7,6 +7,10 @@ set nocompatible
 scriptencoding utf-8
 set encoding=utf-8
 
+" Moving colorscheme + t_Co down to the 'Appearance' section breaks the
+" colorscheme.
+set t_Co=256
+colorscheme Tomorrow-Night-Eighties
 "" ============================================================================
 ""                                  Globals
 "" ============================================================================
@@ -110,9 +114,6 @@ set confirm
 "" ============================================================================
 ""                                Appearance
 "" ============================================================================
-colorscheme Tomorrow-Night-Eighties
-set t_Co=256
-
 " Show line numbers
 set number
 set relativenumber
