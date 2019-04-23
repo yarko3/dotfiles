@@ -78,8 +78,9 @@ set t_ut=
 " When multiple completions are possible, show all
 set wildmenu
 
-" Complete only up to point of ambiguity, like the shell does
-set wildmode=list:longest
+" Complete only up to point of ambiguity, like the shell does; allow to tab
+" through
+set wildmode=longest,list,full
 
 " Ignoring files (see :help wildignore)
 set wildignore+=*.o,*.d,00*,nohup.out,tags,.hs-tags,*.hi,*.gcno,*.gcda,*.fasl,*.pyc
