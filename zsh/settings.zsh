@@ -49,6 +49,25 @@ export ZSH_THEME_GIT_PROMPT_PREFIX=""
 export ZSH_THEME_GIT_PROMPT_SUFFIX=""
 
 #  ============================================================================
+#                                 Cursor
+#  ============================================================================
+# ZLE hooks for prompt's vi mode status
+function zle-line-init zle-keymap-select {
+# Change the cursor style depending on keymap mode.
+case $KEYMAP {
+  vicmd)
+    printf '\e[0 q' # Box.
+    ;;
+
+  viins|main)
+    printf '\e[6 q' # Vertical bar.
+    ;;
+  }
+}
+zle -N zle-line-init
+zle -N zle-keymap-select
+
+#  ============================================================================
 #                                   SSH
 #  ============================================================================
 # start agent
