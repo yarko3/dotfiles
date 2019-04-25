@@ -177,6 +177,10 @@ set nostartofline
 " Smoother redraws
 set ttyfast
 
+" Change cursor style for insert mode.
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[0 q"
+
 "" ============================================================================
 ""                               Auto Commands
 "" ============================================================================
