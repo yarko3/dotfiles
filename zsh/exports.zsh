@@ -26,10 +26,6 @@ fi
 
 export DISABLE_AUTO_TITLE="true"
 
-if [ "$TERM" != "screen-256color" ]; then
-    export TERM=xterm-256color
-fi
-
 if [ "$(uname)" = "Darwin" ]; then
     export MACOS="true"
 fi
