@@ -112,14 +112,6 @@ set clipboard=unnamedplus
 " asking if you wish to save changed files.
 set confirm
 
-" Don't timeout on mappings
-set notimeout
-set ttimeout
-
-" Allows arbitrary selections in visual block mode, where there may not be any
-" characters.
-set virtualedit=all
-
 "" ============================================================================
 ""                                Appearance
 "" ============================================================================
