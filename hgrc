@@ -23,6 +23,9 @@ git = True
 prevent-push-dirty=false
 prevent-update-noarg=false
 
+[extensions]
+uncommit =
+
 [ui]
 color = always
 paginate = never
