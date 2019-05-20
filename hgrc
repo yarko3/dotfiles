@@ -28,8 +28,10 @@ uncommit =
 
 [ui]
 color = always
-paginate = never
 merge = vimdiff
 username = ysenyuta
+
+[pager]
+pager = LESS='FRX' less
 
 %include ~/.hgrc_local
