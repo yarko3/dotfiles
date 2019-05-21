@@ -206,6 +206,6 @@ autocmd FileType netrw setlocal nolist colorcolumn=
 " equalize splits when window resized
 autocmd VimResized * exe "normal! \<c-w>="
 
-" Set cursor to block when in vim
-autocmd VimEnter * silent exec "! echo -ne '\e[0 q'"
-autocmd VimLeave * silent exec "! echo -ne '\e[6 q'"
+" Set cursor to block/i-beam when in non-insert/insert modes.
+autocmd InsertLeave * silent exec "! echo -ne '\e[0 q'"
+autocmd InsertEnter * silent exec "! echo -ne '\e[6 q'"
