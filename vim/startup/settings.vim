@@ -29,6 +29,9 @@ set cindent
 " make backspace traverse between lines
 set backspace=indent,eol,start
 
+" simulate indent level when wrapping lines
+set breakindent
+
 " oh no, mouse
 set mouse=a
 
