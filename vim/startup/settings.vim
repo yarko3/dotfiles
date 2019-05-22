@@ -31,6 +31,8 @@ set backspace=indent,eol,start
 
 " simulate indent level when wrapping lines
 set breakindent
+" shift over when wrapping lines
+set breakindentopt+=shift:2
 
 " oh no, mouse
 set mouse=a
