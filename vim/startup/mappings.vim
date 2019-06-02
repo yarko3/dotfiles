@@ -83,6 +83,7 @@ nnoremap <Leader>dom     :Gdiff origin/master<CR>
 nnoremap <Leader>dt      :windo diffthis<CR>
 nnoremap <Leader>dum     :Gdiff upstream/master<CR>
 nnoremap <Leader>ew      <C-S-w>=
+nnoremap <Leader>ex      :call VimuxRunCommand(expand('%:p'))<CR>
 nnoremap <Leader>ff      :FSHere<CR>
 nnoremap <Leader>fh      :FSSplitLeft<CR>
 nnoremap <Leader>fj      :FSSplitBelow<CR>
