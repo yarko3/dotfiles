@@ -2,6 +2,11 @@
 
 SCRIPTS_DIR=~/.dotfiles/scripts
 
+# execute any local commands needed before the rest
+if which uu_local_before > /dev/null; then
+  uu_local_before
+fi
+
 if [ "$1" != "--no-sync" ]; then
   # pull/push/update submodules of personal repos
   $SCRIPTS_DIR/sync_repos.sh
