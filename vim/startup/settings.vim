@@ -117,6 +117,9 @@ set clipboard=unnamedplus
 " asking if you wish to save changed files.
 set confirm
 
+" Enables regex in search patterns.
+set magic
+
 "" ============================================================================
 ""                                Appearance
 "" ============================================================================
