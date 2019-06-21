@@ -35,8 +35,8 @@ nnoremap <silent> / :set hlsearch<CR>/
 nnoremap <silent> ? :set hlsearch<CR>?
 
 " Press * or # to search for the current selection
-vnoremap <silent> * y:let @/ = @"<CR>n:set hlsearch<CR>
-vnoremap <silent> # y:let @? = @"<CR>n:set hlsearch<CR>
+vnoremap <silent> * :<C-u>call VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>:set hlsearch<CR>
+vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>:set hlsearch<CR>
 
 " Swap to last buffer
 nnoremap <silent> <F8> :b#<CR>
