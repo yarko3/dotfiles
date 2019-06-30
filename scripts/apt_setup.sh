@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# Essentials
 sudo apt-get install \
   cmake \
   colordiff \
@@ -8,15 +9,21 @@ sudo apt-get install \
   git \
   htop \
   perl \
-  ranger \
   ripgrep \
-  screenkey \
   shellcheck \
-  silversearcher-ag \
   tmux \
   tree \
   vim-nox \
   xclip \
-  xmobar \
-  xmonad \
   zsh
+
+# Xmonad things
+sudo apt-get install \
+  xmobar \
+  xmonad
+
+# Nice-to-haves
+sudo apt-get install \
+  ranger \
+  screenkey \
+  teensy-loader-cli
