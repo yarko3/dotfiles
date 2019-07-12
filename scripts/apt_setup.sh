@@ -25,5 +25,10 @@ sudo apt-get install \
 # Nice-to-haves
 sudo apt-get install \
   ranger \
-  screenkey \
+  screenkey
+
+# QMK things
+sudo apt-get install \
+  avr-libc \
+  gcc-avr \
   teensy-loader-cli
