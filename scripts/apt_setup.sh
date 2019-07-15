@@ -30,5 +30,15 @@ sudo apt-get install \
 # QMK things
 sudo apt-get install \
   avr-libc \
+  binutils-arm-none-eabi \
+  binutils-avr \
+  dfu-programmer \
+  dfu-util \
+  gcc \
+  gcc-arm-none-eabi \
   gcc-avr \
-  teensy-loader-cli
+  libnewlib-arm-none-eabi \
+  teensy-loader-cli \
+  unzip \
+  wget \
+  zip
