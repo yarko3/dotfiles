@@ -7,6 +7,7 @@ sudo apt-get install \
   curl \
   exuberant-ctags \
   git \
+  golang \
   htop \
   perl \
   ripgrep \
