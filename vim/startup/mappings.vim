@@ -96,7 +96,6 @@ nnoremap <Leader>jj      :YcmCompleter GoTo<CR>
 nnoremap <Leader>jk      :YcmCompleter GoToReferences<CR>
 nnoremap <Leader>jl      :vsp<CR>:LspDefinition<CR>
 nnoremap <Leader>jr      :YcmRestartServer<CR>
-nnoremap <Leader>k       :VimuxPromptCommand<CR>
 nnoremap <Leader>lg      :Glog<CR>
 nnoremap <Leader>lt      :LengthmattersToggle<CR>
 nnoremap <Leader>mi      :VimuxInspectRunner<CR>
