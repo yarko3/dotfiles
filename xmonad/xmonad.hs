@@ -1,4 +1,5 @@
 import Control.Applicative
+import Data.Default
 import System.Exit
 import System.IO (hPutStrLn, Handle)
 import XMonad
@@ -117,8 +118,8 @@ myKeys conf@XConfig {XMonad.modMask = modMask} = M.fromList $
     , ((modMask,                    xK_r      ), spawn restartCmd)
 
     -- cycling screen focus
-    , ((modMask,                    xK_h      ), onPrevNeighbour W.view)
-    , ((modMask,                    xK_l      ), onNextNeighbour W.view)
+    , ((modMask,                    xK_h      ), onPrevNeighbour def W.view)
+    , ((modMask,                    xK_l      ), onNextNeighbour def W.view)
 
     -- media keys
     , ((0, 0x1008FF11), spawn "amixer set Master 5%-")
