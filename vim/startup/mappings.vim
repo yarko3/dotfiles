@@ -30,6 +30,10 @@ vnoremap L $
 nnoremap j gj
 nnoremap k gk
 
+" I don't use s but I do use % a lot
+nnoremap s %
+vnoremap s %
+
 " enable hlsearch (and, implicitly, incsearch) when searching
 nnoremap <silent> / :set hlsearch<CR>/
 nnoremap <silent> ? :set hlsearch<CR>?
