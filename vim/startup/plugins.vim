@@ -175,7 +175,7 @@ let g:ycm_goto_buffer_command = 'vertical-split'
 let g:ycm_complete_in_comments = 0
 
 " For some unicode reason ycm errors on peekaboo.
-let g:ycm_filetype_blacklist = { 'peekaboo': 1, 'startify': 1 }
+let g:ycm_filetype_blacklist = { 'peekaboo': 1, 'startify': 1, 'tagbar': 1 }
 
 " Configure quickfix window settings when opened from YCM.
 function! s:CustomizeYcmQuickFixWindow()
