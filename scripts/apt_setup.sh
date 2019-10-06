@@ -10,6 +10,7 @@ sudo apt-get install \
   golang \
   htop \
   perl \
+  python-dev \ # YouCompleteMe
   ripgrep \
   shellcheck \
   tmux \
