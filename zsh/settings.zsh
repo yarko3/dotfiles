@@ -34,7 +34,7 @@ bindkey '^ ' autosuggest-accept
 ## ============================================================================
 ##                                  Prompt
 ## ============================================================================
-git_prompt_info_mine() {
+vcs_prompt_info_mine() {
   vcs_prompt_name_text="$(vcs_prompt_name 2>/dev/null)"
   if [[ -n $vcs_prompt_name_text ]]; then
     echo " <$vcs_prompt_name_text>"
@@ -43,7 +43,7 @@ git_prompt_info_mine() {
   fi
   rename_tmux_window > /dev/null 2>&1
 }
-export PROMPT='%{$fg[green]%}%n@%m %{$fg[cyan]%}%c%{$fg[yellow]%}$(git_prompt_info_mine)%{$reset_color%} $ '
+export PROMPT='%{$fg[green]%}%n@%m %{$fg[cyan]%}%c%{$fg[yellow]%}$(vcs_prompt_info_mine)%{$reset_color%} $ '
 
 export ZSH_THEME_GIT_PROMPT_PREFIX=""
 export ZSH_THEME_GIT_PROMPT_SUFFIX=""
