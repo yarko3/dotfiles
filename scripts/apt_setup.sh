@@ -27,7 +27,6 @@ sudo apt-get install \
 # Nice-to-haves
 sudo apt-get install \
   mpv \
-  ranger \
   screenkey
 
 # QMK things
