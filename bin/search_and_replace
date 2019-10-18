@@ -46,7 +46,7 @@ replace_in_dir()
         exit
     fi
 
-    grep_results=$(eval "$grep_cmd" "$search" "$target"/* 2> /dev/null)
+    grep_results=$(eval "$grep_cmd" "\"$search\"" "$target"/* 2> /dev/null)
 
     if [ "$grep_results" = '' ]; then
         echo "search string=$search not found in dir=$target"
