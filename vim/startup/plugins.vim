@@ -353,3 +353,8 @@ map  <expr> <Plug>(indexed-search-after)  <SID>vim_indexed_search_after()
 imap        <Plug>(indexed-search-after)  <Nop>
 
 cmap <expr> <CR> "\<CR>" . (getcmdtype() =~ '[/?]' ? "\<Plug>(indexed-search-after)" : '')
+
+" cpp-enhanced-highlight
+let g:cpp_class_scope_highlight = 1
+let g:cpp_member_variable_highlight = 1
+let g:cpp_class_decl_highlight = 1
