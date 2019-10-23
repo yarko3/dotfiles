@@ -111,7 +111,13 @@ set whichwrap+=<,>,h,l,[,]
 set shm=at
 
 " use system clipboard by default
-set clipboard=unnamedplus
+if has('clipboard')
+  if has('unnamedplus')
+    set clipboard=unnamed,unnamedplus
+  else
+    set clipboard=unnamed
+  endif
+endif
 
 " Instead of failing a command because of unsaved changes, raise a dialogue
 " asking if you wish to save changed files.
