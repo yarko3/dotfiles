@@ -49,7 +49,7 @@ Plug 'vim-airline/vim-airline-themes'                     " Status line themes
 Plug 'w0rp/ale'                                           " Syntax checking
 Plug 'wesQ3/vim-windowswap'                               " swap splits
 Plug 'whatyouhide/vim-lengthmatters'                      " highlight portion of line that's longer than limit
-Plug 'wsdjeg/FlyGrep.vim'                                 " Projectile async search
+Plug 'yarko3/FlyGrep.vim'                                 " Projectile async search
 Plug 'yssl/QFEnter'                                       " quickfix open in different places
 
 if g:platform == "Linux" && !AtWork()
