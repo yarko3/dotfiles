@@ -62,8 +62,6 @@ set smarttab
 " Allow switching off modified buffers without warning
 set hidden
 
-" Autosave before :make and other commands; autoreload when file mod
-set autowrite
 " automatically reload file on change
 set autoread
 
