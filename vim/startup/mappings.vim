@@ -93,7 +93,7 @@ nnoremap <Leader>fh      :FSSplitLeft<CR>
 nnoremap <Leader>fj      :FSSplitBelow<CR>
 nnoremap <Leader>fk      :FSSplitAbove<CR>
 nnoremap <Leader>fl      :FSSplitRight<CR>
-nnoremap <Leader>gg      :call CdRoot()<CR>:Grepper<CR>
+nnoremap <Leader>gg      :call CdRoot()<CR>:silent FlyGrep<CR>
 nnoremap <Leader>h       :set hlsearch! hlsearch?<CR>
 nnoremap <Leader>jf      :YcmCompleter FixIt<CR>
 nnoremap <Leader>jj      :YcmCompleter GoTo<CR>
