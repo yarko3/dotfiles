@@ -93,7 +93,7 @@ nnoremap <Leader>fh      :FSSplitLeft<CR>
 nnoremap <Leader>fj      :FSSplitBelow<CR>
 nnoremap <Leader>fk      :FSSplitAbove<CR>
 nnoremap <Leader>fl      :FSSplitRight<CR>
-nnoremap <Leader>gg      :call CdRoot()<CR>:FlyGrep<CR>
+nnoremap <Leader>g       :call CdRoot()<CR>:FlyGrep<CR>
 nnoremap <Leader>h       :set hlsearch! hlsearch?<CR>
 nnoremap <Leader>jf      :YcmCompleter FixIt<CR>
 nnoremap <Leader>jj      :YcmCompleter GoTo<CR>
@@ -129,8 +129,8 @@ nnoremap <Leader>z       :MaximizerToggle<CR>
 nmap <Leader>e <Plug>(easymotion-overwin-f)
 
 " align things from visual mode as well as a motion
-xmap <Leader>ga <Plug>(EasyAlign)
-nmap <Leader>ga <Plug>(EasyAlign)
+xmap <Leader>a <Plug>(EasyAlign)
+nmap <Leader>a <Plug>(EasyAlign)
 
 " yank over SSH
 map <Leader>y <Plug>(operator-poweryank-osc52)
