@@ -14,7 +14,7 @@ function! GetCurDir()
   elseif &ft ==# "netrw"
     return b:netrw_curdir
   else
-    echom "Could identify environment in GetCurDir!"
+    return ""
   endif
 endfunction
 
