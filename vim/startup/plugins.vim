@@ -361,4 +361,6 @@ let g:cpp_member_variable_highlight = 1
 let g:cpp_class_decl_highlight = 1
 
 " FlyGrep
-let g:FlyGrep_input_delay = 0
+" Set up a small delay that allows for additional keystrokes to be hit before
+" searching.
+let g:FlyGrep_input_delay = 100
