@@ -16,7 +16,7 @@ fi
 $SCRIPTS_DIR/update_env.sh
 
 # vim
-vim +PlugUpdate +PlugUpgrade +qall
+vim +PlugUpdate +qall
 
 # tmux
 $SCRIPTS_DIR/install_tmux_plugins.sh
