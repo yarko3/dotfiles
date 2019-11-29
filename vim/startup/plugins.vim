@@ -46,7 +46,7 @@ Plug 'tpope/vim-repeat'                                                         
 Plug 'tpope/vim-surround'                                                       " Surrounding text
 Plug 'tpope/vim-vinegar'                                                        " netrw improvement
 Plug 'vim-airline/vim-airline-themes'                                           " Status line themes
-Plug 'w0rp/ale'                                                                 " Syntax checking
+Plug 'dense-analysis/ale'                                                       " Syntax checking
 Plug 'wesQ3/vim-windowswap'                                                     " swap splits
 Plug 'whatyouhide/vim-lengthmatters'                                            " highlight portion of line that's longer than limit
 Plug 'yarko3/FlyGrep.vim'                                                       " Projectile async search
