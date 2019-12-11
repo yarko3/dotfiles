@@ -364,3 +364,18 @@ let g:cpp_class_decl_highlight = 1
 " Set up a small delay that allows for additional keystrokes to be hit before
 " searching.
 let g:FlyGrep_input_delay = 100
+
+" vim-tmux-navigator
+
+" some builds of vim don't respect the vim-tmux-navigator mappings in netrw.
+augroup netrw_hack
+  autocmd!
+  autocmd filetype netrw call NetrwMappings()
+augroup END
+
+function! NetrwMappings()
+  nnoremap <buffer> <silent> <c-h> :TmuxNavigateLeft<cr>
+  nnoremap <buffer> <silent> <c-j> :TmuxNavigateDown<cr>
+  nnoremap <buffer> <silent> <c-k> :TmuxNavigateUp<cr>
+  nnoremap <buffer> <silent> <c-l> :TmuxNavigateRight<cr>
+endfunction
