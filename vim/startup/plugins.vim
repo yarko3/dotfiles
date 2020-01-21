@@ -11,6 +11,7 @@ Plug 'benmills/vimux'                                                           
 Plug 'bling/vim-airline'                                                        " Status line
 Plug 'christoomey/vim-tmux-navigator'                                           " Window/Pane switching with Vim and Tmux
 Plug 'ctrlpvim/ctrlp.vim'                                                       " File searchin and opening
+Plug 'dense-analysis/ale'                                                       " Syntax checking
 Plug 'derekwyatt/vim-fswitch', { 'for': 'cpp' }                                 " Fastswitch (cpp/h toggle)
 Plug 'easymotion/vim-easymotion'                                                " I get around round round round
 Plug 'haya14busa/vim-poweryank'                                                 " yank over SSH
@@ -46,7 +47,6 @@ Plug 'tpope/vim-repeat'                                                         
 Plug 'tpope/vim-surround'                                                       " Surrounding text
 Plug 'tpope/vim-vinegar'                                                        " netrw improvement
 Plug 'vim-airline/vim-airline-themes'                                           " Status line themes
-Plug 'dense-analysis/ale'                                                       " Syntax checking
 Plug 'wesQ3/vim-windowswap'                                                     " swap splits
 Plug 'whatyouhide/vim-lengthmatters'                                            " highlight portion of line that's longer than limit
 Plug 'yarko3/FlyGrep.vim'                                                       " Projectile async search
