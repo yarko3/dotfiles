@@ -33,9 +33,9 @@ restartCmd = "if type xmonad; then xmonad --recompile && \
 wsWORK_TERM    = "WORK_TERM"
 wsWORK_BROWSER = "WORK_BROWSER"
 wsMEDIA        = "MEDIA"
-wsNOTES        = "NOTES"
+wsSCRATCH      = "SCRATCH"
 
-myWorkspaces = [wsWORK_TERM, wsWORK_BROWSER, wsMEDIA, wsNOTES]
+myWorkspaces = [wsWORK_TERM, wsWORK_BROWSER, wsMEDIA, wsSCRATCH]
 
 projects :: [Project]
 projects =
@@ -55,9 +55,9 @@ projects =
                                                 spawnOn wsMEDIA "spotify"
             }
 
-    , Project   { projectName       = wsNOTES
-                , projectDirectory  = "~/notes"
-                , projectStartHook  = Just $ spawn (myTerminal ++ " -x 'vim'")
+    , Project   { projectName       = wsSCRATCH
+                , projectDirectory  = "~/"
+                , projectStartHook  = Nothing
         }
     ]
 
