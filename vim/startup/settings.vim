@@ -154,6 +154,9 @@ set noequalalways
 set incsearch
 set hlsearch
 
+" enable search to to wrap around the buffer
+set wrapscan
+
 " Always show status bar
 set laststatus=2
 
