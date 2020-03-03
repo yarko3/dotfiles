@@ -4,6 +4,7 @@ call plug#begin('~/.vim/plugged')
 " to work with git on the daily.
 
 Plug 'FelikZ/ctrlp-py-matcher'                                                  " fast CtrlP matcher
+Plug 'JamshedVesuna/vim-markdown-preview'                                       " Markdown rendering
 Plug 'Valloric/ListToggle'                                                      " Toggling quickfix and location list
 Plug 'Valloric/MatchTagAlways'                                                  " always highlight matching tags
 Plug 'Yggdroot/indentLine'                                                      " show indent
@@ -379,3 +380,9 @@ function! NetrwMappings()
   nnoremap <buffer> <silent> <c-k> :TmuxNavigateUp<cr>
   nnoremap <buffer> <silent> <c-l> :TmuxNavigateRight<cr>
 endfunction
+
+" vim-markdown-preview
+let vim_markdown_preview_github=1
+let vim_markdown_preview_browser='Google Chrome'
+let vim_markdown_preview_hotkey='<C-m>'
+
