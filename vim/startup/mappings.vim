@@ -95,7 +95,6 @@ nnoremap <Leader>fk      :FSSplitAbove<CR>
 nnoremap <Leader>fl      :FSSplitRight<CR>
 nnoremap <Leader>gf      :call CdRoot()<CR>:FlyGrep<CR>
 nnoremap <Leader>gg      :call CdRoot()<CR>:Grepper<CR>
-nnoremap <Leader>h       :set hlsearch! hlsearch?<CR>
 nnoremap <Leader>jf      :YcmCompleter FixIt<CR>
 nnoremap <Leader>jj      :YcmCompleter GoTo<CR>
 nnoremap <Leader>jk      :YcmCompleter GoToReferences<CR>
@@ -122,6 +121,11 @@ nnoremap <Leader>vv      :e %:h<CR>
 nnoremap <Leader>w       :call StripTabsAndTrailingWhitespaces()<CR>:w<CR>
 nnoremap <Leader>x       :q<CR>
 nnoremap <Leader>z       :MaximizerToggle<CR>
+
+" =============================================================================
+"                          Silent Leader Mappings
+" =============================================================================
+nnoremap <silent> <Leader>h :set hlsearch!<CR>
 
 " =============================================================================
 "                          <Plug> Leader Mappings
