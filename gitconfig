@@ -69,3 +69,5 @@
 # Allow local customizations
 [include]
     path = ~/.gitconfig_local
+[pull]
+	rebase = false
