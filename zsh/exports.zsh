@@ -36,6 +36,19 @@ export EDITOR=vi
 # Reduce delay for switching to normal mode with ESC
 export KEYTIMEOUT=20
 
+ export FZF_DEFAULT_OPTS=" \
+  --inline-info \
+  --reverse \
+  --exact \
+  --color=fg+:#F8F8F8,bg+:#515559,pointer:#F8F8F8,marker:226 \
+  --bind=ctrl-e:select-all+accept \
+  --bind=ctrl-d:half-page-down \
+  --bind=ctrl-u:half-page-up
+  --bind=ctrl-t:toggle+down
+  --bind=ctrl-b:toggle+up
+  --bind=ctrl-g:select-all+accept \
+  "
+
 PATH=~/bin:$PATH
 PATH=~/bin_local:$PATH
 PATH=$PATH:~/.local/bin
