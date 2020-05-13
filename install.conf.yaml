@@ -30,7 +30,6 @@
     ~/.bashrc:
         force: true
         path: bashrc
-    ~/.fzf: fzf/
     ~/.hgrc: hgrc
     ~/.xmonad:
         force: true

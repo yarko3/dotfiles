@@ -6,6 +6,7 @@ sudo apt-get install \
   colordiff \
   curl \
   exuberant-ctags \
+  fzf \
   git \
   golang \
   htop \

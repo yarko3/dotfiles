@@ -16,12 +16,6 @@ create_ssh() {
   chmod 0700 "$HOME"/.ssh
 }
 
-fzf_install() {
-  echo "Installing fzf..."
-  "$DOTFILES_DIR"/fzf/install --key-bindings --completion --no-update-rc
-  echo "Finished installing fzf"
-}
-
 fonts_install() {
   echo "Installing fonts..."
   if ! [ -d ~/.local/share/fonts ]; then
@@ -73,7 +67,6 @@ shfmt_install() {
 }
 
 install() {
-  fzf_install
   fonts_install
   local_install
   rainbarf_install
