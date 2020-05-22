@@ -12,6 +12,7 @@ sudo apt-get install \
   htop \
   perl \
   python-dev \
+  python3-dev \
   ripgrep \
   shellcheck \
   tmux \
