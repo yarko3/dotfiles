@@ -7,6 +7,7 @@ sudo apt-get install \
   curl \
   exuberant-ctags \
   fzf \
+  gawk \ # for tmux-fingers
   git \
   golang \
   htop \
