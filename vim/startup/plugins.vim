@@ -322,6 +322,10 @@ autocmd BufReadPost fugitive://* set bufhidden=delete
 " startify
 " speed up a bit
 let g:startify_enable_unsafe = 1
+let g:startify_lists = [
+      \ { 'type': 'dir',       'header': ['   MRU '. getcwd()] },
+      \ { 'type': 'files',     'header': ['   MRU']            },
+      \ ]
 
 " lengthmatters
 call lengthmatters#highlight('ctermbg=239')
