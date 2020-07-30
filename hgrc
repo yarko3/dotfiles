@@ -20,6 +20,12 @@ ut = up tip
 [diff]
 git = True
 
+[commands]
+// Increase the amount of context lines shown.
+split.interactive.unified=8
+commit.interactive.unified=8
+revert.interactive.unified=8
+
 [trainingwheels]
 prevent-push-dirty=false
 prevent-update-noarg=false
