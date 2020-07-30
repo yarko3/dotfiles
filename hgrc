@@ -21,7 +21,7 @@ ut = up tip
 git = True
 
 [commands]
-// Increase the amount of context lines shown.
+# Increase the amount of context lines shown.
 split.interactive.unified=8
 commit.interactive.unified=8
 revert.interactive.unified=8
