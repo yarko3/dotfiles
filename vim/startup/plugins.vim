@@ -293,9 +293,13 @@ let g:VimuxOrientation = "h"
 let g:VimuxHeight = "40"
 
 " fswitch
-au BufEnter *.h let b:fswitchdst  = 'cc,cpp'
-au BufEnter *_test.cc let b:fswitchfnames = '/_test$//'
-au BufEnter *.cc let b:fswitchdst  = 'h'
+augroup mycppfiles
+  autocmd!
+  " Cycle .h -> .cc -> _test.cc
+  autocmd BufEnter *.h let b:fswitchdst  = 'cc,cpp'
+  autocmd BufEnter *.cc let b:fswitchdst  = 'cc,cpp' | let b:fswitchfnames = '/$/_test/'
+  autocmd BufEnter *_test.cc let b:fswitchdst  = 'h' | let b:fswitchfnames = '/_test$//'
+augroup END
 
 " signify
 highlight SignifySignAdd    cterm=bold ctermbg=235  ctermfg=119
