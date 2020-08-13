@@ -177,6 +177,7 @@ let g:ycm_autoclose_preview_window_after_insertion=1
 let g:ycm_always_populate_location_list=1
 let g:ycm_goto_buffer_command = 'vertical-split'
 let g:ycm_complete_in_comments = 0
+let g:ycm_auto_hover = '' " Disable auto-hover by default because it causes freezing.
 
 " For some unicode reason ycm errors on peekaboo.
 let g:ycm_filetype_blacklist = { 'peekaboo': 1, 'startify': 1, 'tagbar': 1 }
