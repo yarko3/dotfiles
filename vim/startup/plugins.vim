@@ -34,8 +34,6 @@ Plug 'mhinz/vim-startify'                                 " dope start screen
 Plug 'michaeljsmith/vim-indent-object'                    " indentation-level text objects (ai/I, ii/I)
 Plug 'octol/vim-cpp-enhanced-highlight', { 'for': 'cpp' } " enhanced C++11/14/17 highlighting
 Plug 'osyo-manga/vim-brightest'                           " highlight/underline current word
-Plug 'prabirshrestha/async.vim'                           " async library for lsp
-Plug 'prabirshrestha/vim-lsp'                             " language server protocol support
 Plug 'raimondi/delimitMate'                               " matching brackets
 Plug 'roxma/vim-tmux-clipboard'                           " integrate vim's yank register with tmux
 Plug 'sirver/ultisnips'                                   " snippet engine with integration into ycm; needs vim compiled with python
@@ -55,8 +53,14 @@ Plug 'whatyouhide/vim-lengthmatters'                      " highlight portion of
 Plug 'yarko3/FlyGrep.vim'                                 " Projectile async search
 Plug 'yssl/QFEnter'                                       " quickfix open in different places
 
+" completion
 if g:platform == "Linux" && !AtWork()
   Plug 'Valloric/YouCompleteMe'
+elseif AtWork()
+  Plug 'prabirshrestha/async.vim'
+  Plug 'prabirshrestha/asyncomplete-lsp.vim'
+  Plug 'prabirshrestha/asyncomplete.vim'
+  Plug 'prabirshrestha/vim-lsp'
 endif
 
 call plug#end()
@@ -397,3 +401,19 @@ let vim_markdown_preview_github=1
 let vim_markdown_preview_browser='Google Chrome'
 let vim_markdown_preview_hotkey='<C-m>'
 
+" LSP
+" Send async completion requests.
+" WARNING: Might interfere with other completion plugins.
+let g:lsp_async_completion = 1
+
+" Enable UI for diagnostics
+let g:lsp_signs_enabled = 1           " enable diagnostics signs in the gutter
+let g:lsp_diagnostics_echo_cursor = 1 " enable echo under cursor when in normal mode
+
+" asyncomplete
+" Automatically show completion options
+let g:asyncomplete_auto_popup = 1
+
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<cr>"

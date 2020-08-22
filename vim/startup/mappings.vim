@@ -95,11 +95,8 @@ nnoremap <Leader>fk      :FSSplitAbove<CR>
 nnoremap <Leader>fl      :FSSplitRight<CR>
 nnoremap <Leader>gf      :call CdRoot()<CR>:FlyGrep<CR>
 nnoremap <Leader>gg      :call CdRoot()<CR>:Grepper<CR>
-nnoremap <Leader>jf      :YcmCompleter FixIt<CR>
-nnoremap <Leader>jj      :YcmCompleter GoTo<CR>
-nnoremap <Leader>jk      :YcmCompleter GoToReferences<CR>
-nnoremap <Leader>jl      :vsp<CR>:LspDefinition<CR>
-nnoremap <Leader>jr      :YcmRestartServer<CR>
+nnoremap <Leader>jj      :vsp<CR>:LspDefinition<CR>
+nnoremap <Leader>jk      :vsp<CR>:LspReferences<CR>
 nnoremap <Leader>lg      :Glog<CR>
 nnoremap <Leader>lt      :LengthmattersToggle<CR>
 nnoremap <Leader>mi      :VimuxInspectRunner<CR>
@@ -121,6 +118,17 @@ nnoremap <Leader>vv      :e %:h<CR>
 nnoremap <Leader>w       :call StripTabsAndTrailingWhitespaces()<CR>:w<CR>
 nnoremap <Leader>x       :q<CR>
 nnoremap <Leader>z       :MaximizerToggle<CR>
+
+" completion
+if g:platform == "Linux" && !AtWork()
+  nnoremap <Leader>jf      :YcmCompleter FixIt<CR>
+  nnoremap <Leader>jj      :YcmCompleter GoTo<CR>
+  nnoremap <Leader>jk      :YcmCompleter GoToReferences<CR>
+  nnoremap <Leader>jr      :YcmRestartServer<CR>
+elseif AtWork()
+  nnoremap <Leader>jj      :vsp<CR>:LspDefinition<CR>
+  nnoremap <Leader>jk      :LspReferences<CR>
+endif
 
 " =============================================================================
 "                          Silent Leader Mappings
