@@ -95,8 +95,6 @@ nnoremap <Leader>fk      :FSSplitAbove<CR>
 nnoremap <Leader>fl      :FSSplitRight<CR>
 nnoremap <Leader>gf      :call CdRoot()<CR>:FlyGrep<CR>
 nnoremap <Leader>gg      :call CdRoot()<CR>:Grepper<CR>
-nnoremap <Leader>jj      :vsp<CR>:LspDefinition<CR>
-nnoremap <Leader>jk      :vsp<CR>:LspReferences<CR>
 nnoremap <Leader>lg      :Glog<CR>
 nnoremap <Leader>lt      :LengthmattersToggle<CR>
 nnoremap <Leader>mi      :VimuxInspectRunner<CR>
@@ -126,6 +124,7 @@ if g:platform == "Linux" && !AtWork()
   nnoremap <Leader>jk      :YcmCompleter GoToReferences<CR>
   nnoremap <Leader>jr      :YcmRestartServer<CR>
 elseif AtWork()
+  nnoremap <Leader>jf      :LspCodeAction<CR>
   nnoremap <Leader>jj      :vsp<CR>:LspDefinition<CR>
   nnoremap <Leader>jk      :LspReferences<CR>
 endif
