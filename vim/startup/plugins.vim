@@ -252,7 +252,7 @@ hi link EasyMotionTarget WarningMsg
 hi link EasyMotionShade  Comment
 
 " snippets
-let g:UltiSnipsExpandTrigger="<Enter>"
+let g:UltiSnipsExpandTrigger="C-j"
 let g:ulti_expand_or_jump_res=0
 function! ExpandSnippetOrCarriageReturn()
   let snippet=UltiSnips#ExpandSnippetOrJump()
