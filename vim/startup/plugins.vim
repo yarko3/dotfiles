@@ -59,6 +59,7 @@ if g:platform == "Linux" && !AtWork()
 elseif AtWork()
   Plug 'prabirshrestha/async.vim'
   Plug 'prabirshrestha/asyncomplete-lsp.vim'
+  Plug 'prabirshrestha/asyncomplete-ultisnips.vim'
   Plug 'prabirshrestha/asyncomplete.vim'
   Plug 'prabirshrestha/vim-lsp'
 endif
@@ -251,7 +252,7 @@ hi link EasyMotionTarget WarningMsg
 hi link EasyMotionShade  Comment
 
 " snippets
-let g:UltiSnipsExpandTrigger="<nop>"
+let g:UltiSnipsExpandTrigger="<Enter>"
 let g:ulti_expand_or_jump_res=0
 function! ExpandSnippetOrCarriageReturn()
   let snippet=UltiSnips#ExpandSnippetOrJump()
@@ -417,3 +418,11 @@ let g:asyncomplete_auto_popup = 1
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<cr>"
+
+if has('python3')
+  call asyncomplete#register_source(asyncomplete#sources#ultisnips#get_source_options({
+    \ 'name': 'ultisnips',
+    \ 'whitelist': ['*'],
+    \ 'completor': function('asyncomplete#sources#ultisnips#completor'),
+    \ }))
+endif
