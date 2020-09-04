@@ -251,21 +251,6 @@ let g:EasyMotion_smartcase=1
 hi link EasyMotionTarget WarningMsg
 hi link EasyMotionShade  Comment
 
-" snippets
-let g:UltiSnipsExpandTrigger="C-j"
-let g:ulti_expand_or_jump_res=0
-function! ExpandSnippetOrCarriageReturn()
-  let snippet=UltiSnips#ExpandSnippetOrJump()
-  if g:ulti_expand_or_jump_res > 0
-    return snippet
-  else
-    return "\<CR>"
-  endif
-endfunction
-inoremap <expr> <CR> pumvisible() ? "\<C-R>=ExpandSnippetOrCarriageReturn()\<CR>" : "\<CR>"
-let g:UltiSnipsJumpForwardTrigger='<Tab>'
-let g:UltiSnipsJumpBackwardTrigger='<S-Tab>'
-
 " Ale
 " turn off convention pylint messages and misc
 let g:ale_python_pylint_options='--disable=C --disable=W0311'
@@ -426,3 +411,18 @@ if has('python3')
     \ 'completor': function('asyncomplete#sources#ultisnips#completor'),
     \ }))
 endif
+
+" snippets
+let g:UltiSnipsExpandTrigger="<nop>"
+let g:ulti_expand_or_jump_res=0
+function! ExpandSnippetOrCarriageReturn()
+  let snippet=UltiSnips#ExpandSnippetOrJump()
+  if g:ulti_expand_or_jump_res > 0
+    return snippet
+  else
+    return "\<CR>"
+  endif
+endfunction
+inoremap <expr> <CR> pumvisible() ? "\<C-R>=ExpandSnippetOrCarriageReturn()\<CR>" : "\<CR>"
+let g:UltiSnipsJumpForwardTrigger='<Tab>'
+let g:UltiSnipsJumpBackwardTrigger='<S-Tab>'
