@@ -286,7 +286,7 @@ let g:VimuxHeight = "40"
 " fswitch
 augroup mycppfiles
   autocmd!
-  " Cycle .h -> .cc -> _test.cc
+  " Cycle .h -> .cc -> _test.cc -> .h
   autocmd BufEnter *.h let b:fswitchdst  = 'cc,cpp' | let b:fswitchlocs = './'
   autocmd BufEnter *.cc let b:fswitchdst  = 'cc,cpp' | let b:fswitchfnames = '/$/_test/' | let b:fswitchlocs = './'
   autocmd BufEnter *_test.cc let b:fswitchdst  = 'h' | let b:fswitchfnames = '/_test$//' | let b:fswitchlocs = './'
