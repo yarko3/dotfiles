@@ -125,7 +125,7 @@ if g:platform == "Linux" && !AtWork()
   nnoremap <Leader>jr      :YcmRestartServer<CR>
 elseif AtWork()
   nnoremap <Leader>jf      :LspCodeAction<CR>
-  nnoremap <Leader>jj      :vsp<CR>:LspDefinition<CR>
+  nnoremap <Leader>jj      :vertical LspDefinition<CR>
   nnoremap <Leader>jk      :LspReferences<CR>
 endif
 
