@@ -62,6 +62,31 @@ elseif AtWork()
   Plug 'prabirshrestha/asyncomplete-ultisnips.vim'
   Plug 'prabirshrestha/asyncomplete.vim'
   Plug 'prabirshrestha/vim-lsp'
+
+  " LSP
+  " Send async completion requests.
+  " WARNING: Might interfere with other completion plugins.
+  let g:lsp_async_completion = 1
+
+  " Enable UI for diagnostics
+  let g:lsp_signs_enabled = 1           " enable diagnostics signs in the gutter
+  let g:lsp_diagnostics_echo_cursor = 1 " enable echo under cursor when in normal mode
+
+  " asyncomplete
+  " Automatically show completion options
+  let g:asyncomplete_auto_popup = 1
+
+  inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+  inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+  inoremap <expr> <CR>    pumvisible() ? asyncomplete#close_popup() . "\<CR>" : "\<CR>"
+
+  if has('python3')
+    call asyncomplete#register_source(asyncomplete#sources#ultisnips#get_source_options({
+      \ 'name': 'ultisnips',
+      \ 'whitelist': ['*'],
+      \ 'completor': function('asyncomplete#sources#ultisnips#completor'),
+      \ }))
+  endif
 endif
 
 call plug#end()
@@ -386,31 +411,6 @@ endfunction
 let vim_markdown_preview_github=1
 let vim_markdown_preview_browser='Google Chrome'
 let vim_markdown_preview_hotkey='<C-m>'
-
-" LSP
-" Send async completion requests.
-" WARNING: Might interfere with other completion plugins.
-let g:lsp_async_completion = 1
-
-" Enable UI for diagnostics
-let g:lsp_signs_enabled = 1           " enable diagnostics signs in the gutter
-let g:lsp_diagnostics_echo_cursor = 1 " enable echo under cursor when in normal mode
-
-" asyncomplete
-" Automatically show completion options
-let g:asyncomplete_auto_popup = 1
-
-inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-inoremap <expr> <CR>    pumvisible() ? asyncomplete#close_popup() . "\<CR>" : "\<CR>"
-
-if has('python3')
-  call asyncomplete#register_source(asyncomplete#sources#ultisnips#get_source_options({
-    \ 'name': 'ultisnips',
-    \ 'whitelist': ['*'],
-    \ 'completor': function('asyncomplete#sources#ultisnips#completor'),
-    \ }))
-endif
 
 " snippets
 let g:UltiSnipsExpandTrigger="<nop>"
