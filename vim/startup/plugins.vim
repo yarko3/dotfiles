@@ -402,7 +402,7 @@ let g:asyncomplete_auto_popup = 1
 
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<cr>"
+inoremap <expr> <CR>    pumvisible() ? asyncomplete#close_popup() . "\<CR>" : "\<CR>"
 
 if has('python3')
   call asyncomplete#register_source(asyncomplete#sources#ultisnips#get_source_options({
