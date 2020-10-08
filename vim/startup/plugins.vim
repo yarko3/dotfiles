@@ -62,33 +62,7 @@ elseif AtWork()
   Plug 'prabirshrestha/asyncomplete-ultisnips.vim'
   Plug 'prabirshrestha/asyncomplete.vim'
   Plug 'prabirshrestha/vim-lsp'
-
-  " LSP
-  " Send async completion requests.
-  " WARNING: Might interfere with other completion plugins.
-  let g:lsp_async_completion = 1
-
-  " Enable UI for diagnostics
-  let g:lsp_signs_enabled = 1           " enable diagnostics signs in the gutter
-  let g:lsp_diagnostics_echo_cursor = 1 " enable echo under cursor when in normal mode
-
-  " asyncomplete
-  " Automatically show completion options
-  let g:asyncomplete_auto_popup = 1
-
-  inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
-  inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-  inoremap <expr> <CR>    pumvisible() ? asyncomplete#close_popup() . "\<CR>" : "\<CR>"
-
-  if has('python3')
-    call asyncomplete#register_source(asyncomplete#sources#ultisnips#get_source_options({
-      \ 'name': 'ultisnips',
-      \ 'allowlist': ['*'],
-      \ 'completor': function('asyncomplete#sources#ultisnips#completor'),
-      \ }))
-  endif
 endif
-
 call plug#end()
 
 "" ============================================================================
@@ -199,29 +173,6 @@ let g:rainbow_conf={
 " prevent default bindings
 let g:windowswap_map_keys=0
 
-" YouCompleteMe
-let g:ycm_server_log_level='debug'
-let g:ycm_server_keep_logfiles=0
-let g:ycm_confirm_extra_conf=0
-let g:ycm_autoclose_preview_window_after_insertion=1
-let g:ycm_always_populate_location_list=1
-let g:ycm_goto_buffer_command = 'vertical-split'
-let g:ycm_complete_in_comments = 0
-let g:ycm_auto_hover = '' " Disable auto-hover by default because it causes freezing.
-
-" For some unicode reason ycm errors on peekaboo.
-let g:ycm_filetype_blacklist = { 'peekaboo': 1, 'startify': 1, 'tagbar': 1 }
-
-" Configure quickfix window settings when opened from YCM.
-function! s:CustomizeYcmQuickFixWindow()
-  " Set the window height.
-  15wincmd _
-endfunction
-autocmd User YcmQuickFixOpened call s:CustomizeYcmQuickFixWindow()
-
-if !AtWork()
-  let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/cpp/.ycm_extra_conf.py'
-endif
 
 " vim-expand-region
 vmap v <Plug>(expand_region_expand)
@@ -426,3 +377,54 @@ endfunction
 inoremap <expr> <CR> pumvisible() ? "\<C-R>=ExpandSnippetOrCarriageReturn()\<CR>" : "\<CR>"
 let g:UltiSnipsJumpForwardTrigger='<Tab>'
 let g:UltiSnipsJumpBackwardTrigger='<S-Tab>'
+
+" completion
+if g:platform == "Linux" && !AtWork()
+  " YouCompleteMe
+  let g:ycm_server_log_level='debug'
+  let g:ycm_server_keep_logfiles=0
+  let g:ycm_confirm_extra_conf=0
+  let g:ycm_autoclose_preview_window_after_insertion=1
+  let g:ycm_always_populate_location_list=1
+  let g:ycm_goto_buffer_command = 'vertical-split'
+  let g:ycm_complete_in_comments = 0
+  let g:ycm_auto_hover = '' " Disable auto-hover by default because it causes freezing.
+
+  " For some unicode reason ycm errors on peekaboo.
+  let g:ycm_filetype_blacklist = { 'peekaboo': 1, 'startify': 1, 'tagbar': 1 }
+
+  " Configure quickfix window settings when opened from YCM.
+  function! s:CustomizeYcmQuickFixWindow()
+    " Set the window height.
+    15wincmd _
+  endfunction
+  autocmd User YcmQuickFixOpened call s:CustomizeYcmQuickFixWindow()
+
+  let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/cpp/.ycm_extra_conf.py'
+
+elseif AtWork()
+  " LSP
+  " Send async completion requests.
+  " WARNING: Might interfere with other completion plugins.
+  let g:lsp_async_completion = 1
+
+  " Enable UI for diagnostics
+  let g:lsp_signs_enabled = 1           " enable diagnostics signs in the gutter
+  let g:lsp_diagnostics_echo_cursor = 1 " enable echo under cursor when in normal mode
+
+  " asyncomplete
+  " Automatically show completion options
+  let g:asyncomplete_auto_popup = 1
+
+  inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+  inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+  inoremap <expr> <CR>    pumvisible() ? asyncomplete#close_popup() . "\<CR>" : "\<CR>"
+
+  if has('python3')
+    call asyncomplete#register_source(asyncomplete#sources#ultisnips#get_source_options({
+      \ 'name': 'ultisnips',
+      \ 'allowlist': ['*'],
+      \ 'completor': function('asyncomplete#sources#ultisnips#completor'),
+      \ }))
+  endif
+endif
