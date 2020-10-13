@@ -363,21 +363,6 @@ let vim_markdown_preview_github=1
 let vim_markdown_preview_browser='Google Chrome'
 let vim_markdown_preview_hotkey='<C-m>'
 
-" snippets
-let g:UltiSnipsExpandTrigger="<nop>"
-let g:ulti_expand_or_jump_res=0
-function! ExpandSnippetOrCarriageReturn()
-  let snippet=UltiSnips#ExpandSnippetOrJump()
-  if g:ulti_expand_or_jump_res > 0
-    return snippet
-  else
-    return "\<CR>"
-  endif
-endfunction
-inoremap <expr> <CR> pumvisible() ? "\<C-R>=ExpandSnippetOrCarriageReturn()\<CR>" : "\<CR>"
-let g:UltiSnipsJumpForwardTrigger='<Tab>'
-let g:UltiSnipsJumpBackwardTrigger='<S-Tab>'
-
 " completion
 if g:platform == "Linux" && !AtWork()
   " YouCompleteMe
@@ -428,3 +413,18 @@ elseif AtWork()
       \ }))
   endif
 endif
+
+" snippets
+let g:UltiSnipsExpandTrigger="<nop>"
+let g:ulti_expand_or_jump_res=0
+function! ExpandSnippetOrCarriageReturn()
+  let snippet=UltiSnips#ExpandSnippetOrJump()
+  if g:ulti_expand_or_jump_res > 0
+    return snippet
+  else
+    return "\<CR>"
+  endif
+endfunction
+inoremap <expr> <CR> pumvisible() ? "\<C-R>=ExpandSnippetOrCarriageReturn()\<CR>" : "\<CR>"
+let g:UltiSnipsJumpForwardTrigger='<Tab>'
+let g:UltiSnipsJumpBackwardTrigger='<S-Tab>'
