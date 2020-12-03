@@ -93,7 +93,6 @@ nnoremap <Leader>fh      :FSSplitLeft<CR>
 nnoremap <Leader>fj      :FSSplitBelow<CR>
 nnoremap <Leader>fk      :FSSplitAbove<CR>
 nnoremap <Leader>fl      :FSSplitRight<CR>
-nnoremap <Leader>gf      :call CdRoot()<CR>:FlyGrep<CR>
 nnoremap <Leader>gg      :call CdRoot()<CR>:Grepper<CR>
 nnoremap <Leader>lg      :Glog<CR>
 nnoremap <Leader>lt      :LengthmattersToggle<CR>

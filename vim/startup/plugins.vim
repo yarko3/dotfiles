@@ -50,7 +50,6 @@ Plug 'tpope/vim-vinegar'                                  " netrw improvement
 Plug 'vim-airline/vim-airline-themes'                     " Status line themes
 Plug 'wesQ3/vim-windowswap'                               " swap splits
 Plug 'whatyouhide/vim-lengthmatters'                      " highlight portion of line that's longer than limit
-Plug 'yarko3/FlyGrep.vim'                                 " Projectile async search
 Plug 'yssl/QFEnter'                                       " quickfix open in different places
 
 " completion
@@ -337,11 +336,6 @@ cmap <expr> <CR> "\<CR>" . (getcmdtype() =~ '[/?]' ? "\<Plug>(indexed-search-aft
 let g:cpp_class_scope_highlight = 1
 let g:cpp_member_variable_highlight = 1
 let g:cpp_class_decl_highlight = 1
-
-" FlyGrep
-" Set up a small delay that allows for additional keystrokes to be hit before
-" searching.
-let g:FlyGrep_input_delay = 100
 
 " vim-tmux-navigator
 
