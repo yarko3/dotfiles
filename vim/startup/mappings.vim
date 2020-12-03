@@ -139,10 +139,6 @@ nnoremap <silent> <Leader>h :set hlsearch!<CR>
 " jump around easier
 nmap <Leader>e <Plug>(easymotion-overwin-f)
 
-" align things from visual mode as well as a motion
-xmap <Leader>a <Plug>(EasyAlign)
-nmap <Leader>a <Plug>(EasyAlign)
-
 " yank over SSH
 map <Leader>y <Plug>(operator-poweryank-osc52)
 

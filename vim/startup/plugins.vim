@@ -20,7 +20,6 @@ Plug 'henrik/vim-indexed-search'                          " show count for searc
 Plug 'honza/vim-snippets'                                 " snippets repo
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }       " fzf main repo
 Plug 'junegunn/fzf.vim'                                   " fuzzy finding of stuff
-Plug 'junegunn/vim-easy-align'                            " align things
 Plug 'junegunn/vim-peekaboo'                              " show content of registers
 Plug 'kana/vim-textobj-user'                              " user-defined text objects (dependency for other plugins)
 Plug 'luochen1990/rainbow'                                " Rainbow parenthesis coloring
