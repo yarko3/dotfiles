@@ -389,6 +389,8 @@ elseif AtWork()
   " Enable UI for diagnostics
   let g:lsp_signs_enabled = 1           " enable diagnostics signs in the gutter
   let g:lsp_diagnostics_echo_cursor = 1 " enable echo under cursor when in normal mode
+  let g:lsp_document_code_action_signs_enabled = 0 " disable code action hint signs because they don't work very well
+
 
   " asyncomplete
   " Automatically show completion options
