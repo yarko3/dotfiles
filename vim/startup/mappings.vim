@@ -15,10 +15,10 @@ inoremap kj <Esc>
 "" ============================================================================
 " If hl search is off, starting a new search or moving enables it
 " remove zz if the jumps are too much
-nnoremap <silent> * :set hlsearch<CR>*zz:ShowSearchIndex<CR>
-nnoremap <silent> # :set hlsearch<CR>#zz:ShowSearchIndex<CR>
-nnoremap <silent> n :set hlsearch<CR>nzz:ShowSearchIndex<CR>
-nnoremap <silent> N :set hlsearch<CR>Nzz:ShowSearchIndex<CR>
+nnoremap <silent> * :set hlsearch<CR>*zz
+nnoremap <silent> # :set hlsearch<CR>#zz
+nnoremap <silent> n :set hlsearch<CR>nzz
+nnoremap <silent> N :set hlsearch<CR>Nzz
 
 " Homerow visual navigation
 vnoremap H 0

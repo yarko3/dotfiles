@@ -16,7 +16,6 @@ Plug 'dense-analysis/ale'                                 " Syntax checking
 Plug 'derekwyatt/vim-fswitch', { 'for': 'cpp' }           " Fastswitch (cpp/h toggle)
 Plug 'easymotion/vim-easymotion'                          " I get around round round round
 Plug 'haya14busa/vim-poweryank'                           " yank over SSH
-Plug 'henrik/vim-indexed-search'                          " show count for search results
 Plug 'honza/vim-snippets'                                 " snippets repo
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }       " fzf main repo
 Plug 'junegunn/fzf.vim'                                   " fuzzy finding of stuff
@@ -305,31 +304,6 @@ let g:VM_default_mappings = 0
 let g:VM_maps = {}
 let g:VM_maps['Find Under']         = '<C-n>'
 let g:VM_maps['Find Subword Under'] = '<C-n>'
-
-" vim-indexed-search
-" disable default mappings
-let g:indexed_search_mappings = 0
-let g:indexed_search_numbered_only = 1
-
-" Stole a bunch of their code to only enable mappings for /? and not the rest
-noremap  <Plug>(indexed-search-index)  <Nop>
-nnoremap <Plug>(indexed-search-index)  :ShowSearchIndex<CR>
-xnoremap <Plug>(indexed-search-index)  :<C-u>ShowSearchIndex<CR>gv
-
-function! s:vim_indexed_search_should_unfold()
-  return has('folding') && &fdo =~ 'search\|all'
-endfunction
-
-function! s:vim_indexed_search_after()
-  return (s:vim_indexed_search_should_unfold() ? 'zv' : '')
-        \ .('zz')
-        \ ."\<Plug>(indexed-search-index)"
-endfunction
-
-map  <expr> <Plug>(indexed-search-after)  <SID>vim_indexed_search_after()
-imap        <Plug>(indexed-search-after)  <Nop>
-
-cmap <expr> <CR> "\<CR>" . (getcmdtype() =~ '[/?]' ? "\<Plug>(indexed-search-after)" : '')
 
 " cpp-enhanced-highlight
 let g:cpp_class_scope_highlight = 1
