@@ -71,6 +71,11 @@ set diffopt+=filler
 " diff in vertical split
 set diffopt+=vertical
 
+" use better diff algorithm if available
+if has("patch-8.1.0360")
+  set diffopt+=internal,algorithm:patience
+endif
+
 " Smart case sensitivity
 set ignorecase
 set smartcase
