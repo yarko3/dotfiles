@@ -39,7 +39,6 @@ export KEYTIMEOUT=20
  export FZF_DEFAULT_OPTS=" \
   --inline-info \
   --reverse \
-  --exact \
   --color=fg+:#F8F8F8,bg+:#515559,pointer:#F8F8F8,marker:226 \
   --bind=ctrl-e:select-all+accept \
   --bind=ctrl-d:half-page-down \
