@@ -3,6 +3,7 @@ call plug#begin('~/.vim/plugged')
 " TODO: Look at sodapopcan/vim-twiggy and lambdalisue/gina.vim if I ever need
 " to work with git on the daily.
 
+
 Plug 'FelikZ/ctrlp-py-matcher'                            " fast CtrlP matcher
 Plug 'JamshedVesuna/vim-markdown-preview'                 " Markdown rendering
 Plug 'Valloric/ListToggle'                                " Toggling quickfix and location list
