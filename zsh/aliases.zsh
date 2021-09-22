@@ -23,7 +23,6 @@ alias tmux='tmux -2u'
 alias to_clipboard='xclip -selection c'
 alias topcpu='/bin/ps -eo pcpu,pid,user,args | sort -k 1 -r | head -10'
 alias upper="tr '[:lower:]' '[:upper:]'"
-alias v='vim'
 alias wfc='curl "wttr.in/nyc?m"'
 
 [ -f ~/.zsh_local/zshrc_local_aliases.zsh ] && source ~/.zsh_local/zshrc_local_aliases.zsh

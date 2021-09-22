@@ -86,5 +86,13 @@ rename_tmux_window() {
   fi
 }
 
+v() {
+  if [[ -n $(whence nvim) ]]; then
+    nvim
+  else
+    vim
+  fi
+}
+
 # load local functions
 [ -f ~/.zsh_local/zshrc_local_functions.zsh ] && source ~/.zsh_local/zshrc_local_functions.zsh
