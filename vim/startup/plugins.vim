@@ -66,6 +66,9 @@ if has('nvim')
   Plug 'nvim-telescope/telescope.nvim'
 endif
 
+" Install any local plugins.
+call SourceIfExists('~/.vim_local/plugins.vim')
+
 call plug#end()
 
 "" ============================================================================
