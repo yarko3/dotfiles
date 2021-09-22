@@ -67,11 +67,30 @@ shfmt_install() {
   go get -u mvdan.cc/sh/cmd/shfmt
 }
 
+neovim_install() {
+  echo "Installing neovim..."
+  if ! [ -d ~/neovim ]; then
+    echo "Installing neovim..."
+    git clone https://github.com/neovim/neovim
+    cd ~/neovim
+    make CMAKE_EXTRA_FLAGS="-DCMAKE_INSTALL_PREFIX=$HOME/neovim"
+    make install
+    cd -
+
+    # install python dependencies
+    python3 -m pip install --upgrade pynvim
+  else
+    echo "neovim already installed"
+  fi
+  echo "Finished installing neovim locally"
+}
+
 install() {
   fonts_install
   local_install
   rainbarf_install
   shfmt_install
+  neovim_install
 }
 
 create_ssh
