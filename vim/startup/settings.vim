@@ -37,11 +37,14 @@ set breakindentopt+=shift:2
 " oh no, mouse
 set mouse=a
 
-if has("mouse_sgr")
-  set ttymouse=sgr
-else
-  set ttymouse=xterm2
-end
+
+if !has("nvim") " Neovim doesn't support ttymouse
+  if has("mouse_sgr")
+    set ttymouse=sgr
+  else
+    set ttymouse=xterm2
+  end
+endif
 
 " Backup directory for swp files
 set noswapfile
