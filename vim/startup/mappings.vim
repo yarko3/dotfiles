@@ -94,7 +94,6 @@ nnoremap <Leader>fj      :FSSplitBelow<CR>
 nnoremap <Leader>fk      :FSSplitAbove<CR>
 nnoremap <Leader>fl      :FSSplitRight<CR>
 nnoremap <Leader>gg      :call CdRoot()<CR>:Grepper<CR>
-nnoremap <Leader>lg      :Glog<CR>
 nnoremap <Leader>lt      :LengthmattersToggle<CR>
 nnoremap <Leader>mi      :VimuxInspectRunner<CR>
 nnoremap <Leader>purge   :set vi+='0<CR>:wv!<CR>
@@ -126,6 +125,10 @@ elseif AtWork()
   nnoremap <Leader>jf      :LspCodeAction<CR>
   nnoremap <Leader>jj      :vertical LspDefinition<CR>
   nnoremap <Leader>jk      :LspReferences<CR>
+endif
+
+if has('nvim')
+  nnoremap <Leader>lg      :Telescope live_grep<CR>
 endif
 
 " =============================================================================

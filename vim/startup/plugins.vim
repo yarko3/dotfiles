@@ -60,6 +60,12 @@ elseif AtWork()
   Plug 'prabirshrestha/asyncomplete.vim'
   Plug 'prabirshrestha/vim-lsp'
 endif
+
+if has('nvim')
+  Plug 'nvim-lua/plenary.nvim' " dependency for telescope.nvim
+  Plug 'nvim-telescope/telescope.nvim'
+endif
+
 call plug#end()
 
 "" ============================================================================

@@ -53,6 +53,9 @@ PATH=~/bin_local:$PATH
 PATH=$PATH:~/.local/bin
 PATH=$PATH:~/lib/perl5/bin
 
+# For nvim built from source.
+PATH=$PATH:~/neovim/bin
+
 PATH=$PATH:/bin
 PATH=$PATH:/sbin
 PATH=$PATH:/usr/local/bin
