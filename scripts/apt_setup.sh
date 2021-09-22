@@ -23,6 +23,20 @@ sudo apt-get install \
   xclip \
   zsh
 
+# neovim things
+sudo apt-get install \
+  ninja-build \
+  gettext \
+  libtool \
+  libtool-bin \
+  autoconf \
+  automake \
+  cmake \
+  g++ \
+  pkg-config \
+  unzip \
+  curl
+
 # Xmonad things
 sudo apt-get install \
   xmobar \
