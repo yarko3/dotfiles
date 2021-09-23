@@ -406,3 +406,31 @@ endfunction
 inoremap <expr> <CR> pumvisible() ? "\<C-R>=ExpandSnippetOrCarriageReturn()\<CR>" : "\<CR>"
 let g:UltiSnipsJumpForwardTrigger='<Tab>'
 let g:UltiSnipsJumpBackwardTrigger='<S-Tab>'
+
+if has("nvim")
+lua << EOF
+
+-- telescope
+local actions = require('telescope.actions')
+require('telescope').setup{
+  defaults = {
+    layout_strategy = "horizontal",
+    layout_config = {
+      horizontal = {
+        preview_width = 80
+        }
+    },
+    mappings = {
+      i = {
+        ["<c-j>"] = actions.move_selection_next,
+        ["<c-k>"] = actions.move_selection_previous,
+      },
+      n = {
+        ["<c-j>"] = actions.move_selection_next,
+        ["<c-k>"] = actions.move_selection_previous,
+      },
+    },
+  }
+}
+EOF
+endif
