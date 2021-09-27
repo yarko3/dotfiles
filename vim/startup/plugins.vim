@@ -142,9 +142,7 @@ let g:grepper = my_grepper_options
 let g:grepper.operator = my_grepper_options
 
 " Netrw
-let g:netrw_liststyle='1'
-let g:netrw_timefmt='%d %b %Y %T %Z'
-let g:netrw_sizestyle='h'
+let g:netrw_liststyle='0'
 
 " ListToggle
 let g:lt_location_list_toggle_map='<leader>l'
