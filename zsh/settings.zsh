@@ -77,4 +77,7 @@ zle -N zle-keymap-select
 #                                   FZF
 #  ============================================================================
 [ -f /usr/share/doc/fzf/examples/key-bindings.zsh ] && source /usr/share/doc/fzf/examples/key-bindings.zsh
+[ -f /usr/local/brew/opt/fzf/shell/key-bindings.zsh ] && source /usr/local/brew/opt/fzf/shell/key-bindings.zsh
+
 [ -f /usr/share/doc/fzf/examples/completion.zsh ] && source /usr/share/doc/fzf/examples/completion.zsh
+[ -f /usr/local/brew/opt/fzf/shell/completion.zsh ] && source /usr/local/brew/opt/fzf/shell/completion.zsh
