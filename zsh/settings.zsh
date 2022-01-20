@@ -43,7 +43,7 @@ vcs_prompt_info_mine() {
   fi
   rename_tmux_window > /dev/null 2>&1
 }
-export PROMPT='%{$fg[magenta]%}%D{%L:%M:%S %p} % %{$fg[green]%}%n@%m %{$fg[cyan]%}%c%{$fg[yellow]%}$(vcs_prompt_info_mine)%{$reset_color%} $ '
+export PROMPT='%{$fg[magenta]%}%D{%m/%e %L:%M:%S %p} % %{$fg[green]%}%n@%m %{$fg[cyan]%}%c%{$fg[yellow]%}$(vcs_prompt_info_mine)%{$reset_color%} $ '
 
 export ZSH_THEME_GIT_PROMPT_PREFIX=""
 export ZSH_THEME_GIT_PROMPT_SUFFIX=""
