@@ -10,4 +10,3 @@ set keymap vi-command
 "G": end-of-history
 set keymap vi-insert
 "kj": vi-movement-mode
-"kk": vi-movement-mode
