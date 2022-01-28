@@ -30,7 +30,6 @@ Plug 'mhinz/vim-grepper'                                  " Asynchronous Grep ->
 Plug 'mhinz/vim-signify'                                  " changes in gutter
 Plug 'mhinz/vim-startify'                                 " dope start screen
 Plug 'michaeljsmith/vim-indent-object'                    " indentation-level text objects (ai/I, ii/I)
-Plug 'octol/vim-cpp-enhanced-highlight', { 'for': 'cpp' } " enhanced C++11/14/17 highlighting
 Plug 'osyo-manga/vim-brightest'                           " highlight/underline current word
 Plug 'raimondi/delimitMate'                               " matching brackets
 Plug 'roxma/vim-tmux-clipboard'                           " integrate vim's yank register with tmux
@@ -64,6 +63,7 @@ endif
 if has('nvim')
   Plug 'nvim-lua/plenary.nvim' " dependency for telescope.nvim
   Plug 'nvim-telescope/telescope.nvim'
+  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " provides dope syntax highlighting
 endif
 
 " Install any local plugins.
@@ -429,6 +429,11 @@ require('telescope').setup{
       },
     },
   }
+}
+require'nvim-treesitter.configs'.setup {
+  highlight = {
+    enable = {'c', 'cpp', 'java', 'python'}
+  },
 }
 EOF
 endif
