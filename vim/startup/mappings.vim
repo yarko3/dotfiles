@@ -116,8 +116,6 @@ nnoremap <Leader>w       :call StripTabsAndTrailingWhitespaces()<CR>:w<CR>
 nnoremap <Leader>x       :q<CR>
 nnoremap <Leader>z       :MaximizerToggle<CR>
 
-vnoremap <Leader>e       <cmd>HopChar1<CR>
-
 " completion
 if g:platform == "Linux" && !AtWork()
   nnoremap <Leader>jf      :YcmCompleter FixIt<CR>
@@ -132,6 +130,8 @@ endif
 
 if has('nvim')
   nnoremap <Leader>lg      :Telescope live_grep<CR>
+
+  vnoremap <Leader>e       <cmd>HopChar1<CR>
 endif
 
 " =============================================================================
