@@ -14,7 +14,6 @@ Plug 'christoomey/vim-tmux-navigator'                     " Window/Pane switchin
 Plug 'ctrlpvim/ctrlp.vim'                                 " File searchin and opening
 Plug 'dense-analysis/ale'                                 " Syntax checking
 Plug 'derekwyatt/vim-fswitch', { 'for': 'cpp' }           " Fastswitch (cpp/h toggle)
-Plug 'easymotion/vim-easymotion'                          " I get around round round round
 Plug 'haya14busa/vim-poweryank'                           " yank over SSH
 Plug 'honza/vim-snippets'                                 " snippets repo
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }       " fzf main repo
@@ -64,6 +63,7 @@ endif
 if has('nvim')
   Plug 'nvim-lua/plenary.nvim' " dependency for telescope.nvim
   Plug 'nvim-telescope/telescope.nvim'
+  Plug 'phaazon/hop.nvim' " I get around round round round
 endif
 
 " Install any local plugins.
@@ -222,14 +222,10 @@ let g:indentLine_noConcealCursor=''
 " ignore startify
 let g:indentLine_fileTypeExclude=['startify']
 
-" easymotion
-" turn off default mappings
-let g:EasyMotion_do_mapping=0
-" turn on case insensitive feature
-let g:EasyMotion_smartcase=1
-" set colors
-hi link EasyMotionTarget WarningMsg
-hi link EasyMotionShade  Comment
+" hop
+hi link HopNextKey WarningMsg
+hi link HopNextKey1 WarningMsg
+hi link HopNextKey2 WarningMsg
 
 " Ale
 " turn off convention pylint messages and misc
@@ -430,5 +426,8 @@ require('telescope').setup{
     },
   }
 }
+
+require'hop'.setup()
+
 EOF
 endif

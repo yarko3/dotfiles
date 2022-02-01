@@ -86,6 +86,7 @@ nnoremap <Leader>doff    :windo diffoff<CR>
 nnoremap <Leader>dom     :Gdiff origin/master<CR>
 nnoremap <Leader>dt      :windo diffthis<CR>
 nnoremap <Leader>dum     :Gdiff upstream/master<CR>
+nnoremap <Leader>e       :HopChar1<CR>
 nnoremap <Leader>ew      <C-S-w>=
 nnoremap <Leader>ex      :call VimuxRunCommand(expand('%:p'))<CR>
 nnoremap <Leader>ff      :FSHere<CR>
@@ -115,6 +116,8 @@ nnoremap <Leader>w       :call StripTabsAndTrailingWhitespaces()<CR>:w<CR>
 nnoremap <Leader>x       :q<CR>
 nnoremap <Leader>z       :MaximizerToggle<CR>
 
+vnoremap <Leader>e       <cmd>HopChar1<CR>
+
 " completion
 if g:platform == "Linux" && !AtWork()
   nnoremap <Leader>jf      :YcmCompleter FixIt<CR>
@@ -139,9 +142,6 @@ nnoremap <silent> <Leader>h :set hlsearch!<CR>
 " =============================================================================
 "                          <Plug> Leader Mappings
 " =============================================================================
-" jump around easier
-nmap <Leader>e <Plug>(easymotion-overwin-f)
-
 " yank over SSH
 map <Leader>y <Plug>(operator-poweryank-osc52)
 
