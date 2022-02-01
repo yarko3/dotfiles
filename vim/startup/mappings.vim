@@ -86,7 +86,6 @@ nnoremap <Leader>doff    :windo diffoff<CR>
 nnoremap <Leader>dom     :Gdiff origin/master<CR>
 nnoremap <Leader>dt      :windo diffthis<CR>
 nnoremap <Leader>dum     :Gdiff upstream/master<CR>
-nnoremap <Leader>e       :HopChar1<CR>
 nnoremap <Leader>ew      <C-S-w>=
 nnoremap <Leader>ex      :call VimuxRunCommand(expand('%:p'))<CR>
 nnoremap <Leader>ff      :FSHere<CR>
@@ -131,7 +130,7 @@ endif
 if has('nvim')
   nnoremap <Leader>lg      :Telescope live_grep<CR>
 
-  vnoremap <Leader>e       <cmd>HopChar1<CR>
+  map <silent> <Leader>e   <cmd>HopChar1<CR>
 endif
 
 " =============================================================================
