@@ -427,7 +427,10 @@ require('telescope').setup{
   }
 }
 
-require'hop'.setup()
+require'hop'.setup{
+  -- enable hopping across splits/windows
+  multi_windows = true
+}
 
 EOF
 endif
