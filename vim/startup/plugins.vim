@@ -418,10 +418,12 @@ require('telescope').setup{
       i = {
         ["<c-j>"] = actions.move_selection_next,
         ["<c-k>"] = actions.move_selection_previous,
+        ["<c-q>"] = actions.send_to_qflist,
       },
       n = {
         ["<c-j>"] = actions.move_selection_next,
         ["<c-k>"] = actions.move_selection_previous,
+        ["<c-q>"] = actions.send_to_qflist,
       },
     },
   }
