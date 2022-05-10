@@ -39,6 +39,8 @@ sudo apt-get install \
 
 # Xmonad things
 sudo apt-get install \
+  gnome-panel \
+  suckless-tools \
   xmobar \
   xmonad
 
