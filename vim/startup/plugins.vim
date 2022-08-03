@@ -57,7 +57,7 @@ elseif AtWork()
   Plug 'prabirshrestha/asyncomplete-lsp.vim'
   Plug 'prabirshrestha/asyncomplete-ultisnips.vim'
   Plug 'prabirshrestha/asyncomplete.vim'
-  Plug 'prabirshrestha/vim-lsp'
+  Plug 'prabirshrestha/vim-lsp', {'commit': '68c018eb1a79e0bbeb496f7040f7205b57cf3750'}
 endif
 
 if has('nvim')
@@ -367,7 +367,6 @@ elseif AtWork()
   let g:lsp_signs_enabled = 1           " enable diagnostics signs in the gutter
   let g:lsp_diagnostics_echo_cursor = 1 " enable echo under cursor when in normal mode
   let g:lsp_document_code_action_signs_enabled = 0 " disable code action hint signs because they don't work very well
-
 
   " asyncomplete
   " Automatically show completion options
