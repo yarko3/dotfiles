@@ -57,7 +57,7 @@ elseif AtWork()
   Plug 'prabirshrestha/asyncomplete-lsp.vim'
   Plug 'prabirshrestha/asyncomplete-ultisnips.vim'
   Plug 'prabirshrestha/asyncomplete.vim'
-  Plug 'prabirshrestha/vim-lsp', {'commit': '68c018eb1a79e0bbeb496f7040f7205b57cf3750'}
+  Plug 'prabirshrestha/vim-lsp'
 endif
 
 if has('nvim')
