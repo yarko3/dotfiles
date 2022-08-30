@@ -128,6 +128,12 @@ elseif AtWork()
 endif
 
 if has('nvim')
+  " neovim-remote
+  autocmd FileType gitcommit,gitrebase,gitconfig,hgcommit set bufhidden=delete
+  let $HGEDITOR = 'nvr -cc split --remote-wait --servername '.v:servername
+  let $GIT_EDITOR = 'nvr -cc split --remote-wait --servername '.v:servername
+  nnoremap <Leader>ha      :<C-u>call jobstart(['hg', 'reword'])<CR>
+
   nnoremap <Leader>lg      :Telescope live_grep<CR>
 
   map <silent> <Leader>e   <cmd>HopChar1<CR>

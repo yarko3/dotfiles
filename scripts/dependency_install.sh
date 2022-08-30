@@ -79,6 +79,9 @@ neovim_install() {
 
     # install python dependencies
     python3 -m pip install --upgrade pynvim
+
+    # dependencies for plugins
+    pip3 install neovim-remote
   else
     echo "neovim already installed"
   fi

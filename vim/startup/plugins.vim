@@ -61,6 +61,7 @@ elseif AtWork()
 endif
 
 if has('nvim')
+  Plug 'mhinz/neovim-remote' " for editing commit messages within vim
   Plug 'nvim-lua/plenary.nvim' " dependency for telescope.nvim
   Plug 'nvim-telescope/telescope.nvim'
   Plug 'phaazon/hop.nvim' " I get around round round round
