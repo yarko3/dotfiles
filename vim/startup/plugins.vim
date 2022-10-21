@@ -32,6 +32,7 @@ Plug 'michaeljsmith/vim-indent-object'                    " indentation-level te
 Plug 'octol/vim-cpp-enhanced-highlight', { 'for': 'cpp' } " enhanced C++11/14/17 highlighting
 Plug 'osyo-manga/vim-brightest'                           " highlight/underline current word
 Plug 'raimondi/delimitMate'                               " matching brackets
+Plug 'rhysd/conflict-marker.vim'                          " marks merge conflict markers
 Plug 'roxma/vim-tmux-clipboard'                           " integrate vim's yank register with tmux
 Plug 'sirver/ultisnips'                                   " snippet engine with integration into ycm; needs vim compiled with python
 Plug 'szw/vim-maximizer'                                  " maximize a split
