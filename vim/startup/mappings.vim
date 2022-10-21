@@ -113,7 +113,7 @@ nnoremap <Leader>vl      :vsp<CR>:e %:h<CR>
 nnoremap <Leader>vv      :e %:h<CR>
 nnoremap <Leader>w       :call StripTabsAndTrailingWhitespaces()<CR>:w<CR>
 nnoremap <Leader>x       :q<CR>
-nnoremap <Leader>z       :ZoomWin<CR>
+nnoremap <Leader>z       :MaximizerToggle<CR>
 
 " completion
 if g:platform == "Linux" && !AtWork()
