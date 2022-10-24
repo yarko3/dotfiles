@@ -7,6 +7,10 @@ bindkey -v
 bindkey -M "vicmd" 'k' history-substring-search-up
 bindkey -M "vicmd" 'j' history-substring-search-down
 
+autoload -Uz jump-target
+zle -N jump-target
+bindkey "^F" jump-target
+
 # Run `bindkey -l` to see a list of modes, and `bindkey -M foo` to see a list of commands active in mode foo
 # Move from insert mode to normal mode
 bindkey -M "viins" kj vi-cmd-mode
