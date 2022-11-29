@@ -12,7 +12,6 @@ Plug 'benmills/vimux'                                     " Vim and Tmux Integra
 Plug 'bling/vim-airline'                                  " Status line
 Plug 'christoomey/vim-tmux-navigator'                     " Window/Pane switching with Vim and Tmux
 Plug 'ctrlpvim/ctrlp.vim'                                 " File searchin and opening
-Plug 'dense-analysis/ale'                                 " Syntax checking
 Plug 'derekwyatt/vim-fswitch', { 'for': 'cpp' }           " Fastswitch (cpp/h toggle)
 Plug 'haya14busa/vim-poweryank'                           " yank over SSH
 Plug 'honza/vim-snippets'                                 " snippets repo
@@ -228,19 +227,6 @@ let g:indentLine_fileTypeExclude=['startify']
 hi link HopNextKey WarningMsg
 hi link HopNextKey1 WarningMsg
 hi link HopNextKey2 WarningMsg
-
-" Ale
-" turn off convention pylint messages and misc
-let g:ale_python_pylint_options='--disable=C --disable=W0311'
-let g:ale_java_checkstyle_options='-c ~/.vim/config/checkstyle_custom_checks.xml'
-let g:ale_linters={
-      \  'cpp': ['cppcheck'],
-      \  'java': ['checkstyle'],
-      \  'zsh': ['shellcheck'],
-      \  'markdown': [],
-      \}
-highlight ALEErrorSign   ctermfg=9  ctermbg=235
-highlight ALEWarningSign ctermfg=11 ctermbg=235
 
 " vim-highlightedyank
 if !has('nvim')
