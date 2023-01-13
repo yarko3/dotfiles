@@ -70,7 +70,6 @@ shfmt_install() {
 neovim_install() {
   echo "Installing neovim..."
   if ! [ -d ~/neovim ]; then
-    echo "Installing neovim..."
     git clone https://github.com/neovim/neovim ~/neovim
     cd ~/neovim
     make CMAKE_EXTRA_FLAGS="-DCMAKE_INSTALL_PREFIX=$HOME/neovim"
