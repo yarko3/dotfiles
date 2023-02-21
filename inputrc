@@ -10,3 +10,5 @@ set keymap vi-command
 "G": end-of-history
 set keymap vi-insert
 "kj": vi-movement-mode
+
+set bell-style none
