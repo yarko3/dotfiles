@@ -1,6 +1,6 @@
 Config {
   allDesktops = True
-  font = "Source Code Pro for Powerline 10"
+  font = "Source Code Pro for Powerline 9"
 }
 
 -- vim:set ft=haskell:
