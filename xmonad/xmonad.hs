@@ -1,5 +1,4 @@
 import Control.Applicative
-import Data.Default
 import System.Exit
 import System.IO (hPutStrLn, Handle)
 import XMonad
@@ -184,6 +183,7 @@ main = do
   xmproc <- spawnPipe "xmobar"
   xmonad
     $ dynamicProjects projects
+    $ docks
     $ defaults {
       logHook = dynamicLogWithPP $ xmobarPP {
             ppOutput = hPutStrLn xmproc
@@ -191,8 +191,6 @@ main = do
           , ppCurrent = xmobarColor xmobarCurrentWorkspaceColor ""
           , ppSep = "   "
       }
-      , manageHook = manageDocks <+> myManageHook
-      , handleEventHook = docksEventHook
   }
 
 
