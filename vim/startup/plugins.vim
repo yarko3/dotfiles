@@ -12,7 +12,7 @@ Plug 'benmills/vimux'                                     " Vim and Tmux Integra
 Plug 'bling/vim-airline'                                  " Status line
 Plug 'christoomey/vim-tmux-navigator'                     " Window/Pane switching with Vim and Tmux
 Plug 'ctrlpvim/ctrlp.vim'                                 " File searchin and opening
-Plug 'derekwyatt/vim-fswitch', { 'for': 'cpp' }           " Fastswitch (cpp/h toggle)
+Plug 'derekwyatt/vim-fswitch'                             " Fastswitch
 Plug 'haya14busa/vim-poweryank'                           " yank over SSH
 Plug 'honza/vim-snippets'                                 " snippets repo
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }       " fzf main repo
@@ -254,6 +254,13 @@ augroup mycppfiles
   autocmd BufEnter *.h let b:fswitchdst  = 'cc,cpp' | let b:fswitchlocs = './'
   autocmd BufEnter *.cc let b:fswitchdst  = 'cc,cpp' | let b:fswitchfnames = '/$/_test/' | let b:fswitchlocs = './'
   autocmd BufEnter *_test.cc let b:fswitchdst  = 'h' | let b:fswitchfnames = '/_test$//' | let b:fswitchlocs = './'
+augroup END
+
+augroup mypyfiles
+  autocmd!
+  " Cycle .py -> _test.py -> .py
+  autocmd BufEnter *.py let b:fswitchdst  = 'py' | let b:fswitchfnames = '/$/_test/' | let b:fswitchlocs = './'
+  autocmd BufEnter *_test.py let b:fswitchdst  = 'py' | let b:fswitchfnames = '/_test$//' | let b:fswitchlocs = './'
 augroup END
 
 " signify
