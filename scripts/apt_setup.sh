@@ -11,6 +11,7 @@ sudo apt-get install \
   git \
   golang \
   htop \
+  pavucontrol \
   perl \
   python3-dev \
   python3-pip \
