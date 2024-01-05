@@ -11,6 +11,7 @@ set encoding=utf-8
 " colorscheme.
 set t_Co=256
 colorscheme Tomorrow-Night-Eighties
+set notermguicolors
 "" ============================================================================
 ""                                  Globals
 "" ============================================================================
