@@ -29,4 +29,4 @@ xmonad/lib
 xmonad/xmonad
 
 /* files managed outside of this repository */
-vim/lua
+vim/lua/local_lsp_config.lua

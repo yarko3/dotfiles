@@ -380,5 +380,12 @@ require'hop'.setup{
   multi_windows = true
 }
 
+-- LSP
+vim.opt.completeopt = { "menu", "menuone", "noselect" }
+require("lsp")
+
+-- Diagnostics
+require("diagnostics")
+
 EOF
 endif
