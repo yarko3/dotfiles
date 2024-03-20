@@ -49,22 +49,26 @@ Plug 'wesQ3/vim-windowswap'                               " swap splits
 Plug 'whatyouhide/vim-lengthmatters'                      " highlight portion of line that's longer than limit
 Plug 'yssl/QFEnter'                                       " quickfix open in different places
 
-" completion
-if g:platform == "Linux" && !AtWork()
-  Plug 'Valloric/YouCompleteMe'
-elseif AtWork()
-  Plug 'prabirshrestha/async.vim'
-  Plug 'prabirshrestha/asyncomplete-lsp.vim'
-  Plug 'prabirshrestha/asyncomplete-ultisnips.vim'
-  Plug 'prabirshrestha/asyncomplete.vim'
-  Plug 'prabirshrestha/vim-lsp'
-endif
-
 if has('nvim')
   Plug 'mhinz/neovim-remote' " for editing commit messages within vim
   Plug 'nvim-lua/plenary.nvim' " dependency for telescope.nvim
   Plug 'nvim-telescope/telescope.nvim'
   Plug 'phaazon/hop.nvim' " I get around round round round
+
+  " CiderLSP
+  Plug 'hrsh7th/cmp-buffer'
+  Plug 'hrsh7th/cmp-nvim-lsp'
+  Plug 'hrsh7th/cmp-nvim-lua'
+  Plug 'hrsh7th/cmp-path'
+  Plug 'hrsh7th/cmp-vsnip'
+  Plug 'hrsh7th/nvim-cmp'
+  Plug 'hrsh7th/vim-vsnip'
+  Plug 'neovim/nvim-lspconfig'
+  Plug 'onsails/lspkind.nvim'
+
+  " Diagnostics
+  Plug 'kyazdani42/nvim-web-devicons'
+  Plug 'folke/trouble.nvim'
 endif
 
 " Install any local plugins.
@@ -327,58 +331,6 @@ endfunction
 let vim_markdown_preview_github=1
 let vim_markdown_preview_browser='Google Chrome'
 let vim_markdown_preview_hotkey='<C-m>'
-
-" completion
-if g:platform == "Linux" && !AtWork()
-  " YouCompleteMe
-  let g:ycm_server_log_level='debug'
-  let g:ycm_server_keep_logfiles=0
-  let g:ycm_confirm_extra_conf=0
-  let g:ycm_autoclose_preview_window_after_insertion=1
-  let g:ycm_always_populate_location_list=1
-  let g:ycm_goto_buffer_command = 'vertical-split'
-  let g:ycm_complete_in_comments = 0
-  let g:ycm_auto_hover = '' " Disable auto-hover by default because it causes freezing.
-
-  " For some unicode reason ycm errors on peekaboo.
-  let g:ycm_filetype_blacklist = { 'peekaboo': 1, 'startify': 1, 'tagbar': 1 }
-
-  " Configure quickfix window settings when opened from YCM.
-  function! s:CustomizeYcmQuickFixWindow()
-    " Set the window height.
-    15wincmd _
-  endfunction
-  autocmd User YcmQuickFixOpened call s:CustomizeYcmQuickFixWindow()
-
-  let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/cpp/.ycm_extra_conf.py'
-
-elseif AtWork()
-  " LSP
-  " Send async completion requests.
-  " WARNING: Might interfere with other completion plugins.
-  let g:lsp_async_completion = 1
-
-  " Enable UI for diagnostics
-  let g:lsp_signs_enabled = 1           " enable diagnostics signs in the gutter
-  let g:lsp_diagnostics_echo_cursor = 1 " enable echo under cursor when in normal mode
-  let g:lsp_document_code_action_signs_enabled = 0 " disable code action hint signs because they don't work very well
-
-  " asyncomplete
-  " Automatically show completion options
-  let g:asyncomplete_auto_popup = 1
-
-  inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
-  inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-  inoremap <expr> <CR>    pumvisible() ? asyncomplete#close_popup() . "\<CR>" : "\<CR>"
-
-  if has('python3')
-    call asyncomplete#register_source(asyncomplete#sources#ultisnips#get_source_options({
-      \ 'name': 'ultisnips',
-      \ 'allowlist': ['*'],
-      \ 'completor': function('asyncomplete#sources#ultisnips#completor'),
-      \ }))
-  endif
-endif
 
 " snippets
 let g:UltiSnipsExpandTrigger="<nop>"

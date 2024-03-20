@@ -115,18 +115,6 @@ nnoremap <Leader>w       :call StripTabsAndTrailingWhitespaces()<CR>:w<CR>
 nnoremap <Leader>x       :q<CR>
 nnoremap <Leader>z       :MaximizerToggle<CR>
 
-" completion
-if g:platform == "Linux" && !AtWork()
-  nnoremap <Leader>jf      :YcmCompleter FixIt<CR>
-  nnoremap <Leader>jj      :YcmCompleter GoTo<CR>
-  nnoremap <Leader>jk      :YcmCompleter GoToReferences<CR>
-  nnoremap <Leader>jr      :YcmRestartServer<CR>
-elseif AtWork()
-  nnoremap <Leader>jf      :LspCodeAction<CR>
-  nnoremap <Leader>jj      :vertical LspDefinition<CR>
-  nnoremap <Leader>jk      :LspReferences<CR>
-endif
-
 if has('nvim')
   " neovim-remote
   autocmd FileType gitcommit,gitrebase,gitconfig,hgcommit set bufhidden=delete

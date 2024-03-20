@@ -27,3 +27,6 @@ xmonad.errors
 xmonad.state
 xmonad/lib
 xmonad/xmonad
+
+/* files managed outside of this repository */
+vim/lua
