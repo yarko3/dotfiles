@@ -112,7 +112,7 @@ local on_attach = function(client, bufnr)
   local opts = { noremap = true, silent = true }
   vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>jf", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "<Leader>jk", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
-  vim.api.nvim_buf_set_keymap(bufnr, "n", "<Leader>jj", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
+  vim.api.nvim_buf_set_keymap(bufnr, "n", "<Leader>jj", "<cmd>vsplit | lua vim.lsp.buf.definition()<CR>", opts)
 
   vim.api.nvim_command("augroup LSP")
   vim.api.nvim_command("autocmd!")
