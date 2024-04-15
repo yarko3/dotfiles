@@ -98,9 +98,6 @@ vim.cmd([[
 -- 3. Set up LSP
 local on_attach = function(client, bufnr)
 
-  -- disable syntax highlighting
-  -- client.server_capabilities.semanticTokensProvider = nil
-
   vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
   if vim.lsp.formatexpr then -- Neovim v0.6.0+ only.
     vim.api.nvim_buf_set_option(bufnr, "formatexpr", "v:lua.vim.lsp.formatexpr")
