@@ -115,6 +115,9 @@ nnoremap <Leader>w       :call StripTabsAndTrailingWhitespaces()<CR>:w<CR>
 nnoremap <Leader>x       :q<CR>
 nnoremap <Leader>z       :MaximizerToggle<CR>
 
+vnoremap <Leader>ss      :sort<CR>
+vnoremap <Leader>su      :sort u<CR>
+
 if has('nvim')
   " neovim-remote
   autocmd FileType gitcommit,gitrebase,gitconfig,hgcommit set bufhidden=delete
