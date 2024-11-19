@@ -72,6 +72,7 @@ neovim_install() {
   if ! [ -d ~/neovim ]; then
     git clone https://github.com/neovim/neovim ~/neovim
     cd ~/neovim
+    git checkout "release-0.10"
     make CMAKE_EXTRA_FLAGS="-DCMAKE_INSTALL_PREFIX=$HOME/neovim"
     make install
     cd -
