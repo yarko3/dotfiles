@@ -15,8 +15,11 @@ fi
 # environment-specific update/upgrade
 $SCRIPTS_DIR/update_env.sh
 
-# vim
-vim +PlugUpdate +qall
+if command -v nvim 2>&1 >/dev/null; then
+  nvim +PlugUpdate +qall
+elif command -v vim 2>&1 >/dev/null; then
+  vim +PlugUpdate +qall
+fi
 
 # tmux
 $SCRIPTS_DIR/install_tmux_plugins.sh
