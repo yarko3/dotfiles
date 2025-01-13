@@ -116,9 +116,9 @@ myKeys conf@XConfig {XMonad.modMask = modMask} = M.fromList $
     , ((modMask,                    xK_l      ), onNextNeighbour def W.view)
 
     -- media keys
-    , ((0, 0x1008FF11), spawn "amixer set Master 5%-")
-    , ((0, 0x1008FF13), spawn "amixer set Master 5%+")
-    , ((0, 0x1008FF12), spawn "amixer set Master toggle")
+    , ((0, 0x1008FF11), spawn "pamixer -d 5")
+    , ((0, 0x1008FF13), spawn "pamixer -i 5")
+    , ((0, 0x1008FF12), spawn "pamixer -m")
     , ((0, 0x1008FF14), spawn "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause")
     , ((0, 0x1008FF16), spawn "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous")
     , ((0, 0x1008FF17), spawn "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next")

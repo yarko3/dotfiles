@@ -40,6 +40,7 @@ sudo apt-get install \
 # Xmonad things
 sudo apt-get install \
   gnome-panel \
+  pamixer \
   suckless-tools \
   xmobar \
   xmonad
