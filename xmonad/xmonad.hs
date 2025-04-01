@@ -31,10 +31,11 @@ restartCmd = "if type xmonad; then xmonad --recompile && \
 
 wsWORK_TERM    = "WORK_TERM"
 wsWORK_BROWSER = "WORK_BROWSER"
-wsMEDIA        = "MEDIA"
+wsMUSIC        = "MUSIC"
 wsSCRATCH      = "SCRATCH"
+wsSOCIAL        = "SOCIAL"
 
-myWorkspaces = [wsWORK_TERM, wsWORK_BROWSER, wsMEDIA, wsSCRATCH]
+myWorkspaces = [wsWORK_TERM, wsWORK_BROWSER, wsMUSIC, wsSCRATCH, wsSOCIAL]
 
 projects :: [Project]
 projects =
@@ -49,16 +50,20 @@ projects =
                                                 spawnOn wsWORK_BROWSER "google-chrome --new-window calendar.google.com"
             }
 
-    , Project   { projectName       = wsMEDIA
+    , Project   { projectName       = wsMUSIC
                 , projectDirectory  = "~/"
-                , projectStartHook  = Just $ do spawnOn wsMEDIA "google-chrome --new-window news.ycombinator.com spectrum.ieee.org mail.google.com/mail/u/1/#inbox messages.google.com messenger.com"
-                                                spawnOn wsMEDIA "spotify"
+                , projectStartHook  = Just $ do spawnOn wsMUSIC "google-chrome --new-window news.ycombinator.com spectrum.ieee.org mail.google.com/mail/u/1/#inbox"
+                                                spawnOn wsMUSIC "spotify"
             }
 
     , Project   { projectName       = wsSCRATCH
                 , projectDirectory  = "~/"
                 , projectStartHook  = Nothing
         }
+    , Project   { projectName       = wsSOCIAL
+                , projectDirectory  = "~/"
+                , projectStartHook  = Just $ do spawnOn wsSOCIAL "google-chrome --new-window messages.google.com messenger.com https://www.instagram.com/direct/inbox/"
+            }
     ]
 
 myLayout = avoidStruts (
