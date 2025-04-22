@@ -33,9 +33,8 @@ wsWORK_TERM    = "WORK_TERM"
 wsWORK_BROWSER = "WORK_BROWSER"
 wsMUSIC        = "MUSIC"
 wsSCRATCH      = "SCRATCH"
-wsSOCIAL        = "SOCIAL"
 
-myWorkspaces = [wsWORK_TERM, wsWORK_BROWSER, wsMUSIC, wsSCRATCH, wsSOCIAL]
+myWorkspaces = [wsWORK_TERM, wsWORK_BROWSER, wsMUSIC, wsSCRATCH]
 
 projects :: [Project]
 projects =
@@ -52,7 +51,7 @@ projects =
 
     , Project   { projectName       = wsMUSIC
                 , projectDirectory  = "~/"
-                , projectStartHook  = Just $ do spawnOn wsMUSIC "google-chrome --new-window news.ycombinator.com spectrum.ieee.org mail.google.com/mail/u/1/#inbox"
+                , projectStartHook  = Just $ do spawnOn wsMUSIC "google-chrome --new-window news.ycombinator.com spectrum.ieee.org messages.google.com mail.google.com/mail/u/1/#inbox"
                                                 spawnOn wsMUSIC "spotify"
             }
 
@@ -60,10 +59,6 @@ projects =
                 , projectDirectory  = "~/"
                 , projectStartHook  = Nothing
         }
-    , Project   { projectName       = wsSOCIAL
-                , projectDirectory  = "~/"
-                , projectStartHook  = Just $ do spawnOn wsSOCIAL "google-chrome --new-window messages.google.com messenger.com https://www.instagram.com/direct/inbox/"
-            }
     ]
 
 myLayout = avoidStruts (
