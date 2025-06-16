@@ -37,6 +37,10 @@ sudo apt-get install \
   unzip \
   curl
 
+# LLM things
+sudo apt-get install \
+  cargo
+
 # Xmonad things
 sudo apt-get install \
   gnome-panel \
