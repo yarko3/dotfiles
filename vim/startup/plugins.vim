@@ -56,7 +56,7 @@ if has('nvim')
   Plug 'nvim-telescope/telescope.nvim'
   Plug 'phaazon/hop.nvim' " I get around round round round
 
-  " CiderLSP
+  " LSP
   Plug 'hrsh7th/cmp-buffer'
   Plug 'hrsh7th/cmp-nvim-lsp'
   Plug 'hrsh7th/cmp-nvim-lua'
