@@ -11,8 +11,8 @@
     path = fonts
     url = https://github.com/powerline/fonts.git
 [submodule "nerd-fonts"]
-    path = fonts
-    url = https://github.com/ryanoasis/nerd-fonts.git
+	path = nerd-fonts
+	url = https://github.com/ryanoasis/nerd-fonts
 [submodule "rainbarf"]
   path = rainbarf
   url = https://github.com/creaktive/rainbarf
