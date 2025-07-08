@@ -70,6 +70,22 @@ if has('nvim')
   " Diagnostics
   Plug 'kyazdani42/nvim-web-devicons'
   Plug 'folke/trouble.nvim'
+
+  " LLM
+  " Dependencies for Avante
+  Plug 'MeanderingProgrammer/render-markdown.nvim'
+  Plug 'HakonHarnes/img-clip.nvim'
+  Plug 'MunifTanjim/nui.nvim'
+  Plug 'echasnovski/mini.icons'
+  Plug 'echasnovski/mini.pick'
+  Plug 'folke/snacks.nvim'
+  Plug 'hrsh7th/nvim-cmp'
+  Plug 'saadparwaiz1/cmp_luasnip'
+  Plug 'ibhagwan/fzf-lua'
+  Plug 'nvim-lua/plenary.nvim'
+  Plug 'stevearc/dressing.nvim'
+
+  Plug 'yetone/avante.nvim', { 'do': 'make' }
 endif
 
 " Install any local plugins.
@@ -387,6 +403,14 @@ require("lsp")
 
 -- Diagnostics
 require("diagnostics")
+
+-- Avante Dependencies
+require('render-markdown').setup{
+ file_types = { "markdown", "Avante" },
+}
+require('mini.icons').setup{}
+require('mini.pick').setup{}
+
 
 EOF
 endif
