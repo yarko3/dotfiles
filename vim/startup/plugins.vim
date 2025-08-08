@@ -85,7 +85,7 @@ if has('nvim')
   Plug 'nvim-lua/plenary.nvim'
   Plug 'stevearc/dressing.nvim'
 
-  Plug 'yetone/avante.nvim', { 'do': 'make' }
+  Plug 'yetone/avante.nvim', { 'do': 'make', 'commit': '85a9fcef95de33844784006f762cadec58369ec5' }
 endif
 
 " Install any local plugins.
