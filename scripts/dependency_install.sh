@@ -17,11 +17,11 @@ create_ssh() {
 }
 
 fonts_install() {
-  echo "Installing fonts..."
-  if ! [ -d ~/.local/share/fonts ]; then
-    "$DOTFILES_DIR"/fonts/install.sh
+  echo "Installing nerd-fonts..."
+  if ! [ -d ~/.local/share/fonts/NerdFonts ]; then
+    "$DOTFILES_DIR"/nerd-fonts/install.sh
   else
-    echo "Fonts already installed"
+    echo "nerd-fonts already installed"
   fi
   echo "Finished fonts"
 }
