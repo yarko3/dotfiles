@@ -101,6 +101,13 @@ call plug#end()
 let g:airline_powerline_fonts=1
 let g:airline_theme='tomorrow'
 
+" A fix for airline and nvim 0.11
+if has('nvim-0.11')
+  hi statusline cterm=NONE gui=NONE
+  hi tabline cterm=NONE gui=NONE
+  hi winbar cterm=NONE gui=NONE
+endif
+
 " CtrlP
 let g:ctrlp_use_caching = 0
 
