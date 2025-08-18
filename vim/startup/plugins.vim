@@ -9,7 +9,6 @@ Plug 'Valloric/ListToggle'                                " Toggling quickfix an
 Plug 'Valloric/MatchTagAlways'                            " always highlight matching tags
 Plug 'Yggdroot/indentLine'                                " show indent
 Plug 'benmills/vimux'                                     " Vim and Tmux Integration
-Plug 'bling/vim-airline'                                  " Status line
 Plug 'christoomey/vim-tmux-navigator'                     " Window/Pane switching with Vim and Tmux
 Plug 'ctrlpvim/ctrlp.vim'                                 " File searchin and opening
 Plug 'derekwyatt/vim-fswitch'                             " Fastswitch
@@ -44,10 +43,20 @@ Plug 'tpope/vim-fugitive'                                 " Git Wrapper
 Plug 'tpope/vim-repeat'                                   " Dot operator for plugins
 Plug 'tpope/vim-surround'                                 " Surrounding text
 Plug 'tpope/vim-vinegar'                                  " netrw improvement
-Plug 'vim-airline/vim-airline-themes'                     " Status line themes
 Plug 'wesQ3/vim-windowswap'                               " swap splits
 Plug 'whatyouhide/vim-lengthmatters'                      " highlight portion of line that's longer than limit
 Plug 'yssl/QFEnter'                                       " quickfix open in different places
+
+
+if has('nvim')
+  Plug 'nvim-lualine/lualine.nvim'
+else
+  Plug 'bling/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
+
+  let g:airline_powerline_fonts=1
+  let g:airline_theme='tomorrow'
+endif
 
 if has('nvim')
   Plug 'mhinz/neovim-remote' " for editing commit messages within vim
@@ -96,17 +105,6 @@ call plug#end()
 "" ============================================================================
 ""                              Plugin Settings
 "" ============================================================================
-
-" airline
-let g:airline_powerline_fonts=1
-let g:airline_theme='tomorrow'
-
-" A fix for airline and nvim 0.11
-if has('nvim-0.11')
-  hi statusline cterm=NONE gui=NONE
-  hi tabline cterm=NONE gui=NONE
-  hi winbar cterm=NONE gui=NONE
-endif
 
 " CtrlP
 let g:ctrlp_use_caching = 0
@@ -418,6 +416,9 @@ require('render-markdown').setup{
 require('mini.icons').setup{}
 require('mini.pick').setup{}
 
+require('lualine').setup{
+  options = {theme = 'tomorrow_night'},
+}
 
 EOF
 endif
