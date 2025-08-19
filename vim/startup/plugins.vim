@@ -403,7 +403,6 @@ require'hop'.setup{
 }
 
 -- LSP
-vim.opt.completeopt = { "menu", "menuone", "noselect" }
 require("lsp")
 
 -- Diagnostics
