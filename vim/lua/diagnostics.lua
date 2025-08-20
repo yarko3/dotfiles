@@ -47,6 +47,33 @@ require("trouble").setup({
   use_diagnostic_signs = false, -- enabling this will use the signs defined in your lsp client
 })
 
+local signs = {
+    Error = " ",
+    Warn = " ",
+    Hint = "󰌵 ",
+    Info = " "
+}
+
+local signConf = {
+  text = {},
+  texthl = {},
+  numhl = {},
+}
+
+for type, icon in pairs(signs) do
+  local severityName = string.upper(type)
+  local severity = vim.diagnostic.severity[severityName]
+  local hl = "DiagnosticSign" .. type
+  signConf.text[severity] = icon
+  signConf.texthl[severity] = hl
+  signConf.numhl[severity] = hl
+end
+
+vim.diagnostic.config({
+  signs = signConf,
+  severity_sort = true,
+})
+
 -- Mappings
 vim.api.nvim_set_keymap("n", "<Leader>jf", "<Cmd>Trouble quickfix<CR>", { silent = true, noremap = true })
 vim.api.nvim_set_keymap("n", "<Leader>jt", "<Cmd>Trouble<CR>", { silent = true, noremap = true })

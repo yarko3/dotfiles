@@ -402,11 +402,11 @@ require'hop'.setup{
   multi_windows = true
 }
 
--- LSP
-require("lsp")
-
 -- Diagnostics
 require("diagnostics")
+
+-- LSP
+require("lsp")
 
 -- Avante Dependencies
 require('render-markdown').setup{
