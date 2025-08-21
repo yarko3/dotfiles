@@ -415,9 +415,7 @@ require('render-markdown').setup{
 require('mini.icons').setup{}
 require('mini.pick').setup{}
 
-require('lualine').setup{
-  options = {theme = 'tomorrow_night'},
-}
+require('lualine').setup{}
 
 EOF
 endif
