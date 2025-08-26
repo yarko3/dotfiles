@@ -80,6 +80,8 @@ if has("patch-8.1.0360")
   set diffopt+=internal,algorithm:patience
 endif
 
+au VimEnter * if &diff | execute 'windo set noscrollbind' | endif
+
 " Smart case sensitivity
 set ignorecase
 set smartcase
