@@ -80,6 +80,7 @@ if has("patch-8.1.0360")
   set diffopt+=internal,algorithm:patience
 endif
 
+" Without this, 3-way merge navigation is broken.
 au VimEnter * if &diff | execute 'windo set noscrollbind' | endif
 
 " Smart case sensitivity
