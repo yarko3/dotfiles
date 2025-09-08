@@ -417,5 +417,7 @@ require('mini.pick').setup{}
 
 require('lualine').setup{}
 
+require("trouble").setup{}
+
 EOF
 endif
