@@ -103,7 +103,8 @@ nnoremap <Leader>sp      :setlocal spell! spelllang=en_us<CR>
 nnoremap <Leader>ss      :call SortSection()<CR>
 nnoremap <Leader>st      :ALEToggle<CR>
 nnoremap <Leader>sw      :call WindowSwap#EasyWindowSwap()<CR>
-nnoremap <Leader>t       :TagbarToggle<CR>
+nnoremap <Leader>tt      :TagbarToggle<CR>
+nnoremap <Leader>tr      :Trouble diagnostics toggle<CR>
 nnoremap <Leader>ut      :UndotreeToggle<CR>
 nnoremap <Leader>uu      :PlugUpgrade<CR>:PlugUpdate<CR>
 nnoremap <Leader>vh      :abo vsp<CR>:e %:h<CR>
