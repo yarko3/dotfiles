@@ -13,6 +13,7 @@ pl = sync
 pla = sync --all
 pu = upload tree
 rb = rebase
+rbt = rebase -d tip -s
 rev = reset
 st = status
 ut = up tip
