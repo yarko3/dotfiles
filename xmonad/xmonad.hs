@@ -52,7 +52,7 @@ projects =
 
     , Project   { projectName       = wsAI
                 , projectDirectory  = "~/"
-                , projectStartHook = Just $ spawn myTerminal
+                , projectStartHook = Just $ spawn (myTerminal ++ " -- zsh -ic 'ai_agent; exec zsh'")
         }
 
     , Project   { projectName       = wsMUSIC
