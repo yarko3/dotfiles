@@ -33,8 +33,9 @@ wsWORK_TERM    = "WORK_TERM"
 wsWORK_BROWSER = "WORK_BROWSER"
 wsMUSIC        = "MUSIC"
 wsSCRATCH      = "SCRATCH"
+wsAI           = "AI"
 
-myWorkspaces = [wsWORK_TERM, wsWORK_BROWSER, wsMUSIC, wsSCRATCH]
+myWorkspaces = [wsWORK_TERM, wsWORK_BROWSER, wsAI, wsMUSIC, wsSCRATCH]
 
 projects :: [Project]
 projects =
@@ -48,6 +49,11 @@ projects =
                 , projectStartHook  = Just $ do spawnOn wsWORK_BROWSER "google-chrome --new-window gmail.com"
                                                 spawnOn wsWORK_BROWSER "google-chrome --new-window calendar.google.com"
             }
+
+    , Project   { projectName       = wsAI
+                , projectDirectory  = "~/"
+                , projectStartHook = Just $ spawn myTerminal
+        }
 
     , Project   { projectName       = wsMUSIC
                 , projectDirectory  = "~/"
