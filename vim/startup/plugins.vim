@@ -63,7 +63,7 @@ if has('nvim')
   Plug 'nvim-lua/plenary.nvim' " dependency for telescope.nvim
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   Plug 'nvim-telescope/telescope.nvim'
-  Plug 'phaazon/hop.nvim' " I get around round round round
+  Plug 'smoka7/hop.nvim' " I get around round round round
 
   " LSP
   Plug 'hrsh7th/cmp-buffer'
