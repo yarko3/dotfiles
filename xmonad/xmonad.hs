@@ -86,6 +86,7 @@ myKeys :: XConfig Layout -> M.Map (KeyMask, KeySym) (X ())
 myKeys conf@XConfig {XMonad.modMask = modMask} = M.fromList $
     -- launching and killing programs
     [ ((modMask, xK_Return), spawn $ XMonad.terminal conf)
+    , ((modMask, xK_BackSpace), spawn $ "google-chrome")
     , ((modMask,                    xK_p      ), spawn "dmenu_run")
     , ((modMask .|. shiftMask,      xK_c      ), kill)
 
