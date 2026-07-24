@@ -41,7 +41,7 @@ projects :: [Project]
 projects =
     [ Project   { projectName      = wsWORK_TERM
                 , projectDirectory = "~/"
-                , projectStartHook = Just $ spawn (myTerminal ++ " -- zsh -ic 'tmux new-session -A -s mainsession \"uu; exec zsh\"'")
+                , projectStartHook = Just $ spawn (myTerminal ++ " -- zsh -ic 'cd $HOME; tmux new-session -A -s mainsession \"tmux rename-window \"startup\"; uu; exec zsh\"'")
             }
 
     , Project   { projectName       = wsWORK_BROWSER
